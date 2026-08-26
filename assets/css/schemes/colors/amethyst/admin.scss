@@ -2,35 +2,4 @@
 /// Color Scheme: Amethyst
 ///
 
-// Schemes color maps.
-$light: (
-	'body'  : #ffffff,
-	'text'  : #333333,
-	'one'   : #380756,
-	'two'   : #4b0776,
-	'three' : #4b0776,
-	'four'  : #64099e,
-	'five'  : #4b0776,
-	'six'   : #64099e
-);
-$dark: (
-	'body'  : #170d1e,
-	'text'  : #eeeeee,
-	'one'   : #467ac7,
-	'two'   : #64099e,
-	'three' : #4b0776,
-	'four'  : #64099e,
-	'five'  : #4b0776,
-	'six'   : #64099e
-);
-
-// CSS properties.
-:host,
-:root {
-	@each $name, $color in $light {
-		--cfe-scheme-color--#{$name}: #{$color};
-	}
-	@each $name, $color in $dark {
-		--cfe-scheme-color--#{$name}--dark: #{$color};
-	}
-}
+@use 'partials/root';

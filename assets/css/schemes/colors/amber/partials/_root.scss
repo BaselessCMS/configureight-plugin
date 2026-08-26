@@ -1,0 +1,15 @@
+///
+/// CSS properties
+///
+
+@use '../modules/colors' as c;
+
+:host,
+:root {
+	@each $name, $color in c.$light {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$dark {
+		--cfe-scheme-color--#{$name}--dark: #{$color};
+	}
+}

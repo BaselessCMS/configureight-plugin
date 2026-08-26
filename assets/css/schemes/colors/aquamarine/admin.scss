@@ -2,35 +2,4 @@
 /// Color Scheme: Aquamarine
 ///
 
-// Schemes color maps.
-$light: (
-	'body'  : #ffffff,
-	'text'  : #333333,
-	'one'   : #2094b1,
-	'two'   : #2eb6d9,
-	'three' : #2eb6d9,
-	'four'  : #6fcde5,
-	'five'  : #2eb6d9,
-	'six'   : #6fcde5
-);
-$dark: (
-	'body'  : #0a1b20,
-	'text'  : #eeeeee,
-	'one'   : #2eb6d9,
-	'two'   : #6fcde5,
-	'three' : #2eb6d9,
-	'four'  : #6fcde5,
-	'five'  : #2eb6d9,
-	'six'   : #6fcde5
-);
-
-// CSS properties.
-:host,
-:root {
-	@each $name, $color in $light {
-		--cfe-scheme-color--#{$name}: #{$color};
-	}
-	@each $name, $color in $dark {
-		--cfe-scheme-color--#{$name}--dark: #{$color};
-	}
-}
+@use 'partials/root';

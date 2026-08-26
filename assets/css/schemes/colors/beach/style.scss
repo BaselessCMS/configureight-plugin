@@ -2,21 +2,4 @@
 /// Color Scheme: Ocean
 ///
 
-// Scheme colors.
-$color_body: #ffffff;
-$color_text: #101e36;
-$color_one: #254d88;
-$color_two: #467ac7;
-$color_three: #254d88;
-$color_four: #d3b857;
-$color_five: #204170;
-$color_six: #d3b857;
-
-$color_body_dark: #050b14;
-$color_text_dark: #f8fafd;
-$color_one_dark: #467ac7;
-$color_two_dark: #d3b857;
-$color_three_dark: #254d88;
-$color_four_dark: #d3b857;
-$color_five_dark: #204170;
-$color_six_dark: #d3b857;
+@use 'partials/root';

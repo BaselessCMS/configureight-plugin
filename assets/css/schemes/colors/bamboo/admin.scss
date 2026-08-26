@@ -2,21 +2,4 @@
 /// Color Scheme: Bamboo
 ///
 
-// Scheme colors.
-$color_body: #ffffff;
-$color_text: #262c10;
-$color_one: #668000;
-$color_two: #88aa00;
-$color_three: #668000;
-$color_four: #c8ab37;
-$color_five: #445016;
-$color_six: #c8ab37;
-
-$color_body_dark: #262c10;
-$color_text_dark: #eeeeee;
-$color_one_dark: #d8bc4c;
-$color_two_dark: #88aa00;
-$color_three_dark: #789200;
-$color_four_dark: #c8ab37;
-$color_five_dark: #668000;
-$color_six_dark: #90a505;
+@use 'partials/root';

@@ -2,21 +2,4 @@
 /// Color Scheme: Brick
 ///
 
-// Scheme colors.
-$color_body: #fdfcf3;
-$color_text: #261a19;
-$color_one: #ba2d15;
-$color_two: #e33619;
-$color_three: #ab2913;
-$color_four: #c63d1d;
-$color_five: #ab2913;
-$color_six: #bca443;
-
-$color_body_dark: #261a19;
-$color_text_dark: #fdfcf3;
-$color_one_dark: #cbb86d;
-$color_two_dark: #bca443;
-$color_three_dark: #84200f;
-$color_four_dark: #ab2913;
-$color_five_dark: #84200f;
-$color_six_dark: #ab2913;
+@use 'partials/root';
