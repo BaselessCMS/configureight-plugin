@@ -163,24 +163,33 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 
 			<ul id="form-color-thumbs-list">
 			<?php foreach ( $colors as $color => $option ) {
+
+				if ( plugin()->getValue( 'color_scheme' ) === 'custom' ) {
+					$display = 'none';
+				} elseif ( plugin()->getValue( 'color_scheme' ) === $option['slug'] ) {
+					$display = 'flex';
+				} else {
+					$display = 'none';
+				}
+
 				if ( isset( $option['about'] ) && ! empty( $option['about'] ) ) {
 					printf(
 						'<li id="scheme_desc_%s" style="display: %s;"><p>%s</p></li>',
 						$option['slug'],
-						( plugin()->getValue( 'color_scheme' ) === $option['slug'] ? 'flex' : 'none' ),
+						$display,
 						$option['about']
 					);
 				}
 				printf(
 					'<li id="light_scheme_label_%s" style="margin-top: 1em; display: %s;">%s</li>',
 					$option['slug'],
-					( plugin()->getValue( 'color_scheme' ) === $option['slug'] ? 'flex' : 'none' ),
+					$display,
 					lang()->get( 'Light mode colors:' )
 				);
 				printf(
 					'<ul id="light_scheme_thumbs_%s" style="display: %s;">',
 					$option['slug'],
-					( plugin()->getValue( 'color_scheme' ) === $option['slug'] ? 'flex' : 'none' )
+					$display
 				);
 				$count = 0;
 				foreach ( $option['light'] as $thumb ) {
@@ -201,13 +210,13 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 				printf(
 					'<li id="dark_scheme_label_%s" style="margin-top: 1em; display: %s;">%s</li>',
 					$option['slug'],
-					( plugin()->getValue( 'color_scheme' ) === $option['slug'] ? 'flex' : 'none' ),
+					$display,
 					lang()->get( 'Dark mode colors:' )
 				);
 				printf(
 					'<ul id="dark_scheme_thumbs_%s" style="display: %s;">',
 					$option['slug'],
-					( plugin()->getValue( 'color_scheme' ) === $option['slug'] ? 'flex' : 'none' )
+					$display
 				);
 				$count = 0;
 				foreach ( $option['dark'] as $thumb ) {
@@ -252,6 +261,74 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 		<p><?php lang()->p( 'Custom colors will override colors for basic elements in the default light and dark color schemes. If you wish to use these colors for further customization then a CSS variable is provided for each color. Simply add your CSS rules with these variables to the custom code fields below.' ); ?></p>
 
 		<p><?php lang()->p( "Current custom colors originate from the previously set theme: <strong>{$colors[$custom_from]['name']}</strong>" ); ?></p>
+
+		<ul id="form-color-thumbs-list">
+		<?php
+		foreach ( $colors as $color => $option ) {
+
+			if ( plugin()->getValue( 'custom_scheme_from' ) === $option['slug'] ) {
+				$display = 'flex';
+			} else {
+				$display = 'none';
+			}
+
+			printf(
+				'<li id="light_scheme_label_%s" style="margin-top: 1em; display: %s;">%s %s</li>',
+				$option['slug'],
+				$display,
+				$option['name'],
+				lang()->get( 'light mode colors:' )
+			);
+			printf(
+				'<ul id="light_scheme_thumbs_%s" style="display: %s;">',
+				$option['slug'],
+				$display
+			);
+			$count = 0;
+			foreach ( $option['light'] as $thumb ) {
+				$count++;
+				if ( ! empty( $thumb ) ) {
+					printf(
+						'<li id="%s_original_%s" class="form-tooltip" style="background-color: %s" title="%s"><span class="screen-reader-text">%s</span></li>',
+						$option['slug'],
+						$count,
+						$thumb,
+						$thumb,
+						$thumb
+					);
+				}
+			}
+			echo '</ul>';
+
+			printf(
+				'<li id="dark_scheme_label_%s" style="margin-top: 1em; display: %s;">%s %s</li>',
+				$option['slug'],
+				$display,
+				$option['name'],
+				lang()->get( 'dark mode colors:' )
+			);
+			printf(
+				'<ul id="dark_scheme_thumbs_%s" style="display: %s;">',
+				$option['slug'],
+				$display
+			);
+			$count = 0;
+			foreach ( $option['dark'] as $thumb ) {
+				$count++;
+				if ( ! empty( $thumb ) ) {
+					printf(
+						'<li id="%s_original_%s_dark" class="form-tooltip" style="background-color: %s" title="%s"><span class="screen-reader-text">%s</span></li>',
+						$option['slug'],
+						$count,
+						$thumb,
+						$thumb,
+						$thumb
+					);
+				}
+			}
+			echo '</ul>';
+		} ?>
+		</ul>
 
 		<div class="tab-content hide-if-no-js" data-toggle="tabslet" data-deeplinking="false" data-animation="true">
 
@@ -807,7 +884,16 @@ jQuery(document).ready( function($) {
 
 			$slug = $option['slug'];
 		?>
-		if ( scheme == '<?php echo $slug; ?>' ) {
+		if ( 'custom' == scheme ) {
+
+			// Scheme descriptions, labels, and color thumbnails.
+			$( '#scheme_desc_<?php echo $option['slug']; ?>' ).css( 'display', 'none' );
+			$( '#light_scheme_label_<?php echo $option['slug']; ?>' ).css( 'display', 'none' );
+			$( '#dark_scheme_label_<?php echo $option['slug']; ?>' ).css( 'display', 'none' );
+			$( '#light_scheme_thumbs_<?php echo $option['slug']; ?>' ).css( 'display', 'none' );
+			$( '#dark_scheme_thumbs_<?php echo $option['slug']; ?>' ).css( 'display', 'none' );
+
+		} else if ( scheme == '<?php echo $slug; ?>' ) {
 
 			if ( 'custom' != scheme ) {
 				$( '#custom_scheme_from' ).val( '<?php echo $slug; ?>' );
