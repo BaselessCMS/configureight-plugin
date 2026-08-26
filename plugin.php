@@ -53,7 +53,8 @@ use function CFE_Plugin\{
 };
 use function CFE_Colors\{
 	default_color_scheme,
-	define_color_scheme
+	define_color_scheme,
+	current_color_scheme
 };
 use function CFE_Fonts\{
 	admin_font_options,
@@ -1286,7 +1287,8 @@ class configureight extends Plugin {
 		}
 
 		// Get options from the theme plugin.
-		$colors = $this->color_scheme();
+		$option_colors = $this->color_scheme();
+		$current_color = current_color_scheme();
 		$fonts  = current_font_scheme();
 		$html   = '';
 
@@ -1295,8 +1297,8 @@ class configureight extends Plugin {
 
 		// Color scheme stylesheet.
 		if ( 'colors' === $type ) {
-			if ( 'default' != $colors && 'custom' != $colors ) {
-				$html = css( "assets/css/colors/{$colors}/{$filename}{$suffix}.css" );
+			if ( 'default' != $option_colors && 'custom' != $option_colors ) {
+				$html = css( "assets/css/colors/{$current_color['category']}/{$option_colors}/{$filename}{$suffix}.css" );
 			}
 		}
 
