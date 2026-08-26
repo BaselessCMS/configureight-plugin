@@ -225,12 +225,10 @@ function domain( $dir = '/' ) {
 	// Prepared directory variables.
 	if ( 'css' === $dir ) {
 		$dir = '/assets/css/';
-	} elseif ( 'schemes' === $dir ) {
-		$dir = '/assets/css/schemes/';
 	} elseif ( 'css_colors' === $dir ) {
-		$dir = '/assets/css/schemes/colors/';
+		$dir = '/assets/css/colors/';
 	} elseif ( 'css_fonts' === $dir ) {
-		$dir = '/assets/css/schemes/fonts/';
+		$dir = '/assets/css/fonts/';
 	} elseif ( 'js' === $dir ) {
 		$dir = '/assets/js/';
 	} elseif ( 'images' === $dir ) {

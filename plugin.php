@@ -738,7 +738,7 @@ class configureight extends Plugin {
 			if ( $slug == $this->font_scheme() ) {
 				// continue;
 			}
-			$assets .= '<link rel="stylesheet" type="text/css" href="' . $this->domainPath() . "assets/css/schemes/fonts/{$slug}/font-preview{$suffix}.css?version=" . $this->getMetadata( 'version' ) . '" />' . PHP_EOL;
+			$assets .= '<link rel="stylesheet" type="text/css" href="' . $this->domainPath() . "assets/css/fonts/{$slug}/font-preview{$suffix}.css?version=" . $this->getMetadata( 'version' ) . '" />' . PHP_EOL;
 		}
 
 		// End plugin page.
@@ -1296,14 +1296,14 @@ class configureight extends Plugin {
 		// Color scheme stylesheet.
 		if ( 'colors' === $type ) {
 			if ( 'default' != $colors && 'custom' != $colors ) {
-				$html = css( "assets/css/schemes/colors/{$colors}/{$filename}{$suffix}.css" );
+				$html = css( "assets/css/colors/{$colors}/{$filename}{$suffix}.css" );
 			}
 		}
 
 		// Typography scheme stylesheet.
 		if ( 'fonts' == $type ) {
 			if ( 'default' != $fonts['slug'] ) {
-				$html .= css( "assets/css/schemes/fonts/{$fonts['slug']}/{$filename}{$suffix}.css" );
+				$html .= css( "assets/css/fonts/{$fonts['slug']}/{$filename}{$suffix}.css" );
 			}
 		}
 		return $html;
