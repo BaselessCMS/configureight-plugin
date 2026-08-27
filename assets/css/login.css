@@ -3322,10 +3322,6 @@ select option {
 #font-preview-list {
   padding: 0;
 }
-#font-preview-list svg {
-  max-width: 480px;
-  fill: currentColor;
-}
 
 .EasyMDEContainer .editor-toolbar button {
   height: auto;
