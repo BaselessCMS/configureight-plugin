@@ -135,7 +135,7 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 						}
 						printf(
 							'<optgroup label="%s">',
-							ucwords( $option['category'] )
+							ucwords( str_replace( '-', ' ', $option['category'] ) )
 						);
 					}
 					if ( ! in_array( $option['slug'], $exclude ) ) {
