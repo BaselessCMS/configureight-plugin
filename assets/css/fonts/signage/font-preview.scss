@@ -7,7 +7,7 @@
 	font-weight: 400 700;
 	font-style: normal;
 	font-display: swap;
-	src: url( ../../../../fonts/signage/alkatra.woff2 ) format( 'woff2' );
+	src: url( ../../../fonts/signage/alkatra.woff2 ) format( 'woff2' );
 }
 
 @font-face {
@@ -15,7 +15,7 @@
 	font-weight: 400 700;
 	font-style: italic;
 	font-display: swap;
-	src: url( ../../../../fonts/signage/alkatra.woff2 ) format( 'woff2' );
+	src: url( ../../../fonts/signage/alkatra.woff2 ) format( 'woff2' );
 }
 
 $display_stack: 'Alkatra', 'Segoe Print', 'Bradley Hand', Chilanka, TSCu_Comic, casual, cursive, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';

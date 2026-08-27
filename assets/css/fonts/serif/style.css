@@ -3,14 +3,14 @@
   font-weight: 200 900;
   font-style: normal;
   font-display: swap;
-  src: url(../../../../fonts/serif/crimson.woff2) format("woff2");
+  src: url(../../../fonts/serif/crimson.woff2) format("woff2");
 }
 @font-face {
   font-family: "Crimson Pro";
   font-weight: 200 900;
   font-style: italic;
   font-display: swap;
-  src: url(../../../../fonts/serif/crimson-italic.woff2) format("woff2");
+  src: url(../../../fonts/serif/crimson-italic.woff2) format("woff2");
 }
 :host,
 :root {

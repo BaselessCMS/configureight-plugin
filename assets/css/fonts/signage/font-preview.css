@@ -3,14 +3,14 @@
   font-weight: 400 700;
   font-style: normal;
   font-display: swap;
-  src: url(../../../../fonts/signage/alkatra.woff2) format("woff2");
+  src: url(../../../fonts/signage/alkatra.woff2) format("woff2");
 }
 @font-face {
   font-family: "Alkatra";
   font-weight: 400 700;
   font-style: italic;
   font-display: swap;
-  src: url(../../../../fonts/signage/alkatra.woff2) format("woff2");
+  src: url(../../../fonts/signage/alkatra.woff2) format("woff2");
 }
 :host,
 :root {

@@ -3,28 +3,28 @@
   font-weight: 400 900;
   font-style: normal;
   font-display: swap;
-  src: url(../../../../fonts/cosmo/playfair.woff2) format("woff2");
+  src: url(../../../fonts/cosmo/playfair.woff2) format("woff2");
 }
 @font-face {
   font-family: "Playfair";
   font-weight: 400 900;
   font-style: italic;
   font-display: swap;
-  src: url(../../../../fonts/cosmo/playfair-italic.woff2) format("woff2");
+  src: url(../../../fonts/cosmo/playfair-italic.woff2) format("woff2");
 }
 @font-face {
   font-family: "Raleway";
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
-  src: url(../../../../fonts/cosmo/raleway.woff2) format("woff2");
+  src: url(../../../fonts/cosmo/raleway.woff2) format("woff2");
 }
 @font-face {
   font-family: "Raleway";
   font-weight: 100 900;
   font-style: italic;
   font-display: swap;
-  src: url(../../../../fonts/cosmo/raleway-italic.woff2) format("woff2");
+  src: url(../../../fonts/cosmo/raleway-italic.woff2) format("woff2");
 }
 :host,
 :root {
