@@ -1163,6 +1163,34 @@ function color_schemes() {
 				'five'  => '#672178',
 				'six'   => '#8f2ea7'
 			]
+		],
+
+		// Sanzo Wada
+		'heian-one' => [
+			'slug'     => 'heian-one',
+			'name'     => lang()->get( 'Heian Era One' ),
+			'category' => 'sanzo-wada',
+			'cover'    => '#1b2a4e',
+			'light' => [
+				'body'  => '#ffffff',
+				'text'  => '#1b2a4e',
+				'one'   => '#3c6e8f',
+				'two'   => '#779ab1',
+				'three' => '#9a2a2a',
+				'four'  => '#f4eee0',
+				'five'  => '#1b2a4e',
+				'six'   => '#f4eee0'
+			],
+			'dark' => [
+				'body'  => '#1b2a4e',
+				'text'  => '#f5f0e3',
+				'one'   => '#779ab1',
+				'two'   => '#3c6e8f',
+				'three' => '#f4eee0',
+				'four'  => '#9a2a2a',
+				'five'  => '#672178',
+				'six'   => '#8f2ea7'
+			]
 		]
 	];
 
