@@ -14,6 +14,7 @@ use function CFE_Colors\{
 	get_color_scheme,
 	default_color_scheme,
 	current_color_scheme,
+	color_scheme_category,
 	hex_to_rgb
 };
 use function CFE_Plugin\{
@@ -180,20 +181,31 @@ foreach ( $schemes as $scheme => $option ) {
 		continue;
 	}
 
+	$slug = $option['slug'];
+	if ( $current['slug'] == $slug ) {
+		$slug = 'current-scheme';
+	}
+	$scheme_cat = color_scheme_category( $option['category'] );
+
 	if ( $category != $option['category'] ) {
 		printf(
-			'<li><h3>%s</h3></li>',
-			ucwords( $option['category'] )
+			'<li id="cat-id-%s" style="margin: var( --cfe-element--margin, calc( var( --cfe-spacing--vert, 2rem ) / 2 ) 0 );"><hr /><h3 style="margin: 0;">%s</h3></li>',
+			$option['category'],
+			$scheme_cat['name']
 		);
+		if ( isset( $scheme_cat ) && array_key_exists( 'about', $scheme_cat ) && ! empty( $scheme_cat['about'] ) ) {
+			printf(
+				'<li class="color-scheme-list-cat-desc" style="margin: var( --cfe-element--margin, calc( var( --cfe-spacing--vert, 2rem ) / 2 ) 0 );"><p>%s</p></li>',
+				$scheme_cat['about']
+			);
+		}
 	}
-
 	printf(
 		'<li><span class="color-list-label"><a href="#%s">%s</a>:</span> <code class="select">%s</code></li>',
-		$option['slug'],
-		ucwords( $option['name'] ),
-		$option['slug']
+		$slug,
+		$scheme_cat['name'],
+		$slug
 	);
-
 	$category = $option['category'];
 }
 echo '</ul>';
@@ -202,6 +214,7 @@ echo '</ul>';
 if ( false !== $current ) :
 
 echo '<hr />';
+echo '<div id="current-scheme">';
 printf(
 	'<h2 class="color-heading">%s %s</h2>',
 	lang()->get( 'Current Scheme:' ),
@@ -289,7 +302,7 @@ foreach ( $current['dark'] as $name => $color ) {
 		echo '</ul></li>';
 	endif;
 }
-echo '</ul>';
+echo '</ul></div>';
 
 // Copy custom colors as text.
 if ( 'custom' == plugin()->color_scheme() ) :
@@ -318,6 +331,7 @@ foreach ( $schemes as $scheme => $option ) {
 	if ( plugin()->color_scheme() == $option['slug'] ) {
 		continue;
 	}
+	$scheme_cat = color_scheme_category( $option['category'] );
 
 	echo '<hr />';
 
@@ -326,6 +340,13 @@ foreach ( $schemes as $scheme => $option ) {
 		$option['slug'],
 		lang()->get( 'Scheme:' ),
 		$option['name']
+	);
+
+	printf(
+		'<p class="color-scheme-list-cat">%s <a href="#cat-id-%s">%s</a></p>',
+		lang()->get( 'Category:' ),
+		$option['category'],
+		$scheme_cat['name']
 	);
 
 	if ( isset( $option['about'] ) && ! empty( $option['about'] ) ) {

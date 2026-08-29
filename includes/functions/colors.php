@@ -68,6 +68,83 @@ function color( $color ) {
 }
 
 /**
+ * Color scheme category
+ *
+ * Returns an array of color scheme data for
+ * a given scheme slug.
+ *
+ * @since  1.0.0
+ * @param  string $slug The slug/directory of the scheme.
+ * @return array
+ */
+function color_scheme_category( $slug ) {
+	$cats = color_scheme_categories();
+	return $cats[$slug];
+}
+
+/**
+ * Color scheme categories
+ *
+ * Returns an array of color scheme data for
+ * use in the form UI and the color guide page.
+ *
+ * @since  1.0.0
+ * @return array
+ */
+function color_scheme_categories() {
+
+	$cats = [
+		'basic' => [
+			'slug'  => 'basic',
+			'name'  => lang()->get( 'Basic' ),
+			'about' => lang()->get( 'The simple, default color schemes for light and dark modes. ' )
+		],
+		'design' => [
+			'slug'  => 'design',
+			'name'  => lang()->get( 'Design' ),
+			'about' => lang()->get( 'Color schemes based on design trends of the 20th century.' )
+		],
+		'gemstones' => [
+			'slug'  => 'gemstones',
+			'name'  => lang()->get( 'Gemstones' ),
+			'about' => lang()->get( 'The colors of common gemstones and birthstones.' )
+		],
+		'materials' => [
+			'slug'  => 'materials',
+			'name'  => lang()->get( 'Materials' ),
+			'about' => lang()->get( 'Inspired by various building & art materials.' )
+		],
+		'metallic' => [
+			'slug'  => 'metallic',
+			'name'  => lang()->get( 'Metallic' ),
+			'about' => lang()->get( 'Mostly monochromatic color schemes based on common metals.' )
+		],
+		'nature' => [
+			'slug'  => 'nature',
+			'name'  => lang()->get( 'Nature' ),
+			'about' => lang()->get( 'Inspired by scenes and settings in nature, as well as individual, natural elements.' )
+		],
+		'palettes' => [
+			'slug'  => 'palettes',
+			'name'  => lang()->get( 'Palettes' ),
+			'about' => lang()->get( 'Schemes based on color palette types.' )
+		],
+		'sanzo-wada' => [
+			'slug'  => 'sanzo-wada',
+			'name'  => lang()->get( 'Sanzo Wada' ),
+			'about' => lang()->get( 'Sanzo Wada (1883 - 1967) was a Japanese artist & costume designer who published <em>A Dictionary of Color Combinations</em> in two volumes (1933 - 1934) in order to document Japanese color tastes.' )
+		],
+		'scope' => [
+			'slug'  => 'scope',
+			'name'  => lang()->get( 'Scope' ),
+			'about' => lang()->get( 'Color schemes for the scope of the webite\'s primary content.' )
+		]
+	];
+	asort( $cats );
+	return $cats;
+}
+
+/**
  * Custom color scheme
  *
  * Array to be passed into the primary
@@ -1169,15 +1246,17 @@ function color_schemes() {
 		'heian-one' => [
 			'slug'     => 'heian-one',
 			'name'     => lang()->get( 'Heian Era One' ),
+			'about'    => lang()->get( 'Kurenai, the crimson drawn from safflower petals, was a luxury dye reserved for the robes of high-ranking courtiers. Set against Kon, the darkest grade of indigo, the pair became a signature of formal attire from the Heian court through to Edo merchant households. Gofun is the matte white of temple painting; it reads as devotional, timeless, and unmistakably sacred.' ),
 			'category' => 'sanzo-wada',
-			'cover'    => '#1b2a4e',
+			'overall'  => lang()->get( 'Sanzo Wada (1883 - 1967) was a Japanese artist & costume designer who published <em>A Dictionary of Color Combinations</em> in two volumes (1933 - 1934) in order to document Japanese color tastes.' ),
+			'cover'    => '#9a2a2a',
 			'light' => [
-				'body'  => '#ffffff',
+				'body'  => '#f4eee0',
 				'text'  => '#1b2a4e',
-				'one'   => '#3c6e8f',
-				'two'   => '#779ab1',
+				'one'   => '#495571',
+				'two'   => '#9a2a2a',
 				'three' => '#9a2a2a',
-				'four'  => '#f4eee0',
+				'four'  => '#1b2a4e',
 				'five'  => '#1b2a4e',
 				'six'   => '#f4eee0'
 			],
@@ -1185,7 +1264,61 @@ function color_schemes() {
 				'body'  => '#1b2a4e',
 				'text'  => '#f5f0e3',
 				'one'   => '#779ab1',
-				'two'   => '#3c6e8f',
+				'two'   => '#5f6a83',
+				'three' => '#f4eee0',
+				'four'  => '#9a2a2a',
+				'five'  => '#672178',
+				'six'   => '#8f2ea7'
+			]
+		],
+		'heian-two' => [
+			'slug'     => 'heian-two',
+			'name'     => lang()->get( 'Heian Era Two' ),
+			'about'    => lang()->get( 'Ruri is lapis lazuli, considered one of the seven treasures of Buddhism. It is the blue of sutra frontispieces and deity robes. Gofun is the matte white of temple painting; it reads as devotional, timeless, and unmistakably sacred. Kogane is a golden, muted brown tone.' ),
+			'category' => 'sanzo-wada',
+			'cover'    => '#1e4b8a',
+			'light' => [
+				'body'  => '#f4eee0',
+				'text'  => '#153561',
+				'one'   => '#1e4b8a',
+				'two'   => '#d4af37',
+				'three' => '#d4af37',
+				'four'  => '#1e4b8a',
+				'five'  => '#1e4b8a',
+				'six'   => '#d4af37'
+			],
+			'dark' => [
+				'body'  => '#1b2a4e',
+				'text'  => '#f5f0e3',
+				'one'   => '#779ab1',
+				'two'   => '#5f6a83',
+				'three' => '#f4eee0',
+				'four'  => '#9a2a2a',
+				'five'  => '#672178',
+				'six'   => '#8f2ea7'
+			]
+		],
+		'heian-three' => [
+			'slug'     => 'heian-three',
+			'name'     => lang()->get( 'Heian Era Three' ),
+			'about'    => lang()->get( 'Nadeshiko, the fringed pink flower, was the standard metaphor for Japanese feminine ideals in classical poetry. Mizu-iro, water color, is the blue of a cold spring seen through ferns. Kinari, unbleached natural, is a light, muted neutral tone.' ),
+			'category' => 'sanzo-wada',
+			'cover'    => '#eba6b4',
+			'light' => [
+				'body'  => '#f8f4e9',
+				'text'  => '#153561',
+				'one'   => '#eba6b4',
+				'two'   => '#b4d6e5',
+				'three' => '#b4d6e5',
+				'four'  => '#eba6b4',
+				'five'  => '#b4d6e5',
+				'six'   => '#eba6b4'
+			],
+			'dark' => [
+				'body'  => '#1b2a4e',
+				'text'  => '#f5f0e3',
+				'one'   => '#779ab1',
+				'two'   => '#5f6a83',
 				'three' => '#f4eee0',
 				'four'  => '#9a2a2a',
 				'five'  => '#672178',
