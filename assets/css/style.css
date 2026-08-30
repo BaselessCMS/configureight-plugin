@@ -4308,6 +4308,15 @@ p + .multi-check-wrap {
   border: var(--cfe-form-element--border);
   border-radius: 50%;
 }
+@media (prefers-color-scheme: dark) {
+  #form-color-thumbs-list ul li {
+    border: var(--cfe-form-element--border--dark);
+  }
+}
+
+.dark-mode #form-color-thumbs-list ul li {
+  border: var(--cfe-form-element--border--dark);
+}
 
 .plugin-form label {
   display: block;
