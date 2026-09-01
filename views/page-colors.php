@@ -120,7 +120,7 @@ printf(
 echo '<ul class="color-list color-list-light">';
 foreach ( $default['light'] as $name => $color ) {
 	printf(
-		'<li><span class="color-list-label">%s %s:</span> <code class="select">%s</code></li>',
+		'<li><span class="color-list-label">%s %s</span> <code class="select">%s</code></li>',
 		ucwords( $name ),
 		lang()->get( 'variable:' ),
 		"--cfe-scheme-color--{$name}"
@@ -203,7 +203,7 @@ foreach ( $schemes as $scheme => $option ) {
 	printf(
 		'<li><span class="color-list-label"><a href="#%s">%s</a>:</span> <code class="select">%s</code></li>',
 		$slug,
-		$scheme_cat['name'],
+		$option['name'],
 		$slug
 	);
 	$category = $option['category'];
