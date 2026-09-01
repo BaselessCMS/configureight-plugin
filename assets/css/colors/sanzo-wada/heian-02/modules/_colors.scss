@@ -1,0 +1,26 @@
+///
+/// SCSS variables
+///
+
+@use '../../../../modules/functions' as f;
+
+$light: (
+	'body'  : #f4eee0,
+	'text'  : f.darken( #1e4b8a, 40% ),
+	'one'   : #1e4b8a,
+	'two'   : #d4af37,
+	'three' : #d4af37,
+	'four'  : #1e4b8a,
+	'five'  : #1e4b8a,
+	'six'   : #d4af37
+);
+$dark: (
+	'body'  : f.darken( #1e4b8a, 40% ),
+	'text'  : f.lighten( #f4eee0, 10% ),
+	'one'   : #d4af37,
+	'two'   : f.lighten( #f4eee0, 10% ),
+	'three' : #d4af37,
+	'four'  : #1e4b8a,
+	'five'  : #d4af37,
+	'six'   : #1e4b8a
+);

@@ -1,0 +1,32 @@
+///
+/// SCSS variables
+///
+
+@use 'sass:color';
+@use '../../../../modules/functions' as f;
+
+// Modify original colors.
+$ruri: f.darken( #1e4b8a, 20% );
+$nadeshiko: color.adjust( #eba6b4, $saturation: 20% );
+$mizu-iro: color.adjust( #b4d6e5, $saturation: 20% );
+
+$light: (
+	'body'  : #f8f4e9,
+	'text'  : $ruri,
+	'one'   : f.hex( $nadeshiko ),
+	'two'   : f.hex( $mizu-iro ),
+	'three' : f.hex( $mizu-iro ),
+	'four'  : f.hex( $nadeshiko ),
+	'five'  : f.hex( $mizu-iro ),
+	'six'   : f.hex( $nadeshiko ),
+);
+$dark: (
+	'body'  : $ruri,
+	'text'  : #f8f4e9,
+	'one'   : f.hex( $nadeshiko ),
+	'two'   : f.hex( $mizu-iro ),
+	'three' : f.hex( $mizu-iro ),
+	'four'  : f.hex( $nadeshiko ),
+	'five'  : f.hex( $mizu-iro ),
+	'six'   : f.hex( $nadeshiko ),
+);

@@ -132,7 +132,7 @@ function color_scheme_categories() {
 		'sanzo-wada' => [
 			'slug'  => 'sanzo-wada',
 			'name'  => lang()->get( 'Sanzo Wada' ),
-			'about' => lang()->get( 'Sanzo Wada (1883 - 1967) was a Japanese artist & costume designer who published <em>A Dictionary of Color Combinations</em> in two volumes (1933 - 1934) in order to document Japanese color tastes.' )
+			'about' => lang()->get( 'Sanzo Wada (1883 - 1967) was a Japanese artist & costume designer who published <em>A Dictionary of Color Combinations</em> in two volumes (1933 - 1934) in order to document Japanese color tastes. <br/><br/>These schemes come from his color combinations. Some modifications may have been made for use on the web.' )
 		],
 		'scope' => [
 			'slug'  => 'scope',
@@ -1243,8 +1243,8 @@ function color_schemes() {
 		],
 
 		// Sanzo Wada
-		'heian-one' => [
-			'slug'     => 'heian-one',
+		'heian-01' => [
+			'slug'     => 'heian-01',
 			'name'     => lang()->get( 'Heian Era One' ),
 			'about'    => lang()->get( 'Kurenai, the crimson drawn from safflower petals, was a luxury dye reserved for the robes of high-ranking courtiers. Set against Kon, the darkest grade of indigo, the pair became a signature of formal attire from the Heian court through to Edo merchant households. Gofun is the matte white of temple painting; it reads as devotional, timeless, and unmistakably sacred.' ),
 			'category' => 'sanzo-wada',
@@ -1253,7 +1253,7 @@ function color_schemes() {
 			'light' => [
 				'body'  => '#f4eee0',
 				'text'  => '#1b2a4e',
-				'one'   => '#495571',
+				'one'   => '#1b2a4e',
 				'two'   => '#9a2a2a',
 				'three' => '#9a2a2a',
 				'four'  => '#1b2a4e',
@@ -1262,24 +1262,24 @@ function color_schemes() {
 			],
 			'dark' => [
 				'body'  => '#1b2a4e',
-				'text'  => '#f5f0e3',
-				'one'   => '#779ab1',
-				'two'   => '#5f6a83',
-				'three' => '#f4eee0',
-				'four'  => '#9a2a2a',
-				'five'  => '#672178',
-				'six'   => '#8f2ea7'
+				'text'  => '#f4eee0',
+				'one'   => '#88b9c4',
+				'two'   => '#f4eee0',
+				'three' => '#9a2a2a',
+				'four'  => '#f4eee0',
+				'five'  => '#9a2a2a',
+				'six'   => '#f4eee0'
 			]
 		],
-		'heian-two' => [
-			'slug'     => 'heian-two',
+		'heian-02' => [
+			'slug'     => 'heian-02',
 			'name'     => lang()->get( 'Heian Era Two' ),
 			'about'    => lang()->get( 'Ruri is lapis lazuli, considered one of the seven treasures of Buddhism. It is the blue of sutra frontispieces and deity robes. Gofun is the matte white of temple painting; it reads as devotional, timeless, and unmistakably sacred. Kogane is a golden, muted brown tone.' ),
 			'category' => 'sanzo-wada',
 			'cover'    => '#1e4b8a',
 			'light' => [
 				'body'  => '#f4eee0',
-				'text'  => '#153561',
+				'text'  => '#183c6e',
 				'one'   => '#1e4b8a',
 				'two'   => '#d4af37',
 				'three' => '#d4af37',
@@ -1288,41 +1288,68 @@ function color_schemes() {
 				'six'   => '#d4af37'
 			],
 			'dark' => [
-				'body'  => '#1b2a4e',
+				'body'  => '#183c6e',
 				'text'  => '#f5f0e3',
-				'one'   => '#779ab1',
-				'two'   => '#5f6a83',
-				'three' => '#f4eee0',
-				'four'  => '#9a2a2a',
-				'five'  => '#672178',
-				'six'   => '#8f2ea7'
+				'one'   => '#d4af37',
+				'two'   => '#f5f0e3',
+				'three' => '#d4af37',
+				'four'  => '#1e4b8a',
+				'five'  => '#d4af37',
+				'six'   => '#1e4b8a'
 			]
 		],
-		'heian-three' => [
-			'slug'     => 'heian-three',
+		'heian-03' => [
+			'slug'     => 'heian-03',
 			'name'     => lang()->get( 'Heian Era Three' ),
 			'about'    => lang()->get( 'Nadeshiko, the fringed pink flower, was the standard metaphor for Japanese feminine ideals in classical poetry. Mizu-iro, water color, is the blue of a cold spring seen through ferns. Kinari, unbleached natural, is a light, muted neutral tone.' ),
 			'category' => 'sanzo-wada',
-			'cover'    => '#eba6b4',
+			'cover'    => '#f69bae',
 			'light' => [
 				'body'  => '#f8f4e9',
-				'text'  => '#153561',
-				'one'   => '#eba6b4',
-				'two'   => '#b4d6e5',
-				'three' => '#b4d6e5',
-				'four'  => '#eba6b4',
-				'five'  => '#b4d6e5',
-				'six'   => '#eba6b4'
+				'text'  => '#173868',
+				'one'   => '#f69bae',
+				'two'   => '#aadaef',
+				'three' => '#aadaef',
+				'four'  => '#f69bae',
+				'five'  => '#aadaef',
+				'six'   => '#f69bae'
 			],
 			'dark' => [
-				'body'  => '#1b2a4e',
-				'text'  => '#f5f0e3',
-				'one'   => '#779ab1',
-				'two'   => '#5f6a83',
-				'three' => '#f4eee0',
-				'four'  => '#9a2a2a',
-				'five'  => '#672178',
-				'six'   => '#8f2ea7'
+				'body'  => '#173868',
+				'text'  => '#f8f4e9',
+				'one'   => '#f69bae',
+				'two'   => '#aadaef',
+				'three' => '#aadaef',
+				'four'  => '#f69bae',
+				'five'  => '#aadaef',
+				'six'   => '#f69bae'
+			]
+		],
+		'heian-04' => [
+			'slug'     => 'heian-04',
+			'name'     => lang()->get( 'Heian Era Four' ),
+			'about'    => lang()->get( 'Fuji-iro, wisteria purple, is a light, cool lavender drawn from the pendulous flowers of the Fuji vine. Ai, true indigo, grounds it with depth. The pair is a signature of early summer gardens. The pair is a signature of early summer gardens. Gofun is the matte white of temple painting; it reads as devotional, timeless, and unmistakably sacred.' ),
+			'category' => 'sanzo-wada',
+			'cover'    => '#b398d7',
+			'light' => [
+				'body'  => '#f4eee0',
+				'text'  => '#112536',
+				'one'   => '#b398d7',
+				'two'   => '#1c3d5a',
+				'three' => '#b398d7',
+				'four'  => '#1c3d5a',
+				'five'  => '#1c3d5a',
+				'six'   => '#b398d7'
+			],
+			'dark' => [
+				'body'  => '#112536',
+				'text'  => '#f4eee0',
+				'one'   => '#b398d7',
+				'two'   => '#f4eee0',
+				'three' => '#b398d7',
+				'four'  => '#1c3d5a',
+				'five'  => '#b398d7',
+				'six'   => '#1c3d5a'
 			]
 		]
 	];

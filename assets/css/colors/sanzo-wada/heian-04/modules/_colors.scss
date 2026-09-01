@@ -1,0 +1,31 @@
+///
+/// SCSS variables
+///
+
+@use 'sass:color';
+@use '../../../../modules/functions' as f;
+
+// Modify original colors.
+$ai_dark: f.darken( #1c3d5a, 40% );
+$fuji_sat: color.adjust( #b5a6c9, $saturation: 20% );
+
+$light: (
+	'body'  : #f4eee0,
+	'text'  : $ai_dark,
+	'one'   : f.hex( $fuji_sat ),
+	'two'   : #1c3d5a,
+	'three' : f.hex( $fuji_sat ),
+	'four'  : #1c3d5a,
+	'five'  : #1c3d5a,
+	'six'   : f.hex( $fuji_sat ),
+);
+$dark: (
+	'body'  : $ai_dark,
+	'text'  : #f4eee0,
+	'one'   : f.hex( $fuji_sat ),
+	'two'   : #f4eee0,
+	'three' : f.hex( $fuji_sat ),
+	'four'  : #1c3d5a,
+	'five'  : f.hex( $fuji_sat ),
+	'six'   : #1c3d5a,
+);
