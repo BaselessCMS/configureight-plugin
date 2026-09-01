@@ -101,7 +101,7 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 				<?php
 
 				// Sort schemes alphabetically then by category.
-				asort( $colors );
+				ksort( $colors );
 				usort( $colors, function( $one_thing, $another ) {
 					return strcmp( $one_thing['category'], $another['category'] );
 				} );
