@@ -5,7 +5,7 @@
 	"version"      : "1.0.0",
 	"releaseDate"  : "",
 	"license"      : "Nope",
-	"compatible"   : "3.16.2",
+	"compatible"   : "3.22.0",
 	"notes"        : "Options for the Configure 8 theme.",
 	"type"         : "theme",
 	"name"         : "Website Configuration",
