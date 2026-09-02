@@ -790,7 +790,7 @@ class configureight extends Plugin {
 		// Modal background.
 		$assets .= '<style>';
 		$assets .= sprintf(
-			':root { --cfe-modal-overlay--bg-color: %s; }',
+			':host, :root { --cfe-modal-overlay--bg-color: %s; }',
 			$this->modal_bg_color()
 		);
 		$assets .= '</style>';

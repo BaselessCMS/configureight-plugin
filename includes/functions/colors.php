@@ -1644,7 +1644,7 @@ function define_color_scheme() {
 	}
 
 	// Begin style block.
-	$style = "\n" . '<style>:root{';
+	$style = "\n" . '<style>:host, :root {';
 
 		// Set up array of colors.
 	$colors = [];
