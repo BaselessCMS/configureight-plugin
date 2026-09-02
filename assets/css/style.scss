@@ -1,12 +1,11 @@
 ///
-/// Primary stylesheet
+/// Primary admin stylesheet
 ///
 /// Gets SCSS partials to compile.
 ///
 
-@use 'modules/colors';
 @use 'partials/root';
-@use 'modules/reset';
+@use 'partials/reset';
 @use 'partials/setup';
 @use 'partials/layout';
 @use 'partials/tables';
