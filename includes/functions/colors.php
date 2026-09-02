@@ -1633,7 +1633,7 @@ function define_color_scheme() {
 
 	$current = current_color_scheme();
 
-	// Begin style block.
+	// Begin style root block.
 	$style = "\n" . '<style>:host, :root {';
 
 		// Set up array of colors.
@@ -1684,7 +1684,47 @@ function define_color_scheme() {
 	// Convert array to semicolon-separated CSS content.
 	$style .= implode( '; ', $colors );
 
-	// Close the style block.
+	// Close the root style block.
+	$style .= '}</style>' . "\n";
+
+	// Begin dark mode style block.
+	$style .= "\n" . '<style>.dark-mode {';
+
+	// Variables for each dark mode color.
+	foreach ( $current['dark'] as $key => $value ) {
+		if ( ! empty( $value ) ) {
+
+			if ( 'page' == $url->whereAmI() ) {
+				if (
+					plugin()->use_dark_scheme() ||
+					( str_contains( $page->template(), 'color-scheme-' ) &&
+					str_contains( $page->template(), '-dark' ) )
+				) {
+					$colors[] = sprintf(
+						'--cfe-scheme-color--%s: %s',
+						$key,
+						$value
+					);
+				}
+			} elseif ( plugin()->use_dark_scheme() ) {
+				$colors[] = sprintf(
+					'--cfe-scheme-color--%s: %s',
+					$key,
+					$value
+				);
+			}
+			$colors[] = sprintf(
+				'--cfe-scheme-color--%s--dark: %s',
+				$key,
+				$value
+			);
+		}
+	}
+
+	// Convert array to semicolon-separated CSS content.
+	$style .= implode( '; ', $colors );
+
+	// Close the dark mode style block.
 	$style .= '}</style>' . "\n";
 
 	return $style;
