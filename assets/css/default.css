@@ -78,6 +78,11 @@ code.select {
           user-select: all;
 }
 
+.btn:hover,
+.btn:focus {
+  transform: none !important;
+}
+
 .user-toolbar {
   position: fixed;
   top: 0;

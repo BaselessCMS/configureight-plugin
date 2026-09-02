@@ -108,16 +108,20 @@
 	--cfe-button--bg-color--dark: var( --cfe-scheme-color--three--dark );
 	--cfe-button--action--bg-color: var( --cfe-scheme-color--four );
 	--cfe-button--action--bg-color--dark: var( --cfe-scheme-color--four--dark );
-	--cfe-button--border-color: var( --cfe-form-element--border-color );
-	--cfe-button--border-color--dark: var( --cfe-form-element--border-color--dark );
-	--cfe-button--action--border-color: var( --cfe-form-element--border-color );
-	--cfe-button--action--border-color--dark: var( --cfe-form-element--border-color--dark );
+
 	--cfe-button--text-color: #ffffff;
 	--cfe-button--text-color--dark: #ffffff;
 	--cfe-button--action--text-color: #ffffff;
 	--cfe-button--action--text-color--dark: #ffffff;
 	--cfe-button--svg-icon--width: 1em;
 	--cfe-button--svg-icon--height: 1em;
+
+	--cfe-button--border-color: var( --cfe-form-element--border-color );
+	--cfe-button--border-color--dark: var( --cfe-form-element--border-color--dark );
+	--cfe-button--action--border-color: var( --cfe-form-element--border-color );
+	--cfe-button--action--border-color--dark: var( --cfe-form-element--border-color--dark );
+
+	--cfe-button--border: var( --cfe-form-element--border-style ) var( --cfe-form-element--border-width ) var( --cfe-button--border-color );
 
 	--cfe-text-muted--text-color: var( --cfe-scheme-color--text );
 	--cfe-text-muted--text-color--dark: var( --cfe-scheme-color--text--dark );
@@ -150,6 +154,7 @@
 	--cfe-admin-menu--bg-color: var( --cfe-body--bg-color--dark );
 	--cfe-admin--menu--link--action--bg-color: var( --cfe-scheme-color--five );
 	--cfe-admin--menu--link--action--bg-color--dark: var( --cfe-scheme-color--five--dark );
+	--cfe-admin-menu--heading--font-size: 1.125rem;
 
 	// Tabbed content.
 	--cfe-tabs--list--gap: 0 0.25rem;

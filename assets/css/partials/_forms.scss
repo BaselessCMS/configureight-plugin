@@ -206,6 +206,21 @@ input[type="button"].btn-block {
   width: 100%;
 }
 
+.btn {
+	transform: none !important;
+
+	&:hover,
+	&:focus {
+		transform: none !important;
+	}
+}
+.btn-primary,
+.btn-secondary {
+	&:hover {
+		border: var( --cfe-button--border );
+	}
+}
+
 .form-group {
 	margin: 2rem 0;
 
