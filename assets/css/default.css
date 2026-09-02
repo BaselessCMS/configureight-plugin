@@ -436,7 +436,7 @@ form .col-sm-1, form .col-sm-2, form .col-sm-3, form .col-sm-4, form .col-sm-5, 
   padding: 0.25em 0.5em;
 }
 .database-list ul li:nth-of-type(odd) {
-  background-color: #e8e8e8;
+  background-color: var(--bg-sidebar, #f1f5f9);
 }
 .database-list ul span {
   display: inline-block;

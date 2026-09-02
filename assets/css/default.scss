@@ -535,7 +535,7 @@ form {
 			padding: 0.25em 0.5em;
 
 			&:nth-of-type(odd) {
-				background-color: #e8e8e8;
+				background-color: var( --bg-sidebar, #f1f5f9 );
 			}
 		}
 
