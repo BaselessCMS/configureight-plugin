@@ -726,7 +726,7 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 
 				<input type="hidden" id="wght_display_default"  name="wght_display_default" value="<?php echo $current_fonts['display']['weight']; ?>" />
 
-				<span class="btn btn-display btn-md form-range-button hide-if-no-js" onClick="$('#wght_display_value').text($('#wght_display_default').val() );$('#wght_display').val($('#wght_display_default').val());$('.display-sample').css('font-weight', $('#wght_display_default').val());"><?php lang()->p( 'Default' ); ?></span>
+				<span class="btn btn-secondary btn-md form-range-button hide-if-no-js" onClick="$('#wght_display_value').text($('#wght_display_default').val() );$('#wght_display').val($('#wght_display_default').val());$('.display-sample').css('font-weight', $('#wght_display_default').val());"><?php lang()->p( 'Default' ); ?></span>
 			</div>
 			<small id="wght_display_desc" class="form-text">
 				<?php if ( ! $current_fonts['display']['var'] ) {
