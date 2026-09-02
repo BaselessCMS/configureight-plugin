@@ -764,10 +764,12 @@ class configureight extends Plugin {
 		endif;
 
 		// Scheme stylesheets.
-		$assets .= $this->scheme_stylesheet( 'colors', 'admin' );
-		$assets .= $this->scheme_stylesheet( 'fonts', 'admin' );
-		$assets .= define_color_scheme();
-		$assets .= admin_font_options();
+		if ( 'default' != $this->admin_theme() ) {
+			$assets .= $this->scheme_stylesheet( 'colors', 'admin' );
+			$assets .= $this->scheme_stylesheet( 'fonts', 'admin' );
+			$assets .= define_color_scheme();
+			$assets .= admin_font_options();
+		}
 
 		// User toolbar is active.
 		if (
