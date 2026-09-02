@@ -206,7 +206,7 @@ function color_schemes() {
 			'name'     => lang()->get( 'Default' ),
 			'about'    => lang()->get( 'A plain and simple color scheme.' ),
 			'category' => 'basic',
-			'cover'    => '#355e9a',
+			'cover'    => '#0044aa',
 			'light' => [
 				'body'  => '#ffffff',
 				'text'  => '#333333',
@@ -1632,16 +1632,6 @@ function define_color_scheme() {
 	global $page, $url;
 
 	$current = current_color_scheme();
-
-	/**
-	 * Exclude default scheme
-	 *
-	 * Default scheme is defined in the theme,
-	 * including dark mode variables.
-	 */
-	if ( 'default' == $current['slug'] ) {
-		return null;
-	}
 
 	// Begin style block.
 	$style = "\n" . '<style>:host, :root {';

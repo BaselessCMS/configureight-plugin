@@ -1299,7 +1299,7 @@ class configureight extends Plugin {
 
 		// Color scheme stylesheet.
 		if ( 'colors' === $type ) {
-			if ( 'default' != $option_colors && 'custom' != $option_colors ) {
+			if ( 'custom' != $option_colors ) {
 				$html = css( "assets/css/colors/{$current_color['category']}/{$option_colors}/{$filename}{$suffix}.css" );
 			}
 		}

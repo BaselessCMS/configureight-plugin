@@ -4,30 +4,9 @@
 
 @use '../../../modules/colors' as c;
 
-// Scheme colors.
-$color_body: #1e1e1e;
-$color_text: #eeeeee;
-$color_one: #ffffff;
-$color_two: #ffdd00;
-$color_three: #333333;
-$color_four: #555555;
-$color_five: #333333;
-$color_six: #555555;
-
-$color_body_dark: #1e1e1e;
-$color_text_dark: #eeeeee;
-$color_one_dark: #ffffff;
-$color_two_dark: #ffdd00;
-$color_three_dark: #333333;
-$color_four_dark: #555555;
-$color_five_dark: #333333;
-$color_six_dark: #555555;
+@use 'partials/root';
 
 :host,
 :root {
-	--cfe-box--border-color: #{rgba( $color: $color_text_dark, $alpha: 0.5 )};
-	--cfe-button--primary--bg-color: #{c.$blue};
-	--cfe-button--primary--bg-color--dark: #{c.$blue};
-	--cfe-button--primary--border-color: #{c.$blue};
-	--cfe-button--primary--border-color--dark: #{c.$blue};
+
 }

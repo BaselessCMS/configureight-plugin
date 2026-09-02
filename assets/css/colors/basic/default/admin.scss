@@ -2,21 +2,4 @@
 /// Color Scheme: Default
 ///
 
-// Scheme colors.
-$color_body: #ffffff;
-$color_text: #333333;
-$color_one: #0044aa;
-$color_two: #0066cc;
-$color_three: #555555;
-$color_four: #888888;
-$color_five: #333333;
-$color_six: #555555;
-
-$color_body_dark: #1e1e1e;
-$color_text_dark: #eeeeee;
-$color_one_dark: #ffffff;
-$color_two_dark: #ffdd00;
-$color_three_dark: #333333;
-$color_four_dark: #555555;
-$color_five_dark: #333333;
-$color_six_dark: #555555;
+@use 'partials/root';

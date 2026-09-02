@@ -1,5 +1,21 @@
 :host,
 :root {
+  --cfe-scheme-color--body: #1e1e1e;
+  --cfe-scheme-color--text: #eeeeee;
+  --cfe-scheme-color--one: #ffffff;
+  --cfe-scheme-color--two: #ffdd00;
+  --cfe-scheme-color--three: #333333;
+  --cfe-scheme-color--four: #555555;
+  --cfe-scheme-color--five: #333333;
+  --cfe-scheme-color--six: #555555;
+  --cfe-scheme-color--body--dark: #1e1e1e;
+  --cfe-scheme-color--text--dark: #eeeeee;
+  --cfe-scheme-color--one--dark: #ffffff;
+  --cfe-scheme-color--two--dark: #ffdd00;
+  --cfe-scheme-color--three--dark: #333333;
+  --cfe-scheme-color--four--dark: #555555;
+  --cfe-scheme-color--five--dark: #333333;
+  --cfe-scheme-color--six--dark: #555555;
   --cfe-box--border-color: rgba(238, 238, 238, 0.5);
   --cfe-button--primary--bg-color: #0044aa;
   --cfe-button--primary--bg-color--dark: #0044aa;
