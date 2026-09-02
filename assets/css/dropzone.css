@@ -1,3 +1,11 @@
+@keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
 @keyframes passing-through {
   0% {
     opacity: 0;
@@ -53,22 +61,19 @@
     background-color: var(--cfe-body--bg-color--dark);
   }
 }
-
-.dark-mode .dropzone {
-  background-color: var(--cfe-body--bg-color--dark);
-}
-
 .dropzone.dz-clickable {
   cursor: pointer;
 }
-
 .dropzone.dz-clickable * {
   cursor: default;
 }
-
 .dropzone.dz-clickable .dz-message,
 .dropzone.dz-clickable .dz-message * {
   cursor: pointer;
+}
+
+.dark-mode .dropzone {
+  background-color: var(--cfe-body--bg-color--dark);
 }
 
 .dropzone.dz-started .dz-message {
@@ -78,7 +83,6 @@
 .dropzone.dz-drag-hover {
   border-style: solid;
 }
-
 .dropzone.dz-drag-hover .dz-message {
   opacity: 0.5;
 }
@@ -86,7 +90,6 @@
 .dropzone .dz-message {
   text-align: center;
 }
-
 .dropzone .dz-message .dz-button {
   background: none;
   color: inherit;
@@ -103,11 +106,9 @@
   vertical-align: top;
   margin: 1rem;
 }
-
 .dropzone .dz-preview:hover {
   z-index: 1000;
 }
-
 .dropzone .dz-preview:hover .dz-details {
   opacity: 1;
 }
@@ -126,7 +127,6 @@
   cursor: pointer;
   border: none;
 }
-
 .dropzone .dz-preview .dz-remove:hover {
   text-decoration: underline;
 }
@@ -146,26 +146,21 @@
   padding: 0;
   text-align: center;
 }
-
 .dropzone .dz-preview .dz-details .dz-size {
   margin-bottom: 1em;
   font-size: 1rem;
 }
-
 .dropzone .dz-preview .dz-details .dz-filename {
   white-space: nowrap;
 }
-
 .dropzone .dz-preview .dz-details .dz-filename:hover span {
   border: solid 1px rgba(200, 200, 200, 0.8);
   background-color: rgba(255, 255, 255, 0.8);
 }
-
 .dropzone .dz-preview .dz-details .dz-filename:not(:hover) {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
 .dropzone .dz-preview .dz-details .dz-filename:not(:hover) span {
   border: solid 1px transparent;
 }
@@ -182,7 +177,6 @@
   display: block;
   z-index: 10;
 }
-
 .dropzone .dz-preview .dz-image img {
   display: block;
   width: 80px;
@@ -210,7 +204,6 @@
   margin-left: -1rem;
   margin-top: -1rem;
 }
-
 .dropzone .dz-preview .dz-success-mark svg,
 .dropzone .dz-preview .dz-error-mark svg {
   display: block;
@@ -244,10 +237,9 @@
   width: 80px;
   margin-left: -50%;
   background: rgba(255, 255, 255, 0.9);
-  -webkit-transform: scale(1);
+  transform: scale(1);
   overflow: hidden;
 }
-
 .dropzone .dz-preview .dz-progress .dz-upload {
   background: #333;
   background: linear-gradient(to bottom, #666, #444);
