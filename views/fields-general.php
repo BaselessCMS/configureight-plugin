@@ -231,7 +231,7 @@ $custom_from = plugin()->custom_scheme_from();
 					<input id="loader_bg_default" class="screen-reader-text" type="hidden" value="<?php echo $colors[$custom_from]['light']['body']; ?>" />
 					<span class="btn btn-secondary btn-md hide-if-no-js" id="loader_bg_color_default"><?php lang()->p( 'Reset' ); ?></span>
 				</div>
-				<p><small class="form-text"><?php lang()->p( 'For devices with automatic or light user preference.' ); ?></small></p>
+				<small class="form-text"><?php lang()->p( 'For devices with automatic or light user preference.' ); ?></small>
 
 				<p><?php lang()->p( 'Dark Mode Background' ); ?></p>
 				<div class="row color-picker-wrap">
@@ -239,7 +239,7 @@ $custom_from = plugin()->custom_scheme_from();
 					<input id="loader_bg_default_dark" class="screen-reader-text" type="hidden" value="<?php echo $colors[$custom_from]['dark']['body']; ?>" />
 					<span class="btn btn-secondary btn-md hide-if-no-js" id="loader_bg_color_default_dark"><?php lang()->p( 'Reset' ); ?></span>
 				</div>
-				<p><small class="form-text"><?php lang()->p( 'For devices with a dark user preference.' ); ?></small></p>
+				<small class="form-text"><?php lang()->p( 'For devices with a dark user preference.' ); ?></small>
 			</div>
 		</div>
 
@@ -253,7 +253,7 @@ $custom_from = plugin()->custom_scheme_from();
 					<input id="loader_text_default" class="screen-reader-text" type="hidden" value="<?php echo $colors[$custom_from]['light']['text']; ?>" />
 					<span class="btn btn-secondary btn-md hide-if-no-js" id="loader_text_color_default"><?php lang()->p( 'Reset' ); ?></span>
 				</div>
-				<p><small class="form-text"><?php lang()->p( 'For devices with automatic or light user preference.' ); ?></small></p>
+				<small class="form-text"><?php lang()->p( 'For devices with automatic or light user preference.' ); ?></small>
 
 				<p><?php lang()->p( 'Dark Mode Text Color' ); ?></p>
 				<div class="row color-picker-wrap">
@@ -261,7 +261,7 @@ $custom_from = plugin()->custom_scheme_from();
 					<input id="loader_text_default_dark" class="screen-reader-text" type="hidden" value="<?php echo $colors[$custom_from]['dark']['text']; ?>" />
 					<span class="btn btn-secondary btn-md hide-if-no-js" id="loader_text_color_default_dark"><?php lang()->p( 'Reset' ); ?></span>
 				</div>
-				<p><small class="form-text"><?php lang()->p( 'For devices with a dark user preference.' ); ?></small></p>
+				<small class="form-text"><?php lang()->p( 'For devices with a dark user preference.' ); ?></small>
 			</div>
 		</div>
 	</div>

@@ -71,7 +71,7 @@ use function CFE_Colors\{
 				<input id="modal_bg_default" class="screen-reader-text" type="hidden" value="<?php echo plugin()->dbFields['modal_bg_color']; ?>" />
 				<span class="btn btn-secondary btn-md hide-if-no-js" id="modal_bg_color_default"><?php lang()->p( 'Default' ); ?></span>
 			</div>
-			<p><small class="form-text"><?php lang()->p( 'Background color for modal (pop-up) windows.' ); ?></small></p>
+			<small class="form-text"><?php lang()->p( 'Background color for modal (pop-up) windows.' ); ?></small>
 		</div>
 	</div>
 </fieldset>
