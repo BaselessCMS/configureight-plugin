@@ -2,6 +2,7 @@
 /// Forms & inputs
 ///
 
+@use '../modules/layout' as l;
 @use '../modules/utility' as u;
 
 form {
@@ -13,7 +14,7 @@ form {
 		justify-content: space-between;
 		margin: var( --cfe-element--margin, calc( var( --cfe-spacing--vert ) / 2 ) 0 0 0 );
 
-		@media screen and ( max-width: u.$break_min_md ) {
+		@media screen and ( max-width: l.$break_min_md ) {
 			flex-direction: column-reverse;
 			align-items: flex-start;
 			gap: 0.5rem;
@@ -21,7 +22,7 @@ form {
 
 		.float-right {
 			float: none !important;
-			@media screen and ( max-width: u.$break-min_sm ) {
+			@media screen and ( max-width: l.$break_min_sm ) {
 				align-self: flex-end;
 			}
 		}
@@ -517,7 +518,7 @@ textarea.form-controu.is-invalid {
 	width: 100%;
 }
 
-@media ( min-width: u.$break-min_sm ) {
+@media ( min-width: l.$break_min_sm ) {
 
 	.form-inline label {
 		display: -ms-flexbox;

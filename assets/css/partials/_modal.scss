@@ -2,6 +2,7 @@
 /// Modal window styles
 ///
 
+@use '../modules/layout' as l;
 @use '../modules/utility' as u;
 
 .modal-open {
@@ -203,7 +204,7 @@
 	overflow: scroll;
 }
 
-@media ( min-width: u.$break-min_sm ) {
+@media ( min-width: l.$break_min_sm ) {
 
 	.modal-dialog {
 		max-width: 500px;
@@ -234,14 +235,14 @@
 	}
 }
 
-@media ( min-width: u.$break_min_lg ) {
+@media ( min-width: l.$break_min_lg ) {
 	.modal-lg,
 	.modal-xl {
 		max-width: 800px;
 	}
 }
 
-@media ( min-width: u.$break-min_xl ) {
+@media ( min-width: l.$break_min_xl ) {
 	.modal-xl {
 		max-width: 1140px;
 	}

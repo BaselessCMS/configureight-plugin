@@ -4,6 +4,7 @@
 /// Contains styles for specific screens.
 ///
 
+@use '../modules/layout' as l;
 @use '../modules/utility' as u;
 
 #admin-content {
@@ -131,7 +132,7 @@ h6 {
 		flex-wrap: nowrap;
 		gap: 0 var( --cfe-spacing--horz );
 
-		@media ( max-width: u.$break-max-md ) {
+		@media ( max-width: l.$break_max_md ) {
 			flex-wrap: wrap;
 		}
 	}
@@ -514,7 +515,7 @@ h6 {
 			padding: 0.25em 0.5em;
 
 			&:nth-of-type(odd) {
-				background-color: u.$off_white;
+				background-color: #e8e8e8;
 			}
 		}
 
@@ -605,7 +606,7 @@ table a {
 	flex-wrap: wrap;
 	gap: 0.25rem;
 
-	@media ( max-width: u.$break_max_md ) {
+	@media ( max-width: l.$break_max_md ) {
 		flex-direction: column-reverse;
 	}
 
@@ -634,7 +635,7 @@ table a {
 #jseditorToolbarRight {
 	button {
 
-		@media ( max-width: u.$break_max_sm ) {
+		@media ( max-width: l.$break_max_sm ) {
 			font-size: var( --cfe-button--font-size, 1rem ) !important;
 		}
 
@@ -703,7 +704,7 @@ table a {
 	}
 }
 
-@media ( max-width: u.$break_max_sm ) {
+@media ( max-width: l.$break_max_sm ) {
 
 	#jseditorSidebar {
 		width: 100%;
@@ -838,7 +839,7 @@ img.profilePicture {
 	display: block;
 	max-width: 320px;
 
-	@media ( max-width: u.$break-max-lg ) {
+	@media ( max-width: l.$break_max_lg ) {
 		margin-top: 2rem;
 	}
 }
@@ -858,7 +859,7 @@ img.profilePicture {
 	display: block;
 	max-width: 320px;
 
-	@media ( max-width: u.$break-max-lg ) {
+	@media ( max-width: l.$break_max_lg ) {
 		margin-top: 2rem;
 	}
 }
@@ -879,7 +880,7 @@ img.profilePicture {
 	flex-wrap: wrap;
 	gap: 0.25rem;
 
-	@media ( max-width: u.$break_max_md ) {
+	@media ( max-width: l.$break_max_md ) {
 		flex-direction: column-reverse;
 	}
 }

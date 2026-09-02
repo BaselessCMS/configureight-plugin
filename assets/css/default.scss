@@ -2,31 +2,44 @@
 /// Necessary styles if default theme is used.
 ///
 
-@use 'modules/utility' as u;
-@use 'partials/root';
+@use 'modules/layout' as l;
 
 // Default has no dark user preference styles.
 :host,
 :root {
 
+	// Form elements.
+	--cfe-form-element--border-style: solid;
+	--cfe-form-element--border-width: 1px;
+	--cfe-form-element--border-color: var( --border-color );
+	--cfe-form-element--border-color--dark: var( --border-color );
+	--cfe-form-element--border: var( --cfe-form-element--border-style ) var( --cfe-form-element--border-width ) var( --cfe-form-element--border-color );
+	--cfe-form-element--border--dark: var( --cfe-form-element--border-style ) var( --cfe-form-element--border-width ) var( --cfe-form-element--border-color--dark );
+
 	// User toolbar.
-	--cfe-toolbar--bg-color: #ffffff;
-	--cfe-toolbar--bg-color--dark: #ffffff;
-	--cfe-toolbar--text-color: #212529;
-	--cfe-toolbar--text-color--dark: #212529;
+	--cfe-toolbar--padding: 0 1rem;
+	--cfe-toolbar--height: 2rem;
+	--cfe-toolbar--mobile--height: 3rem;
+	--cfe-toolbar--font-size: var(--font-size-base, 0.875rem );
+	--cfe-toolbar--bg-color: var( --bg-sidebar, #f1f5f9 );
+	--cfe-toolbar--bg-color--dark: var( --bg-sidebar, #f1f5f9 );
+	--cfe-toolbar--text-color: var( --text-primary, #1e293b );
+	--cfe-toolbar--text-color--dark: var( --text-primary, #1e293b );
 	--cfe-toolbar--link--padding: 0 0.5em;
-	--cfe-toolbar--link--bg-color: #ffffff;
-	--cfe-toolbar--link--bg-color--dark: #ffffff;
-	--cfe-toolbar--link--text-color: #0078D4;
-	--cfe-toolbar--link--text-color--dark: #0078D4;
-	--cfe-toolbar--link--action--bg-color: #ffffff;
-	--cfe-toolbar--link--action--bg-color--dark: #ffffff;
-	--cfe-toolbar--link--action--text-color: #003f6f;
-	--cfe-toolbar--link--action--text-color--dark: #003f6f;
-	--cfe-toolbar--submenu--link--action--bg-color: #ffffff;
-	--cfe-toolbar--submenu--link--action--bg-color--dark: #ffffff;
-	--cfe-toolbar--submenu--link--text-color: #0078D4;
-	--cfe-toolbar--submenu--link--text-color--dark: #0078D4;
+	--cfe-toolbar--link--bg-color: var( --bg-sidebar, #f1f5f9 );
+	--cfe-toolbar--link--bg-color--dark: var( --bg-sidebar, #f1f5f9 );
+	--cfe-toolbar--link--text-color: var( --text-primary, #1e293b );
+	--cfe-toolbar--link--text-color--dark: var( --text-primary, #1e293b );
+	--cfe-toolbar--link--action--bg-color: var( --bg-sidebar, #f1f5f9 );
+	--cfe-toolbar--link--action--bg-color--dark: var( --bg-sidebar, #f1f5f9 );
+	--cfe-toolbar--link--action--text-color: var( --primary-blue, #0078d4 );
+	--cfe-toolbar--link--action--text-color--dark: var( --primary-blue, #0078d4 );
+	--cfe-toolbar--submenu--link--text-color: var( --text-primary, #1e293b );
+	--cfe-toolbar--submenu--link--text-color--dark: var( --text-primary, #1e293b );
+
+	// User profiles plugin.
+	--upro-body--bg-color: var( --cfe-scheme-color--body, var( --bg-main ) );
+	--upro-body--bg-color--dark: var( --cfe-scheme-color--body--dark, var( --bg-main ) );
 }
 
 ///
@@ -114,7 +127,7 @@ code.select {
 	border-bottom-color: rgba( $color: white, $alpha: 0.125 );
 	box-shadow: 0.125rem 0.125rem 0.5rem rgba( $color: black, $alpha: 0.25 );
 
-	@media ( max-width: u.$break-max-md ) {
+	@media ( max-width: l.$break_max_md ) {
 		height: var( --cfe-toolbar--mobile--height );
 		line-height: var( --cfe-toolbar--mobile--height );
 	}
@@ -185,7 +198,7 @@ code.select {
 				text-decoration: none;
 				color: var( --cfe-toolbar--link--text-color );
 
-				@media ( max-width: u.$break-max-md ) {
+				@media ( max-width: l.$break_max_md ) {
 					gap: 0 0.75em;
 				}
 
@@ -207,7 +220,7 @@ code.select {
 				.top-level-text {
 					display: inline;
 
-					@media ( max-width: u.$break-max-md ) {
+					@media ( max-width: l.$break_max_md ) {
 						border: 0;
 						clip: rect( 1px, 1px, 1px, 1px );
 						-webkit-clip-path: inset(50%);
@@ -229,6 +242,7 @@ code.select {
 			position: absolute;
 			top: 100%;
 			left: -9999em;
+			z-index: 8889;
 			padding: 0.5rem 0;
 			width: 160px;
 			background-color: var( --cfe-toolbar--submenu--bg-color, inherit );
@@ -249,7 +263,7 @@ code.select {
 				background-color: transparent;
 				color: transparent;
 
-				@media ( max-width: u.$break-max-md ) {
+				@media ( max-width: l.$break_max_md ) {
 					height: var( --cfe-toolbar--height );
 					line-height: var( --cfe-toolbar--height );
 				}
@@ -291,7 +305,7 @@ code.select {
 
 	#profile-link {
 		span {
-			@media ( max-width: u.$break-max-md ) {
+			@media ( max-width: l.$break_max_md ) {
 				border: 0;
 				clip: rect( 1px, 1px, 1px, 1px );
 				-webkit-clip-path: inset(50%);
@@ -309,6 +323,16 @@ code.select {
 
 	.user-toolbar-logo {
 		max-height: 24px;
+	}
+}
+
+.nav-item {
+	&.active {
+		.nav-link {
+			color: #495057;
+			background-color: var( --bg-main );
+			border-color: #dee2e6 #dee2e6 var( --bg-main );
+		}
 	}
 }
 
@@ -346,6 +370,25 @@ form {
 	width: 100%;
 	margin: 0;
 	padding: 0;
+}
+
+// Value readout for range input.
+.form-range-value {
+	display: inline-block;
+	padding: .375rem 1ch;
+	font-size: 1rem;
+	line-height: 1.5;
+	background-clip: padding-box;
+	border: var( --cfe-form-element--border );
+
+	@media ( prefers-color-scheme: dark ) {
+		border: var( --cfe-form-element--border--dark ) !important;
+	}
+
+	&.px-range-value,
+	&.rem-range-value {
+		min-width: 10ch;
+	}
 }
 
 .form-range-preview-image {
@@ -769,8 +812,8 @@ form {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-color: #0078d4;
-	border: solid 1px #0078d4;
+	background-color: var( --primary-blue, #0078d4 );
+	border: none;
 	color: #ffffff;
 	border-radius: 0.2rem;
 	transform: translateY(0);
@@ -786,8 +829,7 @@ form {
 	}
 
 	&:hover {
-		background-color: #4585cf;
-		border-color: #4a90e2;
+		background-color: var( --primary-blue-dark, #005a9e );
 		transform: translateY( -0.25rem );
 	}
 

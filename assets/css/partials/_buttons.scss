@@ -2,6 +2,7 @@
 /// Button styles
 ///
 
+@use '../modules/layout' as l;
 @use '../modules/utility' as u;
 
 .btn-group {
@@ -140,7 +141,7 @@ fieldset:disabled a.btn {
 }
 
 // For small devices.
-@media ( max-width: u.$break_max_sm ) {
+@media ( max-width: l.$break_max_sm ) {
 
 	#jsmediaManagerButton,
 	#jscategoryButton,

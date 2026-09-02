@@ -2,6 +2,7 @@
 /// Admin menu & user toolbar
 ///
 
+@use '../modules/layout' as l;
 @use '../modules/utility' as u;
 
 // Admin menu.
@@ -219,7 +220,7 @@ div.sidebar {
 	border-bottom-width: 1px;
 	border-bottom-color: rgba( $color: white, $alpha: 0.125 );
 
-	@media ( max-width: u.$break-max-md ) {
+	@media ( max-width: l.$break_max_md ) {
 		height: var( --cfe-toolbar--mobile--height );
 		line-height: var( --cfe-toolbar--mobile--height );
 	}
@@ -247,7 +248,7 @@ div.sidebar {
 			background-color: var( --cfe-toolbar--link--bg-color );
 			color: var( --cfe-toolbar--link--text-color );
 
-			@media ( max-width: u.$break-max-lg ) {
+			@media ( max-width: l.$break_max_lg ) {
 				padding: var( --cfe-toolbar--link--mobile--padding );
 				max-height: var( --cfe-toolbar--mobile--height );
 			}
@@ -287,7 +288,7 @@ div.sidebar {
 					cursor: pointer;
 
 					svg {
-						@media ( max-width: u.$break-max-lg ) {
+						@media ( max-width: l.$break_max_lg ) {
 							height: 1.25rem;
 						}
 					}
@@ -302,7 +303,7 @@ div.sidebar {
 				white-space: var( --cfe-toolbar--link--white-space, nowrap );
 				color: var( --cfe-toolbar--link--text-color );
 
-				@media ( max-width: u.$break-max-md ) {
+				@media ( max-width: l.$break_max_md ) {
 					gap: 0 0.75em;
 				}
 
@@ -324,7 +325,7 @@ div.sidebar {
 				.top-level-text {
 					display: inline;
 
-					@media ( max-width: u.$break-max-md ) {
+					@media ( max-width: l.$break_max_md ) {
 						border: 0;
 						clip: rect( 1px, 1px, 1px, 1px );
 						-webkit-clip-path: inset(50%);
@@ -365,7 +366,7 @@ div.sidebar {
 				background-color: transparent;
 				color: transparent;
 
-				@media ( max-width: u.$break-max-md ) {
+				@media ( max-width: l.$break_max_md ) {
 					height: var( --cfe-toolbar--height );
 					line-height: var( --cfe-toolbar--height );
 				}
@@ -407,7 +408,7 @@ div.sidebar {
 
 	#profile-link {
 		span {
-			@media ( max-width: u.$break-max-md ) {
+			@media ( max-width: l.$break_max_md ) {
 				border: 0;
 				clip: rect( 1px, 1px, 1px, 1px );
 				-webkit-clip-path: inset(50%);

@@ -2,7 +2,7 @@
 /// Layout styles
 ///
 
-@use '../modules/utility' as l;
+@use '../modules/layout' as l;
 
 // Bootstrap classes, !important removed.
 .container,
@@ -16,7 +16,7 @@
 	margin: 0 auto;
 }
 
-@media ( min-width: l.$break-min_sm ) {
+@media ( min-width: l.$break_min_sm ) {
 	.container, .container-sm {
 		max-width: 100% !important;
 	}
@@ -34,7 +34,7 @@
 	}
 }
 
-@media ( min-width: l.$break-min_xl ) {
+@media ( min-width: l.$break_min_xl ) {
 	.container, .container-sm, .container-md, .container-lg, .container-xl {
 		max-width: 100% !important;
 	}
@@ -351,7 +351,7 @@
 	margin-left: 91.666667%;
 }
 
-@media ( min-width: l.$break-min_sm ) {
+@media ( min-width: l.$break_min_sm ) {
 
 	.col-sm {
 		-ms-flex-preferred-size: 0;
@@ -1098,7 +1098,7 @@
 	}
 }
 
-@media ( min-width: l.$break-min_xl ) {
+@media ( min-width: l.$break_min_xl ) {
 
 	.col-xl {
 		-ms-flex-preferred-size: 0;
@@ -1517,7 +1517,7 @@
 	align-self: stretch;
 }
 
-@media ( min-width: l.$break-min_sm ) {
+@media ( min-width: l.$break_min_sm ) {
 
 	.flex-sm-row {
 		-ms-flex-direction: row;
@@ -2036,7 +2036,7 @@
 	}
 }
 
-@media ( min-width: l.$break-min_xl ) {
+@media ( min-width: l.$break_min_xl ) {
 
 	.flex-xl-row {
 		-ms-flex-direction: row;
@@ -2221,7 +2221,7 @@
 	float: none;
 }
 
-@media ( min-width: l.$break-min_sm ) {
+@media ( min-width: l.$break_min_sm ) {
 
 	.float-sm-left {
 		float: left;
@@ -2260,7 +2260,7 @@
 	}
 }
 
-@media ( min-width: l.$break-min_xl ) {
+@media ( min-width: l.$break_min_xl ) {
 
 	.float-xl-left {
 		float: left;
@@ -2311,7 +2311,7 @@
 	display: inline-flex !important;
 }
 
-@media (min-width: l.$break-min_sm) {
+@media (min-width: l.$break_min_sm) {
 	.d-sm-none {
 		display: none !important;
 	}
@@ -2407,7 +2407,7 @@
 	}
 }
 
-@media (min-width: l.$break-min_xl) {
+@media (min-width: l.$break_min_xl) {
 	.d-xl-none {
 		display: none !important;
 	}
