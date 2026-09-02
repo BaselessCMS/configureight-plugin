@@ -3,7 +3,7 @@
 ///
 
 @use '../modules/layout' as l;
-@use '../modules/utility' as u;
+@use '../modules/colors' as c;
 
 .modal-open {
 	overflow: hidden;
@@ -289,7 +289,7 @@
 					}
 
 					&:last-of-type {
-						color: u.$danger;
+						color: c.$danger;
 					}
 				}
 			}

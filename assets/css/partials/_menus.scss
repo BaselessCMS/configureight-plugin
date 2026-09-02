@@ -3,7 +3,7 @@
 ///
 
 @use '../modules/layout' as l;
-@use '../modules/utility' as u;
+@use '../modules/colors' as c;
 
 // Admin menu.
 div.sidebar {
@@ -12,13 +12,13 @@ div.sidebar {
 	min-width: min-content;
 	margin: 0;
 	padding: 0 0 1rem 0;
-	background-color: var( --cfe-admin-menu--bg-color, u.$dark_gray );
+	background-color: var( --cfe-admin-menu--bg-color, c.$dark_gray );
 	border-right-style: solid;
 	border-right-width: 1px;
 	border-right-color: rgba( $color: white, $alpha: 0.125 );
 
 	@media ( prefers-color-scheme: dark ) {
-		background-color: var( --cfe-admin-menu--bg-color, u.$near_black );
+		background-color: var( --cfe-admin-menu--bg-color, c.$near_black );
 	}
 
 	ul {
@@ -131,7 +131,7 @@ div.sidebar {
 }
 
 .dark-mode div.sidebar {
-	background-color: var( --cfe-admin-menu--bg-color, u.$near_black );
+	background-color: var( --cfe-admin-menu--bg-color, c.$near_black );
 
 	ul .nav-item a {
 		&:hover,

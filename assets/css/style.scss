@@ -4,7 +4,7 @@
 /// Gets SCSS partials to compile.
 ///
 
-@use 'modules/utility';
+@use 'modules/colors';
 @use 'partials/root';
 @use 'modules/reset';
 @use 'partials/setup';

@@ -1,0 +1,103 @@
+///
+/// Variables, keyframes, and functions.
+///
+
+@use 'sass:string';
+@use 'functions' as f;
+
+// General colors.
+$white       : #ffffff !default;
+$off_white   : #e8e8e8 !default;
+$black       : #000000 !default;
+$near_black  : #1e1e1e !default;
+$dark_gray   : #333333 !default;
+$medium_gray : #555555 !default;
+$light_gray  : #888888 !default;
+$pale_gray   : #cccccc !default;
+$red         : #dd0000 !default;
+$orange      : #ee6600 !default;
+$yellow      : #ffdd00 !default;
+$green       : #00aa00 !default;
+$blue        : #0044aa !default;
+$purple      : #bb00aa !default;
+$violet      : #551188 !default;
+$error       : $red    !default;
+$danger      : $red    !default;
+$notify      : $orange !default;
+$warning     : $yellow !default;
+$success     : $green  !default;
+
+// Color types.
+$body_color: $white !default;
+$text_color: $dark_gray !default;
+$body_color_dark: $near_black !default;
+$text_color_dark: $off_white !default;
+
+$colors: (
+	'white'       : $white,
+	'off_white'   : $off_white,
+	'black'       : $black,
+	'near_black'  : $near_black,
+	'dark_gray'   : $dark_gray,
+	'medium_gray' : $medium_gray,
+	'light_gray'  : $light_gray,
+	'pale_gray'   : $pale_gray,
+	'red'         : $red,
+	'orange'      : $orange,
+	'yellow'      : $yellow,
+	'green'       : $green,
+	'blue'        : $blue,
+	'purple'      : $purple,
+	'violet'      : $violet,
+	'error'       : $error,
+	'danger'      : $danger,
+	'notify'      : $notify,
+	'warning'     : $warning,
+	'success'     : $success,
+	'body_color'  : $body_color,
+	'text_color'  : $text_color,
+	'body_color_dark' : $body_color_dark,
+	'text_color_dark' : $text_color_dark
+) !default;
+
+// Scheme colors.
+$color_body:  $body_color !default;
+$color_text:  $text_color !default;
+$color_one:   $blue !default;
+$color_two:   $violet !default;
+$color_three: $medium_gray !default;
+$color_four:  $light_gray !default;
+$color_five:  $dark_gray !default;
+$color_six:   $medium_gray !default;
+
+$color_body_dark:  $body_color_dark !default;
+$color_text_dark:  $text_color_dark !default;
+$color_one_dark:   $white !default;
+$color_two_dark:   $yellow !default;
+$color_three_dark: $dark_gray !default;
+$color_four_dark:  $medium_gray !default;
+$color_five_dark:  $dark_gray !default;
+$color_six_dark:   $medium_gray !default;
+
+$schemes: (
+	'light' : (
+		'body'  : $color_body,
+		'text'  : $color_text,
+		'one'   : $color_one,
+		'two'   : $color_two,
+		'three' : $color_three,
+		'four'  : $color_four,
+		'five'  : $color_five,
+		'six'   : $color_six
+	),
+	'dark' : (
+		'body'  : $color_body_dark,
+		'text'  : $color_text_dark,
+		'one'   : $color_one_dark,
+		'two'   : $color_two_dark,
+		'three' : $color_three_dark,
+		'four'  : $color_four_dark,
+		'five'  : $color_five_dark,
+		'six'   : $color_six_dark
+	)
+) !default;

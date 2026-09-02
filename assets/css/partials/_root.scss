@@ -2,7 +2,8 @@
 /// Root variables
 ///
 
-@use '../modules/utility' as c;
+@use '../modules/typography' as t;
+@use '../modules/colors' as c;
 
 :host,
 :root {
@@ -22,7 +23,7 @@
 	}
 
 	// Font stacks.
-	@each $stack, $fonts in c.$stacks {
+	@each $stack, $fonts in t.$stacks {
 		--cfe-fonts--#{$stack}-stack: #{$fonts};
 	}
 

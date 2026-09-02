@@ -3,7 +3,7 @@
 ///
 
 @use '../modules/layout' as l;
-@use '../modules/utility' as u;
+@use '../modules/colors' as c;
 
 form {
 
@@ -1118,7 +1118,7 @@ border-bottom-right-radius: 0;
 	height: 0.5rem;
 	color: transparent;
 	cursor: default;
-	background-color: var( --cfe-input--range--thumb--bg-color, u.$pale_gray );
+	background-color: var( --cfe-input--range--thumb--bg-color, c.$pale_gray );
 	border: solid 1px var( --cfe-form--border-color );
 	border-radius: 1rem;
 }
@@ -1151,7 +1151,7 @@ border-bottom-right-radius: 0;
 	height: 0.5rem;
 	color: transparent;
 	cursor: default;
-	background-color: var( --cfe-input--range--thumb--bg-color, u.$pale_gray );
+	background-color: var( --cfe-input--range--thumb--bg-color, c.$pale_gray );
 	border: none;
 	border-radius: 0.25rem;
 }
