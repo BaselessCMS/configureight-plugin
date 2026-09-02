@@ -211,7 +211,7 @@ function color_schemes() {
 				'body'  => '#ffffff',
 				'text'  => '#333333',
 				'one'   => '#0044aa',
-				'two'   => '#0066cc',
+				'two'   => '#4073bf',
 				'three' => '#555555',
 				'four'  => '#888888',
 				'five'  => '#333333',

@@ -64,7 +64,7 @@ $colors: (
 $color_body:  $body_color !default;
 $color_text:  $text_color !default;
 $color_one:   $blue !default;
-$color_two:   $violet !default;
+$color_two:   f.lighten( $blue, 25% ) !default;
 $color_three: $medium_gray !default;
 $color_four:  $light_gray !default;
 $color_five:  $dark_gray !default;
