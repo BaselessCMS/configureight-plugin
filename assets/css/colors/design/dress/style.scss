@@ -2,21 +2,4 @@
 /// Color Scheme: 1960s Dress
 ///
 
-// Scheme colors.
-$color_body: #ffffff;
-$color_text: #1b1b21;
-$color_one: #093d90;
-$color_two: #004fc6;
-$color_three: #44aa00;
-$color_four: #46e400;
-$color_five: #ff1d76;
-$color_six: #ff5599;
-
-$color_body_dark: #1b1b21;
-$color_text_dark: #eeeeee;
-$color_one_dark: #46e400;
-$color_two_dark: #44aa00;
-$color_three_dark: #004fc6;
-$color_four_dark: #093d90;
-$color_five_dark: #ff1d76;
-$color_six_dark: #ff5599;
+@use 'partials/root';

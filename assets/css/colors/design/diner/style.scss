@@ -2,29 +2,4 @@
 /// Color Scheme: 1950s Diner
 ///
 
-// Scheme colors.
-$color_body: #ffffff;
-$color_text: #000000;
-$color_one: #008aad;
-$color_two: #1fb4d8;
-$color_three: #cc0000;
-$color_four: #ff0000;
-$color_five: #ff126f;
-$color_six: #ff4c93;
-
-$color_body_dark: #000000;
-$color_text_dark: #ffffff;
-$color_one_dark: #1fb4d8;
-$color_two_dark: #008aad;
-$color_three_dark: #ff126f;
-$color_four_dark: #ff4c93;
-$color_five_dark: #cc0000;
-$color_six_dark: #ff0000;
-
-:host,
-:root {
-
-	// Default override.
-	--cfe-heading-primary--link--text-color: var( --cfe-scheme-color--three );
-	--cfe-heading-primary--link--action--text-color: var( --cfe-scheme-color--four );
-}
+@use 'partials/root';

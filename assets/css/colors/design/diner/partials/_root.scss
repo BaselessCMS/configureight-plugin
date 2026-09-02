@@ -1,0 +1,23 @@
+///
+/// CSS properties
+///
+
+@use 'sass:map';
+@use '../../../../modules/functions' as f;
+@use '../../../../modules/colors' as general;
+@use '../modules/colors' as c;
+
+:host,
+:root {
+	@each $name, $color in c.$light {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$dark {
+		--cfe-scheme-color--#{$name}--dark: #{$color};
+	}
+
+	--cfe-heading-primary--link--text-color: var( --cfe-scheme-color--three );
+	--cfe-heading-primary--link--action--text-color: var( --cfe-scheme-color--four );
+
+	--cfe-button--primary--action--bg-color--dark: var( --cfe-scheme-color--three--dark );
+}

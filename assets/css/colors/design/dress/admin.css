@@ -1,0 +1,26 @@
+:host,
+:root {
+  --cfe-scheme-color--body: #ffffff;
+  --cfe-scheme-color--text: #1b1b21;
+  --cfe-scheme-color--one: #093d90;
+  --cfe-scheme-color--two: #004fc6;
+  --cfe-scheme-color--three: #44aa00;
+  --cfe-scheme-color--four: #46e400;
+  --cfe-scheme-color--five: #ff1d76;
+  --cfe-scheme-color--six: #ff5599;
+  --cfe-scheme-color--body--dark: #1b1b21;
+  --cfe-scheme-color--text--dark: #eeeeee;
+  --cfe-scheme-color--one--dark: #46e400;
+  --cfe-scheme-color--two--dark: #44aa00;
+  --cfe-scheme-color--three--dark: #004fc6;
+  --cfe-scheme-color--four--dark: #093d90;
+  --cfe-scheme-color--five--dark: #ff1d76;
+  --cfe-scheme-color--six--dark: #ff5599;
+  --cfe-button--primary--bg-color--dark: var( --cfe-scheme-color--one--dark );
+  --cfe-button--primary--action--bg-color--dark: var( --cfe-scheme-color--five--dark );
+}
+
+.dark-mode {
+  --cfe-button--primary--bg-color--dark: var( --cfe-scheme-color--one--dark );
+  --cfe-button--primary--action--bg-color--dark: var( --cfe-scheme-color--five--dark );
+}
