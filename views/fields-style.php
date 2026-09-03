@@ -353,7 +353,7 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 							<input id="color_body_default" class="screen-reader-text" type="hidden" value="<?php echo $colors[$custom_from]['light']['body']; ?>" />
 							<span class="btn btn-secondary btn-md hide-if-no-js" id="color_body_default_button"><?php lang()->p( 'Reset' ); ?></span>
 						</div>
-						<small class="form-text"><?php lang()->p( 'CSS variable: <code class="select">--cfe-bg-color</code>' ); ?></small>
+						<small class="form-text"><?php lang()->p( 'CSS variable: <code class="select">--cfe-scheme-color--body</code>' ); ?></small>
 					</div>
 				</div>
 
@@ -365,7 +365,7 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 							<input id="color_text_default" class="screen-reader-text" type="hidden" value="<?php echo $colors[$custom_from]['light']['text']; ?>" />
 							<span class="btn btn-secondary btn-md hide-if-no-js" id="color_text_default_button"><?php lang()->p( 'Reset' ); ?></span>
 						</div>
-						<small class="form-text"><?php lang()->p( 'CSS variable: <code class="select">--cfe-bg-color</code>' ); ?></small>
+						<small class="form-text"><?php lang()->p( 'CSS variable: <code class="select">--cfe-scheme-color--text</code>' ); ?></small>
 					</div>
 				</div>
 
@@ -454,7 +454,7 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 							<input id="color_body_dark_default" class="screen-reader-text" type="hidden" value="<?php echo $colors[$custom_from]['dark']['body']; ?>" />
 							<span class="btn btn-secondary btn-md hide-if-no-js" id="color_body_dark_default_button"><?php lang()->p( 'Reset' ); ?></span>
 						</div>
-						<small class="form-text"><?php lang()->p( 'CSS variable: <code class="select">--cfe-bg-color--dark</code>' ); ?></small>
+						<small class="form-text"><?php lang()->p( 'CSS variable: <code class="select">--cfe-scheme-color--body--dark</code>' ); ?></small>
 					</div>
 				</div>
 
@@ -466,7 +466,7 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 							<input id="color_text_dark_default" class="screen-reader-text" type="hidden" value="<?php echo $colors[$custom_from]['dark']['text']; ?>" />
 							<span class="btn btn-secondary btn-md hide-if-no-js" id="color_text_dark_default_button"><?php lang()->p( 'Reset' ); ?></span>
 						</div>
-						<small class="form-text"><?php lang()->p( 'CSS variable: <code class="select">--cfe-bg-color--dark</code>' ); ?></small>
+						<small class="form-text"><?php lang()->p( 'CSS variable: <code class="select">--cfe-scheme-color--text--dark</code>' ); ?></small>
 					</div>
 				</div>
 
