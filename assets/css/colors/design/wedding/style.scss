@@ -2,21 +2,4 @@
 /// Color Scheme: 1990s Wedding
 ///
 
-// Scheme colors.
-$color_body: #ffffff;
-$color_text: #28170b;
-$color_one: #65391c;
-$color_two: #a05a2c;
-$color_three: #0081a1;
-$color_four: #21aed3;
-$color_five: #f93c5a;
-$color_six: #ff7575;
-
-$color_body_dark: #28170b;
-$color_text_dark: #eeeeee;
-$color_one_dark: #c59653;
-$color_two_dark: #ab602f;
-$color_three_dark: #0081a1;
-$color_four_dark: #21aed3;
-$color_five_dark: #f93c5a;
-$color_six_dark: #ff7575;
+@use 'partials/root';

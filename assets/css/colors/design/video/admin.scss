@@ -2,21 +2,4 @@
 /// Color Scheme: 1980s Video
 ///
 
-// Scheme colors.
-$color_body: #ffffff;
-$color_text: #1b2025;
-$color_one: #d40055;
-$color_two: #ff297d;
-$color_three: #750093;
-$color_four: #a900d2;
-$color_five: #0eab8c;
-$color_six: #00e0b4;
-
-$color_body_dark: #1b2025;
-$color_text_dark: #ffffff;
-$color_one_dark: #ff297d;
-$color_two_dark: #d40055;
-$color_three_dark: #a900d2;
-$color_four_dark: #750093;
-$color_five_dark: #0eab8c;
-$color_six_dark: #00e0b4;
+@use 'partials/root';
