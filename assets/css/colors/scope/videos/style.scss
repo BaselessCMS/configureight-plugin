@@ -2,32 +2,4 @@
 /// Color Scheme: Video
 ///
 
-// Scheme colors.
-$color_body: #070707;
-$color_text: #f7f7f7;
-$color_one: #ffffff;
-$color_two: #ff0000;
-$color_three: #ff0000;
-$color_four: #dd0000;
-$color_five: #1e1e1e;
-$color_six: #ff0000;
-
-$color_body_dark: #070707;
-$color_text_dark: #f7f7f7;
-$color_one_dark: #ffffff;
-$color_two_dark: #ff0000;
-$color_three_dark: #ff0000;
-$color_four_dark: #dd0000;
-$color_five_dark: #1e1e1e;
-$color_six_dark: #ff0000;
-
-select {
-	optgroup,
-	option {
-		background-color: var( --cfe-body--bg-color ) !important;
-
-		@media ( prefers-color-scheme: dark ) {
-			background-color: var( --cfe-body--bg-color--dark ) !important;
-		}
-	}
-}
+@use 'partials/root';

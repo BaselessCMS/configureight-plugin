@@ -2,35 +2,4 @@
 /// Color Scheme: Video
 ///
 
-// Scheme colors.
-$color_body: #070707;
-$color_text: #f7f7f7;
-$color_one: #ffffff;
-$color_two: #ff0000;
-$color_three: #ff0000;
-$color_four: #dd0000;
-$color_five: #1e1e1e;
-$color_six: #ff0000;
-
-$color_body_dark: #070707;
-$color_text_dark: #f7f7f7;
-$color_one_dark: #ffffff;
-$color_two_dark: #ff0000;
-$color_three_dark: #ff0000;
-$color_four_dark: #dd0000;
-$color_five_dark: #1e1e1e;
-$color_six_dark: #ff0000;
-
-:host,
-:root {
-	--cfe-admin--menu--link--action--bg-color: #{$color_six};
-	--cfe-admin--menu--link--action--bg-color--dark: #{$color_six};
-	--cfe-button--bg-color: #{$color_six};
-	--cfe-button--border-color: #{$color_text};
-	--cfe-button--action--bg-color: #{$color_four};
-	--cfe-button--action--border-color: #{$color_text};
-	--cfe-button--primary--bg-color: #{$color_six};
-	--cfe-button--primary--border-color: #{$color_text};
-	--cfe-button--primary--action--bg-color: #{$color_four};
-	--cfe-button--primary--action--border-color: #{$color_text};
-}
+@use 'partials/root';

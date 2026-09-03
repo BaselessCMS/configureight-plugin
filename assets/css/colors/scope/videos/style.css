@@ -1,10 +1,25 @@
-select optgroup,
-select option {
-  background-color: var(--cfe-body--bg-color) !important;
-}
-@media (prefers-color-scheme: dark) {
-  select optgroup,
-  select option {
-    background-color: var(--cfe-body--bg-color--dark) !important;
-  }
+:host,
+:root {
+  --cfe-scheme-color--body: #070707;
+  --cfe-scheme-color--text: #f7f7f7;
+  --cfe-scheme-color--one: #ffffff;
+  --cfe-scheme-color--two: #ff0000;
+  --cfe-scheme-color--three: #ff0000;
+  --cfe-scheme-color--four: #dd0000;
+  --cfe-scheme-color--five: #1e1e1e;
+  --cfe-scheme-color--six: #ff0000;
+  --cfe-scheme-color--body--dark: #070707;
+  --cfe-scheme-color--text--dark: #f7f7f7;
+  --cfe-scheme-color--one--dark: #ffffff;
+  --cfe-scheme-color--two--dark: #ff0000;
+  --cfe-scheme-color--three--dark: #ff0000;
+  --cfe-scheme-color--four--dark: #dd0000;
+  --cfe-scheme-color--five--dark: #1e1e1e;
+  --cfe-scheme-color--six--dark: #ff0000;
+  --cfe-box--border-color: rgba(247, 247, 247, 0.5);
+  --cfe-box--border-color--dark: rgba(247, 247, 247, 0.5);
+  --cfe-button--primary--bg-color: var( --cfe-scheme-color--three );
+  --cfe-button--primary--bg-color--dark: var( --cfe-scheme-color--three );
+  --cfe-button--primary--action--bg-color: var( --cfe-scheme-color--three );
+  --cfe-button--primary--action--bg-color--dark: var( --cfe-scheme-color--three );
 }

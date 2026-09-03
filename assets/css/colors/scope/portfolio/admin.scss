@@ -2,21 +2,4 @@
 /// Color Scheme: Portfolio
 ///
 
-// Scheme colors.
-$color_body: #f3f3f3;
-$color_text: #444444;
-$color_one: #555555;
-$color_two: #666666;
-$color_three: #777777;
-$color_four: #555555;
-$color_five: #222222;
-$color_six: #444444;
-
-$color_body_dark: #222222;
-$color_text_dark: #f7f7f7;
-$color_one_dark: #ffffff;
-$color_two_dark: #cccccc;
-$color_three_dark: #555555;
-$color_four_dark: #777777;
-$color_five_dark: #444444;
-$color_six_dark: #333333;
+@use 'partials/root';
