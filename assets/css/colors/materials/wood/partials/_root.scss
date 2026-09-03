@@ -12,7 +12,4 @@
 	@each $name, $color in c.$dark {
 		--cfe-scheme-color--#{$name}--dark: #{$color};
 	}
-
-	--cfe-button--primary--bg-color: var( --cfe-scheme-color--four );
-	--cfe-button--primary--bg-color--dark: var( --cfe-scheme-color--four );
 }

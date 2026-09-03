@@ -2,21 +2,4 @@
 /// Color Scheme: Concrete
 ///
 
-// Scheme colors.
-$color_body: #f3f3f3;
-$color_text: #333333;
-$color_one: #666666;
-$color_two: #888888;
-$color_three: #9299a2;
-$color_four: #a3a9b1;
-$color_five: #9299a2;
-$color_six: #a3a9b1;
-
-$color_body_dark: #222222;
-$color_text_dark: #eeeeee;
-$color_one_dark: #eeeeee;
-$color_two_dark: #ffffff;
-$color_three_dark: #9299a2;
-$color_four_dark: #a3a9b1;
-$color_five_dark: #9299a2;
-$color_six_dark: #a3a9b1;
+@use 'partials/root';

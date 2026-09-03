@@ -877,26 +877,26 @@ function color_schemes() {
 			'slug'     => 'bamboo',
 			'name'     => lang()->get( 'Bamboo' ),
 			'category' => 'materials',
-			'cover'    => '#607414',
+			'cover'    => '#a0b43c',
 			'light' => [
 				'body'  => '#ffffff',
-				'text'  => '#262c10',
-				'one'   => '#668000',
-				'two'   => '#88aa00',
-				'three' => '#668000',
-				'four'  => '#c8ab37',
-				'five'  => '#668000',
-				'six'   => '#c8ab37'
+				'text'  => '#272129',
+				'one'   => '#a0b43c',
+				'two'   => '#c5ac6b',
+				'three' => '#a0b43c',
+				'four'  => '#719a32',
+				'five'  => '#719a32',
+				'six'   => '#a0b43c'
 			],
 			'dark' => [
-				'body'  => '#262c10',
+				'body'  => '#272129',
 				'text'  => '#eeeeee',
-				'one'   => '#d8bc4c',
-				'two'   => '#88aa00',
-				'three' => '#789200',
-				'four'  => '#c8ab37',
-				'five'  => '#668000',
-				'six'   => '#90a505'
+				'one'   => '#a0b43c',
+				'two'   => '#c5ac6b',
+				'three' => '#a0b43c',
+				'four'  => '#719a32',
+				'five'  => '#719a32',
+				'six'   => '#a0b43c'
 			]
 		],
 		'brick' => [

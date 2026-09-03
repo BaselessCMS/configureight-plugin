@@ -2,26 +2,4 @@
 /// Color Scheme: Wood
 ///
 
-// Scheme colors.
-$color_body: #fcfcf6;
-$color_text: #261e18;
-$color_one: #743020;
-$color_two: #894229;
-$color_three: #c8ab37;
-$color_four: #d3bc5f;
-$color_five: #502d16;
-$color_six: #784421;
-
-$color_body_dark: #261e18;
-$color_text_dark: #fcfcf6;
-$color_one_dark: #f1dc88;
-$color_two_dark: #d3b84f;
-$color_three_dark: #784421;
-$color_four_dark: #502d16;
-$color_five_dark: #894229;
-$color_six_dark: #743020;
-
-:host,
-:root {
-	--cfe-button--primary--text-color--dark: #{$color_four_dark};
-}
+@use 'partials/root';
