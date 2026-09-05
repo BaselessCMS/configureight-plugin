@@ -145,7 +145,93 @@ function color_scheme_categories() {
 }
 
 /**
- * Custom color scheme
+ * Custom Bootstrap color scheme
+ *
+ * Array to be passed into the primary
+ * array of color schemes.
+ *
+ * @since  1.0.0
+ * @return array
+ */
+function bootstrap_scheme() {
+
+	$scheme = [
+		'bootstrap' => [
+			'slug'     => 'bootstrap',
+			'name'     => lang()->get( 'Bootstrap Colors' ),
+			'about'    => lang()->get( 'The colors included with the <a href="https://getbootstrap.com/docs/5.0/utilities/colors/#variables" target="_blank" rel="noopener noreferrer">Bootstrap</a> framework for website UI and frontend theme building, expanded with tints & shades.' ),
+			'category' => 'custom',
+			'cover'    => '#084298',
+			'light'    => [
+				'body'  => '#ffffff',
+				'text'  => '#343a40',
+				'one'   => '#084298',
+				'two'   => '#0d6efd',
+				'three' => '#084298',
+				'four'  => '#0d6efd',
+				'five'  => '#084298',
+				'six'   => '#0d6efd'
+			],
+			'dark' => [
+				'body'  => '#212529',
+				'text'  => '#f8f9fa',
+				'one'   => '#0d6efd',
+				'two'   => '#6ea8fe',
+				'three' => '#0d6efd',
+				'four'  => '#6ea8fe',
+				'five'  => '#084298',
+				'six'   => '#0d6efd'
+			]
+		]
+	];
+	return $scheme;
+}
+
+/**
+ * Custom Tailwind color scheme
+ *
+ * Array to be passed into the primary
+ * array of color schemes.
+ *
+ * @since  1.0.0
+ * @return array
+ */
+function tailwind_scheme() {
+
+	$scheme = [
+		'tailwind' => [
+			'slug'     => 'tailwind',
+			'name'     => lang()->get( 'Tailwind Colors' ),
+			'about'    => lang()->get( 'The complete selection of colors included with the <a href="https://tailwindcss.com/docs/colors" target="_blank" rel="noopener noreferrer">Tailwind CSS</a> framework for website UI and frontend theme building.' ),
+			'category' => 'custom',
+			'cover'    => '#1447e6',
+			'light'    => [
+				'body'  => '#ffffff',
+				'text'  => '#1e2939',
+				'one'   => '#193cb8',
+				'two'   => '#1447e6',
+				'three' => '#193cb8',
+				'four'  => '#1447e6',
+				'five'  => '#1c398e',
+				'six'   => '#1447e6',
+			],
+			'dark' => [
+				'body'  => '#1e2939',
+				'text'  => '#f9fafb',
+				'one'   => '#54a2ff',
+				'two'   => '#1447e6',
+				'three' => '#1447e6',
+				'four'  => '#54a2ff',
+				'five'  => '#1c398e',
+				'six'   => '#1447e6',
+			]
+		]
+	];
+	return $scheme;
+}
+
+/**
+ * Custom color scheme from previous.
  *
  * Array to be passed into the primary
  * array of color schemes.
@@ -160,7 +246,7 @@ function custom_scheme() {
 			'slug'     => 'custom',
 			'name'     => lang()->get( 'Custom' ),
 			'about'    => lang()->get( 'Custom scheme colors begin with the previously set scheme. To change the starting colors, first save a different scheme then select custom.' ),
-			'category' => 'none',
+			'category' => 'custom',
 			'light'    => [
 				'body'  => color( 'body' ),
 				'text'  => color( 'text' ),
@@ -986,9 +1072,13 @@ function color_schemes() {
 		]
 	];
 
-	// Merge custom scheme if selected.
-	$custom  = custom_scheme();
-	$schemes = array_merge( $schemes, $custom );
+	// Merge custom schemes.
+	$bootstrap = bootstrap_scheme();
+	$tailwind  = tailwind_scheme();
+	$custom    = custom_scheme();
+	$schemes   = array_merge( $schemes, $bootstrap );
+	$schemes   = array_merge( $schemes, $tailwind );
+	$schemes   = array_merge( $schemes, $custom );
 	return $schemes;
 }
 
@@ -1264,13 +1354,15 @@ function define_color_scheme() {
 	global $page, $url;
 
 	$current = current_color_scheme();
+	if ( false == $current ) {
+		return;
+	}
 
 	// Begin style root block.
 	$style = "\n" . '<style>:host, :root {';
 
 		// Set up array of colors.
 	$colors = [];
-
 	// Variables for each light mode color.
 	foreach ( $current['light'] as $key => $value ) {
 		if ( ! empty( $value ) && ! plugin()->use_dark_scheme() ) {

@@ -1297,9 +1297,15 @@ class configureight extends Plugin {
 		// Get minified if not in debug mode.
 		$suffix = asset_min();
 
+		$exclude_colors = [
+			'bootstrap',
+			'tailwind',
+			'custom'
+		];
+
 		// Color scheme stylesheet.
 		if ( 'colors' === $type ) {
-			if ( 'custom' != $option_colors ) {
+			if ( ! in_array( $option_colors, $exclude_colors ) ) {
 				$html = css( "assets/css/colors/{$current_color['category']}/{$option_colors}/{$filename}{$suffix}.css" );
 			}
 		}

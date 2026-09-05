@@ -110,7 +110,13 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 				$category = '';
 
 				// Exclude some schemes from loop.
-				$exclude = [ 'default', 'dark', 'custom' ];
+				$exclude = [
+					'default',
+					'dark',
+					'bootstrap',
+					'tailwind',
+					'custom'
+				];
 
 				// Basic schemes.
 				printf(
@@ -125,7 +131,7 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 				foreach ( $colors as $color => $option ) {
 
 					// Skip custom scheme, added after.
-					if ( 'none' == $option['category'] ) {
+					if ( 'custom' == $option['category'] ) {
 						continue;
 					}
 
@@ -153,18 +159,40 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 				}
 
 				printf(
-					'<optgroup label="%s"><option value="custom" %s>%s</option></optgroup>',
-					lang()->get( 'Build Your Own' ),
+					'<optgroup label="%s">',
+					lang()->get( 'Build Your Own' )
+				);
+				printf(
+					'<option value="bootstrap" %s>%s</option>',
+					( plugin()->getValue( 'color_scheme' ) === 'bootstrap' ? 'selected' : '' ),
+					lang()->get( 'Bootstrap' )
+				);
+				printf(
+					'<option value="tailwind" %s>%s</option>',
+					( plugin()->getValue( 'color_scheme' ) === 'tailwind' ? 'selected' : '' ),
+					lang()->get( 'Tailwind' )
+				);
+				printf(
+					'<option value="custom" %s>%s</option>',
 					( plugin()->getValue( 'color_scheme' ) === 'custom' ? 'selected' : '' ),
 					lang()->get( 'Custom' )
-				); ?>
+				);
+				echo '</optgroup>';
+				?>
 			</select>
 			<input type="hidden" id="custom_scheme_from" name="custom_scheme_from" value="<?php echo plugin()->custom_scheme_from(); ?>" />
 
 			<ul id="form-color-thumbs-list">
 			<?php foreach ( $colors as $color => $option ) {
 
-				if ( plugin()->getValue( 'color_scheme' ) === 'custom' ) {
+				// Exclude some schemes from loop.
+				$exclude = [
+					'bootstrap',
+					'tailwind',
+					'custom'
+				];
+
+				if ( in_array( $option['slug'], $exclude ) ) {
 					$display = 'none';
 				} elseif ( plugin()->getValue( 'color_scheme' ) === $option['slug'] ) {
 					$display = 'flex';
@@ -879,12 +907,17 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 jQuery(document).ready( function($) {
 	$( '#color_scheme' ).on( 'change', function() {
 		var scheme = $(this).val();
+		var custom = [
+			'bootstrap',
+			'tailwind',
+			'custom'
+		];
 
 		<?php foreach ( $colors as $color => $option ) :
 
 			$slug = $option['slug'];
 		?>
-		if ( 'custom' == scheme ) {
+		if ( $.inArray( scheme, custom ) != -1 ) {
 
 			// Scheme descriptions, labels, and color thumbnails.
 			$( '#scheme_desc_<?php echo $option['slug']; ?>' ).css( 'display', 'none' );
