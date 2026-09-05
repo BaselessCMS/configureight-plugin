@@ -895,17 +895,16 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 jQuery(document).ready( function($) {
 	$( '#color_scheme' ).on( 'change', function() {
 		var scheme = $(this).val();
-		var custom = [
-			'bootstrap',
-			'tailwind',
-			'custom'
-		];
 
 		<?php foreach ( $colors as $color => $option ) :
 
 			$slug = $option['slug'];
 		?>
-		if ( $.inArray( scheme, custom ) != -1 ) {
+		if (
+			'bootstrap' == scheme ||
+			'tailwind' == scheme ||
+			'custom' == scheme
+		) {
 
 			// Scheme descriptions, labels, and color thumbnails.
 			$( '#scheme_desc_<?php echo $option['slug']; ?>' ).css( 'display', 'none' );
