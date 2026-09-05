@@ -52,6 +52,7 @@ use function CFE_Plugin\{
 	url
 };
 use function CFE_Colors\{
+	custom_schemes,
 	default_color_scheme,
 	define_color_scheme,
 	current_color_scheme
@@ -1297,15 +1298,9 @@ class configureight extends Plugin {
 		// Get minified if not in debug mode.
 		$suffix = asset_min();
 
-		$exclude_colors = [
-			'bootstrap',
-			'tailwind',
-			'custom'
-		];
-
 		// Color scheme stylesheet.
 		if ( 'colors' === $type ) {
-			if ( ! in_array( $option_colors, $exclude_colors ) ) {
+			if ( ! in_array( $option_colors, custom_schemes() ) ) {
 				$html = css( "assets/css/colors/{$current_color['category']}/{$option_colors}/{$filename}{$suffix}.css" );
 			}
 		}

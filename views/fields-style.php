@@ -16,6 +16,7 @@ use function CFE_Plugin\{
 };
 use function CFE_Colors\{
 	color_schemes,
+	custom_schemes,
 	hex_to_rgb
 };
 use function CFE_Fonts\{
@@ -109,14 +110,8 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 				// Category used for option groups.
 				$category = '';
 
-				// Exclude some schemes from loop.
-				$exclude = [
-					'default',
-					'dark',
-					'bootstrap',
-					'tailwind',
-					'custom'
-				];
+				// Exclude some schemes from loop.custom_schemes()
+				$exclude = array_merge( [ 'default', 'dark' ], custom_schemes() );
 
 				// Basic schemes.
 				printf(
@@ -185,14 +180,7 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 			<ul id="form-color-thumbs-list">
 			<?php foreach ( $colors as $color => $option ) {
 
-				// Exclude some schemes from loop.
-				$exclude = [
-					'bootstrap',
-					'tailwind',
-					'custom'
-				];
-
-				if ( in_array( $option['slug'], $exclude ) ) {
+				if ( in_array( $option['slug'], custom_schemes() ) ) {
 					$display = 'none';
 				} elseif ( plugin()->getValue( 'color_scheme' ) === $option['slug'] ) {
 					$display = 'flex';

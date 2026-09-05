@@ -141,6 +141,15 @@ function color_scheme_categories() {
 		]
 	];
 	asort( $cats );
+
+	$custom = [
+		'custom' => [
+			'slug'  => 'custom',
+			'name'  => lang()->get( 'Build Your Own' ),
+			'about' => lang()->get( 'Custom color schemes with a color picker for each light and dark option.' )
+		]
+	];
+	$cats = array_merge( $cats, $custom );
 	return $cats;
 }
 
@@ -270,6 +279,23 @@ function custom_scheme() {
 		]
 	];
 	return $scheme;
+}
+
+/**
+ * Custom build schemes
+ *
+ * Used mostly for excluding custom schemes
+ * from displaying various content.
+ *
+ * @since  1.0.0
+ * @return array
+ */
+function custom_schemes() {
+	return [
+		'bootstrap',
+		'tailwind',
+		'custom'
+	];
 }
 
 /**

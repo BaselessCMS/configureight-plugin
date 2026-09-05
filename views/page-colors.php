@@ -11,6 +11,7 @@
 // Access namespaced functions.
 use function CFE_Colors\{
 	color_schemes,
+	custom_schemes,
 	get_color_scheme,
 	default_color_scheme,
 	current_color_scheme,
@@ -176,8 +177,8 @@ $category = '';
 echo '<ul id="schemes-list" class="color-list">';
 foreach ( $schemes as $scheme => $option ) {
 
-	// Skip custom scheme.
-	if ( 'custom' == $option['slug'] ) {
+	// Skip custom schemes.
+	if ( in_array( $option['slug'], custom_schemes() ) ) {
 		continue;
 	}
 
