@@ -835,7 +835,7 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 		</div>
 	</div>
 
-	<h3 class="form-heading"><?php lang()->p( 'Admin Theme' ); ?></h3>
+	<h3 class="form-heading"><?php lang()->p( 'Backend Interface' ); ?></h3>
 
 	<div class="form-field form-group row">
 
@@ -845,13 +845,24 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 			<select class="form-select" id="admin_theme" name="admin_theme">
 
 				<?php if ( admin_theme() ) : ?>
+
 				<option value="theme" <?php echo ( plugin()->admin_theme() === 'theme' ? 'selected' : '' ); ?>><?php lang()->p( 'Full Theme' ); ?></option>
+
 				<?php endif; ?>
 
 				<option value="css" <?php echo ( plugin()->admin_theme() === 'css' ? 'selected' : '' ); ?>><?php echo $css_label; ?></option>
 
 				<option value="default" <?php echo ( plugin()->admin_theme() === 'default' ? 'selected' : '' ); ?>><?php lang()->p( 'Default Theme' ); ?></option>
 			</select>
+
+			<small id="admin-desc-default" class="form-text" style="display: <?php echo ( plugin()->admin_theme() === 'default' ? 'block' : 'none' ); ?>;"><?php lang()->p( 'The default theme option uses the admin theme included with the CMS without any modification. The user toolbar has been styled to match.' ); ?></small>
+
+			<small id="admin-desc-css" class="form-text" style="display: <?php echo ( plugin()->admin_theme() === 'css' ? 'block' : 'none' ); ?>;"><?php lang()->p( 'The theme styles option uses the admin theme included with the CMS for HTML markup and adds Configure 8 styles.' ); ?></small>
+
+			<?php if ( admin_theme() ) : ?>
+			<small id="admin-desc-theme" class="form-text" style="display: <?php echo ( plugin()->admin_theme() === 'theme' ? 'block' : 'none' ); ?>;"><?php lang()->p( 'This option edits the site database where your Bludit installation is in <code>bl-content/databases/site.php</code>. It changes the <code>adminTheme</code> setting to <code>configureight</code> to use the Configure 8 admin theme.' ); ?></small>
+			<?php endif; ?>
+
 			<?php if ( ! admin_theme() ) :
 				printf(
 					'<small class="form-text">%s<br /><a href="%s" target="_blank" rel="noopener noreferrer">%s</a></small>',
@@ -859,9 +870,7 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 					plugin()->website(),
 					plugin()->website()
 				);
-			else : ?>
-			<small class="form-text"><?php lang()->p( 'This option edits the site database where your Bludit installation is in <code>bl-content/databases/site.php</code>. It changes the <code>adminTheme</code> setting to <code>configureight</code>.' ); ?></small>
-			<?php endif; ?>
+			endif; ?>
 		</div>
 	</div>
 </fieldset>

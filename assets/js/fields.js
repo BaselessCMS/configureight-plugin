@@ -482,6 +482,24 @@ jQuery(document).ready( function($) {
 	});
 
 	// Admin options.
+	$( '#admin_theme' ).on( 'change', function() {
+		var theme = $(this).val();
+		if ( theme == 'theme' ) {
+			$( "#admin-desc-theme" ).css( 'display', 'block' );
+		} else if ( theme != 'theme' ) {
+			$( "#admin-desc-theme" ).css( 'display', 'none' );
+		}
+		if ( theme == 'css' ) {
+			$( "#admin-desc-css" ).css( 'display', 'block' );
+		} else if ( theme != 'css' ) {
+			$( "#admin-desc-css" ).css( 'display', 'none' );
+		}
+		if ( theme == 'default' ) {
+			$( "#admin-desc-default" ).css( 'display', 'block' );
+		} else if ( theme != 'default' ) {
+			$( "#admin-desc-default" ).css( 'display', 'none' );
+		}
+	});
 	$( '#admin_menu' ).on( 'change', function() {
 		var show = $(this).val();
 		if ( show == 'true' ) {
