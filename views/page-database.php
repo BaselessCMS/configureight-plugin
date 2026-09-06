@@ -23,9 +23,7 @@ $settings_page = DOMAIN_ADMIN . 'configure-plugin/' . plugin()->className();
 
 <h1 class="page-title"><span class="page-title-icon fa fa-server"></span><span class="page-title-text"><?php lang()->p( 'Options Databases' ); ?></span></h1>
 
-<div class="alert alert-primary alert-search-forms" role="alert">
-	<p class="m-0"><?php lang()->p( "Go to the <a href='{$settings_page}'>website options</a> page." ); ?></p>
-</div>
+<p class="page-description"><?php lang()->p( "Go to the <a href='{$settings_page}'>website options</a> page." ); ?></p>
 
 <?php lang()->p( 'List of current Configure 8 Suite options and their values. Includes plugins that are bundled in the full suite, if installed and activated.' ); ?></p>
 

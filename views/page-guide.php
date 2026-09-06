@@ -29,9 +29,7 @@ pre {
 
 <h1 class="page-title"><span class="page-title-icon fa fa-book"></span><span class="page-title-text"><?php lang()->p( 'Options Guide' ); ?></span></h1>
 
-<div class="alert alert-primary alert-search-forms" role="alert">
-	<p class="m-0"><?php lang()->p( "Go to the <a href='{$settings_page}'>website options</a> page." ); ?></p>
-</div>
+<p class="page-description"><?php lang()->p( "Edit appearance on the <a href='{$settings_page}'>website options</a> page." ); ?></p>
 
 <div class="tab-content" data-toggle="tabslet" data-deeplinking="true" data-animation="true">
 

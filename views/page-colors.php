@@ -77,16 +77,23 @@ code.select {
 
 <h1 class="page-title"><span class="page-title-icon fa fa-eyedropper"></span><span class="page-title-text"><?php lang()->p( 'Color Schemes Reference' ); ?></span></h1>
 
-<p class="page-description"><?php lang()->p( "Go to the <a href='{$guide_page}'>options guide</a> page. Go to the <a href='{$settings_page}#style'>website options</a> page." ); ?></p>
+<p class="page-description"><?php lang()->p( "Go to the <a href='{$guide_page}'>options guide</a> index page. Edit appearance on the <a href='{$settings_page}#style'>website options</a> page." ); ?></p>
 
 <?php
+/**
+ * CSS custom properties
+ *
+ * @since 1.0.0
+ *
+ * Explanations and examples for beginner users on
+ * how to work with CSS custom properties.
+ */
 printf(
 	'<h2 class="color-heading">%s <a class="reference-link form-tooltip" href="http://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties" target="_blank" rel="noopener noreferrer" title="%s"><span class="fa fa-external-link-square"></span><span class="screen-reader-text">%s</span></a></h2>',
 	lang()->get( 'Custom Properties (CSS Variables)' ),
 	lang()->get( 'Reference on the Mozilla website' ),
 	lang()->get( 'Reference on the Mozilla website' )
 );
-
 printf(
 	'<p>%s</p>',
 	lang()->get( 'The CSS color properties are used universally in the public theme and the admin theme for each color scheme. These properties are redefined in the <code>head</code> section by the various options. The <code>--cfe-</code> prefix refers to the Configure 8 theme.' )
@@ -108,9 +115,10 @@ printf(
 	lang()->get( 'Example:' )
 );
 
+// Light mode properties.
 printf(
 	'<h3 class="color-list-heading">%s</h3>',
-	lang()->get( 'Light Mode Variables' )
+	lang()->get( 'Light Mode Properties' )
 );
 
 echo '<ul class="color-list color-list-light">';
@@ -123,9 +131,10 @@ foreach ( $default['light'] as $name => $color ) {
 	);
 }
 
+// Dark mode properties.
 printf(
 	'<h3 class="color-list-heading">%s</h3>',
-	lang()->get( 'Dark Mode Variables' )
+	lang()->get( 'Dark Mode Properties' )
 );
 
 echo '<ul class="color-list color-list-dark">';
@@ -171,8 +180,8 @@ usort( $schemes, function( $one_thing, $another ) {
 	return strcmp( $one_thing['category'], $another['category'] );
 } );
 
-// Category used for option groups.
-$category = '';
+// Loop color schemes and group by category.
+$slug_cat = '';
 
 echo '<ul id="schemes-list" class="color-list">';
 foreach ( $schemes as $scheme => $option ) {
@@ -188,9 +197,9 @@ foreach ( $schemes as $scheme => $option ) {
 	}
 	$scheme_cat = color_scheme_category( $option['category'] );
 
-	if ( $category != $option['category'] ) {
+	if ( $slug_cat != $option['category'] ) {
 		printf(
-			'<li id="cat-id-%s" style="margin: var( --cfe-element--margin, calc( var( --cfe-spacing--vert, 2rem ) / 2 ) 0 );"><hr /><h3 style="margin: 0;">%s</h3></li>',
+			'<li id="cat-id-%s" style="margin: var( --cfe-element--margin, calc( var( --cfe-spacing--vert, 2rem ) / 2 ) 0 );"><hr /><h3>%s</h3></li>',
 			$option['category'],
 			$scheme_cat['name']
 		);
@@ -207,7 +216,7 @@ foreach ( $schemes as $scheme => $option ) {
 		$option['name'],
 		$slug
 	);
-	$category = $option['category'];
+	$slug_cat = $option['category'];
 }
 echo '</ul>';
 
@@ -365,7 +374,14 @@ endif;
 // If current exists.
 endif;
 
-// List color schemes.
+/**
+ * List color schemes
+ *
+ * @since 1.0.0
+ *
+ * Display color information and swatches for every
+ * color scheme except for the custom schemes.
+ */
 foreach ( $schemes as $scheme => $option ) {
 
 	// Skip current theme.
@@ -378,24 +394,22 @@ foreach ( $schemes as $scheme => $option ) {
 		continue;
 	}
 
+	// Get scheme category data.
 	$scheme_cat = color_scheme_category( $option['category'] );
 
 	echo '<hr />';
-
 	printf(
 		'<h2 id="%s" class="color-heading">%s %s</h2>',
 		$option['slug'],
 		lang()->get( 'Scheme:' ),
 		$option['name']
 	);
-
 	printf(
 		'<p class="color-scheme-list-cat">%s <a href="#cat-id-%s">%s</a></p>',
 		lang()->get( 'Category:' ),
 		$option['category'],
 		$scheme_cat['name']
 	);
-
 	if ( isset( $option['about'] ) && ! empty( $option['about'] ) ) {
 		printf(
 			'<p>%s</p>',
@@ -403,6 +417,7 @@ foreach ( $schemes as $scheme => $option ) {
 		);
 	}
 
+	// Scheme light mode colors.
 	printf(
 		'<h3 class="color-list-heading">%s</h3>',
 		lang()->get( 'Light Mode Colors' )
@@ -434,6 +449,7 @@ foreach ( $schemes as $scheme => $option ) {
 	}
 	echo '</ul>';
 
+	// Scheme dark mode colors.
 	printf(
 		'<h3 class="color-list-heading">%s</h3>',
 		lang()->get( 'Dark Mode Colors' )
@@ -467,6 +483,8 @@ foreach ( $schemes as $scheme => $option ) {
 } ?>
 
 <script>
+
+// jQuery tooltips.
 jQuery(document).ready( function($) {
 	$( '.form-tooltip' ).tooltipster({
 		distance : 5,

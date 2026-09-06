@@ -25,9 +25,7 @@ $database_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=datab
 
 ?>
 
-<div class="alert alert-primary alert-search-forms" role="alert">
-	<p class="m-0"><?php lang()->p( "Go to the <a href='{$guide_page}'>options guide</a> page. Go to the <a href='{$database_page}'>options databases</a> page." ); ?></p>
-</div>
+<p class="page-description"><?php lang()->p( "Get help on the <a href='{$guide_page}'>options guide</a> index page." ); ?></p>
 
 <div class="tab-content hide-if-no-js" data-toggle="tabslet" data-deeplinking="true" data-animation="true">
 
