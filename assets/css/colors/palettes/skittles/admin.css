@@ -1,0 +1,25 @@
+:host,
+:root {
+  --cfe-scheme-color--body: #ffffff;
+  --cfe-scheme-color--text: #222222;
+  --cfe-scheme-color--one: #e41e26;
+  --cfe-scheme-color--two: #8fc33e;
+  --cfe-scheme-color--three: #1474bb;
+  --cfe-scheme-color--four: #a72d89;
+  --cfe-scheme-color--five: #5d2b7d;
+  --cfe-scheme-color--six: #feee22;
+  --cfe-scheme-color--body--dark: #1e1e1e;
+  --cfe-scheme-color--text--dark: #eeeeee;
+  --cfe-scheme-color--one--dark: #feee22;
+  --cfe-scheme-color--two--dark: #e41e26;
+  --cfe-scheme-color--three--dark: #1474bb;
+  --cfe-scheme-color--four--dark: #8fc33e;
+  --cfe-scheme-color--five--dark: #5d2b7d;
+  --cfe-scheme-color--six--dark: #a72d89;
+  --cfe-toolbar--submenu--link--action--text-color: var( --cfe-scheme-color--body--dark );
+  --cfe-button--primary--text-color--dark: #1e1e1e;
+}
+
+.dark-mode {
+  --cfe-button--primary--text-color--dark: #1e1e1e;
+}

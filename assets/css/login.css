@@ -127,6 +127,8 @@
   --cfe-toolbar--submenu--link--action--bg-color--dark: var( --cfe-scheme-color--six--dark );
   --cfe-toolbar--submenu--link--text-color: #ffffff;
   --cfe-toolbar--submenu--link--text-color--dark: #ffffff;
+  --cfe-toolbar--submenu--link--action--text-color: #ffffff;
+  --cfe-toolbar--submenu--link--action--text-color--dark: #ffffff;
   --cfe-admin-menu--bg-color: var( --cfe-body--bg-color--dark );
   --cfe-admin--menu--link--action--bg-color: var( --cfe-scheme-color--five );
   --cfe-admin--menu--link--action--bg-color--dark: var( --cfe-scheme-color--five--dark );

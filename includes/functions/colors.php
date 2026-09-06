@@ -745,6 +745,33 @@ function color_schemes() {
 				'six'   => '#8800aa'
 			]
 		],
+		'skittles' => [
+			'slug'     => 'skittles',
+			'name'     => lang()->get( 'Skittles' ),
+			'about'    => lang()->get( 'Taste the rainbow.' ),
+			'category' => 'palettes',
+			'cover'    => '#5d2b7d',
+			'light' => [
+				'body'  => '#ffffff',
+				'text'  => '#222222',
+				'one'   => '#e41e26',
+				'two'   => '#8fc33e',
+				'three' => '#1474bb',
+				'four'  => '#a72d89',
+				'five'  => '#5d2b7d',
+				'six'   => '#feee22'
+			],
+			'dark' => [
+				'body'  => '#1e1e1e',
+				'text'  => '#eeeeee',
+				'one'   => '#feee22',
+				'two'   => '#e41e26',
+				'three' => '#1474bb',
+				'four'  => '#8fc33e',
+				'five'  => '#5d2b7d',
+				'six'   => '#a72d89'
+			]
+		],
 
 		// Materials.
 		'bamboo' => [
