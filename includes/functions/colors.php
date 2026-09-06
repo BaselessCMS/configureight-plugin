@@ -56,6 +56,18 @@ function hex_to_rgb( $color, $opacity = false ) {
 }
 
 /**
+ * Default color value
+ *
+ * @since  1.0.0
+ * @param  string $color
+ * @return string
+ */
+function default_color( $color ) {
+	$value = 'color_' . $color;
+	return plugin()->dbFields[$value];
+}
+
+/**
  * Custom color value
  *
  * @since  1.0.0
@@ -170,26 +182,26 @@ function bootstrap_scheme() {
 			'name'     => lang()->get( 'Bootstrap Colors' ),
 			'about'    => lang()->get( 'The colors included with the <a href="https://getbootstrap.com/docs/5.0/utilities/colors/#variables" target="_blank" rel="noopener noreferrer">Bootstrap</a> framework for website UI and frontend theme building, expanded with tints & shades.' ),
 			'category' => 'custom',
-			'cover'    => '#084298',
+			'cover'    => plugin()->cover_blend(),
 			'light'    => [
-				'body'  => '#ffffff',
-				'text'  => '#343a40',
-				'one'   => '#084298',
-				'two'   => '#0d6efd',
-				'three' => '#084298',
-				'four'  => '#0d6efd',
-				'five'  => '#084298',
-				'six'   => '#0d6efd'
+				'body'  => color( 'body' ),
+				'text'  => color( 'text' ),
+				'one'   => color( 'one' ),
+				'two'   => color( 'two' ),
+				'three' => color( 'three' ),
+				'four'  => color( 'four' ),
+				'five'  => color( 'five' ),
+				'six'   => color( 'six' )
 			],
 			'dark' => [
-				'body'  => '#212529',
-				'text'  => '#f8f9fa',
-				'one'   => '#0d6efd',
-				'two'   => '#6ea8fe',
-				'three' => '#0d6efd',
-				'four'  => '#6ea8fe',
-				'five'  => '#084298',
-				'six'   => '#0d6efd'
+				'body'  => color( 'body_dark' ),
+				'text'  => color( 'text_dark' ),
+				'one'   => color( 'one_dark' ),
+				'two'   => color( 'two_dark' ),
+				'three' => color( 'three_dark' ),
+				'four'  => color( 'four_dark' ),
+				'five'  => color( 'five_dark' ),
+				'six'   => color( 'six_dark' )
 			]
 		]
 	];
@@ -213,26 +225,26 @@ function tailwind_scheme() {
 			'name'     => lang()->get( 'Tailwind Colors' ),
 			'about'    => lang()->get( 'The complete selection of colors included with the <a href="https://tailwindcss.com/docs/colors" target="_blank" rel="noopener noreferrer">Tailwind CSS</a> framework for website UI and frontend theme building.' ),
 			'category' => 'custom',
-			'cover'    => '#1447e6',
+			'cover'    => plugin()->cover_blend(),
 			'light'    => [
-				'body'  => '#ffffff',
-				'text'  => '#1e2939',
-				'one'   => '#193cb8',
-				'two'   => '#1447e6',
-				'three' => '#193cb8',
-				'four'  => '#1447e6',
-				'five'  => '#1c398e',
-				'six'   => '#1447e6',
+				'body'  => color( 'body' ),
+				'text'  => color( 'text' ),
+				'one'   => color( 'one' ),
+				'two'   => color( 'two' ),
+				'three' => color( 'three' ),
+				'four'  => color( 'four' ),
+				'five'  => color( 'five' ),
+				'six'   => color( 'six' )
 			],
 			'dark' => [
-				'body'  => '#1e2939',
-				'text'  => '#f9fafb',
-				'one'   => '#54a2ff',
-				'two'   => '#1447e6',
-				'three' => '#1447e6',
-				'four'  => '#54a2ff',
-				'five'  => '#1c398e',
-				'six'   => '#1447e6',
+				'body'  => color( 'body_dark' ),
+				'text'  => color( 'text_dark' ),
+				'one'   => color( 'one_dark' ),
+				'two'   => color( 'two_dark' ),
+				'three' => color( 'three_dark' ),
+				'four'  => color( 'four_dark' ),
+				'five'  => color( 'five_dark' ),
+				'six'   => color( 'six_dark' )
 			]
 		]
 	];
@@ -250,12 +262,23 @@ function tailwind_scheme() {
  */
 function custom_scheme() {
 
+	$custom = custom_schemes();
+	$from   = plugin()->custom_scheme_from();
+
+	// Conditional description.
+	if ( in_array( $from, $custom ) ) {
+		$about = lang()->get( 'Custom scheme colors begin with the default scheme colors.' );
+	} else {
+		$about = lang()->get( 'Custom scheme colors begin with the previously set scheme. To change the starting colors, first save a different scheme then select custom. If another Build Your Own scheme was previous then the default scheme is the origin.' );
+	}
+
 	$scheme = [
 		'custom' => [
 			'slug'     => 'custom',
 			'name'     => lang()->get( 'Custom' ),
-			'about'    => lang()->get( 'Custom scheme colors begin with the previously set scheme. To change the starting colors, first save a different scheme then select custom.' ),
+			'about'    => $about,
 			'category' => 'custom',
+			'cover'    => plugin()->cover_blend(),
 			'light'    => [
 				'body'  => color( 'body' ),
 				'text'  => color( 'text' ),
@@ -311,7 +334,7 @@ function custom_schemes() {
  */
 function color_schemes() {
 
-	// Built-in color schemes.
+	// Basic color schemes.
 	$schemes = [
 		'default' => [
 			'slug'     => 'default',
@@ -698,6 +721,7 @@ function color_schemes() {
 		'primary' => [
 			'slug'     => 'primary',
 			'name'     => lang()->get( 'Primary' ),
+			'about'    => lang()->get( 'A palette of basic, vibrant colors.' ),
 			'category' => 'palettes',
 			'cover'    => '#0000cc',
 			'light' => [
@@ -1194,6 +1218,11 @@ function color_scheme_template() {
 	// Get color schemes.
 	$colors = color_schemes();
 	$scheme = false;
+
+	// Exclude custom schemes.
+	if ( in_array( plugin()->color_scheme(), custom_schemes() ) ) {
+		return $scheme;
+	}
 
 	if ( 'page' == $url->whereAmI() ) {
 		foreach ( $colors as $color => $key ) {

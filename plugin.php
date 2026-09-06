@@ -2174,6 +2174,10 @@ class configureight extends Plugin {
 
 	// @return string
 	public function custom_scheme_from() {
+
+		if ( in_array( $this->getValue( 'custom_scheme_from' ), custom_schemes() ) ) {
+			return 'default';
+		}
 		return $this->getValue( 'custom_scheme_from' );
 	}
 

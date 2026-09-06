@@ -77,36 +77,31 @@ code.select {
 
 <h1 class="page-title"><span class="page-title-icon fa fa-eyedropper"></span><span class="page-title-text"><?php lang()->p( 'Color Schemes Reference' ); ?></span></h1>
 
-<div class="alert alert-primary alert-search-forms" role="alert">
-	<p class="m-0"><?php lang()->p( "Go to the <a href='{$guide_page}'>options guide</a> page. Go to the <a href='{$settings_page}#style'>website options</a> page." ); ?></p>
-</div>
-
-<p><?php lang()->p( 'Click any code value to select for copy.' ); ?></p>
+<p class="page-description"><?php lang()->p( "Go to the <a href='{$guide_page}'>options guide</a> page. Go to the <a href='{$settings_page}#style'>website options</a> page." ); ?></p>
 
 <?php
 printf(
 	'<h2 class="color-heading">%s <a class="reference-link form-tooltip" href="http://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties" target="_blank" rel="noopener noreferrer" title="%s"><span class="fa fa-external-link-square"></span><span class="screen-reader-text">%s</span></a></h2>',
-	lang()->get( 'CSS Variables' ),
+	lang()->get( 'Custom Properties (CSS Variables)' ),
 	lang()->get( 'Reference on the Mozilla website' ),
 	lang()->get( 'Reference on the Mozilla website' )
 );
 
 printf(
 	'<p>%s</p>',
-	lang()->get( 'The CSS color variables are used universally in the public theme and the admin theme for each color scheme. These variables are redefined in the <code>head</code> section by the various options. The <code>--cfe-</code> prefix refers to the Configure 8 theme.' )
+	lang()->get( 'The CSS color properties are used universally in the public theme and the admin theme for each color scheme. These properties are redefined in the <code>head</code> section by the various options. The <code>--cfe-</code> prefix refers to the Configure 8 theme.' )
 );
 printf(
 	'<p>%s</p>',
-	lang()->get( 'To redefine these variables, simply copy the variable and paste it into the relevant custom CSS field, under the <code>:root</code> selector, with its new color.' )
+	lang()->get( 'To redefine these properties, simply copy the property and paste it into the relevant custom CSS field, under the <code>:root</code> selector, with its new color.' )
 );
 printf(
 	'<p><span class="color-list-label">%s</span> <code>:root{ --cfe-scheme-color--one: #ffcc00; }</code></p>',
 	lang()->get( 'Example:' )
 );
-echo '<hr />';
 printf(
 	'<p>%s</p>',
-	lang()->get( 'To use these variables as a value for an element, ID, or class, simply copy the variable and paste it into the relevant custom CSS field following a selector.' )
+	lang()->get( 'To use these properties as a value for an element, ID, or class, simply copy the property and paste it into the relevant custom CSS field following a selector.' )
 );
 printf(
 	'<p><span class="color-list-label">%s</span> <code>.div-class a { color: var( --cfe-scheme-color--three ); }</code></p>',
@@ -143,24 +138,29 @@ foreach ( $default['dark'] as $name => $color ) {
 	);
 }
 
+/**
+ * Color scheme slugs
+ *
+ * @since 1.0.0
+ *
+ * Print a slug for each of the plugin color schemes,
+ * except for the custom schemes. Slugs can be used
+ * in page templates for using a scheme per page.
+ */
 echo '<hr />';
-
 printf(
 	'<h2 class="color-heading">%s</h2>',
 	lang()->get( 'Scheme Slugs' )
 );
-
 printf(
 	'<p>%s</p>',
 	lang()->get( 'Color scheme page/post templates require use of the scheme slug. To apply a color scheme template use the name <code>color-scheme-$slug</code> where <code>$slug</code> is one of the color scheme slugs listed below.' )
 );
-
 printf(
 	'<p><span class="color-list-label">%s</span> %s</p>',
 	lang()->get( 'Example:' ),
 	lang()->get( 'the template <code>color-scheme-forest</code> will apply the Forest color scheme to that page or post.' )
 );
-
 printf(
 	'<p>%s</p>',
 	lang()->get( 'Slugs can also be used in the <code>get_color_scheme( $slug )</code> function to get an array of data about the scheme.' )
@@ -211,7 +211,16 @@ foreach ( $schemes as $scheme => $option ) {
 }
 echo '</ul>';
 
-// If current exists.
+/**
+ * Current color scheme
+ *
+ * @since 1.0.0
+ *
+ * Prints information about the color scheme currently set
+ * on the options page. If one of the custom color schemes
+ * is set then color info comes from the database, as set
+ * in the individual color pickers.
+ */
 if ( false !== $current ) :
 
 echo '<hr />';
@@ -222,27 +231,47 @@ printf(
 	$current['name']
 );
 
+// Scheme category if not one of the custom schemes.
+if (
+	isset( $current['category'] ) &&
+	! empty( $current['category'] ) &&
+	! in_array( $current['slug'], custom_schemes() )
+) :
+$scheme_cat = color_scheme_category( $current['category'] );
+printf(
+	'<p class="current-scheme-cat">%s <a href="#cat-id-%s">%s</a></p>',
+	lang()->get( 'Category:' ),
+	$current['category'],
+	$scheme_cat['name']
+);
+endif;
+
+// Scheme description.
 if ( isset( $current['about'] ) && ! empty( $current['about'] ) ) {
 	printf(
 		'<p>%s</p>',
 		$current['about']
 	);
-} ?>
+}
 
-<?php
+// Previously set scheme if Custom is the current scheme.
 if ( 'custom' == $current['slug'] ) {
-	$scheme_from = plugin()->custom_scheme_from();
-	$original    = get_color_scheme( $scheme_from );
-	if ( is_array( $original ) ) {
+	$previous = plugin()->custom_scheme_from();
+	$previous = get_color_scheme( $previous );
+	if ( is_array( $previous ) ) {
 		printf(
-			lang()->get( '<p>Adapted from the <a href="#%s">%s</a> scheme.</p>' ),
-			$scheme_from,
-			$original['name']
+			lang()->get( '<p>Previous scheme: <a href="#%s">%s</a>.</p>' ),
+			$previous['slug'],
+			$previous['name']
 		);
 	}
-} ?>
+}
+printf(
+	'<p>%s</p>',
+	lang()->get( 'The following color information comes from the database, as set in the individual custom color pickers.' )
+);
 
-<?php
+// Current light color options.
 printf(
 	'<h3 class="color-list-heading">%s</h3>',
 	lang()->get( 'Light Mode Colors' )
@@ -274,6 +303,7 @@ foreach ( $current['light'] as $name => $color ) {
 }
 echo '</ul>';
 
+// Current dark color options.
 printf(
 	'<h3 class="color-list-heading">%s</h3>',
 	lang()->get( 'Dark Mode Colors' )
@@ -307,19 +337,28 @@ echo '</ul></div>';
 
 // Copy custom colors as text.
 if ( 'custom' == plugin()->color_scheme() ) :
+echo '<hr />';
 printf(
 	'<h3 class="form-heading" style="text-transform: none;">%s</h3>',
-	lang()->get( 'Copy Custom Colors for Records' )
+	lang()->get( 'Copy custom colors for your records' )
 );
-echo '<pre>';
-echo lang()->get( 'Light' ) . '<br />';
+printf(
+	'<p>%s</p>',
+	lang()->get( 'Formatted as SCSS/SASS maps.' )
+);
+
+echo '<pre lang="css" class="language-css" data-language="css">' . "\r";
+echo '$light: (' . "\r";
 foreach ( $current['light'] as $name => $color ) {
-	echo ucwords( $name ) . ' &mdash; ' . $color . '<br />';
+	echo "	&#39;{$name}&#39;: &#39;{$color}&#39;,". "\r";
 }
-echo '<br />' . lang()->get( 'Dark' ) . '<br />';
+echo ')' . "\r";
+
+echo '$dark: (' . "\r";
 foreach ( $current['dark'] as $name => $color ) {
-	echo ucwords( $name ) . ' &mdash; ' . $color . '<br />';
+	echo "	&#39;{$name}&#39;: &#39;{$color}&#39;,". "\r";
 }
+echo ')' . "\r";
 echo '</pre>';
 endif;
 
@@ -329,9 +368,16 @@ endif;
 // List color schemes.
 foreach ( $schemes as $scheme => $option ) {
 
+	// Skip current theme.
 	if ( plugin()->color_scheme() == $option['slug'] ) {
 		continue;
 	}
+
+	// Skip custom schemes.
+	if ( in_array( $option['slug'], custom_schemes() ) ) {
+		continue;
+	}
+
 	$scheme_cat = color_scheme_category( $option['category'] );
 
 	echo '<hr />';
