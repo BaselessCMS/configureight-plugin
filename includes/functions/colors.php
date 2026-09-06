@@ -720,8 +720,8 @@ function color_schemes() {
 		],
 		'primary' => [
 			'slug'     => 'primary',
-			'name'     => lang()->get( 'Primary' ),
-			'about'    => lang()->get( 'A palette of basic, vibrant colors.' ),
+			'name'     => lang()->get( 'Color Wheel' ),
+			'about'    => lang()->get( 'A palette of the vibrant primary & secondary colors.' ),
 			'category' => 'palettes',
 			'cover'    => '#0000cc',
 			'light' => [
