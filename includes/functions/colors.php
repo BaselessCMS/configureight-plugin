@@ -1431,10 +1431,11 @@ function picker_colors_merged() {
 	$merge = [];
 
 	foreach ( $modes as $colors => $color ) {
-		if ( in_array( $color, $merge ) ) {
-			continue;
+
+		// Filter duplicates.
+		if ( ! in_array( $color, $merge ) ) {
+			$merge[] = $color;
 		}
-		$merge[] = $color;
 	}
 	return $merge;
 }
