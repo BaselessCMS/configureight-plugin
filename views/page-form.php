@@ -14,7 +14,8 @@ use function CFE_Plugin\{
 };
 use function CFE_Colors\{
 	picker_colors_light,
-	picker_colors_dark
+	picker_colors_dark,
+	picker_colors_merged
 };
 
 // Guide page URL.
@@ -117,8 +118,7 @@ jQuery(document).ready( function($) {
 		showAlpha       : false,
 		showPalette     : true,
 		palette         : [
-			['<?php echo implode( "', '", picker_colors_light() ); ?>'],
-			['<?php echo implode( "', '", picker_colors_dark() ); ?>']
+			['<?php echo implode( "', '", picker_colors_merged() ); ?>']
 		],
 		preferredFormat : "hex",
 		showInitial     : true,

@@ -1420,6 +1420,26 @@ function picker_colors_dark() {
 }
 
 /**
+ * Color picker: light & dark colors
+ *
+ * @since  1.0.0
+ * @return array Returns an array of hex values.
+ */
+function picker_colors_merged() {
+
+	$modes = array_merge( picker_colors_light(), picker_colors_dark() );
+	$merge = [];
+
+	foreach ( $modes as $colors => $color ) {
+		if ( in_array( $color, $merge ) ) {
+			continue;
+		}
+		$merge[] = $color;
+	}
+	return $merge;
+}
+
+/**
  * Define color scheme variables
  *
  * Used in the `<head>` section to assign current
