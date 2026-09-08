@@ -54,8 +54,8 @@
 		active:       1,
 		container:    false,
 		controls:     {
-		prev: '.prev',
-		next: '.next'
+		prev: '.prev-tab',
+		next: '.next-tab'
 		}
 	};
 

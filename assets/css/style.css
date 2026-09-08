@@ -6969,7 +6969,6 @@ img.profilePicture {
 }
 
 .tab-content .tab-pane {
-  display: none;
   padding: var(--cfe-tabs--content--pane--padding, 1rem 0 0 0);
 }
 .tab-content .tab-pane.active {
