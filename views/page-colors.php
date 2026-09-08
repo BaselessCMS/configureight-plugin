@@ -86,6 +86,9 @@ code.select {
 			<a class="nav-link" role="tab" aria-controls="properties" aria-selected="false" href="#properties"><?php lang()->p( 'Properties' ); ?></a>
 		</li>
 		<li class="nav-item">
+			<a class="nav-link" role="tab" aria-controls="classes" aria-selected="false" href="#classes"><?php lang()->p( 'Classes' ); ?></a>
+		</li>
+		<li class="nav-item">
 			<a class="nav-link" role="tab" aria-controls="slugs" aria-selected="false" href="#slugs"><?php lang()->p( 'Slugs' ); ?></a>
 		</li>
 		<li class="nav-item">
@@ -111,11 +114,11 @@ code.select {
 		);
 		printf(
 			'<p>%s</p>',
-			lang()->get( 'The CSS color properties, also known as CSS variables, are used universally in the public theme and the admin theme for each color scheme. These properties are redefined in the <code>head</code> section by the various options. The <code>--cfe-</code> prefix refers to the Configure 8 theme.' )
+			lang()->get( 'The CSS color properties, also known as CSS variables, are used universally in the public theme and the admin theme. The <code>--cfe-</code> prefix refers to the Configure 8 theme.' )
 		);
 		printf(
 			'<p>%s</p>',
-			lang()->get( 'To redefine these properties, simply copy the property and paste it into the relevant custom CSS field, under the <code>:root</code> selector, with its new color.' )
+			lang()->get( 'To redefine these properties, simply copy the property and paste it into the relevant Custom CSS field on the options page, under the <code>:root</code> selector, with its new color.' )
 		);
 		printf(
 			'<p><span class="color-list-label">%s</span> <code>:root{ --cfe-scheme-color--one: #ffcc00; }</code></p>',
@@ -128,6 +131,17 @@ code.select {
 		printf(
 			'<p><span class="color-list-label">%s</span> <code>.div-class a { color: var( --cfe-scheme-color--three ); }</code></p>',
 			lang()->get( 'Example:' )
+		);
+
+		echo '<hr />';
+
+		printf(
+			'<h2 class="color-heading">%s</h2>',
+			lang()->get( 'General Properties' )
+		);
+		printf(
+			'<p>%s</p>',
+			lang()->get( 'The general properties are defined by the active color scheme. They are loaded in a scheme-specific stylesheet and in a <code>&lt;style&gt;</code> block in the <code>&lt;head&gt;</code>.' )
 		);
 
 		// Light mode properties.
@@ -161,7 +175,102 @@ code.select {
 				"--cfe-scheme-color--{$name}--dark"
 			);
 		}
+
+		echo '<hr />';
+
+		printf(
+			'<h2 class="color-heading">%s</h2>',
+			lang()->get( 'Scheme Properties' )
+		);
+		printf(
+			'<p>%s</p>',
+			lang()->get( 'The scheme properties are optionally loaded in a scheme-specific stylesheet. The properties are not used in the Configure 8 theme or admin theme but can be used to change colors where desired.' )
+		);
+
 		?>
+	</div>
+	<div id="classes" class="tab-pane" role="tabpanel" aria-labelledby="classes">
+		<?php
+		printf(
+			'<h2 class="color-heading">%s</h2>',
+			lang()->get( 'Scheme Classes' )
+		);
+		printf(
+			'<p>%s</p>',
+			lang()->get( 'Scheme-specific CSS classes are optionally loaded in a scheme-specific stylesheet. The classes are not used in the Configure 8 theme or admin theme but can be used in your custom plugin, or in modified versions of the Configure 8 themes.' )
+		);
+		printf(
+			'<p>%s</p>',
+			lang()->get( 'Each color in a scheme, light & dark modes, has its own set of classes for that color. The scheme is specified by a class using the scheme slug prefixed with <code>cfe-</code>.' )
+		);
+		printf(
+			'<p><span class="color-list-label">%s</span> %s</p>',
+			lang()->get( 'Example:' ),
+			lang()->get( 'the <code>cfe-forest</code> class will take a color from the Forest color scheme. Then specify the color name in the operative class. If you have <code>&lt;span class="cfe-forest forest-one"&gt;</code> will apply Forest color one to the text.' )
+		);
+		printf(
+			'<p>%s</p>',
+			lang()->get( 'Following is the complete set of classes for color one the Forest scheme. ' )
+		);
+
+		?>
+		<pre lang="css">
+		.cfe-forest.forest-one {
+			color: var( --cfe--forest--one );
+		}
+		.cfe-forest.forest-one-bg {
+			background-color: var( --cfe--forest--one );
+		}
+		.cfe-forest.forest-one-decoration {
+			text-decoration-color: var( --cfe--forest--one );
+		}
+		.cfe-forest.forest-one-emphasis {
+			-webkit-text-emphasis-color: var( --cfe--forest--one );
+					text-emphasis-color: var( --cfe--forest--one );
+		}
+		.cfe-forest.forest-one-accent {
+			accent-color: var( --cfe--forest--one );
+		}
+		.cfe-forest.forest-one-caret {
+			caret-color: var( --cfe--forest--one );
+		}
+		.cfe-forest.forest-one-border {
+			border-color: var( --cfe--forest--one );
+		}
+		.cfe-forest.forest-one-outline {
+			outline-color: var( --cfe--forest--one );
+		}
+		.cfe-forest.forest-one-rule {
+			rule-color: var( --cfe--forest--one );
+		}
+		.cfe-forest.forest-one-column-rule {
+			-moz-column-rule-color: var( --cfe--forest--one );
+				 column-rule-color: var( --cfe--forest--one );
+		}
+		.cfe-forest.forest-one-row-rule {
+			row-rule-color: var( --cfe--forest--one );
+		}
+		.cfe-forest.forest-one-fill {
+			fill: var( --cfe--forest--one );
+		}
+		.cfe-forest.forest-one-text-fill {
+			-webkit-text-fill-color: var( --cfe--forest--one );
+					text-fill-color: var( --cfe--forest--one );
+		}
+		.cfe-forest.forest-one-stroke {
+			stroke: var( --cfe--forest--one );
+		}
+		.cfe-forest.forest-one-text-stroke {
+			-webkit-text-stroke-color: var( --cfe--forest--one );
+					text-stroke-color: var( --cfe--forest--one );
+		}
+		.cfe-forest.forest-one-flood {
+			flood-color: var( --cfe--forest--one );
+		}
+		.cfe-forest.forest-one-stop {
+			stop-color: var( --cfe--forest--one );
+		}
+		</pre>
 	</div>
 	<div id="slugs" class="tab-pane" role="tabpanel" aria-labelledby="slugs">
 		<?php
