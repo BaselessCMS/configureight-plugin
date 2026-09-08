@@ -18,883 +18,883 @@
   --cfe-scheme-deco--six--dark: #c32323;
 }
 
-.cfe-deco.body {
+.cfe-deco.deco-body {
   color: var(--cfe--deco--body);
 }
-.cfe-deco.body-bg {
+.cfe-deco.deco-body-bg {
   background-color: var(--cfe--deco--body);
 }
-.cfe-deco.body-decoration {
+.cfe-deco.deco-body-decoration {
   text-decoration-color: var(--cfe--deco--body);
 }
-.cfe-deco.body-emphasis {
+.cfe-deco.deco-body-emphasis {
   -webkit-text-emphasis-color: var(--cfe--deco--body);
           text-emphasis-color: var(--cfe--deco--body);
 }
-.cfe-deco.body-accent {
+.cfe-deco.deco-body-accent {
   accent-color: var(--cfe--deco--body);
 }
-.cfe-deco.body-caret {
+.cfe-deco.deco-body-caret {
   caret-color: var(--cfe--deco--body);
 }
-.cfe-deco.body-border {
+.cfe-deco.deco-body-border {
   border-color: var(--cfe--deco--body);
 }
-.cfe-deco.body-outline {
+.cfe-deco.deco-body-outline {
   outline-color: var(--cfe--deco--body);
 }
-.cfe-deco.body-rule {
+.cfe-deco.deco-body-rule {
   rule-color: var(--cfe--deco--body);
 }
-.cfe-deco.body-column-rule {
+.cfe-deco.deco-body-column-rule {
   -moz-column-rule-color: var(--cfe--deco--body);
        column-rule-color: var(--cfe--deco--body);
 }
-.cfe-deco.body-row-rule {
+.cfe-deco.deco-body-row-rule {
   row-rule-color: var(--cfe--deco--body);
 }
-.cfe-deco.body-fill {
+.cfe-deco.deco-body-fill {
   fill: var(--cfe--deco--body);
 }
-.cfe-deco.body-text-fill {
+.cfe-deco.deco-body-text-fill {
   -webkit-text-fill-color: var(--cfe--deco--body);
   text-fill-color: var(--cfe--deco--body);
 }
-.cfe-deco.body-stroke {
+.cfe-deco.deco-body-stroke {
   stroke: var(--cfe--deco--body);
 }
-.cfe-deco.body-text-stroke {
+.cfe-deco.deco-body-text-stroke {
   -webkit-text-stroke-color: var(--cfe--deco--body);
   text-stroke-color: var(--cfe--deco--body);
 }
-.cfe-deco.body-flood {
+.cfe-deco.deco-body-flood {
   flood-color: var(--cfe--deco--body);
 }
-.cfe-deco.body-stop {
+.cfe-deco.deco-body-stop {
   stop-color: var(--cfe--deco--body);
 }
-.cfe-deco.text {
+.cfe-deco.deco-text {
   color: var(--cfe--deco--text);
 }
-.cfe-deco.text-bg {
+.cfe-deco.deco-text-bg {
   background-color: var(--cfe--deco--text);
 }
-.cfe-deco.text-decoration {
+.cfe-deco.deco-text-decoration {
   text-decoration-color: var(--cfe--deco--text);
 }
-.cfe-deco.text-emphasis {
+.cfe-deco.deco-text-emphasis {
   -webkit-text-emphasis-color: var(--cfe--deco--text);
           text-emphasis-color: var(--cfe--deco--text);
 }
-.cfe-deco.text-accent {
+.cfe-deco.deco-text-accent {
   accent-color: var(--cfe--deco--text);
 }
-.cfe-deco.text-caret {
+.cfe-deco.deco-text-caret {
   caret-color: var(--cfe--deco--text);
 }
-.cfe-deco.text-border {
+.cfe-deco.deco-text-border {
   border-color: var(--cfe--deco--text);
 }
-.cfe-deco.text-outline {
+.cfe-deco.deco-text-outline {
   outline-color: var(--cfe--deco--text);
 }
-.cfe-deco.text-rule {
+.cfe-deco.deco-text-rule {
   rule-color: var(--cfe--deco--text);
 }
-.cfe-deco.text-column-rule {
+.cfe-deco.deco-text-column-rule {
   -moz-column-rule-color: var(--cfe--deco--text);
        column-rule-color: var(--cfe--deco--text);
 }
-.cfe-deco.text-row-rule {
+.cfe-deco.deco-text-row-rule {
   row-rule-color: var(--cfe--deco--text);
 }
-.cfe-deco.text-fill {
+.cfe-deco.deco-text-fill {
   fill: var(--cfe--deco--text);
 }
-.cfe-deco.text-text-fill {
+.cfe-deco.deco-text-text-fill {
   -webkit-text-fill-color: var(--cfe--deco--text);
   text-fill-color: var(--cfe--deco--text);
 }
-.cfe-deco.text-stroke {
+.cfe-deco.deco-text-stroke {
   stroke: var(--cfe--deco--text);
 }
-.cfe-deco.text-text-stroke {
+.cfe-deco.deco-text-text-stroke {
   -webkit-text-stroke-color: var(--cfe--deco--text);
   text-stroke-color: var(--cfe--deco--text);
 }
-.cfe-deco.text-flood {
+.cfe-deco.deco-text-flood {
   flood-color: var(--cfe--deco--text);
 }
-.cfe-deco.text-stop {
+.cfe-deco.deco-text-stop {
   stop-color: var(--cfe--deco--text);
 }
-.cfe-deco.one {
+.cfe-deco.deco-one {
   color: var(--cfe--deco--one);
 }
-.cfe-deco.one-bg {
+.cfe-deco.deco-one-bg {
   background-color: var(--cfe--deco--one);
 }
-.cfe-deco.one-decoration {
+.cfe-deco.deco-one-decoration {
   text-decoration-color: var(--cfe--deco--one);
 }
-.cfe-deco.one-emphasis {
+.cfe-deco.deco-one-emphasis {
   -webkit-text-emphasis-color: var(--cfe--deco--one);
           text-emphasis-color: var(--cfe--deco--one);
 }
-.cfe-deco.one-accent {
+.cfe-deco.deco-one-accent {
   accent-color: var(--cfe--deco--one);
 }
-.cfe-deco.one-caret {
+.cfe-deco.deco-one-caret {
   caret-color: var(--cfe--deco--one);
 }
-.cfe-deco.one-border {
+.cfe-deco.deco-one-border {
   border-color: var(--cfe--deco--one);
 }
-.cfe-deco.one-outline {
+.cfe-deco.deco-one-outline {
   outline-color: var(--cfe--deco--one);
 }
-.cfe-deco.one-rule {
+.cfe-deco.deco-one-rule {
   rule-color: var(--cfe--deco--one);
 }
-.cfe-deco.one-column-rule {
+.cfe-deco.deco-one-column-rule {
   -moz-column-rule-color: var(--cfe--deco--one);
        column-rule-color: var(--cfe--deco--one);
 }
-.cfe-deco.one-row-rule {
+.cfe-deco.deco-one-row-rule {
   row-rule-color: var(--cfe--deco--one);
 }
-.cfe-deco.one-fill {
+.cfe-deco.deco-one-fill {
   fill: var(--cfe--deco--one);
 }
-.cfe-deco.one-text-fill {
+.cfe-deco.deco-one-text-fill {
   -webkit-text-fill-color: var(--cfe--deco--one);
   text-fill-color: var(--cfe--deco--one);
 }
-.cfe-deco.one-stroke {
+.cfe-deco.deco-one-stroke {
   stroke: var(--cfe--deco--one);
 }
-.cfe-deco.one-text-stroke {
+.cfe-deco.deco-one-text-stroke {
   -webkit-text-stroke-color: var(--cfe--deco--one);
   text-stroke-color: var(--cfe--deco--one);
 }
-.cfe-deco.one-flood {
+.cfe-deco.deco-one-flood {
   flood-color: var(--cfe--deco--one);
 }
-.cfe-deco.one-stop {
+.cfe-deco.deco-one-stop {
   stop-color: var(--cfe--deco--one);
 }
-.cfe-deco.two {
+.cfe-deco.deco-two {
   color: var(--cfe--deco--two);
 }
-.cfe-deco.two-bg {
+.cfe-deco.deco-two-bg {
   background-color: var(--cfe--deco--two);
 }
-.cfe-deco.two-decoration {
+.cfe-deco.deco-two-decoration {
   text-decoration-color: var(--cfe--deco--two);
 }
-.cfe-deco.two-emphasis {
+.cfe-deco.deco-two-emphasis {
   -webkit-text-emphasis-color: var(--cfe--deco--two);
           text-emphasis-color: var(--cfe--deco--two);
 }
-.cfe-deco.two-accent {
+.cfe-deco.deco-two-accent {
   accent-color: var(--cfe--deco--two);
 }
-.cfe-deco.two-caret {
+.cfe-deco.deco-two-caret {
   caret-color: var(--cfe--deco--two);
 }
-.cfe-deco.two-border {
+.cfe-deco.deco-two-border {
   border-color: var(--cfe--deco--two);
 }
-.cfe-deco.two-outline {
+.cfe-deco.deco-two-outline {
   outline-color: var(--cfe--deco--two);
 }
-.cfe-deco.two-rule {
+.cfe-deco.deco-two-rule {
   rule-color: var(--cfe--deco--two);
 }
-.cfe-deco.two-column-rule {
+.cfe-deco.deco-two-column-rule {
   -moz-column-rule-color: var(--cfe--deco--two);
        column-rule-color: var(--cfe--deco--two);
 }
-.cfe-deco.two-row-rule {
+.cfe-deco.deco-two-row-rule {
   row-rule-color: var(--cfe--deco--two);
 }
-.cfe-deco.two-fill {
+.cfe-deco.deco-two-fill {
   fill: var(--cfe--deco--two);
 }
-.cfe-deco.two-text-fill {
+.cfe-deco.deco-two-text-fill {
   -webkit-text-fill-color: var(--cfe--deco--two);
   text-fill-color: var(--cfe--deco--two);
 }
-.cfe-deco.two-stroke {
+.cfe-deco.deco-two-stroke {
   stroke: var(--cfe--deco--two);
 }
-.cfe-deco.two-text-stroke {
+.cfe-deco.deco-two-text-stroke {
   -webkit-text-stroke-color: var(--cfe--deco--two);
   text-stroke-color: var(--cfe--deco--two);
 }
-.cfe-deco.two-flood {
+.cfe-deco.deco-two-flood {
   flood-color: var(--cfe--deco--two);
 }
-.cfe-deco.two-stop {
+.cfe-deco.deco-two-stop {
   stop-color: var(--cfe--deco--two);
 }
-.cfe-deco.three {
+.cfe-deco.deco-three {
   color: var(--cfe--deco--three);
 }
-.cfe-deco.three-bg {
+.cfe-deco.deco-three-bg {
   background-color: var(--cfe--deco--three);
 }
-.cfe-deco.three-decoration {
+.cfe-deco.deco-three-decoration {
   text-decoration-color: var(--cfe--deco--three);
 }
-.cfe-deco.three-emphasis {
+.cfe-deco.deco-three-emphasis {
   -webkit-text-emphasis-color: var(--cfe--deco--three);
           text-emphasis-color: var(--cfe--deco--three);
 }
-.cfe-deco.three-accent {
+.cfe-deco.deco-three-accent {
   accent-color: var(--cfe--deco--three);
 }
-.cfe-deco.three-caret {
+.cfe-deco.deco-three-caret {
   caret-color: var(--cfe--deco--three);
 }
-.cfe-deco.three-border {
+.cfe-deco.deco-three-border {
   border-color: var(--cfe--deco--three);
 }
-.cfe-deco.three-outline {
+.cfe-deco.deco-three-outline {
   outline-color: var(--cfe--deco--three);
 }
-.cfe-deco.three-rule {
+.cfe-deco.deco-three-rule {
   rule-color: var(--cfe--deco--three);
 }
-.cfe-deco.three-column-rule {
+.cfe-deco.deco-three-column-rule {
   -moz-column-rule-color: var(--cfe--deco--three);
        column-rule-color: var(--cfe--deco--three);
 }
-.cfe-deco.three-row-rule {
+.cfe-deco.deco-three-row-rule {
   row-rule-color: var(--cfe--deco--three);
 }
-.cfe-deco.three-fill {
+.cfe-deco.deco-three-fill {
   fill: var(--cfe--deco--three);
 }
-.cfe-deco.three-text-fill {
+.cfe-deco.deco-three-text-fill {
   -webkit-text-fill-color: var(--cfe--deco--three);
   text-fill-color: var(--cfe--deco--three);
 }
-.cfe-deco.three-stroke {
+.cfe-deco.deco-three-stroke {
   stroke: var(--cfe--deco--three);
 }
-.cfe-deco.three-text-stroke {
+.cfe-deco.deco-three-text-stroke {
   -webkit-text-stroke-color: var(--cfe--deco--three);
   text-stroke-color: var(--cfe--deco--three);
 }
-.cfe-deco.three-flood {
+.cfe-deco.deco-three-flood {
   flood-color: var(--cfe--deco--three);
 }
-.cfe-deco.three-stop {
+.cfe-deco.deco-three-stop {
   stop-color: var(--cfe--deco--three);
 }
-.cfe-deco.four {
+.cfe-deco.deco-four {
   color: var(--cfe--deco--four);
 }
-.cfe-deco.four-bg {
+.cfe-deco.deco-four-bg {
   background-color: var(--cfe--deco--four);
 }
-.cfe-deco.four-decoration {
+.cfe-deco.deco-four-decoration {
   text-decoration-color: var(--cfe--deco--four);
 }
-.cfe-deco.four-emphasis {
+.cfe-deco.deco-four-emphasis {
   -webkit-text-emphasis-color: var(--cfe--deco--four);
           text-emphasis-color: var(--cfe--deco--four);
 }
-.cfe-deco.four-accent {
+.cfe-deco.deco-four-accent {
   accent-color: var(--cfe--deco--four);
 }
-.cfe-deco.four-caret {
+.cfe-deco.deco-four-caret {
   caret-color: var(--cfe--deco--four);
 }
-.cfe-deco.four-border {
+.cfe-deco.deco-four-border {
   border-color: var(--cfe--deco--four);
 }
-.cfe-deco.four-outline {
+.cfe-deco.deco-four-outline {
   outline-color: var(--cfe--deco--four);
 }
-.cfe-deco.four-rule {
+.cfe-deco.deco-four-rule {
   rule-color: var(--cfe--deco--four);
 }
-.cfe-deco.four-column-rule {
+.cfe-deco.deco-four-column-rule {
   -moz-column-rule-color: var(--cfe--deco--four);
        column-rule-color: var(--cfe--deco--four);
 }
-.cfe-deco.four-row-rule {
+.cfe-deco.deco-four-row-rule {
   row-rule-color: var(--cfe--deco--four);
 }
-.cfe-deco.four-fill {
+.cfe-deco.deco-four-fill {
   fill: var(--cfe--deco--four);
 }
-.cfe-deco.four-text-fill {
+.cfe-deco.deco-four-text-fill {
   -webkit-text-fill-color: var(--cfe--deco--four);
   text-fill-color: var(--cfe--deco--four);
 }
-.cfe-deco.four-stroke {
+.cfe-deco.deco-four-stroke {
   stroke: var(--cfe--deco--four);
 }
-.cfe-deco.four-text-stroke {
+.cfe-deco.deco-four-text-stroke {
   -webkit-text-stroke-color: var(--cfe--deco--four);
   text-stroke-color: var(--cfe--deco--four);
 }
-.cfe-deco.four-flood {
+.cfe-deco.deco-four-flood {
   flood-color: var(--cfe--deco--four);
 }
-.cfe-deco.four-stop {
+.cfe-deco.deco-four-stop {
   stop-color: var(--cfe--deco--four);
 }
-.cfe-deco.five {
+.cfe-deco.deco-five {
   color: var(--cfe--deco--five);
 }
-.cfe-deco.five-bg {
+.cfe-deco.deco-five-bg {
   background-color: var(--cfe--deco--five);
 }
-.cfe-deco.five-decoration {
+.cfe-deco.deco-five-decoration {
   text-decoration-color: var(--cfe--deco--five);
 }
-.cfe-deco.five-emphasis {
+.cfe-deco.deco-five-emphasis {
   -webkit-text-emphasis-color: var(--cfe--deco--five);
           text-emphasis-color: var(--cfe--deco--five);
 }
-.cfe-deco.five-accent {
+.cfe-deco.deco-five-accent {
   accent-color: var(--cfe--deco--five);
 }
-.cfe-deco.five-caret {
+.cfe-deco.deco-five-caret {
   caret-color: var(--cfe--deco--five);
 }
-.cfe-deco.five-border {
+.cfe-deco.deco-five-border {
   border-color: var(--cfe--deco--five);
 }
-.cfe-deco.five-outline {
+.cfe-deco.deco-five-outline {
   outline-color: var(--cfe--deco--five);
 }
-.cfe-deco.five-rule {
+.cfe-deco.deco-five-rule {
   rule-color: var(--cfe--deco--five);
 }
-.cfe-deco.five-column-rule {
+.cfe-deco.deco-five-column-rule {
   -moz-column-rule-color: var(--cfe--deco--five);
        column-rule-color: var(--cfe--deco--five);
 }
-.cfe-deco.five-row-rule {
+.cfe-deco.deco-five-row-rule {
   row-rule-color: var(--cfe--deco--five);
 }
-.cfe-deco.five-fill {
+.cfe-deco.deco-five-fill {
   fill: var(--cfe--deco--five);
 }
-.cfe-deco.five-text-fill {
+.cfe-deco.deco-five-text-fill {
   -webkit-text-fill-color: var(--cfe--deco--five);
   text-fill-color: var(--cfe--deco--five);
 }
-.cfe-deco.five-stroke {
+.cfe-deco.deco-five-stroke {
   stroke: var(--cfe--deco--five);
 }
-.cfe-deco.five-text-stroke {
+.cfe-deco.deco-five-text-stroke {
   -webkit-text-stroke-color: var(--cfe--deco--five);
   text-stroke-color: var(--cfe--deco--five);
 }
-.cfe-deco.five-flood {
+.cfe-deco.deco-five-flood {
   flood-color: var(--cfe--deco--five);
 }
-.cfe-deco.five-stop {
+.cfe-deco.deco-five-stop {
   stop-color: var(--cfe--deco--five);
 }
-.cfe-deco.six {
+.cfe-deco.deco-six {
   color: var(--cfe--deco--six);
 }
-.cfe-deco.six-bg {
+.cfe-deco.deco-six-bg {
   background-color: var(--cfe--deco--six);
 }
-.cfe-deco.six-decoration {
+.cfe-deco.deco-six-decoration {
   text-decoration-color: var(--cfe--deco--six);
 }
-.cfe-deco.six-emphasis {
+.cfe-deco.deco-six-emphasis {
   -webkit-text-emphasis-color: var(--cfe--deco--six);
           text-emphasis-color: var(--cfe--deco--six);
 }
-.cfe-deco.six-accent {
+.cfe-deco.deco-six-accent {
   accent-color: var(--cfe--deco--six);
 }
-.cfe-deco.six-caret {
+.cfe-deco.deco-six-caret {
   caret-color: var(--cfe--deco--six);
 }
-.cfe-deco.six-border {
+.cfe-deco.deco-six-border {
   border-color: var(--cfe--deco--six);
 }
-.cfe-deco.six-outline {
+.cfe-deco.deco-six-outline {
   outline-color: var(--cfe--deco--six);
 }
-.cfe-deco.six-rule {
+.cfe-deco.deco-six-rule {
   rule-color: var(--cfe--deco--six);
 }
-.cfe-deco.six-column-rule {
+.cfe-deco.deco-six-column-rule {
   -moz-column-rule-color: var(--cfe--deco--six);
        column-rule-color: var(--cfe--deco--six);
 }
-.cfe-deco.six-row-rule {
+.cfe-deco.deco-six-row-rule {
   row-rule-color: var(--cfe--deco--six);
 }
-.cfe-deco.six-fill {
+.cfe-deco.deco-six-fill {
   fill: var(--cfe--deco--six);
 }
-.cfe-deco.six-text-fill {
+.cfe-deco.deco-six-text-fill {
   -webkit-text-fill-color: var(--cfe--deco--six);
   text-fill-color: var(--cfe--deco--six);
 }
-.cfe-deco.six-stroke {
+.cfe-deco.deco-six-stroke {
   stroke: var(--cfe--deco--six);
 }
-.cfe-deco.six-text-stroke {
+.cfe-deco.deco-six-text-stroke {
   -webkit-text-stroke-color: var(--cfe--deco--six);
   text-stroke-color: var(--cfe--deco--six);
 }
-.cfe-deco.six-flood {
+.cfe-deco.deco-six-flood {
   flood-color: var(--cfe--deco--six);
 }
-.cfe-deco.six-stop {
+.cfe-deco.deco-six-stop {
   stop-color: var(--cfe--deco--six);
 }
-.cfe-deco.body-dark {
+.cfe-deco.deco-body-dark {
   color: var(--cfe--deco--body--dark);
 }
-.cfe-deco.body-bg-dark {
+.cfe-deco.deco-body-bg-dark {
   background-color: var(--cfe--deco--body--dark);
 }
-.cfe-deco.body-decoration-dark {
+.cfe-deco.deco-body-decoration-dark {
   text-decoration-color: var(--cfe--deco--body--dark);
 }
-.cfe-deco.body-emphasis-dark {
+.cfe-deco.deco-body-emphasis-dark {
   -webkit-text-emphasis-color: var(--cfe--deco--body--dark);
           text-emphasis-color: var(--cfe--deco--body--dark);
 }
-.cfe-deco.body-accent-dark {
+.cfe-deco.deco-body-accent-dark {
   accent-color: var(--cfe--deco--body--dark);
 }
-.cfe-deco.body-caret-dark {
+.cfe-deco.deco-body-caret-dark {
   caret-color: var(--cfe--deco--body--dark);
 }
-.cfe-deco.body-border-dark {
+.cfe-deco.deco-body-border-dark {
   border-color: var(--cfe--deco--body--dark);
 }
-.cfe-deco.body-outline-dark {
+.cfe-deco.deco-body-outline-dark {
   outline-color: var(--cfe--deco--body--dark);
 }
-.cfe-deco.body-rule-dark {
+.cfe-deco.deco-body-rule-dark {
   rule-color: var(--cfe--deco--body--dark);
 }
-.cfe-deco.body-column-rule-dark {
+.cfe-deco.deco-body-column-rule-dark {
   -moz-column-rule-color: var(--cfe--deco--body--dark);
        column-rule-color: var(--cfe--deco--body--dark);
 }
-.cfe-deco.body-row-rule-dark {
+.cfe-deco.deco-body-row-rule-dark {
   row-rule-color: var(--cfe--deco--body--dark);
 }
-.cfe-deco.body-fill-dark {
+.cfe-deco.deco-body-fill-dark {
   fill: var(--cfe--deco--body--dark);
 }
-.cfe-deco.body-text-fill-dark {
+.cfe-deco.deco-body-text-fill-dark {
   -webkit-text-fill-color: var(--cfe--deco--body--dark);
   text-fill-color: var(--cfe--deco--body--dark);
 }
-.cfe-deco.body-stroke-dark {
+.cfe-deco.deco-body-stroke-dark {
   stroke: var(--cfe--deco--body--dark);
 }
-.cfe-deco.body-text-stroke-dark {
+.cfe-deco.deco-body-text-stroke-dark {
   -webkit-text-stroke-color: var(--cfe--deco--body--dark);
   text-stroke-color: var(--cfe--deco--body--dark);
 }
-.cfe-deco.body-flood-dark {
+.cfe-deco.deco-body-flood-dark {
   flood-color: var(--cfe--deco--body--dark);
 }
-.cfe-deco.body-stop-dark {
+.cfe-deco.deco-body-stop-dark {
   stop-color: var(--cfe--deco--body--dark);
 }
-.cfe-deco.text-dark {
+.cfe-deco.deco-text-dark {
   color: var(--cfe--deco--text--dark);
 }
-.cfe-deco.text-bg-dark {
+.cfe-deco.deco-text-bg-dark {
   background-color: var(--cfe--deco--text--dark);
 }
-.cfe-deco.text-decoration-dark {
+.cfe-deco.deco-text-decoration-dark {
   text-decoration-color: var(--cfe--deco--text--dark);
 }
-.cfe-deco.text-emphasis-dark {
+.cfe-deco.deco-text-emphasis-dark {
   -webkit-text-emphasis-color: var(--cfe--deco--text--dark);
           text-emphasis-color: var(--cfe--deco--text--dark);
 }
-.cfe-deco.text-accent-dark {
+.cfe-deco.deco-text-accent-dark {
   accent-color: var(--cfe--deco--text--dark);
 }
-.cfe-deco.text-caret-dark {
+.cfe-deco.deco-text-caret-dark {
   caret-color: var(--cfe--deco--text--dark);
 }
-.cfe-deco.text-border-dark {
+.cfe-deco.deco-text-border-dark {
   border-color: var(--cfe--deco--text--dark);
 }
-.cfe-deco.text-outline-dark {
+.cfe-deco.deco-text-outline-dark {
   outline-color: var(--cfe--deco--text--dark);
 }
-.cfe-deco.text-rule-dark {
+.cfe-deco.deco-text-rule-dark {
   rule-color: var(--cfe--deco--text--dark);
 }
-.cfe-deco.text-column-rule-dark {
+.cfe-deco.deco-text-column-rule-dark {
   -moz-column-rule-color: var(--cfe--deco--text--dark);
        column-rule-color: var(--cfe--deco--text--dark);
 }
-.cfe-deco.text-row-rule-dark {
+.cfe-deco.deco-text-row-rule-dark {
   row-rule-color: var(--cfe--deco--text--dark);
 }
-.cfe-deco.text-fill-dark {
+.cfe-deco.deco-text-fill-dark {
   fill: var(--cfe--deco--text--dark);
 }
-.cfe-deco.text-text-fill-dark {
+.cfe-deco.deco-text-text-fill-dark {
   -webkit-text-fill-color: var(--cfe--deco--text--dark);
   text-fill-color: var(--cfe--deco--text--dark);
 }
-.cfe-deco.text-stroke-dark {
+.cfe-deco.deco-text-stroke-dark {
   stroke: var(--cfe--deco--text--dark);
 }
-.cfe-deco.text-text-stroke-dark {
+.cfe-deco.deco-text-text-stroke-dark {
   -webkit-text-stroke-color: var(--cfe--deco--text--dark);
   text-stroke-color: var(--cfe--deco--text--dark);
 }
-.cfe-deco.text-flood-dark {
+.cfe-deco.deco-text-flood-dark {
   flood-color: var(--cfe--deco--text--dark);
 }
-.cfe-deco.text-stop-dark {
+.cfe-deco.deco-text-stop-dark {
   stop-color: var(--cfe--deco--text--dark);
 }
-.cfe-deco.one-dark {
+.cfe-deco.deco-one-dark {
   color: var(--cfe--deco--one--dark);
 }
-.cfe-deco.one-bg-dark {
+.cfe-deco.deco-one-bg-dark {
   background-color: var(--cfe--deco--one--dark);
 }
-.cfe-deco.one-decoration-dark {
+.cfe-deco.deco-one-decoration-dark {
   text-decoration-color: var(--cfe--deco--one--dark);
 }
-.cfe-deco.one-emphasis-dark {
+.cfe-deco.deco-one-emphasis-dark {
   -webkit-text-emphasis-color: var(--cfe--deco--one--dark);
           text-emphasis-color: var(--cfe--deco--one--dark);
 }
-.cfe-deco.one-accent-dark {
+.cfe-deco.deco-one-accent-dark {
   accent-color: var(--cfe--deco--one--dark);
 }
-.cfe-deco.one-caret-dark {
+.cfe-deco.deco-one-caret-dark {
   caret-color: var(--cfe--deco--one--dark);
 }
-.cfe-deco.one-border-dark {
+.cfe-deco.deco-one-border-dark {
   border-color: var(--cfe--deco--one--dark);
 }
-.cfe-deco.one-outline-dark {
+.cfe-deco.deco-one-outline-dark {
   outline-color: var(--cfe--deco--one--dark);
 }
-.cfe-deco.one-rule-dark {
+.cfe-deco.deco-one-rule-dark {
   rule-color: var(--cfe--deco--one--dark);
 }
-.cfe-deco.one-column-rule-dark {
+.cfe-deco.deco-one-column-rule-dark {
   -moz-column-rule-color: var(--cfe--deco--one--dark);
        column-rule-color: var(--cfe--deco--one--dark);
 }
-.cfe-deco.one-row-rule-dark {
+.cfe-deco.deco-one-row-rule-dark {
   row-rule-color: var(--cfe--deco--one--dark);
 }
-.cfe-deco.one-fill-dark {
+.cfe-deco.deco-one-fill-dark {
   fill: var(--cfe--deco--one--dark);
 }
-.cfe-deco.one-text-fill-dark {
+.cfe-deco.deco-one-text-fill-dark {
   -webkit-text-fill-color: var(--cfe--deco--one--dark);
   text-fill-color: var(--cfe--deco--one--dark);
 }
-.cfe-deco.one-stroke-dark {
+.cfe-deco.deco-one-stroke-dark {
   stroke: var(--cfe--deco--one--dark);
 }
-.cfe-deco.one-text-stroke-dark {
+.cfe-deco.deco-one-text-stroke-dark {
   -webkit-text-stroke-color: var(--cfe--deco--one--dark);
   text-stroke-color: var(--cfe--deco--one--dark);
 }
-.cfe-deco.one-flood-dark {
+.cfe-deco.deco-one-flood-dark {
   flood-color: var(--cfe--deco--one--dark);
 }
-.cfe-deco.one-stop-dark {
+.cfe-deco.deco-one-stop-dark {
   stop-color: var(--cfe--deco--one--dark);
 }
-.cfe-deco.two-dark {
+.cfe-deco.deco-two-dark {
   color: var(--cfe--deco--two--dark);
 }
-.cfe-deco.two-bg-dark {
+.cfe-deco.deco-two-bg-dark {
   background-color: var(--cfe--deco--two--dark);
 }
-.cfe-deco.two-decoration-dark {
+.cfe-deco.deco-two-decoration-dark {
   text-decoration-color: var(--cfe--deco--two--dark);
 }
-.cfe-deco.two-emphasis-dark {
+.cfe-deco.deco-two-emphasis-dark {
   -webkit-text-emphasis-color: var(--cfe--deco--two--dark);
           text-emphasis-color: var(--cfe--deco--two--dark);
 }
-.cfe-deco.two-accent-dark {
+.cfe-deco.deco-two-accent-dark {
   accent-color: var(--cfe--deco--two--dark);
 }
-.cfe-deco.two-caret-dark {
+.cfe-deco.deco-two-caret-dark {
   caret-color: var(--cfe--deco--two--dark);
 }
-.cfe-deco.two-border-dark {
+.cfe-deco.deco-two-border-dark {
   border-color: var(--cfe--deco--two--dark);
 }
-.cfe-deco.two-outline-dark {
+.cfe-deco.deco-two-outline-dark {
   outline-color: var(--cfe--deco--two--dark);
 }
-.cfe-deco.two-rule-dark {
+.cfe-deco.deco-two-rule-dark {
   rule-color: var(--cfe--deco--two--dark);
 }
-.cfe-deco.two-column-rule-dark {
+.cfe-deco.deco-two-column-rule-dark {
   -moz-column-rule-color: var(--cfe--deco--two--dark);
        column-rule-color: var(--cfe--deco--two--dark);
 }
-.cfe-deco.two-row-rule-dark {
+.cfe-deco.deco-two-row-rule-dark {
   row-rule-color: var(--cfe--deco--two--dark);
 }
-.cfe-deco.two-fill-dark {
+.cfe-deco.deco-two-fill-dark {
   fill: var(--cfe--deco--two--dark);
 }
-.cfe-deco.two-text-fill-dark {
+.cfe-deco.deco-two-text-fill-dark {
   -webkit-text-fill-color: var(--cfe--deco--two--dark);
   text-fill-color: var(--cfe--deco--two--dark);
 }
-.cfe-deco.two-stroke-dark {
+.cfe-deco.deco-two-stroke-dark {
   stroke: var(--cfe--deco--two--dark);
 }
-.cfe-deco.two-text-stroke-dark {
+.cfe-deco.deco-two-text-stroke-dark {
   -webkit-text-stroke-color: var(--cfe--deco--two--dark);
   text-stroke-color: var(--cfe--deco--two--dark);
 }
-.cfe-deco.two-flood-dark {
+.cfe-deco.deco-two-flood-dark {
   flood-color: var(--cfe--deco--two--dark);
 }
-.cfe-deco.two-stop-dark {
+.cfe-deco.deco-two-stop-dark {
   stop-color: var(--cfe--deco--two--dark);
 }
-.cfe-deco.three-dark {
+.cfe-deco.deco-three-dark {
   color: var(--cfe--deco--three--dark);
 }
-.cfe-deco.three-bg-dark {
+.cfe-deco.deco-three-bg-dark {
   background-color: var(--cfe--deco--three--dark);
 }
-.cfe-deco.three-decoration-dark {
+.cfe-deco.deco-three-decoration-dark {
   text-decoration-color: var(--cfe--deco--three--dark);
 }
-.cfe-deco.three-emphasis-dark {
+.cfe-deco.deco-three-emphasis-dark {
   -webkit-text-emphasis-color: var(--cfe--deco--three--dark);
           text-emphasis-color: var(--cfe--deco--three--dark);
 }
-.cfe-deco.three-accent-dark {
+.cfe-deco.deco-three-accent-dark {
   accent-color: var(--cfe--deco--three--dark);
 }
-.cfe-deco.three-caret-dark {
+.cfe-deco.deco-three-caret-dark {
   caret-color: var(--cfe--deco--three--dark);
 }
-.cfe-deco.three-border-dark {
+.cfe-deco.deco-three-border-dark {
   border-color: var(--cfe--deco--three--dark);
 }
-.cfe-deco.three-outline-dark {
+.cfe-deco.deco-three-outline-dark {
   outline-color: var(--cfe--deco--three--dark);
 }
-.cfe-deco.three-rule-dark {
+.cfe-deco.deco-three-rule-dark {
   rule-color: var(--cfe--deco--three--dark);
 }
-.cfe-deco.three-column-rule-dark {
+.cfe-deco.deco-three-column-rule-dark {
   -moz-column-rule-color: var(--cfe--deco--three--dark);
        column-rule-color: var(--cfe--deco--three--dark);
 }
-.cfe-deco.three-row-rule-dark {
+.cfe-deco.deco-three-row-rule-dark {
   row-rule-color: var(--cfe--deco--three--dark);
 }
-.cfe-deco.three-fill-dark {
+.cfe-deco.deco-three-fill-dark {
   fill: var(--cfe--deco--three--dark);
 }
-.cfe-deco.three-text-fill-dark {
+.cfe-deco.deco-three-text-fill-dark {
   -webkit-text-fill-color: var(--cfe--deco--three--dark);
   text-fill-color: var(--cfe--deco--three--dark);
 }
-.cfe-deco.three-stroke-dark {
+.cfe-deco.deco-three-stroke-dark {
   stroke: var(--cfe--deco--three--dark);
 }
-.cfe-deco.three-text-stroke-dark {
+.cfe-deco.deco-three-text-stroke-dark {
   -webkit-text-stroke-color: var(--cfe--deco--three--dark);
   text-stroke-color: var(--cfe--deco--three--dark);
 }
-.cfe-deco.three-flood-dark {
+.cfe-deco.deco-three-flood-dark {
   flood-color: var(--cfe--deco--three--dark);
 }
-.cfe-deco.three-stop-dark {
+.cfe-deco.deco-three-stop-dark {
   stop-color: var(--cfe--deco--three--dark);
 }
-.cfe-deco.four-dark {
+.cfe-deco.deco-four-dark {
   color: var(--cfe--deco--four--dark);
 }
-.cfe-deco.four-bg-dark {
+.cfe-deco.deco-four-bg-dark {
   background-color: var(--cfe--deco--four--dark);
 }
-.cfe-deco.four-decoration-dark {
+.cfe-deco.deco-four-decoration-dark {
   text-decoration-color: var(--cfe--deco--four--dark);
 }
-.cfe-deco.four-emphasis-dark {
+.cfe-deco.deco-four-emphasis-dark {
   -webkit-text-emphasis-color: var(--cfe--deco--four--dark);
           text-emphasis-color: var(--cfe--deco--four--dark);
 }
-.cfe-deco.four-accent-dark {
+.cfe-deco.deco-four-accent-dark {
   accent-color: var(--cfe--deco--four--dark);
 }
-.cfe-deco.four-caret-dark {
+.cfe-deco.deco-four-caret-dark {
   caret-color: var(--cfe--deco--four--dark);
 }
-.cfe-deco.four-border-dark {
+.cfe-deco.deco-four-border-dark {
   border-color: var(--cfe--deco--four--dark);
 }
-.cfe-deco.four-outline-dark {
+.cfe-deco.deco-four-outline-dark {
   outline-color: var(--cfe--deco--four--dark);
 }
-.cfe-deco.four-rule-dark {
+.cfe-deco.deco-four-rule-dark {
   rule-color: var(--cfe--deco--four--dark);
 }
-.cfe-deco.four-column-rule-dark {
+.cfe-deco.deco-four-column-rule-dark {
   -moz-column-rule-color: var(--cfe--deco--four--dark);
        column-rule-color: var(--cfe--deco--four--dark);
 }
-.cfe-deco.four-row-rule-dark {
+.cfe-deco.deco-four-row-rule-dark {
   row-rule-color: var(--cfe--deco--four--dark);
 }
-.cfe-deco.four-fill-dark {
+.cfe-deco.deco-four-fill-dark {
   fill: var(--cfe--deco--four--dark);
 }
-.cfe-deco.four-text-fill-dark {
+.cfe-deco.deco-four-text-fill-dark {
   -webkit-text-fill-color: var(--cfe--deco--four--dark);
   text-fill-color: var(--cfe--deco--four--dark);
 }
-.cfe-deco.four-stroke-dark {
+.cfe-deco.deco-four-stroke-dark {
   stroke: var(--cfe--deco--four--dark);
 }
-.cfe-deco.four-text-stroke-dark {
+.cfe-deco.deco-four-text-stroke-dark {
   -webkit-text-stroke-color: var(--cfe--deco--four--dark);
   text-stroke-color: var(--cfe--deco--four--dark);
 }
-.cfe-deco.four-flood-dark {
+.cfe-deco.deco-four-flood-dark {
   flood-color: var(--cfe--deco--four--dark);
 }
-.cfe-deco.four-stop-dark {
+.cfe-deco.deco-four-stop-dark {
   stop-color: var(--cfe--deco--four--dark);
 }
-.cfe-deco.five-dark {
+.cfe-deco.deco-five-dark {
   color: var(--cfe--deco--five--dark);
 }
-.cfe-deco.five-bg-dark {
+.cfe-deco.deco-five-bg-dark {
   background-color: var(--cfe--deco--five--dark);
 }
-.cfe-deco.five-decoration-dark {
+.cfe-deco.deco-five-decoration-dark {
   text-decoration-color: var(--cfe--deco--five--dark);
 }
-.cfe-deco.five-emphasis-dark {
+.cfe-deco.deco-five-emphasis-dark {
   -webkit-text-emphasis-color: var(--cfe--deco--five--dark);
           text-emphasis-color: var(--cfe--deco--five--dark);
 }
-.cfe-deco.five-accent-dark {
+.cfe-deco.deco-five-accent-dark {
   accent-color: var(--cfe--deco--five--dark);
 }
-.cfe-deco.five-caret-dark {
+.cfe-deco.deco-five-caret-dark {
   caret-color: var(--cfe--deco--five--dark);
 }
-.cfe-deco.five-border-dark {
+.cfe-deco.deco-five-border-dark {
   border-color: var(--cfe--deco--five--dark);
 }
-.cfe-deco.five-outline-dark {
+.cfe-deco.deco-five-outline-dark {
   outline-color: var(--cfe--deco--five--dark);
 }
-.cfe-deco.five-rule-dark {
+.cfe-deco.deco-five-rule-dark {
   rule-color: var(--cfe--deco--five--dark);
 }
-.cfe-deco.five-column-rule-dark {
+.cfe-deco.deco-five-column-rule-dark {
   -moz-column-rule-color: var(--cfe--deco--five--dark);
        column-rule-color: var(--cfe--deco--five--dark);
 }
-.cfe-deco.five-row-rule-dark {
+.cfe-deco.deco-five-row-rule-dark {
   row-rule-color: var(--cfe--deco--five--dark);
 }
-.cfe-deco.five-fill-dark {
+.cfe-deco.deco-five-fill-dark {
   fill: var(--cfe--deco--five--dark);
 }
-.cfe-deco.five-text-fill-dark {
+.cfe-deco.deco-five-text-fill-dark {
   -webkit-text-fill-color: var(--cfe--deco--five--dark);
   text-fill-color: var(--cfe--deco--five--dark);
 }
-.cfe-deco.five-stroke-dark {
+.cfe-deco.deco-five-stroke-dark {
   stroke: var(--cfe--deco--five--dark);
 }
-.cfe-deco.five-text-stroke-dark {
+.cfe-deco.deco-five-text-stroke-dark {
   -webkit-text-stroke-color: var(--cfe--deco--five--dark);
   text-stroke-color: var(--cfe--deco--five--dark);
 }
-.cfe-deco.five-flood-dark {
+.cfe-deco.deco-five-flood-dark {
   flood-color: var(--cfe--deco--five--dark);
 }
-.cfe-deco.five-stop-dark {
+.cfe-deco.deco-five-stop-dark {
   stop-color: var(--cfe--deco--five--dark);
 }
-.cfe-deco.six-dark {
+.cfe-deco.deco-six-dark {
   color: var(--cfe--deco--six--dark);
 }
-.cfe-deco.six-bg-dark {
+.cfe-deco.deco-six-bg-dark {
   background-color: var(--cfe--deco--six--dark);
 }
-.cfe-deco.six-decoration-dark {
+.cfe-deco.deco-six-decoration-dark {
   text-decoration-color: var(--cfe--deco--six--dark);
 }
-.cfe-deco.six-emphasis-dark {
+.cfe-deco.deco-six-emphasis-dark {
   -webkit-text-emphasis-color: var(--cfe--deco--six--dark);
           text-emphasis-color: var(--cfe--deco--six--dark);
 }
-.cfe-deco.six-accent-dark {
+.cfe-deco.deco-six-accent-dark {
   accent-color: var(--cfe--deco--six--dark);
 }
-.cfe-deco.six-caret-dark {
+.cfe-deco.deco-six-caret-dark {
   caret-color: var(--cfe--deco--six--dark);
 }
-.cfe-deco.six-border-dark {
+.cfe-deco.deco-six-border-dark {
   border-color: var(--cfe--deco--six--dark);
 }
-.cfe-deco.six-outline-dark {
+.cfe-deco.deco-six-outline-dark {
   outline-color: var(--cfe--deco--six--dark);
 }
-.cfe-deco.six-rule-dark {
+.cfe-deco.deco-six-rule-dark {
   rule-color: var(--cfe--deco--six--dark);
 }
-.cfe-deco.six-column-rule-dark {
+.cfe-deco.deco-six-column-rule-dark {
   -moz-column-rule-color: var(--cfe--deco--six--dark);
        column-rule-color: var(--cfe--deco--six--dark);
 }
-.cfe-deco.six-row-rule-dark {
+.cfe-deco.deco-six-row-rule-dark {
   row-rule-color: var(--cfe--deco--six--dark);
 }
-.cfe-deco.six-fill-dark {
+.cfe-deco.deco-six-fill-dark {
   fill: var(--cfe--deco--six--dark);
 }
-.cfe-deco.six-text-fill-dark {
+.cfe-deco.deco-six-text-fill-dark {
   -webkit-text-fill-color: var(--cfe--deco--six--dark);
   text-fill-color: var(--cfe--deco--six--dark);
 }
-.cfe-deco.six-stroke-dark {
+.cfe-deco.deco-six-stroke-dark {
   stroke: var(--cfe--deco--six--dark);
 }
-.cfe-deco.six-text-stroke-dark {
+.cfe-deco.deco-six-text-stroke-dark {
   -webkit-text-stroke-color: var(--cfe--deco--six--dark);
   text-stroke-color: var(--cfe--deco--six--dark);
 }
-.cfe-deco.six-flood-dark {
+.cfe-deco.deco-six-flood-dark {
   flood-color: var(--cfe--deco--six--dark);
 }
-.cfe-deco.six-stop-dark {
+.cfe-deco.deco-six-stop-dark {
   stop-color: var(--cfe--deco--six--dark);
 }

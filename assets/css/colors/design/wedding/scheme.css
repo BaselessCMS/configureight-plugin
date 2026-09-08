@@ -18,883 +18,883 @@
   --cfe-scheme-wedding--six--dark: #ff7575;
 }
 
-.cfe-wedding.body {
+.cfe-wedding.wedding-body {
   color: var(--cfe--wedding--body);
 }
-.cfe-wedding.body-bg {
+.cfe-wedding.wedding-body-bg {
   background-color: var(--cfe--wedding--body);
 }
-.cfe-wedding.body-decoration {
+.cfe-wedding.wedding-body-decoration {
   text-decoration-color: var(--cfe--wedding--body);
 }
-.cfe-wedding.body-emphasis {
+.cfe-wedding.wedding-body-emphasis {
   -webkit-text-emphasis-color: var(--cfe--wedding--body);
           text-emphasis-color: var(--cfe--wedding--body);
 }
-.cfe-wedding.body-accent {
+.cfe-wedding.wedding-body-accent {
   accent-color: var(--cfe--wedding--body);
 }
-.cfe-wedding.body-caret {
+.cfe-wedding.wedding-body-caret {
   caret-color: var(--cfe--wedding--body);
 }
-.cfe-wedding.body-border {
+.cfe-wedding.wedding-body-border {
   border-color: var(--cfe--wedding--body);
 }
-.cfe-wedding.body-outline {
+.cfe-wedding.wedding-body-outline {
   outline-color: var(--cfe--wedding--body);
 }
-.cfe-wedding.body-rule {
+.cfe-wedding.wedding-body-rule {
   rule-color: var(--cfe--wedding--body);
 }
-.cfe-wedding.body-column-rule {
+.cfe-wedding.wedding-body-column-rule {
   -moz-column-rule-color: var(--cfe--wedding--body);
        column-rule-color: var(--cfe--wedding--body);
 }
-.cfe-wedding.body-row-rule {
+.cfe-wedding.wedding-body-row-rule {
   row-rule-color: var(--cfe--wedding--body);
 }
-.cfe-wedding.body-fill {
+.cfe-wedding.wedding-body-fill {
   fill: var(--cfe--wedding--body);
 }
-.cfe-wedding.body-text-fill {
+.cfe-wedding.wedding-body-text-fill {
   -webkit-text-fill-color: var(--cfe--wedding--body);
   text-fill-color: var(--cfe--wedding--body);
 }
-.cfe-wedding.body-stroke {
+.cfe-wedding.wedding-body-stroke {
   stroke: var(--cfe--wedding--body);
 }
-.cfe-wedding.body-text-stroke {
+.cfe-wedding.wedding-body-text-stroke {
   -webkit-text-stroke-color: var(--cfe--wedding--body);
   text-stroke-color: var(--cfe--wedding--body);
 }
-.cfe-wedding.body-flood {
+.cfe-wedding.wedding-body-flood {
   flood-color: var(--cfe--wedding--body);
 }
-.cfe-wedding.body-stop {
+.cfe-wedding.wedding-body-stop {
   stop-color: var(--cfe--wedding--body);
 }
-.cfe-wedding.text {
+.cfe-wedding.wedding-text {
   color: var(--cfe--wedding--text);
 }
-.cfe-wedding.text-bg {
+.cfe-wedding.wedding-text-bg {
   background-color: var(--cfe--wedding--text);
 }
-.cfe-wedding.text-decoration {
+.cfe-wedding.wedding-text-decoration {
   text-decoration-color: var(--cfe--wedding--text);
 }
-.cfe-wedding.text-emphasis {
+.cfe-wedding.wedding-text-emphasis {
   -webkit-text-emphasis-color: var(--cfe--wedding--text);
           text-emphasis-color: var(--cfe--wedding--text);
 }
-.cfe-wedding.text-accent {
+.cfe-wedding.wedding-text-accent {
   accent-color: var(--cfe--wedding--text);
 }
-.cfe-wedding.text-caret {
+.cfe-wedding.wedding-text-caret {
   caret-color: var(--cfe--wedding--text);
 }
-.cfe-wedding.text-border {
+.cfe-wedding.wedding-text-border {
   border-color: var(--cfe--wedding--text);
 }
-.cfe-wedding.text-outline {
+.cfe-wedding.wedding-text-outline {
   outline-color: var(--cfe--wedding--text);
 }
-.cfe-wedding.text-rule {
+.cfe-wedding.wedding-text-rule {
   rule-color: var(--cfe--wedding--text);
 }
-.cfe-wedding.text-column-rule {
+.cfe-wedding.wedding-text-column-rule {
   -moz-column-rule-color: var(--cfe--wedding--text);
        column-rule-color: var(--cfe--wedding--text);
 }
-.cfe-wedding.text-row-rule {
+.cfe-wedding.wedding-text-row-rule {
   row-rule-color: var(--cfe--wedding--text);
 }
-.cfe-wedding.text-fill {
+.cfe-wedding.wedding-text-fill {
   fill: var(--cfe--wedding--text);
 }
-.cfe-wedding.text-text-fill {
+.cfe-wedding.wedding-text-text-fill {
   -webkit-text-fill-color: var(--cfe--wedding--text);
   text-fill-color: var(--cfe--wedding--text);
 }
-.cfe-wedding.text-stroke {
+.cfe-wedding.wedding-text-stroke {
   stroke: var(--cfe--wedding--text);
 }
-.cfe-wedding.text-text-stroke {
+.cfe-wedding.wedding-text-text-stroke {
   -webkit-text-stroke-color: var(--cfe--wedding--text);
   text-stroke-color: var(--cfe--wedding--text);
 }
-.cfe-wedding.text-flood {
+.cfe-wedding.wedding-text-flood {
   flood-color: var(--cfe--wedding--text);
 }
-.cfe-wedding.text-stop {
+.cfe-wedding.wedding-text-stop {
   stop-color: var(--cfe--wedding--text);
 }
-.cfe-wedding.one {
+.cfe-wedding.wedding-one {
   color: var(--cfe--wedding--one);
 }
-.cfe-wedding.one-bg {
+.cfe-wedding.wedding-one-bg {
   background-color: var(--cfe--wedding--one);
 }
-.cfe-wedding.one-decoration {
+.cfe-wedding.wedding-one-decoration {
   text-decoration-color: var(--cfe--wedding--one);
 }
-.cfe-wedding.one-emphasis {
+.cfe-wedding.wedding-one-emphasis {
   -webkit-text-emphasis-color: var(--cfe--wedding--one);
           text-emphasis-color: var(--cfe--wedding--one);
 }
-.cfe-wedding.one-accent {
+.cfe-wedding.wedding-one-accent {
   accent-color: var(--cfe--wedding--one);
 }
-.cfe-wedding.one-caret {
+.cfe-wedding.wedding-one-caret {
   caret-color: var(--cfe--wedding--one);
 }
-.cfe-wedding.one-border {
+.cfe-wedding.wedding-one-border {
   border-color: var(--cfe--wedding--one);
 }
-.cfe-wedding.one-outline {
+.cfe-wedding.wedding-one-outline {
   outline-color: var(--cfe--wedding--one);
 }
-.cfe-wedding.one-rule {
+.cfe-wedding.wedding-one-rule {
   rule-color: var(--cfe--wedding--one);
 }
-.cfe-wedding.one-column-rule {
+.cfe-wedding.wedding-one-column-rule {
   -moz-column-rule-color: var(--cfe--wedding--one);
        column-rule-color: var(--cfe--wedding--one);
 }
-.cfe-wedding.one-row-rule {
+.cfe-wedding.wedding-one-row-rule {
   row-rule-color: var(--cfe--wedding--one);
 }
-.cfe-wedding.one-fill {
+.cfe-wedding.wedding-one-fill {
   fill: var(--cfe--wedding--one);
 }
-.cfe-wedding.one-text-fill {
+.cfe-wedding.wedding-one-text-fill {
   -webkit-text-fill-color: var(--cfe--wedding--one);
   text-fill-color: var(--cfe--wedding--one);
 }
-.cfe-wedding.one-stroke {
+.cfe-wedding.wedding-one-stroke {
   stroke: var(--cfe--wedding--one);
 }
-.cfe-wedding.one-text-stroke {
+.cfe-wedding.wedding-one-text-stroke {
   -webkit-text-stroke-color: var(--cfe--wedding--one);
   text-stroke-color: var(--cfe--wedding--one);
 }
-.cfe-wedding.one-flood {
+.cfe-wedding.wedding-one-flood {
   flood-color: var(--cfe--wedding--one);
 }
-.cfe-wedding.one-stop {
+.cfe-wedding.wedding-one-stop {
   stop-color: var(--cfe--wedding--one);
 }
-.cfe-wedding.two {
+.cfe-wedding.wedding-two {
   color: var(--cfe--wedding--two);
 }
-.cfe-wedding.two-bg {
+.cfe-wedding.wedding-two-bg {
   background-color: var(--cfe--wedding--two);
 }
-.cfe-wedding.two-decoration {
+.cfe-wedding.wedding-two-decoration {
   text-decoration-color: var(--cfe--wedding--two);
 }
-.cfe-wedding.two-emphasis {
+.cfe-wedding.wedding-two-emphasis {
   -webkit-text-emphasis-color: var(--cfe--wedding--two);
           text-emphasis-color: var(--cfe--wedding--two);
 }
-.cfe-wedding.two-accent {
+.cfe-wedding.wedding-two-accent {
   accent-color: var(--cfe--wedding--two);
 }
-.cfe-wedding.two-caret {
+.cfe-wedding.wedding-two-caret {
   caret-color: var(--cfe--wedding--two);
 }
-.cfe-wedding.two-border {
+.cfe-wedding.wedding-two-border {
   border-color: var(--cfe--wedding--two);
 }
-.cfe-wedding.two-outline {
+.cfe-wedding.wedding-two-outline {
   outline-color: var(--cfe--wedding--two);
 }
-.cfe-wedding.two-rule {
+.cfe-wedding.wedding-two-rule {
   rule-color: var(--cfe--wedding--two);
 }
-.cfe-wedding.two-column-rule {
+.cfe-wedding.wedding-two-column-rule {
   -moz-column-rule-color: var(--cfe--wedding--two);
        column-rule-color: var(--cfe--wedding--two);
 }
-.cfe-wedding.two-row-rule {
+.cfe-wedding.wedding-two-row-rule {
   row-rule-color: var(--cfe--wedding--two);
 }
-.cfe-wedding.two-fill {
+.cfe-wedding.wedding-two-fill {
   fill: var(--cfe--wedding--two);
 }
-.cfe-wedding.two-text-fill {
+.cfe-wedding.wedding-two-text-fill {
   -webkit-text-fill-color: var(--cfe--wedding--two);
   text-fill-color: var(--cfe--wedding--two);
 }
-.cfe-wedding.two-stroke {
+.cfe-wedding.wedding-two-stroke {
   stroke: var(--cfe--wedding--two);
 }
-.cfe-wedding.two-text-stroke {
+.cfe-wedding.wedding-two-text-stroke {
   -webkit-text-stroke-color: var(--cfe--wedding--two);
   text-stroke-color: var(--cfe--wedding--two);
 }
-.cfe-wedding.two-flood {
+.cfe-wedding.wedding-two-flood {
   flood-color: var(--cfe--wedding--two);
 }
-.cfe-wedding.two-stop {
+.cfe-wedding.wedding-two-stop {
   stop-color: var(--cfe--wedding--two);
 }
-.cfe-wedding.three {
+.cfe-wedding.wedding-three {
   color: var(--cfe--wedding--three);
 }
-.cfe-wedding.three-bg {
+.cfe-wedding.wedding-three-bg {
   background-color: var(--cfe--wedding--three);
 }
-.cfe-wedding.three-decoration {
+.cfe-wedding.wedding-three-decoration {
   text-decoration-color: var(--cfe--wedding--three);
 }
-.cfe-wedding.three-emphasis {
+.cfe-wedding.wedding-three-emphasis {
   -webkit-text-emphasis-color: var(--cfe--wedding--three);
           text-emphasis-color: var(--cfe--wedding--three);
 }
-.cfe-wedding.three-accent {
+.cfe-wedding.wedding-three-accent {
   accent-color: var(--cfe--wedding--three);
 }
-.cfe-wedding.three-caret {
+.cfe-wedding.wedding-three-caret {
   caret-color: var(--cfe--wedding--three);
 }
-.cfe-wedding.three-border {
+.cfe-wedding.wedding-three-border {
   border-color: var(--cfe--wedding--three);
 }
-.cfe-wedding.three-outline {
+.cfe-wedding.wedding-three-outline {
   outline-color: var(--cfe--wedding--three);
 }
-.cfe-wedding.three-rule {
+.cfe-wedding.wedding-three-rule {
   rule-color: var(--cfe--wedding--three);
 }
-.cfe-wedding.three-column-rule {
+.cfe-wedding.wedding-three-column-rule {
   -moz-column-rule-color: var(--cfe--wedding--three);
        column-rule-color: var(--cfe--wedding--three);
 }
-.cfe-wedding.three-row-rule {
+.cfe-wedding.wedding-three-row-rule {
   row-rule-color: var(--cfe--wedding--three);
 }
-.cfe-wedding.three-fill {
+.cfe-wedding.wedding-three-fill {
   fill: var(--cfe--wedding--three);
 }
-.cfe-wedding.three-text-fill {
+.cfe-wedding.wedding-three-text-fill {
   -webkit-text-fill-color: var(--cfe--wedding--three);
   text-fill-color: var(--cfe--wedding--three);
 }
-.cfe-wedding.three-stroke {
+.cfe-wedding.wedding-three-stroke {
   stroke: var(--cfe--wedding--three);
 }
-.cfe-wedding.three-text-stroke {
+.cfe-wedding.wedding-three-text-stroke {
   -webkit-text-stroke-color: var(--cfe--wedding--three);
   text-stroke-color: var(--cfe--wedding--three);
 }
-.cfe-wedding.three-flood {
+.cfe-wedding.wedding-three-flood {
   flood-color: var(--cfe--wedding--three);
 }
-.cfe-wedding.three-stop {
+.cfe-wedding.wedding-three-stop {
   stop-color: var(--cfe--wedding--three);
 }
-.cfe-wedding.four {
+.cfe-wedding.wedding-four {
   color: var(--cfe--wedding--four);
 }
-.cfe-wedding.four-bg {
+.cfe-wedding.wedding-four-bg {
   background-color: var(--cfe--wedding--four);
 }
-.cfe-wedding.four-decoration {
+.cfe-wedding.wedding-four-decoration {
   text-decoration-color: var(--cfe--wedding--four);
 }
-.cfe-wedding.four-emphasis {
+.cfe-wedding.wedding-four-emphasis {
   -webkit-text-emphasis-color: var(--cfe--wedding--four);
           text-emphasis-color: var(--cfe--wedding--four);
 }
-.cfe-wedding.four-accent {
+.cfe-wedding.wedding-four-accent {
   accent-color: var(--cfe--wedding--four);
 }
-.cfe-wedding.four-caret {
+.cfe-wedding.wedding-four-caret {
   caret-color: var(--cfe--wedding--four);
 }
-.cfe-wedding.four-border {
+.cfe-wedding.wedding-four-border {
   border-color: var(--cfe--wedding--four);
 }
-.cfe-wedding.four-outline {
+.cfe-wedding.wedding-four-outline {
   outline-color: var(--cfe--wedding--four);
 }
-.cfe-wedding.four-rule {
+.cfe-wedding.wedding-four-rule {
   rule-color: var(--cfe--wedding--four);
 }
-.cfe-wedding.four-column-rule {
+.cfe-wedding.wedding-four-column-rule {
   -moz-column-rule-color: var(--cfe--wedding--four);
        column-rule-color: var(--cfe--wedding--four);
 }
-.cfe-wedding.four-row-rule {
+.cfe-wedding.wedding-four-row-rule {
   row-rule-color: var(--cfe--wedding--four);
 }
-.cfe-wedding.four-fill {
+.cfe-wedding.wedding-four-fill {
   fill: var(--cfe--wedding--four);
 }
-.cfe-wedding.four-text-fill {
+.cfe-wedding.wedding-four-text-fill {
   -webkit-text-fill-color: var(--cfe--wedding--four);
   text-fill-color: var(--cfe--wedding--four);
 }
-.cfe-wedding.four-stroke {
+.cfe-wedding.wedding-four-stroke {
   stroke: var(--cfe--wedding--four);
 }
-.cfe-wedding.four-text-stroke {
+.cfe-wedding.wedding-four-text-stroke {
   -webkit-text-stroke-color: var(--cfe--wedding--four);
   text-stroke-color: var(--cfe--wedding--four);
 }
-.cfe-wedding.four-flood {
+.cfe-wedding.wedding-four-flood {
   flood-color: var(--cfe--wedding--four);
 }
-.cfe-wedding.four-stop {
+.cfe-wedding.wedding-four-stop {
   stop-color: var(--cfe--wedding--four);
 }
-.cfe-wedding.five {
+.cfe-wedding.wedding-five {
   color: var(--cfe--wedding--five);
 }
-.cfe-wedding.five-bg {
+.cfe-wedding.wedding-five-bg {
   background-color: var(--cfe--wedding--five);
 }
-.cfe-wedding.five-decoration {
+.cfe-wedding.wedding-five-decoration {
   text-decoration-color: var(--cfe--wedding--five);
 }
-.cfe-wedding.five-emphasis {
+.cfe-wedding.wedding-five-emphasis {
   -webkit-text-emphasis-color: var(--cfe--wedding--five);
           text-emphasis-color: var(--cfe--wedding--five);
 }
-.cfe-wedding.five-accent {
+.cfe-wedding.wedding-five-accent {
   accent-color: var(--cfe--wedding--five);
 }
-.cfe-wedding.five-caret {
+.cfe-wedding.wedding-five-caret {
   caret-color: var(--cfe--wedding--five);
 }
-.cfe-wedding.five-border {
+.cfe-wedding.wedding-five-border {
   border-color: var(--cfe--wedding--five);
 }
-.cfe-wedding.five-outline {
+.cfe-wedding.wedding-five-outline {
   outline-color: var(--cfe--wedding--five);
 }
-.cfe-wedding.five-rule {
+.cfe-wedding.wedding-five-rule {
   rule-color: var(--cfe--wedding--five);
 }
-.cfe-wedding.five-column-rule {
+.cfe-wedding.wedding-five-column-rule {
   -moz-column-rule-color: var(--cfe--wedding--five);
        column-rule-color: var(--cfe--wedding--five);
 }
-.cfe-wedding.five-row-rule {
+.cfe-wedding.wedding-five-row-rule {
   row-rule-color: var(--cfe--wedding--five);
 }
-.cfe-wedding.five-fill {
+.cfe-wedding.wedding-five-fill {
   fill: var(--cfe--wedding--five);
 }
-.cfe-wedding.five-text-fill {
+.cfe-wedding.wedding-five-text-fill {
   -webkit-text-fill-color: var(--cfe--wedding--five);
   text-fill-color: var(--cfe--wedding--five);
 }
-.cfe-wedding.five-stroke {
+.cfe-wedding.wedding-five-stroke {
   stroke: var(--cfe--wedding--five);
 }
-.cfe-wedding.five-text-stroke {
+.cfe-wedding.wedding-five-text-stroke {
   -webkit-text-stroke-color: var(--cfe--wedding--five);
   text-stroke-color: var(--cfe--wedding--five);
 }
-.cfe-wedding.five-flood {
+.cfe-wedding.wedding-five-flood {
   flood-color: var(--cfe--wedding--five);
 }
-.cfe-wedding.five-stop {
+.cfe-wedding.wedding-five-stop {
   stop-color: var(--cfe--wedding--five);
 }
-.cfe-wedding.six {
+.cfe-wedding.wedding-six {
   color: var(--cfe--wedding--six);
 }
-.cfe-wedding.six-bg {
+.cfe-wedding.wedding-six-bg {
   background-color: var(--cfe--wedding--six);
 }
-.cfe-wedding.six-decoration {
+.cfe-wedding.wedding-six-decoration {
   text-decoration-color: var(--cfe--wedding--six);
 }
-.cfe-wedding.six-emphasis {
+.cfe-wedding.wedding-six-emphasis {
   -webkit-text-emphasis-color: var(--cfe--wedding--six);
           text-emphasis-color: var(--cfe--wedding--six);
 }
-.cfe-wedding.six-accent {
+.cfe-wedding.wedding-six-accent {
   accent-color: var(--cfe--wedding--six);
 }
-.cfe-wedding.six-caret {
+.cfe-wedding.wedding-six-caret {
   caret-color: var(--cfe--wedding--six);
 }
-.cfe-wedding.six-border {
+.cfe-wedding.wedding-six-border {
   border-color: var(--cfe--wedding--six);
 }
-.cfe-wedding.six-outline {
+.cfe-wedding.wedding-six-outline {
   outline-color: var(--cfe--wedding--six);
 }
-.cfe-wedding.six-rule {
+.cfe-wedding.wedding-six-rule {
   rule-color: var(--cfe--wedding--six);
 }
-.cfe-wedding.six-column-rule {
+.cfe-wedding.wedding-six-column-rule {
   -moz-column-rule-color: var(--cfe--wedding--six);
        column-rule-color: var(--cfe--wedding--six);
 }
-.cfe-wedding.six-row-rule {
+.cfe-wedding.wedding-six-row-rule {
   row-rule-color: var(--cfe--wedding--six);
 }
-.cfe-wedding.six-fill {
+.cfe-wedding.wedding-six-fill {
   fill: var(--cfe--wedding--six);
 }
-.cfe-wedding.six-text-fill {
+.cfe-wedding.wedding-six-text-fill {
   -webkit-text-fill-color: var(--cfe--wedding--six);
   text-fill-color: var(--cfe--wedding--six);
 }
-.cfe-wedding.six-stroke {
+.cfe-wedding.wedding-six-stroke {
   stroke: var(--cfe--wedding--six);
 }
-.cfe-wedding.six-text-stroke {
+.cfe-wedding.wedding-six-text-stroke {
   -webkit-text-stroke-color: var(--cfe--wedding--six);
   text-stroke-color: var(--cfe--wedding--six);
 }
-.cfe-wedding.six-flood {
+.cfe-wedding.wedding-six-flood {
   flood-color: var(--cfe--wedding--six);
 }
-.cfe-wedding.six-stop {
+.cfe-wedding.wedding-six-stop {
   stop-color: var(--cfe--wedding--six);
 }
-.cfe-wedding.body-dark {
+.cfe-wedding.wedding-body-dark {
   color: var(--cfe--wedding--body--dark);
 }
-.cfe-wedding.body-bg-dark {
+.cfe-wedding.wedding-body-bg-dark {
   background-color: var(--cfe--wedding--body--dark);
 }
-.cfe-wedding.body-decoration-dark {
+.cfe-wedding.wedding-body-decoration-dark {
   text-decoration-color: var(--cfe--wedding--body--dark);
 }
-.cfe-wedding.body-emphasis-dark {
+.cfe-wedding.wedding-body-emphasis-dark {
   -webkit-text-emphasis-color: var(--cfe--wedding--body--dark);
           text-emphasis-color: var(--cfe--wedding--body--dark);
 }
-.cfe-wedding.body-accent-dark {
+.cfe-wedding.wedding-body-accent-dark {
   accent-color: var(--cfe--wedding--body--dark);
 }
-.cfe-wedding.body-caret-dark {
+.cfe-wedding.wedding-body-caret-dark {
   caret-color: var(--cfe--wedding--body--dark);
 }
-.cfe-wedding.body-border-dark {
+.cfe-wedding.wedding-body-border-dark {
   border-color: var(--cfe--wedding--body--dark);
 }
-.cfe-wedding.body-outline-dark {
+.cfe-wedding.wedding-body-outline-dark {
   outline-color: var(--cfe--wedding--body--dark);
 }
-.cfe-wedding.body-rule-dark {
+.cfe-wedding.wedding-body-rule-dark {
   rule-color: var(--cfe--wedding--body--dark);
 }
-.cfe-wedding.body-column-rule-dark {
+.cfe-wedding.wedding-body-column-rule-dark {
   -moz-column-rule-color: var(--cfe--wedding--body--dark);
        column-rule-color: var(--cfe--wedding--body--dark);
 }
-.cfe-wedding.body-row-rule-dark {
+.cfe-wedding.wedding-body-row-rule-dark {
   row-rule-color: var(--cfe--wedding--body--dark);
 }
-.cfe-wedding.body-fill-dark {
+.cfe-wedding.wedding-body-fill-dark {
   fill: var(--cfe--wedding--body--dark);
 }
-.cfe-wedding.body-text-fill-dark {
+.cfe-wedding.wedding-body-text-fill-dark {
   -webkit-text-fill-color: var(--cfe--wedding--body--dark);
   text-fill-color: var(--cfe--wedding--body--dark);
 }
-.cfe-wedding.body-stroke-dark {
+.cfe-wedding.wedding-body-stroke-dark {
   stroke: var(--cfe--wedding--body--dark);
 }
-.cfe-wedding.body-text-stroke-dark {
+.cfe-wedding.wedding-body-text-stroke-dark {
   -webkit-text-stroke-color: var(--cfe--wedding--body--dark);
   text-stroke-color: var(--cfe--wedding--body--dark);
 }
-.cfe-wedding.body-flood-dark {
+.cfe-wedding.wedding-body-flood-dark {
   flood-color: var(--cfe--wedding--body--dark);
 }
-.cfe-wedding.body-stop-dark {
+.cfe-wedding.wedding-body-stop-dark {
   stop-color: var(--cfe--wedding--body--dark);
 }
-.cfe-wedding.text-dark {
+.cfe-wedding.wedding-text-dark {
   color: var(--cfe--wedding--text--dark);
 }
-.cfe-wedding.text-bg-dark {
+.cfe-wedding.wedding-text-bg-dark {
   background-color: var(--cfe--wedding--text--dark);
 }
-.cfe-wedding.text-decoration-dark {
+.cfe-wedding.wedding-text-decoration-dark {
   text-decoration-color: var(--cfe--wedding--text--dark);
 }
-.cfe-wedding.text-emphasis-dark {
+.cfe-wedding.wedding-text-emphasis-dark {
   -webkit-text-emphasis-color: var(--cfe--wedding--text--dark);
           text-emphasis-color: var(--cfe--wedding--text--dark);
 }
-.cfe-wedding.text-accent-dark {
+.cfe-wedding.wedding-text-accent-dark {
   accent-color: var(--cfe--wedding--text--dark);
 }
-.cfe-wedding.text-caret-dark {
+.cfe-wedding.wedding-text-caret-dark {
   caret-color: var(--cfe--wedding--text--dark);
 }
-.cfe-wedding.text-border-dark {
+.cfe-wedding.wedding-text-border-dark {
   border-color: var(--cfe--wedding--text--dark);
 }
-.cfe-wedding.text-outline-dark {
+.cfe-wedding.wedding-text-outline-dark {
   outline-color: var(--cfe--wedding--text--dark);
 }
-.cfe-wedding.text-rule-dark {
+.cfe-wedding.wedding-text-rule-dark {
   rule-color: var(--cfe--wedding--text--dark);
 }
-.cfe-wedding.text-column-rule-dark {
+.cfe-wedding.wedding-text-column-rule-dark {
   -moz-column-rule-color: var(--cfe--wedding--text--dark);
        column-rule-color: var(--cfe--wedding--text--dark);
 }
-.cfe-wedding.text-row-rule-dark {
+.cfe-wedding.wedding-text-row-rule-dark {
   row-rule-color: var(--cfe--wedding--text--dark);
 }
-.cfe-wedding.text-fill-dark {
+.cfe-wedding.wedding-text-fill-dark {
   fill: var(--cfe--wedding--text--dark);
 }
-.cfe-wedding.text-text-fill-dark {
+.cfe-wedding.wedding-text-text-fill-dark {
   -webkit-text-fill-color: var(--cfe--wedding--text--dark);
   text-fill-color: var(--cfe--wedding--text--dark);
 }
-.cfe-wedding.text-stroke-dark {
+.cfe-wedding.wedding-text-stroke-dark {
   stroke: var(--cfe--wedding--text--dark);
 }
-.cfe-wedding.text-text-stroke-dark {
+.cfe-wedding.wedding-text-text-stroke-dark {
   -webkit-text-stroke-color: var(--cfe--wedding--text--dark);
   text-stroke-color: var(--cfe--wedding--text--dark);
 }
-.cfe-wedding.text-flood-dark {
+.cfe-wedding.wedding-text-flood-dark {
   flood-color: var(--cfe--wedding--text--dark);
 }
-.cfe-wedding.text-stop-dark {
+.cfe-wedding.wedding-text-stop-dark {
   stop-color: var(--cfe--wedding--text--dark);
 }
-.cfe-wedding.one-dark {
+.cfe-wedding.wedding-one-dark {
   color: var(--cfe--wedding--one--dark);
 }
-.cfe-wedding.one-bg-dark {
+.cfe-wedding.wedding-one-bg-dark {
   background-color: var(--cfe--wedding--one--dark);
 }
-.cfe-wedding.one-decoration-dark {
+.cfe-wedding.wedding-one-decoration-dark {
   text-decoration-color: var(--cfe--wedding--one--dark);
 }
-.cfe-wedding.one-emphasis-dark {
+.cfe-wedding.wedding-one-emphasis-dark {
   -webkit-text-emphasis-color: var(--cfe--wedding--one--dark);
           text-emphasis-color: var(--cfe--wedding--one--dark);
 }
-.cfe-wedding.one-accent-dark {
+.cfe-wedding.wedding-one-accent-dark {
   accent-color: var(--cfe--wedding--one--dark);
 }
-.cfe-wedding.one-caret-dark {
+.cfe-wedding.wedding-one-caret-dark {
   caret-color: var(--cfe--wedding--one--dark);
 }
-.cfe-wedding.one-border-dark {
+.cfe-wedding.wedding-one-border-dark {
   border-color: var(--cfe--wedding--one--dark);
 }
-.cfe-wedding.one-outline-dark {
+.cfe-wedding.wedding-one-outline-dark {
   outline-color: var(--cfe--wedding--one--dark);
 }
-.cfe-wedding.one-rule-dark {
+.cfe-wedding.wedding-one-rule-dark {
   rule-color: var(--cfe--wedding--one--dark);
 }
-.cfe-wedding.one-column-rule-dark {
+.cfe-wedding.wedding-one-column-rule-dark {
   -moz-column-rule-color: var(--cfe--wedding--one--dark);
        column-rule-color: var(--cfe--wedding--one--dark);
 }
-.cfe-wedding.one-row-rule-dark {
+.cfe-wedding.wedding-one-row-rule-dark {
   row-rule-color: var(--cfe--wedding--one--dark);
 }
-.cfe-wedding.one-fill-dark {
+.cfe-wedding.wedding-one-fill-dark {
   fill: var(--cfe--wedding--one--dark);
 }
-.cfe-wedding.one-text-fill-dark {
+.cfe-wedding.wedding-one-text-fill-dark {
   -webkit-text-fill-color: var(--cfe--wedding--one--dark);
   text-fill-color: var(--cfe--wedding--one--dark);
 }
-.cfe-wedding.one-stroke-dark {
+.cfe-wedding.wedding-one-stroke-dark {
   stroke: var(--cfe--wedding--one--dark);
 }
-.cfe-wedding.one-text-stroke-dark {
+.cfe-wedding.wedding-one-text-stroke-dark {
   -webkit-text-stroke-color: var(--cfe--wedding--one--dark);
   text-stroke-color: var(--cfe--wedding--one--dark);
 }
-.cfe-wedding.one-flood-dark {
+.cfe-wedding.wedding-one-flood-dark {
   flood-color: var(--cfe--wedding--one--dark);
 }
-.cfe-wedding.one-stop-dark {
+.cfe-wedding.wedding-one-stop-dark {
   stop-color: var(--cfe--wedding--one--dark);
 }
-.cfe-wedding.two-dark {
+.cfe-wedding.wedding-two-dark {
   color: var(--cfe--wedding--two--dark);
 }
-.cfe-wedding.two-bg-dark {
+.cfe-wedding.wedding-two-bg-dark {
   background-color: var(--cfe--wedding--two--dark);
 }
-.cfe-wedding.two-decoration-dark {
+.cfe-wedding.wedding-two-decoration-dark {
   text-decoration-color: var(--cfe--wedding--two--dark);
 }
-.cfe-wedding.two-emphasis-dark {
+.cfe-wedding.wedding-two-emphasis-dark {
   -webkit-text-emphasis-color: var(--cfe--wedding--two--dark);
           text-emphasis-color: var(--cfe--wedding--two--dark);
 }
-.cfe-wedding.two-accent-dark {
+.cfe-wedding.wedding-two-accent-dark {
   accent-color: var(--cfe--wedding--two--dark);
 }
-.cfe-wedding.two-caret-dark {
+.cfe-wedding.wedding-two-caret-dark {
   caret-color: var(--cfe--wedding--two--dark);
 }
-.cfe-wedding.two-border-dark {
+.cfe-wedding.wedding-two-border-dark {
   border-color: var(--cfe--wedding--two--dark);
 }
-.cfe-wedding.two-outline-dark {
+.cfe-wedding.wedding-two-outline-dark {
   outline-color: var(--cfe--wedding--two--dark);
 }
-.cfe-wedding.two-rule-dark {
+.cfe-wedding.wedding-two-rule-dark {
   rule-color: var(--cfe--wedding--two--dark);
 }
-.cfe-wedding.two-column-rule-dark {
+.cfe-wedding.wedding-two-column-rule-dark {
   -moz-column-rule-color: var(--cfe--wedding--two--dark);
        column-rule-color: var(--cfe--wedding--two--dark);
 }
-.cfe-wedding.two-row-rule-dark {
+.cfe-wedding.wedding-two-row-rule-dark {
   row-rule-color: var(--cfe--wedding--two--dark);
 }
-.cfe-wedding.two-fill-dark {
+.cfe-wedding.wedding-two-fill-dark {
   fill: var(--cfe--wedding--two--dark);
 }
-.cfe-wedding.two-text-fill-dark {
+.cfe-wedding.wedding-two-text-fill-dark {
   -webkit-text-fill-color: var(--cfe--wedding--two--dark);
   text-fill-color: var(--cfe--wedding--two--dark);
 }
-.cfe-wedding.two-stroke-dark {
+.cfe-wedding.wedding-two-stroke-dark {
   stroke: var(--cfe--wedding--two--dark);
 }
-.cfe-wedding.two-text-stroke-dark {
+.cfe-wedding.wedding-two-text-stroke-dark {
   -webkit-text-stroke-color: var(--cfe--wedding--two--dark);
   text-stroke-color: var(--cfe--wedding--two--dark);
 }
-.cfe-wedding.two-flood-dark {
+.cfe-wedding.wedding-two-flood-dark {
   flood-color: var(--cfe--wedding--two--dark);
 }
-.cfe-wedding.two-stop-dark {
+.cfe-wedding.wedding-two-stop-dark {
   stop-color: var(--cfe--wedding--two--dark);
 }
-.cfe-wedding.three-dark {
+.cfe-wedding.wedding-three-dark {
   color: var(--cfe--wedding--three--dark);
 }
-.cfe-wedding.three-bg-dark {
+.cfe-wedding.wedding-three-bg-dark {
   background-color: var(--cfe--wedding--three--dark);
 }
-.cfe-wedding.three-decoration-dark {
+.cfe-wedding.wedding-three-decoration-dark {
   text-decoration-color: var(--cfe--wedding--three--dark);
 }
-.cfe-wedding.three-emphasis-dark {
+.cfe-wedding.wedding-three-emphasis-dark {
   -webkit-text-emphasis-color: var(--cfe--wedding--three--dark);
           text-emphasis-color: var(--cfe--wedding--three--dark);
 }
-.cfe-wedding.three-accent-dark {
+.cfe-wedding.wedding-three-accent-dark {
   accent-color: var(--cfe--wedding--three--dark);
 }
-.cfe-wedding.three-caret-dark {
+.cfe-wedding.wedding-three-caret-dark {
   caret-color: var(--cfe--wedding--three--dark);
 }
-.cfe-wedding.three-border-dark {
+.cfe-wedding.wedding-three-border-dark {
   border-color: var(--cfe--wedding--three--dark);
 }
-.cfe-wedding.three-outline-dark {
+.cfe-wedding.wedding-three-outline-dark {
   outline-color: var(--cfe--wedding--three--dark);
 }
-.cfe-wedding.three-rule-dark {
+.cfe-wedding.wedding-three-rule-dark {
   rule-color: var(--cfe--wedding--three--dark);
 }
-.cfe-wedding.three-column-rule-dark {
+.cfe-wedding.wedding-three-column-rule-dark {
   -moz-column-rule-color: var(--cfe--wedding--three--dark);
        column-rule-color: var(--cfe--wedding--three--dark);
 }
-.cfe-wedding.three-row-rule-dark {
+.cfe-wedding.wedding-three-row-rule-dark {
   row-rule-color: var(--cfe--wedding--three--dark);
 }
-.cfe-wedding.three-fill-dark {
+.cfe-wedding.wedding-three-fill-dark {
   fill: var(--cfe--wedding--three--dark);
 }
-.cfe-wedding.three-text-fill-dark {
+.cfe-wedding.wedding-three-text-fill-dark {
   -webkit-text-fill-color: var(--cfe--wedding--three--dark);
   text-fill-color: var(--cfe--wedding--three--dark);
 }
-.cfe-wedding.three-stroke-dark {
+.cfe-wedding.wedding-three-stroke-dark {
   stroke: var(--cfe--wedding--three--dark);
 }
-.cfe-wedding.three-text-stroke-dark {
+.cfe-wedding.wedding-three-text-stroke-dark {
   -webkit-text-stroke-color: var(--cfe--wedding--three--dark);
   text-stroke-color: var(--cfe--wedding--three--dark);
 }
-.cfe-wedding.three-flood-dark {
+.cfe-wedding.wedding-three-flood-dark {
   flood-color: var(--cfe--wedding--three--dark);
 }
-.cfe-wedding.three-stop-dark {
+.cfe-wedding.wedding-three-stop-dark {
   stop-color: var(--cfe--wedding--three--dark);
 }
-.cfe-wedding.four-dark {
+.cfe-wedding.wedding-four-dark {
   color: var(--cfe--wedding--four--dark);
 }
-.cfe-wedding.four-bg-dark {
+.cfe-wedding.wedding-four-bg-dark {
   background-color: var(--cfe--wedding--four--dark);
 }
-.cfe-wedding.four-decoration-dark {
+.cfe-wedding.wedding-four-decoration-dark {
   text-decoration-color: var(--cfe--wedding--four--dark);
 }
-.cfe-wedding.four-emphasis-dark {
+.cfe-wedding.wedding-four-emphasis-dark {
   -webkit-text-emphasis-color: var(--cfe--wedding--four--dark);
           text-emphasis-color: var(--cfe--wedding--four--dark);
 }
-.cfe-wedding.four-accent-dark {
+.cfe-wedding.wedding-four-accent-dark {
   accent-color: var(--cfe--wedding--four--dark);
 }
-.cfe-wedding.four-caret-dark {
+.cfe-wedding.wedding-four-caret-dark {
   caret-color: var(--cfe--wedding--four--dark);
 }
-.cfe-wedding.four-border-dark {
+.cfe-wedding.wedding-four-border-dark {
   border-color: var(--cfe--wedding--four--dark);
 }
-.cfe-wedding.four-outline-dark {
+.cfe-wedding.wedding-four-outline-dark {
   outline-color: var(--cfe--wedding--four--dark);
 }
-.cfe-wedding.four-rule-dark {
+.cfe-wedding.wedding-four-rule-dark {
   rule-color: var(--cfe--wedding--four--dark);
 }
-.cfe-wedding.four-column-rule-dark {
+.cfe-wedding.wedding-four-column-rule-dark {
   -moz-column-rule-color: var(--cfe--wedding--four--dark);
        column-rule-color: var(--cfe--wedding--four--dark);
 }
-.cfe-wedding.four-row-rule-dark {
+.cfe-wedding.wedding-four-row-rule-dark {
   row-rule-color: var(--cfe--wedding--four--dark);
 }
-.cfe-wedding.four-fill-dark {
+.cfe-wedding.wedding-four-fill-dark {
   fill: var(--cfe--wedding--four--dark);
 }
-.cfe-wedding.four-text-fill-dark {
+.cfe-wedding.wedding-four-text-fill-dark {
   -webkit-text-fill-color: var(--cfe--wedding--four--dark);
   text-fill-color: var(--cfe--wedding--four--dark);
 }
-.cfe-wedding.four-stroke-dark {
+.cfe-wedding.wedding-four-stroke-dark {
   stroke: var(--cfe--wedding--four--dark);
 }
-.cfe-wedding.four-text-stroke-dark {
+.cfe-wedding.wedding-four-text-stroke-dark {
   -webkit-text-stroke-color: var(--cfe--wedding--four--dark);
   text-stroke-color: var(--cfe--wedding--four--dark);
 }
-.cfe-wedding.four-flood-dark {
+.cfe-wedding.wedding-four-flood-dark {
   flood-color: var(--cfe--wedding--four--dark);
 }
-.cfe-wedding.four-stop-dark {
+.cfe-wedding.wedding-four-stop-dark {
   stop-color: var(--cfe--wedding--four--dark);
 }
-.cfe-wedding.five-dark {
+.cfe-wedding.wedding-five-dark {
   color: var(--cfe--wedding--five--dark);
 }
-.cfe-wedding.five-bg-dark {
+.cfe-wedding.wedding-five-bg-dark {
   background-color: var(--cfe--wedding--five--dark);
 }
-.cfe-wedding.five-decoration-dark {
+.cfe-wedding.wedding-five-decoration-dark {
   text-decoration-color: var(--cfe--wedding--five--dark);
 }
-.cfe-wedding.five-emphasis-dark {
+.cfe-wedding.wedding-five-emphasis-dark {
   -webkit-text-emphasis-color: var(--cfe--wedding--five--dark);
           text-emphasis-color: var(--cfe--wedding--five--dark);
 }
-.cfe-wedding.five-accent-dark {
+.cfe-wedding.wedding-five-accent-dark {
   accent-color: var(--cfe--wedding--five--dark);
 }
-.cfe-wedding.five-caret-dark {
+.cfe-wedding.wedding-five-caret-dark {
   caret-color: var(--cfe--wedding--five--dark);
 }
-.cfe-wedding.five-border-dark {
+.cfe-wedding.wedding-five-border-dark {
   border-color: var(--cfe--wedding--five--dark);
 }
-.cfe-wedding.five-outline-dark {
+.cfe-wedding.wedding-five-outline-dark {
   outline-color: var(--cfe--wedding--five--dark);
 }
-.cfe-wedding.five-rule-dark {
+.cfe-wedding.wedding-five-rule-dark {
   rule-color: var(--cfe--wedding--five--dark);
 }
-.cfe-wedding.five-column-rule-dark {
+.cfe-wedding.wedding-five-column-rule-dark {
   -moz-column-rule-color: var(--cfe--wedding--five--dark);
        column-rule-color: var(--cfe--wedding--five--dark);
 }
-.cfe-wedding.five-row-rule-dark {
+.cfe-wedding.wedding-five-row-rule-dark {
   row-rule-color: var(--cfe--wedding--five--dark);
 }
-.cfe-wedding.five-fill-dark {
+.cfe-wedding.wedding-five-fill-dark {
   fill: var(--cfe--wedding--five--dark);
 }
-.cfe-wedding.five-text-fill-dark {
+.cfe-wedding.wedding-five-text-fill-dark {
   -webkit-text-fill-color: var(--cfe--wedding--five--dark);
   text-fill-color: var(--cfe--wedding--five--dark);
 }
-.cfe-wedding.five-stroke-dark {
+.cfe-wedding.wedding-five-stroke-dark {
   stroke: var(--cfe--wedding--five--dark);
 }
-.cfe-wedding.five-text-stroke-dark {
+.cfe-wedding.wedding-five-text-stroke-dark {
   -webkit-text-stroke-color: var(--cfe--wedding--five--dark);
   text-stroke-color: var(--cfe--wedding--five--dark);
 }
-.cfe-wedding.five-flood-dark {
+.cfe-wedding.wedding-five-flood-dark {
   flood-color: var(--cfe--wedding--five--dark);
 }
-.cfe-wedding.five-stop-dark {
+.cfe-wedding.wedding-five-stop-dark {
   stop-color: var(--cfe--wedding--five--dark);
 }
-.cfe-wedding.six-dark {
+.cfe-wedding.wedding-six-dark {
   color: var(--cfe--wedding--six--dark);
 }
-.cfe-wedding.six-bg-dark {
+.cfe-wedding.wedding-six-bg-dark {
   background-color: var(--cfe--wedding--six--dark);
 }
-.cfe-wedding.six-decoration-dark {
+.cfe-wedding.wedding-six-decoration-dark {
   text-decoration-color: var(--cfe--wedding--six--dark);
 }
-.cfe-wedding.six-emphasis-dark {
+.cfe-wedding.wedding-six-emphasis-dark {
   -webkit-text-emphasis-color: var(--cfe--wedding--six--dark);
           text-emphasis-color: var(--cfe--wedding--six--dark);
 }
-.cfe-wedding.six-accent-dark {
+.cfe-wedding.wedding-six-accent-dark {
   accent-color: var(--cfe--wedding--six--dark);
 }
-.cfe-wedding.six-caret-dark {
+.cfe-wedding.wedding-six-caret-dark {
   caret-color: var(--cfe--wedding--six--dark);
 }
-.cfe-wedding.six-border-dark {
+.cfe-wedding.wedding-six-border-dark {
   border-color: var(--cfe--wedding--six--dark);
 }
-.cfe-wedding.six-outline-dark {
+.cfe-wedding.wedding-six-outline-dark {
   outline-color: var(--cfe--wedding--six--dark);
 }
-.cfe-wedding.six-rule-dark {
+.cfe-wedding.wedding-six-rule-dark {
   rule-color: var(--cfe--wedding--six--dark);
 }
-.cfe-wedding.six-column-rule-dark {
+.cfe-wedding.wedding-six-column-rule-dark {
   -moz-column-rule-color: var(--cfe--wedding--six--dark);
        column-rule-color: var(--cfe--wedding--six--dark);
 }
-.cfe-wedding.six-row-rule-dark {
+.cfe-wedding.wedding-six-row-rule-dark {
   row-rule-color: var(--cfe--wedding--six--dark);
 }
-.cfe-wedding.six-fill-dark {
+.cfe-wedding.wedding-six-fill-dark {
   fill: var(--cfe--wedding--six--dark);
 }
-.cfe-wedding.six-text-fill-dark {
+.cfe-wedding.wedding-six-text-fill-dark {
   -webkit-text-fill-color: var(--cfe--wedding--six--dark);
   text-fill-color: var(--cfe--wedding--six--dark);
 }
-.cfe-wedding.six-stroke-dark {
+.cfe-wedding.wedding-six-stroke-dark {
   stroke: var(--cfe--wedding--six--dark);
 }
-.cfe-wedding.six-text-stroke-dark {
+.cfe-wedding.wedding-six-text-stroke-dark {
   -webkit-text-stroke-color: var(--cfe--wedding--six--dark);
   text-stroke-color: var(--cfe--wedding--six--dark);
 }
-.cfe-wedding.six-flood-dark {
+.cfe-wedding.wedding-six-flood-dark {
   flood-color: var(--cfe--wedding--six--dark);
 }
-.cfe-wedding.six-stop-dark {
+.cfe-wedding.wedding-six-stop-dark {
   stop-color: var(--cfe--wedding--six--dark);
 }
