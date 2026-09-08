@@ -22,7 +22,7 @@ $options_url = plugin_options_url( plugin()->className() );
 
 <p><?php lang()->p( 'The Configure 8 suite includes a frontend theme, companion plugins, and an admin theme which gives your administration pages the same look and feel as the public-facing pages.' ); ?></p>
 
-<p><?php lang()->p( 'If you downloaded the entire Configure 8 suite then you have a copy of its admin theme. If not then find it at' ); ?> <a href="https://github.com/Bludiot/configureight-admin" target="_blank" rel="noopener noreferrer">https://github.com/Bludiot/configureight-admin</a></p>
+<p><?php lang()->p( 'If you downloaded the entire Configure 8 suite then you have a copy of its admin theme. If not then find it at' ); ?> <a href="https://github.com/BaselessCMS/configureight-admin" target="_blank" rel="noopener noreferrer">https://github.com/BaselessCMS/configureight-admin</a></p>
 
 <h3 class="form-heading"><?php lang()->p( 'Theme Styles' ); ?></h3>
 

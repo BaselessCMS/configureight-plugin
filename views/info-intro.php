@@ -32,7 +32,7 @@ $database_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=datab
 
 <h2 class="form-heading"><?php lang()->p( 'Compatibility' ); ?></h2>
 
-<p><?php lang()->p( 'The Configure 8 theme was designed with great extensibility by plugins. All of the core plugin hooks are included and placed in appropriate positions in the various template parts. That said, we cannot maintain compatibility for all plugins nor take responsibility for poorly developed plugins. If there is a plugin hook you would like to have us include, please see the support tab.' ); ?></p>
+<p><?php lang()->p( 'The Configure 8 theme was designed with great extensibility by plugins. All of the core plugin hooks are included and placed in appropriate positions in the various template parts. That said, we cannot maintain compatibility for all plugins nor take responsibility for poorly developed plugins.' ); ?></p>
 
 <p><?php lang()->p( 'Custom plugin hooks have been created and are included included in various template locations, where features and supplemental content may be displayed.' ); ?></p>
 
@@ -48,4 +48,4 @@ $database_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=datab
 
 <p><?php lang()->p( 'Please register errors, conflicts, or other problems with the Configure 8 suite of products under the Issues tab in the relevant GitHub repository.' ); ?></p>
 
-<p><?php lang()->p( 'Find Configure 8 product development at' ); ?> <a href="https://github.com/Bludiot" target="_blank" rel="noopener noreferrer">https://github.com/Bludiot</a></p>
+<p><?php lang()->p( 'Find Configure 8 product development at' ); ?> <a href="https://github.com/BaselessCMS" target="_blank" rel="noopener noreferrer">https://github.com/BaselessCMS</a></p>

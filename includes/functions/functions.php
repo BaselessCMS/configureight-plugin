@@ -707,47 +707,47 @@ function suite_plugins() {
 		],
 		'Breadcrumbs' => [
 			'name'  => $L->g( 'Breadcrumbs' ),
-			'url'   => 'https://github.com/Bludiot/breadcrumbs',
+			'url'   => 'https://github.com/BaselessCMS/breadcrumbs',
 			'guide' => true
 		],
 		'Categories_Lists' => [
 			'name'  => $L->g( 'Categories Lists' ),
-			'url'   => 'https://github.com/Bludiot/categories-lists',
+			'url'   => 'https://github.com/BaselessCMS/categories-lists',
 			'guide' => true
 		],
 		'Meta_Data' => [
 			'name'  => $L->g( 'Meta Data' ),
-			'url'   => 'https://github.com/Bludiot/meta-data',
+			'url'   => 'https://github.com/BaselessCMS/meta-data',
 			'guide' => true
 		],
 		'Pages_Lists' => [
 			'name'  => $L->g( 'Pages Lists' ),
-			'url'   => 'https://github.com/Bludiot/pages-lists',
+			'url'   => 'https://github.com/BaselessCMS/pages-lists',
 			'guide' => true
 		],
 		'Post_Comments' => [
 			'name'  => $L->g( 'Post Comments' ),
-			'url'   => 'https://github.com/Bludiot/post-comments',
+			'url'   => 'https://github.com/BaselessCMS/post-comments',
 			'guide' => '?page=guide'
 		],
 		'Posts_Lists' => [
 			'name'  => $L->g( 'Posts Lists' ),
-			'url'   => 'https://github.com/Bludiot/posts-lists',
+			'url'   => 'https://github.com/BaselessCMS/posts-lists',
 			'guide' => true
 		],
 		'Search_Forms' => [
 			'name'  => $L->g( 'Search Forms' ),
-			'url'   => 'https://github.com/Bludiot/search-forms',
+			'url'   => 'https://github.com/BaselessCMS/search-forms',
 			'guide' => true
 		],
 		'Tags_Lists' => [
 			'name'  => $L->g( 'Tags Lists' ),
-			'url'   => 'https://github.com/Bludiot/tags-lists',
+			'url'   => 'https://github.com/BaselessCMS/tags-lists',
 			'guide' => true
 		],
 		'User_Profiles' => [
 			'name'  => $L->g( 'User Profiles' ),
-			'url'   => 'https://github.com/Bludiot/user-profiles',
+			'url'   => 'https://github.com/BaselessCMS/user-profiles',
 			'guide' => true
 		]
 
