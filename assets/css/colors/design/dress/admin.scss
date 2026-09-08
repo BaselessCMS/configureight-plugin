@@ -1,5 +1,12 @@
 ///
 /// Color Scheme: 1960s Dress
 ///
+/// General styles for color scheme option.
+///
 
-@use 'partials/root';
+@use 'partials/root-general';
+
+.dark-mode {
+	--cfe-button--primary--bg-color--dark: var( --cfe-scheme-color--one--dark );
+	--cfe-button--primary--action--bg-color--dark: var( --cfe-scheme-color--five--dark );
+}

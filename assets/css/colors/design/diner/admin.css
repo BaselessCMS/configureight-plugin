@@ -20,3 +20,7 @@
   --cfe-heading-primary--link--action--text-color: var( --cfe-scheme-color--four );
   --cfe-button--primary--action--bg-color--dark: var( --cfe-scheme-color--three--dark );
 }
+
+.dark-mode {
+  --cfe-button--primary--action--bg-color--dark: var( --cfe-scheme-color--three--dark );
+}

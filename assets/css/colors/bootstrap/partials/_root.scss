@@ -33,7 +33,7 @@
 }
 
 // CSS classes.
-.#{c.$palette} {
+.cfe-#{c.$palette} {
 
 	@each $name, $value in c.$gray_map {
 		&.#{$name} {

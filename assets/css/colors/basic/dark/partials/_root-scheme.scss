@@ -1,6 +1,8 @@
 ///
 /// CSS properties
 ///
+/// Specific properties for the scheme.
+///
 
 @use 'sass:map';
 @use '../../../../modules/functions' as f;
@@ -10,14 +12,9 @@
 :host,
 :root {
 	@each $name, $color in c.$light {
-		--cfe-scheme-color--#{$name}: #{$color};
+		--cfe-scheme-#{c.$palette}--#{$name}: #{$color};
 	}
 	@each $name, $color in c.$dark {
-		--cfe-scheme-color--#{$name}--dark: #{$color};
+		--cfe-scheme-#{c.$palette}--#{$name}--dark: #{$color};
 	}
-	--cfe-button--primary--bg-color--dark: #{general.$blue};
-}
-
-.dark-mode {
-	--cfe-button--primary--bg-color--dark: #{general.$blue};
 }

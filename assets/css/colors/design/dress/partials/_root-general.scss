@@ -1,6 +1,8 @@
 ///
 /// CSS properties
 ///
+/// General properties for color scheme option.
+///
 
 @use 'sass:map';
 @use '../../../../modules/functions' as f;
@@ -16,8 +18,6 @@
 		--cfe-scheme-color--#{$name}--dark: #{$color};
 	}
 
-	--cfe-heading-primary--link--text-color: var( --cfe-scheme-color--three );
-	--cfe-heading-primary--link--action--text-color: var( --cfe-scheme-color--four );
-
-	--cfe-button--primary--action--bg-color--dark: var( --cfe-scheme-color--three--dark );
+	--cfe-button--primary--bg-color--dark: var( --cfe-scheme-color--one--dark );
+	--cfe-button--primary--action--bg-color--dark: var( --cfe-scheme-color--five--dark );
 }

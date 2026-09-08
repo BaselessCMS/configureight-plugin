@@ -22,3 +22,8 @@
   --cfe-button--primary--border-color: #0044aa;
   --cfe-button--primary--border-color--dark: #0044aa;
 }
+
+.dark-mode {
+  --cfe-button--primary--bg-color--dark: #0044aa;
+  --cfe-button--primary--border-color--dark: #0044aa;
+}

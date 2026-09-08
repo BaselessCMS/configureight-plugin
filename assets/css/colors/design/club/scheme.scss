@@ -1,0 +1,127 @@
+///
+/// Color Scheme: 1930s Club
+///
+/// Specific styles for the scheme.
+///
+
+@use 'sass:map';
+@use '../../../modules/functions' as f;
+@use '../../../modules/colors' as general;
+@use 'modules/colors' as c;
+
+@use 'partials/root-scheme';
+
+// CSS classes.
+.cfe-#{c.$palette} {
+
+	@each $name, $value in c.$light {
+		&.#{$name} {
+			color: var( --cfe--#{c.$palette}--#{$name} );
+		}
+		&.#{$name}-bg {
+			background-color: var( --cfe--#{c.$palette}--#{$name} );
+		}
+		&.#{$name}-decoration {
+			text-decoration-color: var( --cfe--#{c.$palette}--#{$name} );
+		}
+		&.#{$name}-emphasis {
+			text-emphasis-color: var( --cfe--#{c.$palette}--#{$name} );
+		}
+		&.#{$name}-accent {
+			accent-color: var( --cfe--#{c.$palette}--#{$name} );
+		}
+		&.#{$name}-caret {
+			caret-color: var( --cfe--#{c.$palette}--#{$name} );
+		}
+		&.#{$name}-border {
+			border-color: var( --cfe--#{c.$palette}--#{$name} );
+		}
+		&.#{$name}-outline {
+			outline-color: var( --cfe--#{c.$palette}--#{$name} );
+		}
+		&.#{$name}-rule {
+			rule-color: var( --cfe--#{c.$palette}--#{$name} );
+		}
+		&.#{$name}-column-rule {
+			column-rule-color: var( --cfe--#{c.$palette}--#{$name} );
+		}
+		&.#{$name}-row-rule {
+			row-rule-color: var( --cfe--#{c.$palette}--#{$name} );
+		}
+		&.#{$name}-fill {
+			fill: var( --cfe--#{c.$palette}--#{$name} );
+		}
+		&.#{$name}-text-fill {
+			-webkit-text-fill-color: var( --cfe--#{c.$palette}--#{$name} );
+					text-fill-color: var( --cfe--#{c.$palette}--#{$name} );
+		}
+		&.#{$name}-stroke {
+			stroke: var( --cfe--#{c.$palette}--#{$name} );
+		}
+		&.#{$name}-text-stroke {
+			-webkit-text-stroke-color: var( --cfe--#{c.$palette}--#{$name} );
+					text-stroke-color: var( --cfe--#{c.$palette}--#{$name} );
+		}
+		&.#{$name}-flood {
+			flood-color: var( --cfe--#{c.$palette}--#{$name} );
+		}
+		&.#{$name}-stop {
+			stop-color: var( --cfe--#{c.$palette}--#{$name} );
+		}
+	}
+	@each $name, $value in c.$dark {
+		&.#{$name}-dark {
+			color: var( --cfe--#{c.$palette}--#{$name}--dark );
+		}
+		&.#{$name}-bg-dark {
+			background-color: var( --cfe--#{c.$palette}--#{$name}--dark );
+		}
+		&.#{$name}-decoration-dark {
+			text-decoration-color: var( --cfe--#{c.$palette}--#{$name}--dark );
+		}
+		&.#{$name}-emphasis-dark {
+			text-emphasis-color: var( --cfe--#{c.$palette}--#{$name}--dark );
+		}
+		&.#{$name}-accent-dark {
+			accent-color: var( --cfe--#{c.$palette}--#{$name}--dark );
+		}
+		&.#{$name}-caret-dark {
+			caret-color: var( --cfe--#{c.$palette}--#{$name}--dark );
+		}
+		&.#{$name}-border-dark {
+			border-color: var( --cfe--#{c.$palette}--#{$name}--dark );
+		}
+		&.#{$name}-outline-dark {
+			outline-color: var( --cfe--#{c.$palette}--#{$name}--dark );
+		}
+		&.#{$name}-rule-dark {
+			rule-color: var( --cfe--#{c.$palette}--#{$name}--dark );
+		}
+		&.#{$name}-column-rule-dark {
+			column-rule-color: var( --cfe--#{c.$palette}--#{$name}--dark );
+		}
+		&.#{$name}-row-rule-dark {
+			row-rule-color: var( --cfe--#{c.$palette}--#{$name}--dark );
+		}
+		&.#{$name}-fill-dark {
+			fill: var( --cfe--#{c.$palette}--#{$name}--dark );
+		}
+		&.#{$name}-text-fill-dark {
+			-webkit-text-fill-color: var( --cfe--#{c.$palette}--#{$name}--dark );
+					text-fill-color: var( --cfe--#{c.$palette}--#{$name}--dark );
+		}
+		&.#{$name}-stroke-dark {
+			stroke: var( --cfe--#{c.$palette}--#{$name}--dark );
+		}
+		&.#{$name}-text-stroke-dark {
+			-webkit-text-stroke-color: var( --cfe--#{c.$palette}--#{$name}--dark );
+					text-stroke-color: var( --cfe--#{c.$palette}--#{$name}--dark );
+		}
+		&.#{$name}-flood-dark {
+			flood-color: var( --cfe--#{c.$palette}--#{$name}--dark );
+		}
+		&.#{$name}-stop-dark {
+			stop-color: var( --cfe--#{c.$palette}--#{$name}--dark );
+		}
+	}
+}
