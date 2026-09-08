@@ -82,7 +82,7 @@ code.select {
 <div class="tab-content" data-toggle="tabslet" data-deeplinking="true" data-animation="true">
 
 	<ul class="nav nav-tabs" id="nav-tabs" role="tablist">
-		<li class="nav-item active">
+		<li class="nav-item">
 			<a class="nav-link" role="tab" aria-controls="properties" aria-selected="false" href="#properties"><?php lang()->p( 'Properties' ); ?></a>
 		</li>
 		<li class="nav-item">
