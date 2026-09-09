@@ -294,14 +294,14 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 				if ( array_key_exists( 'about', $scheme ) ) {
 					if ( ! empty( $scheme['about'] ) ) {
 						printf(
-							'<small id="font-scheme-about-%s" class="form-text" style="display: %s;">%s</small>',
+							'<p id="font-scheme-about-%s" style="display: %s;">%s</p>',
 							$slug,
 							( plugin()->getValue( 'font_scheme' ) === $slug ? 'block' : 'none' ),
 							$scheme['about']
 						);
 					} else {
 						printf(
-						'<small id="font-scheme-about-%s" class="form-text" style="display: %s;">%s</small>',
+						'<p id="font-scheme-about-%s" style="display: %s;">%s</p>',
 						$slug,
 						( plugin()->getValue( 'font_scheme' ) === $slug ? 'block' : 'none' ),
 						lang()->get( 'See preview below.' )
@@ -309,7 +309,7 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 					}
 				} else {
 					printf(
-						'<small id="font-scheme-about-%s" class="form-text" style="display: %s;">%s</small>',
+						'<p id="font-scheme-about-%s" style="display: %s;">%s</p>',
 						$slug,
 						( plugin()->getValue( 'font_scheme' ) === $slug ? 'block' : 'none' ),
 						lang()->get( 'See preview below.' )
