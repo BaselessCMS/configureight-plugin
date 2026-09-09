@@ -23,3 +23,9 @@
   --cfe-button--primary--action--bg-color: var( --cfe-scheme-color--three );
   --cfe-button--primary--action--bg-color--dark: var( --cfe-scheme-color--three );
 }
+
+.dark-mode {
+  --cfe-box--border-color--dark: rgba(247, 247, 247, 0.5);
+  --cfe-button--primary--bg-color--dark: var( --cfe-scheme-color--three );
+  --cfe-button--primary--action--bg-color--dark: var( --cfe-scheme-color--three );
+}

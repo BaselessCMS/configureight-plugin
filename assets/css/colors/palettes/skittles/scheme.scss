@@ -1,0 +1,127 @@
+///
+/// Color Scheme: Skittles
+///
+/// Specific styles for the scheme.
+///
+
+@use 'sass:map';
+@use '../../../modules/functions' as f;
+@use '../../../modules/colors' as general;
+@use 'modules/colors' as c;
+
+@use 'partials/root-scheme';
+
+// CSS classes.
+.cfe-#{c.$palette} {
+
+	@each $name, $value in c.$light {
+		&.#{c.$palette}-#{$name} {
+			color: var( --cfe--#{c.$palette}--#{$name} );
+		}
+		&.#{c.$palette}-#{$name}-bg {
+			background-color: var( --cfe--#{c.$palette}--#{$name} );
+		}
+		&.#{c.$palette}-#{$name}-decoration {
+			text-decoration-color: var( --cfe--#{c.$palette}--#{$name} );
+		}
+		&.#{c.$palette}-#{$name}-emphasis {
+			text-emphasis-color: var( --cfe--#{c.$palette}--#{$name} );
+		}
+		&.#{c.$palette}-#{$name}-accent {
+			accent-color: var( --cfe--#{c.$palette}--#{$name} );
+		}
+		&.#{c.$palette}-#{$name}-caret {
+			caret-color: var( --cfe--#{c.$palette}--#{$name} );
+		}
+		&.#{c.$palette}-#{$name}-border {
+			border-color: var( --cfe--#{c.$palette}--#{$name} );
+		}
+		&.#{c.$palette}-#{$name}-outline {
+			outline-color: var( --cfe--#{c.$palette}--#{$name} );
+		}
+		&.#{c.$palette}-#{$name}-rule {
+			rule-color: var( --cfe--#{c.$palette}--#{$name} );
+		}
+		&.#{c.$palette}-#{$name}-column-rule {
+			column-rule-color: var( --cfe--#{c.$palette}--#{$name} );
+		}
+		&.#{c.$palette}-#{$name}-row-rule {
+			row-rule-color: var( --cfe--#{c.$palette}--#{$name} );
+		}
+		&.#{c.$palette}-#{$name}-fill {
+			fill: var( --cfe--#{c.$palette}--#{$name} );
+		}
+		&.#{c.$palette}-#{$name}-text-fill {
+			-webkit-text-fill-color: var( --cfe--#{c.$palette}--#{$name} );
+					text-fill-color: var( --cfe--#{c.$palette}--#{$name} );
+		}
+		&.#{c.$palette}-#{$name}-stroke {
+			stroke: var( --cfe--#{c.$palette}--#{$name} );
+		}
+		&.#{c.$palette}-#{$name}-text-stroke {
+			-webkit-text-stroke-color: var( --cfe--#{c.$palette}--#{$name} );
+					text-stroke-color: var( --cfe--#{c.$palette}--#{$name} );
+		}
+		&.#{c.$palette}-#{$name}-flood {
+			flood-color: var( --cfe--#{c.$palette}--#{$name} );
+		}
+		&.#{c.$palette}-#{$name}-stop {
+			stop-color: var( --cfe--#{c.$palette}--#{$name} );
+		}
+	}
+	@each $name, $value in c.$dark {
+		&.#{c.$palette}-#{$name}-dark {
+			color: var( --cfe--#{c.$palette}--#{$name}--dark );
+		}
+		&.#{c.$palette}-#{$name}-bg-dark {
+			background-color: var( --cfe--#{c.$palette}--#{$name}--dark );
+		}
+		&.#{c.$palette}-#{$name}-decoration-dark {
+			text-decoration-color: var( --cfe--#{c.$palette}--#{$name}--dark );
+		}
+		&.#{c.$palette}-#{$name}-emphasis-dark {
+			text-emphasis-color: var( --cfe--#{c.$palette}--#{$name}--dark );
+		}
+		&.#{c.$palette}-#{$name}-accent-dark {
+			accent-color: var( --cfe--#{c.$palette}--#{$name}--dark );
+		}
+		&.#{c.$palette}-#{$name}-caret-dark {
+			caret-color: var( --cfe--#{c.$palette}--#{$name}--dark );
+		}
+		&.#{c.$palette}-#{$name}-border-dark {
+			border-color: var( --cfe--#{c.$palette}--#{$name}--dark );
+		}
+		&.#{c.$palette}-#{$name}-outline-dark {
+			outline-color: var( --cfe--#{c.$palette}--#{$name}--dark );
+		}
+		&.#{c.$palette}-#{$name}-rule-dark {
+			rule-color: var( --cfe--#{c.$palette}--#{$name}--dark );
+		}
+		&.#{c.$palette}-#{$name}-column-rule-dark {
+			column-rule-color: var( --cfe--#{c.$palette}--#{$name}--dark );
+		}
+		&.#{c.$palette}-#{$name}-row-rule-dark {
+			row-rule-color: var( --cfe--#{c.$palette}--#{$name}--dark );
+		}
+		&.#{c.$palette}-#{$name}-fill-dark {
+			fill: var( --cfe--#{c.$palette}--#{$name}--dark );
+		}
+		&.#{c.$palette}-#{$name}-text-fill-dark {
+			-webkit-text-fill-color: var( --cfe--#{c.$palette}--#{$name}--dark );
+					text-fill-color: var( --cfe--#{c.$palette}--#{$name}--dark );
+		}
+		&.#{c.$palette}-#{$name}-stroke-dark {
+			stroke: var( --cfe--#{c.$palette}--#{$name}--dark );
+		}
+		&.#{c.$palette}-#{$name}-text-stroke-dark {
+			-webkit-text-stroke-color: var( --cfe--#{c.$palette}--#{$name}--dark );
+					text-stroke-color: var( --cfe--#{c.$palette}--#{$name}--dark );
+		}
+		&.#{c.$palette}-#{$name}-flood-dark {
+			flood-color: var( --cfe--#{c.$palette}--#{$name}--dark );
+		}
+		&.#{c.$palette}-#{$name}-stop-dark {
+			stop-color: var( --cfe--#{c.$palette}--#{$name}--dark );
+		}
+	}
+}

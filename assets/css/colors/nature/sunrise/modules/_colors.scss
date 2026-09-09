@@ -1,0 +1,26 @@
+///
+/// SCSS variables
+///
+
+$palette: 'sunrise';
+
+$light: (
+	'body'  : #fffffe,
+	'text'  : #052f4a,
+	'one'   : #0e9add,
+	'two'   : #7ccf00,
+	'three' : #ffd230,
+	'four'  : #ff637e,
+	'five'  : #462da9,
+	'six'   : #fb64b6
+);
+$dark: (
+	'body_dark'  : #0d2330,
+	'text_dark'  : #fffffd,
+	'one_dark'   : #00bcff,
+	'two_dark'   : #bbf451,
+	'three_dark' : #ffd230,
+	'four_dark'  : #ff637e,
+	'five_dark'  : #462da9,
+	'six_dark'   : #fb64b6
+);

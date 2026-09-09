@@ -19,3 +19,8 @@
   --cfe-button--primary--text-color--dark: #444444;
   --cfe-button--primary--action--text-color--dark: #444444;
 }
+
+.dark-mode {
+  --cfe-button--primary--text-color--dark: #444444;
+  --cfe-button--primary--action--text-color--dark: #444444;
+}

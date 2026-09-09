@@ -1,5 +1,12 @@
 ///
-/// Color Scheme: Ocean
+/// Color Scheme: Beach
+///
+/// General styles for color scheme option.
 ///
 
-@use 'partials/root';
+@use 'sass:map';
+@use '../../../modules/functions' as f;
+@use '../../../modules/colors' as general;
+@use 'modules/colors' as c;
+
+@use 'partials/root-general';

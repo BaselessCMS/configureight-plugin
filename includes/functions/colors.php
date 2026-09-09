@@ -906,32 +906,6 @@ function color_schemes() {
 				'six'   => '#d3b857'
 			]
 		],
-		'citrus' => [
-			'slug'     => 'citrus',
-			'name'     => lang()->get( 'Citrus' ),
-			'category' => 'nature',
-			'cover'    => '#ebad03',
-			'light' => [
-				'body'  => '#fffffe',
-				'text'  => '#111a0b',
-				'one'   => '#ff7700',
-				'two'   => '#ff5500',
-				'three' => '#ffbb00',
-				'four'  => '#ffdd11',
-				'five'  => '#ff7700',
-				'six'   => '#ffcc00'
-			],
-			'dark' => [
-				'body'  => '#111a0b',
-				'text'  => '#fffffe',
-				'one'   => '#ffdd11',
-				'two'   => '#ffbb00',
-				'three' => '#ff7700',
-				'four'  => '#ff5500',
-				'five'  => '#ff7700',
-				'six'   => '#ffcc00'
-			]
-		],
 		'forest' => [
 			'slug'     => 'forest',
 			'name'     => lang()->get( 'Forest' ),
@@ -958,82 +932,58 @@ function color_schemes() {
 				'six'   => '#f5a313'
 			]
 		],
-		'orchid' => [
-			'slug'     => 'orchid',
-			'name'     => lang()->get( 'Orchid' ),
+		'sunrise' => [
+			'slug'     => 'sunrise',
+			'name'     => lang()->get( 'Sunrise' ),
+			'about'    => lang()->get( '' ),
 			'category' => 'nature',
-			'cover'    => '#b91881',
+			'cover'    => '#ff637e',
 			'light' => [
-				'body'  => '#ffffff',
-				'text'  => '#28081c',
-				'one'   => '#b800b1',
-				'two'   => '#ff00f6',
-				'three' => '#e20093',
-				'four'  => '#ff2db8',
-				'five'  => '#e20093',
-				'six'   => '#ff2db8'
+				'body'  => '#fffffe',
+				'text'  => '#052f4a',
+				'one'   => '#0e9add',
+				'two'   => '#7ccf00',
+				'three' => '#ffd230',
+				'four'  => '#ff637e',
+				'five'  => '#462da9',
+				'six'   => '#fb64b6'
 			],
 			'dark' => [
-				'body'  => '#28081c',
-				'text'  => '#fbf3f6',
-				'one'   => '#ff00f6',
-				'two'   => '#b800b1',
-				'three' => '#e20093',
-				'four'  => '#ff2db8',
-				'five'  => '#e20093',
-				'six'   => '#ff2db8'
+				'body'  => '#0d2330',
+				'text'  => '#fffffd',
+				'one'   => '#00bcff',
+				'two'   => '#bbf451',
+				'three' => '#ffd230',
+				'four'  => '#ff637e',
+				'five'  => '#462da9',
+				'six'   => '#fb64b6'
 			]
 		],
-		'rose' => [
-			'slug'     => 'rose',
-			'name'     => lang()->get( 'Rose' ),
+		'sunset' => [
+			'slug'     => 'sunset',
+			'name'     => lang()->get( 'Sunset' ),
+			'about'    => lang()->get( '' ),
 			'category' => 'nature',
-			'cover'    => '#dd3e71',
+			'cover'    => '#fe9a00',
 			'light' => [
-				'body'  => '#ffffff',
-				'text'  => '#1b0209',
-				'one'   => '#ff1a40',
-				'two'   => '#e00020',
-				'three' => '#f7417c',
-				'four'  => '#ff6797',
-				'five'  => '#f7417c',
-				'six'   => '#ff6797'
+				'body'  => '#fef3c6',
+				'text'  => '#024a70',
+				'one'   => '#0069a8',
+				'two'   => '#0092b8',
+				'three' => '#fe9a00',
+				'four'  => '#e17100',
+				'five'  => '#e17100',
+				'six'   => '#f0b100'
 			],
 			'dark' => [
-				'body'  => '#1b0209',
-				'text'  => '#f3f3f3',
-				'one'   => '#ff6797',
-				'two'   => '#f7417c',
-				'three' => '#e00020',
-				'four'  => '#ff1a40',
-				'five'  => '#f7417c',
-				'six'   => '#ff6797'
-			]
-		],
-		'violet' => [
-			'slug'     => 'violet',
-			'name'     => lang()->get( 'Violet' ),
-			'category' => 'nature',
-			'cover'    => '#672178',
-			'light' => [
-				'body'  => '#ffffff',
-				'text'  => '#220b28',
-				'one'   => '#a400aa',
-				'two'   => '#dd00e5',
-				'three' => '#672178',
-				'four'  => '#8f2ea7',
-				'five'  => '#005b0c',
-				'six'   => '#8f2ea7'
-			],
-			'dark' => [
-				'body'  => '#220b28',
-				'text'  => '#eeeeee',
-				'one'   => '#dd00e5',
-				'two'   => '#a400aa',
-				'three' => '#672178',
-				'four'  => '#8f2ea7',
-				'five'  => '#672178',
-				'six'   => '#8f2ea7'
+				'body'  => '#08273a',
+				'text'  => '#fefaec',
+				'one'   => '#ffdf20',
+				'two'   => '#0084d1',
+				'three' => '#fe9a00',
+				'four'  => '#ffdf20',
+				'five'  => '#e17100',
+				'six'   => '#ffd230'
 			]
 		],
 

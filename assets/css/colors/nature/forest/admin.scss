@@ -1,22 +1,12 @@
 ///
 /// Color Scheme: Forest
 ///
+/// General styles for color scheme option.
+///
 
-// Scheme colors.
-$color_body: #ffffff;
-$color_text: #1e110a;
-$color_one: #6d3d1d;
-$color_two: #ff6600;
-$color_three: #3e721a;
-$color_four: #46a109;
-$color_five: #3e721a;
-$color_six: #f5a313;
+@use 'sass:map';
+@use '../../../modules/functions' as f;
+@use '../../../modules/colors' as general;
+@use 'modules/colors' as c;
 
-$color_body_dark: #1e110a;
-$color_text_dark: #eeeeee;
-$color_one_dark: #4bda1f;
-$color_two_dark: #46a109;
-$color_three_dark: #6d3d1d;
-$color_four_dark: #ff6600;
-$color_five_dark: #46a109;
-$color_six_dark: #f5a313;
+@use 'partials/root-general';
