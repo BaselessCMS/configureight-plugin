@@ -115,13 +115,13 @@
   --cfe-fonts--display-stack: Slaab, Rokkitt, Roboto Slab, Hoefler Text, Garamond, slab, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   --cfe-body--font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   --cfe-display--font-family: Slaab, Rokkitt, Roboto Slab, Hoefler Text, Garamond, slab, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-  --cfe-display--font-weight: 600;
+  --cfe-display--font-weight: 700;
   --cfe-heading-primary--font-family: Slaab, Rokkitt, Roboto Slab, Hoefler Text, Garamond, slab, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   --cfe-heading-primary--font-size: 2rem;
   --cfe-heading-primary--font-weight: 800;
   --cfe-heading-secondary--font-family: Slaab, Rokkitt, Roboto Slab, Hoefler Text, Garamond, slab, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   --cfe-heading-secondary--font-size: 1.375rem;
-  --cfe-heading-secondary--font-weight: 700;
+  --cfe-heading-secondary--font-weight: 800;
   --cfe-button--font-size: 0.875rem;
   --cfe-tabs--list--link--font-size: 0.875rem;
   --cfe-theme-icon--size: 1em;

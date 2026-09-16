@@ -180,9 +180,7 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 			<ul id="form-color-thumbs-list">
 			<?php foreach ( $colors as $color => $option ) {
 
-				if ( in_array( $option['slug'], custom_schemes() ) ) {
-					$display = 'none';
-				} elseif ( plugin()->getValue( 'color_scheme' ) === $option['slug'] ) {
+				if ( plugin()->getValue( 'color_scheme' ) === $option['slug'] ) {
 					$display = 'flex';
 				} else {
 					$display = 'none';
@@ -610,6 +608,75 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 	</div>
 	<?php endif; ?>
 </fieldset>
+
+<script>
+jQuery(document).ready( function($) {
+
+	$( '#color_scheme' ).on( 'change', function() {
+		var scheme = $(this).val();
+
+		<?php foreach ( $colors as $color => $option ) :
+
+			$slug = $option['slug'];
+		?>
+		if ( scheme == '<?php echo $slug; ?>' ) {
+
+			if ( 'custom' != scheme ) {
+				$( '#custom_scheme_from' ).val( '<?php echo $slug; ?>' );
+			}
+
+			// Custom scheme descriptions, labels, and color thumbnails.
+			$( '#scheme_desc_<?php echo $slug; ?>' ).css( 'display', 'block' );
+			$( '#light_scheme_label_<?php echo $slug; ?>' ).css( 'display', 'block' );
+			$( '#dark_scheme_label_<?php echo $slug; ?>' ).css( 'display', 'block' );
+			$( '#light_scheme_thumbs_<?php echo $slug; ?>' ).css( 'display', 'flex' );
+			$( '#dark_scheme_thumbs_<?php echo $slug; ?>' ).css( 'display', 'flex' );
+
+			// Custom scheme light colors.
+			$( '#color_body' ).val( '<?php echo $option['light']['body']; ?>' );
+			$( '#color_text' ).val( '<?php echo $option['light']['text']; ?>' );
+			$( '#color_one' ).val( '<?php echo $option['light']['one']; ?>' );
+			$( '#color_two' ).val( '<?php echo $option['light']['two']; ?>' );
+			$( '#color_three' ).val( '<?php echo $option['light']['three']; ?>' );
+			$( '#color_four' ).val( '<?php echo $option['light']['four']; ?>' );
+			$( '#color_five' ).val( '<?php echo $option['light']['five']; ?>' );
+			$( '#color_six' ).val( '<?php echo $option['light']['six']; ?>' );
+
+			$( '#loader_bg_color' ).val( '<?php echo $option['light']['body']; ?>' );
+			$( '#loader_text_color' ).val( '<?php echo $option['light']['text']; ?>' );
+
+			// Custom scheme dark colors.
+			$( '#color_body_dark' ).val( '<?php echo $option['dark']['body']; ?>' );
+			$( '#color_text_dark' ).val( '<?php echo $option['dark']['text']; ?>' );
+			$( '#color_one_dark' ).val( '<?php echo $option['dark']['one']; ?>' );
+			$( '#color_two_dark' ).val( '<?php echo $option['dark']['two']; ?>' );
+			$( '#color_three_dark' ).val( '<?php echo $option['dark']['three']; ?>' );
+			$( '#color_four_dark' ).val( '<?php echo $option['dark']['four']; ?>' );
+			$( '#color_five_dark' ).val( '<?php echo $option['dark']['five']; ?>' );
+			$( '#color_six_dark' ).val( '<?php echo $option['dark']['six']; ?>' );
+
+			$( '#loader_bg_color_dark' ).val( '<?php echo $option['dark']['body']; ?>' );
+			$( '#loader_text_color_dark' ).val( '<?php echo $option['dark']['text']; ?>' );
+
+			if ( 'default' != scheme ) {
+				$( '#cover_blend' ).val( '<?php echo ( isset( $option['cover'] ) ? $option['cover'] : $option['light']['three'] ); ?>' );
+			} else {
+				$( '#cover_blend' ).val( '<?php echo $this->dbFields['cover_blend']; ?>' );
+			}
+
+		} else {
+
+			// Scheme descriptions, labels, and color thumbnails.
+			$( '#scheme_desc_<?php echo $slug; ?>' ).css( 'display', 'none' );
+			$( '#light_scheme_label_<?php echo $slug; ?>' ).css( 'display', 'none' );
+			$( '#dark_scheme_label_<?php echo $slug; ?>' ).css( 'display', 'none' );
+			$( '#light_scheme_thumbs_<?php echo $slug; ?>' ).css( 'display', 'none' );
+			$( '#dark_scheme_thumbs_<?php echo $slug; ?>' ).css( 'display', 'none' );
+		}
+		<?php endforeach; ?>
+	});
+});
+</script>
 
 <script>
 jQuery(document).ready( function($) {

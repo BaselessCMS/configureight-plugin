@@ -115,11 +115,11 @@
   --cfe-fonts--display-stack: Slaab, Rokkitt, Roboto Slab, Hoefler Text, Garamond, slab, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   --cfe-body--font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   --cfe-display--font-family: Slaab, Rokkitt, Roboto Slab, Hoefler Text, Garamond, slab, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-  --cfe-display--font-weight: 600;
+  --cfe-display--font-weight: 700;
   --cfe-heading-primary--font-family: Slaab, Rokkitt, Roboto Slab, Hoefler Text, Garamond, slab, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-  --cfe-heading-primary--font-weight: 700;
+  --cfe-heading-primary--font-weight: 800;
   --cfe-heading-secondary--font-family: Slaab, Rokkitt, Roboto Slab, Hoefler Text, Garamond, slab, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-  --cfe-heading-secondary--font-weight: 700;
+  --cfe-heading-secondary--font-weight: 800;
   --cfe-theme-icon--size: 0.825em;
   --cfe-button--font-size: 0.875rem;
   --cfe-site-title--font-family: Slaab, Rokkitt, Roboto Slab, Hoefler Text, Garamond, slab, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
@@ -128,9 +128,10 @@
   --cfe-cover--title--font-size: clamp( 3rem, 4vw + 0.5rem, 5.5vw );
   --cfe-cover--title--line-height: 1;
   --cfe-site-nav--item--font-size: 0.875rem;
+  --cfe-site-nav--item--font-weight: 700;
   --cfe-page-header--heading--font-size: 2.625rem;
   --cfe-page-summary--page-header--heading--font-size: 2rem;
-  --cfe-page-summary--page-header--heading--font-weight: 700;
+  --cfe-page-summary--page-header--heading--font-weight: 800;
   --cfe-page-summary--page-header--heading--line-height: 1.1;
   --cfe-page-info--font-family: Slaab, Rokkitt, Roboto Slab, Hoefler Text, Garamond, slab, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   --cfe-page-info--line-height: 1.1;
