@@ -3,22 +3,134 @@
 ///
 
 @font-face {
-	font-family: 'Rokkitt';
-	font-weight: 100 900;
+	font-family: 'Slaab';
+	font-weight: 100;
 	font-style: normal;
 	font-display: swap;
-	src: url( ../../../fonts/slab/rokkitt.woff2 ) format( 'woff2' );
+	src: url( ../../../fonts/slab/slaab-hair.woff2 ) format( 'woff2' );
 }
 
 @font-face {
-	font-family: 'Rokkitt';
-	font-weight: 100 900;
+	font-family: 'Slaab';
+	font-weight: 100;
 	font-style: italic;
 	font-display: swap;
-	src: url( ../../../fonts/slab/rokkitt-italic.woff2 ) format( 'woff2' );
+	src: url( ../../../fonts/slab/slaab-hair.woff2 ) format( 'woff2' );
 }
 
-$rokkitt_stack: 'Rokkitt', 'Hoefler Text', Garamond, serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+@font-face {
+	font-family: 'Slaab';
+	font-weight: 200;
+	font-style: normal;
+	font-display: swap;
+	src: url( ../../../fonts/slab/slaab-extra-light.woff2 ) format( 'woff2' );
+}
+
+@font-face {
+	font-family: 'Slaab';
+	font-weight: 200;
+	font-style: italic;
+	font-display: swap;
+	src: url( ../../../fonts/slab/slaab-extra-light.woff2 ) format( 'woff2' );
+}
+
+@font-face {
+	font-family: 'Slaab';
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+	src: url( ../../../fonts/slab/slaab-light.woff2 ) format( 'woff2' );
+}
+
+@font-face {
+	font-family: 'Slaab';
+	font-weight: 300;
+	font-style: italic;
+	font-display: swap;
+	src: url( ../../../fonts/slab/slaab-light.woff2 ) format( 'woff2' );
+}
+
+@font-face {
+	font-family: 'Slaab';
+	font-weight: 400 500;
+	font-style: normal;
+	font-display: swap;
+	src: url( ../../../fonts/slab/slaab-regular.woff2 ) format( 'woff2' );
+}
+
+@font-face {
+	font-family: 'Slaab';
+	font-weight: 400 500;
+	font-style: italic;
+	font-display: swap;
+	src: url( ../../../fonts/slab/slaab-regular.woff2 ) format( 'woff2' );
+}
+
+@font-face {
+	font-family: 'Slaab';
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+	src: url( ../../../fonts/slab/slaab-semi-bold.woff2 ) format( 'woff2' );
+}
+
+@font-face {
+	font-family: 'Slaab';
+	font-weight: 600;
+	font-style: italic;
+	font-display: swap;
+	src: url( ../../../fonts/slab/slaab-semi-bold.woff2 ) format( 'woff2' );
+}
+
+@font-face {
+	font-family: 'Slaab';
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+	src: url( ../../../fonts/slab/slaab-bold.woff2 ) format( 'woff2' );
+}
+
+@font-face {
+	font-family: 'Slaab';
+	font-weight: 700;
+	font-style: italic;
+	font-display: swap;
+	src: url( ../../../fonts/slab/slaab-bold.woff2 ) format( 'woff2' );
+}
+
+@font-face {
+	font-family: 'Slaab';
+	font-weight: 800;
+	font-style: normal;
+	font-display: swap;
+	src: url( ../../../fonts/slab/slaab-extra-bold.woff2 ) format( 'woff2' );
+}
+
+@font-face {
+	font-family: 'Slaab';
+	font-weight: 800;
+	font-style: italic;
+	font-display: swap;
+	src: url( ../../../fonts/slab/slaab-extra-bold.woff2 ) format( 'woff2' );
+}
+
+@font-face {
+	font-family: 'Slaab';
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+	src: url( ../../../fonts/slab/slaab-black.woff2 ) format( 'woff2' );
+}
+
+@font-face {
+	font-family: 'Slaab';
+	font-weight: 900;
+	font-style: italic;
+	font-display: swap;
+	src: url( ../../../fonts/slab/slaab-black.woff2 ) format( 'woff2' );
+}
+
+$slaab_stack: 'Slaab', 'Rokkitt', 'Roboto Slab', 'Hoefler Text', Garamond, slab, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 
 $sans_stack: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 
@@ -26,49 +138,43 @@ $sans_stack: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans,
 :root {
 
 	// General.
-	--cfe-fonts--display-stack: #{$rokkitt_stack};
+	--cfe-fonts--display-stack: #{$slaab_stack};
 	--cfe-body--font-family: #{$sans_stack};
-	--cfe-display--font-family: #{$rokkitt_stack};
+	--cfe-display--font-family: #{$slaab_stack};
 	--cfe-display--font-weight: 600;
-	--cfe-display--letter-spacing: -0.015em;
-	--cfe-heading-primary--font-family: #{$rokkitt_stack};
-	--cfe-heading-primary--font-size: 2.5rem;
-	--cfe-heading-primary--font-weight: 750;
-	--cfe-heading-primary--line-height: 1.1;
-	--cfe-heading-primary--letter-spacing: -0.025em;
-	--cfe-heading-secondary--font-family: #{$rokkitt_stack};
-	--cfe-heading-secondary--font-size: 1.625rem;
-	--cfe-heading-secondary--font-weight: 750;
-	--cfe-heading-secondary--line-height: 1.1;
+	--cfe-heading-primary--font-family: #{$slaab_stack};
+	--cfe-heading-primary--font-weight: 700;
+	--cfe-heading-secondary--font-family: #{$slaab_stack};
+	--cfe-heading-secondary--font-weight: 700;
 	--cfe-theme-icon--size: 0.825em;
 
 	// Buttons.
-	--cfe-button--font-size: 1.1875rem;
+	--cfe-button--font-size: 0.875rem;
 
 	// Header.
-	--cfe-site-title--font-family: #{$rokkitt_stack};
+	--cfe-site-title--font-family: #{$slaab_stack};
 	--cfe-site-title--line-height: 1;
 	--cfe-cover--full--title--font-size: clamp( 3rem, 4vw + 0.5rem, 5.5vw );
 	--cfe-cover--title--font-size: clamp( 3rem, 4vw + 0.5rem, 5.5vw );
 	--cfe-cover--title--line-height: 1;
 
 	// Navigation.
-	--cfe-site-nav--item--font-size: 1.1875rem;
+	--cfe-site-nav--item--font-size: 0.875rem;
 
 	// Page content.
 	--cfe-page-header--heading--font-size: 2.625rem;
 	--cfe-page-summary--page-header--heading--font-size: 2rem;
-	--cfe-page-summary--page-header--heading--font-weight: 800;
+	--cfe-page-summary--page-header--heading--font-weight: 700;
 	--cfe-page-summary--page-header--heading--line-height: 1.1;
 
-	--cfe-page-info--font-family: #{$rokkitt_stack};
+	--cfe-page-info--font-family: #{$slaab_stack};
 	--cfe-page-info--line-height: 1.1;
-	--cfe-page-info-author--font-weight: 550;
-	--cfe-page-info-date--font-weight: 550;
+	--cfe-page-info-author--font-weight: 600;
+	--cfe-page-info-date--font-weight: 600;
 
 	// Tabbed content.
-	--cfe-tabs--list--link--font-size: 1.0625rem;
+	--cfe-tabs--list--link--font-size: 0.875rem;
 
 	// Aside.
-	--cfe-sidebar--link--font-weight: 500;
+	--cfe-sidebar--link--font-weight: 600;
 }
