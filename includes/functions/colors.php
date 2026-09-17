@@ -116,20 +116,10 @@ function color_scheme_categories() {
 			'name'  => lang()->get( 'Design' ),
 			'about' => lang()->get( 'Color schemes based on design trends of the 20th century.' )
 		],
-		'gemstones' => [
-			'slug'  => 'gemstones',
-			'name'  => lang()->get( 'Gemstones' ),
-			'about' => lang()->get( 'The colors of common gemstones and birthstones.' )
-		],
 		'materials' => [
 			'slug'  => 'materials',
 			'name'  => lang()->get( 'Materials' ),
 			'about' => lang()->get( 'Inspired by various building & art materials.' )
-		],
-		'metallic' => [
-			'slug'  => 'metallic',
-			'name'  => lang()->get( 'Metallic' ),
-			'about' => lang()->get( 'Mostly monochromatic color schemes based on common metals.' )
 		],
 		'nature' => [
 			'slug'  => 'nature',
