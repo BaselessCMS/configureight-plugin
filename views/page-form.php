@@ -56,7 +56,7 @@ $database_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=datab
 			<a class="nav-link" role="tab" aria-controls="footer" aria-selected="false" href="#footer"><?php lang()->p( 'Footer' ); ?></a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link" role="tab" aria-controls="style" aria-selected="false" href="#style"><?php lang()->p( 'Styles' ); ?></a>
+			<a class="nav-link" role="tab" aria-controls="styles" aria-selected="false" href="#styles"><?php lang()->p( 'Styles' ); ?></a>
 		</li>
 	</ul>
 
@@ -84,8 +84,8 @@ $database_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=datab
 	<div id="footer" class="tab-pane" role="tabpanel" aria-labelledby="footer">
 		<?php include( plugin()->phpPath() . '/views/fields-footer.php' ); ?>
 	</div>
-	<div id="style" class="tab-pane" role="tabpanel" aria-labelledby="style">
-		<?php include( plugin()->phpPath() . '/views/fields-style.php' ); ?>
+	<div id="styles" class="tab-pane" role="tabpanel" aria-labelledby="styles">
+		<?php include( plugin()->phpPath() . '/views/fields-styles.php' ); ?>
 	</div>
 </div>
 <?php if ( 'default' != plugin()->admin_theme() ) : ?>

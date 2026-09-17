@@ -91,6 +91,8 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 
 <h3 class="form-heading"><?php lang()->p( 'Appearance Options' ); ?></h3>
 
+<p class="form-description"><?php lang()->p( 'Select a color scheme for description and color thumbnails.' ); ?></p>
+
 <fieldset>
 
 	<legend class="screen-reader-text"><?php lang()->p( 'Appearance' ); ?></legend>
@@ -180,7 +182,7 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 			<ul id="form-color-thumbs-list">
 			<?php foreach ( $colors as $color => $option ) {
 
-				if ( plugin()->getValue( 'color_scheme' ) === $option['slug'] ) {
+				if ( ! in_array( plugin()->color_scheme(), custom_schemes() ) && plugin()->color_scheme() === $option['slug'] ) {
 					$display = 'flex';
 				} else {
 					$display = 'none';
@@ -614,6 +616,11 @@ jQuery(document).ready( function($) {
 
 	$( '#color_scheme' ).on( 'change', function() {
 		var scheme = $(this).val();
+		var custom = [
+			'bootstrap',
+			'tailwind',
+			'custom'
+		];
 
 		<?php foreach ( $colors as $color => $option ) :
 
@@ -625,12 +632,15 @@ jQuery(document).ready( function($) {
 				$( '#custom_scheme_from' ).val( '<?php echo $slug; ?>' );
 			}
 
-			// Custom scheme descriptions, labels, and color thumbnails.
 			$( '#scheme_desc_<?php echo $slug; ?>' ).css( 'display', 'block' );
-			$( '#light_scheme_label_<?php echo $slug; ?>' ).css( 'display', 'block' );
-			$( '#dark_scheme_label_<?php echo $slug; ?>' ).css( 'display', 'block' );
-			$( '#light_scheme_thumbs_<?php echo $slug; ?>' ).css( 'display', 'flex' );
-			$( '#dark_scheme_thumbs_<?php echo $slug; ?>' ).css( 'display', 'flex' );
+
+			// Show scheme thumbnails if not one of the custom schemes.
+			if ( $.inArray( scheme, custom ) == -1 ) {
+				$( '#light_scheme_label_<?php echo $slug; ?>' ).css( 'display', 'block' );
+				$( '#dark_scheme_label_<?php echo $slug; ?>' ).css( 'display', 'block' );
+				$( '#light_scheme_thumbs_<?php echo $slug; ?>' ).css( 'display', 'flex' );
+				$( '#dark_scheme_thumbs_<?php echo $slug; ?>' ).css( 'display', 'flex' );
+			}
 
 			// Custom scheme light colors.
 			$( '#color_body' ).val( '<?php echo $option['light']['body']; ?>' );
