@@ -387,26 +387,26 @@ function color_schemes() {
 			'name'     => lang()->get( 'Corporate' ),
 			'about'    => lang()->get( 'Clean & blue for a standard business look.' ),
 			'category' => 'scope',
-			'cover'    => '#185d89',
+			'cover'    => '#193cb8',
 			'light' => [
 				'body'  => '#ffffff',
 				'text'  => '#2c3e50',
-				'one'   => '#2779ae',
-				'two'   => '#324c67',
-				'three' => '#324c67',
-				'four'  => '#547190',
-				'five'  => '#324c67',
-				'six'   => '#547190'
+				'one'   => '#193cb8',
+				'two'   => '#1447e6',
+				'three' => '#1c398e',
+				'four'  => '#193cb8',
+				'five'  => '#1c398e',
+				'six'   => '#193cb8'
 			],
 			'dark' => [
-				'body'  => '#192e41',
-				'text'  => '#ecf0f1',
-				'one'   => '#3498db',
-				'two'   => '#2980b9',
-				'three' => '#2980b9',
-				'four'  => '#3498db',
-				'five'  => '#324c67',
-				'six'   => '#2980b9'
+				'body'  => '#162456',
+				'text'  => '#eff6ff',
+				'one'   => '#2b7fff',
+				'two'   => '#1447e6',
+				'three' => '#1447e6',
+				'four'  => '#193cb8',
+				'five'  => '#193cb8',
+				'six'   => '#155dfc'
 			]
 		],
 		'portfolio' => [
@@ -796,28 +796,28 @@ function color_schemes() {
 		'brick' => [
 			'slug'     => 'brick',
 			'name'     => lang()->get( 'Brick' ),
-			'about'    => lang()->get( 'The reds of traditional bricks and Earth tones to represent mortar.' ),
+			'about'    => lang()->get( 'The reds of traditional clay bricks.' ),
 			'category' => 'materials',
-			'cover'    => '#bc3a24',
+			'cover'    => '#b01f26',
 			'light' => [
-				'body'  => '#fdfcf3',
-				'text'  => '#261a19',
-				'one'   => '#ba2d15',
-				'two'   => '#e33619',
-				'three' => '#ab2913',
-				'four'  => '#c63d1d',
-				'five'  => '#ab2913',
-				'six'   => '#bca443'
+				'body'  => '#fafaf9',
+				'text'  => '#460809',
+				'one'   => '#9f0712',
+				'two'   => '#ca3500',
+				'three' => '#9f0712',
+				'four'  => '#c10007',
+				'five'  => '#82181a',
+				'six'   => '#a6a09b'
 			],
 			'dark' => [
-				'body'  => '#261a19',
-				'text'  => '#fdfcf3',
-				'one'   => '#cbb86d',
-				'two'   => '#bca443',
-				'three' => '#84200f',
-				'four'  => '#ab2913',
-				'five'  => '#84200f',
-				'six'   => '#ab2913'
+				'body'  => '#460809',
+				'text'  => '#fafaf9',
+				'one'   => '#fb2c36',
+				'two'   => '#e22831',
+				'three' => '#c10007',
+				'four'  => '#9f0712',
+				'five'  => '#82181a',
+				'six'   => '#a6a09b'
 			]
 		],
 		'concrete' => [
@@ -825,7 +825,7 @@ function color_schemes() {
 			'name'     => lang()->get( 'Concrete' ),
 			'about'    => lang()->get( 'The bluish gray tones of concrete.' ),
 			'category' => 'materials',
-			'cover'    => '#808fa1',
+			'cover'    => '#acbec3',
 			'light' => [
 				'body'  => '#f9fcfc',
 				'text'  => '#262a2b',
@@ -852,7 +852,7 @@ function color_schemes() {
 			'name'     => lang()->get( 'Wood' ),
 			'about'    => lang()->get( 'The brown and tan colors of various wood types.' ),
 			'category' => 'materials',
-			'cover'    => '#733c18',
+			'cover'    => '#c1a060',
 			'light' => [
 				'body'  => '#fcfcf6',
 				'text'  => '#381c08',
@@ -879,7 +879,7 @@ function color_schemes() {
 		'beach' => [
 			'slug'     => 'beach',
 			'name'     => lang()->get( 'Beach' ),
-			'about'    => lang()->get( '' ),
+			'about'    => lang()->get( 'Cool water and warm sand.' ),
 			'category' => 'nature',
 			'cover'    => '#254d88',
 			'light' => [
@@ -906,7 +906,7 @@ function color_schemes() {
 		'forest' => [
 			'slug'     => 'forest',
 			'name'     => lang()->get( 'Forest' ),
-			'about'    => lang()->get( '' ),
+			'about'    => lang()->get( 'The brown and green of forests with the orange and yellow of autumn leaves.' ),
 			'category' => 'nature',
 			'cover'    => '#3e721a',
 			'light' => [
@@ -933,7 +933,7 @@ function color_schemes() {
 		'sunrise' => [
 			'slug'     => 'sunrise',
 			'name'     => lang()->get( 'Sunrise' ),
-			'about'    => lang()->get( '' ),
+			'about'    => lang()->get( 'The happy colors of early morning.' ),
 			'category' => 'nature',
 			'cover'    => '#ff637e',
 			'light' => [
@@ -960,7 +960,7 @@ function color_schemes() {
 		'sunset' => [
 			'slug'     => 'sunset',
 			'name'     => lang()->get( 'Sunset' ),
-			'about'    => lang()->get( '' ),
+			'about'    => lang()->get( 'The fiery colors of late evening.' ),
 			'category' => 'nature',
 			'cover'    => '#fe9a00',
 			'light' => [

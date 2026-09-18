@@ -1,21 +1,21 @@
 :host,
 :root {
-  --cfe-scheme-brick--body: #fdfcf3;
-  --cfe-scheme-brick--text: #261a19;
-  --cfe-scheme-brick--one: #ba2d15;
-  --cfe-scheme-brick--two: #e33619;
-  --cfe-scheme-brick--three: #ab2913;
-  --cfe-scheme-brick--four: #c63d1d;
-  --cfe-scheme-brick--five: #ab2913;
-  --cfe-scheme-brick--six: #bca443;
-  --cfe-scheme-brick--body--dark: #261a19;
-  --cfe-scheme-brick--text--dark: #fdfcf3;
-  --cfe-scheme-brick--one--dark: #cbb86d;
-  --cfe-scheme-brick--two--dark: #bca443;
-  --cfe-scheme-brick--three--dark: #84200f;
-  --cfe-scheme-brick--four--dark: #ab2913;
-  --cfe-scheme-brick--five--dark: #84200f;
-  --cfe-scheme-brick--six--dark: #ab2913;
+  --cfe-scheme-brick--body: #fafaf9;
+  --cfe-scheme-brick--text: #460809;
+  --cfe-scheme-brick--one: #9f0712;
+  --cfe-scheme-brick--two: #ca3500;
+  --cfe-scheme-brick--three: #9f0712;
+  --cfe-scheme-brick--four: #c10007;
+  --cfe-scheme-brick--five: #82181a;
+  --cfe-scheme-brick--six: #a6a09b;
+  --cfe-scheme-brick--body--dark: #460809;
+  --cfe-scheme-brick--text--dark: #fafaf9;
+  --cfe-scheme-brick--one--dark: #fb2c36;
+  --cfe-scheme-brick--two--dark: #e22831;
+  --cfe-scheme-brick--three--dark: #c10007;
+  --cfe-scheme-brick--four--dark: #9f0712;
+  --cfe-scheme-brick--five--dark: #82181a;
+  --cfe-scheme-brick--six--dark: #a6a09b;
 }
 
 .cfe-brick.brick-body {
