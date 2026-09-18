@@ -127,6 +127,21 @@ jQuery(document).ready( function($) {
 	});
 	$( '.custom-color' ).show();
 
+	// General color picker with alpha.
+	$( '.custom-rgba' ).spectrum({
+		type            : "component",
+		showAlpha       : true,
+		showPalette     : true,
+		showInput       : true,
+		palette         : [
+			['<?php echo implode( "', '", picker_colors_merged() ); ?>']
+		],
+		preferredFormat : "hex",
+		showInitial     : true,
+		allowEmpty      : false,
+		showSelectionPalette : true,
+	});
+
 	// Selected class for image uploads.
 	$( '.bookmark-select-label' ).click( function() {
 		$( '.bookmark-select-label' ).removeClass( 'selected' );
