@@ -127,7 +127,7 @@ jQuery(document).ready( function($) {
 	});
 	$( '.custom-color' ).show();
 
-	// General color picker with alpha.
+	// Alpha color picker.
 	$( '.custom-rgba' ).spectrum({
 		type            : "component",
 		showAlpha       : true,
