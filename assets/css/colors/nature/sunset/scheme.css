@@ -16,6 +16,7 @@
   --cfe-scheme-sunset--four_dark--dark: #ffdf20;
   --cfe-scheme-sunset--five_dark--dark: #e17100;
   --cfe-scheme-sunset--six_dark--dark: #ffd230;
+  --cfe-scheme-sunset--cover-blend--bg-color: c.$media;
 }
 
 .cfe-sunset.sunset-body {

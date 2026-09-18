@@ -16,6 +16,7 @@
   --cfe-scheme-deco--four--dark: #2da45d;
   --cfe-scheme-deco--five--dark: #8a2b26;
   --cfe-scheme-deco--six--dark: #c32323;
+  --cfe-scheme-deco--cover-blend--bg-color: c.$media;
 }
 
 .cfe-deco.deco-body {

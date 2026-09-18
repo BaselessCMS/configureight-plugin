@@ -16,6 +16,7 @@
   --cfe-scheme-highlighter--four--dark: #ffb70b;
   --cfe-scheme-highlighter--five--dark: #f99200;
   --cfe-scheme-highlighter--six--dark: #ffb70b;
+  --cfe-scheme-highlighter--cover-blend--bg-color: c.$media;
 }
 
 .cfe-highlighter.highlighter-body {

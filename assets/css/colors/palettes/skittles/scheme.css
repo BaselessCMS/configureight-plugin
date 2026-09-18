@@ -16,6 +16,7 @@
   --cfe-scheme-skittles--four--dark: #8fc33e;
   --cfe-scheme-skittles--five--dark: #5d2b7d;
   --cfe-scheme-skittles--six--dark: #a72d89;
+  --cfe-scheme-skittles--cover-blend--bg-color: c.$media;
 }
 
 .cfe-skittles.skittles-body {

@@ -16,6 +16,7 @@
   --cfe-scheme-wedding--four--dark: #21aed3;
   --cfe-scheme-wedding--five--dark: #f93c5a;
   --cfe-scheme-wedding--six--dark: #ff7575;
+  --cfe-scheme-wedding--cover-blend--bg-color: c.$media;
 }
 
 .cfe-wedding.wedding-body {

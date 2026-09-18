@@ -16,6 +16,7 @@
   --cfe-scheme-video--four--dark: #750093;
   --cfe-scheme-video--five--dark: #0eab8c;
   --cfe-scheme-video--six--dark: #00e0b4;
+  --cfe-scheme-video--cover-blend--bg-color: c.$media;
 }
 
 .cfe-video.video-body {

@@ -14,4 +14,5 @@
 	@each $name, $color in c.$dark {
 		--cfe-scheme-color--#{$name}--dark: #{$color};
 	}
+	--cfe-cover-blend--bg-color: c.$media;
 }

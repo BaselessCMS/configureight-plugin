@@ -16,6 +16,7 @@
   --cfe-scheme-sunrise--four_dark--dark: #ff637e;
   --cfe-scheme-sunrise--five_dark--dark: #462da9;
   --cfe-scheme-sunrise--six_dark--dark: #fb64b6;
+  --cfe-scheme-sunrise--cover-blend--bg-color: c.$media;
 }
 
 .cfe-sunrise.sunrise-body {

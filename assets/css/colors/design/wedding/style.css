@@ -16,4 +16,5 @@
   --cfe-scheme-color--four--dark: #21aed3;
   --cfe-scheme-color--five--dark: #f93c5a;
   --cfe-scheme-color--six--dark: #ff7575;
+  --cfe-cover-blend--bg-color: c.$media;
 }

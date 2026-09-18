@@ -16,6 +16,7 @@
   --cfe-scheme-bamboo--four--dark: #719a32;
   --cfe-scheme-bamboo--five--dark: #a0b43c;
   --cfe-scheme-bamboo--six--dark: #437742;
+  --cfe-scheme-bamboo--cover-blend--bg-color: c.$media;
 }
 
 .cfe-bamboo.bamboo-body {

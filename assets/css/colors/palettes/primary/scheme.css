@@ -16,6 +16,7 @@
   --cfe-scheme-primary--four--dark: #ee0000;
   --cfe-scheme-primary--five--dark: #ffdd00;
   --cfe-scheme-primary--six--dark: #8800aa;
+  --cfe-scheme-primary--cover-blend--bg-color: c.$media;
 }
 
 .cfe-primary.primary-body {

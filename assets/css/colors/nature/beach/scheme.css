@@ -16,6 +16,7 @@
   --cfe-scheme-beach--four_dark--dark: #d3b857;
   --cfe-scheme-beach--five_dark--dark: #204170;
   --cfe-scheme-beach--six_dark--dark: #d3b857;
+  --cfe-scheme-beach--cover-blend--bg-color: c.$media;
 }
 
 .cfe-beach.beach-body {

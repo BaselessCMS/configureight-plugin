@@ -16,6 +16,7 @@
   --cfe-scheme-brick--four--dark: #9f0712;
   --cfe-scheme-brick--five--dark: #82181a;
   --cfe-scheme-brick--six--dark: #a6a09b;
+  --cfe-scheme-brick--cover-blend--bg-color: c.$media;
 }
 
 .cfe-brick.brick-body {

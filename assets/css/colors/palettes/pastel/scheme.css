@@ -16,6 +16,7 @@
   --cfe-scheme-pastel--four--dark: #63dded;
   --cfe-scheme-pastel--five--dark: #feb486;
   --cfe-scheme-pastel--six--dark: #ffe47a;
+  --cfe-scheme-pastel--cover-blend--bg-color: c.$media;
 }
 
 .cfe-pastel.pastel-body {

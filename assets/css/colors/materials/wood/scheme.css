@@ -16,6 +16,7 @@
   --cfe-scheme-wood--four--dark: #502d16;
   --cfe-scheme-wood--five--dark: #824536;
   --cfe-scheme-wood--six--dark: #743020;
+  --cfe-scheme-wood--cover-blend--bg-color: c.$media;
 }
 
 .cfe-wood.wood-body {

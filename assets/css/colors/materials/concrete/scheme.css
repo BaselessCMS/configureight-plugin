@@ -16,6 +16,7 @@
   --cfe-scheme-concrete--four--dark: #9299a2;
   --cfe-scheme-concrete--five--dark: #acbec3;
   --cfe-scheme-concrete--six--dark: #869498;
+  --cfe-scheme-concrete--cover-blend--bg-color: c.$media;
 }
 
 .cfe-concrete.concrete-body {

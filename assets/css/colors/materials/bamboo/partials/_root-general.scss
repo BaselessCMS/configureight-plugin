@@ -14,6 +14,7 @@
 	@each $name, $color in c.$dark {
 		--cfe-scheme-color--#{$name}--dark: #{$color};
 	}
+	--cfe-cover-blend--bg-color: c.$media;
 
 	--cfe-button--primary--bg-color: var( --cfe-scheme-color--four );
 	--cfe-button--primary--bg-color--dark: var( --cfe-scheme-color--four );

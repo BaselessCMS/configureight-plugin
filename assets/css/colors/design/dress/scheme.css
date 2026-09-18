@@ -16,6 +16,7 @@
   --cfe-scheme-dress--four--dark: #093d90;
   --cfe-scheme-dress--five--dark: #ff1d76;
   --cfe-scheme-dress--six--dark: #ff5599;
+  --cfe-scheme-dress--cover-blend--bg-color: c.$media;
 }
 
 .cfe-dress.dress-body {

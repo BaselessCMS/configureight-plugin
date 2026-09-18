@@ -16,6 +16,7 @@
   --cfe-scheme-club--four--dark: #4dce81;
   --cfe-scheme-club--five--dark: #ed7409;
   --cfe-scheme-club--six--dark: #ff8a0d;
+  --cfe-scheme-club--cover-blend--bg-color: c.$media;
 }
 
 .cfe-club.club-body {

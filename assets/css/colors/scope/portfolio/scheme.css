@@ -16,6 +16,7 @@
   --cfe-scheme-portfolio--four--dark: #777777;
   --cfe-scheme-portfolio--five--dark: #444444;
   --cfe-scheme-portfolio--six--dark: #333333;
+  --cfe-scheme-portfolio--cover-blend--bg-color: c.$media;
 }
 
 .cfe-portfolio.portfolio-body {

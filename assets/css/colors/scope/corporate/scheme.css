@@ -16,6 +16,7 @@
   --cfe-scheme-corporate--four--dark: #3498db;
   --cfe-scheme-corporate--five--dark: #324c67;
   --cfe-scheme-corporate--six--dark: #2980b9;
+  --cfe-scheme-corporate--cover-blend--bg-color: c.$media;
 }
 
 .cfe-corporate.corporate-body {

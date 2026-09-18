@@ -16,6 +16,7 @@
   --cfe-scheme-forest--four_dark--dark: #ff6600;
   --cfe-scheme-forest--five_dark--dark: #46a109;
   --cfe-scheme-forest--six_dark--dark: #f5a313;
+  --cfe-scheme-forest--cover-blend--bg-color: c.$media;
 }
 
 .cfe-forest.forest-body {

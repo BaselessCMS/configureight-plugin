@@ -16,6 +16,7 @@
   --cfe-scheme-diner--four--dark: #ff4c93;
   --cfe-scheme-diner--five--dark: #cc0000;
   --cfe-scheme-diner--six--dark: #ff0000;
+  --cfe-scheme-diner--cover-blend--bg-color: c.$media;
 }
 
 .cfe-diner.diner-body {

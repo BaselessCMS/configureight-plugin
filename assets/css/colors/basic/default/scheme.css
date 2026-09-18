@@ -16,6 +16,7 @@
   --cfe-scheme-default--four--dark: #555555;
   --cfe-scheme-default--five--dark: #333333;
   --cfe-scheme-default--six--dark: #555555;
+  --cfe-scheme-default--cover-blend--bg-color: c.$media;
 }
 
 .cfe-default.default-body {

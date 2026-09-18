@@ -16,6 +16,7 @@
   --cfe-scheme-kitchen--four--dark: #93ad00;
   --cfe-scheme-kitchen--five--dark: #b02b14;
   --cfe-scheme-kitchen--six--dark: #e03214;
+  --cfe-scheme-kitchen--cover-blend--bg-color: c.$media;
 }
 
 .cfe-kitchen.kitchen-body {
