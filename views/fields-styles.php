@@ -669,7 +669,7 @@ jQuery(document).ready( function($) {
 			$( '#loader_text_color_dark' ).val( '<?php echo $option['dark']['text']; ?>' );
 
 			if ( 'default' != scheme ) {
-				$( '#cover_blend' ).val( '<?php echo ( isset( $option['cover'] ) ? $option['cover'] : $option['light']['three'] ); ?>' );
+				$( '#cover_blend' ).val( '<?php echo ( isset( $option['media'] ) ? $option['media'] : $option['light']['three'] ); ?>' );
 			} else {
 				$( '#cover_blend' ).val( '<?php echo $this->dbFields['cover_blend']; ?>' );
 			}

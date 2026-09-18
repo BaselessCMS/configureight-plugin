@@ -172,7 +172,7 @@ function bootstrap_scheme() {
 			'name'     => lang()->get( 'Bootstrap Colors' ),
 			'about'    => lang()->get( 'The colors included with the <a href="https://getbootstrap.com/docs/5.0/utilities/colors/#variables" target="_blank" rel="noopener noreferrer">Bootstrap</a> framework for website UI and frontend theme building, expanded with tints & shades.' ),
 			'category' => 'custom',
-			'cover'    => plugin()->cover_blend(),
+			'media'    => plugin()->cover_blend(),
 			'light'    => [
 				'body'  => color( 'body' ),
 				'text'  => color( 'text' ),
@@ -215,7 +215,7 @@ function tailwind_scheme() {
 			'name'     => lang()->get( 'Tailwind Colors' ),
 			'about'    => lang()->get( 'The complete selection of colors included with the <a href="https://tailwindcss.com/docs/colors" target="_blank" rel="noopener noreferrer">Tailwind CSS</a> framework for website UI and frontend theme building.' ),
 			'category' => 'custom',
-			'cover'    => plugin()->cover_blend(),
+			'media'    => plugin()->cover_blend(),
 			'light'    => [
 				'body'  => color( 'body' ),
 				'text'  => color( 'text' ),
@@ -268,7 +268,7 @@ function custom_scheme() {
 			'name'     => lang()->get( 'Custom' ),
 			'about'    => $about,
 			'category' => 'custom',
-			'cover'    => plugin()->cover_blend(),
+			'media'    => plugin()->cover_blend(),
 			'light'    => [
 				'body'  => color( 'body' ),
 				'text'  => color( 'text' ),
@@ -331,7 +331,7 @@ function color_schemes() {
 			'name'     => lang()->get( 'Default' ),
 			'about'    => lang()->get( 'A plain and simple color scheme.' ),
 			'category' => 'basic',
-			'cover'    => '#0044aa',
+			'media'    => '#0044aa',
 			'light' => [
 				'body'  => '#ffffff',
 				'text'  => '#333333',
@@ -358,7 +358,7 @@ function color_schemes() {
 			'name'     => lang()->get( 'Dark' ),
 			'about'    => lang()->get( 'A plain and simple dark color scheme.' ),
 			'category' => 'basic',
-			'cover'    => '#355e9a',
+			'media'    => '#355e9a',
 			'light' => [
 				'body'  => '#1e1e1e',
 				'text'  => '#eeeeee',
@@ -387,7 +387,7 @@ function color_schemes() {
 			'name'     => lang()->get( 'Corporate' ),
 			'about'    => lang()->get( 'Clean & blue for a standard business look.' ),
 			'category' => 'scope',
-			'cover'    => '#193cb8',
+			'media'    => '#193cb8',
 			'light' => [
 				'body'  => '#ffffff',
 				'text'  => '#2c3e50',
@@ -414,7 +414,7 @@ function color_schemes() {
 			'name'     => lang()->get( 'Portfolio' ),
 			'about'    => lang()->get( 'A clean and unobtrusive look for portfolios & artwork.' ),
 			'category' => 'scope',
-			'cover'    => '#888888',
+			'media'    => '#888888',
 			'light' => [
 				'body'  => '#ffffff',
 				'text'  => '#444444',
@@ -441,7 +441,7 @@ function color_schemes() {
 			'name'     => lang()->get( 'Video' ),
 			'about'    => lang()->get( 'A dark theme for showcasing embedded videos.' ),
 			'category' => 'scope',
-			'cover'    => '#dd0000',
+			'media'    => '#dd0000',
 			'light' => [
 				'body'  => '#070707',
 				'text'  => '#f7f7f7',
@@ -470,7 +470,7 @@ function color_schemes() {
 			'name'     => lang()->get( '1930s Club' ),
 			'about'    => lang()->get( 'Inspired by the early, colorful jazz & big-band nightclubs.' ),
 			'category' => 'design',
-			'cover'    => '#2ea65e',
+			'media'    => '#2ea65e',
 			'light' => [
 				'body'  => '#ffffff',
 				'text'  => '#2a180c',
@@ -497,7 +497,7 @@ function color_schemes() {
 			'name'     => lang()->get( '1940s Hotel' ),
 			'about'    => lang()->get( 'Those nostalgic Art Deco colors that define the period.' ),
 			'category' => 'design',
-			'cover'    => '#1d683b',
+			'media'    => '#1d683b',
 			'light' => [
 				'body'  => '#ffffff',
 				'text'  => '#3b291d',
@@ -524,7 +524,7 @@ function color_schemes() {
 			'name'     => lang()->get( '1950s Diner' ),
 			'about'    => lang()->get( 'Hotrods, black & white checkers, chrome, and neon.' ),
 			'category' => 'design',
-			'cover'    => '#cc0000',
+			'media'    => '#cc0000',
 			'light' => [
 				'body'  => '#ffffff',
 				'text'  => '#000000',
@@ -551,7 +551,7 @@ function color_schemes() {
 			'name'     => lang()->get( '1960s Dress' ),
 			'about'    => lang()->get( 'Those bright colors of mid-century ladies fashion.' ),
 			'category' => 'design',
-			'cover'    => '#0d3b85',
+			'media'    => '#0d3b85',
 			'light' => [
 				'body'  => '#ffffff',
 				'text'  => '#1b1b21',
@@ -578,7 +578,7 @@ function color_schemes() {
 			'name'     => lang()->get( '1970s Kitchen' ),
 			'about'    => lang()->get( 'Those Earthy tones that defined a moment in time.' ),
 			'category' => 'design',
-			'cover'    => '#536212',
+			'media'    => '#536212',
 			'light' => [
 				'body'  => '#ffffff',
 				'text'  => '#381f0f',
@@ -605,7 +605,7 @@ function color_schemes() {
 			'name'     => lang()->get( '1980s Video' ),
 			'about'    => lang()->get( 'When everything was going vibrant and digital.' ),
 			'category' => 'design',
-			'cover'    => '#58146a',
+			'media'    => '#58146a',
 			'light' => [
 				'body'  => '#ffffff',
 				'text'  => '#1b2025',
@@ -632,7 +632,7 @@ function color_schemes() {
 			'name'     => lang()->get( '1990s Wedding' ),
 			'about'    => lang()->get( 'Those soft, muted tones as we moved away from hot colors.' ),
 			'category' => 'design',
-			'cover'    => '#0b687f',
+			'media'    => '#0b687f',
 			'light' => [
 				'body'  => '#ffffff',
 				'text'  => '#28170b',
@@ -661,7 +661,7 @@ function color_schemes() {
 			'name'     => lang()->get( 'Highlighter' ),
 			'about'    => lang()->get( 'The bright, florescent colors of highlighter pens.' ),
 			'category' => 'palettes',
-			'cover'    => '#1bfc06',
+			'media'    => '#1bfc06',
 			'light' => [
 				'body'  => '#ffffff',
 				'text'  => '#333333',
@@ -688,7 +688,7 @@ function color_schemes() {
 			'name'     => lang()->get( 'Pastel' ),
 			'about'    => lang()->get( 'Soft, muted yet colorful tones.' ),
 			'category' => 'palettes',
-			'cover'    => '#f18ebf',
+			'media'    => '#f18ebf',
 			'light' => [
 				'body'  => '#ffffff',
 				'text'  => '#333333',
@@ -715,7 +715,7 @@ function color_schemes() {
 			'name'     => lang()->get( 'Color Wheel' ),
 			'about'    => lang()->get( 'A palette of the vibrant primary & secondary colors.' ),
 			'category' => 'palettes',
-			'cover'    => '#0000cc',
+			'media'    => '#0000cc',
 			'light' => [
 				'body'  => '#ffffff',
 				'text'  => '#333333',
@@ -742,7 +742,7 @@ function color_schemes() {
 			'name'     => lang()->get( 'Skittles' ),
 			'about'    => lang()->get( 'Taste the rainbow.' ),
 			'category' => 'palettes',
-			'cover'    => '#5d2b7d',
+			'media'    => '#5d2b7d',
 			'light' => [
 				'body'  => '#ffffff',
 				'text'  => '#222222',
@@ -771,7 +771,7 @@ function color_schemes() {
 			'name'     => lang()->get( 'Bamboo' ),
 			'about'    => lang()->get( 'The colors of bamboo stalks, both fresh and dried.' ),
 			'category' => 'materials',
-			'cover'    => '#a0b43c',
+			'media'    => '#a0b43c',
 			'light' => [
 				'body'  => '#ffffff',
 				'text'  => '#272129',
@@ -798,7 +798,7 @@ function color_schemes() {
 			'name'     => lang()->get( 'Brick' ),
 			'about'    => lang()->get( 'The reds of traditional clay bricks.' ),
 			'category' => 'materials',
-			'cover'    => '#b01f26',
+			'media'    => '#b01f26',
 			'light' => [
 				'body'  => '#fafaf9',
 				'text'  => '#460809',
@@ -825,7 +825,7 @@ function color_schemes() {
 			'name'     => lang()->get( 'Concrete' ),
 			'about'    => lang()->get( 'The bluish gray tones of concrete.' ),
 			'category' => 'materials',
-			'cover'    => '#acbec3',
+			'media'    => '#acbec3',
 			'light' => [
 				'body'  => '#f9fcfc',
 				'text'  => '#262a2b',
@@ -852,7 +852,7 @@ function color_schemes() {
 			'name'     => lang()->get( 'Wood' ),
 			'about'    => lang()->get( 'The brown and tan colors of various wood types.' ),
 			'category' => 'materials',
-			'cover'    => '#c1a060',
+			'media'    => '#c1a060',
 			'light' => [
 				'body'  => '#fcfcf6',
 				'text'  => '#381c08',
@@ -881,7 +881,7 @@ function color_schemes() {
 			'name'     => lang()->get( 'Beach' ),
 			'about'    => lang()->get( 'Cool water and warm sand.' ),
 			'category' => 'nature',
-			'cover'    => '#254d88',
+			'media'    => '#254d88',
 			'light' => [
 				'body'  => '#ffffff',
 				'text'  => '#101e36',
@@ -908,7 +908,7 @@ function color_schemes() {
 			'name'     => lang()->get( 'Forest' ),
 			'about'    => lang()->get( 'The brown and green of forests with the orange and yellow of autumn leaves.' ),
 			'category' => 'nature',
-			'cover'    => '#3e721a',
+			'media'    => '#3e721a',
 			'light' => [
 				'body'  => '#ffffff',
 				'text'  => '#1e110a',
@@ -935,7 +935,7 @@ function color_schemes() {
 			'name'     => lang()->get( 'Sunrise' ),
 			'about'    => lang()->get( 'The happy colors of early morning.' ),
 			'category' => 'nature',
-			'cover'    => '#ff637e',
+			'media'    => '#ff637e',
 			'light' => [
 				'body'  => '#fffffe',
 				'text'  => '#052f4a',
@@ -962,7 +962,7 @@ function color_schemes() {
 			'name'     => lang()->get( 'Sunset' ),
 			'about'    => lang()->get( 'The fiery colors of late evening.' ),
 			'category' => 'nature',
-			'cover'    => '#fe9a00',
+			'media'    => '#fe9a00',
 			'light' => [
 				'body'  => '#fef3c6',
 				'text'  => '#024a70',
@@ -992,7 +992,7 @@ function color_schemes() {
 			'about'    => lang()->get( 'Kurenai, the crimson drawn from safflower petals, was a luxury dye reserved for the robes of high-ranking courtiers. Set against Kon, the darkest grade of indigo, the pair became a signature of formal attire from the Heian court through to Edo merchant households. Gofun is the matte white of temple painting; it reads as devotional, timeless, and unmistakably sacred.' ),
 			'category' => 'sanzo-wada',
 			'overall'  => lang()->get( 'Sanzo Wada (1883 - 1967) was a Japanese artist & costume designer who published <em>A Dictionary of Color Combinations</em> in two volumes (1933 - 1934) in order to document Japanese color tastes.' ),
-			'cover'    => '#9a2a2a',
+			'media'    => '#9a2a2a',
 			'light' => [
 				'body'  => '#f4eee0',
 				'text'  => '#1b2a4e',
@@ -1019,7 +1019,7 @@ function color_schemes() {
 			'name'     => lang()->get( 'Heian Era Two' ),
 			'about'    => lang()->get( 'Ruri is lapis lazuli, considered one of the seven treasures of Buddhism. It is the blue of sutra frontispieces and deity robes. Gofun is the matte white of temple painting; it reads as devotional, timeless, and unmistakably sacred. Kogane is a golden, muted brown tone.' ),
 			'category' => 'sanzo-wada',
-			'cover'    => '#1e4b8a',
+			'media'    => '#1e4b8a',
 			'light' => [
 				'body'  => '#f4eee0',
 				'text'  => '#183c6e',
@@ -1046,7 +1046,7 @@ function color_schemes() {
 			'name'     => lang()->get( 'Heian Era Three' ),
 			'about'    => lang()->get( 'Nadeshiko, the fringed pink flower, was the standard metaphor for Japanese feminine ideals in classical poetry. Mizu-iro, water color, is the blue of a cold spring seen through ferns. Kinari, unbleached natural, is a light, muted neutral tone.' ),
 			'category' => 'sanzo-wada',
-			'cover'    => '#f69bae',
+			'media'    => '#f69bae',
 			'light' => [
 				'body'  => '#f8f4e9',
 				'text'  => '#173868',
@@ -1073,7 +1073,7 @@ function color_schemes() {
 			'name'     => lang()->get( 'Heian Era Four' ),
 			'about'    => lang()->get( 'Fuji-iro, wisteria purple, is a light, cool lavender drawn from the pendulous flowers of the Fuji vine. Ai, true indigo, grounds it with depth. The pair is a signature of early summer gardens. The pair is a signature of early summer gardens. Gofun is the matte white of temple painting; it reads as devotional, timeless, and unmistakably sacred.' ),
 			'category' => 'sanzo-wada',
-			'cover'    => '#b398d7',
+			'media'    => '#b398d7',
 			'light' => [
 				'body'  => '#f4eee0',
 				'text'  => '#112536',
@@ -1225,9 +1225,9 @@ function current_cover_color() {
 	$custom_from = plugin()->custom_scheme_from();
 
 	if ( isset( $colors[$custom_from] ) ) {
-		$color = $colors[$custom_from]['cover'];
-	} elseif ( isset( $current['cover'] ) ) {
-		$color = $current['cover'];
+		$color = $colors[$custom_from]['media'];
+	} elseif ( isset( $current['media'] ) ) {
+		$color = $current['media'];
 	}
 	return $color;
 }
