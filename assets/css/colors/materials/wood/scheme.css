@@ -1,20 +1,20 @@
 :host,
 :root {
   --cfe-scheme-wood--body: #fcfcf6;
-  --cfe-scheme-wood--text: #261e18;
+  --cfe-scheme-wood--text: #381c08;
   --cfe-scheme-wood--one: #743020;
-  --cfe-scheme-wood--two: #894229;
-  --cfe-scheme-wood--three: #c8ab37;
-  --cfe-scheme-wood--four: #d3bc5f;
-  --cfe-scheme-wood--five: #502d16;
-  --cfe-scheme-wood--six: #784421;
-  --cfe-scheme-wood--body--dark: #261e18;
-  --cfe-scheme-wood--text--dark: #fcfcf6;
-  --cfe-scheme-wood--one--dark: #f1dc88;
-  --cfe-scheme-wood--two--dark: #d3b84f;
+  --cfe-scheme-wood--two: #90594d;
+  --cfe-scheme-wood--three: #c1a060;
+  --cfe-scheme-wood--four: #d6b26b;
+  --cfe-scheme-wood--five: #643c2e;
+  --cfe-scheme-wood--six: #8a5d4e;
+  --cfe-scheme-wood--body--dark: #2a1506;
+  --cfe-scheme-wood--text--dark: #fbf7f0;
+  --cfe-scheme-wood--one--dark: #f3e8d3;
+  --cfe-scheme-wood--two--dark: #ebd9b5;
   --cfe-scheme-wood--three--dark: #784421;
   --cfe-scheme-wood--four--dark: #502d16;
-  --cfe-scheme-wood--five--dark: #894229;
+  --cfe-scheme-wood--five--dark: #824536;
   --cfe-scheme-wood--six--dark: #743020;
 }
 

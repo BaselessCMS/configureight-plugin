@@ -1,21 +1,21 @@
 :host,
 :root {
-  --cfe-scheme-concrete--body: #f3f3f3;
-  --cfe-scheme-concrete--text: #333333;
-  --cfe-scheme-concrete--one: #666666;
-  --cfe-scheme-concrete--two: #888888;
-  --cfe-scheme-concrete--three: #9299a2;
-  --cfe-scheme-concrete--four: #a3a9b1;
-  --cfe-scheme-concrete--five: #9299a2;
-  --cfe-scheme-concrete--six: #a3a9b1;
-  --cfe-scheme-concrete--body--dark: #222222;
-  --cfe-scheme-concrete--text--dark: #eeeeee;
-  --cfe-scheme-concrete--one--dark: #eeeeee;
-  --cfe-scheme-concrete--two--dark: #ffffff;
-  --cfe-scheme-concrete--three--dark: #9299a2;
-  --cfe-scheme-concrete--four--dark: #a3a9b1;
-  --cfe-scheme-concrete--five--dark: #9299a2;
-  --cfe-scheme-concrete--six--dark: #a3a9b1;
+  --cfe-scheme-concrete--body: #f9fcfc;
+  --cfe-scheme-concrete--text: #262a2b;
+  --cfe-scheme-concrete--one: #737f82;
+  --cfe-scheme-concrete--two: #869498;
+  --cfe-scheme-concrete--three: #acbec3;
+  --cfe-scheme-concrete--four: #bfd3d9;
+  --cfe-scheme-concrete--five: #99a9ae;
+  --cfe-scheme-concrete--six: #acbec3;
+  --cfe-scheme-concrete--body--dark: #262a2b;
+  --cfe-scheme-concrete--text--dark: #ecf2f4;
+  --cfe-scheme-concrete--one--dark: #e5edf0;
+  --cfe-scheme-concrete--two--dark: #f2f6f7;
+  --cfe-scheme-concrete--three--dark: #acbec3;
+  --cfe-scheme-concrete--four--dark: #9299a2;
+  --cfe-scheme-concrete--five--dark: #acbec3;
+  --cfe-scheme-concrete--six--dark: #869498;
 }
 
 .cfe-concrete.concrete-body {

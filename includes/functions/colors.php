@@ -659,6 +659,7 @@ function color_schemes() {
 		'highlighter' => [
 			'slug'     => 'highlighter',
 			'name'     => lang()->get( 'Highlighter' ),
+			'about'    => lang()->get( 'The bright, florescent colors of highlighter pens.' ),
 			'category' => 'palettes',
 			'cover'    => '#ab7bf9',
 			'light' => [
@@ -685,6 +686,7 @@ function color_schemes() {
 		'pastel' => [
 			'slug'     => 'pastel',
 			'name'     => lang()->get( 'Pastel' ),
+			'about'    => lang()->get( 'Soft, muted yet colorful tones.' ),
 			'category' => 'palettes',
 			'cover'    => '#ab7bf9',
 			'light' => [
@@ -767,6 +769,7 @@ function color_schemes() {
 		'bamboo' => [
 			'slug'     => 'bamboo',
 			'name'     => lang()->get( 'Bamboo' ),
+			'about'    => lang()->get( 'The colors of bamboo stalks, both fresh and dried.' ),
 			'category' => 'materials',
 			'cover'    => '#a0b43c',
 			'light' => [
@@ -793,6 +796,7 @@ function color_schemes() {
 		'brick' => [
 			'slug'     => 'brick',
 			'name'     => lang()->get( 'Brick' ),
+			'about'    => lang()->get( 'The reds of traditional bricks and Earth tones to represent mortar.' ),
 			'category' => 'materials',
 			'cover'    => '#bc3a24',
 			'light' => [
@@ -819,52 +823,54 @@ function color_schemes() {
 		'concrete' => [
 			'slug'     => 'concrete',
 			'name'     => lang()->get( 'Concrete' ),
+			'about'    => lang()->get( 'The bluish gray tones of concrete.' ),
 			'category' => 'materials',
 			'cover'    => '#808fa1',
 			'light' => [
-				'body'  => '#f3f3f3',
-				'text'  => '#333333',
-				'one'   => '#666666',
-				'two'   => '#888888',
-				'three' => '#9299a2',
-				'four'  => '#a3a9b1',
-				'five'  => '#9299a2',
-				'six'   => '#a3a9b1'
+				'body'  => '#f9fcfc',
+				'text'  => '#262a2b',
+				'one'   => '#737f82',
+				'two'   => '#869498',
+				'three' => '#acbec3',
+				'four'  => '#bfd3d9',
+				'five'  => '#99a9ae',
+				'six'   => '#acbec3'
 			],
 			'dark' => [
-				'body'  => '#222222',
-				'text'  => '#eeeeee',
-				'one'   => '#eeeeee',
-				'two'   => '#ffffff',
-				'three' => '#9299a2',
-				'four'  => '#a3a9b1',
-				'five'  => '#9299a2',
-				'six'   => '#a3a9b1'
+				'body'  => '#262a2b',
+				'text'  => '#ecf2f4',
+				'one'   => '#e5edf0',
+				'two'   => '#f2f6f7',
+				'three' => '#acbec3',
+				'four'  => '#9299a2',
+				'five'  => '#acbec3',
+				'six'   => '#869498'
 			]
 		],
 		'wood' => [
 			'slug'     => 'wood',
 			'name'     => lang()->get( 'Wood' ),
+			'about'    => lang()->get( 'The brown and tan colors of various wood types.' ),
 			'category' => 'materials',
 			'cover'    => '#733c18',
 			'light' => [
 				'body'  => '#fcfcf6',
-				'text'  => '#261e18',
+				'text'  => '#381c08',
 				'one'   => '#743020',
-				'two'   => '#894229',
-				'three' => '#c8ab37',
-				'four'  => '#d3bc5f',
-				'five'  => '#502d16',
-				'six'   => '#784421'
+				'two'   => '#90594d',
+				'three' => '#c1a060',
+				'four'  => '#d6b26b',
+				'five'  => '#643c2e',
+				'six'   => '#8a5d4e'
 			],
 			'dark' => [
-				'body'  => '#261e18',
-				'text'  => '#fcfcf6',
-				'one'   => '#f1dc88',
-				'two'   => '#d3b84f',
+				'body'  => '#2a1506',
+				'text'  => '#fbf7f0',
+				'one'   => '#f3e8d3',
+				'two'   => '#ebd9b5',
 				'three' => '#784421',
 				'four'  => '#502d16',
-				'five'  => '#894229',
+				'five'  => '#824536',
 				'six'   => '#743020'
 			]
 		],
@@ -873,6 +879,7 @@ function color_schemes() {
 		'beach' => [
 			'slug'     => 'beach',
 			'name'     => lang()->get( 'Beach' ),
+			'about'    => lang()->get( '' ),
 			'category' => 'nature',
 			'cover'    => '#254d88',
 			'light' => [
@@ -899,6 +906,7 @@ function color_schemes() {
 		'forest' => [
 			'slug'     => 'forest',
 			'name'     => lang()->get( 'Forest' ),
+			'about'    => lang()->get( '' ),
 			'category' => 'nature',
 			'cover'    => '#3e721a',
 			'light' => [

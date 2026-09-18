@@ -10,3 +10,8 @@
 @use 'modules/colors' as c;
 
 @use 'partials/root-general';
+
+.dark-mode {
+	--cfe-button--primary--text-color--dark: #4c5457;
+	--cfe-button--primary--action--text-color--dark: #4c5457;
+}
