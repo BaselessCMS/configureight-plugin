@@ -4,6 +4,8 @@
 
 @use '../../../../modules/functions' as f;
 
+$palette: 'heian-02';
+$media: #1e4b8a;
 $light: (
 	'body'  : #f4eee0,
 	'text'  : f.darken( #1e4b8a, 40% ),

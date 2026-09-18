@@ -381,7 +381,7 @@ function color_schemes() {
 			]
 		],
 
-		// Business.
+		// Scope.
 		'corporate' => [
 			'slug'     => 'corporate',
 			'name'     => lang()->get( 'Corporate' ),
@@ -414,7 +414,7 @@ function color_schemes() {
 			'name'     => lang()->get( 'Portfolio' ),
 			'about'    => lang()->get( 'A clean and unobtrusive look for portfolios & artwork.' ),
 			'category' => 'scope',
-			'cover'    => '#355e9a',
+			'cover'    => '#888888',
 			'light' => [
 				'body'  => '#ffffff',
 				'text'  => '#444444',
@@ -441,7 +441,7 @@ function color_schemes() {
 			'name'     => lang()->get( 'Video' ),
 			'about'    => lang()->get( 'A dark theme for showcasing embedded videos.' ),
 			'category' => 'scope',
-			'cover'    => '#355e9a',
+			'cover'    => '#dd0000',
 			'light' => [
 				'body'  => '#070707',
 				'text'  => '#f7f7f7',
@@ -661,7 +661,7 @@ function color_schemes() {
 			'name'     => lang()->get( 'Highlighter' ),
 			'about'    => lang()->get( 'The bright, florescent colors of highlighter pens.' ),
 			'category' => 'palettes',
-			'cover'    => '#ab7bf9',
+			'cover'    => '#1bfc06',
 			'light' => [
 				'body'  => '#ffffff',
 				'text'  => '#333333',
@@ -688,7 +688,7 @@ function color_schemes() {
 			'name'     => lang()->get( 'Pastel' ),
 			'about'    => lang()->get( 'Soft, muted yet colorful tones.' ),
 			'category' => 'palettes',
-			'cover'    => '#ab7bf9',
+			'cover'    => '#f18ebf',
 			'light' => [
 				'body'  => '#ffffff',
 				'text'  => '#333333',

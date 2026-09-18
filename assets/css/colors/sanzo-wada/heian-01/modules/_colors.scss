@@ -2,8 +2,8 @@
 /// SCSS variables
 ///
 
-@use '../../../../modules/functions' as f;
-
+$palette: 'heian-01';
+$media: #9a2a2a;
 $light: (
 	'body'  : #f4eee0,
 	'text'  : #1b2a4e,

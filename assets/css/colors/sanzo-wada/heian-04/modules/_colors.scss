@@ -5,10 +5,13 @@
 @use 'sass:color';
 @use '../../../../modules/functions' as f;
 
+$palette: 'heian-04';
+
 // Modify original colors.
 $ai_dark: f.darken( #1c3d5a, 40% );
 $fuji_sat: color.adjust( #b5a6c9, $saturation: 20% );
 
+$media: #b398d7;
 $light: (
 	'body'  : #f4eee0,
 	'text'  : $ai_dark,
