@@ -1,0 +1,147 @@
+///
+/// Scheme font face preview
+///
+
+@font-face {
+	font-family: 'Slaab';
+	font-weight: 100;
+	font-style: normal;
+	font-display: swap;
+	src: url( ../../fonts/slab/slaab-hair.woff2 ) format( 'woff2' );
+}
+
+@font-face {
+	font-family: 'Slaab';
+	font-weight: 100;
+	font-style: italic;
+	font-display: swap;
+	src: url( ../../fonts/slab/slaab-hair.woff2 ) format( 'woff2' );
+}
+
+@font-face {
+	font-family: 'Slaab';
+	font-weight: 200;
+	font-style: normal;
+	font-display: swap;
+	src: url( ../../fonts/slab/slaab-extra-light.woff2 ) format( 'woff2' );
+}
+
+@font-face {
+	font-family: 'Slaab';
+	font-weight: 200;
+	font-style: italic;
+	font-display: swap;
+	src: url( ../../fonts/slab/slaab-extra-light.woff2 ) format( 'woff2' );
+}
+
+@font-face {
+	font-family: 'Slaab';
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+	src: url( ../../fonts/slab/slaab-light.woff2 ) format( 'woff2' );
+}
+
+@font-face {
+	font-family: 'Slaab';
+	font-weight: 300;
+	font-style: italic;
+	font-display: swap;
+	src: url( ../../fonts/slab/slaab-light.woff2 ) format( 'woff2' );
+}
+
+@font-face {
+	font-family: 'Slaab';
+	font-weight: 400 500;
+	font-style: normal;
+	font-display: swap;
+	src: url( ../../fonts/slab/slaab-regular.woff2 ) format( 'woff2' );
+}
+
+@font-face {
+	font-family: 'Slaab';
+	font-weight: 400 500;
+	font-style: italic;
+	font-display: swap;
+	src: url( ../../fonts/slab/slaab-regular.woff2 ) format( 'woff2' );
+}
+
+@font-face {
+	font-family: 'Slaab';
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+	src: url( ../../fonts/slab/slaab-semi-bold.woff2 ) format( 'woff2' );
+}
+
+@font-face {
+	font-family: 'Slaab';
+	font-weight: 600;
+	font-style: italic;
+	font-display: swap;
+	src: url( ../../fonts/slab/slaab-semi-bold.woff2 ) format( 'woff2' );
+}
+
+@font-face {
+	font-family: 'Slaab';
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+	src: url( ../../fonts/slab/slaab-bold.woff2 ) format( 'woff2' );
+}
+
+@font-face {
+	font-family: 'Slaab';
+	font-weight: 700;
+	font-style: italic;
+	font-display: swap;
+	src: url( ../../fonts/slab/slaab-bold.woff2 ) format( 'woff2' );
+}
+
+@font-face {
+	font-family: 'Slaab';
+	font-weight: 800;
+	font-style: normal;
+	font-display: swap;
+	src: url( ../../fonts/slab/slaab-extra-bold.woff2 ) format( 'woff2' );
+}
+
+@font-face {
+	font-family: 'Slaab';
+	font-weight: 800;
+	font-style: italic;
+	font-display: swap;
+	src: url( ../../fonts/slab/slaab-extra-bold.woff2 ) format( 'woff2' );
+}
+
+@font-face {
+	font-family: 'Slaab';
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+	src: url( ../../fonts/slab/slaab-black.woff2 ) format( 'woff2' );
+}
+
+@font-face {
+	font-family: 'Slaab';
+	font-weight: 900;
+	font-style: italic;
+	font-display: swap;
+	src: url( ../../fonts/slab/slaab-black.woff2 ) format( 'woff2' );
+}
+
+$slug: 'slab';
+
+$slaab_stack: "'Slaab', 'Rokkitt', 'Roboto Slab', 'Hoefler Text', Garamond, slab, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'";
+
+$sans_stack: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'";
+
+:host,
+:root {
+	--cfe-fpv--#{$slug}--general--family: #{$sans_stack};
+	--cfe-fpv--#{$slug}--display--font-family: #{$slaab_stack};
+	--cfe-fpv--#{$slug}--primary--font-size: 2rem;
+	--cfe-fpv--#{$slug}--secondary--font-size: 1.375rem;
+	--cfe-fpv--#{$slug}--display--font-size: 0.875rem;
+	--cfe-fpv--#{$slug}--general--font-size: 1rem;
+}

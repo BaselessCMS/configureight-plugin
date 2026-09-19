@@ -1,0 +1,14 @@
+///
+/// Compile all font scheme preview stylesheets
+///
+
+@use 'code/font-preview' as code;
+@use 'condensed/font-preview' as condensed;
+@use 'cosmo/font-preview' as cosmo;
+@use 'default/font-preview' as default;
+@use 'modern/font-preview' as modern;
+@use 'notepad/font-preview' as notepad;
+@use 'sans/font-preview' as sans;
+@use 'serif/font-preview' as serif;
+@use 'signage/font-preview' as signage;
+@use 'slab/font-preview' as slab;

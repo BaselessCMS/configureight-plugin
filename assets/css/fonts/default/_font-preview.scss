@@ -1,0 +1,13 @@
+///
+/// Scheme font face preview
+///
+
+$slug: 'default';
+
+$default_stack: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'";
+
+:host,
+:root {
+	--cfe-fpv--#{$slug}--general--font-family: #{$default_stack};
+	--cfe-fpv--#{$slug}--display--font-family: #{$default_stack};
+}

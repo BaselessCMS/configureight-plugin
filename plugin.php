@@ -732,16 +732,7 @@ class configureight extends Plugin {
 
 		$assets .= '<script type="text/javascript" src="' . $this->domainPath() . "assets/js/fields{$suffix}.js?version=" . $this->getMetadata( 'version' ) . '"></script>' . PHP_EOL;
 
-		// Get all font stylesheets for font preview feature.
-		foreach ( font_schemes() as $scheme ) {
-			$slug = $scheme['slug'];
-
-			// Skip current font scheme. It is fetched below.
-			if ( $slug == $this->font_scheme() ) {
-				// continue;
-			}
-			$assets .= '<link rel="stylesheet" type="text/css" href="' . $this->domainPath() . "assets/css/fonts/{$slug}/font-preview{$suffix}.css?version=" . $this->getMetadata( 'version' ) . '" />' . PHP_EOL;
-		}
+		$assets .= '<link rel="stylesheet" type="text/css" href="' . $this->domainPath() . "assets/css/fonts/preview{$suffix}.css?version=" . $this->getMetadata( 'version' ) . '" />' . PHP_EOL;
 
 		// End plugin page.
 		endif;
