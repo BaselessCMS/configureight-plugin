@@ -16,6 +16,7 @@
   --cfe-scheme-color--four--dark: #f69bae;
   --cfe-scheme-color--five--dark: #aadaef;
   --cfe-scheme-color--six--dark: #f69bae;
+  --cfe-cover-blend--bg-color: c.$media;
   --cfe-button--text-color: var( --cfe-scheme-color--text );
   --cfe-button--action--text-color: var( --cfe-scheme-color--text );
   --cfe-button--primary--text-color: var( --cfe-scheme-color--text );

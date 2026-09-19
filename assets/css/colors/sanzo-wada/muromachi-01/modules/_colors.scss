@@ -1,0 +1,26 @@
+///
+/// SCSS variables
+///
+
+$palette: 'muromachi-01';
+$media: #dccb7a;
+$light: (
+	'body'  : #f3ebda,
+	'text'  : #36372e,
+	'one'   : #7a7c68,
+	'two'   : #dccb7a,
+	'three' : #dccb7a,
+	'four'  : #878a74,
+	'five'  : #878a74,
+	'six'   : #dccb7a
+);
+$dark: (
+	'body'  : #36372e,
+	'text'  : #f3ebda,
+	'one'   : #dccb7a,
+	'two'   : #f3ebda,
+	'three' : #dccb7a,
+	'four'  : #878a74,
+	'five'  : #878a74,
+	'six'   : #dccb7a
+);

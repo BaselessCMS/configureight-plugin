@@ -1,0 +1,26 @@
+///
+/// SCSS variables
+///
+
+$palette: 'heian-05';
+$media: #3a7d7b;
+$light: (
+	'body'  : #ffffff,
+	'text'  : #1c1c1c,
+	'one'   : #3a7d7b,
+	'two'   : #1c1c1c,
+	'three' : #3a7d7b,
+	'four'  : #1c1c1c,
+	'five'  : #1c1c1c,
+	'six'   : #3a7d7b
+);
+$dark: (
+	'body'  : #1c1c1c,
+	'text'  : #ffffff,
+	'one'   : #3a7d7b,
+	'two'   : #ffffff,
+	'three' : #3a7d7b,
+	'four'  : #ffffff,
+	'five'  : #1c1c1c,
+	'six'   : #3a7d7b
+);

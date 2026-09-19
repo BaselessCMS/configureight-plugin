@@ -1094,6 +1094,168 @@ function color_schemes() {
 				'five'  => '#b398d7',
 				'six'   => '#1c3d5a'
 			]
+		],
+		'heian-05' => [
+			'slug'     => 'heian-05',
+			'name'     => lang()->get( 'Heian Era Five' ),
+			'about'    => lang()->get( 'Ao ranged from blue to green in classical Japanese, what we call teal. Shiro is pure white. Sumi is the black of stick ink ground on a slate inkstone.' ),
+			'category' => 'sanzo-wada',
+			'media'    => '#3a7d7b',
+			'light' => [
+				'body'  => '#ffffff',
+				'text'  => '#1c1c1c',
+				'one'   => '#3a7d7b',
+				'two'   => '#1c1c1c',
+				'three' => '#3a7d7b',
+				'four'  => '#1c1c1c',
+				'five'  => '#1c1c1c',
+				'six'   => '#3a7d7b'
+			],
+			'dark' => [
+				'body'  => '#1c1c1c',
+				'text'  => '#ffffff',
+				'one'   => '#3a7d7b',
+				'two'   => '#ffffff',
+				'three' => '#3a7d7b',
+				'four'  => '#ffffff',
+				'five'  => '#1c1c1c',
+				'six'   => '#3a7d7b'
+			]
+		],
+		'heian-06' => [
+			'slug'     => 'heian-06',
+			'name'     => lang()->get( 'Heian Era Six' ),
+			'about'    => lang()->get( 'Ominaeshi, one of the seven autumn plants, has tiny pale-yellow flowers that cluster in late summer fields. Asagi is the pale green-blue of young leek shoots, used here as the summer sky. Kinari, unbleached natural, is a light, muted neutral tone.' ),
+			'category' => 'sanzo-wada',
+			'media'    => '#88b9c4',
+			'light' => [
+				'body'  => '#f8f4e9',
+				'text'  => '#1c1c1c',
+				'one'   => '#88b9c4',
+				'two'   => '#dccb6e',
+				'three' => '#88b9c4',
+				'four'  => '#dccb6e',
+				'five'  => '#dccb6e',
+				'six'   => '#88b9c4'
+			],
+			'dark' => [
+				'body'  => '#1c1c1c',
+				'text'  => '#f8f4e9',
+				'one'   => '#88b9c4',
+				'two'   => '#dccb6e',
+				'three' => '#88b9c4',
+				'four'  => '#dccb6e',
+				'five'  => '#dccb6e',
+				'six'   => '#88b9c4'
+			]
+		],
+		'kamakura-01' => [
+			'slug'     => 'kamakura-01',
+			'name'     => lang()->get( 'Kamakura Era One' ),
+			'about'    => lang()->get( 'Gunjō is ground lapis lazuli, the blue of Buddhist statuary hair and illuminated sutras. Kogane is the color of gold leaf. Gofun, a chalk white made from ground oyster shell, is the traditional gesso of Japanese painting.' ),
+			'category' => 'sanzo-wada',
+			'media'    => '#264a6b',
+			'light' => [
+				'body'  => '#f8f4e9',
+				'text'  => '#264a6b',
+				'one'   => '#c5ac6b',
+				'two'   => '#264a6b',
+				'three' => '#264a6b',
+				'four'  => '#c5ac6b',
+				'five'  => '#264a6b',
+				'six'   => '#c5ac6b'
+			],
+			'dark' => [
+				'body'  => '#264a6b',
+				'text'  => '#f8f4e9',
+				'one'   => '#c5ac6b',
+				'two'   => '#f8f4e9',
+				'three' => '#264a6b',
+				'four'  => '#c5ac6b',
+				'five'  => '#264a6b',
+				'six'   => '#c5ac6b'
+			]
+		],
+		'kamakura-02' => [
+			'slug'     => 'kamakura-02',
+			'name'     => lang()->get( 'Kamakura Era Two' ),
+			'about'    => lang()->get( 'Moegi is the yellow-green of new shoots pushing through earth in early spring. Sumi is the black of stick ink ground on a slate inkstone. Kinari, unbleached natural, is a light, muted neutral tone.' ),
+			'category' => 'sanzo-wada',
+			'media'    => '#a7c957',
+			'light' => [
+				'body'  => '#f8f4e9',
+				'text'  => '#1c1c1c',
+				'one'   => '#86a146',
+				'two'   => '#a7c957',
+				'three' => '#a7c957',
+				'four'  => '#1c1c1c',
+				'five'  => '#1c1c1c',
+				'six'   => '#a7c957'
+			],
+			'dark' => [
+				'body'  => '#1c1c1c',
+				'text'  => '#f8f4e9',
+				'one'   => '#a7c957',
+				'two'   => '#f8f4e9',
+				'three' => '#a7c957',
+				'four'  => '#f8f4e9',
+				'five'  => '#1c1c1c',
+				'six'   => '#a7c957'
+			]
+		],
+		'kamakura-03' => [
+			'slug'     => 'kamakura-03',
+			'name'     => lang()->get( 'Kamakura Era Three' ),
+			'about'    => lang()->get( 'This is the imperial and Buddhist ceremonial combination, found on lacquer boxes, shrine architecture, and festival floats. Shu, the bright orange-red of cinnabar, is for protection. Kuro, similar to India ink, is for ground. Kin, the color of gold, is for transcendence.' ),
+			'category' => 'sanzo-wada',
+			'media'    => '#c8352b',
+			'light' => [
+				'body'  => '#f8f4e9',
+				'text'  => '#141414',
+				'one'   => '#d4af37',
+				'two'   => '#c8352b',
+				'three' => '#c8352b',
+				'four'  => '#d4af37',
+				'five'  => '#c8352b',
+				'six'   => '#d4af37'
+			],
+			'dark' => [
+				'body'  => '#141414',
+				'text'  => '#f8f4e9',
+				'one'   => '#d4af37',
+				'two'   => '#c8352b',
+				'three' => '#c8352b',
+				'four'  => '#d4af37',
+				'five'  => '#c8352b',
+				'six'   => '#d4af37'
+			]
+		],
+		'muromachi-01' => [
+			'slug'     => 'muromachi-01',
+			'name'     => lang()->get( 'Muromachi Era One' ),
+			'about'    => lang()->get( 'Kariyasu, an earthy yellow, represents wild mountain grass. Rikyū-nezumi, an olive-tinted grey, is named for a 16th-century tea master. Neri-iro is silk white.' ),
+			'category' => 'sanzo-wada',
+			'media'    => '#dccb7a',
+			'light' => [
+				'body'  => '#f3ebda',
+				'text'  => '#292923',
+				'one'   => '#7a7c68',
+				'two'   => '#dccb7a',
+				'three' => '#dccb7a',
+				'four'  => '#878a74',
+				'five'  => '#878a74',
+				'six'   => '#dccb7a'
+			],
+			'dark' => [
+				'body'  => '#292923',
+				'text'  => '#f3ebda',
+				'one'   => '#dccb7a',
+				'two'   => '#f3ebda',
+				'three' => '#dccb7a',
+				'four'  => '#878a74',
+				'five'  => '#878a74',
+				'six'   => '#dccb7a'
+			]
 		]
 	];
 
