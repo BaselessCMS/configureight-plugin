@@ -31,7 +31,7 @@ $database_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=datab
 <div class="tab-content hide-if-no-js" data-toggle="tabslet" data-deeplinking="true" data-animation="true">
 
 	<ul class="nav nav-tabs" id="nav-tabs" role="tablist">
-		<li class="nav-item">
+		<li class="nav-item active">
 			<a class="nav-link" role="tab" aria-controls="general" aria-selected="false" href="#general"><?php lang()->p( 'General' ); ?></a>
 		</li>
 		<li class="nav-item">
@@ -60,7 +60,7 @@ $database_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=datab
 		</li>
 	</ul>
 
-	<div id="general" class="tab-pane" role="tabpanel" aria-labelledby="general">
+	<div id="general" class="tab-pane active" role="tabpanel" aria-labelledby="general">
 		<?php include( plugin()->phpPath() . '/views/fields-general.php' ); ?>
 	</div>
 	<div id="header" class="tab-pane" role="tabpanel" aria-labelledby="header">
