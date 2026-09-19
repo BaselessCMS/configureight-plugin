@@ -1013,6 +1013,87 @@ function color_schemes() {
 		],
 
 		// Sanzo Wada
+		'edo-01' => [
+			'slug'     => 'edo-01',
+			'name'     => lang()->get( 'Bitter Orange & Navy' ),
+			'about'    => lang()->get( 'From the Edo era. Daidai is the bitter orange used in New Year decoration. Kon is the darkest grade of indigo, Hanada is a mid-tone indigo. Gofun, a chalk white made from ground oyster shell, is the traditional gesso of Japanese painting.' ),
+			'category' => 'sanzo-wada',
+			'media'    => '#f28c28',
+			'light' => [
+				'body'  => '#f3ebda',
+				'text'  => '#1b2a4e',
+				'one'   => '#3c6e8f',
+				'two'   => '#f28c28',
+				'three' => '#f28c28',
+				'four'  => '#1b2a4e',
+				'five'  => '#1b2a4e',
+				'six'   => '#f28c28'
+			],
+			'dark' => [
+				'body'  => '#131d37',
+				'text'  => '#f3ebda',
+				'one'   => '#f49d48',
+				'two'   => '#f28c28',
+				'three' => '#ce7722',
+				'four'  => '#f28c28',
+				'five'  => '#1b2a4e',
+				'six'   => '#f28c28'
+			]
+		],
+		'edo-02' => [
+			'slug'     => 'edo-02',
+			'name'     => lang()->get( 'Kerria Gold & Chestnut' ),
+			'about'    => lang()->get( 'From the Edo era. Yamabuki is the saturated gold of the Kerria rose in bloom. Kuri-iro is the rich brown of roasted chestnuts. Kinari is the natural color of undyed hemp and silk.' ),
+			'category' => 'sanzo-wada',
+			'media'    => '#f5b71c',
+			'light' => [
+				'body'  => '#f8f4e9',
+				'text'  => '#361f13',
+				'one'   => '#6b3e26',
+				'two'   => '#f5b71c',
+				'three' => '#f5b71c',
+				'four'  => '#6b3e26',
+				'five'  => '#6b3e26',
+				'six'   => '#f5b71c'
+			],
+			'dark' => [
+				'body'  => '#20130b',
+				'text'  => '#f8f4e9',
+				'one'   => '#da7a4b',
+				'two'   => '#f5b71c',
+				'three' => '#f5b71c',
+				'four'  => '#6b3e26',
+				'five'  => '#6b3e26',
+				'six'   => '#f5b71c'
+			]
+		],
+		'edo-03' => [
+			'slug'     => 'edo-03',
+			'name'     => lang()->get( 'Pale Cherry & Tea' ),
+			'about'    => lang()->get( 'From the Edo era. Usubeni is the pink of lightly faded cherry petals. Cha-iro is the brown of roasted tea leaves. Kinari is the natural color of undyed hemp and silk.' ),
+			'category' => 'sanzo-wada',
+			'media'    => '#d19494',
+			'light' => [
+				'body'  => '#f8f4e9',
+				'text'  => '#36281e',
+				'one'   => '#6c4f3b',
+				'two'   => '#e8a4a4',
+				'three' => '#e8a4a4',
+				'four'  => '#6c4f3b',
+				'five'  => '#6c4f3b',
+				'six'   => '#e8a4a4'
+			],
+			'dark' => [
+				'body'  => '#2b2018',
+				'text'  => '#f8f4e9',
+				'one'   => '#e8a4a4',
+				'two'   => '#897262',
+				'three' => '#e8a4a4',
+				'four'  => '#897262',
+				'five'  => '#6c4f3b',
+				'six'   => '#e8a4a4'
+			]
+		],
 		'heian-01' => [
 			'slug'     => 'heian-01',
 			'name'     => lang()->get( 'Crimson Safflower & Navy' ),

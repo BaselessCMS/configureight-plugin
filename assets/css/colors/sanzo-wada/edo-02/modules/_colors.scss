@@ -1,0 +1,29 @@
+///
+/// SCSS variables
+///
+
+@use 'sass:color';
+@use '../../../../modules/functions' as f;
+
+$palette: 'edo-02';
+$media: #f5b71c;
+$light: (
+	'body'  : #f8f4e9,
+	'text'  : f.darken( #6b3e26, 50% ),
+	'one'   : #6b3e26,
+	'two'   : #f5b71c,
+	'three' : #f5b71c,
+	'four'  : #6b3e26,
+	'five'  : #6b3e26,
+	'six'   : #f5b71c
+);
+$dark: (
+	'body'  : f.darken( #6b3e26, 70% ),
+	'text'  : #f8f4e9,
+	'one'   : #da7a4b,
+	'two'   : #f5b71c,
+	'three' : #f5b71c,
+	'four'  : #6b3e26,
+	'five'  : #6b3e26,
+	'six'   : #f5b71c
+);

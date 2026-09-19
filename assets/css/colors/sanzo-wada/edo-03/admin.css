@@ -1,0 +1,20 @@
+:host,
+:root {
+  --cfe-scheme-color--body: #f8f4e9;
+  --cfe-scheme-color--text: #36281e;
+  --cfe-scheme-color--one: #6c4f3b;
+  --cfe-scheme-color--two: #e8a4a4;
+  --cfe-scheme-color--three: #e8a4a4;
+  --cfe-scheme-color--four: #6c4f3b;
+  --cfe-scheme-color--five: #6c4f3b;
+  --cfe-scheme-color--six: #e8a4a4;
+  --cfe-scheme-color--body--dark: #2b2018;
+  --cfe-scheme-color--text--dark: #f8f4e9;
+  --cfe-scheme-color--one--dark: #e8a4a4;
+  --cfe-scheme-color--two--dark: #988476;
+  --cfe-scheme-color--three--dark: #e8a4a4;
+  --cfe-scheme-color--four--dark: #6b3e26;
+  --cfe-scheme-color--five--dark: #6c4f3b;
+  --cfe-scheme-color--six--dark: #e8a4a4;
+  --cfe-cover-blend--bg-color: #d19494;
+}
