@@ -930,6 +930,33 @@ function color_schemes() {
 				'six'   => '#f5a313'
 			]
 		],
+		'harvest-moon' => [
+			'slug'     => 'harvest-moon',
+			'name'     => lang()->get( 'Harvest Moon' ),
+			'about'    => lang()->get( 'The big, beautiful Autumn moon in the night sky. <br />This is a dark-only scheme.' ),
+			'category' => 'nature',
+			'media'    => '#eba900',
+			'light' => [
+				'body'  => '#0d1526',
+				'text'  => '#dee8f4',
+				'one'   => '#eba900',
+				'two'   => '#d68f00',
+				'three' => '#eba900',
+				'four'  => '#d68f00',
+				'five'  => '#142343',
+				'six'   => '#eba900'
+			],
+			'dark' => [
+				'body'  => '#0d1526',
+				'text'  => '#dee8f4',
+				'one'   => '#eba900',
+				'two'   => '#d68f00',
+				'three' => '#eba900',
+				'four'  => '#d68f00',
+				'five'  => '#142343',
+				'six'   => '#eba900'
+			]
+		],
 		'sunrise' => [
 			'slug'     => 'sunrise',
 			'name'     => lang()->get( 'Sunrise' ),

@@ -1,0 +1,901 @@
+:host,
+:root {
+  --cfe-scheme-harvest-moon--body: #0d1526;
+  --cfe-scheme-harvest-moon--text: #dee8f4;
+  --cfe-scheme-harvest-moon--one: #eba900;
+  --cfe-scheme-harvest-moon--two: #d68f00;
+  --cfe-scheme-harvest-moon--three: #eba900;
+  --cfe-scheme-harvest-moon--four: #d68f00;
+  --cfe-scheme-harvest-moon--five: #142343;
+  --cfe-scheme-harvest-moon--six: #eba900;
+  --cfe-scheme-harvest-moon--body--dark: #0d1526;
+  --cfe-scheme-harvest-moon--text--dark: #dee8f4;
+  --cfe-scheme-harvest-moon--one--dark: #eba900;
+  --cfe-scheme-harvest-moon--two--dark: #d68f00;
+  --cfe-scheme-harvest-moon--three--dark: #eba900;
+  --cfe-scheme-harvest-moon--four--dark: #d68f00;
+  --cfe-scheme-harvest-moon--five--dark: #142343;
+  --cfe-scheme-harvest-moon--six--dark: #eba900;
+  --cfe-scheme-harvest-moon--cover-blend--bg-color: c.$media;
+}
+
+.cfe-harvest-moon.harvest-moon-body {
+  color: var(--cfe--harvest-moon--body);
+}
+.cfe-harvest-moon.harvest-moon-body-bg {
+  background-color: var(--cfe--harvest-moon--body);
+}
+.cfe-harvest-moon.harvest-moon-body-decoration {
+  text-decoration-color: var(--cfe--harvest-moon--body);
+}
+.cfe-harvest-moon.harvest-moon-body-emphasis {
+  -webkit-text-emphasis-color: var(--cfe--harvest-moon--body);
+          text-emphasis-color: var(--cfe--harvest-moon--body);
+}
+.cfe-harvest-moon.harvest-moon-body-accent {
+  accent-color: var(--cfe--harvest-moon--body);
+}
+.cfe-harvest-moon.harvest-moon-body-caret {
+  caret-color: var(--cfe--harvest-moon--body);
+}
+.cfe-harvest-moon.harvest-moon-body-border {
+  border-color: var(--cfe--harvest-moon--body);
+}
+.cfe-harvest-moon.harvest-moon-body-outline {
+  outline-color: var(--cfe--harvest-moon--body);
+}
+.cfe-harvest-moon.harvest-moon-body-rule {
+  rule-color: var(--cfe--harvest-moon--body);
+}
+.cfe-harvest-moon.harvest-moon-body-column-rule {
+  -moz-column-rule-color: var(--cfe--harvest-moon--body);
+       column-rule-color: var(--cfe--harvest-moon--body);
+}
+.cfe-harvest-moon.harvest-moon-body-row-rule {
+  row-rule-color: var(--cfe--harvest-moon--body);
+}
+.cfe-harvest-moon.harvest-moon-body-fill {
+  fill: var(--cfe--harvest-moon--body);
+}
+.cfe-harvest-moon.harvest-moon-body-text-fill {
+  -webkit-text-fill-color: var(--cfe--harvest-moon--body);
+  text-fill-color: var(--cfe--harvest-moon--body);
+}
+.cfe-harvest-moon.harvest-moon-body-stroke {
+  stroke: var(--cfe--harvest-moon--body);
+}
+.cfe-harvest-moon.harvest-moon-body-text-stroke {
+  -webkit-text-stroke-color: var(--cfe--harvest-moon--body);
+  text-stroke-color: var(--cfe--harvest-moon--body);
+}
+.cfe-harvest-moon.harvest-moon-body-flood {
+  flood-color: var(--cfe--harvest-moon--body);
+}
+.cfe-harvest-moon.harvest-moon-body-stop {
+  stop-color: var(--cfe--harvest-moon--body);
+}
+.cfe-harvest-moon.harvest-moon-text {
+  color: var(--cfe--harvest-moon--text);
+}
+.cfe-harvest-moon.harvest-moon-text-bg {
+  background-color: var(--cfe--harvest-moon--text);
+}
+.cfe-harvest-moon.harvest-moon-text-decoration {
+  text-decoration-color: var(--cfe--harvest-moon--text);
+}
+.cfe-harvest-moon.harvest-moon-text-emphasis {
+  -webkit-text-emphasis-color: var(--cfe--harvest-moon--text);
+          text-emphasis-color: var(--cfe--harvest-moon--text);
+}
+.cfe-harvest-moon.harvest-moon-text-accent {
+  accent-color: var(--cfe--harvest-moon--text);
+}
+.cfe-harvest-moon.harvest-moon-text-caret {
+  caret-color: var(--cfe--harvest-moon--text);
+}
+.cfe-harvest-moon.harvest-moon-text-border {
+  border-color: var(--cfe--harvest-moon--text);
+}
+.cfe-harvest-moon.harvest-moon-text-outline {
+  outline-color: var(--cfe--harvest-moon--text);
+}
+.cfe-harvest-moon.harvest-moon-text-rule {
+  rule-color: var(--cfe--harvest-moon--text);
+}
+.cfe-harvest-moon.harvest-moon-text-column-rule {
+  -moz-column-rule-color: var(--cfe--harvest-moon--text);
+       column-rule-color: var(--cfe--harvest-moon--text);
+}
+.cfe-harvest-moon.harvest-moon-text-row-rule {
+  row-rule-color: var(--cfe--harvest-moon--text);
+}
+.cfe-harvest-moon.harvest-moon-text-fill {
+  fill: var(--cfe--harvest-moon--text);
+}
+.cfe-harvest-moon.harvest-moon-text-text-fill {
+  -webkit-text-fill-color: var(--cfe--harvest-moon--text);
+  text-fill-color: var(--cfe--harvest-moon--text);
+}
+.cfe-harvest-moon.harvest-moon-text-stroke {
+  stroke: var(--cfe--harvest-moon--text);
+}
+.cfe-harvest-moon.harvest-moon-text-text-stroke {
+  -webkit-text-stroke-color: var(--cfe--harvest-moon--text);
+  text-stroke-color: var(--cfe--harvest-moon--text);
+}
+.cfe-harvest-moon.harvest-moon-text-flood {
+  flood-color: var(--cfe--harvest-moon--text);
+}
+.cfe-harvest-moon.harvest-moon-text-stop {
+  stop-color: var(--cfe--harvest-moon--text);
+}
+.cfe-harvest-moon.harvest-moon-one {
+  color: var(--cfe--harvest-moon--one);
+}
+.cfe-harvest-moon.harvest-moon-one-bg {
+  background-color: var(--cfe--harvest-moon--one);
+}
+.cfe-harvest-moon.harvest-moon-one-decoration {
+  text-decoration-color: var(--cfe--harvest-moon--one);
+}
+.cfe-harvest-moon.harvest-moon-one-emphasis {
+  -webkit-text-emphasis-color: var(--cfe--harvest-moon--one);
+          text-emphasis-color: var(--cfe--harvest-moon--one);
+}
+.cfe-harvest-moon.harvest-moon-one-accent {
+  accent-color: var(--cfe--harvest-moon--one);
+}
+.cfe-harvest-moon.harvest-moon-one-caret {
+  caret-color: var(--cfe--harvest-moon--one);
+}
+.cfe-harvest-moon.harvest-moon-one-border {
+  border-color: var(--cfe--harvest-moon--one);
+}
+.cfe-harvest-moon.harvest-moon-one-outline {
+  outline-color: var(--cfe--harvest-moon--one);
+}
+.cfe-harvest-moon.harvest-moon-one-rule {
+  rule-color: var(--cfe--harvest-moon--one);
+}
+.cfe-harvest-moon.harvest-moon-one-column-rule {
+  -moz-column-rule-color: var(--cfe--harvest-moon--one);
+       column-rule-color: var(--cfe--harvest-moon--one);
+}
+.cfe-harvest-moon.harvest-moon-one-row-rule {
+  row-rule-color: var(--cfe--harvest-moon--one);
+}
+.cfe-harvest-moon.harvest-moon-one-fill {
+  fill: var(--cfe--harvest-moon--one);
+}
+.cfe-harvest-moon.harvest-moon-one-text-fill {
+  -webkit-text-fill-color: var(--cfe--harvest-moon--one);
+  text-fill-color: var(--cfe--harvest-moon--one);
+}
+.cfe-harvest-moon.harvest-moon-one-stroke {
+  stroke: var(--cfe--harvest-moon--one);
+}
+.cfe-harvest-moon.harvest-moon-one-text-stroke {
+  -webkit-text-stroke-color: var(--cfe--harvest-moon--one);
+  text-stroke-color: var(--cfe--harvest-moon--one);
+}
+.cfe-harvest-moon.harvest-moon-one-flood {
+  flood-color: var(--cfe--harvest-moon--one);
+}
+.cfe-harvest-moon.harvest-moon-one-stop {
+  stop-color: var(--cfe--harvest-moon--one);
+}
+.cfe-harvest-moon.harvest-moon-two {
+  color: var(--cfe--harvest-moon--two);
+}
+.cfe-harvest-moon.harvest-moon-two-bg {
+  background-color: var(--cfe--harvest-moon--two);
+}
+.cfe-harvest-moon.harvest-moon-two-decoration {
+  text-decoration-color: var(--cfe--harvest-moon--two);
+}
+.cfe-harvest-moon.harvest-moon-two-emphasis {
+  -webkit-text-emphasis-color: var(--cfe--harvest-moon--two);
+          text-emphasis-color: var(--cfe--harvest-moon--two);
+}
+.cfe-harvest-moon.harvest-moon-two-accent {
+  accent-color: var(--cfe--harvest-moon--two);
+}
+.cfe-harvest-moon.harvest-moon-two-caret {
+  caret-color: var(--cfe--harvest-moon--two);
+}
+.cfe-harvest-moon.harvest-moon-two-border {
+  border-color: var(--cfe--harvest-moon--two);
+}
+.cfe-harvest-moon.harvest-moon-two-outline {
+  outline-color: var(--cfe--harvest-moon--two);
+}
+.cfe-harvest-moon.harvest-moon-two-rule {
+  rule-color: var(--cfe--harvest-moon--two);
+}
+.cfe-harvest-moon.harvest-moon-two-column-rule {
+  -moz-column-rule-color: var(--cfe--harvest-moon--two);
+       column-rule-color: var(--cfe--harvest-moon--two);
+}
+.cfe-harvest-moon.harvest-moon-two-row-rule {
+  row-rule-color: var(--cfe--harvest-moon--two);
+}
+.cfe-harvest-moon.harvest-moon-two-fill {
+  fill: var(--cfe--harvest-moon--two);
+}
+.cfe-harvest-moon.harvest-moon-two-text-fill {
+  -webkit-text-fill-color: var(--cfe--harvest-moon--two);
+  text-fill-color: var(--cfe--harvest-moon--two);
+}
+.cfe-harvest-moon.harvest-moon-two-stroke {
+  stroke: var(--cfe--harvest-moon--two);
+}
+.cfe-harvest-moon.harvest-moon-two-text-stroke {
+  -webkit-text-stroke-color: var(--cfe--harvest-moon--two);
+  text-stroke-color: var(--cfe--harvest-moon--two);
+}
+.cfe-harvest-moon.harvest-moon-two-flood {
+  flood-color: var(--cfe--harvest-moon--two);
+}
+.cfe-harvest-moon.harvest-moon-two-stop {
+  stop-color: var(--cfe--harvest-moon--two);
+}
+.cfe-harvest-moon.harvest-moon-three {
+  color: var(--cfe--harvest-moon--three);
+}
+.cfe-harvest-moon.harvest-moon-three-bg {
+  background-color: var(--cfe--harvest-moon--three);
+}
+.cfe-harvest-moon.harvest-moon-three-decoration {
+  text-decoration-color: var(--cfe--harvest-moon--three);
+}
+.cfe-harvest-moon.harvest-moon-three-emphasis {
+  -webkit-text-emphasis-color: var(--cfe--harvest-moon--three);
+          text-emphasis-color: var(--cfe--harvest-moon--three);
+}
+.cfe-harvest-moon.harvest-moon-three-accent {
+  accent-color: var(--cfe--harvest-moon--three);
+}
+.cfe-harvest-moon.harvest-moon-three-caret {
+  caret-color: var(--cfe--harvest-moon--three);
+}
+.cfe-harvest-moon.harvest-moon-three-border {
+  border-color: var(--cfe--harvest-moon--three);
+}
+.cfe-harvest-moon.harvest-moon-three-outline {
+  outline-color: var(--cfe--harvest-moon--three);
+}
+.cfe-harvest-moon.harvest-moon-three-rule {
+  rule-color: var(--cfe--harvest-moon--three);
+}
+.cfe-harvest-moon.harvest-moon-three-column-rule {
+  -moz-column-rule-color: var(--cfe--harvest-moon--three);
+       column-rule-color: var(--cfe--harvest-moon--three);
+}
+.cfe-harvest-moon.harvest-moon-three-row-rule {
+  row-rule-color: var(--cfe--harvest-moon--three);
+}
+.cfe-harvest-moon.harvest-moon-three-fill {
+  fill: var(--cfe--harvest-moon--three);
+}
+.cfe-harvest-moon.harvest-moon-three-text-fill {
+  -webkit-text-fill-color: var(--cfe--harvest-moon--three);
+  text-fill-color: var(--cfe--harvest-moon--three);
+}
+.cfe-harvest-moon.harvest-moon-three-stroke {
+  stroke: var(--cfe--harvest-moon--three);
+}
+.cfe-harvest-moon.harvest-moon-three-text-stroke {
+  -webkit-text-stroke-color: var(--cfe--harvest-moon--three);
+  text-stroke-color: var(--cfe--harvest-moon--three);
+}
+.cfe-harvest-moon.harvest-moon-three-flood {
+  flood-color: var(--cfe--harvest-moon--three);
+}
+.cfe-harvest-moon.harvest-moon-three-stop {
+  stop-color: var(--cfe--harvest-moon--three);
+}
+.cfe-harvest-moon.harvest-moon-four {
+  color: var(--cfe--harvest-moon--four);
+}
+.cfe-harvest-moon.harvest-moon-four-bg {
+  background-color: var(--cfe--harvest-moon--four);
+}
+.cfe-harvest-moon.harvest-moon-four-decoration {
+  text-decoration-color: var(--cfe--harvest-moon--four);
+}
+.cfe-harvest-moon.harvest-moon-four-emphasis {
+  -webkit-text-emphasis-color: var(--cfe--harvest-moon--four);
+          text-emphasis-color: var(--cfe--harvest-moon--four);
+}
+.cfe-harvest-moon.harvest-moon-four-accent {
+  accent-color: var(--cfe--harvest-moon--four);
+}
+.cfe-harvest-moon.harvest-moon-four-caret {
+  caret-color: var(--cfe--harvest-moon--four);
+}
+.cfe-harvest-moon.harvest-moon-four-border {
+  border-color: var(--cfe--harvest-moon--four);
+}
+.cfe-harvest-moon.harvest-moon-four-outline {
+  outline-color: var(--cfe--harvest-moon--four);
+}
+.cfe-harvest-moon.harvest-moon-four-rule {
+  rule-color: var(--cfe--harvest-moon--four);
+}
+.cfe-harvest-moon.harvest-moon-four-column-rule {
+  -moz-column-rule-color: var(--cfe--harvest-moon--four);
+       column-rule-color: var(--cfe--harvest-moon--four);
+}
+.cfe-harvest-moon.harvest-moon-four-row-rule {
+  row-rule-color: var(--cfe--harvest-moon--four);
+}
+.cfe-harvest-moon.harvest-moon-four-fill {
+  fill: var(--cfe--harvest-moon--four);
+}
+.cfe-harvest-moon.harvest-moon-four-text-fill {
+  -webkit-text-fill-color: var(--cfe--harvest-moon--four);
+  text-fill-color: var(--cfe--harvest-moon--four);
+}
+.cfe-harvest-moon.harvest-moon-four-stroke {
+  stroke: var(--cfe--harvest-moon--four);
+}
+.cfe-harvest-moon.harvest-moon-four-text-stroke {
+  -webkit-text-stroke-color: var(--cfe--harvest-moon--four);
+  text-stroke-color: var(--cfe--harvest-moon--four);
+}
+.cfe-harvest-moon.harvest-moon-four-flood {
+  flood-color: var(--cfe--harvest-moon--four);
+}
+.cfe-harvest-moon.harvest-moon-four-stop {
+  stop-color: var(--cfe--harvest-moon--four);
+}
+.cfe-harvest-moon.harvest-moon-five {
+  color: var(--cfe--harvest-moon--five);
+}
+.cfe-harvest-moon.harvest-moon-five-bg {
+  background-color: var(--cfe--harvest-moon--five);
+}
+.cfe-harvest-moon.harvest-moon-five-decoration {
+  text-decoration-color: var(--cfe--harvest-moon--five);
+}
+.cfe-harvest-moon.harvest-moon-five-emphasis {
+  -webkit-text-emphasis-color: var(--cfe--harvest-moon--five);
+          text-emphasis-color: var(--cfe--harvest-moon--five);
+}
+.cfe-harvest-moon.harvest-moon-five-accent {
+  accent-color: var(--cfe--harvest-moon--five);
+}
+.cfe-harvest-moon.harvest-moon-five-caret {
+  caret-color: var(--cfe--harvest-moon--five);
+}
+.cfe-harvest-moon.harvest-moon-five-border {
+  border-color: var(--cfe--harvest-moon--five);
+}
+.cfe-harvest-moon.harvest-moon-five-outline {
+  outline-color: var(--cfe--harvest-moon--five);
+}
+.cfe-harvest-moon.harvest-moon-five-rule {
+  rule-color: var(--cfe--harvest-moon--five);
+}
+.cfe-harvest-moon.harvest-moon-five-column-rule {
+  -moz-column-rule-color: var(--cfe--harvest-moon--five);
+       column-rule-color: var(--cfe--harvest-moon--five);
+}
+.cfe-harvest-moon.harvest-moon-five-row-rule {
+  row-rule-color: var(--cfe--harvest-moon--five);
+}
+.cfe-harvest-moon.harvest-moon-five-fill {
+  fill: var(--cfe--harvest-moon--five);
+}
+.cfe-harvest-moon.harvest-moon-five-text-fill {
+  -webkit-text-fill-color: var(--cfe--harvest-moon--five);
+  text-fill-color: var(--cfe--harvest-moon--five);
+}
+.cfe-harvest-moon.harvest-moon-five-stroke {
+  stroke: var(--cfe--harvest-moon--five);
+}
+.cfe-harvest-moon.harvest-moon-five-text-stroke {
+  -webkit-text-stroke-color: var(--cfe--harvest-moon--five);
+  text-stroke-color: var(--cfe--harvest-moon--five);
+}
+.cfe-harvest-moon.harvest-moon-five-flood {
+  flood-color: var(--cfe--harvest-moon--five);
+}
+.cfe-harvest-moon.harvest-moon-five-stop {
+  stop-color: var(--cfe--harvest-moon--five);
+}
+.cfe-harvest-moon.harvest-moon-six {
+  color: var(--cfe--harvest-moon--six);
+}
+.cfe-harvest-moon.harvest-moon-six-bg {
+  background-color: var(--cfe--harvest-moon--six);
+}
+.cfe-harvest-moon.harvest-moon-six-decoration {
+  text-decoration-color: var(--cfe--harvest-moon--six);
+}
+.cfe-harvest-moon.harvest-moon-six-emphasis {
+  -webkit-text-emphasis-color: var(--cfe--harvest-moon--six);
+          text-emphasis-color: var(--cfe--harvest-moon--six);
+}
+.cfe-harvest-moon.harvest-moon-six-accent {
+  accent-color: var(--cfe--harvest-moon--six);
+}
+.cfe-harvest-moon.harvest-moon-six-caret {
+  caret-color: var(--cfe--harvest-moon--six);
+}
+.cfe-harvest-moon.harvest-moon-six-border {
+  border-color: var(--cfe--harvest-moon--six);
+}
+.cfe-harvest-moon.harvest-moon-six-outline {
+  outline-color: var(--cfe--harvest-moon--six);
+}
+.cfe-harvest-moon.harvest-moon-six-rule {
+  rule-color: var(--cfe--harvest-moon--six);
+}
+.cfe-harvest-moon.harvest-moon-six-column-rule {
+  -moz-column-rule-color: var(--cfe--harvest-moon--six);
+       column-rule-color: var(--cfe--harvest-moon--six);
+}
+.cfe-harvest-moon.harvest-moon-six-row-rule {
+  row-rule-color: var(--cfe--harvest-moon--six);
+}
+.cfe-harvest-moon.harvest-moon-six-fill {
+  fill: var(--cfe--harvest-moon--six);
+}
+.cfe-harvest-moon.harvest-moon-six-text-fill {
+  -webkit-text-fill-color: var(--cfe--harvest-moon--six);
+  text-fill-color: var(--cfe--harvest-moon--six);
+}
+.cfe-harvest-moon.harvest-moon-six-stroke {
+  stroke: var(--cfe--harvest-moon--six);
+}
+.cfe-harvest-moon.harvest-moon-six-text-stroke {
+  -webkit-text-stroke-color: var(--cfe--harvest-moon--six);
+  text-stroke-color: var(--cfe--harvest-moon--six);
+}
+.cfe-harvest-moon.harvest-moon-six-flood {
+  flood-color: var(--cfe--harvest-moon--six);
+}
+.cfe-harvest-moon.harvest-moon-six-stop {
+  stop-color: var(--cfe--harvest-moon--six);
+}
+.cfe-harvest-moon.harvest-moon-body-dark {
+  color: var(--cfe--harvest-moon--body--dark);
+}
+.cfe-harvest-moon.harvest-moon-body-bg-dark {
+  background-color: var(--cfe--harvest-moon--body--dark);
+}
+.cfe-harvest-moon.harvest-moon-body-decoration-dark {
+  text-decoration-color: var(--cfe--harvest-moon--body--dark);
+}
+.cfe-harvest-moon.harvest-moon-body-emphasis-dark {
+  -webkit-text-emphasis-color: var(--cfe--harvest-moon--body--dark);
+          text-emphasis-color: var(--cfe--harvest-moon--body--dark);
+}
+.cfe-harvest-moon.harvest-moon-body-accent-dark {
+  accent-color: var(--cfe--harvest-moon--body--dark);
+}
+.cfe-harvest-moon.harvest-moon-body-caret-dark {
+  caret-color: var(--cfe--harvest-moon--body--dark);
+}
+.cfe-harvest-moon.harvest-moon-body-border-dark {
+  border-color: var(--cfe--harvest-moon--body--dark);
+}
+.cfe-harvest-moon.harvest-moon-body-outline-dark {
+  outline-color: var(--cfe--harvest-moon--body--dark);
+}
+.cfe-harvest-moon.harvest-moon-body-rule-dark {
+  rule-color: var(--cfe--harvest-moon--body--dark);
+}
+.cfe-harvest-moon.harvest-moon-body-column-rule-dark {
+  -moz-column-rule-color: var(--cfe--harvest-moon--body--dark);
+       column-rule-color: var(--cfe--harvest-moon--body--dark);
+}
+.cfe-harvest-moon.harvest-moon-body-row-rule-dark {
+  row-rule-color: var(--cfe--harvest-moon--body--dark);
+}
+.cfe-harvest-moon.harvest-moon-body-fill-dark {
+  fill: var(--cfe--harvest-moon--body--dark);
+}
+.cfe-harvest-moon.harvest-moon-body-text-fill-dark {
+  -webkit-text-fill-color: var(--cfe--harvest-moon--body--dark);
+  text-fill-color: var(--cfe--harvest-moon--body--dark);
+}
+.cfe-harvest-moon.harvest-moon-body-stroke-dark {
+  stroke: var(--cfe--harvest-moon--body--dark);
+}
+.cfe-harvest-moon.harvest-moon-body-text-stroke-dark {
+  -webkit-text-stroke-color: var(--cfe--harvest-moon--body--dark);
+  text-stroke-color: var(--cfe--harvest-moon--body--dark);
+}
+.cfe-harvest-moon.harvest-moon-body-flood-dark {
+  flood-color: var(--cfe--harvest-moon--body--dark);
+}
+.cfe-harvest-moon.harvest-moon-body-stop-dark {
+  stop-color: var(--cfe--harvest-moon--body--dark);
+}
+.cfe-harvest-moon.harvest-moon-text-dark {
+  color: var(--cfe--harvest-moon--text--dark);
+}
+.cfe-harvest-moon.harvest-moon-text-bg-dark {
+  background-color: var(--cfe--harvest-moon--text--dark);
+}
+.cfe-harvest-moon.harvest-moon-text-decoration-dark {
+  text-decoration-color: var(--cfe--harvest-moon--text--dark);
+}
+.cfe-harvest-moon.harvest-moon-text-emphasis-dark {
+  -webkit-text-emphasis-color: var(--cfe--harvest-moon--text--dark);
+          text-emphasis-color: var(--cfe--harvest-moon--text--dark);
+}
+.cfe-harvest-moon.harvest-moon-text-accent-dark {
+  accent-color: var(--cfe--harvest-moon--text--dark);
+}
+.cfe-harvest-moon.harvest-moon-text-caret-dark {
+  caret-color: var(--cfe--harvest-moon--text--dark);
+}
+.cfe-harvest-moon.harvest-moon-text-border-dark {
+  border-color: var(--cfe--harvest-moon--text--dark);
+}
+.cfe-harvest-moon.harvest-moon-text-outline-dark {
+  outline-color: var(--cfe--harvest-moon--text--dark);
+}
+.cfe-harvest-moon.harvest-moon-text-rule-dark {
+  rule-color: var(--cfe--harvest-moon--text--dark);
+}
+.cfe-harvest-moon.harvest-moon-text-column-rule-dark {
+  -moz-column-rule-color: var(--cfe--harvest-moon--text--dark);
+       column-rule-color: var(--cfe--harvest-moon--text--dark);
+}
+.cfe-harvest-moon.harvest-moon-text-row-rule-dark {
+  row-rule-color: var(--cfe--harvest-moon--text--dark);
+}
+.cfe-harvest-moon.harvest-moon-text-fill-dark {
+  fill: var(--cfe--harvest-moon--text--dark);
+}
+.cfe-harvest-moon.harvest-moon-text-text-fill-dark {
+  -webkit-text-fill-color: var(--cfe--harvest-moon--text--dark);
+  text-fill-color: var(--cfe--harvest-moon--text--dark);
+}
+.cfe-harvest-moon.harvest-moon-text-stroke-dark {
+  stroke: var(--cfe--harvest-moon--text--dark);
+}
+.cfe-harvest-moon.harvest-moon-text-text-stroke-dark {
+  -webkit-text-stroke-color: var(--cfe--harvest-moon--text--dark);
+  text-stroke-color: var(--cfe--harvest-moon--text--dark);
+}
+.cfe-harvest-moon.harvest-moon-text-flood-dark {
+  flood-color: var(--cfe--harvest-moon--text--dark);
+}
+.cfe-harvest-moon.harvest-moon-text-stop-dark {
+  stop-color: var(--cfe--harvest-moon--text--dark);
+}
+.cfe-harvest-moon.harvest-moon-one-dark {
+  color: var(--cfe--harvest-moon--one--dark);
+}
+.cfe-harvest-moon.harvest-moon-one-bg-dark {
+  background-color: var(--cfe--harvest-moon--one--dark);
+}
+.cfe-harvest-moon.harvest-moon-one-decoration-dark {
+  text-decoration-color: var(--cfe--harvest-moon--one--dark);
+}
+.cfe-harvest-moon.harvest-moon-one-emphasis-dark {
+  -webkit-text-emphasis-color: var(--cfe--harvest-moon--one--dark);
+          text-emphasis-color: var(--cfe--harvest-moon--one--dark);
+}
+.cfe-harvest-moon.harvest-moon-one-accent-dark {
+  accent-color: var(--cfe--harvest-moon--one--dark);
+}
+.cfe-harvest-moon.harvest-moon-one-caret-dark {
+  caret-color: var(--cfe--harvest-moon--one--dark);
+}
+.cfe-harvest-moon.harvest-moon-one-border-dark {
+  border-color: var(--cfe--harvest-moon--one--dark);
+}
+.cfe-harvest-moon.harvest-moon-one-outline-dark {
+  outline-color: var(--cfe--harvest-moon--one--dark);
+}
+.cfe-harvest-moon.harvest-moon-one-rule-dark {
+  rule-color: var(--cfe--harvest-moon--one--dark);
+}
+.cfe-harvest-moon.harvest-moon-one-column-rule-dark {
+  -moz-column-rule-color: var(--cfe--harvest-moon--one--dark);
+       column-rule-color: var(--cfe--harvest-moon--one--dark);
+}
+.cfe-harvest-moon.harvest-moon-one-row-rule-dark {
+  row-rule-color: var(--cfe--harvest-moon--one--dark);
+}
+.cfe-harvest-moon.harvest-moon-one-fill-dark {
+  fill: var(--cfe--harvest-moon--one--dark);
+}
+.cfe-harvest-moon.harvest-moon-one-text-fill-dark {
+  -webkit-text-fill-color: var(--cfe--harvest-moon--one--dark);
+  text-fill-color: var(--cfe--harvest-moon--one--dark);
+}
+.cfe-harvest-moon.harvest-moon-one-stroke-dark {
+  stroke: var(--cfe--harvest-moon--one--dark);
+}
+.cfe-harvest-moon.harvest-moon-one-text-stroke-dark {
+  -webkit-text-stroke-color: var(--cfe--harvest-moon--one--dark);
+  text-stroke-color: var(--cfe--harvest-moon--one--dark);
+}
+.cfe-harvest-moon.harvest-moon-one-flood-dark {
+  flood-color: var(--cfe--harvest-moon--one--dark);
+}
+.cfe-harvest-moon.harvest-moon-one-stop-dark {
+  stop-color: var(--cfe--harvest-moon--one--dark);
+}
+.cfe-harvest-moon.harvest-moon-two-dark {
+  color: var(--cfe--harvest-moon--two--dark);
+}
+.cfe-harvest-moon.harvest-moon-two-bg-dark {
+  background-color: var(--cfe--harvest-moon--two--dark);
+}
+.cfe-harvest-moon.harvest-moon-two-decoration-dark {
+  text-decoration-color: var(--cfe--harvest-moon--two--dark);
+}
+.cfe-harvest-moon.harvest-moon-two-emphasis-dark {
+  -webkit-text-emphasis-color: var(--cfe--harvest-moon--two--dark);
+          text-emphasis-color: var(--cfe--harvest-moon--two--dark);
+}
+.cfe-harvest-moon.harvest-moon-two-accent-dark {
+  accent-color: var(--cfe--harvest-moon--two--dark);
+}
+.cfe-harvest-moon.harvest-moon-two-caret-dark {
+  caret-color: var(--cfe--harvest-moon--two--dark);
+}
+.cfe-harvest-moon.harvest-moon-two-border-dark {
+  border-color: var(--cfe--harvest-moon--two--dark);
+}
+.cfe-harvest-moon.harvest-moon-two-outline-dark {
+  outline-color: var(--cfe--harvest-moon--two--dark);
+}
+.cfe-harvest-moon.harvest-moon-two-rule-dark {
+  rule-color: var(--cfe--harvest-moon--two--dark);
+}
+.cfe-harvest-moon.harvest-moon-two-column-rule-dark {
+  -moz-column-rule-color: var(--cfe--harvest-moon--two--dark);
+       column-rule-color: var(--cfe--harvest-moon--two--dark);
+}
+.cfe-harvest-moon.harvest-moon-two-row-rule-dark {
+  row-rule-color: var(--cfe--harvest-moon--two--dark);
+}
+.cfe-harvest-moon.harvest-moon-two-fill-dark {
+  fill: var(--cfe--harvest-moon--two--dark);
+}
+.cfe-harvest-moon.harvest-moon-two-text-fill-dark {
+  -webkit-text-fill-color: var(--cfe--harvest-moon--two--dark);
+  text-fill-color: var(--cfe--harvest-moon--two--dark);
+}
+.cfe-harvest-moon.harvest-moon-two-stroke-dark {
+  stroke: var(--cfe--harvest-moon--two--dark);
+}
+.cfe-harvest-moon.harvest-moon-two-text-stroke-dark {
+  -webkit-text-stroke-color: var(--cfe--harvest-moon--two--dark);
+  text-stroke-color: var(--cfe--harvest-moon--two--dark);
+}
+.cfe-harvest-moon.harvest-moon-two-flood-dark {
+  flood-color: var(--cfe--harvest-moon--two--dark);
+}
+.cfe-harvest-moon.harvest-moon-two-stop-dark {
+  stop-color: var(--cfe--harvest-moon--two--dark);
+}
+.cfe-harvest-moon.harvest-moon-three-dark {
+  color: var(--cfe--harvest-moon--three--dark);
+}
+.cfe-harvest-moon.harvest-moon-three-bg-dark {
+  background-color: var(--cfe--harvest-moon--three--dark);
+}
+.cfe-harvest-moon.harvest-moon-three-decoration-dark {
+  text-decoration-color: var(--cfe--harvest-moon--three--dark);
+}
+.cfe-harvest-moon.harvest-moon-three-emphasis-dark {
+  -webkit-text-emphasis-color: var(--cfe--harvest-moon--three--dark);
+          text-emphasis-color: var(--cfe--harvest-moon--three--dark);
+}
+.cfe-harvest-moon.harvest-moon-three-accent-dark {
+  accent-color: var(--cfe--harvest-moon--three--dark);
+}
+.cfe-harvest-moon.harvest-moon-three-caret-dark {
+  caret-color: var(--cfe--harvest-moon--three--dark);
+}
+.cfe-harvest-moon.harvest-moon-three-border-dark {
+  border-color: var(--cfe--harvest-moon--three--dark);
+}
+.cfe-harvest-moon.harvest-moon-three-outline-dark {
+  outline-color: var(--cfe--harvest-moon--three--dark);
+}
+.cfe-harvest-moon.harvest-moon-three-rule-dark {
+  rule-color: var(--cfe--harvest-moon--three--dark);
+}
+.cfe-harvest-moon.harvest-moon-three-column-rule-dark {
+  -moz-column-rule-color: var(--cfe--harvest-moon--three--dark);
+       column-rule-color: var(--cfe--harvest-moon--three--dark);
+}
+.cfe-harvest-moon.harvest-moon-three-row-rule-dark {
+  row-rule-color: var(--cfe--harvest-moon--three--dark);
+}
+.cfe-harvest-moon.harvest-moon-three-fill-dark {
+  fill: var(--cfe--harvest-moon--three--dark);
+}
+.cfe-harvest-moon.harvest-moon-three-text-fill-dark {
+  -webkit-text-fill-color: var(--cfe--harvest-moon--three--dark);
+  text-fill-color: var(--cfe--harvest-moon--three--dark);
+}
+.cfe-harvest-moon.harvest-moon-three-stroke-dark {
+  stroke: var(--cfe--harvest-moon--three--dark);
+}
+.cfe-harvest-moon.harvest-moon-three-text-stroke-dark {
+  -webkit-text-stroke-color: var(--cfe--harvest-moon--three--dark);
+  text-stroke-color: var(--cfe--harvest-moon--three--dark);
+}
+.cfe-harvest-moon.harvest-moon-three-flood-dark {
+  flood-color: var(--cfe--harvest-moon--three--dark);
+}
+.cfe-harvest-moon.harvest-moon-three-stop-dark {
+  stop-color: var(--cfe--harvest-moon--three--dark);
+}
+.cfe-harvest-moon.harvest-moon-four-dark {
+  color: var(--cfe--harvest-moon--four--dark);
+}
+.cfe-harvest-moon.harvest-moon-four-bg-dark {
+  background-color: var(--cfe--harvest-moon--four--dark);
+}
+.cfe-harvest-moon.harvest-moon-four-decoration-dark {
+  text-decoration-color: var(--cfe--harvest-moon--four--dark);
+}
+.cfe-harvest-moon.harvest-moon-four-emphasis-dark {
+  -webkit-text-emphasis-color: var(--cfe--harvest-moon--four--dark);
+          text-emphasis-color: var(--cfe--harvest-moon--four--dark);
+}
+.cfe-harvest-moon.harvest-moon-four-accent-dark {
+  accent-color: var(--cfe--harvest-moon--four--dark);
+}
+.cfe-harvest-moon.harvest-moon-four-caret-dark {
+  caret-color: var(--cfe--harvest-moon--four--dark);
+}
+.cfe-harvest-moon.harvest-moon-four-border-dark {
+  border-color: var(--cfe--harvest-moon--four--dark);
+}
+.cfe-harvest-moon.harvest-moon-four-outline-dark {
+  outline-color: var(--cfe--harvest-moon--four--dark);
+}
+.cfe-harvest-moon.harvest-moon-four-rule-dark {
+  rule-color: var(--cfe--harvest-moon--four--dark);
+}
+.cfe-harvest-moon.harvest-moon-four-column-rule-dark {
+  -moz-column-rule-color: var(--cfe--harvest-moon--four--dark);
+       column-rule-color: var(--cfe--harvest-moon--four--dark);
+}
+.cfe-harvest-moon.harvest-moon-four-row-rule-dark {
+  row-rule-color: var(--cfe--harvest-moon--four--dark);
+}
+.cfe-harvest-moon.harvest-moon-four-fill-dark {
+  fill: var(--cfe--harvest-moon--four--dark);
+}
+.cfe-harvest-moon.harvest-moon-four-text-fill-dark {
+  -webkit-text-fill-color: var(--cfe--harvest-moon--four--dark);
+  text-fill-color: var(--cfe--harvest-moon--four--dark);
+}
+.cfe-harvest-moon.harvest-moon-four-stroke-dark {
+  stroke: var(--cfe--harvest-moon--four--dark);
+}
+.cfe-harvest-moon.harvest-moon-four-text-stroke-dark {
+  -webkit-text-stroke-color: var(--cfe--harvest-moon--four--dark);
+  text-stroke-color: var(--cfe--harvest-moon--four--dark);
+}
+.cfe-harvest-moon.harvest-moon-four-flood-dark {
+  flood-color: var(--cfe--harvest-moon--four--dark);
+}
+.cfe-harvest-moon.harvest-moon-four-stop-dark {
+  stop-color: var(--cfe--harvest-moon--four--dark);
+}
+.cfe-harvest-moon.harvest-moon-five-dark {
+  color: var(--cfe--harvest-moon--five--dark);
+}
+.cfe-harvest-moon.harvest-moon-five-bg-dark {
+  background-color: var(--cfe--harvest-moon--five--dark);
+}
+.cfe-harvest-moon.harvest-moon-five-decoration-dark {
+  text-decoration-color: var(--cfe--harvest-moon--five--dark);
+}
+.cfe-harvest-moon.harvest-moon-five-emphasis-dark {
+  -webkit-text-emphasis-color: var(--cfe--harvest-moon--five--dark);
+          text-emphasis-color: var(--cfe--harvest-moon--five--dark);
+}
+.cfe-harvest-moon.harvest-moon-five-accent-dark {
+  accent-color: var(--cfe--harvest-moon--five--dark);
+}
+.cfe-harvest-moon.harvest-moon-five-caret-dark {
+  caret-color: var(--cfe--harvest-moon--five--dark);
+}
+.cfe-harvest-moon.harvest-moon-five-border-dark {
+  border-color: var(--cfe--harvest-moon--five--dark);
+}
+.cfe-harvest-moon.harvest-moon-five-outline-dark {
+  outline-color: var(--cfe--harvest-moon--five--dark);
+}
+.cfe-harvest-moon.harvest-moon-five-rule-dark {
+  rule-color: var(--cfe--harvest-moon--five--dark);
+}
+.cfe-harvest-moon.harvest-moon-five-column-rule-dark {
+  -moz-column-rule-color: var(--cfe--harvest-moon--five--dark);
+       column-rule-color: var(--cfe--harvest-moon--five--dark);
+}
+.cfe-harvest-moon.harvest-moon-five-row-rule-dark {
+  row-rule-color: var(--cfe--harvest-moon--five--dark);
+}
+.cfe-harvest-moon.harvest-moon-five-fill-dark {
+  fill: var(--cfe--harvest-moon--five--dark);
+}
+.cfe-harvest-moon.harvest-moon-five-text-fill-dark {
+  -webkit-text-fill-color: var(--cfe--harvest-moon--five--dark);
+  text-fill-color: var(--cfe--harvest-moon--five--dark);
+}
+.cfe-harvest-moon.harvest-moon-five-stroke-dark {
+  stroke: var(--cfe--harvest-moon--five--dark);
+}
+.cfe-harvest-moon.harvest-moon-five-text-stroke-dark {
+  -webkit-text-stroke-color: var(--cfe--harvest-moon--five--dark);
+  text-stroke-color: var(--cfe--harvest-moon--five--dark);
+}
+.cfe-harvest-moon.harvest-moon-five-flood-dark {
+  flood-color: var(--cfe--harvest-moon--five--dark);
+}
+.cfe-harvest-moon.harvest-moon-five-stop-dark {
+  stop-color: var(--cfe--harvest-moon--five--dark);
+}
+.cfe-harvest-moon.harvest-moon-six-dark {
+  color: var(--cfe--harvest-moon--six--dark);
+}
+.cfe-harvest-moon.harvest-moon-six-bg-dark {
+  background-color: var(--cfe--harvest-moon--six--dark);
+}
+.cfe-harvest-moon.harvest-moon-six-decoration-dark {
+  text-decoration-color: var(--cfe--harvest-moon--six--dark);
+}
+.cfe-harvest-moon.harvest-moon-six-emphasis-dark {
+  -webkit-text-emphasis-color: var(--cfe--harvest-moon--six--dark);
+          text-emphasis-color: var(--cfe--harvest-moon--six--dark);
+}
+.cfe-harvest-moon.harvest-moon-six-accent-dark {
+  accent-color: var(--cfe--harvest-moon--six--dark);
+}
+.cfe-harvest-moon.harvest-moon-six-caret-dark {
+  caret-color: var(--cfe--harvest-moon--six--dark);
+}
+.cfe-harvest-moon.harvest-moon-six-border-dark {
+  border-color: var(--cfe--harvest-moon--six--dark);
+}
+.cfe-harvest-moon.harvest-moon-six-outline-dark {
+  outline-color: var(--cfe--harvest-moon--six--dark);
+}
+.cfe-harvest-moon.harvest-moon-six-rule-dark {
+  rule-color: var(--cfe--harvest-moon--six--dark);
+}
+.cfe-harvest-moon.harvest-moon-six-column-rule-dark {
+  -moz-column-rule-color: var(--cfe--harvest-moon--six--dark);
+       column-rule-color: var(--cfe--harvest-moon--six--dark);
+}
+.cfe-harvest-moon.harvest-moon-six-row-rule-dark {
+  row-rule-color: var(--cfe--harvest-moon--six--dark);
+}
+.cfe-harvest-moon.harvest-moon-six-fill-dark {
+  fill: var(--cfe--harvest-moon--six--dark);
+}
+.cfe-harvest-moon.harvest-moon-six-text-fill-dark {
+  -webkit-text-fill-color: var(--cfe--harvest-moon--six--dark);
+  text-fill-color: var(--cfe--harvest-moon--six--dark);
+}
+.cfe-harvest-moon.harvest-moon-six-stroke-dark {
+  stroke: var(--cfe--harvest-moon--six--dark);
+}
+.cfe-harvest-moon.harvest-moon-six-text-stroke-dark {
+  -webkit-text-stroke-color: var(--cfe--harvest-moon--six--dark);
+  text-stroke-color: var(--cfe--harvest-moon--six--dark);
+}
+.cfe-harvest-moon.harvest-moon-six-flood-dark {
+  flood-color: var(--cfe--harvest-moon--six--dark);
+}
+.cfe-harvest-moon.harvest-moon-six-stop-dark {
+  stop-color: var(--cfe--harvest-moon--six--dark);
+}
