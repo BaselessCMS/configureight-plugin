@@ -134,7 +134,7 @@ function color_scheme_categories() {
 		'sanzo-wada' => [
 			'slug'  => 'sanzo-wada',
 			'name'  => lang()->get( 'Sanzo Wada' ),
-			'about' => lang()->get( 'Sanzo Wada (1883 - 1967) was a Japanese artist & costume designer who published <em>A Dictionary of Color Combinations</em> in two volumes (1933 - 1934) in order to document Japanese color tastes. <br/><br/>These schemes come from his color combinations. Some modifications may have been made for use on the web.' )
+			'about' => lang()->get( "Sanzo Wada (1883 - 1967) was a Japanese artist & costume designer who published <em>A Dictionary of Color Combinations</em> in two volumes (1933 - 1934) in order to document Japanese color tastes. <br/><br/>Showa era schemes come from his color combinations. The others are original compositions by <a href='https://colorcombinations.org/' target='_blank' rel='noopener noreferrer'>colorcombinations.org</a>, built with Wada's method from traditional Japanese shikisai color names. Thank you to them for their excellent resource, and be sure to visit the link for inspiration applying the custom scheme option. <br/><br/>Some modifications may have been made to Sanzo Wada schemes for use on the web." )
 		],
 		'scope' => [
 			'slug'  => 'scope',
@@ -1044,7 +1044,7 @@ function color_schemes() {
 		'heian-03' => [
 			'slug'     => 'heian-03',
 			'name'     => lang()->get( 'Heian Era Three' ),
-			'about'    => lang()->get( 'Nadeshiko, the fringed pink flower, was the standard metaphor for Japanese feminine ideals in classical poetry. Mizu-iro, water color, is the blue of a cold spring seen through ferns. Kinari, unbleached natural, is a light, muted neutral tone.' ),
+			'about'    => lang()->get( 'Nadeshiko, the fringed pink flower, was the standard metaphor for Japanese feminine ideals in classical poetry. Mizu-iro, water color, is the blue of a cold spring seen through ferns. Kinari is the natural color of undyed hemp and silk.' ),
 			'category' => 'sanzo-wada',
 			'media'    => '#f69bae',
 			'light' => [
@@ -1125,7 +1125,7 @@ function color_schemes() {
 		'heian-06' => [
 			'slug'     => 'heian-06',
 			'name'     => lang()->get( 'Heian Era Six' ),
-			'about'    => lang()->get( 'Ominaeshi, one of the seven autumn plants, has tiny pale-yellow flowers that cluster in late summer fields. Asagi is the pale green-blue of young leek shoots, used here as the summer sky. Kinari, unbleached natural, is a light, muted neutral tone.' ),
+			'about'    => lang()->get( 'Ominaeshi, one of the seven autumn plants, has tiny pale-yellow flowers that cluster in late summer fields. Asagi is the pale green-blue of young leek shoots, used here as the summer sky. Kinari is the natural color of undyed hemp and silk.' ),
 			'category' => 'sanzo-wada',
 			'media'    => '#88b9c4',
 			'light' => [
@@ -1179,7 +1179,7 @@ function color_schemes() {
 		'kamakura-02' => [
 			'slug'     => 'kamakura-02',
 			'name'     => lang()->get( 'Kamakura Era Two' ),
-			'about'    => lang()->get( 'Moegi is the yellow-green of new shoots pushing through earth in early spring. Sumi is the black of stick ink ground on a slate inkstone. Kinari, unbleached natural, is a light, muted neutral tone.' ),
+			'about'    => lang()->get( 'Moegi is the yellow-green of new shoots pushing through earth in early spring. Sumi is the black of stick ink ground on a slate inkstone. Kinari is the natural color of undyed hemp and silk.' ),
 			'category' => 'sanzo-wada',
 			'media'    => '#a7c957',
 			'light' => [
@@ -1255,6 +1255,87 @@ function color_schemes() {
 				'four'  => '#878a74',
 				'five'  => '#878a74',
 				'six'   => '#dccb7a'
+			]
+		],
+		'muromachi-02' => [
+			'slug'     => 'muromachi-02',
+			'name'     => lang()->get( 'Muromachi Era Two' ),
+			'about'    => lang()->get( 'Seiji is the blue-green glaze of Longquan and Arita celadons. Matsuba is the dark green of pine needles. Kinari is the natural color of undyed hemp and silk.' ),
+			'category' => 'sanzo-wada',
+			'media'    => '#8db6a5',
+			'light' => [
+				'body'  => '#f3ebda',
+				'text'  => '#2c312a',
+				'one'   => '#6e7b6a',
+				'two'   => '#8db6a5',
+				'three' => '#8db6a5',
+				'four'  => '#6e7b6a',
+				'five'  => '#6e7b6a',
+				'six'   => '#8db6a5'
+			],
+			'dark' => [
+				'body'  => '#2c312a',
+				'text'  => '#f3ebda',
+				'one'   => '#8db6a5',
+				'two'   => '#f3ebda',
+				'three' => '#8db6a5',
+				'four'  => '#6e7b6a',
+				'five'  => '#6e7b6a',
+				'six'   => '#8db6a5'
+			]
+		],
+		'muromachi-03' => [
+			'slug'     => 'muromachi-03',
+			'name'     => lang()->get( 'Muromachi Era Three' ),
+			'about'    => lang()->get( 'Matcha-iro is the yellow-green of Matcha powdered tea. Cha is the brown of black tea. Kinari is the natural color of undyed hemp and silk.' ),
+			'category' => 'sanzo-wada',
+			'media'    => '#a7b86b',
+			'light' => [
+				'body'  => '#f3ebda',
+				'text'  => '#2b2418',
+				'one'   => '#6c5a3c',
+				'two'   => '#a7b86b',
+				'three' => '#a7b86b',
+				'four'  => '#6c5a3c',
+				'five'  => '#6c5a3c',
+				'six'   => '#a7b86b'
+			],
+			'dark' => [
+				'body'  => '#2b2418',
+				'text'  => '#f3ebda',
+				'one'   => '#a7b86b',
+				'two'   => '#f3ebda',
+				'three' => '#a7b86b',
+				'four'  => '#6c5a3c',
+				'five'  => '#6c5a3c',
+				'six'   => '#a7b86b'
+			]
+		],
+		'muromachi-04' => [
+			'slug'     => 'muromachi-04',
+			'name'     => lang()->get( 'Muromachi Era Four' ),
+			'about'    => lang()->get( 'Kogecha is the near-black brown of cedar scorched for weatherproofing (yakisugi). Kakishibu is named Persimmon-tanned. Kinari is the natural color of undyed hemp and silk. Together they compose the traditional Japanese farmhouse: dark timber posts, pale paper walls.' ),
+			'category' => 'sanzo-wada',
+			'media'    => '#8a6a47',
+			'light' => [
+				'body'  => '#f3ebda',
+				'text'  => '#251912',
+				'one'   => '#3e2a1e',
+				'two'   => '#8a6a47',
+				'three' => '#8a6a47',
+				'four'  => '#3e2a1e',
+				'five'  => '#3e2a1e',
+				'six'   => '#8a6a47'
+			],
+			'dark' => [
+				'body'  => '#251912',
+				'text'  => '#f3ebda',
+				'one'   => '#a78f75',
+				'two'   => '#8a6a47',
+				'three' => '#8a6a47',
+				'four'  => '#6e5539',
+				'five'  => '#3e2a1e',
+				'six'   => '#8a6a47'
 			]
 		]
 	];

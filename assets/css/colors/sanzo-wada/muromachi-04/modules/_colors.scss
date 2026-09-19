@@ -1,0 +1,28 @@
+///
+/// SCSS variables
+///
+
+@use '../../../../modules/functions' as f;
+
+$palette: 'muromachi-04';
+$media: #8a6a47;
+$light: (
+	'body'  : #f3ebda,
+	'text'  : f.darken( #3e2a1e, 40% ),
+	'one'   : #3e2a1e,
+	'two'   : #8a6a47,
+	'three' : #8a6a47,
+	'four'  : #3e2a1e,
+	'five'  : #3e2a1e,
+	'six'   : #8a6a47
+);
+$dark: (
+	'body'  : f.darken( #3e2a1e, 40% ),
+	'text'  : #f3ebda,
+	'one'   : f.lighten( #8a6a47, 25% ),
+	'two'   : #8a6a47,
+	'three' : #8a6a47,
+	'four'  : f.darken( #8a6a47, 20% ),
+	'five'  : #3e2a1e,
+	'six'   : #8a6a47
+);
