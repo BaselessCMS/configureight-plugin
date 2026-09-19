@@ -1,20 +1,20 @@
 :host,
 :root {
-  --cfe-scheme-color--body: #f4eee0;
-  --cfe-scheme-color--text: #112536;
-  --cfe-scheme-color--one: #b398d7;
-  --cfe-scheme-color--two: #1c3d5a;
-  --cfe-scheme-color--three: #b398d7;
-  --cfe-scheme-color--four: #1c3d5a;
-  --cfe-scheme-color--five: #1c3d5a;
-  --cfe-scheme-color--six: #b398d7;
-  --cfe-scheme-color--body--dark: #112536;
-  --cfe-scheme-color--text--dark: #f4eee0;
-  --cfe-scheme-color--one--dark: #b398d7;
-  --cfe-scheme-color--two--dark: #f4eee0;
-  --cfe-scheme-color--three--dark: #b398d7;
-  --cfe-scheme-color--four--dark: #1c3d5a;
-  --cfe-scheme-color--five--dark: #b398d7;
-  --cfe-scheme-color--six--dark: #1c3d5a;
+  --cfe-scheme-color--body: #ffffff;
+  --cfe-scheme-color--text: #1c1c1c;
+  --cfe-scheme-color--one: #3a7d7b;
+  --cfe-scheme-color--two: #1c1c1c;
+  --cfe-scheme-color--three: #3a7d7b;
+  --cfe-scheme-color--four: #1c1c1c;
+  --cfe-scheme-color--five: #1c1c1c;
+  --cfe-scheme-color--six: #3a7d7b;
+  --cfe-scheme-color--body--dark: #1c1c1c;
+  --cfe-scheme-color--text--dark: #ffffff;
+  --cfe-scheme-color--one--dark: #3a7d7b;
+  --cfe-scheme-color--two--dark: #ffffff;
+  --cfe-scheme-color--three--dark: #3a7d7b;
+  --cfe-scheme-color--four--dark: #ffffff;
+  --cfe-scheme-color--five--dark: #1c1c1c;
+  --cfe-scheme-color--six--dark: #3a7d7b;
   --cfe-cover-blend--bg-color: c.$media;
 }

@@ -1,21 +1,21 @@
 :host,
 :root {
-  --cfe-scheme-heian-02--body: #f4eee0;
-  --cfe-scheme-heian-02--text: #122d53;
-  --cfe-scheme-heian-02--one: #1e4b8a;
-  --cfe-scheme-heian-02--two: #d4af37;
-  --cfe-scheme-heian-02--three: #d4af37;
-  --cfe-scheme-heian-02--four: #1e4b8a;
-  --cfe-scheme-heian-02--five: #1e4b8a;
-  --cfe-scheme-heian-02--six: #d4af37;
-  --cfe-scheme-heian-02--body--dark: #122d53;
-  --cfe-scheme-heian-02--text--dark: #f5f0e3;
-  --cfe-scheme-heian-02--one--dark: #d4af37;
-  --cfe-scheme-heian-02--two--dark: #f5f0e3;
-  --cfe-scheme-heian-02--three--dark: #d4af37;
-  --cfe-scheme-heian-02--four--dark: #1e4b8a;
-  --cfe-scheme-heian-02--five--dark: #d4af37;
-  --cfe-scheme-heian-02--six--dark: #1e4b8a;
+  --cfe-scheme-heian-02--body: #f8f4e9;
+  --cfe-scheme-heian-02--text: #183c6e;
+  --cfe-scheme-heian-02--one: #f69bae;
+  --cfe-scheme-heian-02--two: #aadaef;
+  --cfe-scheme-heian-02--three: #aadaef;
+  --cfe-scheme-heian-02--four: #f69bae;
+  --cfe-scheme-heian-02--five: #aadaef;
+  --cfe-scheme-heian-02--six: #f69bae;
+  --cfe-scheme-heian-02--body--dark: #183c6e;
+  --cfe-scheme-heian-02--text--dark: #f8f4e9;
+  --cfe-scheme-heian-02--one--dark: #f69bae;
+  --cfe-scheme-heian-02--two--dark: #aadaef;
+  --cfe-scheme-heian-02--three--dark: #aadaef;
+  --cfe-scheme-heian-02--four--dark: #f69bae;
+  --cfe-scheme-heian-02--five--dark: #aadaef;
+  --cfe-scheme-heian-02--six--dark: #f69bae;
   --cfe-scheme-heian-02--cover-blend--bg-color: c.$media;
 }
 

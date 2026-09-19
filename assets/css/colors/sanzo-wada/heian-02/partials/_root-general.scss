@@ -15,4 +15,22 @@
 		--cfe-scheme-color--#{$name}--dark: #{$color};
 	}
 	--cfe-cover-blend--bg-color: c.$media;
+
+	--cfe-button--text-color: var( --cfe-scheme-color--text );
+	--cfe-button--action--text-color: var( --cfe-scheme-color--text );
+	--cfe-button--primary--text-color: var( --cfe-scheme-color--text );
+	--cfe-button--primary--action--text-color: var( --cfe-scheme-color--text );
+
+	--cfe-admin--menu--link--action--text-color: var( --cfe-scheme-color--text );
+
+	--cfe-site-nav--sub-list--action--text-color: var( --cfe-scheme-color--text );
+	--cfe-toolbar--link--action--text-color: var( --cfe-scheme-color--text );
+	--cfe-toolbar--submenu--link--text-color: var( --cfe-scheme-color--text );
+	--cfe-toolbar--submenu--link--action--text-color: var( --cfe-scheme-color--text );
+
+	--cfe-search-button--background-image: #{f.search_icon_bg( map.get( c.$light, 'text' ) )};
+	--cfe-close-button--background-image: #{f.close_icon_bg( map.get( c.$light, 'text' ) )};
+
+	--cfe-search-button--action--background-image: #{f.search_icon_bg( map.get( c.$light, 'text' ) )};
+	--cfe-close-button--action--background-image: #{f.close_icon_bg( map.get( c.$light, 'text' ) )};
 }

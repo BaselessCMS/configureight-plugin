@@ -2,27 +2,34 @@
 /// SCSS variables
 ///
 
+@use 'sass:color';
 @use '../../../../modules/functions' as f;
 
 $palette: 'heian-02';
-$media: #1e4b8a;
+
+// Modify original colors.
+$ruri: f.darken( #1e4b8a, 20% );
+$nadeshiko: color.adjust( #eba6b4, $saturation: 20% );
+$mizu-iro: color.adjust( #b4d6e5, $saturation: 20% );
+
+$media: #f69bae;
 $light: (
-	'body'  : #f4eee0,
-	'text'  : f.darken( #1e4b8a, 40% ),
-	'one'   : #1e4b8a,
-	'two'   : #d4af37,
-	'three' : #d4af37,
-	'four'  : #1e4b8a,
-	'five'  : #1e4b8a,
-	'six'   : #d4af37
+	'body'  : #f8f4e9,
+	'text'  : $ruri,
+	'one'   : f.hex( $nadeshiko ),
+	'two'   : f.hex( $mizu-iro ),
+	'three' : f.hex( $mizu-iro ),
+	'four'  : f.hex( $nadeshiko ),
+	'five'  : f.hex( $mizu-iro ),
+	'six'   : f.hex( $nadeshiko ),
 );
 $dark: (
-	'body'  : f.darken( #1e4b8a, 40% ),
-	'text'  : f.lighten( #f4eee0, 10% ),
-	'one'   : #d4af37,
-	'two'   : f.lighten( #f4eee0, 10% ),
-	'three' : #d4af37,
-	'four'  : #1e4b8a,
-	'five'  : #d4af37,
-	'six'   : #1e4b8a
+	'body'  : $ruri,
+	'text'  : #f8f4e9,
+	'one'   : f.hex( $nadeshiko ),
+	'two'   : f.hex( $mizu-iro ),
+	'three' : f.hex( $mizu-iro ),
+	'four'  : f.hex( $nadeshiko ),
+	'five'  : f.hex( $mizu-iro ),
+	'six'   : f.hex( $nadeshiko ),
 );

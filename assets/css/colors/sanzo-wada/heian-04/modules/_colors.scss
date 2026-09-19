@@ -2,33 +2,25 @@
 /// SCSS variables
 ///
 
-@use 'sass:color';
-@use '../../../../modules/functions' as f;
-
 $palette: 'heian-04';
-
-// Modify original colors.
-$ai_dark: f.darken( #1c3d5a, 40% );
-$fuji_sat: color.adjust( #b5a6c9, $saturation: 20% );
-
-$media: #b398d7;
+$media: #3a7d7b;
 $light: (
-	'body'  : #f4eee0,
-	'text'  : $ai_dark,
-	'one'   : f.hex( $fuji_sat ),
-	'two'   : #1c3d5a,
-	'three' : f.hex( $fuji_sat ),
-	'four'  : #1c3d5a,
-	'five'  : #1c3d5a,
-	'six'   : f.hex( $fuji_sat ),
+	'body'  : #ffffff,
+	'text'  : #1c1c1c,
+	'one'   : #3a7d7b,
+	'two'   : #1c1c1c,
+	'three' : #3a7d7b,
+	'four'  : #1c1c1c,
+	'five'  : #1c1c1c,
+	'six'   : #3a7d7b
 );
 $dark: (
-	'body'  : $ai_dark,
-	'text'  : #f4eee0,
-	'one'   : f.hex( $fuji_sat ),
-	'two'   : #f4eee0,
-	'three' : f.hex( $fuji_sat ),
-	'four'  : #1c3d5a,
-	'five'  : f.hex( $fuji_sat ),
-	'six'   : #1c3d5a,
+	'body'  : #1c1c1c,
+	'text'  : #ffffff,
+	'one'   : #3a7d7b,
+	'two'   : #ffffff,
+	'three' : #3a7d7b,
+	'four'  : #ffffff,
+	'five'  : #1c1c1c,
+	'six'   : #3a7d7b
 );
