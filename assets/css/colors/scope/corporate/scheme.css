@@ -2,20 +2,20 @@
 :root {
   --cfe-scheme-corporate--body: #ffffff;
   --cfe-scheme-corporate--text: #2c3e50;
-  --cfe-scheme-corporate--one: #2779ae;
-  --cfe-scheme-corporate--two: #324c67;
-  --cfe-scheme-corporate--three: #324c67;
-  --cfe-scheme-corporate--four: #547190;
-  --cfe-scheme-corporate--five: #324c67;
-  --cfe-scheme-corporate--six: #547190;
+  --cfe-scheme-corporate--one: #193cb8;
+  --cfe-scheme-corporate--two: #1447e6;
+  --cfe-scheme-corporate--three: #1c398e;
+  --cfe-scheme-corporate--four: #193cb8;
+  --cfe-scheme-corporate--five: #1c398e;
+  --cfe-scheme-corporate--six: #193cb8;
   --cfe-scheme-corporate--body--dark: #0d264d;
-  --cfe-scheme-corporate--text--dark: #ecf0f1;
+  --cfe-scheme-corporate--text--dark: #eff6ff;
   --cfe-scheme-corporate--one--dark: #5599ff;
-  --cfe-scheme-corporate--two--dark: #2980b9;
-  --cfe-scheme-corporate--three--dark: #2980b9;
-  --cfe-scheme-corporate--four--dark: #3498db;
-  --cfe-scheme-corporate--five--dark: #324c67;
-  --cfe-scheme-corporate--six--dark: #2980b9;
+  --cfe-scheme-corporate--two--dark: #1447e6;
+  --cfe-scheme-corporate--three--dark: #1447e6;
+  --cfe-scheme-corporate--four--dark: #193cb8;
+  --cfe-scheme-corporate--five--dark: #193cb8;
+  --cfe-scheme-corporate--six--dark: #155dfc;
   --cfe-scheme-corporate--cover-blend--bg-color: c.$media;
 }
 
