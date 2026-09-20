@@ -123,7 +123,7 @@ jQuery(document).ready( function($) {
 		preferredFormat : "hex",
 		showInitial     : true,
 		allowEmpty      : false,
-		showSelectionPalette : true,
+		showSelectionPalette : false
 	});
 	$( '.custom-color' ).show();
 
@@ -139,7 +139,7 @@ jQuery(document).ready( function($) {
 		preferredFormat : "hex",
 		showInitial     : true,
 		allowEmpty      : false,
-		showSelectionPalette : true,
+		showSelectionPalette : false
 	});
 
 	// Selected class for image uploads.

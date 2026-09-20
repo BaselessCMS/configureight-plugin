@@ -138,8 +138,10 @@
 
 	function paletteTemplate (p, color, className, opts) {
 		var html = [];
+		// html.push( '<p>Palette</p>' );
 		for (var i = 0; i < p.length; i++) {
 			var current = p[i];
+
 			if(current) {
 				var tiny = tinycolor(current);
 				var c = tiny.toHsl().l < 0.5 ? "sp-thumb-el sp-thumb-dark" : "sp-thumb-el sp-thumb-light";
@@ -265,7 +267,7 @@
 				});
 			}
 		}
-		
+
 		function applyOptions() {
 
 			if (opts.showPaletteOnly) {
@@ -377,7 +379,7 @@
 
 			// Prevent clicks from bubbling up to document.  This would cause it to be hidden.
 			container.on("click", stopPropagation);
-			
+
 			container.on("keydown", 'div[role="button"]', function(e) {
 				if (e.keyCode == 13) {
 					e.preventDefault();
@@ -616,7 +618,7 @@
 
 			updateSelectionPaletteFromStorage();
 
-			if (selectionPalette) {
+			if (showSelectionPalette) {
 				html.push(paletteTemplate(getUniqueSelectionPalette(), currentColor, "sp-palette-row sp-palette-row-selection", opts));
 			}
 
@@ -697,7 +699,7 @@
 			$(doc).on("keydown.spectrum", onkeydown);
 			$(doc).on("click.spectrum", clickout);
 			$(window).on("resize.spectrum", resize);
-			
+
 			replacer.attr("aria-expanded", true);
 			replacer.addClass("sp-active");
 			container.removeClass("sp-hidden");
