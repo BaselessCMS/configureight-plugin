@@ -52,6 +52,7 @@
 		replacerClassName: "",
 		showAlpha: true,
 		theme: "sp-light",
+		paletteLabel: false,
 		palette: [
 			["#000000","#444444","#5b5b5b","#999999","#bcbcbc","#eeeeee","#f3f6f4","#ffffff"],
 			["#f44336","#744700","#ce7e00","#8fce00","#2986cc","#16537e","#6a329f","#c90076"],
@@ -137,9 +138,27 @@
 	})();
 
 	function paletteTemplate (p, color, className, opts) {
-		var html = [];
-		// html.push( '<p>Palette</p>' );
-		for (var i = 0; i < p.length; i++) {
+
+		var html  = [],
+			label = opts['paletteLabel'];
+
+		if ( label ) {
+			var start = 1;
+			var length = p.length - 1;
+		} else {
+			var start = 0;
+			var length = p.length;
+		}
+		if( label ) {
+			for (var i = 0; i < p.length; i++) {
+				var first = p[0];
+				if( i == 0 ) {
+					html.push( '<div class="sp-palette-label">' + first + '</div>' );
+				}
+			}
+		}
+		html.push( '<div class="sp-palette-thumbs">' );
+		for (var i = start; i < p.length; i++) {
 			var current = p[i];
 
 			if(current) {
@@ -153,7 +172,8 @@
 				html.push('<span class="sp-thumb-el sp-clear-display" role="button" tabindex="0"><span class="sp-clear-palette-only" style="background-color: transparent;"></span></span>');
 			}
 		}
-		return "<div class='sp-cf " + className + "'>" + html.join('') + "</div>";
+		html.push( '</div>' );
+		return "<div class='sp-cf " + className + ' sp-palette-has-' + length + "'>" + html.join('') + "</div>";
 	}
 
 	function hideAll() {

@@ -392,6 +392,12 @@ Here are the basic themeable display options (colors, fonts, global widths)
 	border: 0;
 }
 
+.sp-palette-label {
+	width: 100%;
+	margin: 0;
+	font-weight: 600;
+}
+
 .sp-palette .sp-thumb-el {
 	display: block;
 	position:relative;
@@ -628,7 +634,38 @@ Here are the basic themeable display options (colors, fonts, global widths)
 .sp-palette-row {
 	display: flex;
 	flex-wrap: wrap;
-	max-width: 134px;
+	max-width: 176px;
+
+	&.sp-palette-has-1,
+	&.sp-palette-has-2,
+	&.sp-palette-has-3,
+	&.sp-palette-has-4 {
+		max-width: 88px;
+	}
+	&.sp-palette-has-5 {
+		max-width: 110px;
+	}
+	&.sp-palette-has-6 {
+		max-width: 132px;
+	}
+	&.sp-palette-has-7 {
+		max-width: 154px;
+	}
+	&.sp-palette-has-8 {
+		max-width: 176px;
+	}
+	&.sp-palette-has-9 {
+		max-width: 200px;
+	}
+	&.sp-palette-has-10 {
+		max-width: 220px;
+	}
+	&.sp-palette-has-11 {
+		max-width: 242px;
+	}
+	&.sp-palette-has-12 {
+		max-width: 264px;
+	}
 }
 
 .sp-palette {

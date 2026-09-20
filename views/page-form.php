@@ -118,7 +118,7 @@ jQuery(document).ready( function($) {
 		showAlpha       : false,
 		showPalette     : true,
 		palette         : [
-			['<?php echo implode( "', '", picker_colors_merged() ); ?>']
+			[ '<?php echo implode( "', '", picker_colors_merged() ); ?>']
 		],
 		preferredFormat : "hex",
 		showInitial     : true,
