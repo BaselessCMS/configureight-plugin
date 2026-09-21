@@ -19,7 +19,7 @@ $settings_page = DOMAIN_ADMIN . 'configure-plugin/' . $this->className();
 
 <h2 class="form-heading"><?php lang()->p( 'Available Page Templates' ); ?></h2>
 
-<p><?php lang()->p( 'Several template options are built into the theme, which can be employed in the page edit screen under Options > Advanced. These are available for posts in the loop as well as for static pages. More than one template may be used at once, with space between each template slug, depending on the template type.' ); ?></p>
+<p><?php lang()->p( 'Several template options are built into the theme, which can be employed in the page edit screen under Options > Advanced. These are available for posts in the loop as well as for static pages. More than one template may be used at once, with space between each template slug.' ); ?></p>
 
 <hr />
 
@@ -39,13 +39,13 @@ $settings_page = DOMAIN_ADMIN . 'configure-plugin/' . $this->className();
 
 <p><?php lang()->p( 'There are several templates used automatically based on the default sidebar layout and the loop content style options.' ); ?></p>
 
-<p><?php lang()->p( 'When using a static page for the posts loop, a sidebar template sidebar template can be used to override the default sidebar layout. Only applies to the main posts index, not to taxonomy and search loops.' ); ?></p>
+<p><?php lang()->p( 'When using a static page for the posts loop, a sidebar template can be used to override the default sidebar layout. Only applies to the main posts index, not to taxonomy and search loops.' ); ?></p>
 
 <h3 class="form-heading"><?php lang()->p( 'Post Page' ); ?></h3>
 
 <p><?php lang()->p( 'No slug needed. The post template is used automatically for any standard page that appears in the loop, not static pages.' ); ?></p>
 
-<p><?php lang()->p( 'This template displays post metadata that is not displayed on static pages, such as date, author, category, tags, etc. This also displays related posts. Options are available under the Page tab for the post data and elements to be displayed.' ); ?></p>
+<p><?php lang()->p( 'This template displays post metadata that is not displayed on static pages, such as date, author, category, tags, etc. This also displays related posts. Options are available under the Pages tab for the post data and elements to be displayed.' ); ?></p>
 
 <p><?php lang()->p( 'Posts accept the template options for cover image and sidebar on an individual basis.' ); ?></p>
 

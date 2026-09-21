@@ -23,7 +23,7 @@ use function CFE_Plugin\{
 ?>
 <h2 class="form-heading"><?php lang()->p( 'Companion Plugins' ); ?></h2>
 
-<p><?php lang()->p( 'The following are plugins that have been designed to enhance the Configure 8 theme, not including the theme options plugin. They should work with most other themes and custom themes, although in some cases code development is necessary.' ); ?></p>
+<p><?php lang()->p( 'The following are plugins that have been designed to enhance the Configure 8 theme. They should work with most other themes and custom themes, although in some cases code development is necessary.' ); ?></p>
 
 <div class="tab-content" data-toggle="tabslet" data-deeplinking="false" data-animation="true">
 

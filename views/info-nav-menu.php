@@ -30,8 +30,4 @@ use function CFE_Plugin\{
 
 <h3 class="form-heading"><?php lang()->p( 'Menu Options' ); ?></h3>
 
-<p><?php lang()->p( 'Many presentation options are available for the main menu however the mobile menu is currently rather plain. Mobile menu options may be implemented in future versions of the theme.' ); ?></p>
-
-
-
-<p><?php lang()->p( '' ); ?></p>
+<p><?php lang()->p( 'Several presentation options are available for the main menu.' ); ?></p>

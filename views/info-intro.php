@@ -48,4 +48,4 @@ $database_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=datab
 
 <p><?php lang()->p( 'Please register errors, conflicts, or other problems with the Configure 8 suite of products under the Issues tab in the relevant GitHub repository.' ); ?></p>
 
-<p><?php lang()->p( 'Find Configure 8 product development at' ); ?> <a href="https://github.com/BaselessCMS" target="_blank" rel="noopener noreferrer">https://github.com/BaselessCMS</a></p>
+<p><?php lang()->p( 'Find Configure 8 product development at' ); ?> <a href="<?php echo plugin()->getMetadata( 'author_url' ); ?>" target="_blank" rel="noopener noreferrer"><?php echo plugin()->getMetadata( 'author_url' ); ?></a></p>
