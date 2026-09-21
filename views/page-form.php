@@ -15,7 +15,9 @@ use function CFE_Plugin\{
 use function CFE_Colors\{
 	picker_colors_light,
 	picker_colors_dark,
-	picker_colors_merged
+	picker_colors_merged,
+	bootstrap_palette,
+	tailwind_palette
 };
 
 // Guide page URL.
@@ -25,7 +27,7 @@ $guide_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className();
 $database_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=database';
 
 ?>
-
+<pre><?php var_dump( bootstrap_palette() ); ?></pre>
 <p class="page-description"><?php lang()->p( "Get help on the <a href='{$guide_page}'>options guide</a> index page." ); ?></p>
 
 <div class="tab-content hide-if-no-js" data-toggle="tabslet" data-deeplinking="true" data-animation="true">
@@ -114,33 +116,73 @@ jQuery(document).ready( function($) {
 
 	// General color picker.
 	$( '.custom-color' ).spectrum({
-		type            : "component",
+		type            : 'component',
+		showInitial     : true,
+		allowEmpty      : false,
+		preferredFormat : 'hex',
 		showAlpha       : false,
 		showPalette     : true,
 		palette         : [
-			[ '<?php echo implode( "', '", picker_colors_merged() ); ?>']
+			[ '<?php echo implode( "', '", picker_colors_merged() ); ?>' ]
 		],
-		preferredFormat : "hex",
-		showInitial     : true,
-		allowEmpty      : false,
 		showSelectionPalette : false
 	});
 	$( '.custom-color' ).show();
 
 	// Alpha color picker.
 	$( '.custom-rgba' ).spectrum({
-		type            : "component",
+		type            : 'component',
+		showInitial     : true,
+		allowEmpty      : false,
+		showInitial     : true,
+		allowEmpty      : false,
+		preferredFormat : 'rgb',
 		showAlpha       : true,
 		showPalette     : true,
 		showInput       : true,
 		palette         : [
-			['<?php echo implode( "', '", picker_colors_merged() ); ?>']
+			['<?php echo implode( "', '", picker_colors_merged() ); ?>' ]
 		],
-		preferredFormat : "hex",
-		showInitial     : true,
-		allowEmpty      : false,
 		showSelectionPalette : false
 	});
+
+	// Bootstrap color picker.
+	$( '.bootstrap-color' ).spectrum({
+		type            : 'component',
+		showInitial     : true,
+		allowEmpty      : false,
+		preferredFormat : 'hex',
+		showAlpha       : false,
+		showPalette     : true,
+		showPaletteOnly : true,
+		paletteLabel    : true,
+		palette         : [
+			<?php foreach ( bootstrap_palette() as $color ) {
+				echo "[ '" . implode( "', '", $color ) . "' ]," . "\r\t\t\t";
+			} ?>
+		],
+		showSelectionPalette : false
+	});
+	$( '.bootstrap-color' ).show();
+
+	// Tailwind color picker.
+	$( '.tailwind-color' ).spectrum({
+		type            : 'component',
+		showInitial     : true,
+		allowEmpty      : false,
+		preferredFormat : 'hex',
+		showAlpha       : false,
+		showPalette     : true,
+		showPaletteOnly : true,
+		paletteLabel    : true,
+		palette         : [
+			<?php foreach ( tailwind_palette() as $color ) {
+				echo "[ '" . implode( "', '", $color ) . "' ]," . "\r\t\t\t";
+			} ?>
+		],
+		showSelectionPalette : false
+	});
+	$( '.tailwind-color' ).show();
 
 	// Selected class for image uploads.
 	$( '.bookmark-select-label' ).click( function() {

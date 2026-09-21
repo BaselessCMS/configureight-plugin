@@ -199,6 +199,30 @@ function bootstrap_scheme() {
 }
 
 /**
+ * Bootstrap palette
+ *
+ * Returns an array of each color with tints & shades.
+ *
+ * @since  1.0.0
+ * @return array
+ */
+function bootstrap_palette() {
+
+	$json    = [];
+	$palette = [];
+
+	if ( file_exists( plugin()->phpPath() . '/assets/json/bootstrap-colors.json' ) ) {
+		$json = file_get_contents( plugin()->phpPath() . '/assets/json/bootstrap-colors.json' );
+	}
+	$json = json_decode( $json, true );
+
+	foreach ( $json as $key => $value ) {
+		$palette[] = $value;
+	}
+	return $palette;
+}
+
+/**
  * Custom Tailwind color scheme
  *
  * Array to be passed into the primary
@@ -239,6 +263,30 @@ function tailwind_scheme() {
 		]
 	];
 	return $scheme;
+}
+
+/**
+ * Tailwind palette
+ *
+ * Returns an array of each color with tints & shades.
+ *
+ * @since  1.0.0
+ * @return array
+ */
+function tailwind_palette() {
+
+	$json    = [];
+	$palette = [];
+
+	if ( file_exists( plugin()->phpPath() . '/assets/json/tailwind-colors.json' ) ) {
+		$json = file_get_contents( plugin()->phpPath() . '/assets/json/tailwind-colors.json' );
+	}
+	$json = json_decode( $json, true );
+
+	foreach ( $json as $key => $value ) {
+		$palette[] = $value;
+	}
+	return $palette;
 }
 
 /**
