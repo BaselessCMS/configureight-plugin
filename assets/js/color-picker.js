@@ -31,7 +31,7 @@
 		showButtons: true,
 		clickoutFiresChange: true,
 		showInitial: false,
-		showPalette: true,
+		showPalette: false,
 		showPaletteOnly: false,
 		hideAfterPaletteSelect: false,
 		togglePaletteOnly: false,
