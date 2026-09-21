@@ -1,5 +1,6 @@
 {
 	"author"       : "Baseless",
+	"author_url"   : "https://github.com/BaselessCMS",
 	"email"        : "",
 	"website"      : "https://baselesscms.github.io",
 	"version"      : "1.0.0",
@@ -12,5 +13,7 @@
 	"theme_slug"   : "configureight",
 	"theme_name"   : "Configure 8",
 	"theme_desc"   : "Bludit CMS plugin that provides options for the Configure 8 frontend theme and the Configure 8 admin theme.",
-	"theme_compat" : [ "configureight" ]
+	"theme_compat" : [ "configureight" ],
+	"admin_name"   : "Configure 8",
+	"admin_url"    : "https://github.com/BaselessCMS/configureight-admin"
 }
