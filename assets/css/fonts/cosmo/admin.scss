@@ -44,9 +44,10 @@ $raleway_stack: 'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto
 	// General.
 	--cfe-fonts--display-stack: #{$playfair_stack};
 	--cfe-body--font-family: #{$raleway_stack};
-	--cfe-body--font-size: 1.0625rem;
+	--cfe-body--font-size: 1rem;
 	--cfe-body--font-weight: 450;
 	--cfe-body--line-height: 1.6;
+	--cfe-body--letter-spacing: 0.025em;
 	--cfe-display--font-family: #{$playfair_stack};
 	--cfe-display--font-weight: 500;
 	--cfe-display--letter-spacing: normal;

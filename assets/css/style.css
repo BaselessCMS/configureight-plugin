@@ -5920,6 +5920,7 @@ div.sidebar ul ul {
   display: inline-flex;
   align-items: center;
   gap: 0.5em;
+  font-size: var(--cfe-toolbar--font-size);
   text-decoration: none;
   white-space: var(--cfe-toolbar--link--white-space, nowrap);
   color: var(--cfe-toolbar--link--text-color);

@@ -362,7 +362,7 @@ function style_font_schemes() {
 				'min'     => '100',
 				'max'     => '900',
 				'step'    => '1',
-				'space'   => '0',
+				'space'   => '0.025',
 				'variant' => 'normal'
 			],
 			'primary' => [
