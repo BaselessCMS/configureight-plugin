@@ -27,7 +27,7 @@ $guide_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className();
 $database_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=database';
 
 ?>
-<pre><?php var_dump( bootstrap_palette() ); ?></pre>
+
 <p class="page-description"><?php lang()->p( "Get help on the <a href='{$guide_page}'>options guide</a> index page." ); ?></p>
 
 <div class="tab-content hide-if-no-js" data-toggle="tabslet" data-deeplinking="true" data-animation="true">
@@ -125,7 +125,15 @@ jQuery(document).ready( function($) {
 		palette         : [
 			[ '<?php echo implode( "', '", picker_colors_merged() ); ?>' ]
 		],
-		showSelectionPalette : false
+		showSelectionPalette : false,
+		show : function(e) {
+			$( '.sp-thumb-el' ).tooltipster({
+				distance : 15,
+				delay : 150,
+				animationDuration : 150,
+				theme : 'cfe-tooltips'
+			});
+		}
 	});
 	$( '.custom-color' ).show();
 
@@ -136,14 +144,22 @@ jQuery(document).ready( function($) {
 		allowEmpty      : false,
 		showInitial     : true,
 		allowEmpty      : false,
-		preferredFormat : 'rgb',
+		preferredFormat : 'hex',
 		showAlpha       : true,
 		showPalette     : true,
 		showInput       : true,
 		palette         : [
 			['<?php echo implode( "', '", picker_colors_merged() ); ?>' ]
 		],
-		showSelectionPalette : false
+		showSelectionPalette : false,
+		show : function(e) {
+			$( '.sp-thumb-el' ).tooltipster({
+				distance : 15,
+				delay : 150,
+				animationDuration : 150,
+				theme : 'cfe-tooltips'
+			});
+		}
 	});
 
 	// Bootstrap color picker.
@@ -161,7 +177,15 @@ jQuery(document).ready( function($) {
 				echo "[ '" . implode( "', '", $color ) . "' ]," . "\r\t\t\t";
 			} ?>
 		],
-		showSelectionPalette : false
+		showSelectionPalette : false,
+		show : function(e) {
+			$( '.sp-thumb-el' ).tooltipster({
+				distance : 15,
+				delay : 150,
+				animationDuration : 150,
+				theme : 'cfe-tooltips'
+			});
+		}
 	});
 	$( '.bootstrap-color' ).show();
 
@@ -180,7 +204,15 @@ jQuery(document).ready( function($) {
 				echo "[ '" . implode( "', '", $color ) . "' ]," . "\r\t\t\t";
 			} ?>
 		],
-		showSelectionPalette : false
+		showSelectionPalette : false,
+		show : function(e) {
+			$( '.sp-thumb-el' ).tooltipster({
+				distance : 15,
+				delay : 150,
+				animationDuration : 150,
+				theme : 'cfe-tooltips'
+			});
+		}
 	});
 	$( '.tailwind-color' ).show();
 
