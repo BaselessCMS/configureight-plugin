@@ -14,11 +14,11 @@ use function CFE_Plugin\{
 
 ?>
 
-<h2 class="form-heading"><?php lang()->p( 'Content Types' ); ?></h2>
+<h3 class="form-heading"><?php lang()->p( 'Content Types' ); ?></h3>
 
 <p><?php lang()->p( 'In keeping with common vernacular of other content management systems, we refer to non-static Bludit pages as posts, including those saved as sticky, and static pages remain as pages. Theme templates by content types. A primary example of the difference between the two is that post templates may display publish date, reading time, author, etc., whereas page templates are content only. See the templates tab of the guide for distinction of static template types.' ); ?></p>
 
-<h2 class="form-heading"><?php lang()->p( 'Custom Fields for Templates' ); ?></h2>
+<h3 class="form-heading"><?php lang()->p( 'Custom Fields for Templates' ); ?></h3>
 
 <p><?php lang()->p( 'The Configure 8 theme provides custom content fields for posts, pages, and various theme features. These fields can be added via the options interface or added manually by copying the code into the text box in Settings > Custom Fields.' ); ?></p>
 

@@ -24,7 +24,7 @@ $copy_text_placeholder = sprintf(
 
 ?>
 
-<h2 class="form-heading"><?php lang()->p( 'Footer Options' ); ?></h2>
+<h3 class="form-heading"><?php lang()->p( 'Footer Options' ); ?></h3>
 
 <fieldset>
 

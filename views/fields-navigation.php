@@ -18,7 +18,7 @@ $static = buildStaticPages();
 
 ?>
 
-<h2 class="form-heading"><?php lang()->p( 'Navigation Options' ); ?></h2>
+<h3 class="form-heading"><?php lang()->p( 'Navigation Options' ); ?></h3>
 
 <fieldset>
 

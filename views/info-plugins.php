@@ -21,7 +21,7 @@ use function CFE_Plugin\{
 };
 
 ?>
-<h2 class="form-heading"><?php lang()->p( 'Companion Plugins' ); ?></h2>
+<h3 class="form-heading"><?php lang()->p( 'Companion Plugins' ); ?></h3>
 
 <p><?php lang()->p( 'The following are plugins that have been designed to enhance the Configure 8 theme. They should work with most other themes and custom themes, although in some cases code development is necessary.' ); ?></p>
 
@@ -41,7 +41,7 @@ use function CFE_Plugin\{
 
 	<div id="inactive" class="tab-pane active" role="tabpanel" aria-labelledby="inactive">
 
-		<h2 class="form-heading"><?php lang()->p( 'Inactive Companion Plugins' ); ?></h2>
+		<h3 class="form-heading"><?php lang()->p( 'Inactive Companion Plugins' ); ?></h3>
 
 		<?php
 		if ( count( suite_plugins_inactive() ) > 0 ) {
@@ -111,7 +111,7 @@ use function CFE_Plugin\{
 
 	<div id="active" class="tab-pane" role="tabpanel" aria-labelledby="active">
 
-		<h2 class="form-heading"><?php lang()->p( 'Active Companion Plugins' ); ?></h2>
+		<h3 class="form-heading"><?php lang()->p( 'Active Companion Plugins' ); ?></h3>
 
 		<p><?php lang()->p( 'The following Configure 8 companion plugins are installed and activated.' ); ?></p>
 
@@ -183,7 +183,7 @@ use function CFE_Plugin\{
 		}
 		</style>
 
-		<h2 class="form-heading"><?php lang()->p( 'Companion Plugin Downloads' ); ?></h2>
+		<h3 class="form-heading"><?php lang()->p( 'Companion Plugin Downloads' ); ?></h3>
 
 		<p><?php lang()->p( 'Following are pages for all Configure 8 companion plugins, installed or not. Follow the links to read more and download.' ); ?></p>
 

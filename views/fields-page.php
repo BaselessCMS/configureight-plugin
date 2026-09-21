@@ -27,7 +27,7 @@ if ( getPlugin( 'Search_Forms' ) ) {
 
 ?>
 
-<h2 class="form-heading"><?php lang()->p( 'Post/Page Options' ); ?></h2>
+<h3 class="form-heading"><?php lang()->p( 'Post/Page Options' ); ?></h3>
 
 <fieldset>
 

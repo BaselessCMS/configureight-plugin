@@ -21,7 +21,7 @@ use function CFE_Colors\{
 
 ?>
 
-<h2 class="form-heading"><?php lang()->p( 'Media Options' ); ?></h2>
+<h3 class="form-heading"><?php lang()->p( 'Media Options' ); ?></h3>
 
 <fieldset>
 	<legend class="screen-reader-text"><?php lang()->p( 'Media Options' ); ?></legend>

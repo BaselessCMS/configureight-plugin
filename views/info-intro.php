@@ -21,7 +21,7 @@ $fonts_page    = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts
 $database_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=database';
 
 ?>
-<h2 class="form-heading"><?php lang()->p( 'Reference Pages' ); ?></h2>
+<h3 class="form-heading"><?php lang()->p( 'Reference Pages' ); ?></h3>
 
 <p><?php lang()->p( 'This options guide includes several separate reference pages:' ); ?></p>
 <ul style="list-style: none; padding:0;">
@@ -30,7 +30,7 @@ $database_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=datab
 	<li><a href="<?php echo $database_page; ?>"><strong><?php lang()->p( 'Options Database' ); ?></strong></a></li>
 </ul>
 
-<h2 class="form-heading"><?php lang()->p( 'Compatibility' ); ?></h2>
+<h3 class="form-heading"><?php lang()->p( 'Compatibility' ); ?></h3>
 
 <p><?php lang()->p( 'The Configure 8 theme was designed with great extensibility by plugins. All of the core plugin hooks are included and placed in appropriate positions in the various template parts. That said, we cannot maintain compatibility for all plugins nor take responsibility for poorly developed plugins.' ); ?></p>
 
@@ -38,13 +38,13 @@ $database_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=datab
 
 <p><?php lang()->p( 'See the Plugins tab for plugins specifically developed to enhance Configure 8.' ); ?></p>
 
-<h2 class="form-heading"><?php lang()->p( 'Languages' ); ?></h2>
+<h3 class="form-heading"><?php lang()->p( 'Languages' ); ?></h3>
 
 <p><?php lang()->p( 'The public theme and the admin theme are both ready for RTL languages. Layout direction is automatically reversed where appropriate. Some are not flipped automatically due to layout options. For example, the main navigation position option includes left and right. Since this refers to the left and right sides of the screen, not the flow of the language, it is up to administrators to adjust the option for the target language.' ); ?></p>
 
 <p><?php lang()->p( 'Translation of hard-coded text is not complete. We welcome the submission of translations.' ); ?></p>
 
-<h2 class="form-heading"><?php lang()->p( 'Product Support' ); ?></h2>
+<h3 class="form-heading"><?php lang()->p( 'Product Support' ); ?></h3>
 
 <p><?php lang()->p( 'Please register errors, conflicts, or other problems with the Configure 8 suite of products under the Issues tab in the relevant GitHub repository.' ); ?></p>
 

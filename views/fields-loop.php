@@ -16,7 +16,7 @@
 
 ?>
 
-<h2 class="form-heading"><?php lang()->p( 'Posts Loop Options' ); ?></h2>
+<h3 class="form-heading"><?php lang()->p( 'Posts Loop Options' ); ?></h3>
 
 <fieldset>
 

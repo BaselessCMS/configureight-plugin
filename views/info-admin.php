@@ -18,7 +18,7 @@ use function CFE_Plugin\{
 $options_url = plugin_options_url( plugin()->className() );
 
 ?>
-<h2 class="form-heading"><?php lang()->p( 'Admin Theme' ); ?></h2>
+<h3 class="form-heading"><?php lang()->p( 'Admin Theme' ); ?></h3>
 
 <p><?php lang()->p( 'The Configure 8 suite includes a frontend theme, companion plugins, and an admin theme which gives your administration pages the same look and feel as the public-facing pages.' ); ?></p>
 

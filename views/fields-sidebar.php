@@ -17,7 +17,7 @@ use function CFE_Plugin\{
 
 ?>
 
-<h2 class="form-heading"><?php lang()->p( 'Sidebar Options' ); ?></h2>
+<h3 class="form-heading"><?php lang()->p( 'Sidebar Options' ); ?></h3>
 
 <fieldset>
 

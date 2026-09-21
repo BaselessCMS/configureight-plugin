@@ -17,13 +17,13 @@ $settings_page = DOMAIN_ADMIN . 'configure-plugin/' . $this->className();
 
 ?>
 
-<h2 class="form-heading"><?php lang()->p( 'Available Page Templates' ); ?></h2>
+<h3 class="form-heading"><?php lang()->p( 'Available Page Templates' ); ?></h3>
 
 <p><?php lang()->p( 'Several template options are built into the theme, which can be employed in the page edit screen under Options > Advanced. These are available for posts in the loop as well as for static pages. More than one template may be used at once, with space between each template slug.' ); ?></p>
 
 <hr />
 
-<h2 class="form-heading"><?php lang()->p( 'Page Type Templates' ); ?></h2>
+<h3 class="form-heading"><?php lang()->p( 'Page Type Templates' ); ?></h3>
 
 <p><?php lang()->p( 'These templates are for types of content or the role the page plays in the website.' ); ?></p>
 
@@ -87,7 +87,7 @@ $settings_page = DOMAIN_ADMIN . 'configure-plugin/' . $this->className();
 
 <hr />
 
-<h2 class="form-heading"><?php lang()->p( 'Header Templates' ); ?></h2>
+<h3 class="form-heading"><?php lang()->p( 'Header Templates' ); ?></h3>
 
 <p><?php lang()->p( 'These templates apply to the site branding & navigation section, and to cover image headers.' ); ?></p>
 
@@ -127,7 +127,7 @@ $settings_page = DOMAIN_ADMIN . 'configure-plugin/' . $this->className();
 
 <hr />
 
-<h2 class="form-heading"><?php lang()->p( 'Sidebar Templates' ); ?></h2>
+<h3 class="form-heading"><?php lang()->p( 'Sidebar Templates' ); ?></h3>
 
 <p><?php lang()->p( 'Sidebar templates are available to posts, sticky posts, and static pages on an individual basis. They have no associated file, using body classes and CSS to affect when and where to display the sidebar.' ); ?></p>
 
@@ -159,7 +159,7 @@ $settings_page = DOMAIN_ADMIN . 'configure-plugin/' . $this->className();
 
 <hr />
 
-<h2 class="form-heading"><?php lang()->p( 'Appearance Templates' ); ?></h2>
+<h3 class="form-heading"><?php lang()->p( 'Appearance Templates' ); ?></h3>
 
 <p><?php lang()->p( 'These template apply color and font schemes to posts and pages.' ); ?></p>
 

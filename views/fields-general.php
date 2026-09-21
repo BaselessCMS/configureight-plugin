@@ -31,7 +31,7 @@ $custom_from = plugin()->custom_scheme_from();
 
 ?>
 
-<h2 class="form-heading"><?php lang()->p( 'General Options' ); ?></h2>
+<h3 class="form-heading"><?php lang()->p( 'General Options' ); ?></h3>
 
 <fieldset>
 

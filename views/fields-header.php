@@ -21,7 +21,7 @@ if ( site()->logo() ) {
 
 ?>
 
-<h2 class="form-heading"><?php lang()->p( 'Header Options' ); ?></h2>
+<h3 class="form-heading"><?php lang()->p( 'Header Options' ); ?></h3>
 
 <fieldset>
 

@@ -16,7 +16,7 @@ use function CFE_Plugin\{
 
 ?>
 
-<h2 class="form-heading"><?php lang()->p( 'Navigation Menu' ); ?></h2>
+<h3 class="form-heading"><?php lang()->p( 'Navigation Menu' ); ?></h3>
 
 <p><?php lang()->p( 'The primary navigation menu in the Configure 8 theme is a great improvement on those in the vast majority of public Bludit themes. Many options are available for tailoring the menu to the needs of your website.' ); ?></p>
 
