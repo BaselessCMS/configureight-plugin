@@ -35,3 +35,7 @@ $options_url = plugin_options_url( plugin()->className() );
 <p><?php lang()->p( 'The admin theme needs to be unzipped/uncompressed before installation. Add the folder to where your Bludit installation lives in <code>bl-kernel/admin/themes</code> If the folder came named as <code>configureight-admin</code> then rename it to <code>configureight</code>.' ); ?></p>
 
 <p><?php lang()->p( 'The Bludit site settings file needs to be modified to change from the active admin theme name to <code>configureight</code>. Configure 8 allows you to do this easily in the options style tab. However, you can do this manually by editing the PHP file at <code>bl-content/databases/site.php</code> where <code>"adminTheme"</code> is <code>"configureight"</code>' ); ?></p>
+
+<h3 class="form-heading"><?php lang()->p( 'Admin Footer' ); ?></h3>
+
+<p><?php lang()->p( 'When using the Configure 8 admin theme, you may notice a small line at the bottom of each admin page. The text and markup of this may be changed or removed by editing the <code>"admin_footer"</code> value in the frontend theme\'s <code>metadata.json</code> file or leaving it empty. The line can also be safely removed altogether without PHP error.' ); ?></p>
