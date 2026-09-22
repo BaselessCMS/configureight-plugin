@@ -202,17 +202,19 @@ function bootstrap_scheme() {
  * Bootstrap palette
  *
  * Returns an array of each color with tints & shades.
+ * This is used in the jQuery color picker.
  *
  * @since  1.0.0
  * @return array
  */
 function bootstrap_palette() {
 
-	$json    = [];
+	$json = [];
+	$file = plugin()->phpPath() . '/assets/json/bootstrap-colors.json';
 	$palette = [];
 
-	if ( file_exists( plugin()->phpPath() . '/assets/json/bootstrap-colors.json' ) ) {
-		$json = file_get_contents( plugin()->phpPath() . '/assets/json/bootstrap-colors.json' );
+	if ( file_exists( $file ) ) {
+		$json = file_get_contents( $file );
 	}
 	$json = json_decode( $json, true );
 
@@ -269,17 +271,19 @@ function tailwind_scheme() {
  * Tailwind palette
  *
  * Returns an array of each color with tints & shades.
+ * This is used in the jQuery color picker.
  *
  * @since  1.0.0
  * @return array
  */
 function tailwind_palette() {
 
-	$json    = [];
+	$json = [];
+	$file = plugin()->phpPath() . '/assets/json/tailwind-colors.json';
 	$palette = [];
 
-	if ( file_exists( plugin()->phpPath() . '/assets/json/tailwind-colors.json' ) ) {
-		$json = file_get_contents( plugin()->phpPath() . '/assets/json/tailwind-colors.json' );
+	if ( file_exists( $file ) ) {
+		$json = file_get_contents( $file );
 	}
 	$json = json_decode( $json, true );
 
