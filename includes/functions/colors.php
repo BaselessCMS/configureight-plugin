@@ -111,6 +111,11 @@ function color_scheme_categories() {
 			'name'  => lang()->get( 'Basic' ),
 			'about' => lang()->get( 'The simple, default color schemes for light and dark modes. ' )
 		],
+		'bootstrap' => [
+			'slug'  => 'bootstrap',
+			'name'  => lang()->get( 'Bootstrap' ),
+			'about' => lang()->get( 'Specific color schemes for each of the Bootstrap v5 colors. The full-spectrum Bootstrap scheme id in the Custom category.' )
+		],
 		'design' => [
 			'slug'  => 'design',
 			'name'  => lang()->get( 'Design' ),
@@ -140,6 +145,11 @@ function color_scheme_categories() {
 			'slug'  => 'scope',
 			'name'  => lang()->get( 'Scope' ),
 			'about' => lang()->get( 'Color schemes for the scope of the webite\'s primary content.' )
+		],
+		'tailwind' => [
+			'slug'  => 'tailwind',
+			'name'  => lang()->get( 'Tailwind' ),
+			'about' => lang()->get( 'Specific color schemes for each of the Tailwind v4 colors. The full-spectrum Tailwind scheme id in the Custom category.' )
 		]
 	];
 	asort( $cats );
@@ -210,7 +220,7 @@ function bootstrap_scheme() {
 function bootstrap_palette() {
 
 	$json = [];
-	$file = plugin()->phpPath() . '/assets/json/bootstrap-colors.json';
+	$file = plugin()->phpPath() . '/assets/json/colors/custom/bootstrap-colors.json';
 	$palette = [];
 
 	if ( file_exists( $file ) ) {
@@ -279,7 +289,7 @@ function tailwind_scheme() {
 function tailwind_palette() {
 
 	$json = [];
-	$file = plugin()->phpPath() . '/assets/json/tailwind-colors.json';
+	$file = plugin()->phpPath() . '/assets/json/colors/custom/tailwind-colors.json';
 	$palette = [];
 
 	if ( file_exists( $file ) ) {
@@ -430,6 +440,1009 @@ function color_schemes() {
 				'four'  => '#555555',
 				'five'  => '#333333',
 				'six'   => '#555555'
+			]
+		],
+
+		// Bootstrap — specific colors, not full-spectrum.
+		'bs_red' => [
+			'slug'     => 'bs_red',
+			'name'     => lang()->get( 'Bootstrap Red' ),
+			'about'    => lang()->get( 'The Bootstrap red color plus tints & shades.' ),
+			'category' => 'bootstrap',
+			'media'    => '#dc3545',
+			'light' => [
+				'body'  => '#fdf3f4',
+				'text'  => '#58151c',
+				'one'   => '#b02a37',
+				'two'   => '#dc3545',
+				'three' => '#dc3545',
+				'four'  => '#b02a37',
+				'five'  => '#b02a37',
+				'six'   => '#dc3545'
+			],
+			'dark' => [
+				'body'  => '#160507',
+				'text'  => '#fdf3f4',
+				'one'   => '#e35d6a',
+				'two'   => '#dc3545',
+				'three' => '#dc3545',
+				'four'  => '#e35d6a',
+				'five'  => '#b02a37',
+				'six'   => '#dc3545'
+			]
+		],
+		'bs_orange' => [
+			'slug'     => 'bs_orange',
+			'name'     => lang()->get( 'Bootstrap Orange' ),
+			'about'    => lang()->get( 'The Bootstrap orange color plus tints & shades.' ),
+			'category' => 'bootstrap',
+			'media'    => '#fd7e14',
+			'light' => [
+				'body'  => '#fff7f1',
+				'text'  => '#653208',
+				'one'   => '#ca6510',
+				'two'   => '#fd7e14',
+				'three' => '#fd7e14',
+				'four'  => '#ca6510',
+				'five'  => '#ca6510',
+				'six'   => '#fd7e14'
+			],
+			'dark' => [
+				'body'  => '#190d02',
+				'text'  => '#fff7f1',
+				'one'   => '#fd9843',
+				'two'   => '#fd7e14',
+				'three' => '#fd7e14',
+				'four'  => '#ca6510',
+				'five'  => '#ca6510',
+				'six'   => '#fd7e14'
+			]
+		],
+		'bs_yellow' => [
+			'slug'     => 'bs_yellow',
+			'name'     => lang()->get( 'Bootstrap Yellow' ),
+			'about'    => lang()->get( 'The Bootstrap yellow color plus tints & shades.' ),
+			'category' => 'bootstrap',
+			'media'    => '#ffc107',
+			'light' => [
+				'body'  => '#fffbf0',
+				'text'  => '#664d03',
+				'one'   => '#cc9a06',
+				'two'   => '#ffc107',
+				'three' => '#ffc107',
+				'four'  => '#ffcd39',
+				'five'  => '#cc9a06',
+				'six'   => '#ffc107'
+			],
+			'dark' => [
+				'body'  => '#1a1301',
+				'text'  => '#fffbf0',
+				'one'   => '#ffcd39',
+				'two'   => '#ffc107',
+				'three' => '#ffc107',
+				'four'  => '#ffcd39',
+				'five'  => '#cc9a06',
+				'six'   => '#ffc107'
+			]
+		],
+		'bs_green' => [
+			'slug'     => 'bs_green',
+			'name'     => lang()->get( 'Bootstrap Green' ),
+			'about'    => lang()->get( 'The Bootstrap green color plus tints & shades.' ),
+			'category' => 'bootstrap',
+			'media'    => '#198754',
+			'light' => [
+				'body'  => '#edf5f1',
+				'text'  => '#0a3622',
+				'one'   => '#146c43',
+				'two'   => '#198754',
+				'three' => '#198754',
+				'four'  => '#146c43',
+				'five'  => '#146c43',
+				'six'   => '#479f76'
+			],
+			'dark' => [
+				'body'  => '#030e08',
+				'text'  => '#edf5f1',
+				'one'   => '#75b798',
+				'two'   => '#198754',
+				'three' => '#198754',
+				'four'  => '#146c43',
+				'five'  => '#146c43',
+				'six'   => '#479f76'
+			]
+		],
+		'bs_teal' => [
+			'slug'     => 'bs_teal',
+			'name'     => lang()->get( 'Bootstrap Teal' ),
+			'about'    => lang()->get( 'The Bootstrap teal color plus tints & shades.' ),
+			'category' => 'bootstrap',
+			'media'    => '#20c997',
+			'light' => [
+				'body'  => '#e9faf5',
+				'text'  => '#06281e',
+				'one'   => '#1aa179',
+				'two'   => '#20c997',
+				'three' => '#20c997',
+				'four'  => '#1aa179',
+				'five'  => '#1aa179',
+				'six'   => '#20c997'
+			],
+			'dark' => [
+				'body'  => '#03140f',
+				'text'  => '#e9faf5',
+				'one'   => '#71ddbd',
+				'two'   => '#20c997',
+				'three' => '#20c997',
+				'four'  => '#1aa179',
+				'five'  => '#1aa179',
+				'six'   => '#20c997'
+			]
+		],
+		'bs_cyan' => [
+			'slug'     => 'bs_cyan',
+			'name'     => lang()->get( 'Bootstrap Cyan' ),
+			'about'    => lang()->get( 'The Bootstrap cyan color plus tints & shades.' ),
+			'category' => 'bootstrap',
+			'media'    => '#0dcaf0',
+			'light' => [
+				'body'  => '#e7fafe',
+				'text'  => '#032830',
+				'one'   => '#0aa2c0',
+				'two'   => '#0dcaf0',
+				'three' => '#0dcaf0',
+				'four'  => '#0aa2c0',
+				'five'  => '#0aa2c0',
+				'six'   => '#0dcaf0'
+			],
+			'dark' => [
+				'body'  => '#011418',
+				'text'  => '#e7fafe',
+				'one'   => '#3dd5f3',
+				'two'   => '#0dcaf0',
+				'three' => '#0dcaf0',
+				'four'  => '#0aa2c0',
+				'five'  => '#0aa2c0',
+				'six'   => '#0dcaf0'
+			]
+		],
+		'bs_blue' => [
+			'slug'     => 'bs_blue',
+			'name'     => lang()->get( 'Bootstrap Blue' ),
+			'about'    => lang()->get( 'The Bootstrap blue color plus tints & shades.' ),
+			'category' => 'bootstrap',
+			'media'    => '#0d6efd',
+			'light' => [
+				'body'  => '#e7f1ff',
+				'text'  => '#052c65',
+				'one'   => '#0a58ca',
+				'two'   => '#0d6efd',
+				'three' => '#0d6efd',
+				'four'  => '#0a58ca',
+				'five'  => '#0a58ca',
+				'six'   => '#0d6efd'
+			],
+			'dark' => [
+				'body'  => '#010b19',
+				'text'  => '#e7f1ff',
+				'one'   => '#6ea8fe',
+				'two'   => '#0d6efd',
+				'three' => '#0d6efd',
+				'four'  => '#0a58ca',
+				'five'  => '#0a58ca',
+				'six'   => '#0d6efd'
+			]
+		],
+		'bs_indigo' => [
+			'slug'     => 'bs_indigo',
+			'name'     => lang()->get( 'Bootstrap Indigo' ),
+			'about'    => lang()->get( 'The Bootstrap indigo color plus tints & shades.' ),
+			'category' => 'bootstrap',
+			'media'    => '#6610f2',
+			'light' => [
+				'body'  => '#f0e7fe',
+				'text'  => '#290661',
+				'one'   => '#8540f5',
+				'two'   => '#6610f2',
+				'three' => '#6610f2',
+				'four'  => '#520dc2',
+				'five'  => '#520dc2',
+				'six'   => '#6610f2'
+			],
+			'dark' => [
+				'body'  => '#0a0218',
+				'text'  => '#f0e7fe',
+				'one'   => '#5599ff',
+				'two'   => '#6610f2',
+				'three' => '#6610f2',
+				'four'  => '#520dc2',
+				'five'  => '#520dc2',
+				'six'   => '#6610f2'
+			]
+		],
+		'bs_purple' => [
+			'slug'     => 'bs_purple',
+			'name'     => lang()->get( 'Bootstrap Purple' ),
+			'about'    => lang()->get( 'The Bootstrap purple color plus tints & shades.' ),
+			'category' => 'bootstrap',
+			'media'    => '#6f42c1',
+			'light' => [
+				'body'  => '#f1ecf9',
+				'text'  => '#2c1a4d',
+				'one'   => '#59359a',
+				'two'   => '#6f42c1',
+				'three' => '#6f42c1',
+				'four'  => '#59359a',
+				'five'  => '#59359a',
+				'six'   => '#8c68cd'
+			],
+			'dark' => [
+				'body'  => '#0b0713',
+				'text'  => '#f1ecf9',
+				'one'   => '#8c68cd',
+				'two'   => '#6f42c1',
+				'three' => '#6f42c1',
+				'four'  => '#59359a',
+				'five'  => '#59359a',
+				'six'   => '#8c68cd'
+			]
+		],
+		'bs_pink' => [
+			'slug'     => 'bs_pink',
+			'name'     => lang()->get( 'Bootstrap Pink' ),
+			'about'    => lang()->get( 'The Bootstrap pink color plus tints & shades.' ),
+			'category' => 'bootstrap',
+			'media'    => '#d63384',
+			'light' => [
+				'body'  => '#fbebf3',
+				'text'  => '#2b0a1a',
+				'one'   => '#ab296a',
+				'two'   => '#d63384',
+				'three' => '#d63384',
+				'four'  => '#ab296a',
+				'five'  => '#ab296a',
+				'six'   => '#d63384'
+			],
+			'dark' => [
+				'body'  => '#15050d',
+				'text'  => '#fbebf3',
+				'one'   => '#de5c9d',
+				'two'   => '#d63384',
+				'three' => '#d63384',
+				'four'  => '#ab296a',
+				'five'  => '#ab296a',
+				'six'   => '#d63384'
+			]
+		],
+		'bs_gray' => [
+			'slug'     => 'bs_gray',
+			'name'     => lang()->get( 'Bootstrap Gray' ),
+			'about'    => lang()->get( 'The Bootstrap gray colors.' ),
+			'category' => 'bootstrap',
+			'media'    => '#adb5bd',
+			'light' => [
+				'body'  => '#e9ecef',
+				'text'  => '#343a40',
+				'one'   => '#6c757d',
+				'two'   => '#adb5bd',
+				'three' => '#adb5bd',
+				'four'  => '#6c757d',
+				'five'  => '#6c757d',
+				'six'   => '#adb5bd'
+			],
+			'dark' => [
+				'body'  => '#111213',
+				'text'  => '#e9ecef',
+				'one'   => '#adb5bd',
+				'two'   => '#6c757d',
+				'three' => '#6c757d',
+				'four'  => '#adb5bd',
+				'five'  => '#6c757d',
+				'six'   => '#adb5bd'
+			]
+		],
+
+		// Tailwind — specific colors, not full-spectrum.
+		'tw_red' => [
+			'slug'     => 'tw_red',
+			'name'     => lang()->get( 'Tailwind Red' ),
+			'about'    => lang()->get( 'The Tailwind red colors.' ),
+			'category' => 'tailwind',
+			'media'    => '#fb2c36',
+			'light' => [
+				'body'  => '#fef2f2',
+				'text'  => '#460809',
+				'one'   => '#c10007',
+				'two'   => '#fb2c36',
+				'three' => '#fb2c36',
+				'four'  => '#c10007',
+				'five'  => '#c10007',
+				'six'   => '#fb2c36'
+			],
+			'dark' => [
+				'body'  => '#460809',
+				'text'  => '#fef2f2',
+				'one'   => '#ff6467',
+				'two'   => '#fb2c36',
+				'three' => '#fb2c36',
+				'four'  => '#c10007',
+				'five'  => '#c10007',
+				'six'   => '#fb2c36'
+			]
+		],
+		'tw_orange' => [
+			'slug'     => 'tw_orange',
+			'name'     => lang()->get( 'Tailwind Orange' ),
+			'about'    => lang()->get( 'The Tailwind orange colors.' ),
+			'category' => 'tailwind',
+			'media'    => '#ff6900',
+			'light' => [
+				'body'  => '#fff7ed',
+				'text'  => '#441306',
+				'one'   => '#ca3500',
+				'two'   => '#ff6900',
+				'three' => '#ff6900',
+				'four'  => '#ca3500',
+				'five'  => '#ca3500',
+				'six'   => '#ff6900'
+			],
+			'dark' => [
+				'body'  => '#441306',
+				'text'  => '#fff7ed',
+				'one'   => '#f54900',
+				'two'   => '#ff6900',
+				'three' => '#ff6900',
+				'four'  => '#ca3500',
+				'five'  => '#ca3500',
+				'six'   => '#ff6900'
+			]
+		],
+		'tw_amber' => [
+			'slug'     => 'tw_amber',
+			'name'     => lang()->get( 'Tailwind Amber' ),
+			'about'    => lang()->get( 'The Tailwind amber colors.' ),
+			'category' => 'tailwind',
+			'media'    => '#fe9a00',
+			'light' => [
+				'body'  => '#fffbeb',
+				'text'  => '#461901',
+				'one'   => '#e17100',
+				'two'   => '#fe9a00',
+				'three' => '#fe9a00',
+				'four'  => '#e17100',
+				'five'  => '#e17100',
+				'six'   => '#fe9a00'
+			],
+			'dark' => [
+				'body'  => '#461901',
+				'text'  => '#fffbeb',
+				'one'   => '#e17100',
+				'two'   => '#fe9a00',
+				'three' => '#fe9a00',
+				'four'  => '#e17100',
+				'five'  => '#e17100',
+				'six'   => '#fe9a00'
+			]
+		],
+		'tw_yellow' => [
+			'slug'     => 'tw_yellow',
+			'name'     => lang()->get( 'Tailwind Yellow' ),
+			'about'    => lang()->get( 'The Tailwind yellow colors.' ),
+			'category' => 'tailwind',
+			'media'    => '#fdc700',
+			'light' => [
+				'body'  => '#fefce8',
+				'text'  => '#432004',
+				'one'   => '#f0b100',
+				'two'   => '#fdc700',
+				'three' => '#fdc700',
+				'four'  => '#f0b100',
+				'five'  => '#f0b100',
+				'six'   => '#fdc700'
+			],
+			'dark' => [
+				'body'  => '#432004',
+				'text'  => '#fefce8',
+				'one'   => '#fdc700',
+				'two'   => '#f0b100',
+				'three' => '#fdc700',
+				'four'  => '#f0b100',
+				'five'  => '#f0b100',
+				'six'   => '#fdc700'
+			]
+		],
+		'tw_lime' => [
+			'slug'     => 'tw_lime',
+			'name'     => lang()->get( 'Tailwind Lime' ),
+			'about'    => lang()->get( 'The Tailwind lime colors.' ),
+			'category' => 'tailwind',
+			'media'    => '#7ccf00',
+			'light' => [
+				'body'  => '#f7fee7',
+				'text'  => '#192e03',
+				'one'   => '#5ea500',
+				'two'   => '#7ccf00',
+				'three' => '#7ccf00',
+				'four'  => '#5ea500',
+				'five'  => '#5ea500',
+				'six'   => '#7ccf00'
+			],
+			'dark' => [
+				'body'  => '#192e03',
+				'text'  => '#f7fee7',
+				'one'   => '#9ae600',
+				'two'   => '#7ccf00',
+				'three' => '#7ccf00',
+				'four'  => '#5ea500',
+				'five'  => '#5ea500',
+				'six'   => '#7ccf00'
+			]
+		],
+		'tw_green' => [
+			'slug'     => 'tw_green',
+			'name'     => lang()->get( 'Tailwind Green' ),
+			'about'    => lang()->get( 'The Tailwind green colors.' ),
+			'category' => 'tailwind',
+			'media'    => '#00c950',
+			'light' => [
+				'body'  => '#f0fdf4',
+				'text'  => '#032e15',
+				'one'   => '#00a63e',
+				'two'   => '#00c950',
+				'three' => '#00c950',
+				'four'  => '#00a63e',
+				'five'  => '#00a63e',
+				'six'   => '#00c950'
+			],
+			'dark' => [
+				'body'  => '#032e15',
+				'text'  => '#f0fdf4',
+				'one'   => '#05df72',
+				'two'   => '#00c950',
+				'three' => '#00c950',
+				'four'  => '#00a63e',
+				'five'  => '#00a63e',
+				'six'   => '#00c950'
+			]
+		],
+		'tw_emerald' => [
+			'slug'     => 'tw_emerald',
+			'name'     => lang()->get( 'Tailwind Emerald' ),
+			'about'    => lang()->get( 'The Tailwind emerald colors.' ),
+			'category' => 'tailwind',
+			'media'    => '#00bc7d',
+			'light' => [
+				'body'  => '#ecfdf5',
+				'text'  => '#002c22',
+				'one'   => '#009966',
+				'two'   => '#00bc7d',
+				'three' => '#00bc7d',
+				'four'  => '#009966',
+				'five'  => '#009966',
+				'six'   => '#00bc7d'
+			],
+			'dark' => [
+				'body'  => '#002c22',
+				'text'  => '#ecfdf5',
+				'one'   => '#05df72',
+				'two'   => '#00bc7d',
+				'three' => '#00bc7d',
+				'four'  => '#009966',
+				'five'  => '#009966',
+				'six'   => '#00bc7d'
+			]
+		],
+		'tw_teal' => [
+			'slug'     => 'tw_teal',
+			'name'     => lang()->get( 'Tailwind Teal' ),
+			'about'    => lang()->get( 'The Tailwind teal colors.' ),
+			'category' => 'tailwind',
+			'media'    => '#00bba7',
+			'light' => [
+				'body'  => '#f0fdfa',
+				'text'  => '#022f2e',
+				'one'   => '#009689',
+				'two'   => '#00bba7',
+				'three' => '#00bba7',
+				'four'  => '#009689',
+				'five'  => '#009689',
+				'six'   => '#00bba7'
+			],
+			'dark' => [
+				'body'  => '#022f2e',
+				'text'  => '#f0fdfa',
+				'one'   => '#46ecd5',
+				'two'   => '#00bba7',
+				'three' => '#00bba7',
+				'four'  => '#009689',
+				'five'  => '#009689',
+				'six'   => '#00bba7'
+			]
+		],
+		'tw_cyan' => [
+			'slug'     => 'tw_cyan',
+			'name'     => lang()->get( 'Tailwind Cyan' ),
+			'about'    => lang()->get( 'The Tailwind cyan colors.' ),
+			'category' => 'tailwind',
+			'media'    => '#00b8db',
+			'light' => [
+				'body'  => '#ecfeff',
+				'text'  => '#053345',
+				'one'   => '#0092b8',
+				'two'   => '#00b8db',
+				'three' => '#00b8db',
+				'four'  => '#0092b8',
+				'five'  => '#0092b8',
+				'six'   => '#00b8db'
+			],
+			'dark' => [
+				'body'  => '#053345',
+				'text'  => '#ecfeff',
+				'one'   => '#00d3f2',
+				'two'   => '#00b8db',
+				'three' => '#00b8db',
+				'four'  => '#0092b8',
+				'five'  => '#0092b8',
+				'six'   => '#00b8db'
+			]
+		],
+		'tw_sky' => [
+			'slug'     => 'tw_sky',
+			'name'     => lang()->get( 'Tailwind Sky' ),
+			'about'    => lang()->get( 'The Tailwind sky colors.' ),
+			'category' => 'tailwind',
+			'media'    => '#00a6f4',
+			'light' => [
+				'body'  => '#f0f9ff',
+				'text'  => '#052f4a',
+				'one'   => '#0084d1',
+				'two'   => '#00a6f4',
+				'three' => '#00a6f4',
+				'four'  => '#0084d1',
+				'five'  => '#0084d1',
+				'six'   => '#00a6f4'
+			],
+			'dark' => [
+				'body'  => '#052f4a',
+				'text'  => '#f0f9ff',
+				'one'   => '#00bcff',
+				'two'   => '#00a6f4',
+				'three' => '#00a6f4',
+				'four'  => '#0084d1',
+				'five'  => '#0084d1',
+				'six'   => '#00a6f4'
+			]
+		],
+		'tw_blue' => [
+			'slug'     => 'tw_blue',
+			'name'     => lang()->get( 'Tailwind Blue' ),
+			'about'    => lang()->get( 'The Tailwind blue colors.' ),
+			'category' => 'tailwind',
+			'media'    => '#2b7fff',
+			'light' => [
+				'body'  => '#eff6ff',
+				'text'  => '#162456',
+				'one'   => '#155dfc',
+				'two'   => '#2b7fff',
+				'three' => '#2b7fff',
+				'four'  => '#155dfc',
+				'five'  => '#155dfc',
+				'six'   => '#2b7fff'
+			],
+			'dark' => [
+				'body'  => '#162456',
+				'text'  => '#eff6ff',
+				'one'   => '#51a2ff',
+				'two'   => '#2b7fff',
+				'three' => '#2b7fff',
+				'four'  => '#155dfc',
+				'five'  => '#155dfc',
+				'six'   => '#2b7fff'
+			]
+		],
+		'tw_indigo' => [
+			'slug'     => 'tw_indigo',
+			'name'     => lang()->get( 'Tailwind Indigo' ),
+			'about'    => lang()->get( 'The Tailwind indigo colors.' ),
+			'category' => 'tailwind',
+			'media'    => '#615fff',
+			'light' => [
+				'body'  => '#eef2ff',
+				'text'  => '#1e1a4d',
+				'one'   => '#4f39f6',
+				'two'   => '#615fff',
+				'three' => '#615fff',
+				'four'  => '#4f39f6',
+				'five'  => '#4f39f6',
+				'six'   => '#615fff'
+			],
+			'dark' => [
+				'body'  => '#1e1a4d',
+				'text'  => '#eef2ff',
+				'one'   => '#7c86ff',
+				'two'   => '#615fff',
+				'three' => '#615fff',
+				'four'  => '#4f39f6',
+				'five'  => '#4f39f6',
+				'six'   => '#615fff'
+			]
+		],
+		'tw_violet' => [
+			'slug'     => 'tw_violet',
+			'name'     => lang()->get( 'Tailwind Violet' ),
+			'about'    => lang()->get( 'The Tailwind violet colors.' ),
+			'category' => 'tailwind',
+			'media'    => '#8e51ff',
+			'light' => [
+				'body'  => '#f5f3ff',
+				'text'  => '#2f0d68',
+				'one'   => '#7008e7',
+				'two'   => '#8e51ff',
+				'three' => '#8e51ff',
+				'four'  => '#7008e7',
+				'five'  => '#7008e7',
+				'six'   => '#8e51ff'
+			],
+			'dark' => [
+				'body'  => '#2f0d68',
+				'text'  => '#f5f3ff',
+				'one'   => '#a684ff',
+				'two'   => '#8e51ff',
+				'three' => '#8e51ff',
+				'four'  => '#7008e7',
+				'five'  => '#7008e7',
+				'six'   => '#8e51ff'
+			]
+		],
+		'tw_purple' => [
+			'slug'     => 'tw_purple',
+			'name'     => lang()->get( 'Tailwind Purple' ),
+			'about'    => lang()->get( 'The Tailwind purple colors.' ),
+			'category' => 'tailwind',
+			'media'    => '#ad46ff',
+			'light' => [
+				'body'  => '#faf5ff',
+				'text'  => '#3c0366',
+				'one'   => '#9810fa',
+				'two'   => '#ad46ff',
+				'three' => '#ad46ff',
+				'four'  => '#9810fa',
+				'five'  => '#9810fa',
+				'six'   => '#c27aff'
+			],
+			'dark' => [
+				'body'  => '#3c0366',
+				'text'  => '#faf5ff',
+				'one'   => '#c27aff',
+				'two'   => '#ad46ff',
+				'three' => '#ad46ff',
+				'four'  => '#9810fa',
+				'five'  => '#9810fa',
+				'six'   => '#c27aff'
+			]
+		],
+		'tw_fuchsia' => [
+			'slug'     => 'tw_fuchsia',
+			'name'     => lang()->get( 'Tailwind Fuchsia' ),
+			'about'    => lang()->get( 'The Tailwind fuchsia colors.' ),
+			'category' => 'tailwind',
+			'media'    => '#e12afb',
+			'light' => [
+				'body'  => '#fdf4ff',
+				'text'  => '#4b004f',
+				'one'   => '#c800de',
+				'two'   => '#e12afb',
+				'three' => '#e12afb',
+				'four'  => '#c800de',
+				'five'  => '#c800de',
+				'six'   => '#e12afb'
+			],
+			'dark' => [
+				'body'  => '#4b004f',
+				'text'  => '#fdf4ff',
+				'one'   => '#ed6aff',
+				'two'   => '#e12afb',
+				'three' => '#e12afb',
+				'four'  => '#c800de',
+				'five'  => '#c800de',
+				'six'   => '#e12afb'
+			]
+		],
+		'tw_pink' => [
+			'slug'     => 'tw_pink',
+			'name'     => lang()->get( 'Tailwind Pink' ),
+			'about'    => lang()->get( 'The Tailwind pink colors.' ),
+			'category' => 'tailwind',
+			'media'    => '#f6339a',
+			'light' => [
+				'body'  => '#fdf2f8',
+				'text'  => '#510424',
+				'one'   => '#e60076',
+				'two'   => '#f6339a',
+				'three' => '#f6339a',
+				'four'  => '#e60076',
+				'five'  => '#e60076',
+				'six'   => '#f6339a'
+			],
+			'dark' => [
+				'body'  => '#510424',
+				'text'  => '#fdf2f8',
+				'one'   => '#fb64b6',
+				'two'   => '#f6339a',
+				'three' => '#f6339a',
+				'four'  => '#e60076',
+				'five'  => '#e60076',
+				'six'   => '#f6339a'
+			]
+		],
+		'tw_rose' => [
+			'slug'     => 'tw_rose',
+			'name'     => lang()->get( 'Tailwind Rose' ),
+			'about'    => lang()->get( 'The Tailwind rose colors.' ),
+			'category' => 'tailwind',
+			'media'    => '#ff2056',
+			'light' => [
+				'body'  => '#fff1f2',
+				'text'  => '#4d0218',
+				'one'   => '#ec003f',
+				'two'   => '#ff2056',
+				'three' => '#ff2056',
+				'four'  => '#ec003f',
+				'five'  => '#ec003f',
+				'six'   => '#ff637e'
+			],
+			'dark' => [
+				'body'  => '#4d0218',
+				'text'  => '#fff1f2',
+				'one'   => '#ff637e',
+				'two'   => '#ff2056',
+				'three' => '#ff2056',
+				'four'  => '#ec003f',
+				'five'  => '#ec003f',
+				'six'   => '#ff637e'
+			]
+		],
+		'tw_stone' => [
+			'slug'     => 'tw_stone',
+			'name'     => lang()->get( 'Tailwind Stone' ),
+			'about'    => lang()->get( 'The Tailwind stone colors.' ),
+			'category' => 'tailwind',
+			'media'    => '#a6a09b',
+			'light' => [
+				'body'  => '#fafaf9',
+				'text'  => '#0c0a09',
+				'one'   => '#79716b',
+				'two'   => '#a6a09b',
+				'three' => '#a6a09b',
+				'four'  => '#79716b',
+				'five'  => '#79716b',
+				'six'   => '#a6a09b'
+			],
+			'dark' => [
+				'body'  => '#0c0a09',
+				'text'  => '#fafaf9',
+				'one'   => '#d6d3d1',
+				'two'   => '#a6a09b',
+				'three' => '#a6a09b',
+				'four'  => '#79716b',
+				'five'  => '#79716b',
+				'six'   => '#a6a09b'
+			]
+		],
+		'tw_neutral' => [
+			'slug'     => 'tw_neutral',
+			'name'     => lang()->get( 'Tailwind Neutral' ),
+			'about'    => lang()->get( 'The Tailwind neutral colors.' ),
+			'category' => 'tailwind',
+			'media'    => '#a1a1a1',
+			'light' => [
+				'body'  => '#fafafa',
+				'text'  => '#0a0a0a',
+				'one'   => '#737373',
+				'two'   => '#a1a1a1',
+				'three' => '#a1a1a1',
+				'four'  => '#737373',
+				'five'  => '#737373',
+				'six'   => '#a1a1a1'
+			],
+			'dark' => [
+				'body'  => '#0a0a0a',
+				'text'  => '#fafafa',
+				'one'   => '#d4d4d4',
+				'two'   => '#a1a1a1',
+				'three' => '#a1a1a1',
+				'four'  => '#737373',
+				'five'  => '#737373',
+				'six'   => '#a1a1a1'
+			]
+		],
+		'tw_zinc' => [
+			'slug'     => 'tw_zinc',
+			'name'     => lang()->get( 'Tailwind Zinc' ),
+			'about'    => lang()->get( 'The Tailwind zinc colors.' ),
+			'category' => 'tailwind',
+			'media'    => '#9f9fa9',
+			'light' => [
+				'body'  => '#fafafa',
+				'text'  => '#09090b',
+				'one'   => '#71717b',
+				'two'   => '#9f9fa9',
+				'three' => '#9f9fa9',
+				'four'  => '#71717b',
+				'five'  => '#71717b',
+				'six'   => '#9f9fa9'
+			],
+			'dark' => [
+				'body'  => '#09090b',
+				'text'  => '#fafafa',
+				'one'   => '#d4d4d8',
+				'two'   => '#9f9fa9',
+				'three' => '#9f9fa9',
+				'four'  => '#71717b',
+				'five'  => '#71717b',
+				'six'   => '#9f9fa9'
+			]
+		],
+		'tw_gray' => [
+			'slug'     => 'tw_gray',
+			'name'     => lang()->get( 'Tailwind Gray' ),
+			'about'    => lang()->get( 'The Tailwind gray colors.' ),
+			'category' => 'tailwind',
+			'media'    => '#99a1af',
+			'light' => [
+				'body'  => '#f9fafb',
+				'text'  => '#030712',
+				'one'   => '#6a7282',
+				'two'   => '#99a1af',
+				'three' => '#99a1af',
+				'four'  => '#6a7282',
+				'five'  => '#6a7282',
+				'six'   => '#99a1af'
+			],
+			'dark' => [
+				'body'  => '#030712',
+				'text'  => '#f9fafb',
+				'one'   => '#d1d5dc',
+				'two'   => '#99a1af',
+				'three' => '#99a1af',
+				'four'  => '#6a7282',
+				'five'  => '#6a7282',
+				'six'   => '#99a1af'
+			]
+		],
+		'tw_slate' => [
+			'slug'     => 'tw_slate',
+			'name'     => lang()->get( 'Tailwind Slate' ),
+			'about'    => lang()->get( 'The Tailwind slate colors.' ),
+			'category' => 'tailwind',
+			'media'    => '#90a1b9',
+			'light' => [
+				'body'  => '#f8fafc',
+				'text'  => '#020618',
+				'one'   => '#62748e',
+				'two'   => '#90a1b9',
+				'three' => '#90a1b9',
+				'four'  => '#62748e',
+				'five'  => '#62748e',
+				'six'   => '#90a1b9'
+			],
+			'dark' => [
+				'body'  => '#020618',
+				'text'  => '#f8fafc',
+				'one'   => '#cbd5e2',
+				'two'   => '#90a1b9',
+				'three' => '#90a1b9',
+				'four'  => '#62748e',
+				'five'  => '#62748e',
+				'six'   => '#90a1b9'
+			]
+		],
+		'tw_mauve' => [
+			'slug'     => 'tw_mauve',
+			'name'     => lang()->get( 'Tailwind Mauve' ),
+			'about'    => lang()->get( 'The Tailwind mauve colors.' ),
+			'category' => 'tailwind',
+			'media'    => '#a89ea9',
+			'light' => [
+				'body'  => '#fafafa',
+				'text'  => '#0c090c',
+				'one'   => '#79697b',
+				'two'   => '#a89ea9',
+				'three' => '#a89ea9',
+				'four'  => '#79697b',
+				'five'  => '#79697b',
+				'six'   => '#a89ea9'
+			],
+			'dark' => [
+				'body'  => '#0c090c',
+				'text'  => '#fafafa',
+				'one'   => '#d7d0d7',
+				'two'   => '#a89ea9',
+				'three' => '#a89ea9',
+				'four'  => '#79697b',
+				'five'  => '#79697b',
+				'six'   => '#a89ea9'
+			]
+		],
+		'tw_olive' => [
+			'slug'     => 'tw_olive',
+			'name'     => lang()->get( 'Tailwind Olive' ),
+			'about'    => lang()->get( 'The Tailwind olive colors.' ),
+			'category' => 'tailwind',
+			'media'    => '#abab9c',
+			'light' => [
+				'body'  => '#fbfbf9',
+				'text'  => '#0c0c09',
+				'one'   => '#7c7c67',
+				'two'   => '#abab9c',
+				'three' => '#abab9c',
+				'four'  => '#7c7c67',
+				'five'  => '#7c7c67',
+				'six'   => '#abab9c'
+			],
+			'dark' => [
+				'body'  => '#0c0c09',
+				'text'  => '#fbfbf9',
+				'one'   => '#d8d8d0',
+				'two'   => '#abab9c',
+				'three' => '#abab9c',
+				'four'  => '#7c7c67',
+				'five'  => '#7c7c67',
+				'six'   => '#abab9c'
+			]
+		],
+		'tw_mist' => [
+			'slug'     => 'tw_mist',
+			'name'     => lang()->get( 'Tailwind Mist' ),
+			'about'    => lang()->get( 'The Tailwind mist colors.' ),
+			'category' => 'tailwind',
+			'media'    => '#9ca8ab',
+			'light' => [
+				'body'  => '#f9fbfb',
+				'text'  => '#090b0c',
+				'one'   => '#67787c',
+				'two'   => '#9ca8ab',
+				'three' => '#9ca8ab',
+				'four'  => '#67787c',
+				'five'  => '#67787c',
+				'six'   => '#9ca8ab'
+			],
+			'dark' => [
+				'body'  => '#090b0c',
+				'text'  => '#f9fbfb',
+				'one'   => '#d0d6d8',
+				'two'   => '#9ca8ab',
+				'three' => '#9ca8ab',
+				'four'  => '#67787c',
+				'five'  => '#67787c',
+				'six'   => '#9ca8ab'
+			]
+		],
+		'tw_taupe' => [
+			'slug'     => 'tw_taupe',
+			'name'     => lang()->get( 'Tailwind Taupe' ),
+			'about'    => lang()->get( 'The Tailwind taupe colors.' ),
+			'category' => 'tailwind',
+			'media'    => '#aba09c',
+			'light' => [
+				'body'  => '#fbfaf9',
+				'text'  => '#0c0a09',
+				'one'   => '#7c6d67',
+				'two'   => '#aba09c',
+				'three' => '#aba09c',
+				'four'  => '#7c6d67',
+				'five'  => '#7c6d67',
+				'six'   => '#aba09c'
+			],
+			'dark' => [
+				'body'  => '#0c0a09',
+				'text'  => '#fbfaf9',
+				'one'   => '#d8d2d0',
+				'two'   => '#aba09c',
+				'three' => '#aba09c',
+				'four'  => '#7c6d67',
+				'five'  => '#7c6d67',
+				'six'   => '#aba09c'
 			]
 		],
 
@@ -1055,10 +2068,10 @@ function color_schemes() {
 			'dark' => [
 				'body'  => '#08273a',
 				'text'  => '#fefaec',
-				'one'   => '#ffdf20',
+				'one'   => '#f0b100',
 				'two'   => '#0084d1',
 				'three' => '#fe9a00',
-				'four'  => '#ffdf20',
+				'four'  => '#f0b100',
 				'five'  => '#e17100',
 				'six'   => '#ffd230'
 			]
