@@ -457,6 +457,16 @@ function color_schemes() {
 				'four'  => '#555555',
 				'five'  => '#333333',
 				'six'   => '#555555'
+			],
+			'extra' => [
+				'red'    => '#dd0000',
+				'orange' => '#ee6600',
+				'yellow' => '#ffdd00',
+				'green'  => '#00aa00',
+				'blue'   => '#0044aa',
+				'violet' => '#551188',
+				'purple' => '#bb00aa',
+				'pink'   => '#ff55dd'
 			]
 		],
 		'dark' => [
@@ -2801,6 +2811,26 @@ function picker_colors_dark() {
 }
 
 /**
+ * Color picker: extra colors
+ *
+ * @since  1.0.0
+ * @return array Returns an array of hex values.
+ */
+function picker_colors_extra() {
+
+	$current = current_color_scheme();
+	$extra   = [];
+
+	if ( ! isset( $current['extra'] ) ) {
+		return $extra;
+	}
+	foreach ( $current['extra'] as $name => $color ) {
+		$extra[] = $color;
+	}
+	return $extra;
+}
+
+/**
  * Color picker: light & dark colors
  *
  * @since  1.0.0
@@ -2808,23 +2838,24 @@ function picker_colors_dark() {
  */
 function picker_colors_merged( $label = false ) {
 
-	$modes = array_merge( picker_colors_light(), picker_colors_dark() );
-	$merge = [];
+	$modes   = array_merge( picker_colors_light(), picker_colors_dark() );
+	$merge   = array_merge( $modes, picker_colors_extra() );
+	$palette = [];
 
-	foreach ( $modes as $colors => $color ) {
+	foreach ( $merge as $colors => $color ) {
 
 		// Filter duplicates.
-		if ( ! in_array( $color, $merge ) ) {
-			$merge[] = $color;
+		if ( ! in_array( $color, $palette ) ) {
+			$palette[] = $color;
 		}
 	}
 
 	// Maybe add a label.
 	if ( true == $label ) {
 		$text = lang()->get( 'Scheme' );
-		$merge = array_merge( [ $text ], $merge );
+		$palette = array_merge( [ $text ], $palette );
 	}
-	return $merge;
+	return $palette;
 }
 
 /**
