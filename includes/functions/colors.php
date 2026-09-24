@@ -445,18 +445,18 @@ function color_schemes() {
 				'two'   => '#4073bf',
 				'three' => '#555555',
 				'four'  => '#888888',
-				'five'  => '#333333',
-				'six'   => '#555555'
+				'five'  => '#555555',
+				'six'   => '#888888'
 			],
 			'dark' => [
 				'body'  => '#1e1e1e',
-				'text'  => '#eeeeee',
-				'one'   => '#ffffff',
+				'text'  => '#ffffff',
+				'one'   => '#bbbbbb',
 				'two'   => '#ffdd00',
-				'three' => '#333333',
-				'four'  => '#555555',
-				'five'  => '#333333',
-				'six'   => '#555555'
+				'three' => '#555555',
+				'four'  => '#888888',
+				'five'  => '#555555',
+				'six'   => '#888888'
 			],
 			'extra' => [
 				'red'    => '#dd0000',
@@ -474,26 +474,36 @@ function color_schemes() {
 			'name'     => lang()->get( 'Dark' ),
 			'about'    => lang()->get( 'A plain and simple dark color scheme.' ),
 			'category' => 'basic',
-			'media'    => '#355e9a',
+			'media'    => '#0044aa',
 			'light' => [
 				'body'  => '#1e1e1e',
-				'text'  => '#eeeeee',
-				'one'   => '#ffffff',
+				'text'  => '#ffffff',
+				'one'   => '#bbbbbb',
 				'two'   => '#ffdd00',
-				'three' => '#333333',
-				'four'  => '#555555',
-				'five'  => '#333333',
-				'six'   => '#555555'
+				'three' => '#555555',
+				'four'  => '#888888',
+				'five'  => '#555555',
+				'six'   => '#888888'
 			],
 			'dark' => [
 				'body'  => '#1e1e1e',
-				'text'  => '#eeeeee',
-				'one'   => '#ffffff',
+				'text'  => '#ffffff',
+				'one'   => '#bbbbbb',
 				'two'   => '#ffdd00',
-				'three' => '#333333',
-				'four'  => '#555555',
-				'five'  => '#333333',
-				'six'   => '#555555'
+				'three' => '#555555',
+				'four'  => '#888888',
+				'five'  => '#555555',
+				'six'   => '#888888'
+			],
+			'extra' => [
+				'red'    => '#dd0000',
+				'orange' => '#ee6600',
+				'yellow' => '#ffdd00',
+				'green'  => '#00aa00',
+				'blue'   => '#0044aa',
+				'violet' => '#551188',
+				'purple' => '#bb00aa',
+				'pink'   => '#ff55dd'
 			]
 		],
 
@@ -505,7 +515,7 @@ function color_schemes() {
 			'category' => 'bootstrap',
 			'media'    => '#dc3545',
 			'light' => [
-				'body'  => '#fdf3f4',
+				'body'  => '#fef7f7',
 				'text'  => '#58151c',
 				'one'   => '#b02a37',
 				'two'   => '#dc3545',
@@ -516,13 +526,28 @@ function color_schemes() {
 			],
 			'dark' => [
 				'body'  => '#160507',
-				'text'  => '#fdf3f4',
+				'text'  => '#fef7f7',
 				'one'   => '#e35d6a',
 				'two'   => '#dc3545',
 				'three' => '#dc3545',
 				'four'  => '#e35d6a',
 				'five'  => '#b02a37',
 				'six'   => '#dc3545'
+			],
+			'extra' => [
+				'white' => '#ffffff',
+				'100'   => '#fcebec',
+				'200'   => '#f8d7da',
+				'300'   => '#f1aeb5',
+				'400'   => '#ea868f',
+				'500'   => '#e35d6a',
+				'600'   => '#dc3545',
+				'700'   => '#b02a37',
+				'800'   => '#842029',
+				'900'   => '#58151c',
+				'1000'  => '#2c0b0e',
+				'1100'  => '#160507',
+				'black' => '#000000'
 			]
 		],
 		'bs_orange' => [
@@ -532,7 +557,7 @@ function color_schemes() {
 			'category' => 'bootstrap',
 			'media'    => '#fd7e14',
 			'light' => [
-				'body'  => '#fff7f1',
+				'body'  => '#fffaf6',
 				'text'  => '#653208',
 				'one'   => '#ca6510',
 				'two'   => '#fd7e14',
@@ -543,13 +568,28 @@ function color_schemes() {
 			],
 			'dark' => [
 				'body'  => '#190d02',
-				'text'  => '#fff7f1',
+				'text'  => '#fffaf6',
 				'one'   => '#fd9843',
 				'two'   => '#fd7e14',
 				'three' => '#fd7e14',
 				'four'  => '#ca6510',
 				'five'  => '#ca6510',
 				'six'   => '#fd7e14'
+			],
+			'extra' => [
+				'white' => '#ffffff',
+				'100'   => '#fff2e8',
+				'200'   => '#ffe5d0',
+				'300'   => '#fecba1',
+				'400'   => '#feb272',
+				'500'   => '#fd9843',
+				'600'   => '#fd7e14',
+				'700'   => '#ca6510',
+				'800'   => '#984c0c',
+				'900'   => '#653208',
+				'1000'  => '#331904',
+				'1100'  => '#190d02',
+				'black' => '#000000'
 			]
 		],
 		'bs_yellow' => [
@@ -559,7 +599,7 @@ function color_schemes() {
 			'category' => 'bootstrap',
 			'media'    => '#ffc107',
 			'light' => [
-				'body'  => '#fffbf0',
+				'body'  => '#fffefb',
 				'text'  => '#664d03',
 				'one'   => '#cc9a06',
 				'two'   => '#ffc107',
@@ -570,13 +610,28 @@ function color_schemes() {
 			],
 			'dark' => [
 				'body'  => '#1a1301',
-				'text'  => '#fffbf0',
+				'text'  => '#fffefb',
 				'one'   => '#ffcd39',
 				'two'   => '#ffc107',
 				'three' => '#ffc107',
 				'four'  => '#ffcd39',
 				'five'  => '#cc9a06',
 				'six'   => '#ffc107'
+			],
+			'extra' => [
+				'white' => '#ffffff',
+				'100'   => '#fff9e6',
+				'200'   => '#fff3cd',
+				'300'   => '#ffe69c',
+				'400'   => '#ffda6a',
+				'500'   => '#ffcd39',
+				'600'   => '#ffc107',
+				'700'   => '#cc9a06',
+				'800'   => '#997404',
+				'900'   => '#664d03',
+				'1000'  => '#332701',
+				'1100'  => '#1a1301',
+				'black' => '#000000'
 			]
 		],
 		'bs_green' => [
@@ -586,7 +641,7 @@ function color_schemes() {
 			'category' => 'bootstrap',
 			'media'    => '#198754',
 			'light' => [
-				'body'  => '#edf5f1',
+				'body'  => '#f4f9f7',
 				'text'  => '#0a3622',
 				'one'   => '#146c43',
 				'two'   => '#198754',
@@ -597,13 +652,28 @@ function color_schemes() {
 			],
 			'dark' => [
 				'body'  => '#030e08',
-				'text'  => '#edf5f1',
+				'text'  => '#f4f9f7',
 				'one'   => '#75b798',
 				'two'   => '#198754',
 				'three' => '#198754',
 				'four'  => '#146c43',
 				'five'  => '#146c43',
 				'six'   => '#479f76'
+			],
+			'extra' => [
+				'white' => '#ffffff',
+				'100'   => '#e8f3ee',
+				'200'   => '#d1e7dd',
+				'300'   => '#a3cfbb',
+				'400'   => '#75b798',
+				'500'   => '#479f76',
+				'600'   => '#198754',
+				'700'   => '#146c43',
+				'800'   => '#0f5132',
+				'900'   => '#0a3622',
+				'1000'  => '#051b11',
+				'1100'  => '#030e08',
+				'black' => '#000000'
 			]
 		],
 		'bs_teal' => [
@@ -613,7 +683,7 @@ function color_schemes() {
 			'category' => 'bootstrap',
 			'media'    => '#20c997',
 			'light' => [
-				'body'  => '#e9faf5',
+				'body'  => '#fbfefd',
 				'text'  => '#06281e',
 				'one'   => '#1aa179',
 				'two'   => '#20c997',
@@ -624,13 +694,28 @@ function color_schemes() {
 			],
 			'dark' => [
 				'body'  => '#03140f',
-				'text'  => '#e9faf5',
+				'text'  => '#fbfefd',
 				'one'   => '#71ddbd',
 				'two'   => '#20c997',
 				'three' => '#20c997',
 				'four'  => '#1aa179',
 				'five'  => '#1aa179',
 				'six'   => '#20c997'
+			],
+			'extra' => [
+				'white' => '#ffffff',
+				'100'   => '#e9faf5',
+				'200'   => '#d2f4ea',
+				'300'   => '#a6e9d5',
+				'400'   => '#79dfc1',
+				'500'   => '#4dd4ac',
+				'600'   => '#20c997',
+				'700'   => '#1aa179',
+				'800'   => '#13795b',
+				'900'   => '#0d503c',
+				'1000'  => '#06281e',
+				'1100'  => '#03140f',
+				'black' => '#000000'
 			]
 		],
 		'bs_cyan' => [
@@ -640,7 +725,7 @@ function color_schemes() {
 			'category' => 'bootstrap',
 			'media'    => '#0dcaf0',
 			'light' => [
-				'body'  => '#e7fafe',
+				'body'  => '#fbfcfc',
 				'text'  => '#032830',
 				'one'   => '#0aa2c0',
 				'two'   => '#0dcaf0',
@@ -651,13 +736,28 @@ function color_schemes() {
 			],
 			'dark' => [
 				'body'  => '#011418',
-				'text'  => '#e7fafe',
+				'text'  => '#fbfcfc',
 				'one'   => '#3dd5f3',
 				'two'   => '#0dcaf0',
 				'three' => '#0dcaf0',
 				'four'  => '#0aa2c0',
 				'five'  => '#0aa2c0',
 				'six'   => '#0dcaf0'
+			],
+			'extra' => [
+				'white' => '#ffffff',
+				'100'   => '#e7fafe',
+				'200'   => '#cff4fc',
+				'300'   => '#9eeaf9',
+				'400'   => '#6edff6',
+				'500'   => '#3dd5f3',
+				'600'   => '#0dcaf0',
+				'700'   => '#0aa2c0',
+				'800'   => '#087990',
+				'900'   => '#055160',
+				'1000'  => '#032830',
+				'1100'  => '#011418',
+				'black' => '#000000'
 			]
 		],
 		'bs_blue' => [
@@ -667,7 +767,7 @@ function color_schemes() {
 			'category' => 'bootstrap',
 			'media'    => '#0d6efd',
 			'light' => [
-				'body'  => '#e7f1ff',
+				'body'  => '#f5f9ff',
 				'text'  => '#052c65',
 				'one'   => '#0a58ca',
 				'two'   => '#0d6efd',
@@ -678,13 +778,28 @@ function color_schemes() {
 			],
 			'dark' => [
 				'body'  => '#010b19',
-				'text'  => '#e7f1ff',
+				'text'  => '#f5f9ff',
 				'one'   => '#6ea8fe',
 				'two'   => '#0d6efd',
 				'three' => '#0d6efd',
 				'four'  => '#0a58ca',
 				'five'  => '#0a58ca',
 				'six'   => '#0d6efd'
+			],
+			'extra' => [
+				'white' => '#ffffff',
+				'100'   => '#e7f1ff',
+				'200'   => '#cfe2ff',
+				'300'   => '#9ec5fe',
+				'400'   => '#6ea8fe',
+				'500'   => '#3d8bfd',
+				'600'   => '#0d6efd',
+				'700'   => '#0a58ca',
+				'800'   => '#084298',
+				'900'   => '#052c65',
+				'1000'  => '#031633',
+				'1100'  => '#010b19',
+				'black' => '#000000'
 			]
 		],
 		'bs_indigo' => [
@@ -694,7 +809,7 @@ function color_schemes() {
 			'category' => 'bootstrap',
 			'media'    => '#6610f2',
 			'light' => [
-				'body'  => '#f0e7fe',
+				'body'  => '#fcfaff',
 				'text'  => '#290661',
 				'one'   => '#8540f5',
 				'two'   => '#6610f2',
@@ -705,13 +820,28 @@ function color_schemes() {
 			],
 			'dark' => [
 				'body'  => '#0a0218',
-				'text'  => '#f0e7fe',
+				'text'  => '#fcfaff',
 				'one'   => '#5599ff',
 				'two'   => '#6610f2',
 				'three' => '#6610f2',
 				'four'  => '#520dc2',
 				'five'  => '#520dc2',
 				'six'   => '#6610f2'
+			],
+			'extra' => [
+				'white' => '#ffffff',
+				'100'   => '#f0e7fe',
+				'200'   => '#e0cffc',
+				'300'   => '#c29ffa',
+				'400'   => '#a370f7',
+				'500'   => '#8540f5',
+				'600'   => '#6610f2',
+				'700'   => '#520dc2',
+				'800'   => '#3d0a91',
+				'900'   => '#290661',
+				'1000'  => '#140330',
+				'1100'  => '#0a0218',
+				'black' => '#000000'
 			]
 		],
 		'bs_purple' => [
@@ -721,7 +851,7 @@ function color_schemes() {
 			'category' => 'bootstrap',
 			'media'    => '#6f42c1',
 			'light' => [
-				'body'  => '#f1ecf9',
+				'body'  => '#fcfbfe',
 				'text'  => '#2c1a4d',
 				'one'   => '#59359a',
 				'two'   => '#6f42c1',
@@ -732,13 +862,28 @@ function color_schemes() {
 			],
 			'dark' => [
 				'body'  => '#0b0713',
-				'text'  => '#f1ecf9',
+				'text'  => '#fcfbfe',
 				'one'   => '#8c68cd',
 				'two'   => '#6f42c1',
 				'three' => '#6f42c1',
 				'four'  => '#59359a',
 				'five'  => '#59359a',
 				'six'   => '#8c68cd'
+			],
+			'extra' => [
+				'white' => '#ffffff',
+				'100'   => '#f1ecf9',
+				'200'   => '#e2d9f3',
+				'300'   => '#c5b3e6',
+				'400'   => '#a98eda',
+				'500'   => '#8c68cd',
+				'600'   => '#6f42c1',
+				'700'   => '#59359a',
+				'800'   => '#432874',
+				'900'   => '#2c1a4d',
+				'1000'  => '#160d27',
+				'1100'  => '#0b0713',
+				'black' => '#000000'
 			]
 		],
 		'bs_pink' => [
@@ -748,7 +893,7 @@ function color_schemes() {
 			'category' => 'bootstrap',
 			'media'    => '#d63384',
 			'light' => [
-				'body'  => '#fbebf3',
+				'body'  => '#fef9fb',
 				'text'  => '#2b0a1a',
 				'one'   => '#ab296a',
 				'two'   => '#d63384',
@@ -759,13 +904,28 @@ function color_schemes() {
 			],
 			'dark' => [
 				'body'  => '#15050d',
-				'text'  => '#fbebf3',
+				'text'  => '#fef9fb',
 				'one'   => '#de5c9d',
 				'two'   => '#d63384',
 				'three' => '#d63384',
 				'four'  => '#ab296a',
 				'five'  => '#ab296a',
 				'six'   => '#d63384'
+			],
+			'extra' => [
+				'white' => '#ffffff',
+				'100'   => '#fbebf3',
+				'200'   => '#f7d6e6',
+				'300'   => '#efadce',
+				'400'   => '#e685b5',
+				'500'   => '#de5c9d',
+				'600'   => '#d63384',
+				'700'   => '#ab296a',
+				'800'   => '#801f4f',
+				'900'   => '#561435',
+				'1000'  => '#2b0a1a',
+				'1100'  => '#15050d',
+				'black' => '#000000'
 			]
 		],
 		'bs_gray' => [
@@ -793,6 +953,21 @@ function color_schemes() {
 				'four'  => '#adb5bd',
 				'five'  => '#6c757d',
 				'six'   => '#adb5bd'
+			],
+			'extra' => [
+				'white' => '#ffffff',
+				'100'   => '#f7f8f8',
+				'200'   => '#f8f9fa',
+				'300'   => '#e9ecef',
+				'400'   => '#dee2e6',
+				'500'   => '#ced4da',
+				'600'   => '#adb5bd',
+				'700'   => '#6c757d',
+				'800'   => '#495057',
+				'900'   => '#343a40',
+				'1000'  => '#212529',
+				'1100'  => '#111213',
+				'black' => '#000000'
 			]
 		],
 
@@ -2813,13 +2988,23 @@ function picker_colors_dark() {
 /**
  * Color picker: extra colors
  *
+ * Extra scheme colors that may not be
+ * assigned to one of the settings.
+ * This gives more color options in the
+ * color pickers.
+ *
  * @since  1.0.0
  * @return array Returns an array of hex values.
  */
 function picker_colors_extra() {
 
 	$current = current_color_scheme();
-	$extra   = [];
+	$custom_from = plugin()->custom_scheme_from();
+	$extra = [];
+
+	if ( 'custom' == $current['slug'] ) {
+		$current = get_color_scheme( $custom_from );
+	}
 
 	if ( ! isset( $current['extra'] ) ) {
 		return $extra;

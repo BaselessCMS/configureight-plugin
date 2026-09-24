@@ -655,41 +655,11 @@ Here are the basic themeable display options (colors, fonts, global widths)
 	color: var( --cfe-body--text-color--dark );
 }
 
-.sp-palette-row {
+.sp-palette-row {}
+
+.sp-palette-thumbs {
 	display: flex;
 	flex-wrap: wrap;
-	max-width: 176px;
-
-	&.sp-palette-has-1,
-	&.sp-palette-has-2,
-	&.sp-palette-has-3,
-	&.sp-palette-has-4 {
-		max-width: 88px;
-	}
-	&.sp-palette-has-5 {
-		max-width: 110px;
-	}
-	&.sp-palette-has-6 {
-		max-width: 132px;
-	}
-	&.sp-palette-has-7 {
-		max-width: 154px;
-	}
-	&.sp-palette-has-8 {
-		max-width: 176px;
-	}
-	&.sp-palette-has-9 {
-		max-width: 200px;
-	}
-	&.sp-palette-has-10 {
-		max-width: 220px;
-	}
-	&.sp-palette-has-11 {
-		max-width: 242px;
-	}
-	&.sp-palette-has-12 {
-		max-width: 264px;
-	}
 }
 
 .sp-palette {
