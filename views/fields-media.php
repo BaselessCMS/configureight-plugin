@@ -67,7 +67,7 @@ use function CFE_Colors\{
 		<label class="form-label col-sm-2 col-form-label" for="modal_bg_color"><?php lang()->p( 'Modal Background' ); ?></label>
 		<div class="col-sm-10">
 			<div class="row color-picker-wrap">
-				<input class="color-picker custom-rgba" id="modal_bg_color" name="modal_bg_color" value="<?php echo plugin()->modal_bg_color(); ?>" />
+				<input class="color-picker scheme-rgba" id="modal_bg_color" name="modal_bg_color" value="<?php echo plugin()->modal_bg_color(); ?>" />
 				<input id="modal_bg_default" class="screen-reader-text" type="hidden" value="<?php echo plugin()->dbFields['modal_bg_color']; ?>" />
 				<span class="btn btn-secondary btn-md hide-if-no-js" id="modal_bg_color_default"><?php lang()->p( 'Default' ); ?></span>
 			</div>
@@ -237,7 +237,7 @@ use function CFE_Colors\{
 		<div class="form-field form-group row">
 			<label class="form-label col-sm-2 col-form-label" for="cover_overlay"><?php lang()->p( 'Overlay Color' ); ?></label>
 			<div class="col-sm-10 row color-picker-wrap">
-				<input class="color-picker custom-rgba" id="cover_overlay" name="cover_overlay" value="<?php echo plugin()->cover_overlay(); ?>" />
+				<input class="color-picker scheme-rgba" id="cover_overlay" name="cover_overlay" value="<?php echo plugin()->cover_overlay(); ?>" />
 				<input id="cover_overlay_default" class="screen-reader-text" type="hidden" value="<?php echo plugin()->dbFields['cover_overlay']; ?>" />
 				<span class="btn btn-secondary btn-md hide-if-no-js" id="cover_overlay_default_button"><?php lang()->p( 'Default' ); ?></span>
 			</div>
@@ -249,7 +249,7 @@ use function CFE_Colors\{
 			<label class="form-label col-sm-2 col-form-label" for="cover_blend"><?php lang()->p( 'Blend Color' ); ?></label>
 			<div class="col-sm-10">
 				<div class="row color-picker-wrap">
-					<input class="color-picker custom-color" id="cover_blend" name="cover_blend" value="<?php echo plugin()->cover_blend(); ?>" />
+					<input class="color-picker scheme-color" id="cover_blend" name="cover_blend" value="<?php echo plugin()->cover_blend(); ?>" />
 					<input id="cover_blend_default" class="screen-reader-text" type="hidden" value="<?php echo ( current_cover_color() ? current_cover_color() : $this-dbFields['cover_blend'] ); ?>" />
 					<span class="btn btn-secondary btn-md hide-if-no-js" id="cover_blend_default_button"><?php lang()->p( 'Reset' ); ?></span>
 				</div>
@@ -301,7 +301,7 @@ use function CFE_Colors\{
 	<div class="form-field form-group row">
 		<label class="form-label col-sm-2 col-form-label" for="cover_text_color"><?php lang()->p( 'Text Color' ); ?></label>
 		<div class="col-sm-10 row color-picker-wrap">
-			<input class="custom-color" id="cover_text_color" name="cover_text_color" value="<?php echo plugin()->cover_text_color(); ?>" />
+			<input class="color-picker custom-color" id="cover_text_color" name="cover_text_color" value="<?php echo plugin()->cover_text_color(); ?>" />
 			<input id="cover_text_default" class="screen-reader-text" type="hidden" value="<?php echo plugin()->dbFields['cover_text_color']; ?>" />
 			<span class="btn btn-secondary btn-md hide-if-no-js" id="cover_text_color_default"><?php lang()->p( 'Default' ); ?></span>
 		</div>

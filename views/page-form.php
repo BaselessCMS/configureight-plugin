@@ -122,10 +122,22 @@ jQuery(document).ready( function($) {
 		allowEmpty      : false,
 		preferredFormat : 'hex',
 		showAlpha       : false,
+		showInput       : true,
+		showPalette     : false,
+		palette         : false
+	});
+
+	// Color scheme picker.
+	$( '.scheme-color' ).spectrum({
+		type            : 'component',
+		showInitial     : true,
+		allowEmpty      : false,
+		preferredFormat : 'hex',
+		showAlpha       : false,
 		showPalette     : true,
 		paletteLabel    : true,
 		palette         : [
-			[ '<?php echo implode( "', '", picker_colors_merged() ); ?>' ],
+			[ '<?php echo implode( "', '", picker_colors_merged( true ) ); ?>' ],
 			<?php foreach ( grayscale_palette( true ) as $color ) {
 				echo "[ '" . implode( "', '", $color ) . "' ]," . "\r\t\t\t";
 			} ?>
@@ -140,10 +152,23 @@ jQuery(document).ready( function($) {
 			});
 		}
 	});
-	$( '.custom-color' ).show();
 
-	// Alpha color picker.
+	// General alpha color picker.
 	$( '.custom-rgba' ).spectrum({
+		type            : 'component',
+		showInitial     : true,
+		allowEmpty      : false,
+		showInitial     : true,
+		allowEmpty      : false,
+		preferredFormat : 'hex',
+		showAlpha       : true,
+		showPalette     : false,
+		palette         : false,
+		showSelectionPalette : false
+	});
+
+	// Scheme alpha color picker.
+	$( '.scheme-rgba' ).spectrum({
 		type            : 'component',
 		showInitial     : true,
 		allowEmpty      : false,
@@ -153,8 +178,12 @@ jQuery(document).ready( function($) {
 		showAlpha       : true,
 		showPalette     : true,
 		showInput       : true,
+		paletteLabel    : true,
 		palette         : [
-			['<?php echo implode( "', '", picker_colors_merged() ); ?>' ]
+			['<?php echo implode( "', '", picker_colors_merged( true ) ); ?>' ],
+			<?php foreach ( grayscale_palette( true ) as $color ) {
+				echo "[ '" . implode( "', '", $color ) . "' ]," . "\r\t\t\t";
+			} ?>
 		],
 		showSelectionPalette : false,
 		show : function(e) {
@@ -192,7 +221,6 @@ jQuery(document).ready( function($) {
 			});
 		}
 	});
-	$( '.bootstrap-color' ).show();
 
 	// Tailwind color picker.
 	$( '.tailwind-color' ).spectrum({
@@ -219,7 +247,6 @@ jQuery(document).ready( function($) {
 			});
 		}
 	});
-	$( '.tailwind-color' ).show();
 
 	// Selected class for image uploads.
 	$( '.bookmark-select-label' ).click( function() {

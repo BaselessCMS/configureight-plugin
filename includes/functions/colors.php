@@ -2806,7 +2806,7 @@ function picker_colors_dark() {
  * @since  1.0.0
  * @return array Returns an array of hex values.
  */
-function picker_colors_merged() {
+function picker_colors_merged( $label = false ) {
 
 	$modes = array_merge( picker_colors_light(), picker_colors_dark() );
 	$merge = [];
@@ -2817,6 +2817,12 @@ function picker_colors_merged() {
 		if ( ! in_array( $color, $merge ) ) {
 			$merge[] = $color;
 		}
+	}
+
+	// Maybe add a label.
+	if ( true == $label ) {
+		$text = lang()->get( 'Scheme' );
+		$merge = array_merge( [ $text ], $merge );
 	}
 	return $merge;
 }
