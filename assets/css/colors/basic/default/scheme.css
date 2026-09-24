@@ -2,11 +2,11 @@
 :root {
   --cfe-scheme-default--body: #ffffff;
   --cfe-scheme-default--text: #333333;
-  --cfe-scheme-default--one: #0044cc;
+  --cfe-scheme-default--one: #0044aa;
   --cfe-scheme-default--two: #0044ff;
-  --cfe-scheme-default--three: #0044cc;
+  --cfe-scheme-default--three: #0044aa;
   --cfe-scheme-default--four: #0044ff;
-  --cfe-scheme-default--five: #0044cc;
+  --cfe-scheme-default--five: #0044aa;
   --cfe-scheme-default--six: #0044ff;
   --cfe-scheme-default--body--dark: #1e1e1e;
   --cfe-scheme-default--text--dark: #ffffff;
@@ -14,7 +14,7 @@
   --cfe-scheme-default--two--dark: #0044cc;
   --cfe-scheme-default--three--dark: #0044ff;
   --cfe-scheme-default--four--dark: #0044cc;
-  --cfe-scheme-default--five--dark: #0044cc;
+  --cfe-scheme-default--five--dark: #0044aa;
   --cfe-scheme-default--six--dark: #0044ff;
 }
 

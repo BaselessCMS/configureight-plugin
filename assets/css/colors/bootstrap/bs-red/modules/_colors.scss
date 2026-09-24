@@ -1,0 +1,26 @@
+///
+/// SCSS variables
+///
+
+$palette: 'bs-red';
+$media: #dc3545;
+$light: (
+	'body'  : #fef7f7,
+	'text'  : #58151c,
+	'one'   : #b02a37,
+	'two'   : #dc3545,
+	'three' : #dc3545,
+	'four'  : #b02a37,
+	'five'  : #b02a37,
+	'six'   : #dc3545
+);
+$dark: (
+	'body'  : #160507,
+	'text'  : #fef7f7,
+	'one'   : #e35d6a,
+	'two'   : #dc3545,
+	'three' : #dc3545,
+	'four'  : #e35d6a,
+	'five'  : #b02a37,
+	'six'   : #dc3545
+);

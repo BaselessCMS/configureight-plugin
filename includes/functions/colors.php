@@ -437,15 +437,15 @@ function color_schemes() {
 			'name'     => lang()->get( 'Default' ),
 			'about'    => lang()->get( 'A plain and simple color scheme.' ),
 			'category' => 'basic',
-			'media'    => '#0044cc',
+			'media'    => '#0044aa',
 			'light' => [
 				'body'  => '#ffffff',
 				'text'  => '#333333',
-				'one'   => '#0044cc',
+				'one'   => '#0044aa',
 				'two'   => '#0044ff',
-				'three' => '#0044cc',
+				'three' => '#0044aa',
 				'four'  => '#0044ff',
-				'five'  => '#0044cc',
+				'five'  => '#0044aa',
 				'six'   => '#0044ff'
 			],
 			'dark' => [
@@ -455,7 +455,7 @@ function color_schemes() {
 				'two'   => '#0044cc',
 				'three' => '#0044ff',
 				'four'  => '#0044cc',
-				'five'  => '#0044cc',
+				'five'  => '#0044aa',
 				'six'   => '#0044ff'
 			],
 			'extra' => [
@@ -479,7 +479,7 @@ function color_schemes() {
 			'name'     => lang()->get( 'Dark' ),
 			'about'    => lang()->get( 'A plain and simple dark color scheme.' ),
 			'category' => 'basic',
-			'media'    => '#0044cc',
+			'media'    => '#0044aa',
 			'light' => [
 				'body'  => '#1e1e1e',
 				'text'  => '#ffffff',
@@ -487,7 +487,7 @@ function color_schemes() {
 				'two'   => '#0044cc',
 				'three' => '#0044ff',
 				'four'  => '#0044cc',
-				'five'  => '#0044cc',
+				'five'  => '#0044aa',
 				'six'   => '#0044ff'
 			],
 			'dark' => [
@@ -497,7 +497,7 @@ function color_schemes() {
 				'two'   => '#0044cc',
 				'three' => '#0044ff',
 				'four'  => '#0044cc',
-				'five'  => '#0044cc',
+				'five'  => '#0044aa',
 				'six'   => '#0044ff'
 			],
 			'extra' => [
@@ -518,8 +518,8 @@ function color_schemes() {
 		],
 
 		// Bootstrap — specific colors, not full-spectrum.
-		'bs_red' => [
-			'slug'     => 'bs_red',
+		'bs-red' => [
+			'slug'     => 'bs-red',
 			'name'     => lang()->get( 'Bootstrap Red' ),
 			'about'    => lang()->get( 'The Bootstrap red color plus tints & shades.' ),
 			'category' => 'bootstrap',
@@ -560,8 +560,8 @@ function color_schemes() {
 				'black' => '#000000'
 			]
 		],
-		'bs_orange' => [
-			'slug'     => 'bs_orange',
+		'bs-orange' => [
+			'slug'     => 'bs-orange',
 			'name'     => lang()->get( 'Bootstrap Orange' ),
 			'about'    => lang()->get( 'The Bootstrap orange color plus tints & shades.' ),
 			'category' => 'bootstrap',
@@ -602,8 +602,8 @@ function color_schemes() {
 				'black' => '#000000'
 			]
 		],
-		'bs_yellow' => [
-			'slug'     => 'bs_yellow',
+		'bs-yellow' => [
+			'slug'     => 'bs-yellow',
 			'name'     => lang()->get( 'Bootstrap Yellow' ),
 			'about'    => lang()->get( 'The Bootstrap yellow color plus tints & shades.' ),
 			'category' => 'bootstrap',
@@ -644,8 +644,8 @@ function color_schemes() {
 				'black' => '#000000'
 			]
 		],
-		'bs_green' => [
-			'slug'     => 'bs_green',
+		'bs-green' => [
+			'slug'     => 'bs-green',
 			'name'     => lang()->get( 'Bootstrap Green' ),
 			'about'    => lang()->get( 'The Bootstrap green color plus tints & shades.' ),
 			'category' => 'bootstrap',
@@ -686,8 +686,8 @@ function color_schemes() {
 				'black' => '#000000'
 			]
 		],
-		'bs_teal' => [
-			'slug'     => 'bs_teal',
+		'bs-teal' => [
+			'slug'     => 'bs-teal',
 			'name'     => lang()->get( 'Bootstrap Teal' ),
 			'about'    => lang()->get( 'The Bootstrap teal color plus tints & shades.' ),
 			'category' => 'bootstrap',
@@ -728,8 +728,8 @@ function color_schemes() {
 				'black' => '#000000'
 			]
 		],
-		'bs_cyan' => [
-			'slug'     => 'bs_cyan',
+		'bs-cyan' => [
+			'slug'     => 'bs-cyan',
 			'name'     => lang()->get( 'Bootstrap Cyan' ),
 			'about'    => lang()->get( 'The Bootstrap cyan color plus tints & shades.' ),
 			'category' => 'bootstrap',
@@ -770,8 +770,8 @@ function color_schemes() {
 				'black' => '#000000'
 			]
 		],
-		'bs_blue' => [
-			'slug'     => 'bs_blue',
+		'bs-blue' => [
+			'slug'     => 'bs-blue',
 			'name'     => lang()->get( 'Bootstrap Blue' ),
 			'about'    => lang()->get( 'The Bootstrap blue color plus tints & shades.' ),
 			'category' => 'bootstrap',
@@ -812,8 +812,8 @@ function color_schemes() {
 				'black' => '#000000'
 			]
 		],
-		'bs_indigo' => [
-			'slug'     => 'bs_indigo',
+		'bs-indigo' => [
+			'slug'     => 'bs-indigo',
 			'name'     => lang()->get( 'Bootstrap Indigo' ),
 			'about'    => lang()->get( 'The Bootstrap indigo color plus tints & shades.' ),
 			'category' => 'bootstrap',
@@ -854,8 +854,8 @@ function color_schemes() {
 				'black' => '#000000'
 			]
 		],
-		'bs_purple' => [
-			'slug'     => 'bs_purple',
+		'bs-purple' => [
+			'slug'     => 'bs-purple',
 			'name'     => lang()->get( 'Bootstrap Purple' ),
 			'about'    => lang()->get( 'The Bootstrap purple color plus tints & shades.' ),
 			'category' => 'bootstrap',
@@ -896,8 +896,8 @@ function color_schemes() {
 				'black' => '#000000'
 			]
 		],
-		'bs_pink' => [
-			'slug'     => 'bs_pink',
+		'bs-pink' => [
+			'slug'     => 'bs-pink',
 			'name'     => lang()->get( 'Bootstrap Pink' ),
 			'about'    => lang()->get( 'The Bootstrap pink color plus tints & shades.' ),
 			'category' => 'bootstrap',
@@ -938,8 +938,8 @@ function color_schemes() {
 				'black' => '#000000'
 			]
 		],
-		'bs_gray' => [
-			'slug'     => 'bs_gray',
+		'bs-gray' => [
+			'slug'     => 'bs-gray',
 			'name'     => lang()->get( 'Bootstrap Gray' ),
 			'about'    => lang()->get( 'The Bootstrap gray colors.' ),
 			'category' => 'bootstrap',

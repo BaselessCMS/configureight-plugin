@@ -1,0 +1,12 @@
+///
+/// Color Scheme: Bootstrap Orange
+///
+/// General styles for color scheme option.
+///
+
+@use 'sass:map';
+@use '../../../modules/functions' as f;
+@use '../../../modules/colors' as general;
+@use 'modules/colors' as c;
+
+@use 'partials/root-general';
