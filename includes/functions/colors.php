@@ -982,8 +982,8 @@ function color_schemes() {
 		],
 
 		// Tailwind — specific colors, not full-spectrum.
-		'tw_red' => [
-			'slug'     => 'tw_red',
+		'tw-red' => [
+			'slug'     => 'tw-red',
 			'name'     => lang()->get( 'Tailwind Red' ),
 			'about'    => lang()->get( 'The Tailwind red colors.' ),
 			'category' => 'tailwind',
@@ -1009,8 +1009,8 @@ function color_schemes() {
 				'six'   => '#fb2c36'
 			]
 		],
-		'tw_orange' => [
-			'slug'     => 'tw_orange',
+		'tw-orange' => [
+			'slug'     => 'tw-orange',
 			'name'     => lang()->get( 'Tailwind Orange' ),
 			'about'    => lang()->get( 'The Tailwind orange colors.' ),
 			'category' => 'tailwind',
@@ -1036,8 +1036,8 @@ function color_schemes() {
 				'six'   => '#ff6900'
 			]
 		],
-		'tw_amber' => [
-			'slug'     => 'tw_amber',
+		'tw-amber' => [
+			'slug'     => 'tw-amber',
 			'name'     => lang()->get( 'Tailwind Amber' ),
 			'about'    => lang()->get( 'The Tailwind amber colors.' ),
 			'category' => 'tailwind',
@@ -1063,8 +1063,8 @@ function color_schemes() {
 				'six'   => '#fe9a00'
 			]
 		],
-		'tw_yellow' => [
-			'slug'     => 'tw_yellow',
+		'tw-yellow' => [
+			'slug'     => 'tw-yellow',
 			'name'     => lang()->get( 'Tailwind Yellow' ),
 			'about'    => lang()->get( 'The Tailwind yellow colors.' ),
 			'category' => 'tailwind',
@@ -1090,8 +1090,8 @@ function color_schemes() {
 				'six'   => '#fdc700'
 			]
 		],
-		'tw_lime' => [
-			'slug'     => 'tw_lime',
+		'tw-lime' => [
+			'slug'     => 'tw-lime',
 			'name'     => lang()->get( 'Tailwind Lime' ),
 			'about'    => lang()->get( 'The Tailwind lime colors.' ),
 			'category' => 'tailwind',
@@ -1117,8 +1117,8 @@ function color_schemes() {
 				'six'   => '#7ccf00'
 			]
 		],
-		'tw_green' => [
-			'slug'     => 'tw_green',
+		'tw-green' => [
+			'slug'     => 'tw-green',
 			'name'     => lang()->get( 'Tailwind Green' ),
 			'about'    => lang()->get( 'The Tailwind green colors.' ),
 			'category' => 'tailwind',
@@ -1144,8 +1144,8 @@ function color_schemes() {
 				'six'   => '#00c950'
 			]
 		],
-		'tw_emerald' => [
-			'slug'     => 'tw_emerald',
+		'tw-emerald' => [
+			'slug'     => 'tw-emerald',
 			'name'     => lang()->get( 'Tailwind Emerald' ),
 			'about'    => lang()->get( 'The Tailwind emerald colors.' ),
 			'category' => 'tailwind',
@@ -1171,8 +1171,8 @@ function color_schemes() {
 				'six'   => '#00bc7d'
 			]
 		],
-		'tw_teal' => [
-			'slug'     => 'tw_teal',
+		'tw-teal' => [
+			'slug'     => 'tw-teal',
 			'name'     => lang()->get( 'Tailwind Teal' ),
 			'about'    => lang()->get( 'The Tailwind teal colors.' ),
 			'category' => 'tailwind',
@@ -1198,8 +1198,8 @@ function color_schemes() {
 				'six'   => '#00bba7'
 			]
 		],
-		'tw_cyan' => [
-			'slug'     => 'tw_cyan',
+		'tw-cyan' => [
+			'slug'     => 'tw-cyan',
 			'name'     => lang()->get( 'Tailwind Cyan' ),
 			'about'    => lang()->get( 'The Tailwind cyan colors.' ),
 			'category' => 'tailwind',
@@ -1225,8 +1225,8 @@ function color_schemes() {
 				'six'   => '#00b8db'
 			]
 		],
-		'tw_sky' => [
-			'slug'     => 'tw_sky',
+		'tw-sky' => [
+			'slug'     => 'tw-sky',
 			'name'     => lang()->get( 'Tailwind Sky' ),
 			'about'    => lang()->get( 'The Tailwind sky colors.' ),
 			'category' => 'tailwind',
@@ -1252,8 +1252,8 @@ function color_schemes() {
 				'six'   => '#00a6f4'
 			]
 		],
-		'tw_blue' => [
-			'slug'     => 'tw_blue',
+		'tw-blue' => [
+			'slug'     => 'tw-blue',
 			'name'     => lang()->get( 'Tailwind Blue' ),
 			'about'    => lang()->get( 'The Tailwind blue colors.' ),
 			'category' => 'tailwind',
@@ -1279,8 +1279,8 @@ function color_schemes() {
 				'six'   => '#2b7fff'
 			]
 		],
-		'tw_indigo' => [
-			'slug'     => 'tw_indigo',
+		'tw-indigo' => [
+			'slug'     => 'tw-indigo',
 			'name'     => lang()->get( 'Tailwind Indigo' ),
 			'about'    => lang()->get( 'The Tailwind indigo colors.' ),
 			'category' => 'tailwind',
@@ -1306,8 +1306,8 @@ function color_schemes() {
 				'six'   => '#615fff'
 			]
 		],
-		'tw_violet' => [
-			'slug'     => 'tw_violet',
+		'tw-violet' => [
+			'slug'     => 'tw-violet',
 			'name'     => lang()->get( 'Tailwind Violet' ),
 			'about'    => lang()->get( 'The Tailwind violet colors.' ),
 			'category' => 'tailwind',
@@ -1333,8 +1333,8 @@ function color_schemes() {
 				'six'   => '#8e51ff'
 			]
 		],
-		'tw_purple' => [
-			'slug'     => 'tw_purple',
+		'tw-purple' => [
+			'slug'     => 'tw-purple',
 			'name'     => lang()->get( 'Tailwind Purple' ),
 			'about'    => lang()->get( 'The Tailwind purple colors.' ),
 			'category' => 'tailwind',
@@ -1360,8 +1360,8 @@ function color_schemes() {
 				'six'   => '#c27aff'
 			]
 		],
-		'tw_fuchsia' => [
-			'slug'     => 'tw_fuchsia',
+		'tw-fuchsia' => [
+			'slug'     => 'tw-fuchsia',
 			'name'     => lang()->get( 'Tailwind Fuchsia' ),
 			'about'    => lang()->get( 'The Tailwind fuchsia colors.' ),
 			'category' => 'tailwind',
@@ -1387,8 +1387,8 @@ function color_schemes() {
 				'six'   => '#e12afb'
 			]
 		],
-		'tw_pink' => [
-			'slug'     => 'tw_pink',
+		'tw-pink' => [
+			'slug'     => 'tw-pink',
 			'name'     => lang()->get( 'Tailwind Pink' ),
 			'about'    => lang()->get( 'The Tailwind pink colors.' ),
 			'category' => 'tailwind',
@@ -1414,8 +1414,8 @@ function color_schemes() {
 				'six'   => '#f6339a'
 			]
 		],
-		'tw_rose' => [
-			'slug'     => 'tw_rose',
+		'tw-rose' => [
+			'slug'     => 'tw-rose',
 			'name'     => lang()->get( 'Tailwind Rose' ),
 			'about'    => lang()->get( 'The Tailwind rose colors.' ),
 			'category' => 'tailwind',
@@ -1441,8 +1441,8 @@ function color_schemes() {
 				'six'   => '#ff637e'
 			]
 		],
-		'tw_stone' => [
-			'slug'     => 'tw_stone',
+		'tw-stone' => [
+			'slug'     => 'tw-stone',
 			'name'     => lang()->get( 'Tailwind Stone' ),
 			'about'    => lang()->get( 'The Tailwind stone colors.' ),
 			'category' => 'tailwind',
@@ -1468,8 +1468,8 @@ function color_schemes() {
 				'six'   => '#a6a09b'
 			]
 		],
-		'tw_neutral' => [
-			'slug'     => 'tw_neutral',
+		'tw-neutral' => [
+			'slug'     => 'tw-neutral',
 			'name'     => lang()->get( 'Tailwind Neutral' ),
 			'about'    => lang()->get( 'The Tailwind neutral colors.' ),
 			'category' => 'tailwind',
@@ -1495,8 +1495,8 @@ function color_schemes() {
 				'six'   => '#a1a1a1'
 			]
 		],
-		'tw_zinc' => [
-			'slug'     => 'tw_zinc',
+		'tw-zinc' => [
+			'slug'     => 'tw-zinc',
 			'name'     => lang()->get( 'Tailwind Zinc' ),
 			'about'    => lang()->get( 'The Tailwind zinc colors.' ),
 			'category' => 'tailwind',
@@ -1522,8 +1522,8 @@ function color_schemes() {
 				'six'   => '#9f9fa9'
 			]
 		],
-		'tw_gray' => [
-			'slug'     => 'tw_gray',
+		'tw-gray' => [
+			'slug'     => 'tw-gray',
 			'name'     => lang()->get( 'Tailwind Gray' ),
 			'about'    => lang()->get( 'The Tailwind gray colors.' ),
 			'category' => 'tailwind',
@@ -1549,8 +1549,8 @@ function color_schemes() {
 				'six'   => '#99a1af'
 			]
 		],
-		'tw_slate' => [
-			'slug'     => 'tw_slate',
+		'tw-slate' => [
+			'slug'     => 'tw-slate',
 			'name'     => lang()->get( 'Tailwind Slate' ),
 			'about'    => lang()->get( 'The Tailwind slate colors.' ),
 			'category' => 'tailwind',
@@ -1576,8 +1576,8 @@ function color_schemes() {
 				'six'   => '#90a1b9'
 			]
 		],
-		'tw_mauve' => [
-			'slug'     => 'tw_mauve',
+		'tw-mauve' => [
+			'slug'     => 'tw-mauve',
 			'name'     => lang()->get( 'Tailwind Mauve' ),
 			'about'    => lang()->get( 'The Tailwind mauve colors.' ),
 			'category' => 'tailwind',
@@ -1603,8 +1603,8 @@ function color_schemes() {
 				'six'   => '#a89ea9'
 			]
 		],
-		'tw_olive' => [
-			'slug'     => 'tw_olive',
+		'tw-olive' => [
+			'slug'     => 'tw-olive',
 			'name'     => lang()->get( 'Tailwind Olive' ),
 			'about'    => lang()->get( 'The Tailwind olive colors.' ),
 			'category' => 'tailwind',
@@ -1630,8 +1630,8 @@ function color_schemes() {
 				'six'   => '#abab9c'
 			]
 		],
-		'tw_mist' => [
-			'slug'     => 'tw_mist',
+		'tw-mist' => [
+			'slug'     => 'tw-mist',
 			'name'     => lang()->get( 'Tailwind Mist' ),
 			'about'    => lang()->get( 'The Tailwind mist colors.' ),
 			'category' => 'tailwind',
@@ -1657,8 +1657,8 @@ function color_schemes() {
 				'six'   => '#9ca8ab'
 			]
 		],
-		'tw_taupe' => [
-			'slug'     => 'tw_taupe',
+		'tw-taupe' => [
+			'slug'     => 'tw-taupe',
 			'name'     => lang()->get( 'Tailwind Taupe' ),
 			'about'    => lang()->get( 'The Tailwind taupe colors.' ),
 			'category' => 'tailwind',
