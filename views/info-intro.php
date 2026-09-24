@@ -25,8 +25,8 @@ $database_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=datab
 
 <p><?php lang()->p( 'This options guide includes several separate reference pages:' ); ?></p>
 <ul style="list-style: none; padding:0;">
-	<li><a href="<?php echo $colors_page; ?>"><strong><?php lang()->p( 'Color Schemes' ); ?></strong></a></li>
-	<li><a href="<?php echo $fonts_page; ?>"><strong><?php lang()->p( 'Font Schemes' ); ?></strong></a></li>
+	<li><a href="<?php echo $colors_page; ?>"><strong><?php lang()->p( 'Colors Reference' ); ?></strong></a></li>
+	<li><a href="<?php echo $fonts_page; ?>"><strong><?php lang()->p( 'Fonts Reference' ); ?></strong></a></li>
 	<li><a href="<?php echo $database_page; ?>"><strong><?php lang()->p( 'Options Database' ); ?></strong></a></li>
 </ul>
 

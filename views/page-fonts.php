@@ -69,7 +69,7 @@ code.select {
 }
 </style>
 
-<h1 class="page-title"><span class="page-title-icon fa fa-bold"></span><span class="page-title-text"><?php lang()->p( 'Font Schemes Reference' ); ?></span></h1>
+<h1 class="page-title"><span class="page-title-icon fa fa-bold"></span><span class="page-title-text"><?php lang()->p( 'Fonts Reference' ); ?></span></h1>
 
 <p class="page-description"><?php lang()->p( "Go to the <a href='{$guide_page}'>options guide</a> index page. Edit appearance on the <a href='{$settings_page}#style'>website options</a> page." ); ?></p>
 
