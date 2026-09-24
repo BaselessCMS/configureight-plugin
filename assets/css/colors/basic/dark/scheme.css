@@ -1,22 +1,21 @@
 :host,
 :root {
   --cfe-scheme-dark--body: #1e1e1e;
-  --cfe-scheme-dark--text: #eeeeee;
-  --cfe-scheme-dark--one: #ffffff;
-  --cfe-scheme-dark--two: #ffdd00;
-  --cfe-scheme-dark--three: #333333;
-  --cfe-scheme-dark--four: #555555;
-  --cfe-scheme-dark--five: #333333;
-  --cfe-scheme-dark--six: #555555;
+  --cfe-scheme-dark--text: #ffffff;
+  --cfe-scheme-dark--one: #0044ff;
+  --cfe-scheme-dark--two: #0044cc;
+  --cfe-scheme-dark--three: #0044ff;
+  --cfe-scheme-dark--four: #0044cc;
+  --cfe-scheme-dark--five: #0044cc;
+  --cfe-scheme-dark--six: #0044ff;
   --cfe-scheme-dark--body--dark: #1e1e1e;
-  --cfe-scheme-dark--text--dark: #eeeeee;
-  --cfe-scheme-dark--one--dark: #ffffff;
-  --cfe-scheme-dark--two--dark: #ffdd00;
-  --cfe-scheme-dark--three--dark: #333333;
-  --cfe-scheme-dark--four--dark: #555555;
-  --cfe-scheme-dark--five--dark: #333333;
-  --cfe-scheme-dark--six--dark: #555555;
-  --cfe-scheme-dark--cover-blend--bg-color: c.$media;
+  --cfe-scheme-dark--text--dark: #ffffff;
+  --cfe-scheme-dark--one--dark: #0044ff;
+  --cfe-scheme-dark--two--dark: #0044cc;
+  --cfe-scheme-dark--three--dark: #0044ff;
+  --cfe-scheme-dark--four--dark: #0044cc;
+  --cfe-scheme-dark--five--dark: #0044cc;
+  --cfe-scheme-dark--six--dark: #0044ff;
 }
 
 .cfe-dark.dark-body {

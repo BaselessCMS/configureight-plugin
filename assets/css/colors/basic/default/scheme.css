@@ -2,21 +2,20 @@
 :root {
   --cfe-scheme-default--body: #ffffff;
   --cfe-scheme-default--text: #333333;
-  --cfe-scheme-default--one: #0044aa;
-  --cfe-scheme-default--two: #4073bf;
-  --cfe-scheme-default--three: #555555;
-  --cfe-scheme-default--four: #888888;
-  --cfe-scheme-default--five: #333333;
-  --cfe-scheme-default--six: #555555;
+  --cfe-scheme-default--one: #0044cc;
+  --cfe-scheme-default--two: #0044ff;
+  --cfe-scheme-default--three: #0044cc;
+  --cfe-scheme-default--four: #0044ff;
+  --cfe-scheme-default--five: #0044cc;
+  --cfe-scheme-default--six: #0044ff;
   --cfe-scheme-default--body--dark: #1e1e1e;
-  --cfe-scheme-default--text--dark: #eeeeee;
-  --cfe-scheme-default--one--dark: #ffffff;
-  --cfe-scheme-default--two--dark: #ffdd00;
-  --cfe-scheme-default--three--dark: #333333;
-  --cfe-scheme-default--four--dark: #555555;
-  --cfe-scheme-default--five--dark: #333333;
-  --cfe-scheme-default--six--dark: #555555;
-  --cfe-scheme-default--cover-blend--bg-color: c.$media;
+  --cfe-scheme-default--text--dark: #ffffff;
+  --cfe-scheme-default--one--dark: #0044ff;
+  --cfe-scheme-default--two--dark: #0044cc;
+  --cfe-scheme-default--three--dark: #0044ff;
+  --cfe-scheme-default--four--dark: #0044cc;
+  --cfe-scheme-default--five--dark: #0044cc;
+  --cfe-scheme-default--six--dark: #0044ff;
 }
 
 .cfe-default.default-body {

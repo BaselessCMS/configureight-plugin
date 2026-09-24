@@ -17,11 +17,6 @@
 	@each $name, $color in c.$dark {
 		--cfe-scheme-color--#{$name}--dark: #{$color};
 	}
-	--cfe-cover-blend--bg-color: c.$media;
 
 	--cfe-box--border-color: #{rgba( $color: map.get( c.$light, 'text' ), $alpha: 0.5 )};
-	--cfe-button--primary--bg-color: #{general.$blue};
-	--cfe-button--primary--bg-color--dark: #{general.$blue};
-	--cfe-button--primary--border-color: #{general.$blue};
-	--cfe-button--primary--border-color--dark: #{general.$blue};
 }
