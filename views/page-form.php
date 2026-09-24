@@ -17,7 +17,8 @@ use function CFE_Colors\{
 	picker_colors_dark,
 	picker_colors_merged,
 	bootstrap_palette,
-	tailwind_palette
+	tailwind_palette,
+	grayscale_palette
 };
 
 // Guide page URL.
@@ -122,8 +123,12 @@ jQuery(document).ready( function($) {
 		preferredFormat : 'hex',
 		showAlpha       : false,
 		showPalette     : true,
+		paletteLabel    : true,
 		palette         : [
-			[ '<?php echo implode( "', '", picker_colors_merged() ); ?>' ]
+			[ '<?php echo implode( "', '", picker_colors_merged() ); ?>' ],
+			<?php foreach ( grayscale_palette( true ) as $color ) {
+				echo "[ '" . implode( "', '", $color ) . "' ]," . "\r\t\t\t";
+			} ?>
 		],
 		showSelectionPalette : false,
 		show : function(e) {

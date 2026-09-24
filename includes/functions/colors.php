@@ -166,6 +166,44 @@ function color_scheme_categories() {
 }
 
 /**
+ * Grayscale palette
+ *
+ * Returns an array of purely neutral hex values,
+ * from white to black.
+ *
+ * The values, except the addition of white and black,
+ * are from the IBM Carbon color palette.
+ *
+ * @since  1.0.0
+ * @param  boolean $label True for the JSON file with a label as
+ *                        array[0], false for the other without.
+ * @return array
+ */
+function grayscale_palette( $label = false ) {
+
+	$json = '';
+	$file = 'grayscale-colors';
+	if ( true == $label ) {
+		$file = 'grayscale-colors-label';
+	}
+	$path = plugin()->phpPath() . "/assets/json/colors/{$file}.json";
+	$palette = [];
+
+	if ( file_exists( $path ) ) {
+		$json = file_get_contents( $path );
+	}
+	$json = json_decode( $json, true );
+
+	if ( is_null( $json ) ) {
+		return $palette;
+	}
+	foreach ( $json as $key => $value ) {
+		$palette[] = $value;
+	}
+	return $palette;
+}
+
+/**
  * Custom Bootstrap color scheme
  *
  * Array to be passed into the primary
@@ -219,8 +257,8 @@ function bootstrap_scheme() {
  */
 function bootstrap_palette() {
 
-	$json = [];
-	$file = plugin()->phpPath() . '/assets/json/colors/custom/bootstrap-colors.json';
+	$json = '';
+	$file = plugin()->phpPath() . '/assets/json/colors/vendor/bootstrap-colors.json';
 	$palette = [];
 
 	if ( file_exists( $file ) ) {
@@ -228,6 +266,9 @@ function bootstrap_palette() {
 	}
 	$json = json_decode( $json, true );
 
+	if ( is_null( $json ) ) {
+		return $palette;
+	}
 	foreach ( $json as $key => $value ) {
 		$palette[] = $value;
 	}
@@ -288,8 +329,8 @@ function tailwind_scheme() {
  */
 function tailwind_palette() {
 
-	$json = [];
-	$file = plugin()->phpPath() . '/assets/json/colors/custom/tailwind-colors.json';
+	$json = '';
+	$file = plugin()->phpPath() . '/assets/json/colors/vendor/tailwind-colors.json';
 	$palette = [];
 
 	if ( file_exists( $file ) ) {
@@ -297,6 +338,9 @@ function tailwind_palette() {
 	}
 	$json = json_decode( $json, true );
 
+	if ( is_null( $json ) ) {
+		return $palette;
+	}
 	foreach ( $json as $key => $value ) {
 		$palette[] = $value;
 	}
