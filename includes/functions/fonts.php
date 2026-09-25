@@ -704,7 +704,7 @@ function font_scheme_template() {
  * @since  1.0.0
  * @return string Returns a style block.
  */
-function admin_font_options() {
+function define_font_scheme() {
 
 	$style  = "\n" . '<style>:host, :root {';
 

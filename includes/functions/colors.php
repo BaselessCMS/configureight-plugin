@@ -468,7 +468,7 @@ function color_schemes() {
 				'teal'   => '#00ddaa',
 				'cyan'   => '#00ccee',
 				'blue'   => '#0044cc',
-				'indigo' => '#7722ff',
+				'indigo' => '#7700ff',
 				'violet' => '#7711bb',
 				'purple' => '#cc00aa',
 				'pink'   => '#ff55dd'
@@ -3075,10 +3075,83 @@ function define_color_scheme() {
 	}
 
 	// Begin style root block.
-	$style = "\n" . '<style>:host, :root {';
+	$style = '<style>:host, :root {';
 
-		// Set up array of colors.
+	// Set up array of colors.
 	$colors = [];
+
+	// Loader background.
+	if ( plugin()->use_dark_scheme() ) {
+		$colors[] = sprintf(
+			'--cfe-loader--bg-color--dark: %s;',
+			plugin()->loader_bg_color_dark()
+		);
+	} else {
+		$colors[] = sprintf(
+			'--cfe-loader--bg-color: %s;',
+			plugin()->loader_bg_color()
+		);
+	}
+
+	// Loader text.
+	if ( plugin()->use_dark_scheme() ) {
+		$colors[] = sprintf(
+			'--cfe-loader--text-color: %s;',
+			plugin()->loader_text_color_dark()
+		);
+	} else {
+		$colors[] = sprintf(
+			'--cfe-loader--text-color: %s;',
+			plugin()->loader_text_color()
+		);
+	}
+	if ( plugin()->use_dark_scheme() ) {
+		$colors[] = sprintf(
+			'--cfe-loader--image--fill: %s;',
+			plugin()->loader_text_color_dark()
+		);
+	} else {
+		$colors[] = sprintf(
+			'--cfe-loader--image--fill: %s;',
+			plugin()->loader_text_color()
+		);
+	}
+
+	// Cover image desaturation.
+	$colors[] = sprintf(
+		'--cfe-cover-img--grayscale: %s;',
+		plugin()->cover_desaturate() . '%'
+	);
+
+	// Cover image overlay.
+	$colors[] = sprintf(
+		'--cfe-cover-overlay--bg-color: %s;',
+		plugin()->cover_overlay()
+	);
+
+	// Cover image blend.
+	$colors[] = sprintf(
+		'--cfe-cover-blend--bg-color: %s;',
+		plugin()->cover_blend()
+	);
+
+	// Cover image text.
+	$colors[] = sprintf(
+		'--cfe-cover--text-color: %s;',
+		plugin()->cover_text_color()
+	);
+
+	// Cover image text shadow.
+	if ( ! plugin()->cover_text_shadow() ) {
+		$colors[] = '--cfe-cover--text-shadow: none;';
+	}
+
+	// Modal content (lightbox).
+	$colors[] = sprintf(
+		'--cfe-modal-overlay--bg-color: %s;',
+		plugin()->modal_bg_color()
+	);
+
 	// Variables for each light mode color.
 	foreach ( $current['light'] as $key => $value ) {
 		if ( ! empty( $value ) && ! plugin()->use_dark_scheme() ) {
@@ -3128,7 +3201,7 @@ function define_color_scheme() {
 	$style .= '}</style>' . "\n";
 
 	// Begin dark mode style block.
-	$style .= "\n" . '<style>.dark-mode {';
+	$style .= '<style>.dark-mode {';
 
 	// Variables for each dark mode color.
 	foreach ( $current['dark'] as $key => $value ) {

@@ -34,6 +34,7 @@ use function CFE_Plugin\{
 	custom_fields,
 	css,
 	default_theme,
+	define_layout,
 	error_cats_display,
 	error_search_display,
 	error_static_display,
@@ -58,8 +59,8 @@ use function CFE_Colors\{
 	current_color_scheme
 };
 use function CFE_Fonts\{
-	admin_font_options,
 	current_font_scheme,
+	define_font_scheme,
 	font_schemes,
 	load_font_files
 };
@@ -410,7 +411,9 @@ class configureight extends Plugin {
 
 		// Array of custom hooks.
 		$this->customHooks = [
-			'color_scheme_vars',
+			'layout_props',
+			'font_scheme_props',
+			'color_scheme_props',
 			'comment_form',
 			'footer_code',
 			'front_page',
@@ -760,7 +763,7 @@ class configureight extends Plugin {
 			$assets .= $this->scheme_stylesheet( 'colors', 'admin' );
 			$assets .= $this->scheme_stylesheet( 'fonts', 'admin' );
 			$assets .= define_color_scheme();
-			$assets .= admin_font_options();
+			$assets .= define_font_scheme();
 		}
 
 		// User toolbar is active.
@@ -1125,13 +1128,35 @@ class configureight extends Plugin {
 	}
 
 	/**
-	 * Color scheme variables hook
+	 * Layout CSS properties hook
 	 *
 	 * @since  1.0.0
 	 * @access public
 	 * @return void
 	 */
-	public function color_scheme_vars() {
+	public function layout_props() {
+		echo define_layout();
+	}
+
+	/**
+	 * Font CSS properties hook
+	 *
+	 * @since  1.0.0
+	 * @access public
+	 * @return void
+	 */
+	public function font_scheme_props() {
+		echo define_font_scheme();
+	}
+
+	/**
+	 * Color CSS properties hook
+	 *
+	 * @since  1.0.0
+	 * @access public
+	 * @return void
+	 */
+	public function color_scheme_props() {
 		echo define_color_scheme();
 	}
 

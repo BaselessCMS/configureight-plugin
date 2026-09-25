@@ -102,6 +102,41 @@ function page() {
 }
 
 /**
+ * Get navigation position
+ *
+ * Returns the position of the main
+ * navigation menu.
+ *
+ * @since  1.0.0
+ * @return string
+ */
+function get_nav_position() {
+
+	// Main navigation to right of site branding (default).
+	$position = 'right';
+
+	// Do not use main navigation.
+	if ( plugin() ) {
+		if ( 'hide' == plugin()->main_nav_pos() ) {
+			$position = 'hidden';
+
+		// Main navigation above site branding.
+		} elseif ( 'above' == plugin()->main_nav_pos()	) {
+			$position = 'above';
+
+		// Main navigation below site branding.
+		} elseif ( 'below' == plugin()->main_nav_pos()	) {
+			$position = 'below';
+
+		// Main navigation to left of site branding.
+		} elseif ( 'left' == plugin()->main_nav_pos() ) {
+			$position = 'left';
+		}
+	}
+	return $position;
+}
+
+/**
  * Plugin sidebars count
  *
  * This counts plugins with the `adminSidebar()`
@@ -132,6 +167,83 @@ function plugin_sidebars_count() {
 		}
 	}
 	return $count;
+}
+
+/**
+ * Define layout
+ *
+ * @since  1.0.0
+ * @return string
+ */
+function define_layout() {
+
+	$nav_pos = get_nav_position();
+	$styles  = '<style>:host, :root {';
+
+	// General spacing.
+	$styles .= sprintf(
+		'--cfe-wrapper--page--max-width: %spx;',
+		plugin()->content_width()
+	);
+	$styles .= sprintf(
+		'--cfe-spacing--x: %srem;',
+		plugin()->horz_spacing()
+	);
+	$styles .= sprintf(
+		'--cfe-spacing--y: %srem;',
+		plugin()->vert_spacing()
+	);
+
+	// Header logo width.
+	$styles .= sprintf(
+		'--cfe-site-logo--max-width: %spx;',
+		plugin()->logo_width_std()
+	);
+	$styles .= sprintf(
+		'--cfe-site-logo--max-width--mobile: %spx;',
+		plugin()->logo_width_mob()
+	);
+
+	/**
+	 * Main navigation position
+	 *
+	 * CSS Flexbox reverses in RTL languages. The nav position
+	 * settings use left and right options so in RTL the flex
+	 * direction needs to adjust accordingly.
+	 */
+	if ( 'left' === $nav_pos ) {
+		if ( ! is_rtl() ) {
+			$styles .= '--cfe-site-header-wrap--flex-direction: row-reverse;';
+		}
+		$styles .= '--cfe-site-header-wrap--flex-direction-tablet: column;';
+
+	} elseif ( 'above' === $nav_pos ) {
+		$styles .= '--cfe-site-header-wrap--flex-direction: column-reverse;';
+		$styles .= '--cfe-site-header-wrap--align-items: flex-start;';
+		$styles .= '--cfe-site-header-wrap--flex-direction-tablet: column-reverse;';
+		$styles .= '--cfe-site-header-wrap--justify-content--tablet: center;';
+
+	} elseif ( 'below' === $nav_pos ) {
+		$styles .= '--cfe-site-header-wrap--flex-direction: column;';
+		$styles .= '--cfe-site-header-wrap--align-items: flex-start;';
+		$styles .= '--cfe-site-header-wrap--flex-direction-tablet: column;';
+		$styles .= '--cfe-site-header-wrap--justify-content--tablet: center;';
+
+	// Default is right.
+	} else {
+		if ( is_rtl() ) {
+			$styles .= '--cfe-site-header-wrap--flex-direction: row-reverse;';
+		}
+	}
+	$styles .= '}';
+
+	if ( ! plugin()->toolbar_mobile() ) {
+		$styles .= '@media (max-width: 767.98px) { .user-toolbar { display: none; } body, body.toolbar-active { padding-top: 0 !important; } }</style>';
+		$styles .= '<style>body { padding-top: var( --cfe-toolbar--height ); } nav.navbar.d-block { display: block !important; }';
+	}
+
+	$styles .= '</style>';
+	return $styles;
 }
 
 /**
