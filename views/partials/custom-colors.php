@@ -94,6 +94,37 @@ use function CFE_Colors\{
 			}
 		}
 		echo '</ul>';
+
+		if ( isset( $option['extra'] ) ) :
+
+		printf(
+			'<li id="extra_scheme_label_%s" style="margin-top: 1em; display: %s;">%s %s</li>',
+			$option['slug'],
+			$display,
+			$option['name'],
+			lang()->get( 'additional colors:' )
+		);
+		printf(
+			'<ul id="extra_scheme_thumbs_%s" style="display: %s;">',
+			$option['slug'],
+			$display
+		);
+		$count = 0;
+		foreach ( $option['extra'] as $thumb ) {
+			$count++;
+			if ( ! empty( $thumb ) ) {
+				printf(
+					'<li id="%s_original_%s_extra" class="form-tooltip" style="background-color: %s" title="%s"><span class="screen-reader-text">%s</span></li>',
+					$option['slug'],
+					$count,
+					$thumb,
+					$thumb,
+					$thumb
+				);
+			}
+		}
+		echo '</ul>';
+		endif;
 	} ?>
 	</ul>
 

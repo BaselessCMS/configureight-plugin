@@ -249,6 +249,36 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 					}
 				}
 				echo '</ul>';
+
+				if ( isset( $option['extra'] ) ) :
+
+				printf(
+					'<li id="extra_scheme_label_%s" style="margin-top: 1em; display: %s;">%s</li>',
+					$option['slug'],
+					$display,
+					lang()->get( 'Color picker options:' )
+				);
+				printf(
+					'<ul id="extra_scheme_thumbs_%s" style="display: %s;">',
+					$option['slug'],
+					$display
+				);
+				$count = 0;
+				foreach ( $option['extra'] as $thumb ) {
+					$count++;
+					if ( ! empty( $thumb ) ) {
+						printf(
+							'<li id="%s_thumb_%s_extra" class="form-tooltip" style="background-color: %s" title="%s"><span class="screen-reader-text">%s</span></li>',
+							$option['slug'],
+							$count,
+							$thumb,
+							$thumb,
+							$thumb
+						);
+					}
+				}
+				echo '</ul>';
+				endif;
 			} ?>
 			</ul>
 		</div>
@@ -638,8 +668,10 @@ jQuery(document).ready( function($) {
 			if ( $.inArray( scheme, custom ) == -1 ) {
 				$( '#light_scheme_label_<?php echo $slug; ?>' ).css( 'display', 'block' );
 				$( '#dark_scheme_label_<?php echo $slug; ?>' ).css( 'display', 'block' );
+				$( '#extra_scheme_label_<?php echo $slug; ?>' ).css( 'display', 'block' );
 				$( '#light_scheme_thumbs_<?php echo $slug; ?>' ).css( 'display', 'flex' );
 				$( '#dark_scheme_thumbs_<?php echo $slug; ?>' ).css( 'display', 'flex' );
+				$( '#extra_scheme_thumbs_<?php echo $slug; ?>' ).css( 'display', 'flex' );
 			}
 
 			// Custom scheme light colors.
@@ -680,8 +712,10 @@ jQuery(document).ready( function($) {
 			$( '#scheme_desc_<?php echo $slug; ?>' ).css( 'display', 'none' );
 			$( '#light_scheme_label_<?php echo $slug; ?>' ).css( 'display', 'none' );
 			$( '#dark_scheme_label_<?php echo $slug; ?>' ).css( 'display', 'none' );
+			$( '#extra_scheme_label_<?php echo $slug; ?>' ).css( 'display', 'none' );
 			$( '#light_scheme_thumbs_<?php echo $slug; ?>' ).css( 'display', 'none' );
 			$( '#dark_scheme_thumbs_<?php echo $slug; ?>' ).css( 'display', 'none' );
+			$( '#extra_scheme_thumbs_<?php echo $slug; ?>' ).css( 'display', 'none' );
 		}
 		<?php endforeach; ?>
 	});
