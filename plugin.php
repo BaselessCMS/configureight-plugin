@@ -353,21 +353,21 @@ class configureight extends Plugin {
 			'use_dark_scheme'        => false,
 			'custom_scheme_from'     => 'default',
 			'color_body'             => '#ffffff',
-			'color_body_dark'        => '#1e1e1e',
 			'color_text'             => '#333333',
-			'color_text_dark'        => '#eeeeee',
 			'color_one'              => '#0044aa',
-			'color_two'              => '#0066cc',
-			'color_three'            => '#333333',
-			'color_four'             => '#555555',
-			'color_five'             => '#888888',
-			'color_six'              => '#cccccc',
-			'color_one_dark'         => '#ffffff',
-			'color_two_dark'         => '#eeeeee',
-			'color_three_dark'       => '#333333',
-			'color_four_dark'        => '#555555',
-			'color_five_dark'        => '#888888',
-			'color_six_dark'         => '#cccccc',
+			'color_two'              => '#0044ff',
+			'color_three'            => '#0044aa',
+			'color_four'             => '#0044ff',
+			'color_five'             => '#0044aa',
+			'color_six'              => '#0044ff',
+			'color_body_dark'        => '#1e1e1e',
+			'color_text_dark'        => '#ffffff',
+			'color_one_dark'         => '#0044ff',
+			'color_two_dark'         => '#0044cc',
+			'color_three_dark'       => '#0044ff',
+			'color_four_dark'        => '#0044cc',
+			'color_five_dark'        => '#0044aa',
+			'color_six_dark'         => '#0044ff',
 			'font_scheme'            => 'default',
 			'wght_text'              => '400',
 			'wght_primary'           => '700',
@@ -1427,7 +1427,7 @@ class configureight extends Plugin {
 
 	// @return string
 	public function loader_text_default_dark() {
-		return '#eeeeee';
+		return '#ffffff';
 	}
 
 	/**
@@ -1638,7 +1638,7 @@ class configureight extends Plugin {
 
 	// @return string
 	public function cover_blend_default() {
-		return '#355e9a';
+		return '#0044aa';
 	}
 
 	// @return string
