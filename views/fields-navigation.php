@@ -266,17 +266,19 @@ jQuery(document).ready( function($) {
 	$( '#header_layout' ).on( 'change', function() {
     	var option = $(this).val();
 		if ( option == 'horz' ) {
-			$( "#main_nav_pos option[value='right']" ).attr( "selected", "selected" );
-			$( "#main_nav_pos option[value='right']" ).prop("disabled", false);
-			$( "#main_nav_pos option[value='left']" ).prop("disabled", false);
-			$( "#header_layout_desc_vert" ).hide();
-			$( "#header_layout_desc_horz" ).show();
+			$( "#main_nav_pos option[value='right']" ).prop( 'disabled', false );
+			$( "#main_nav_pos option[value='left']" ).prop( 'disabled', false );
+			$( "#main_nav_pos option[value='right']" ).prop( 'selected', true );
+			$( "#main_nav_pos option[value='below']" ).prop( 'selected', false );
+			$( '#header_layout_desc_vert' ).hide();
+			$( '#header_layout_desc_horz' ).show();
 		} else if ( option == 'vert' ) {
-			$( "#main_nav_pos option[value='below']" ).attr( "selected", "selected" );
-			$( "#main_nav_pos option[value='right']" ).prop("disabled", true);
-			$( "#main_nav_pos option[value='left']" ).prop("disabled", true);
-			$( "#header_layout_desc_horz" ).hide();
-			$( "#header_layout_desc_vert" ).show();
+			$( "#main_nav_pos option[value='right']" ).prop( 'disabled', true );
+			$( "#main_nav_pos option[value='left']" ).prop( 'disabled', true );
+			$( "#main_nav_pos option[value='below']" ).prop( 'selected', true );
+			$( "#main_nav_pos option[value='right']" ).prop( 'selected', false );
+			$( '#header_layout_desc_horz' ).hide();
+			$( '#header_layout_desc_vert' ).show();
 		}
     });
 });
