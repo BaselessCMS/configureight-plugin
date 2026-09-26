@@ -167,15 +167,30 @@ $static = buildStaticPages();
 		<div class="col-sm-10">
 			<select class="form-select" id="main_nav_pos" name="main_nav_pos">
 
-				<option value="right" <?php echo ( plugin()->getValue( 'main_nav_pos' ) === 'right' ? 'selected' : '' ); ?>><?php lang()->p( 'Right of Site Branding' ); ?></option>
+				<option
+				id="main_nav_pos_right"
+				value="right"
+				<?php if ( 'vert' == plugin()->header_layout() ) { echo 'disabled'; } ?>
+				<?php echo ( plugin()->getValue( 'main_nav_pos' ) === 'right' ? 'selected' : '' ); ?>>
+					<?php lang()->p( 'Right of Site Branding' ); ?>
+				</option>
 
-				<option value="left" <?php echo ( plugin()->getValue( 'main_nav_pos' ) === 'left' ? 'selected' : '' ); ?>><?php lang()->p( 'Left of Site Branding' ); ?></option>
+				<option
+				id="main_nav_pos_left"
+				value="left"
+				<?php if ( 'vert' == plugin()->header_layout() ) { echo 'disabled'; } ?>
+				<?php echo ( plugin()->getValue( 'main_nav_pos' ) === 'left' ? 'selected' : '' ); ?>>
+					<?php lang()->p( 'Left of Site Branding' ); ?>
+				</option>
 
 				<option value="above" <?php echo ( plugin()->getValue( 'main_nav_pos' ) === 'above' ? 'selected' : '' ); ?>><?php lang()->p( 'Above Site Branding' ); ?></option>
 
 				<option value="below" <?php echo ( plugin()->getValue( 'main_nav_pos' ) === 'below' ? 'selected' : '' ); ?>><?php lang()->p( 'Below Site Branding' ); ?></option>
 			</select>
-			<small class="form-text"><?php lang()->p( 'Does not apply to mobile layouts.' ); ?></small>
+
+			<small id="header_layout_desc_vert" class="form-text" style="display: <?php echo ( plugin()->header_layout() == 'vert' ? 'block' : 'none' ); ?>;"><?php lang()->p( 'Left and right options disabled by the "vertical" header layout setting.' ); ?></small>
+
+			<small id="header_layout_desc_horz" class="form-text" style="display: <?php echo ( plugin()->header_layout() == 'horz' ? 'block' : 'none' ); ?>;"><?php lang()->p( 'Left and right options do not apply to mobile layouts.' ); ?></small>
 		</div>
 	</div>
 
@@ -243,3 +258,26 @@ $static = buildStaticPages();
 		</div>
 	</div>
 </fieldset>
+
+<script>
+jQuery(document).ready( function($) {
+
+	// Navigation position description.
+	$( '#header_layout' ).on( 'change', function() {
+    	var option = $(this).val();
+		if ( option == 'horz' ) {
+			$( "#main_nav_pos option[value='right']" ).attr( "selected", "selected" );
+			$( "#main_nav_pos option[value='right']" ).prop("disabled", false);
+			$( "#main_nav_pos option[value='left']" ).prop("disabled", false);
+			$( "#header_layout_desc_vert" ).hide();
+			$( "#header_layout_desc_horz" ).show();
+		} else if ( option == 'vert' ) {
+			$( "#main_nav_pos option[value='below']" ).attr( "selected", "selected" );
+			$( "#main_nav_pos option[value='right']" ).prop("disabled", true);
+			$( "#main_nav_pos option[value='left']" ).prop("disabled", true);
+			$( "#header_layout_desc_horz" ).hide();
+			$( "#header_layout_desc_vert" ).show();
+		}
+    });
+});
+</script>
