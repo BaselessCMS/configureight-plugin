@@ -28,6 +28,17 @@ if ( site()->logo() ) {
 	<legend class="screen-reader-text"><?php lang()->p( 'Header' ); ?></legend>
 
 	<div class="form-field form-group row">
+		<label class="form-label col-sm-2 col-form-label" for="header_layout"><?php lang()->p( 'Header Layout' ); ?></label>
+		<div class="col-sm-10">
+			<select class="form-select" id="header_layout" name="header_layout">
+				<option value="horz" <?php echo ( plugin()->getValue( 'header_layout' ) === 'horz' ? 'selected' : '' ); ?>><?php lang()->p( 'Horizontal' ); ?></option>
+				<option value="vert" <?php echo ( plugin()->getValue( 'header_layout' ) === 'vert' ? 'selected' : '' ); ?>><?php lang()->p( 'Vertical' ); ?></option>
+			</select>
+			<small class="form-text"><?php lang()->p( 'Does not apply to mobile layouts.' ); ?></small>
+		</div>
+	</div>
+
+	<div class="form-field form-group row">
 		<label class="form-label col-sm-2 col-form-label" for="site_title"><?php lang()->p( 'Website Title' ); ?></label>
 		<div class="col-sm-10">
 			<select class="form-select" id="site_title" name="site_title">

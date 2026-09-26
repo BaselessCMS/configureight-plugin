@@ -226,6 +226,7 @@ class configureight extends Plugin {
 			'loader_text'            => $L->get( 'Loading…' ),
 			'loader_icon'            => 'spinner-dots',
 			'search_icon'            => true,
+			'header_layout'          => 'horz',
 			'site_title'             => true,
 			'site_slogan'            => true,
 			'standard_logo'          => [],
@@ -1461,6 +1462,11 @@ class configureight extends Plugin {
 	 * @since  1.0.0
 	 * @access public
 	 */
+
+	// @return string
+	public function header_layout() {
+		return $this->getValue( 'header_layout' );
+	}
 
 	// @return boolean
 	public function site_title() {
