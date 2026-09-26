@@ -34,7 +34,7 @@ if ( site()->logo() ) {
 				<option value="horz" <?php echo ( plugin()->getValue( 'header_layout' ) === 'horz' ? 'selected' : '' ); ?>><?php lang()->p( 'Horizontal' ); ?></option>
 				<option value="vert" <?php echo ( plugin()->getValue( 'header_layout' ) === 'vert' ? 'selected' : '' ); ?>><?php lang()->p( 'Vertical' ); ?></option>
 			</select>
-			<small class="form-text"><?php lang()->p( 'Does not apply to mobile layouts.' ); ?></small>
+			<small class="form-text"><?php lang()->p( 'The vertical option centers the header content and disables the left & right options for the navigation position. Mobile layouts are always vertical, centered.' ); ?></small>
 		</div>
 	</div>
 

@@ -44,7 +44,7 @@ $custom_from = plugin()->custom_scheme_from();
 				<option value="true" <?php echo ( plugin()->keep_uploads() === true ? 'selected' : '' ); ?>><?php lang()->p( 'Save Uploads' ); ?></option>
 				<option value="false" <?php echo ( plugin()->keep_uploads() === false ? 'selected' : '' ); ?> <?php echo ( $show_toolbar ? '' : 'disabled' ); ?>><?php lang()->p( 'Delete Uploads' ); ?></option>
 			</select>
-			<small class="form-text"><?php lang()->p( 'Choose whether to save or delete this plugin\'s upload directory when deactivating.' ); ?></small>
+			<small class="form-text"><?php lang()->p( 'Choose whether to save or delete this plugin\'s image upload directory when deactivating.' ); ?></small>
 		</div>
 	</div>
 
@@ -188,7 +188,7 @@ $custom_from = plugin()->custom_scheme_from();
 			<?php if ( plugin()->debug_mode() ) : ?>
 			<small class="form-text text-danger"><?php lang()->p( 'Option disabled while site is in debug mode.' ); ?></small>
 			<?php else : ?>
-			<small class="form-text"><?php lang()->p( 'A full-screen display that hides the web page until it is fully loaded. Disabled when site is in debug mode.' ); ?></small>
+			<small class="form-text"><?php lang()->p( 'A full-screen display that hides the web page until it is fully loaded. Disabled when the website is in debug mode (<code>bl-kernel/boot/init.php</code>).' ); ?></small>
 			<?php endif; ?>
 		</div>
 	</div>
