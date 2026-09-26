@@ -175,7 +175,7 @@ $static = buildStaticPages();
 
 				<option value="below" <?php echo ( plugin()->getValue( 'main_nav_pos' ) === 'below' ? 'selected' : '' ); ?>><?php lang()->p( 'Below Site Branding' ); ?></option>
 			</select>
-			<small class="form-text"><?php lang()->p( 'Right and left options will be reversed for right-to-left languages.' ); ?></small>
+			<small class="form-text"><?php lang()->p( 'Does not apply to mobile layouts.' ); ?></small>
 		</div>
 	</div>
 
