@@ -178,7 +178,7 @@ function plugin_sidebars_count() {
 function define_layout() {
 
 	$nav_pos = get_nav_position();
-	$styles  = '<style>:host, :root {';
+	$styles  = '<style id="layout-props">:host, :root {';
 
 	// General spacing.
 	$styles .= sprintf(

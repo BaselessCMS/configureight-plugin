@@ -3075,7 +3075,7 @@ function define_color_scheme() {
 	}
 
 	// Begin style root block.
-	$style = '<style>:host, :root {';
+	$style = '<style id="color-scheme-props">:host, :root {';
 
 	// Set up array of colors.
 	$colors = [];
@@ -3201,7 +3201,7 @@ function define_color_scheme() {
 	$style .= '}</style>' . "\n";
 
 	// Begin dark mode style block.
-	$style .= '<style>.dark-mode {';
+	$style .= '<style id="dark-mode-color-scheme-props">.dark-mode {';
 
 	// Variables for each dark mode color.
 	foreach ( $current['dark'] as $key => $value ) {

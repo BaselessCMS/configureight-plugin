@@ -706,7 +706,7 @@ function font_scheme_template() {
  */
 function define_font_scheme() {
 
-	$style  = "\n" . '<style>:host, :root {';
+	$style  = "\n" . '<style id="font-scheme-props">:host, :root {';
 
 	// Font weight.
 	$style .= sprintf(

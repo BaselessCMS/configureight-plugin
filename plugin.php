@@ -676,7 +676,7 @@ class configureight extends Plugin {
 	 */
 	public function admin_style_block() {
 
-		$style  = '<style>';
+		$style  = '<style id="admin-styles">';
 		$style .= $this->admin_css();
 		$style .= '</style>';
 
@@ -785,7 +785,7 @@ class configureight extends Plugin {
 		}
 
 		// Modal background.
-		$assets .= '<style>';
+		$assets .= '<style id="modal-styles">';
 		$assets .= sprintf(
 			':host, :root { --cfe-modal-overlay--bg-color: %s; }',
 			$this->modal_bg_color()
