@@ -16,18 +16,25 @@ use function CFE_Plugin\{
 	options_list
 };
 
-// Settings page URL.
-$settings_page = DOMAIN_ADMIN . 'configure-plugin/' . plugin()->className();
-
 ?>
+<style>
+ul.database-links-list {
+	list-style: none;
+}
+ul.database-links-list li {
+	margin: var( --cfe-element--margin, 0.125rem 0 0 0 );
+}
+ul.database-links-list li a {
+	text-decoration: none;
+	font-weight: var( --cfe-display--font-weight, 600 );
+}
+</style>
 
 <h1 class="page-title"><span class="page-title-icon fa fa-server"></span><span class="page-title-text"><?php lang()->p( 'Options Databases' ); ?></span></h1>
 
-<p class="page-description"><?php lang()->p( "Go to the <a href='{$settings_page}'>website options</a> page." ); ?></p>
+<p><?php lang()->p( 'List of current Configure 8 Suite options and their values. Includes plugins that are bundled in the full suite, if installed and activated.' ); ?></p>
 
-<?php lang()->p( 'List of current Configure 8 Suite options and their values. Includes plugins that are bundled in the full suite, if installed and activated.' ); ?></p>
-
-<ul>
+<ul class="database-links-list">
 	<li><a href="#<?php echo plugin()->className(); ?>"><?php echo plugin()->name(); ?></a></li>
 	<?php
 	foreach ( suite_plugins_active() as $plugin ) {

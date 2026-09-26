@@ -158,18 +158,23 @@ $custom_from = plugin()->custom_scheme_from();
 	</div>
 	<?php endif; ?>
 
-	<?php if ( BLUDIT_VERSION <= '3.17.2' ) : ?>
 	<div class="form-field form-group row">
-		<label class="form-label col-sm-2 col-form-label" for="show_customize"><?php lang()->p( 'Dashboard Customize' ); ?></label>
+		<label class="form-label col-sm-2 col-form-label" for="custom_dashboard"><?php lang()->p( 'Custom Dashboard' ); ?></label>
 		<div class="col-sm-10">
-			<select class="form-select" id="show_customize" name="show_customize">
-				<option value="true" <?php echo ( plugin()->getValue( 'show_customize' ) === true ? 'selected' : '' ); ?>><?php lang()->p( 'Enabled' ); ?></option>
-				<option value="false" <?php echo ( plugin()->getValue( 'show_customize' ) === false ? 'selected' : '' ); ?>><?php lang()->p( 'Disabled' ); ?></option>
+		<?php if ( defined( 'CFE_DASHBOARD' ) && CFE_DASHBOARD ) : ?>
+			<select class="form-select" id="custom_dashboard" name="custom_dashboard">
+				<option value="true" <?php echo ( plugin()->getValue( 'custom_dashboard' ) === true ? 'selected' : '' ); ?>><?php lang()->p( 'Enabled' ); ?></option>
+				<option value="false" <?php echo ( plugin()->getValue( 'custom_dashboard' ) === false ? 'selected' : '' ); ?>><?php lang()->p( 'Disabled' ); ?></option>
 			</select>
 			<small class="form-text"><?php lang()->p( 'Links to help guides and options on the dashboard.' ); ?></small>
+		<?php else : ?>
+			<?php printf(
+				lang()->get( 'Please install the <a href="%s">Configure 8 Dashboard</a> to use this option.' ),
+				$guide_page . '#admin'
+			); ?>
+		<?php endif; ?>
 		</div>
 	</div>
-	<?php endif; ?>
 </fieldset>
 
 <h3 class="form-heading"><?php lang()->p( 'Loading Screen' ); ?></h3>

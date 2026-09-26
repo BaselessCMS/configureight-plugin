@@ -138,6 +138,24 @@ class configureight extends Plugin {
 	}
 
 	/**
+	 * Set constants
+	 *
+	 * @since  1.0.0
+	 * @access public
+	 * @param  array $array
+	 * @return void
+	 */
+	public function constants( $array = [] ) {
+
+		foreach ( $array as $name => $value ) {
+			if ( defined( $name ) ) {
+				continue;
+			}
+			define( $name, $value );
+		}
+	}
+
+	/**
 	 * Prepare plugin for installation
 	 *
 	 * @since  1.0.0
@@ -145,6 +163,10 @@ class configureight extends Plugin {
 	 * @return void
 	 */
 	public function prepare() {
+
+		$this->constants( [
+			'BEST_BLUDIT_THEME' => true
+		] );
 		$this->autoload();
 		$this->get_files();
 	}
@@ -217,7 +239,7 @@ class configureight extends Plugin {
 			'user_toolbar'           => 'enabled',
 			'toolbar_mobile'         => false,
 			'to_top_button'          => 'enabled',
-			'show_customize'         => true,
+			'custom_dashboard'       => true,
 			'page_loader'            => false,
 			'loader_bg_color'        => $this->loader_bg_default(),
 			'loader_bg_color_dark'   => $this->loader_bg_default_dark(),
@@ -713,6 +735,18 @@ class configureight extends Plugin {
 		}
 		$assets = '';
 
+		if ( $this->custom_dashboard() && str_contains( url()->slug(), 'dashboard' ) ) :
+
+		$assets .= '<link rel="stylesheet" type="text/css" href="' . $this->domainPath() . "assets/css/tooltips{$suffix}.css?version=" . $this->getMetadata( 'version' ) . '" />' . PHP_EOL;
+
+		$assets .= '<link rel="stylesheet" type="text/css" href="' . $this->domainPath() . "assets/css/dashboard{$suffix}.css?version=" . $this->getMetadata( 'version' ) . '" />' . PHP_EOL;
+
+		$assets .= '<script type="text/javascript" src="' . $this->domainPath() . "assets/js/tabs{$suffix}.js?version=" . $this->getMetadata( 'version' ) . '"></script>' . PHP_EOL;
+
+		$assets .= '<script type="text/javascript" src="' . $this->domainPath() . "assets/js/tooltips{$suffix}.js?version=" . $this->getMetadata( 'version' ) . '"></script>' . PHP_EOL;
+
+		endif;
+
 		// Load only for this plugin's settings page.
 		if ( str_contains( url()->slug(), $this->className() ) ) :
 
@@ -1123,7 +1157,7 @@ class configureight extends Plugin {
 		}
 
 		// Show customize links on dashboard if enabled.
-		if ( $this->show_customize() && checkRole( [ 'admin' ], false ) ) {
+		if ( $this->custom_dashboard() && checkRole( [ 'admin' ], false ) ) {
 			include( $this->phpPath() . '/views/dash-widget-customize.php' );
 		}
 	}
@@ -1383,8 +1417,8 @@ class configureight extends Plugin {
 	}
 
 	// @return boolean
-	public function show_customize() {
-		return $this->getValue( 'show_customize' );
+	public function custom_dashboard() {
+		return $this->getValue( 'custom_dashboard' );
 	}
 
 	// @return string

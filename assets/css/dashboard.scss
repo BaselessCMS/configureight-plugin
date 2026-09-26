@@ -1,0 +1,43 @@
+///
+/// Custom dashboard styles
+///
+
+@use 'modules/layout' as l;
+
+ul.dashboard-links-list {
+	list-style: none;
+	padding: 0;
+
+	a {
+		text-decoration: none;
+	}
+}
+
+#dashboard-content-widgets {
+	display: grid;
+	grid-template-columns: repeat( 3, 1fr );
+	gap: 1rem 2rem;
+	max-width: fit-content;
+	padding: var( --cfe-spacing--y, 2rem ) 0;
+
+	@media ( max-width: l.$break_max_sm ) {
+		display: block;;
+	}
+}
+
+.analytics-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+}
+
+ul.customize-links-list {
+	list-style: none;
+	li {
+		margin: var( --cfe-element--margin, 0.125rem 0 0 0 );
+		a {
+			text-decoration: none;
+			font-weight: var( --cfe-display--font-weight, 600 );
+		}
+	}
+}
