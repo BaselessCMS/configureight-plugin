@@ -11,17 +11,17 @@ jQuery(document).ready( function($) {
 
 	// Mobile toolbar.
 	$( '#user_toolbar' ).on( 'change', function() {
-    	var show = $(this).val();
+		var show = $(this).val();
 		if ( show != 'disabled' ) {
 			$( "#toolbar_mobile_wrap" ).fadeIn( 250 );
 		} else if ( show == 'disabled' ) {
 			$( "#toolbar_mobile_wrap" ).fadeOut( 250 );
 		}
-    });
+	});
 
 	// Page loader options.
 	$( '#page_loader' ).on( 'change', function() {
-    	var show = $(this).val();
+		var show = $(this).val();
 		if ( show == 'true' ) {
 			$( "#loader_options" ).fadeIn( 250 );
 			$( 'html, body' ).animate( {
@@ -30,7 +30,7 @@ jQuery(document).ready( function($) {
 		} else if ( show == 'false' ) {
 			$( "#loader_options" ).fadeOut( 250 );
 		}
-    });
+	});
 
 	// Loader background.
 	$( '#loader_bg_color_default' ).click( function() {
@@ -50,7 +50,7 @@ jQuery(document).ready( function($) {
 
 	// Posts navigation options.
 	$( '#loop_break' ).on( 'change', function() {
-    	var show = $(this).val();
+		var show = $(this).val();
 		if ( show == 'true' ) {
 			$( "#content-break-options" ).fadeIn( 250 );
 			$( 'html, body' ).animate( {
@@ -59,17 +59,17 @@ jQuery(document).ready( function($) {
 		} else if ( show == 'false' ) {
 			$( "#content-break-options" ).fadeOut( 250 );
 		}
-    });
+	});
 
 	// Loop nav label option.
 	$( '#main_nav_loop' ).on( 'change', function() {
-    	var show = $(this).val();
+		var show = $(this).val();
 		if ( show != 'none' ) {
 			$( "#main_nav_loop_label_wrap" ).fadeIn( 250 );
 		} else if ( show == 'none' ) {
 			$( "#main_nav_loop_label_wrap" ).fadeOut( 250 );
 		}
-    });
+	});
 
 	// Modal window background.
 	$( '#modal_bg_color' ).spectrum({
@@ -89,7 +89,7 @@ jQuery(document).ready( function($) {
 
 	// Loop options.
 	$( '#loop_type' ).on( 'change', function() {
-    	var type = $(this).val();
+		var type = $(this).val();
 		if ( type == 'blog' ) {
 			$( "#loop_word_count" ).val( 'true' );
 			$( "#loop_read_time" ).val( 'true' );
@@ -97,7 +97,7 @@ jQuery(document).ready( function($) {
 			$( "#loop_word_count" ).val( 'false' );
 			$( "#loop_read_time" ).val( 'false' );
 		}
-    });
+	});
 
 	// Cover album.
 	$( '.image-in-album[data-fancybox]' ).fancybox({
@@ -112,7 +112,7 @@ jQuery(document).ready( function($) {
 
 	// Cover image style.
 	$( '#cover_style' ).on( 'change', function() {
-    	var show = $(this).val();
+		var show = $(this).val();
 		if ( show == 'overlay' ) {
 			$( "#cover_blend_wrap" ).css( 'display', 'none' );
 			$( "#cover_overlay_wrap" ).css( 'display', 'block' );
@@ -120,7 +120,7 @@ jQuery(document).ready( function($) {
 			$( "#cover_overlay_wrap" ).css( 'display', 'none' );
 			$( "#cover_blend_wrap" ).fadeIn( 250 );
 		}
-    });
+	});
 
 	// Cover image overlay.
 	$( '#cover_overlay' ).spectrum({
@@ -173,7 +173,7 @@ jQuery(document).ready( function($) {
 
 	// Posts navigation options.
 	$( '#posts_nav' ).on( 'change', function() {
-    	var show = $(this).val();
+		var show = $(this).val();
 		if ( show == 'true' ) {
 			$( "#posts_nav_wrap" ).fadeIn( 250 );
 			$( 'html, body' ).animate( {
@@ -182,11 +182,11 @@ jQuery(document).ready( function($) {
 		} else if ( show == 'false' ) {
 			$( "#posts_nav_wrap" ).fadeOut( 250 );
 		}
-    });
+	});
 
 	// Front page slider options.
 	$( '#posts_slider' ).on( 'change', function() {
-    	var show = $(this).val();
+		var show = $(this).val();
 		if ( show == 'true' ) {
 			$( "#slider_options" ).fadeIn( 250 );
 			$( "#blend_slider_label" ).show();
@@ -194,7 +194,7 @@ jQuery(document).ready( function($) {
 			$( "#slider_options" ).fadeOut( 250 );
 			$( "#blend_slider_label" ).hide();
 		}
-    });
+	});
 
 	// Slider pages.
 	$( '#slider_content' ).on( 'change', function() {
@@ -218,7 +218,7 @@ jQuery(document).ready( function($) {
 
 	// Related posts options.
 	$( '#related_posts' ).on( 'change', function() {
-    	var show = $(this).val();
+		var show = $(this).val();
 		if ( show == 'true' ) {
 			$( "#related_options" ).fadeIn( 250 );
 			$( 'html, body' ).animate( {
@@ -227,11 +227,11 @@ jQuery(document).ready( function($) {
 		} else if ( show == 'false' ) {
 			$( "#related_options" ).fadeOut( 250 );
 		}
-    });
+	});
 
 	// Error template.
 	$( '#error_widgets' ).on( 'change', function() {
-    	var show = $(this).val();
+		var show = $(this).val();
 		if ( show != 'content' ) {
 			$( "#error_widget_options" ).fadeIn( 250 );
 			$( 'html, body' ).animate( {
@@ -240,10 +240,10 @@ jQuery(document).ready( function($) {
 		} else if ( show == 'content' ) {
 			$( "#error_widget_options" ).fadeOut( 250 );
 		}
-    });
+	});
 
 	$( '#error_search' ).on( 'change', function() {
-    	var show = $(this).val();
+		var show = $(this).val();
 		if ( show == 'true' ) {
 			$( "#error_search_options" ).fadeIn( 250 );
 			$( 'html, body' ).animate( {
@@ -252,10 +252,10 @@ jQuery(document).ready( function($) {
 		} else if ( show == 'false' ) {
 			$( "#error_search_options" ).fadeOut( 250 );
 		}
-    });
+	});
 
 	$( '#error_search_btn' ).on( 'change', function() {
-    	var show = $(this).val();
+		var show = $(this).val();
 		if ( show == 'true' ) {
 			$( "#error_search_btn_text_wrap" ).fadeIn( 250 );
 			$( 'html, body' ).animate( {
@@ -264,10 +264,10 @@ jQuery(document).ready( function($) {
 		} else if ( show == 'false' ) {
 			$( "#error_search_btn_text_wrap" ).fadeOut( 250 );
 		}
-    });
+	});
 
 	$( '#error_static' ).on( 'change', function() {
-    	var show = $(this).val();
+		var show = $(this).val();
 		if ( show == 'true' ) {
 			$( "#error_static_options" ).fadeIn( 250 );
 			$( 'html, body' ).animate( {
@@ -276,10 +276,10 @@ jQuery(document).ready( function($) {
 		} else if ( show == 'false' ) {
 			$( "#error_static_options" ).fadeOut( 250 );
 		}
-    });
+	});
 
 	$( '#error_cats' ).on( 'change', function() {
-    	var show = $(this).val();
+		var show = $(this).val();
 		if ( show == 'true' ) {
 			$( "#error_cats_options" ).fadeIn( 250 );
 			$( 'html, body' ).animate( {
@@ -288,10 +288,10 @@ jQuery(document).ready( function($) {
 		} else if ( show == 'false' ) {
 			$( "#error_cats_options" ).fadeOut( 250 );
 		}
-    });
+	});
 
 	$( '#error_tags' ).on( 'change', function() {
-    	var show = $(this).val();
+		var show = $(this).val();
 		if ( show == 'true' ) {
 			$( "#error_tags_options" ).fadeIn( 250 );
 			$( 'html, body' ).animate( {
@@ -300,7 +300,7 @@ jQuery(document).ready( function($) {
 		} else if ( show == 'false' ) {
 			$( "#error_tags_options" ).fadeOut( 250 );
 		}
-    });
+	});
 
 	// Sidebar options.
 	$( '#sidebar_social' ).on( 'change', function() {
