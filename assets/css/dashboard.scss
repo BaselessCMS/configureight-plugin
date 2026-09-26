@@ -4,6 +4,14 @@
 
 @use 'modules/layout' as l;
 
+body:not( .cfe-admin ) {
+	#dashboard {
+		.tab-pane {
+			padding: var( --cfe-spacing--y, 2rem ) 0;
+		}
+	}
+}
+
 ul.dashboard-links-list {
 	list-style: none;
 	padding: 0;

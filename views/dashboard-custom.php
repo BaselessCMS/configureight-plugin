@@ -17,6 +17,7 @@ use function CFE_Plugin\{
 	plugin_options_url
 };
 
+// Get current user name.
 $username = $login->username();
 $user = new User( $username );
 $name = lang()->get( 'Friend' );
@@ -26,6 +27,7 @@ if ( $user->firstName() ) {
 	$name = $user->nickname();
 }
 
+// Content links text.
 $sticky = count( $pages->getStickyDB() );
 $posts  = count( $pages->getPublishedDB() );
 $published = $sticky + $posts;
@@ -48,12 +50,12 @@ if ( 1 === count( $pages->getScheduledDB() ) ) {
 }
 
 ?>
-<div id="dashboard">
+<div id="dashboard" class="custom-dashboard">
 
 	<h1 class="page-title"><?php lang()->p( 'Website Dashboard' ); ?></h1>
 
 	<?php printf(
-		lang()->get( '<p>Welcome, %s, to the %s administration dashboard.</p>' ),
+		lang()->get( '<p class="page-description">Welcome, %s, to the %s administration dashboard.</p>' ),
 		$name,
 		site()->title()
 	); ?>
@@ -271,25 +273,25 @@ if ( 1 === count( $pages->getScheduledDB() ) ) {
 			</div>
 		</div>
 		<script>
-		(function() {
-			var ctx = document.getElementById('analytics-chart');
+		( function() {
+			var ctx = document.getElementById( 'analytics-chart' );
 			if (!ctx || typeof Chart === 'undefined') { return; }
-			new Chart(ctx, {
-				type: 'bar',
-				data: {
-					labels: <?php echo json_encode($weekData['labels']); ?>,
-					datasets: [{
-						label: <?php echo json_encode(lang()->g('unique-visitors'), JSON_HEX_TAG | JSON_UNESCAPED_UNICODE) ?>,
-						backgroundColor: 'rgba(0,120,212,0.45)',
-						borderColor: 'rgba(0,120,212,0.75)',
-						borderWidth: 1,
-						data: <?php echo json_encode($weekData['unique']); ?>
+			new Chart( ctx, {
+				type : 'bar',
+				data : {
+					labels : <?php echo json_encode( $weekData['labels'] ); ?>,
+					datasets : [{
+						label : <?php echo json_encode( lang()->g( 'unique-visitors' ), JSON_HEX_TAG | JSON_UNESCAPED_UNICODE ); ?>,
+						backgroundColor : 'rgba(0,120,212,0.45)',
+						borderColor : 'rgba(0,120,212,0.75)',
+						borderWidth : 1,
+						data : <?php echo json_encode( $weekData['unique'] ); ?>
 					}, {
-						label: <?php echo json_encode(lang()->g('visits-today'), JSON_HEX_TAG | JSON_UNESCAPED_UNICODE) ?>,
+						label : <?php echo json_encode( lang()->g( 'visits-today' ), JSON_HEX_TAG | JSON_UNESCAPED_UNICODE ); ?>,
 						backgroundColor: 'rgba(148,163,184,0.5)',
 						borderColor: 'rgba(100,116,139,0.8)',
 						borderWidth: 1,
-						data: <?php echo json_encode($weekData['visits']); ?>
+						data: <?php echo json_encode( $weekData['visits'] ); ?>
 					}]
 				},
 				options: {
