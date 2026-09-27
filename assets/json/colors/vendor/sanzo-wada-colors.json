@@ -1,0 +1,842 @@
+{
+	"black": {
+		"label": "Black",
+		"hex": "#111314"
+	},
+	"pale-lemon-yellow": {
+		"label": "Pale Lemon Yellow",
+		"hex": "#ffefae"
+	},
+	"raw-sienna": {
+		"label": "Raw Sienna",
+		"hex": "#bb7125"
+	},
+	"sulphur-yellow": {
+		"label": "Sulphur Yellow",
+		"hex": "#f5ecc2"
+	},
+	"ivory-buff": {
+		"label": "Ivory Buff",
+		"hex": "#ebd3a2"
+	},
+	"turquoise-green": {
+		"label": "Turquoise Green",
+		"hex": "#b5decc"
+	},
+	"lemon-yellow": {
+		"label": "Lemon Yellow",
+		"hex": "#f8ed43"
+	},
+	"cream-yellow": {
+		"label": "Cream Yellow",
+		"hex": "#fdbf68"
+	},
+	"eosine-pink": {
+		"label": "Eosine Pink",
+		"hex": "#f37f94"
+	},
+	"kinari": {
+		"label": "Kinari",
+		"hex": "#F8F4E9"
+	},
+	"yellow-orange": {
+		"label": "Yellow Orange",
+		"hex": "#f99d1b"
+	},
+	"antwarp-blue": {
+		"label": "Antwarp Blue",
+		"hex": "#007190"
+	},
+	"salvia-blue": {
+		"label": "Salvia Blue",
+		"hex": "#97acc8"
+	},
+	"slate-color": {
+		"label": "Slate Color",
+		"hex": "#34454c"
+	},
+	"blue": {
+		"label": "Blue",
+		"hex": "#006eb8"
+	},
+	"carmine-red": {
+		"label": "Carmine Red",
+		"hex": "#a62c37"
+	},
+	"cobalt-green": {
+		"label": "Cobalt Green",
+		"hex": "#96d1aa"
+	},
+	"corinthian-pink": {
+		"label": "Corinthian Pink",
+		"hex": "#f8b6ba"
+	},
+	"neutral-gray": {
+		"label": "Neutral Gray",
+		"hex": "#b6bfc1"
+	},
+	"violet": {
+		"label": "Violet",
+		"hex": "#4f4086"
+	},
+	"aconite-violet": {
+		"label": "Aconite Violet",
+		"hex": "#a36aa5"
+	},
+	"benzol-green": {
+		"label": "Benzol Green",
+		"hex": "#00978d"
+	},
+	"hay-s-russet": {
+		"label": "Hay's Russet",
+		"hex": "#793327"
+	},
+	"sea-green": {
+		"label": "Sea Green",
+		"hex": "#00b49b"
+	},
+	"violet-blue": {
+		"label": "Violet Blue",
+		"hex": "#40456a"
+	},
+	"apricot-yellow": {
+		"label": "Apricot Yellow",
+		"hex": "#ffdd00"
+	},
+	"calamine-blue": {
+		"label": "Calamine BLue",
+		"hex": "#78cdd0"
+	},
+	"deep-lyons-blue": {
+		"label": "Deep Lyons Blue",
+		"hex": "#1c4286"
+	},
+	"deep-slate-olive": {
+		"label": "Deep Slate Olive",
+		"hex": "#253122"
+	},
+	"golden-yellow": {
+		"label": "Golden Yellow",
+		"hex": "#f3a257"
+	},
+	"grenadine-pink": {
+		"label": "Grenadine Pink",
+		"hex": "#f48067"
+	},
+	"light-brown-drab": {
+		"label": "Light Brown Drab",
+		"hex": "#b59392"
+	},
+	"light-glaucous-blue": {
+		"label": "Light Glaucous Blue",
+		"hex": "#a5c8d1"
+	},
+	"ochraceous-salmon": {
+		"label": "Ochraceous Salmon",
+		"hex": "#d8a37b"
+	},
+	"sumi": {
+		"label": "Sumi",
+		"hex": "#2B2B2B"
+	},
+	"burnt-sienna": {
+		"label": "Burnt Sienna",
+		"hex": "#ae5224"
+	},
+	"cinnamon-buff": {
+		"label": "Cinnamon Buff",
+		"hex": "#fdc57e"
+	},
+	"cossack-green": {
+		"label": "Cossack Green",
+		"hex": "#437742"
+	},
+	"green-blue": {
+		"label": "Green Blue",
+		"hex": "#099197"
+	},
+	"pale-king-s-blue": {
+		"label": "Pale King's Blue",
+		"hex": "#a7d4e4"
+	},
+	"pinkish-cinnamon": {
+		"label": "Pinkish Cinnamon",
+		"hex": "#eeb480"
+	},
+	"seashell-pink": {
+		"label": "Seashell Pink",
+		"hex": "#fdd4bd"
+	},
+	"carmine": {
+		"label": "Carmine",
+		"hex": "#cc1236"
+	},
+	"cerulian-blue": {
+		"label": "Cerulian Blue",
+		"hex": "#0093a5"
+	},
+	"citron-yellow" :{
+		"label": "Citron Yellow",
+		"hex": "#b2b73e"
+	},
+	"dull-violet-black": {
+		"label": "Dull Violet Black",
+		"hex": "#1e0e3f"
+	},
+	"dusky-green": {
+		"label": "Dusky Green",
+		"hex": "#004f46"
+	},
+	"ecru": {
+		"label": "Ecru",
+		"hex": "#c2ae93"
+	},
+	"eugenia-red-b": {
+		"label": "Eugenia Red | B",
+		"hex": "#da525d"
+	},
+	"gofun": {
+		"label": "Gofun",
+		"hex": "#F4EEE0"
+	},
+	"grayish-lavender-b": {
+		"label": "Grayish Lavender - B",
+		"hex": "#c0a9b3"
+	},
+	"helvetia-blue": {
+		"label": "Helvetia Blue",
+		"hex": "#005b8d"
+	},
+	"orange-yellow": {
+		"label": "Orange Yellow",
+		"hex": "#fcb315"
+	},
+	"pale-burnt-lake": {
+		"label": "Pale Burnt Lake",
+		"hex": "#802626"
+	},
+	"peach-red": {
+		"label": "Peach Red",
+		"hex": "#f15a30"
+	},
+	"red-violet": {
+		"label": "Red Violet",
+		"hex": "#59256a"
+	},
+	"warm-gray": {
+		"label": "Warm Gray",
+		"hex": "#a1a39a"
+	},
+	"yellow": {
+		"label": "Yellow",
+		"hex": "#fff200"
+	},
+	"yellow-ocher": {
+		"label": "Yellow Ocher",
+		"hex": "#e2b540"
+	},
+	"cinnamon-rufous": {
+		"label": "Cinnamon Rufous",
+		"hex": "#c27544"
+	},
+	"cotinga-purple": {
+		"label": "Cotinga Purple",
+		"hex": "#501345"
+	},
+	"dark-tyrian-blue": {
+		"label": "Dark Tyrian Blue",
+		"hex": "#12354e"
+	},
+	"deep-indigo": {
+		"label": "Deep Indigo",
+		"hex": "#051230"
+	},
+	"etruscan-red": {
+		"label": "Etruscan Red",
+		"hex": "#c55347"
+	},
+	"grayish-lavender-a": {
+		"label": "Grayish Lavender - A",
+		"hex": "#b5b1d8"
+	},
+	"light-mauve": {
+		"label": "Light Mauve",
+		"hex": "#9a72aa"
+	},
+	"madder-brown": {
+		"label": "Madder Brown",
+		"hex": "#762c19"
+	},
+	"nile-blue": {
+		"label": "Nile Blue",
+		"hex": "#bce4e5"
+	},
+	"olive": {
+		"label": "Olive",
+		"hex": "#837e31"
+	},
+	"olive-ocher": {
+		"label": "Olive Ocher",
+		"hex": "#d6b43e"
+	},
+	"olympic-blue": {
+		"label": "Olympic Blue",
+		"hex": "#5a82b3"
+	},
+	"orange": {
+		"label": "Orange",
+		"hex": "#f37420"
+	},
+	"spinel-red": {
+		"label": "Spinel Red",
+		"hex": "#f27291"
+	},
+	"taupe-brown": {
+		"label": "Taupe Brown",
+		"hex": "#7a4456"
+	},
+	"vandar-poel-s-blue": {
+		"label": "Vandar Poel's Blue",
+		"hex": "#064f6e"
+	},
+	"vinaceous-cinnamon": {
+		"label": "Vinaceous Cinnamon",
+		"hex": "#eea78c"
+	},
+	"cameo-pink": {
+		"label": "Cameo Pink",
+		"hex": "#e0b3b6"
+	},
+	"deep-slate-green": {
+		"label": "Deep Slate Green",
+		"hex": "#112f2c"
+	},
+	"diamine-green": {
+		"label": "Diamine Green",
+		"hex": "#1a7444"
+	},
+	"dusky-madder-violet": {
+		"label": "Dusky Madder Violet",
+		"hex": "#4e1d4c"
+	},
+	"glaucous-green": {
+		"label": "Glaucous Green",
+		"hex": "#b4cdc2"
+	},
+	"lincoln-green": {
+		"label": "Lincoln Green",
+		"hex": "#555832"
+	},
+	"naples-yellow": {
+		"label": "Naples Yellow",
+		"hex": "#fbe6a0"
+	},
+	"pompeian-red": {
+		"label": "Pompeian Red",
+		"hex": "#ab2439"
+	},
+	"rosolanc-purple": {
+		"label": "Rosolanc Purple",
+		"hex": "#b73f74"
+	},
+	"vandyke-brown": {
+		"label": "Vandyke Brown",
+		"hex": "#4b3317"
+	},
+	"venice-green": {
+		"label": "Venice Green",
+		"hex": "#62c6bf"
+	},
+	"vistoris-lake": {
+		"label": "Vistoris Lake",
+		"hex": "#6d4145"
+	},
+	"blue-violet": {
+		"label": "Blue Violet",
+		"hex": "#6450a1"
+	},
+	"brick-red": {
+		"label": "Brick Red",
+		"hex": "#a84222"
+	},
+	"citrine": {
+		"label": "Citrine",
+		"hex": "#b09f36"
+	},
+	"english-red": {
+		"label": "English Red",
+		"hex": "#d96629"
+	},
+	"khaki": {
+		"label": "Khaki",
+		"hex": "#bc892b"
+	},
+	"kogane": {
+		"label": "Kogane",
+		"hex": "#C5AC6B"
+	},
+	"light-green-yellow": {
+		"label": "Light Green Yellow",
+		"hex": "#c7d14f"
+	},
+	"olive-buff": {
+		"label": "Olive Buff",
+		"hex": "#c1c494"
+	},
+	"pale-raw-umber": {
+		"label": "Pale Raw Umber",
+		"hex": "#71502f"
+	},
+	"rainette-green": {
+		"label": "Rainette Green",
+		"hex": "#8fa071"
+	},
+	"red-orange": {
+		"label": "Red Orange",
+		"hex": "#dd4027"
+	},
+	"sulphine-yellow": {
+		"label": "Sulphine Yellow",
+		"hex": "#c19f2c"
+	},
+	"vandyke-red": {
+		"label": "Vandyke Red",
+		"hex": "#82241f"
+	},
+	"yellow-green": {
+		"label": "Yellow Green",
+		"hex": "#afd472"
+	},
+	"apricot-orange": {
+		"label": "Apricot Orange",
+		"hex": "#f68c50"
+	},
+	"brown": {
+		"label": "Brown",
+		"hex": "#7c4226"
+	},
+	"chromium-green": {
+		"label": "Chromium Green",
+		"hex": "#719470"
+	},
+	"coral-red": {
+		"label": "Coral Red",
+		"hex": "#f58e84"
+	},
+	"dark-citrine": {
+		"label": "Dark Citrine",
+		"hex": "#8b835b"
+	},
+	"dark-medici-blue": {
+		"label": "Dark Medici Blue",
+		"hex": "#547076"
+	},
+	"dull-viridian-green": {
+		"label": "Dull Viridian Green",
+		"hex": "#009465"
+	},
+	"isabella-color": {
+		"label": "Isabella Color",
+		"hex": "#c5a56e"
+	},
+	"jasper-red": {
+		"label": "Jasper Red",
+		"hex": "#eb5324"
+	},
+	"laelia-pink": {
+		"label": "Laelia Pink",
+		"hex": "#ca92a8"
+	},
+	"lilac": {
+		"label": "Lilac",
+		"hex": "#b984af"
+	},
+	"night-green": {
+		"label": "Night Green",
+		"hex": "#87c540"
+	},
+	"old-rose": {
+		"label": "Old Rose",
+		"hex": "#d46d7a"
+	},
+	"olive-green": {
+		"label": "Olive Green",
+		"hex": "#6b7140"
+	},
+	"olive-yellow": {
+		"label": "Olive Yellow",
+		"hex": "#a6a159"
+	},
+	"pyrite-yellow": {
+		"label": "Pyrite Yellow",
+		"hex": "#cab356"
+	},
+	"spectrum-red": {
+		"label": "Spectrum Red",
+		"hex": "#e31f26"
+	},
+	"veronia-purple": {
+		"label": "Veronia Purple",
+		"hex": "#8c4c62"
+	},
+	"blackish-olive": {
+		"label": "Blackish Olive",
+		"hex": "#42533e"
+	},
+	"buffy-citrine": {
+		"label": "Buffy Citrine",
+		"hex": "#96874d"
+	},
+	"dark-soft-violet": {
+		"label": "Dark Soft Violet",
+		"hex": "#66629c"
+	},
+	"deep-violet-plumbeous": {
+		"label": "Deep Violet / Plumbeous",
+		"hex": "#70727c"
+	},
+	"eupatorium-purple": {
+		"label": "Eupatorium Purple",
+		"hex": "#bf5892"
+	},
+	"fawn": {
+		"label": "Fawn",
+		"hex": "#d1b0a7"
+	},
+	"gin": {
+		"label": "Gin",
+		"hex": "#BCBCBE"
+	},
+	"green": {
+		"label": "Green",
+		"hex": "#489b6e"
+	},
+	"hermosa-pink": {
+		"label": "Hermosa Pink",
+		"hex": "#f9c1ce"
+	},
+	"kon": {
+		"label": "Kon",
+		"hex": "#1B2A4E"
+	},
+	"light-porcelain-green": {
+		"label": "Light Porcelain Green",
+		"hex": "#00908a"
+	},
+	"matsuba": {
+		"label": "Matsuba",
+		"hex": "#4C5D3F"
+	},
+	"oil-green": {
+		"label": "Oil Green",
+		"hex": "#819238"
+	},
+	"orange-rufous": {
+		"label": "Orange Rufous",
+		"hex": "#c16b27"
+	},
+	"scarlet": {
+		"label": "Scarlet",
+		"hex": "#cb2f43"
+	},
+	"shu": {
+		"label": "Shu",
+		"hex": "#D8453A"
+	},
+	"sudan-brown": {
+		"label": "Sudan Brown",
+		"hex": "#a36752"
+	},
+	"vinaceous-tawny": {
+		"label": "Vinaceous Tawny",
+		"hex": "#c56127"
+	},
+	"ai": {
+		"label": "Ai",
+		"hex": "#1C3D5A"
+	},
+	"andover-green": {
+		"label": "Andover Green",
+		"hex": "#6d7e77"
+	},
+	"artemesia-green": {
+		"label": "Artemesia Green",
+		"hex": "#709390"
+	},
+	"asagi": {
+		"label": "Asagi",
+		"hex": "#6B9BB0"
+	},
+	"cha": {
+		"label": "Cha",
+		"hex": "#6C5A3C"
+	},
+	"dark-greenish-glaucous": {
+		"label": "Dark Greenish Glaucous",
+		"hex": "#b7c2a9"
+	},
+	"dark-slate-purple": {
+		"label": "Dark Slate Purple",
+		"hex": "#704357"
+	},
+	"deep-grayish-olive": {
+		"label": "Deep Grayish Olive",
+		"hex": "#635a3a"
+	},
+	"dull-blue-violet": {
+		"label": "Dull Blue Violet",
+		"hex": "#80719e"
+	},
+	"indian-lake": {
+		"label": "Indian Lake",
+		"hex": "#c53c69"
+	},
+	"kogecha": {
+		"label": "Kogecha",
+		"hex": "#4B2E20"
+	},
+	"light-brownish-olive": {
+		"label": "Light Brownish Olive",
+		"hex": "#806e4b"
+	},
+	"light-grayish-olive": {
+		"label": "Light Grayish Olive",
+		"hex": "#848061"
+	},
+	"mineral-gray": {
+		"label": "Mineral Gray",
+		"hex": "#a2b0ad"
+	},
+	"ochre-red": {
+		"label": "Ochre Red",
+		"hex": "#ab544d"
+	},
+	"orange-citrine": {
+		"label": "Orange Citrine",
+		"hex": "#986f2d"
+	},
+	"pansy-purple": {
+		"label": "Pansy Purple",
+		"hex": "#7d133a"
+	},
+	"peacock-blue": {
+		"label": "Peacock Blue",
+		"hex": "#00939b"
+	},
+	"pistachio-green": {
+		"label": "Pistachio Green",
+		"hex": "#648f7b"
+	},
+	"pomegranite-purple": {
+		"label": "Pomegranite Purple",
+		"hex": "#b71f57"
+	},
+	"red": {
+		"label": "Red",
+		"hex": "#a72144"
+	},
+	"sepia": {
+		"label": "Sepia",
+		"hex": "#644b1e"
+	},
+	"akane": {
+		"label": "Akane",
+		"hex": "#B23B3B"
+	},
+	"ao": {
+		"label": "Ao",
+		"hex": "#3A7D7B"
+	},
+	"daidai": {
+		"label": "Daidai",
+		"hex": "#F28C28"
+	},
+	"edo-murasaki": {
+		"label": "Edo-murasaki",
+		"hex": "#5E4A8C"
+	},
+	"enji": {
+		"label": "Enji",
+		"hex": "#9E2B3D"
+	},
+	"entan": {
+		"label": "Entan",
+		"hex": "#C8411D"
+	},
+	"eugenia-red-a": {
+		"label": "Eugenia Red | A",
+		"hex": "#e2625e"
+	},
+	"fresh-color": {
+		"label": "Fresh Color",
+		"hex": "#f6917e"
+	},
+	"fuji": {
+		"label": "Fuji",
+		"hex": "#B5A6C9"
+	},
+	"gunj": {
+		"label": "Gunjō",
+		"hex": "#264A6B"
+	},
+	"hanada": {
+		"label": "Hanada",
+		"hex": "#3C6E8F"
+	},
+	"hydrangea-red": {
+		"label": "Hydrangea Red",
+		"hex": "#a94151"
+	},
+	"kaki": {
+		"label": "Kaki",
+		"hex": "#D66B37"
+	},
+	"kakishibu": {
+		"label": "Kakishibu",
+		"hex": "#8A6A47"
+	},
+	"kariyasu": {
+		"label": "Kariyasu",
+		"hex": "#DCCB7A"
+	},
+	"kiky": {
+		"label": "Kikyō",
+		"hex": "#5B4B8A"
+	},
+	"kin": {
+		"label": "Kin",
+		"hex": "#D4AF37"
+	},
+	"kinuta": {
+		"label": "Kinuta",
+		"hex": "#E8D8B7"
+	},
+	"krongbergs-green": {
+		"label": "Krongbergs Green",
+		"hex": "#84875e"
+	},
+	"kurenai": {
+		"label": "Kurenai",
+		"hex": "#9A2A2A"
+	},
+	"kuri": {
+		"label": "Kuri",
+		"hex": "#6B3E26"
+	},
+	"kuro": {
+		"label": "Kuro",
+		"hex": "#141414"
+	},
+	"light-pinkish-cinnamon": {
+		"label": "Light Pinkish Cinnamon",
+		"hex": "#fcc79b"
+	},
+	"maple": {
+		"label": "Maple",
+		"hex": "#c59f6b"
+	},
+	"mars-brown-tobacco": {
+		"label": "Mars Brown Tobacco",
+		"hex": "#653514"
+	},
+	"matcha": {
+		"label": "Matcha",
+		"hex": "#A7B86B"
+	},
+	"mizu-iro": {
+		"label": "Mizu-iro",
+		"hex": "#B4D6E5"
+	},
+	"moegi": {
+		"label": "Moegi",
+		"hex": "#A7C957"
+	},
+	"murasaki": {
+		"label": "Murasaki",
+		"hex": "#7A4E8F"
+	},
+	"nadeshiko": {
+		"label": "Nadeshiko",
+		"hex": "#EBA6B4"
+	},
+	"neri-iro": {
+		"label": "Neri-iro",
+		"hex": "#F3EBDA"
+	},
+	"nezumi": {
+		"label": "Nezumi",
+		"hex": "#8A8A8A"
+	},
+	"ominaeshi": {
+		"label": "Ominaeshi",
+		"hex": "#DCCB6E"
+	},
+	"purple-drab": {
+		"label": "Purple Drab",
+		"hex": "#84565b"
+	},
+	"riky-nezumi": {
+		"label": "Rikyū-nezumi",
+		"hex": "#878A74"
+	},
+	"ruri": {
+		"label": "Ruri",
+		"hex": "#1E4B8A"
+	},
+	"sakura": {
+		"label": "Sakura",
+		"hex": "#F9D5E0"
+	},
+	"seiji": {
+		"label": "Seiji",
+		"hex": "#8DB6A5"
+	},
+	"shiro": {
+		"label": "Shiro",
+		"hex": "#FFFFFF"
+	},
+	"sora": {
+		"label": "Sora",
+		"hex": "#7AB2D3"
+	},
+	"suna-iro": {
+		"label": "Suna-iro",
+		"hex": "#EAE1CC"
+	},
+	"tobi": {
+		"label": "Tobi",
+		"hex": "#8A5A3B"
+	},
+	"tokiwa": {
+		"label": "Tokiwa",
+		"hex": "#344E3D"
+	},
+	"ukon": {
+		"label": "Ukon",
+		"hex": "#E0B740"
+	},
+	"usubeni": {
+		"label": "Usubeni",
+		"hex": "#E8A4A4"
+	},
+	"violet-carmine": {
+		"label": "Violet Carmine",
+		"hex": "#713b4c"
+	},
+	"violet-red": {
+		"label": "Violet Red",
+		"hex": "#642d5e"
+	},
+	"wakatake": {
+		"label": "Wakatake",
+		"hex": "#A3C293"
+	},
+	"white": {
+		"label": "White",
+		"hex": "#ffffff"
+	},
+	"yamabuki": {
+		"label": "Yamabuki",
+		"hex": "#F5B71C"
+	}
+}
