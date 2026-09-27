@@ -803,13 +803,13 @@ class configureight extends Plugin {
 
 		// User toolbar is active.
 		if (
-			'enabled' == $this->getValue( 'user_toolbar' ) ||
-			'backend' == $this->getValue( 'user_toolbar' )
+			'enabled' == $this->user_toolbar() ||
+			'backend' == $this->user_toolbar()
 		) {
 			$assets .= '<style>body { padding-top: var( --cfe-toolbar--height ); } nav.navbar { display: none !important; }</style>';
 
 			// Is admin menu hidden.
-			if ( ! $this->getValue( 'admin_menu' ) ) {
+			if ( ! $this->admin_menu() ) {
 				$assets .= '<style>.sidebar.d-lg-block { display: none !important; }</style>';
 			}
 
@@ -865,8 +865,8 @@ class configureight extends Plugin {
 
 		// User toolbar.
 		if (
-			'enabled' == $this->getValue( 'user_toolbar' ) ||
-			'backend' == $this->getValue( 'user_toolbar' )
+			'enabled' == $this->user_toolbar() ||
+			'backend' == $this->user_toolbar()
 		) {
 			include( $this->phpPath() . '/views/user-toolbar.php' );
 		}
@@ -1301,9 +1301,9 @@ class configureight extends Plugin {
 		$args['homepage']         = site()->homepage();
 		$args['uriBlog']          = site()->getField( 'uriBlog' );
 		$args['pageNotFound']     = site()->pageNotFound();
-		$args['thumbnailWidth']   = $this->getValue( 'thumb_width' );
-		$args['thumbnailHeight']  = $this->getValue( 'thumb_height' );
-		$args['thumbnailQuality'] = $this->getValue( 'img_upload_quality' );
+		$args['thumbnailWidth']   = $this->thumb_width();
+		$args['thumbnailHeight']  = $this->thumb_height();
+		$args['thumbnailQuality'] = $this->img_upload_quality();
 
 		// Return modified array.
 		return editSettings( $args );
@@ -1386,8 +1386,8 @@ class configureight extends Plugin {
 		// User toolbar.
 		if ( login()->isLogged() ) {
 			if (
-				'enabled'  == $this->getValue( 'user_toolbar' ) ||
-				'frontend' == $this->getValue( 'user_toolbar' )
+				'enabled'  == $this->user_toolbar() ||
+				'frontend' == $this->user_toolbar()
 			) {
 				include( $this->phpPath() . '/views/user-toolbar.php' );
 			}
