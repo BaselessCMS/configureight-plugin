@@ -39,3 +39,26 @@ $options_url = plugin_options_url( plugin()->className() );
 <h3 class="form-heading"><?php lang()->p( 'Admin Footer' ); ?></h3>
 
 <p><?php lang()->p( 'When using the Configure 8 admin theme, you may notice a small line at the bottom of each admin page. The text and markup of this may be changed or removed by editing the <code>"admin_footer"</code> value in the frontend theme\'s <code>metadata.json</code> file or leaving it empty. The line can also be safely removed altogether without PHP error.' ); ?></p>
+
+<h3 class="form-heading"><?php lang()->p( 'Custom Dashboard' ); ?></h3>
+
+<p><?php lang()->p( 'The Configure 8 suite has a custom admin dashboard built for use with plugins in the suite. The custom dashboard is simply one PHP file to replace the standard Bludit dashboard file.' ); ?></p>
+
+<p><?php lang()->p( 'The custom dashboard retains features of the standard Bludit dashboard and adds content from plugins in the Configure 8 suite. Content is grouped into tabbed sections. This includes a summary of site content and the activity log.' ); ?></p>
+
+<p><?php lang()->p( 'You can download the custom dashboard with the Configure 8 suite or individually at <a href="https://github.com/BaselessCMS/configureight-dashboard" target="_blank" rel="noopener noreferrer">https://github.com/BaselessCMS/configureight-dashboard</a>' ); ?></p>
+
+<h4><?php lang()->p( 'Dashboard Installation' ); ?></h4>
+
+<ul>
+	<li><?php lang()->p( 'Install and activate the Configure 8 theme & plugin.' ); ?></li>
+	<li><?php lang()->p( "Edit the Bludit init file (<code>bl-kernel\boot\init.php</code>) to add <code class='select'>define( 'CFE_DASHBOARD', true );</code>" ); ?></li>
+	<li><?php lang()->p( 'Replace the standard dashboard file (<code>bl-kernel\admin\views\dashboard.php</code>) with the dashboard file in this repository.' ); ?></li>
+	<li><?php lang()->p( 'Go to the Configure 8 options page in your site\'s admin.' ); ?></li>
+	<li><?php lang()->p( 'Find the "Custom Dashboard" option under the "General" tab.' ); ?></li>
+	<li><?php lang()->p( 'Select "Enabled" then save the form.' ); ?></li>
+</ul>
+
+<h4><?php lang()->p( 'Dashboard Backup' ); ?></h4>
+
+<p><?php lang()->p( "Although the Configure 8 plugin uses the contents of the standard Bludit dashboard as the default option, save a copy of the Bludit dashboard file for if or when you disable the Configure 8 theme & plugin. It won't harm anything to leave <code>define( 'CFE_DASHBOARD', true );</code> in the init file." ); ?></p>
