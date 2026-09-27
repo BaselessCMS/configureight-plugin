@@ -118,20 +118,20 @@ $static = buildStaticPages();
 		<div class="col-sm-10">
 			<select class="form-select" id="main_nav_loop" name="main_nav_loop">
 
-				<option value="before" <?php echo ( plugin()->getValue( 'main_nav_loop' ) === 'before' ? 'selected' : '' ); ?>><?php lang()->p( 'Before Pages' ); ?></option>
+				<option value="before" <?php echo ( plugin()->main_nav_loop() === 'before' ? 'selected' : '' ); ?>><?php lang()->p( 'Before Pages' ); ?></option>
 
-				<option value="after" <?php echo ( plugin()->getValue( 'main_nav_loop' ) === 'after' ? 'selected' : '' ); ?>><?php lang()->p( 'After Pages' ); ?></option>
+				<option value="after" <?php echo ( plugin()->main_nav_loop() === 'after' ? 'selected' : '' ); ?>><?php lang()->p( 'After Pages' ); ?></option>
 
-				<option value="none" <?php echo ( plugin()->getValue( 'main_nav_loop' ) === 'none' ? 'selected' : '' ); ?>><?php lang()->p( 'No Link' ); ?></option>
+				<option value="none" <?php echo ( plugin()->main_nav_loop() === 'none' ? 'selected' : '' ); ?>><?php lang()->p( 'No Link' ); ?></option>
 			</select>
 			<small class="form-text"><?php lang()->p( 'Display a link to the posts loop, blog or news.' ); ?></small>
 		</div>
 	</div>
 
-	<div id="main_nav_loop_label_wrap" class="form-field form-group row" style="display: <?php echo ( plugin()->getValue( 'main_nav_loop' ) != 'none' ? 'flex' : 'none' ); ?>;">
+	<div id="main_nav_loop_label_wrap" class="form-field form-group row" style="display: <?php echo ( plugin()->main_nav_loop() != 'none' ? 'flex' : 'none' ); ?>;">
 		<label class="form-label col-sm-2 col-form-label" for="main_nav_loop_label"><?php lang()->p( 'Loop Link Label' ); ?></label>
 		<div class="col-sm-10">
-			<input type="text" id="main_nav_loop_label" name="main_nav_loop_label" value="<?php echo plugin()->getValue( 'main_nav_loop_label' ); ?>" placeholder="<?php echo plugin()->dbFields['main_nav_loop_label']; ?>" />
+			<input type="text" id="main_nav_loop_label" name="main_nav_loop_label" value="<?php echo plugin()->main_nav_loop_label(); ?>" placeholder="<?php echo plugin()->dbFields['main_nav_loop_label']; ?>" />
 			<small class="form-text"><?php lang()->p( 'The label for the posts loop link in the main navigation.' ); ?></small>
 		</div>
 	</div>
@@ -141,9 +141,9 @@ $static = buildStaticPages();
 		<div class="col-sm-10">
 			<select class="form-select" id="main_nav_labels" name="main_nav_labels">
 
-				<option value="slug" <?php echo ( plugin()->getValue( 'main_nav_labels' ) === 'slug' ? 'selected' : '' ); ?>><?php lang()->p( 'Friendly URL' ); ?></option>
+				<option value="slug" <?php echo ( plugin()->main_nav_labels() === 'slug' ? 'selected' : '' ); ?>><?php lang()->p( 'Friendly URL' ); ?></option>
 
-				<option value="title" <?php echo ( plugin()->getValue( 'main_nav_labels' ) === 'title' ? 'selected' : '' ); ?>><?php lang()->p( 'Page Title' ); ?></option>
+				<option value="title" <?php echo ( plugin()->main_nav_labels() === 'title' ? 'selected' : '' ); ?>><?php lang()->p( 'Page Title' ); ?></option>
 			</select>
 			<small class="form-text"><?php lang()->p( 'The text to be displayed in the page links. May be overridden by custom field in the page options.<br />The Friendly URL, also referred to as the page slug, will display capitalized with dashes and underscores removed.' ); ?></small>
 		</div>
@@ -154,9 +154,9 @@ $static = buildStaticPages();
 		<div class="col-sm-10">
 			<select class="form-select" id="main_nav_children" name="main_nav_children">
 
-				<option value="secondary" <?php echo ( plugin()->getValue( 'main_nav_children' ) === 'secondary' ? 'selected' : '' ); ?>><?php lang()->p( 'Sub Menu of Parents' ); ?></option>
+				<option value="secondary" <?php echo ( plugin()->main_nav_children() === 'secondary' ? 'selected' : '' ); ?>><?php lang()->p( 'Sub Menu of Parents' ); ?></option>
 
-				<option value="primary" <?php echo ( plugin()->getValue( 'main_nav_children' ) === 'primary' ? 'selected' : '' ); ?>><?php lang()->p( 'Top Level with Parents' ); ?></option>
+				<option value="primary" <?php echo ( plugin()->main_nav_children() === 'primary' ? 'selected' : '' ); ?>><?php lang()->p( 'Top Level with Parents' ); ?></option>
 			</select>
 			<small class="form-text"><?php lang()->p( 'How to treat child pages in the menu.' ); ?></small>
 		</div>
@@ -171,7 +171,7 @@ $static = buildStaticPages();
 				id="main_nav_pos_right"
 				value="right"
 				<?php if ( 'vert' == plugin()->header_layout() ) { echo 'disabled'; } ?>
-				<?php echo ( plugin()->getValue( 'main_nav_pos' ) === 'right' ? 'selected' : '' ); ?>>
+				<?php echo ( plugin()->main_nav_pos() === 'right' ? 'selected' : '' ); ?>>
 					<?php lang()->p( 'Right of Site Branding' ); ?>
 				</option>
 
@@ -179,13 +179,13 @@ $static = buildStaticPages();
 				id="main_nav_pos_left"
 				value="left"
 				<?php if ( 'vert' == plugin()->header_layout() ) { echo 'disabled'; } ?>
-				<?php echo ( plugin()->getValue( 'main_nav_pos' ) === 'left' ? 'selected' : '' ); ?>>
+				<?php echo ( plugin()->main_nav_pos() === 'left' ? 'selected' : '' ); ?>>
 					<?php lang()->p( 'Left of Site Branding' ); ?>
 				</option>
 
-				<option value="above" <?php echo ( plugin()->getValue( 'main_nav_pos' ) === 'above' ? 'selected' : '' ); ?>><?php lang()->p( 'Above Site Branding' ); ?></option>
+				<option value="above" <?php echo ( plugin()->main_nav_pos() === 'above' ? 'selected' : '' ); ?>><?php lang()->p( 'Above Site Branding' ); ?></option>
 
-				<option value="below" <?php echo ( plugin()->getValue( 'main_nav_pos' ) === 'below' ? 'selected' : '' ); ?>><?php lang()->p( 'Below Site Branding' ); ?></option>
+				<option value="below" <?php echo ( plugin()->main_nav_pos() === 'below' ? 'selected' : '' ); ?>><?php lang()->p( 'Below Site Branding' ); ?></option>
 			</select>
 
 			<small id="header_layout_desc_vert" class="form-text" style="display: <?php echo ( plugin()->header_layout() == 'vert' ? 'block' : 'none' ); ?>;"><?php lang()->p( 'Left and right options disabled by the "vertical" header layout setting.' ); ?></small>
@@ -199,13 +199,13 @@ $static = buildStaticPages();
 		<div class="col-sm-10">
 			<select class="form-select" id="main_nav_icon" name="main_nav_icon">
 
-				<option value="bars" <?php echo ( plugin()->getValue( 'main_nav_icon' ) === 'bars' ? 'selected' : '' ); ?>><?php lang()->p( 'Horizontal Bars' ); ?></option>
+				<option value="bars" <?php echo ( plugin()->main_nav_icon() === 'bars' ? 'selected' : '' ); ?>><?php lang()->p( 'Horizontal Bars' ); ?></option>
 
-				<option value="dots-h" <?php echo ( plugin()->getValue( 'main_nav_icon' ) === 'dots-h' ? 'selected' : '' ); ?>><?php lang()->p( 'Horizontal Dots' ); ?></option>
+				<option value="dots-h" <?php echo ( plugin()->main_nav_icon() === 'dots-h' ? 'selected' : '' ); ?>><?php lang()->p( 'Horizontal Dots' ); ?></option>
 
-				<option value="dots-v" <?php echo ( plugin()->getValue( 'main_nav_icon' ) === 'dots-v' ? 'selected' : '' ); ?>><?php lang()->p( 'Vertical Dots' ); ?></option>
+				<option value="dots-v" <?php echo ( plugin()->main_nav_icon() === 'dots-v' ? 'selected' : '' ); ?>><?php lang()->p( 'Vertical Dots' ); ?></option>
 
-				<option value="none" <?php echo ( plugin()->getValue( 'main_nav_icon' ) === 'none' ? 'selected' : '' ); ?>><?php lang()->p( 'None (Text)' ); ?></option>
+				<option value="none" <?php echo ( plugin()->main_nav_icon() === 'none' ? 'selected' : '' ); ?>><?php lang()->p( 'None (Text)' ); ?></option>
 			</select>
 			<small class="form-text"><?php lang()->p( 'The icon to toggle the mobile menu.' ); ?></small>
 		</div>
@@ -219,8 +219,8 @@ $static = buildStaticPages();
 			// If the Search plugin is installed and activated.
 			if ( getPlugin( 'Search_Forms' ) ) : ?>
 			<select class="form-select" id="header_search" name="header_search">
-				<option value="true" <?php echo ( plugin()->getValue( 'header_search' ) === true ? 'selected' : '' ); ?>><?php lang()->p( 'Enabled' ); ?></option>
-				<option value="false" <?php echo ( plugin()->getValue( 'header_search' ) === false ? 'selected' : '' ); ?>><?php lang()->p( 'Disabled' ); ?></option>
+				<option value="true" <?php echo ( plugin()->header_search() === true ? 'selected' : '' ); ?>><?php lang()->p( 'Enabled' ); ?></option>
+				<option value="false" <?php echo ( plugin()->header_search() === false ? 'selected' : '' ); ?>><?php lang()->p( 'Disabled' ); ?></option>
 			</select>
 			<small class="form-text"><?php lang()->p( 'Display a search icon in the navigation to toggle the header search bar. Also enables the search form in mobile navigation.' ); ?></small>
 			<?php
@@ -251,8 +251,8 @@ $static = buildStaticPages();
 		<label class="form-label col-sm-2 col-form-label" for="header_social"><?php lang()->p( 'Social Links' ); ?></label>
 		<div class="col-sm-10">
 			<select class="form-select" id="header_social" name="header_social">
-				<option value="true" <?php echo ( plugin()->getValue( 'header_social' ) === true ? 'selected' : '' ); ?>><?php lang()->p( 'Show' ); ?></option>
-				<option value="false" <?php echo ( plugin()->getValue( 'header_social' ) === false ? 'selected' : '' ); ?>><?php lang()->p( 'Hide' ); ?></option>
+				<option value="true" <?php echo ( plugin()->header_social() === true ? 'selected' : '' ); ?>><?php lang()->p( 'Show' ); ?></option>
+				<option value="false" <?php echo ( plugin()->header_social() === false ? 'selected' : '' ); ?>><?php lang()->p( 'Hide' ); ?></option>
 			</select>
 			<small class="form-text"><?php lang()->p( 'Display links to social media sites. See Settings > Social Networks in the admin menu to enter links.' ); ?></small>
 		</div>

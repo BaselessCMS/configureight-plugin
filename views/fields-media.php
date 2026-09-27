@@ -136,11 +136,11 @@ use function CFE_Colors\{
 		<div class="col-sm-10">
 			<select class="form-select" id="cover_in_post" name="cover_in_post">
 
-				<option value="header" <?php echo ( plugin()->getValue( 'cover_in_post' ) === 'header' ? 'selected' : '' ); ?>><?php lang()->p( 'Below Header' ); ?></option>
+				<option value="header" <?php echo ( plugin()->cover_in_post() === 'header' ? 'selected' : '' ); ?>><?php lang()->p( 'Below Header' ); ?></option>
 
-				<option value="full" <?php echo ( plugin()->getValue( 'cover_in_post' ) === 'full' ? 'selected' : '' ); ?>><?php lang()->p( 'Full Screen' ); ?></option>
+				<option value="full" <?php echo ( plugin()->cover_in_post() === 'full' ? 'selected' : '' ); ?>><?php lang()->p( 'Full Screen' ); ?></option>
 
-				<option value="none" <?php echo ( plugin()->getValue( 'cover_in_post' ) === 'none' ? 'selected' : '' ); ?>><?php lang()->p( 'No Cover' ); ?></option>
+				<option value="none" <?php echo ( plugin()->cover_in_post() === 'none' ? 'selected' : '' ); ?>><?php lang()->p( 'No Cover' ); ?></option>
 			</select>
 			<small class="form-text"><?php lang()->p( 'The default cover image template for posts. Cover templates can override this setting on a per-post basis.' ); ?></small>
 		</div>
@@ -151,11 +151,11 @@ use function CFE_Colors\{
 		<div class="col-sm-10">
 			<select class="form-select" id="cover_in_page" name="cover_in_page">
 
-				<option value="header" <?php echo ( plugin()->getValue( 'cover_in_page' ) === 'header' ? 'selected' : '' ); ?>><?php lang()->p( 'Below Header' ); ?></option>
+				<option value="header" <?php echo ( plugin()->cover_in_page() === 'header' ? 'selected' : '' ); ?>><?php lang()->p( 'Below Header' ); ?></option>
 
-				<option value="full" <?php echo ( plugin()->getValue( 'cover_in_page' ) === 'full' ? 'selected' : '' ); ?>><?php lang()->p( 'Full Screen' ); ?></option>
+				<option value="full" <?php echo ( plugin()->cover_in_page() === 'full' ? 'selected' : '' ); ?>><?php lang()->p( 'Full Screen' ); ?></option>
 
-				<option value="none" <?php echo ( plugin()->getValue( 'cover_in_page' ) === 'none' ? 'selected' : '' ); ?>><?php lang()->p( 'No Cover' ); ?></option>
+				<option value="none" <?php echo ( plugin()->cover_in_page() === 'none' ? 'selected' : '' ); ?>><?php lang()->p( 'No Cover' ); ?></option>
 			</select>
 			<small class="form-text"><?php lang()->p( 'The default cover image template for pages. Cover templates can override this setting on a per-page basis.' ); ?></small>
 		</div>
@@ -166,13 +166,13 @@ use function CFE_Colors\{
 		<label class="form-label col-sm-2 col-form-label" for="cover_in_profile"><?php lang()->p( 'Cover in Profiles' ); ?></label>
 		<div class="col-sm-10">
 			<select class="form-select" id="cover_in_profile" name="cover_in_profile">
-				<option value="profile" <?php echo ( plugin()->getValue( 'cover_in_profile' ) === 'profile' ? 'selected' : '' ); ?>><?php lang()->p( 'Profile Only' ); ?></option>
+				<option value="profile" <?php echo ( plugin()->cover_in_profile() === 'profile' ? 'selected' : '' ); ?>><?php lang()->p( 'Profile Only' ); ?></option>
 
-				<option value="header" <?php echo ( plugin()->getValue( 'cover_in_profile' ) === 'header' ? 'selected' : '' ); ?>><?php lang()->p( 'Header Only' ); ?></option>
+				<option value="header" <?php echo ( plugin()->cover_in_profile() === 'header' ? 'selected' : '' ); ?>><?php lang()->p( 'Header Only' ); ?></option>
 
-				<option value="both" <?php echo ( plugin()->getValue( 'cover_in_profile' ) === 'both' ? 'selected' : '' ); ?>><?php lang()->p( 'Header & Profile' ); ?></option>
+				<option value="both" <?php echo ( plugin()->cover_in_profile() === 'both' ? 'selected' : '' ); ?>><?php lang()->p( 'Header & Profile' ); ?></option>
 
-				<option value="none" <?php echo ( plugin()->getValue( 'cover_in_profile' ) === 'none' ? 'selected' : '' ); ?>><?php lang()->p( 'No Cover' ); ?></option>
+				<option value="none" <?php echo ( plugin()->cover_in_profile() === 'none' ? 'selected' : '' ); ?>><?php lang()->p( 'No Cover' ); ?></option>
 			</select>
 			<small class="form-text"><?php lang()->p( 'User cover image display on profile pages.' ); ?></small>
 		</div>
@@ -183,20 +183,20 @@ use function CFE_Colors\{
 		<label class="form-label col-sm-2 col-form-label" for="cover_style"><?php lang()->p( 'Cover Color Style' ); ?></label>
 		<div class="col-sm-10">
 			<select class="form-select" id="cover_style" name="cover_style">
-				<option value="overlay" <?php echo ( plugin()->getValue( 'cover_style' ) === 'overlay' ? 'selected' : '' ); ?>><?php lang()->p( 'Color Overlay' ); ?></option>
-				<option value="blend" <?php echo ( plugin()->getValue( 'cover_style' ) === 'blend' ? 'selected' : '' ); ?>><?php lang()->p( 'Color Blend' ); ?></option>
+				<option value="overlay" <?php echo ( plugin()->cover_style() === 'overlay' ? 'selected' : '' ); ?>><?php lang()->p( 'Color Overlay' ); ?></option>
+				<option value="blend" <?php echo ( plugin()->cover_style() === 'blend' ? 'selected' : '' ); ?>><?php lang()->p( 'Color Blend' ); ?></option>
 			</select>
 			<small class="form-text"><?php lang()->p( 'Cover images can have a simple overlay or blend with a color.' ); ?></small>
 		</div>
 	</div>
 
-	<div id="cover_overlay_wrap" style="display: <?php echo ( plugin()->getValue( 'cover_style' ) === 'overlay' ? 'block' : 'none' ); ?>;">
+	<div id="cover_overlay_wrap" style="display: <?php echo ( plugin()->cover_style() === 'overlay' ? 'block' : 'none' ); ?>;">
 		<div class="form-field form-group row">
 			<label class="form-label col-sm-2 col-form-label" for="cover_desaturate"><?php lang()->p( 'Desaturate' ); ?></label>
 			<div class="col-sm-10 row">
 				<div class="form-range-controls">
-					<span class="form-range-value px-range-value"><span id="cover_desaturate_value"><?php echo ( plugin()->getValue( 'cover_desaturate' ) ? plugin()->getValue( 'cover_desaturate' ) : plugin()->dbFields['cover_desaturate'] ); ?></span><span id="cover_desaturate_units">%</span></span>
-					<input type="range" class="form-control-range custom-range" onInput="$('#cover_desaturate_value').html($(this).val())" id="cover_desaturate" name="cover_desaturate" value="<?php echo plugin()->getValue( 'cover_desaturate' ); ?>" min="0" max="100" step="1" />
+					<span class="form-range-value px-range-value"><span id="cover_desaturate_value"><?php echo ( plugin()->cover_desaturate() ? plugin()->cover_desaturate() : plugin()->dbFields['cover_desaturate'] ); ?></span><span id="cover_desaturate_units">%</span></span>
+					<input type="range" class="form-control-range custom-range" onInput="$('#cover_desaturate_value').html($(this).val())" id="cover_desaturate" name="cover_desaturate" value="<?php echo plugin()->cover_desaturate(); ?>" min="0" max="100" step="1" />
 					<span id="cover_desaturate_reset" class="btn btn-secondary btn-md form-range-button hide-if-no-js" onClick="$('#cover_desaturate_value').text('<?php echo plugin()->dbFields['cover_desaturate']; ?>');$('#cover_desaturate').val('<?php echo plugin()->dbFields['cover_desaturate']; ?>');"><?php lang()->p( 'Default' ); ?></span>
 				</div>
 				<small class="form-text"><?php lang()->p( 'Percentage to desaturate images. Set 100% for full grayscale (black & white).' ); ?></small>
@@ -244,7 +244,7 @@ use function CFE_Colors\{
 		</div>
 	</div>
 
-	<div id="cover_blend_wrap" style="display: <?php echo ( plugin()->getValue( 'cover_style' ) === 'blend' ? 'block' : 'none' ); ?>;">
+	<div id="cover_blend_wrap" style="display: <?php echo ( plugin()->cover_style() === 'blend' ? 'block' : 'none' ); ?>;">
 		<div class="form-field form-group row">
 			<label class="form-label col-sm-2 col-form-label" for="cover_blend"><?php lang()->p( 'Blend Color' ); ?></label>
 			<div class="col-sm-10">
@@ -311,8 +311,8 @@ use function CFE_Colors\{
 		<label class="form-label col-sm-2 col-form-label" for="cover_text_shadow"><?php lang()->p( 'Text Shadow' ); ?></label>
 		<div class="col-sm-10">
 			<select class="form-select" id="cover_text_shadow" name="cover_text_shadow">
-				<option value="true" <?php echo ( plugin()->getValue( 'cover_text_shadow' ) === true ? 'selected' : '' ); ?>><?php lang()->p( 'Show' ); ?></option>
-				<option value="false" <?php echo ( plugin()->getValue( 'cover_text_shadow' ) === false ? 'selected' : '' ); ?>><?php lang()->p( 'Hide' ); ?></option>
+				<option value="true" <?php echo ( plugin()->cover_text_shadow() === true ? 'selected' : '' ); ?>><?php lang()->p( 'Show' ); ?></option>
+				<option value="false" <?php echo ( plugin()->cover_text_shadow() === false ? 'selected' : '' ); ?>><?php lang()->p( 'Hide' ); ?></option>
 			</select>
 			<small class="form-text"><?php lang()->p( 'Shadow behind overlay text can provide needed contrast.' ); ?></small>
 		</div>
@@ -323,19 +323,19 @@ use function CFE_Colors\{
 		<div class="col-sm-10">
 			<select class="form-select" id="cover_icon" name="cover_icon">
 
-				<option value="angle-down" <?php echo ( plugin()->getValue( 'cover_icon' ) === 'angle-down' ? 'selected' : '' ); ?>><?php lang()->p( 'Angle' ); ?></option>
+				<option value="angle-down" <?php echo ( plugin()->cover_icon() === 'angle-down' ? 'selected' : '' ); ?>><?php lang()->p( 'Angle' ); ?></option>
 
-				<option value="angle-down-light" <?php echo ( plugin()->getValue( 'cover_icon' ) === 'angle-down-light' ? 'selected' : '' ); ?>><?php lang()->p( 'Angle Light' ); ?></option>
+				<option value="angle-down-light" <?php echo ( plugin()->cover_icon() === 'angle-down-light' ? 'selected' : '' ); ?>><?php lang()->p( 'Angle Light' ); ?></option>
 
-				<option value="angles-down" <?php echo ( plugin()->getValue( 'cover_icon' ) === 'angles-down' ? 'selected' : '' ); ?>><?php lang()->p( 'Double Angle' ); ?></option>
+				<option value="angles-down" <?php echo ( plugin()->cover_icon() === 'angles-down' ? 'selected' : '' ); ?>><?php lang()->p( 'Double Angle' ); ?></option>
 
-				<option value="angles-down-light" <?php echo ( plugin()->getValue( 'cover_icon' ) === 'angles-down-light' ? 'selected' : '' ); ?>><?php lang()->p( 'Double Angle Light' ); ?></option>
+				<option value="angles-down-light" <?php echo ( plugin()->cover_icon() === 'angles-down-light' ? 'selected' : '' ); ?>><?php lang()->p( 'Double Angle Light' ); ?></option>
 
-				<option value="arrow-down" <?php echo ( plugin()->getValue( 'cover_icon' ) === 'arrow-down' ? 'selected' : '' ); ?>><?php lang()->p( 'Arrow' ); ?></option>
+				<option value="arrow-down" <?php echo ( plugin()->cover_icon() === 'arrow-down' ? 'selected' : '' ); ?>><?php lang()->p( 'Arrow' ); ?></option>
 
-				<option value="arrow-down-light" <?php echo ( plugin()->getValue( 'cover_icon' ) === 'arrow-down-light' ? 'selected' : '' ); ?>><?php lang()->p( 'Arrow Light' ); ?></option>
+				<option value="arrow-down-light" <?php echo ( plugin()->cover_icon() === 'arrow-down-light' ? 'selected' : '' ); ?>><?php lang()->p( 'Arrow Light' ); ?></option>
 
-				<option value="none" <?php echo ( plugin()->getValue( 'cover_icon' ) === 'none' ? 'selected' : '' ); ?>><?php lang()->p( 'None' ); ?></option>
+				<option value="none" <?php echo ( plugin()->cover_icon() === 'none' ? 'selected' : '' ); ?>><?php lang()->p( 'None' ); ?></option>
 			</select>
 			<small class="form-text">
 				<?php lang()->p( 'Choose the style of icon to scroll to content. For full-screen covers only.' ); ?>

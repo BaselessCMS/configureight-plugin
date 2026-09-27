@@ -56,8 +56,8 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 		<label class="form-label col-sm-2 col-form-label" for="content_width"><?php lang()->p( 'Content Width' ); ?></label>
 		<div class="col-sm-10 row">
 			<div class="form-range-controls">
-				<span class="form-range-value px-range-value"><span id="content_width_value"><?php echo ( plugin()->getValue( 'content_width' ) ? plugin()->getValue( 'content_width' ) : plugin()->dbFields['content_width'] ); ?></span><span id="content_width_units">px</span></span>
-				<input type="range" class="form-control-range custom-range" onInput="$('#content_width_value').html($(this).val())" id="content_width" name="content_width" value="<?php echo plugin()->getValue( 'content_width' ); ?>" min="300" max="2050" step="10" />
+				<span class="form-range-value px-range-value"><span id="content_width_value"><?php echo ( plugin()->content_width() ? plugin()->content_width() : plugin()->dbFields['content_width'] ); ?></span><span id="content_width_units">px</span></span>
+				<input type="range" class="form-control-range custom-range" onInput="$('#content_width_value').html($(this).val())" id="content_width" name="content_width" value="<?php echo plugin()->content_width(); ?>" min="300" max="2050" step="10" />
 				<span class="btn btn-secondary btn-md form-range-button hide-if-no-js" onClick="$('#content_width_value').text('<?php echo plugin()->dbFields['content_width']; ?>');$('#content_width').val('<?php echo plugin()->dbFields['content_width']; ?>');"><?php lang()->p( 'Default' ); ?></span>
 			</div>
 			<small class="form-text"><?php lang()->p( 'Sets a maximum width on the wrapper around the page content and the sidebar. Viewport breakpoints apply. ' ); ?></small>
@@ -68,8 +68,8 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 		<label class="form-label col-sm-2 col-form-label" for="horz_spacing"><?php lang()->p( 'Horizontal Space' ); ?></label>
 		<div class="col-sm-10 row">
 			<div class="form-range-controls">
-				<span class="form-range-value rem-range-value"><span id="horz_spacing_value"><?php echo ( plugin()->getValue( 'horz_spacing' ) ? plugin()->getValue( 'horz_spacing' ) : plugin()->dbFields['horz_spacing'] ); ?></span><span id="horz_spacing_units">rem</span></span>
-				<input type="range" class="form-control-range custom-range" onInput="$('#horz_spacing_value').html($(this).val())" id="horz_spacing" name="horz_spacing" value="<?php echo plugin()->getValue( 'horz_spacing' ); ?>" min="0.5" max="4" step="0.025" />
+				<span class="form-range-value rem-range-value"><span id="horz_spacing_value"><?php echo ( plugin()->horz_spacing() ? plugin()->horz_spacing() : plugin()->dbFields['horz_spacing'] ); ?></span><span id="horz_spacing_units">rem</span></span>
+				<input type="range" class="form-control-range custom-range" onInput="$('#horz_spacing_value').html($(this).val())" id="horz_spacing" name="horz_spacing" value="<?php echo plugin()->horz_spacing(); ?>" min="0.5" max="4" step="0.025" />
 				<span class="btn btn-secondary btn-md form-range-button hide-if-no-js" onClick="$('#horz_spacing_value').text('<?php echo plugin()->dbFields['horz_spacing']; ?>');$('#horz_spacing').val('<?php echo plugin()->dbFields['horz_spacing']; ?>');"><?php lang()->p( 'Default' ); ?></span>
 			</div>
 			<small class="form-text"><?php lang()->p( 'General horizontal spacing between elements and areas. A fraction of this setting may be used where the full amount would not be appealing.' ); ?></small>
@@ -80,8 +80,8 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 		<label class="form-label col-sm-2 col-form-label" for="vert_spacing"><?php lang()->p( 'Vertical Spacing' ); ?></label>
 		<div class="col-sm-10 row">
 			<div class="form-range-controls">
-				<span class="form-range-value rem-range-value"><span id="vert_spacing_value"><?php echo ( plugin()->getValue( 'vert_spacing' ) ? plugin()->getValue( 'vert_spacing' ) : plugin()->dbFields['vert_spacing'] ); ?></span><span id="vert_spacing_units">rem</span></span>
-				<input type="range" class="form-control-range custom-range" onInput="$('#vert_spacing_value').html($(this).val())" id="vert_spacing" name="vert_spacing" value="<?php echo plugin()->getValue( 'vert_spacing' ); ?>" min="0.5" max="4" step="0.025" />
+				<span class="form-range-value rem-range-value"><span id="vert_spacing_value"><?php echo ( plugin()->vert_spacing() ? plugin()->vert_spacing() : plugin()->dbFields['vert_spacing'] ); ?></span><span id="vert_spacing_units">rem</span></span>
+				<input type="range" class="form-control-range custom-range" onInput="$('#vert_spacing_value').html($(this).val())" id="vert_spacing" name="vert_spacing" value="<?php echo plugin()->vert_spacing(); ?>" min="0.5" max="4" step="0.025" />
 				<span class="btn btn-secondary btn-md form-range-button hide-if-no-js" onClick="$('#vert_spacing_value').text('<?php echo plugin()->dbFields['vert_spacing']; ?>');$('#vert_spacing').val('<?php echo plugin()->dbFields['vert_spacing']; ?>');"><?php lang()->p( 'Default' ); ?></span>
 			</div>
 			<small class="form-text"><?php lang()->p( 'General vertical spacing between elements and areas. A fraction of this setting may be used where the full amount would not be appealing.' ); ?></small>
@@ -119,9 +119,9 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 				printf(
 					'<optgroup label="%s"><option value="default" %s>%s</option><option value="dark" %s>%s</option></optgroup>',
 					lang()->get( 'Basic' ),
-					( plugin()->getValue( 'color_scheme' ) === 'default' ? 'selected' : '' ),
+					( plugin()->color_scheme() === 'default' ? 'selected' : '' ),
 					lang()->get( 'Default' ),
-					( plugin()->getValue( 'color_scheme' ) === 'dark' ? 'selected' : '' ),
+					( plugin()->color_scheme() === 'dark' ? 'selected' : '' ),
 					lang()->get( 'Dark' )
 				);
 
@@ -145,7 +145,7 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 						printf(
 							'<option value="%s" %s>%s</option>',
 							$option['slug'],
-							( plugin()->getValue( 'color_scheme' ) === $option['slug'] ? 'selected' : '' ),
+							( plugin()->color_scheme() === $option['slug'] ? 'selected' : '' ),
 							$option['name']
 						);
 					}
@@ -161,17 +161,17 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 				);
 				printf(
 					'<option value="bootstrap" %s>%s</option>',
-					( plugin()->getValue( 'color_scheme' ) === 'bootstrap' ? 'selected' : '' ),
+					( plugin()->color_scheme() === 'bootstrap' ? 'selected' : '' ),
 					lang()->get( 'Bootstrap' )
 				);
 				printf(
 					'<option value="tailwind" %s>%s</option>',
-					( plugin()->getValue( 'color_scheme' ) === 'tailwind' ? 'selected' : '' ),
+					( plugin()->color_scheme() === 'tailwind' ? 'selected' : '' ),
 					lang()->get( 'Tailwind' )
 				);
 				printf(
 					'<option value="custom" %s>%s</option>',
-					( plugin()->getValue( 'color_scheme' ) === 'custom' ? 'selected' : '' ),
+					( plugin()->color_scheme() === 'custom' ? 'selected' : '' ),
 					lang()->get( 'Custom' )
 				);
 				echo '</optgroup>';
@@ -288,8 +288,8 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 		<label class="form-label col-sm-2 col-form-label" for="use_dark_scheme"><?php lang()->p( 'Dark Version' ); ?></label>
 		<div class="col-sm-10">
 			<select class="form-select" id="use_dark_scheme" name="use_dark_scheme">
-				<option value="true" <?php echo ( plugin()->getValue( 'use_dark_scheme' ) === true ? 'selected' : '' ); ?>><?php lang()->p( 'Use Always' ); ?></option>
-				<option value="false" <?php echo ( plugin()->getValue( 'use_dark_scheme' ) === false ? 'selected' : '' ); ?>><?php lang()->p( 'Preference Only' ); ?></option>
+				<option value="true" <?php echo ( plugin()->use_dark_scheme() === true ? 'selected' : '' ); ?>><?php lang()->p( 'Use Always' ); ?></option>
+				<option value="false" <?php echo ( plugin()->use_dark_scheme() === false ? 'selected' : '' ); ?>><?php lang()->p( 'Preference Only' ); ?></option>
 			</select>
 			<small class="form-text"><?php lang()->p( 'Use the dark version of the color scheme regardless of browser/device setting.' ); ?></small>
 		</div>
@@ -314,7 +314,7 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 					printf(
 						'<option value="%s" %s>%s</option>',
 						$scheme['slug'],
-						( plugin()->getValue( 'font_scheme' ) === $scheme['slug'] ? 'selected' : '' ),
+						( plugin()->font_scheme() === $scheme['slug'] ? 'selected' : '' ),
 						ucwords( $scheme['name'] )
 					);
 				} ?>
@@ -326,14 +326,14 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 						printf(
 							'<p id="font-scheme-about-%s" style="display: %s;">%s</p>',
 							$slug,
-							( plugin()->getValue( 'font_scheme' ) === $slug ? 'block' : 'none' ),
+							( plugin()->font_scheme() === $slug ? 'block' : 'none' ),
 							$scheme['about']
 						);
 					} else {
 						printf(
 						'<p id="font-scheme-about-%s" style="display: %s;">%s</p>',
 						$slug,
-						( plugin()->getValue( 'font_scheme' ) === $slug ? 'block' : 'none' ),
+						( plugin()->font_scheme() === $slug ? 'block' : 'none' ),
 						lang()->get( 'See preview below.' )
 					);
 					}
@@ -341,7 +341,7 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 					printf(
 						'<p id="font-scheme-about-%s" style="display: %s;">%s</p>',
 						$slug,
-						( plugin()->getValue( 'font_scheme' ) === $slug ? 'block' : 'none' ),
+						( plugin()->font_scheme() === $slug ? 'block' : 'none' ),
 						lang()->get( 'See preview below.' )
 					);
 				}
@@ -381,7 +381,7 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 				printf(
 					'<li id="font-scheme-preview-%1s" style="display: %2s; ">%3s %4s %5s %6s</li>' . "\r",
 					$slug,
-					( plugin()->getValue( 'font_scheme' ) === $slug ? 'block' : 'none' ),
+					( plugin()->font_scheme() === $slug ? 'block' : 'none' ),
 
 					// Primary heading preview.
 					sprintf(
@@ -442,9 +442,9 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 			<p class="text-above-field"><?php lang()->p( 'Font Weight' ); ?></p>
 			<div class="form-range-controls">
 
-				<span class="form-range-value rem-range-value"><span id="wght_text_value"><?php echo ( plugin()->getValue( 'wght_text' ) ? plugin()->getValue( 'wght_text' ) : plugin()->dbFields['wght_text'] ); ?></span></span>
+				<span class="form-range-value rem-range-value"><span id="wght_text_value"><?php echo ( plugin()->wght_text() ? plugin()->wght_text() : plugin()->dbFields['wght_text'] ); ?></span></span>
 
-				<input type="range" class="form-control-range custom-range" onInput="$('#wght_text_value').html($(this).val());$('.text-sample').css('font-weight',$(this).val());" id="wght_text" name="wght_text" value="<?php echo plugin()->getValue( 'wght_text' ); ?>" min="<?php echo $current_fonts['text']['min']; ?>" max="<?php echo $current_fonts['text']['max']; ?>" step="<?php echo $current_fonts['text']['step']; ?>" />
+				<input type="range" class="form-control-range custom-range" onInput="$('#wght_text_value').html($(this).val());$('.text-sample').css('font-weight',$(this).val());" id="wght_text" name="wght_text" value="<?php echo plugin()->wght_text(); ?>" min="<?php echo $current_fonts['text']['min']; ?>" max="<?php echo $current_fonts['text']['max']; ?>" step="<?php echo $current_fonts['text']['step']; ?>" />
 
 				<input type="hidden" id="wght_text_default"  name="wght_text_default" value="<?php echo $current_fonts['text']['weight']; ?>" />
 
@@ -460,9 +460,9 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 
 			<p class="text-above-field"><?php lang()->p( 'Letter Spacing' ); ?></p>
 			<div class="form-range-controls">
-				<span class="form-range-value rem-range-value"><span id="space_text_value"><?php echo ( plugin()->getValue( 'space_text' ) ? plugin()->getValue( 'space_text' ) : $current_fonts['text']['space'] ); ?></span>em</span>
+				<span class="form-range-value rem-range-value"><span id="space_text_value"><?php echo ( plugin()->space_text() ? plugin()->space_text() : $current_fonts['text']['space'] ); ?></span>em</span>
 
-				<input type="range" class="form-control-range custom-range" onInput="$('#space_text_value').html($(this).val());$('.text-sample').css('letter-spacing',$(this).val()+'em');" id="space_text" name="space_text" value="<?php echo plugin()->getValue( 'space_text' ); ?>" min="-0.100" max="0.150" step="0.001" />
+				<input type="range" class="form-control-range custom-range" onInput="$('#space_text_value').html($(this).val());$('.text-sample').css('letter-spacing',$(this).val()+'em');" id="space_text" name="space_text" value="<?php echo plugin()->space_text(); ?>" min="-0.100" max="0.150" step="0.001" />
 
 				<input type="hidden" id="space_text_default"  name="space_text_default" value="<?php echo $current_fonts['text']['space']; ?>" />
 
@@ -477,9 +477,9 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 
 			<p class="text-above-field"><?php lang()->p( 'Font Weight' ); ?></p>
 			<div class="form-range-controls">
-				<span class="form-range-value rem-range-value"><span id="wght_display_value"><?php echo ( plugin()->getValue( 'wght_display' ) ? plugin()->getValue( 'wght_display' ) : plugin()->dbFields['wght_display'] ); ?></span></span>
+				<span class="form-range-value rem-range-value"><span id="wght_display_value"><?php echo ( plugin()->wght_display() ? plugin()->wght_display() : plugin()->dbFields['wght_display'] ); ?></span></span>
 
-				<input type="range" class="form-control-range custom-range" onInput="$('#wght_display_value').html($(this).val());$('.display-sample').css('font-weight',$(this).val());" id="wght_display" name="wght_display" value="<?php echo plugin()->getValue( 'wght_display' ); ?>" min="<?php echo $current_fonts['display']['min']; ?>" max="<?php echo $current_fonts['display']['max']; ?>" step="<?php echo $current_fonts['display']['step']; ?>" />
+				<input type="range" class="form-control-range custom-range" onInput="$('#wght_display_value').html($(this).val());$('.display-sample').css('font-weight',$(this).val());" id="wght_display" name="wght_display" value="<?php echo plugin()->wght_display(); ?>" min="<?php echo $current_fonts['display']['min']; ?>" max="<?php echo $current_fonts['display']['max']; ?>" step="<?php echo $current_fonts['display']['step']; ?>" />
 
 				<input type="hidden" id="wght_display_default"  name="wght_display_default" value="<?php echo $current_fonts['display']['weight']; ?>" />
 
@@ -495,9 +495,9 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 
 			<p class="text-above-field"><?php lang()->p( 'Letter Spacing' ); ?></p>
 			<div class="form-range-controls">
-				<span class="form-range-value rem-range-value"><span id="space_display_value"><?php echo ( plugin()->getValue( 'space_display' ) ? plugin()->getValue( 'space_display' ) : $current_fonts['display']['space'] ); ?></span>em</span>
+				<span class="form-range-value rem-range-value"><span id="space_display_value"><?php echo ( plugin()->space_display() ? plugin()->space_display() : $current_fonts['display']['space'] ); ?></span>em</span>
 
-				<input type="range" class="form-control-range custom-range" onInput="$('#space_display_value').html($(this).val());$('.display-sample').css('letter-spacing',$(this).val()+'em');" id="space_display" name="space_display" value="<?php echo plugin()->getValue( 'space_display' ); ?>" min="-0.100" max="0.150" step="0.001" />
+				<input type="range" class="form-control-range custom-range" onInput="$('#space_display_value').html($(this).val());$('.display-sample').css('letter-spacing',$(this).val()+'em');" id="space_display" name="space_display" value="<?php echo plugin()->space_display(); ?>" min="-0.100" max="0.150" step="0.001" />
 
 				<input type="hidden" id="space_display_default"  name="space_display_default" value="<?php echo $current_fonts['display']['space']; ?>" />
 
@@ -512,9 +512,9 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 
 			<p class="text-above-field"><?php lang()->p( 'Font Weight' ); ?></p>
 			<div class="form-range-controls">
-				<span class="form-range-value rem-range-value"><span id="wght_primary_value"><?php echo ( plugin()->getValue( 'wght_primary' ) ? plugin()->getValue( 'wght_primary' ) : plugin()->dbFields['wght_primary'] ); ?></span></span>
+				<span class="form-range-value rem-range-value"><span id="wght_primary_value"><?php echo ( plugin()->wght_primary() ? plugin()->wght_primary() : plugin()->dbFields['wght_primary'] ); ?></span></span>
 
-				<input type="range" class="form-control-range custom-range" onInput="$('#wght_primary_value').html($(this).val());$('.primary-sample').css('font-weight',$(this).val());" id="wght_primary" name="wght_primary" value="<?php echo plugin()->getValue( 'wght_primary' ); ?>" min="<?php echo $current_fonts['primary']['min']; ?>" max="<?php echo $current_fonts['primary']['max']; ?>" step="<?php echo $current_fonts['primary']['step']; ?>" />
+				<input type="range" class="form-control-range custom-range" onInput="$('#wght_primary_value').html($(this).val());$('.primary-sample').css('font-weight',$(this).val());" id="wght_primary" name="wght_primary" value="<?php echo plugin()->wght_primary(); ?>" min="<?php echo $current_fonts['primary']['min']; ?>" max="<?php echo $current_fonts['primary']['max']; ?>" step="<?php echo $current_fonts['primary']['step']; ?>" />
 
 				<input type="hidden" id="wght_primary_default"  name="wght_primary_default" value="<?php echo $current_fonts['primary']['weight']; ?>" />
 
@@ -530,9 +530,9 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 
 			<p class="text-above-field"><?php lang()->p( 'Letter Spacing' ); ?></p>
 			<div class="form-range-controls">
-				<span class="form-range-value rem-range-value"><span id="space_primary_value"><?php echo ( plugin()->getValue( 'space_primary' ) ? plugin()->getValue( 'space_primary' ) : $current_fonts['primary']['space'] ); ?></span>em</span>
+				<span class="form-range-value rem-range-value"><span id="space_primary_value"><?php echo ( plugin()->space_primary() ? plugin()->space_primary() : $current_fonts['primary']['space'] ); ?></span>em</span>
 
-				<input type="range" class="form-control-range custom-range" onInput="$('#space_primary_value').html($(this).val());$('.primary-sample').css('letter-spacing',$(this).val()+'em')" id="space_primary" name="space_primary" value="<?php echo plugin()->getValue( 'space_primary' ); ?>" min="-0.100" max="0.150" step="0.001" />
+				<input type="range" class="form-control-range custom-range" onInput="$('#space_primary_value').html($(this).val());$('.primary-sample').css('letter-spacing',$(this).val()+'em')" id="space_primary" name="space_primary" value="<?php echo plugin()->space_primary(); ?>" min="-0.100" max="0.150" step="0.001" />
 
 				<input type="hidden" id="space_primary_default"  name="space_primary_default" value="<?php echo $current_fonts['primary']['space']; ?>" />
 
@@ -547,9 +547,9 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 
 			<p class="text-above-field"><?php lang()->p( 'Font Weight' ); ?></p>
 			<div class="form-range-controls">
-				<span class="form-range-value rem-range-value"><span id="wght_secondary_value"><?php echo ( plugin()->getValue( 'wght_secondary' ) ? plugin()->getValue( 'wght_secondary' ) : plugin()->dbFields['wght_secondary'] ); ?></span></span>
+				<span class="form-range-value rem-range-value"><span id="wght_secondary_value"><?php echo ( plugin()->wght_secondary() ? plugin()->wght_secondary() : plugin()->dbFields['wght_secondary'] ); ?></span></span>
 
-				<input type="range" class="form-control-range custom-range" onInput="$('#wght_secondary_value').html($(this).val());$('.secondary-sample').css('font-weight',$(this).val());" id="wght_secondary" name="wght_secondary" value="<?php echo plugin()->getValue( 'wght_secondary' ); ?>" min="<?php echo $current_fonts['secondary']['min']; ?>" max="<?php echo $current_fonts['secondary']['max']; ?>" step="<?php echo $current_fonts['secondary']['step']; ?>" />
+				<input type="range" class="form-control-range custom-range" onInput="$('#wght_secondary_value').html($(this).val());$('.secondary-sample').css('font-weight',$(this).val());" id="wght_secondary" name="wght_secondary" value="<?php echo plugin()->wght_secondary(); ?>" min="<?php echo $current_fonts['secondary']['min']; ?>" max="<?php echo $current_fonts['secondary']['max']; ?>" step="<?php echo $current_fonts['secondary']['step']; ?>" />
 
 				<input type="hidden" id="wght_secondary_default"  name="wght_secondary_default" value="<?php echo $current_fonts['secondary']['weight']; ?>" />
 
@@ -565,9 +565,9 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 
 			<p class="text-above-field"><?php lang()->p( 'Letter Spacing' ); ?></p>
 			<div class="form-range-controls">
-				<span class="form-range-value rem-range-value"><span id="space_secondary_value"><?php echo ( plugin()->getValue( 'space_secondary' ) ? plugin()->getValue( 'space_secondary' ) : $current_fonts['secondary']['space'] ); ?></span>em</span>
+				<span class="form-range-value rem-range-value"><span id="space_secondary_value"><?php echo ( plugin()->space_secondary() ? plugin()->space_secondary() : $current_fonts['secondary']['space'] ); ?></span>em</span>
 
-				<input type="range" class="form-control-range custom-range" onInput="$('#space_secondary_value').html($(this).val());$('.secondary-sample').css('letter-spacing',$(this).val()+'em')" id="space_secondary" name="space_secondary" value="<?php echo plugin()->getValue( 'space_secondary' ); ?>" min="-0.100" max="0.150" step="0.001" />
+				<input type="range" class="form-control-range custom-range" onInput="$('#space_secondary_value').html($(this).val());$('.secondary-sample').css('letter-spacing',$(this).val()+'em')" id="space_secondary" name="space_secondary" value="<?php echo plugin()->space_secondary(); ?>" min="-0.100" max="0.150" step="0.001" />
 
 				<input type="hidden" id="space_secondary_default"  name="space_secondary_default" value="<?php echo $current_fonts['secondary']['space']; ?>" />
 
@@ -626,7 +626,7 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 		<label class="form-label col-sm-2 col-form-label" for="custom_css"><?php lang()->p( 'Frontend Style Block' ); ?></label>
 		<div class="col-sm-10">
 			<p><small class="form-text"><?php lang()->p( 'This will be printed in the public &lt;head&gt; element, after enqueued stylesheets. CSS code only.' ); ?></small></p>
-			<textarea class="code-field" id="custom_css" name="custom_css" placeholder=":root {}" cols="60" rows="10"><?php echo plugin()->getValue( 'custom_css' ); ?></textarea>
+			<textarea class="code-field" id="custom_css" name="custom_css" placeholder=":root {}" cols="60" rows="10"><?php echo plugin()->custom_css(); ?></textarea>
 		</div>
 	</div>
 
@@ -635,7 +635,7 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 		<label class="form-label col-sm-2 col-form-label" for="admin_css"><?php lang()->p( 'Backend Style Block' ); ?></label>
 		<div class="col-sm-10">
 			<p><small class="form-text"><?php lang()->p( 'This will be printed in the admin &lt;head&gt; element, after enqueued stylesheets. CSS code only.' ); ?></small></p>
-			<textarea class="code-field" id="admin_css" name="admin_css" placeholder=":root {}" cols="60" rows="10"><?php echo plugin()->getValue( 'admin_css' ); ?></textarea>
+			<textarea class="code-field" id="admin_css" name="admin_css" placeholder=":root {}" cols="60" rows="10"><?php echo plugin()->admin_css(); ?></textarea>
 		</div>
 	</div>
 	<?php endif; ?>

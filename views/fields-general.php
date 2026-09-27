@@ -95,24 +95,24 @@ $custom_from = plugin()->custom_scheme_from();
 		<label class="form-label col-sm-2 col-form-label" for="user_toolbar"><?php lang()->p( 'User Toolbar' ); ?></label>
 		<div class="col-sm-10">
 			<select class="form-select" id="user_toolbar" name="user_toolbar">
-				<option value="enabled" <?php echo ( plugin()->getValue( 'user_toolbar' ) === 'enabled' ? 'selected' : '' ); ?>><?php lang()->p( 'Enabled' ); ?></option>
+				<option value="enabled" <?php echo ( plugin()->user_toolbar() === 'enabled' ? 'selected' : '' ); ?>><?php lang()->p( 'Enabled' ); ?></option>
 
-				<option value="backend" <?php echo ( plugin()->getValue( 'user_toolbar' ) === 'backend' ? 'selected' : '' ); ?>><?php lang()->p( 'Backend Only' ); ?></option>
+				<option value="backend" <?php echo ( plugin()->user_toolbar() === 'backend' ? 'selected' : '' ); ?>><?php lang()->p( 'Backend Only' ); ?></option>
 
-				<option value="frontend" <?php echo ( plugin()->getValue( 'user_toolbar' ) === 'frontend' ? 'selected' : '' ); ?>><?php lang()->p( 'Frontend Only' ); ?></option>
+				<option value="frontend" <?php echo ( plugin()->user_toolbar() === 'frontend' ? 'selected' : '' ); ?>><?php lang()->p( 'Frontend Only' ); ?></option>
 
-				<option value="disabled" <?php echo ( plugin()->getValue( 'user_toolbar' ) === 'disabled' ? 'selected' : '' ); ?>><?php lang()->p( 'Disabled' ); ?></option>
+				<option value="disabled" <?php echo ( plugin()->user_toolbar() === 'disabled' ? 'selected' : '' ); ?>><?php lang()->p( 'Disabled' ); ?></option>
 			</select>
 			<small class="form-text"><?php lang()->p( 'Displayed only to logged-in users.' ); ?></small>
 		</div>
 	</div>
 
-	<div id="toolbar_mobile_wrap" class="form-field form-group row" style="display: <?php echo ( plugin()->getValue( 'user_toolbar' ) != 'disabled' ? 'flex' : 'none' ); ?>;">
+	<div id="toolbar_mobile_wrap" class="form-field form-group row" style="display: <?php echo ( plugin()->user_toolbar() != 'disabled' ? 'flex' : 'none' ); ?>;">
 		<label class="form-label col-sm-2 col-form-label" for="toolbar_mobile"><?php lang()->p( 'Mobile Toolbar' ); ?></label>
 		<div class="col-sm-10">
 			<select class="form-select" id="toolbar_mobile" name="toolbar_mobile">
-				<option value="true" <?php echo ( plugin()->getValue( 'toolbar_mobile' ) === true ? 'selected' : '' ); ?>><?php lang()->p( 'Enabled' ); ?></option>
-				<option value="false" <?php echo ( plugin()->getValue( 'toolbar_mobile' ) === false ? 'selected' : '' ); ?>><?php lang()->p( 'Disabled' ); ?></option>
+				<option value="true" <?php echo ( plugin()->toolbar_mobile() === true ? 'selected' : '' ); ?>><?php lang()->p( 'Enabled' ); ?></option>
+				<option value="false" <?php echo ( plugin()->toolbar_mobile() === false ? 'selected' : '' ); ?>><?php lang()->p( 'Disabled' ); ?></option>
 			</select>
 			<small class="form-text"><?php lang()->p( 'Allow the toolbar on mobile screens.' ); ?></small>
 		</div>
@@ -133,13 +133,13 @@ $custom_from = plugin()->custom_scheme_from();
 		<label class="form-label col-sm-2 col-form-label" for="to_top_button"><?php lang()->p( 'To Top Button' ); ?></label>
 		<div class="col-sm-10">
 			<select class="form-select" id="to_top_button" name="to_top_button">
-				<option value="enabled" <?php echo ( plugin()->getValue( 'to_top_button' ) === 'enabled' ? 'selected' : '' ); ?>><?php lang()->p( 'Enabled' ); ?></option>
+				<option value="enabled" <?php echo ( plugin()->to_top_button() === 'enabled' ? 'selected' : '' ); ?>><?php lang()->p( 'Enabled' ); ?></option>
 
-				<option value="backend" <?php echo ( plugin()->getValue( 'to_top_button' ) === 'backend' ? 'selected' : '' ); ?>><?php lang()->p( 'Backend Only' ); ?></option>
+				<option value="backend" <?php echo ( plugin()->to_top_button() === 'backend' ? 'selected' : '' ); ?>><?php lang()->p( 'Backend Only' ); ?></option>
 
-				<option value="frontend" <?php echo ( plugin()->getValue( 'to_top_button' ) === 'frontend' ? 'selected' : '' ); ?>><?php lang()->p( 'Frontend Only' ); ?></option>
+				<option value="frontend" <?php echo ( plugin()->to_top_button() === 'frontend' ? 'selected' : '' ); ?>><?php lang()->p( 'Frontend Only' ); ?></option>
 
-				<option value="disabled" <?php echo ( plugin()->getValue( 'to_top_button' ) === 'disabled' ? 'selected' : '' ); ?>><?php lang()->p( 'Disabled' ); ?></option>
+				<option value="disabled" <?php echo ( plugin()->to_top_button() === 'disabled' ? 'selected' : '' ); ?>><?php lang()->p( 'Disabled' ); ?></option>
 			</select>
 			<small class="form-text"><?php lang()->p( 'Display a button to scroll to the top of the page.' ); ?></small>
 		</div>
@@ -150,8 +150,8 @@ $custom_from = plugin()->custom_scheme_from();
 		<label class="form-label col-sm-2 col-form-label" for="search_icon"><?php lang()->p( 'Search Icon' ); ?></label>
 		<div class="col-sm-10">
 			<select class="form-select" id="search_icon" name="search_icon">
-				<option value="true" <?php echo ( plugin()->getValue( 'search_icon' ) === true ? 'selected' : '' ); ?>><?php lang()->p( 'Enabled' ); ?></option>
-				<option value="false" <?php echo ( plugin()->getValue( 'search_icon' ) === false ? 'selected' : '' ); ?>><?php lang()->p( 'Disabled' ); ?></option>
+				<option value="true" <?php echo ( plugin()->search_icon() === true ? 'selected' : '' ); ?>><?php lang()->p( 'Enabled' ); ?></option>
+				<option value="false" <?php echo ( plugin()->search_icon() === false ? 'selected' : '' ); ?>><?php lang()->p( 'Disabled' ); ?></option>
 			</select>
 			<small class="form-text"><?php lang()->p( 'Replace search form submit text with a search icon. Text will remain available to screen readers.' ); ?></small>
 		</div>
@@ -163,8 +163,8 @@ $custom_from = plugin()->custom_scheme_from();
 		<div class="col-sm-10">
 		<?php if ( defined( 'CFE_DASHBOARD' ) && CFE_DASHBOARD ) : ?>
 			<select class="form-select" id="custom_dashboard" name="custom_dashboard">
-				<option value="true" <?php echo ( plugin()->getValue( 'custom_dashboard' ) === true ? 'selected' : '' ); ?>><?php lang()->p( 'Enabled' ); ?></option>
-				<option value="false" <?php echo ( plugin()->getValue( 'custom_dashboard' ) === false ? 'selected' : '' ); ?>><?php lang()->p( 'Disabled' ); ?></option>
+				<option value="true" <?php echo ( plugin()->custom_dashboard() === true ? 'selected' : '' ); ?>><?php lang()->p( 'Enabled' ); ?></option>
+				<option value="false" <?php echo ( plugin()->custom_dashboard() === false ? 'selected' : '' ); ?>><?php lang()->p( 'Disabled' ); ?></option>
 			</select>
 			<small class="form-text"><?php lang()->p( 'Links to help guides and options on the dashboard.' ); ?></small>
 		<?php else : ?>
@@ -198,11 +198,11 @@ $custom_from = plugin()->custom_scheme_from();
 		</div>
 	</div>
 
-	<div id="loader_options" style="display: <?php echo ( plugin()->getValue( 'page_loader' ) === true ? 'block' : 'none' ); ?>;">
+	<div id="loader_options" style="display: <?php echo ( plugin()->page_loader() === true ? 'block' : 'none' ); ?>;">
 		<div class="form-field form-group row">
 			<label class="form-label col-sm-2 col-form-label" for="loader_text"><?php lang()->p( 'Loading Text' ); ?></label>
 			<div class="col-sm-10">
-				<input type="text" id="loader_text" name="loader_text" value="<?php echo plugin()->getValue( 'loader_text' ); ?>" placeholder="<?php echo plugin()->dbFields['loader_text']; ?>" />
+				<input type="text" id="loader_text" name="loader_text" value="<?php echo plugin()->loader_text(); ?>" placeholder="<?php echo plugin()->dbFields['loader_text']; ?>" />
 				<small class="form-text"><?php lang()->p( 'The text to display on the loading screen.' ); ?></small>
 			</div>
 		</div>
@@ -212,13 +212,13 @@ $custom_from = plugin()->custom_scheme_from();
 			<div class="col-sm-10">
 				<select class="form-select" id="loader_icon" name="loader_icon">
 
-					<option value="spinner-dots" <?php echo ( plugin()->getValue( 'loader_icon' ) === 'spinner-dots' ? 'selected' : '' ); ?>><?php lang()->p( 'Dots Circle' ); ?></option>
+					<option value="spinner-dots" <?php echo ( plugin()->loader_icon() === 'spinner-dots' ? 'selected' : '' ); ?>><?php lang()->p( 'Dots Circle' ); ?></option>
 
-					<option value="spinner-dashes" <?php echo ( plugin()->getValue( 'loader_icon' ) === 'spinner-dashes' ? 'selected' : '' ); ?>><?php lang()->p( 'Dashes Circle' ); ?></option>
+					<option value="spinner-dashes" <?php echo ( plugin()->loader_icon() === 'spinner-dashes' ? 'selected' : '' ); ?>><?php lang()->p( 'Dashes Circle' ); ?></option>
 
-					<option value="spinner-third" <?php echo ( plugin()->getValue( 'loader_icon' ) === 'spinner-third' ? 'selected' : '' ); ?>><?php lang()->p( 'Third Circle' ); ?></option>
+					<option value="spinner-third" <?php echo ( plugin()->loader_icon() === 'spinner-third' ? 'selected' : '' ); ?>><?php lang()->p( 'Third Circle' ); ?></option>
 
-					<option value="none" <?php echo ( plugin()->getValue( 'loader_icon' ) === 'none' ? 'selected' : '' ); ?>><?php lang()->p( 'No Icon' ); ?></option>
+					<option value="none" <?php echo ( plugin()->loader_icon() === 'none' ? 'selected' : '' ); ?>><?php lang()->p( 'No Icon' ); ?></option>
 				</select>
 				<small class="form-text">
 					<?php lang()->p( 'Choose the style of icon to display below the text.' ); ?>

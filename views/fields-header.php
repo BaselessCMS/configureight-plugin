@@ -31,8 +31,8 @@ if ( site()->logo() ) {
 		<label class="form-label col-sm-2 col-form-label" for="header_layout"><?php lang()->p( 'Header Layout' ); ?></label>
 		<div class="col-sm-10">
 			<select class="form-select" id="header_layout" name="header_layout">
-				<option value="horz" <?php echo ( plugin()->getValue( 'header_layout' ) === 'horz' ? 'selected' : '' ); ?>><?php lang()->p( 'Horizontal' ); ?></option>
-				<option value="vert" <?php echo ( plugin()->getValue( 'header_layout' ) === 'vert' ? 'selected' : '' ); ?>><?php lang()->p( 'Vertical' ); ?></option>
+				<option value="horz" <?php echo ( plugin()->header_layout() === 'horz' ? 'selected' : '' ); ?>><?php lang()->p( 'Horizontal' ); ?></option>
+				<option value="vert" <?php echo ( plugin()->header_layout() === 'vert' ? 'selected' : '' ); ?>><?php lang()->p( 'Vertical' ); ?></option>
 			</select>
 			<small class="form-text"><?php lang()->p( 'The vertical option centers the header content and disables the left & right options for the navigation position. Mobile layouts are always vertical, centered.' ); ?></small>
 		</div>
@@ -42,8 +42,8 @@ if ( site()->logo() ) {
 		<label class="form-label col-sm-2 col-form-label" for="site_title"><?php lang()->p( 'Website Title' ); ?></label>
 		<div class="col-sm-10">
 			<select class="form-select" id="site_title" name="site_title">
-				<option value="true" <?php echo ( plugin()->getValue( 'site_title' ) === true ? 'selected' : '' ); ?>><?php lang()->p( 'Show' ); ?></option>
-				<option value="false" <?php echo ( plugin()->getValue( 'site_title' ) === false ? 'selected' : '' ); ?>><?php lang()->p( 'Hide' ); ?></option>
+				<option value="true" <?php echo ( plugin()->site_title() === true ? 'selected' : '' ); ?>><?php lang()->p( 'Show' ); ?></option>
+				<option value="false" <?php echo ( plugin()->site_title() === false ? 'selected' : '' ); ?>><?php lang()->p( 'Hide' ); ?></option>
 			</select>
 			<small class="form-text"><?php lang()->p( 'Title will not be hidden from search engines and screen readers.' ); ?></small>
 		</div>
@@ -53,8 +53,8 @@ if ( site()->logo() ) {
 		<label class="form-label col-sm-2 col-form-label" for="cover_logo"><?php lang()->p( 'Website Slogan' ); ?></label>
 		<div class="col-sm-10">
 			<select class="form-select" id="site_slogan" name="site_slogan">
-				<option value="true" <?php echo ( plugin()->getValue( 'site_slogan' ) === true ? 'selected' : '' ); ?>><?php lang()->p( 'Show' ); ?></option>
-				<option value="false" <?php echo ( plugin()->getValue( 'site_slogan' ) === false ? 'selected' : '' ); ?>><?php lang()->p( 'Hide' ); ?></option>
+				<option value="true" <?php echo ( plugin()->site_slogan() === true ? 'selected' : '' ); ?>><?php lang()->p( 'Show' ); ?></option>
+				<option value="false" <?php echo ( plugin()->site_slogan() === false ? 'selected' : '' ); ?>><?php lang()->p( 'Hide' ); ?></option>
 			</select>
 			<small class="form-text"><?php lang()->p( 'Slogan will not be hidden from search engines and screen readers.' ); ?></small>
 		</div>
@@ -106,7 +106,7 @@ if ( site()->logo() ) {
 
 				<div id="logo-standard-code" role="tabpanel" aria-labelledby="logo-standard-code">
 					<p><?php lang()->p( 'Paste in SVG code to override any upload selection. Be sure that the SVG you enter is safe, that there is no malicious code.' ); ?></p>
-					<textarea class="code-field" name="logo_standard_svg" id="logo-standard-svg" cols="60" rows="6"><?php echo plugin()->getValue( 'logo_standard_svg' ) ?></textarea>
+					<textarea class="code-field" name="logo_standard_svg" id="logo-standard-svg" cols="60" rows="6"><?php echo plugin()->logo_standard_svg(); ?></textarea>
 				</div>
 			</div>
 		</div>
@@ -158,7 +158,7 @@ if ( site()->logo() ) {
 
 				<div id="logo-cover-code" role="tabpanel" aria-labelledby="logo-cover-code">
 					<p><?php lang()->p( 'Paste in SVG code to override any upload selection. Be sure that the SVG you enter is safe, that there is no malicious code.' ); ?></p>
-					<textarea class="code-field" name="logo_cover_svg" id="logo-cover-svg" cols="60" rows="6"><?php echo plugin()->getValue( 'logo_cover_svg' ) ?></textarea>
+					<textarea class="code-field" name="logo_cover_svg" id="logo-cover-svg" cols="60" rows="6"><?php echo plugin()->logo_cover_svg(); ?></textarea>
 				</div>
 			</div>
 		</div>
@@ -168,8 +168,8 @@ if ( site()->logo() ) {
 		<label class="form-label col-sm-2 col-form-label" for="cover_logo_dark_mode"><?php lang()->p( 'Dark Mode Logo' ); ?></label>
 		<div class="col-sm-10">
 			<select class="form-select" id="cover_logo_dark_mode" name="cover_logo_dark_mode">
-				<option value="true" <?php echo ( plugin()->getValue( 'cover_logo_dark_mode' ) === true ? 'selected' : '' ); ?>><?php lang()->p( 'Cover Logo' ); ?></option>
-				<option value="false" <?php echo ( plugin()->getValue( 'cover_logo_dark_mode' ) === false ? 'selected' : '' ); ?>><?php lang()->p( 'Standard Logo' ); ?></option>
+				<option value="true" <?php echo ( plugin()->cover_logo_dark_mode() === true ? 'selected' : '' ); ?>><?php lang()->p( 'Cover Logo' ); ?></option>
+				<option value="false" <?php echo ( plugin()->cover_logo_dark_mode() === false ? 'selected' : '' ); ?>><?php lang()->p( 'Standard Logo' ); ?></option>
 			</select>
 			<small class="form-text"><?php lang()->p( 'The logo to use when in dark mode.' ); ?></small>
 		</div>
@@ -179,17 +179,17 @@ if ( site()->logo() ) {
 		<div id="logo_width_std_wrap" class="form-field form-group row">
 			<label class="form-label col-sm-2 col-form-label" for="logo_width_std"><?php lang()->p( 'Logo Width, Desktop' ); ?></label>
 			<div class="col-sm-10">
-				<figure id="logo_preview_desktop" class="form-range-preview-image" style="width: <?php echo plugin()->getValue( 'logo_width_std' ); ?>px">
+				<figure id="logo_preview_desktop" class="form-range-preview-image" style="width: <?php echo plugin()->logo_width_std(); ?>px">
 					<?php
 					if ( plugin()->logo_standard_svg() ) :
 						echo htmlspecialchars_decode( plugin()->logo_standard_svg() );
 					elseif ( plugin()->standard_logo_src() ) : ?>
-					<img class="img-fluid img-thumbnail" alt="<?php echo ( plugin()->standard_logo_src() ? lang()->get( 'Desktop logo preview' ) : lang()->get( 'No logo uploaded' ) ); ?>" src="<?php echo ( plugin()->standard_logo_src() ? plugin()->standard_logo_src() : '' ); ?>" width="<?php echo plugin()->getValue( 'logo_width_std' ); ?>" style="width: 100%;" />
+					<img class="img-fluid img-thumbnail" alt="<?php echo ( plugin()->standard_logo_src() ? lang()->get( 'Desktop logo preview' ) : lang()->get( 'No logo uploaded' ) ); ?>" src="<?php echo ( plugin()->standard_logo_src() ? plugin()->standard_logo_src() : '' ); ?>" width="<?php echo plugin()->logo_width_std(); ?>" style="width: 100%;" />
 					<?php endif; ?>
 				</figure>
 				<div class="form-range-controls row">
-					<span class="form-range-value px-range-value"><span id="logo_width_std_value"><?php echo plugin()->getValue( 'logo_width_std' ); ?></span><span id="logo_width_std_units">px</span></span>
-					<input type="range" class="form-control-range custom-range" onInput="$('#logo_width_std_value').html($(this).val());$('#logo_preview_desktop').css('width',$(this).val()+'px');" id="logo_width_std" name="logo_width_std" value="<?php echo plugin()->getValue( 'logo_width_std' ); ?>" min="0" max="320" step="1" />
+					<span class="form-range-value px-range-value"><span id="logo_width_std_value"><?php echo plugin()->logo_width_std(); ?></span><span id="logo_width_std_units">px</span></span>
+					<input type="range" class="form-control-range custom-range" onInput="$('#logo_width_std_value').html($(this).val());$('#logo_preview_desktop').css('width',$(this).val()+'px');" id="logo_width_std" name="logo_width_std" value="<?php echo plugin()->logo_width_std(); ?>" min="0" max="320" step="1" />
 					<span class="btn btn-secondary btn-md form-range-button hide-if-no-js" onClick="$('#logo_width_std_value').text('<?php echo plugin()->dbFields['logo_width_std']; ?>');$('#logo_width_std').val('<?php echo plugin()->dbFields['logo_width_std']; ?>');$('#logo_preview_desktop').css('width','<?php echo plugin()->dbFields['logo_width_std']; ?>');"><?php lang()->p( 'Default' ); ?></span>
 				</div>
 				<small class="form-text"><?php lang()->p( 'This is a maximum width in pixels.' ); ?></small>
@@ -199,17 +199,17 @@ if ( site()->logo() ) {
 		<div id="logo_width_mob_wrap" class="form-field form-group row">
 			<label class="form-label col-sm-2 col-form-label" for="logo_width_mob"><?php lang()->p( 'Logo Width, Mobile' ); ?></label>
 			<div class="col-sm-10">
-				<figure id="logo_preview_mobile" class="form-range-preview-image" style="width: <?php echo plugin()->getValue( 'logo_width_mob' ); ?>px">
+				<figure id="logo_preview_mobile" class="form-range-preview-image" style="width: <?php echo plugin()->logo_width_mob(); ?>px">
 					<?php
 					if ( plugin()->logo_standard_svg() ) :
 						echo htmlspecialchars_decode( plugin()->logo_standard_svg() );
 					elseif ( plugin()->standard_logo_src() ) : ?>
-					<img class="img-fluid img-thumbnail" alt="<?php echo ( plugin()->standard_logo_src() ? lang()->get( 'Mobile logo preview' ) : lang()->get( 'No logo uploaded' ) ); ?>" src="<?php echo ( plugin()->standard_logo_src() ? plugin()->standard_logo_src() : '' ); ?>" width="<?php echo plugin()->getValue( 'logo_width_mob' ); ?>" style="width: 100%;" />
+					<img class="img-fluid img-thumbnail" alt="<?php echo ( plugin()->standard_logo_src() ? lang()->get( 'Mobile logo preview' ) : lang()->get( 'No logo uploaded' ) ); ?>" src="<?php echo ( plugin()->standard_logo_src() ? plugin()->standard_logo_src() : '' ); ?>" width="<?php echo plugin()->logo_width_mob(); ?>" style="width: 100%;" />
 					<?php endif; ?>
 				</figure>
 				<div class="form-range-controls row">
-					<span class="form-range-value px-range-value"><span id="logo_width_mob_value"><?php echo plugin()->getValue( 'logo_width_mob' ); ?></span><span id="logo_width_mob_units">px</span></span>
-					<input type="range" class="form-control-range custom-range" onInput="$('#logo_width_mob_value').html($(this).val());$('#logo_preview_mobile').css('width',$(this).val()+'px');" id="logo_width_mob" name="logo_width_mob" value="<?php echo plugin()->getValue( 'logo_width_mob' ); ?>" min="0" max="320" step="1" />
+					<span class="form-range-value px-range-value"><span id="logo_width_mob_value"><?php echo plugin()->logo_width_mob(); ?></span><span id="logo_width_mob_units">px</span></span>
+					<input type="range" class="form-control-range custom-range" onInput="$('#logo_width_mob_value').html($(this).val());$('#logo_preview_mobile').css('width',$(this).val()+'px');" id="logo_width_mob" name="logo_width_mob" value="<?php echo plugin()->logo_width_mob(); ?>" min="0" max="320" step="1" />
 					<span class="btn btn-secondary btn-md form-range-button hide-if-no-js" onClick="$('#logo_width_mob_value').text('<?php echo plugin()->dbFields['logo_width_mob']; ?>');$('#logo_width_mob').val('<?php echo plugin()->dbFields['logo_width_mob']; ?>');$('#logo_preview_mobile').css('width','<?php echo plugin()->dbFields['logo_width_mob']; ?>');"><?php lang()->p( 'Default' ); ?></span>
 				</div>
 				<small class="form-text"><?php lang()->p( 'This is a maximum width in pixels.' ); ?></small>
@@ -220,13 +220,13 @@ if ( site()->logo() ) {
 			<label class="form-label col-sm-2 col-form-label" for="logo_location"><?php lang()->p( 'Logo Placement' ); ?></label>
 			<div class="col-sm-10">
 				<select class="form-select" id="logo_location" name="logo_location">
-					<option value="before" <?php echo ( plugin()->getValue( 'logo_location' ) === 'before' ? 'selected' : '' ); ?>><?php lang()->p( 'Before Text' ); ?></option>
+					<option value="before" <?php echo ( plugin()->logo_location() === 'before' ? 'selected' : '' ); ?>><?php lang()->p( 'Before Text' ); ?></option>
 
-					<option value="after" <?php echo ( plugin()->getValue( 'logo_location' ) === 'after' ? 'selected' : '' ); ?>><?php lang()->p( 'After Text' ); ?></option>
+					<option value="after" <?php echo ( plugin()->logo_location() === 'after' ? 'selected' : '' ); ?>><?php lang()->p( 'After Text' ); ?></option>
 
-					<option value="above" <?php echo ( plugin()->getValue( 'logo_location' ) === 'above' ? 'selected' : '' ); ?>><?php lang()->p( 'Above Text' ); ?></option>
+					<option value="above" <?php echo ( plugin()->logo_location() === 'above' ? 'selected' : '' ); ?>><?php lang()->p( 'Above Text' ); ?></option>
 
-					<option value="below" <?php echo ( plugin()->getValue( 'logo_location' ) === 'below' ? 'selected' : '' ); ?>><?php lang()->p( 'Below Text' ); ?></option>
+					<option value="below" <?php echo ( plugin()->logo_location() === 'below' ? 'selected' : '' ); ?>><?php lang()->p( 'Below Text' ); ?></option>
 				</select>
 				<small class="form-text"><?php lang()->p( 'Where to place the logo in the header branding section.' ); ?></small>
 			</div>
@@ -237,8 +237,8 @@ if ( site()->logo() ) {
 		<label class="form-label col-sm-2 col-form-label" for="header_sticky"><?php lang()->p( 'Sticky Header' ); ?></label>
 		<div class="col-sm-10">
 			<select class="form-select" id="header_sticky" name="header_sticky">
-				<option value="true" <?php echo ( plugin()->getValue( 'header_sticky' ) === true ? 'selected' : '' ); ?>><?php lang()->p( 'Enabled' ); ?></option>
-				<option value="false" <?php echo ( plugin()->getValue( 'header_sticky' ) === false ? 'selected' : '' ); ?>><?php lang()->p( 'Disabled' ); ?></option>
+				<option value="true" <?php echo ( plugin()->header_sticky() === true ? 'selected' : '' ); ?>><?php lang()->p( 'Enabled' ); ?></option>
+				<option value="false" <?php echo ( plugin()->header_sticky() === false ? 'selected' : '' ); ?>><?php lang()->p( 'Disabled' ); ?></option>
 			</select>
 			<small class="form-text"><?php lang()->p( 'Makes the branding and navigation stick to the top of the viewport. Not for mobile screens.' ); ?></small>
 		</div>
