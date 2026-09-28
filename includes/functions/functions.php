@@ -247,7 +247,7 @@ function define_layout() {
 }
 
 /**
- * Define layout
+ * Define background
  *
  * @since  1.0.0
  * @return string
