@@ -424,7 +424,7 @@ body {
   letter-spacing: var(--cfe-body--letter-spacing, normal);
   word-spacing: var(--cfe-body--word-spacing, normal);
   line-height: var(--cfe-body--line-height, 1.5);
-  background-color: var(--cfe-body--bg-color);
+  background-color: var(--cfe-admin--body--bg-color, var(--cfe-body--bg-color));
   background-image: var(--cfe-body--bg-image);
   background-repeat: var(--cfe-body--bg-repeat);
   background-position: var(--cfe-body--bg-position);

@@ -3161,6 +3161,12 @@ function define_color_scheme() {
 		);
 	}
 
+	// Admin body.
+	$colors[] = sprintf(
+		'--cfe-admin--body--bg-color: %s;',
+		rgb_to_hex( plugin()->color_body() )
+	);
+
 	// Site header.
 	$colors[] = sprintf(
 		'--cfe-site-header--bg-color: %s;',
