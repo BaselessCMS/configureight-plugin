@@ -4284,6 +4284,19 @@ select[disabled] {
 .plugin-form .multi-check-wrap label input {
   cursor: pointer;
 }
+.plugin-form .radio-buttons-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25em 1em;
+}
+.plugin-form .radio-buttons-wrap label {
+  margin: 0 !important;
+  display: inline-block;
+  cursor: pointer;
+}
+.plugin-form .radio-buttons-wrap label input {
+  cursor: pointer;
+}
 
 p + .multi-check-wrap {
   margin-top: 1rem;

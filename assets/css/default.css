@@ -342,6 +342,19 @@ form .col-sm-1, form .col-sm-2, form .col-sm-3, form .col-sm-4, form .col-sm-5, 
 .plugin-form .multi-check-wrap label input {
   cursor: pointer;
 }
+.plugin-form .radio-buttons-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25em 1em;
+}
+.plugin-form .radio-buttons-wrap label {
+  margin: 0 !important;
+  display: inline-block;
+  cursor: pointer;
+}
+.plugin-form .radio-buttons-wrap label input {
+  cursor: pointer;
+}
 
 .image-field-preview {
   max-width: 80px;

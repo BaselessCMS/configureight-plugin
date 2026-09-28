@@ -347,6 +347,43 @@ jQuery(document).ready( function($) {
 		}
 	});
 
+	// Body background image options.
+	$( '#body_img_use' ).on( 'change', function() {
+		var show = $(this).val();
+		if ( show == 'true' ) {
+			$( "#body_img_options" ).fadeIn( 250 );
+		} else if ( show == 'false' ) {
+			$( "#body_img_options" ).fadeOut( 250 );
+		}
+	});
+
+	$( 'input[type=radio][name=body_img_x]' ).on( 'change', function() {
+		var show = $(this).val();
+		if ( show == 'custom' ) {
+			$( "#body_img_x_custom_wrap" ).fadeIn( 250 );
+		} else {
+			$( "#body_img_x_custom_wrap" ).fadeOut( 250 );
+		}
+	});
+
+	$( 'input[type=radio][name=body_img_y]' ).on( 'change', function() {
+		var show = $(this).val();
+		if ( show == 'custom' ) {
+			$( "#body_img_y_custom_wrap" ).fadeIn( 250 );
+		} else {
+			$( "#body_img_y_custom_wrap" ).fadeOut( 250 );
+		}
+	});
+
+	$( 'input[type=radio][name=body_img_size]' ).on( 'change', function() {
+		var show = $(this).val();
+		if ( show == 'custom' ) {
+			$( "#body_img_size_custom_wrap" ).fadeIn( 250 );
+		} else {
+			$( "#body_img_size_custom_wrap" ).fadeOut( 250 );
+		}
+	});
+
 	// Custom colors.
 	$( '#color_scheme' ).on( 'change', function() {
 		var show = $(this).val();

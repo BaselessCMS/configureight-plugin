@@ -1327,6 +1327,21 @@ select[disabled] {
 			}
 		}
 	}
+	.radio-buttons-wrap {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.25em 1em;
+
+		label {
+			margin: 0 !important;
+			display: inline-block;
+			cursor: pointer;
+
+			input {
+				cursor: pointer;
+			}
+		}
+	}
 }
 
 p + .multi-check-wrap {

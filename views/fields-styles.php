@@ -89,13 +89,156 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 	</div>
 </fieldset>
 
-<h3 class="form-heading"><?php lang()->p( 'Appearance Options' ); ?></h3>
-
-<p class="form-description"><?php lang()->p( 'Select a color scheme for description and color thumbnails.' ); ?></p>
+<h3 class="form-heading"><?php lang()->p( 'Background Image' ); ?></h3>
 
 <fieldset>
 
-	<legend class="screen-reader-text"><?php lang()->p( 'Appearance' ); ?></legend>
+	<legend class="screen-reader-text"><?php lang()->p( 'Manage Background Image' ); ?></legend>
+
+	<div class="form-field form-group row">
+		<label class="form-label col-sm-2 col-form-label" for="body_img_use"><?php lang()->p( 'Enable Image' ); ?></label>
+		<div class="col-sm-10">
+			<select class="form-select" id="body_img_use" name="body_img_use">
+				<option value="true" <?php echo ( plugin()->body_img_use() === true ? 'selected' : '' ); ?>><?php lang()->p( 'Enabled' ); ?></option>
+				<option value="false" <?php echo ( plugin()->body_img_use() === false ? 'selected' : '' ); ?>><?php lang()->p( 'Disabled' ); ?></option>
+			</select>
+			<small class="form-text"><?php lang()->p( 'Add an image to the website body.' ); ?></small>
+		</div>
+	</div>
+
+	<div id="body_img_options" style="display: <?php echo ( plugin()->body_img_use() === true ? 'block' : 'none' ); ?>;">
+
+		<div class="form-field form-group row">
+			<label class="form-label col-sm-2 col-form-label" for="body_img_url"><?php lang()->p( 'Background Images' ); ?></label>
+			<div class="col-sm-10">
+
+				<div id="background-tabs" class="tab-content" data-toggle="tabslet" data-deeplinking="false" data-animation="true">
+
+					<ul class="nav nav-tabs" id="background-nav-tabs" role="tablist">
+						<li class="nav-item">
+							<a class="nav-link" role="tab" aria-controls="background-select" aria-selected="false" href="#background-select"><?php lang()->p( 'Select' ); ?></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" role="tab" aria-controls="background-upload" aria-selected="false" href="#background-upload"><?php lang()->p( 'Upload' ); ?></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" role="tab" aria-controls="background-album" aria-selected="false" href="#background-album"><?php lang()->p( 'Album' ); ?></a>
+						</li>
+					</ul>
+					<div id="background-select" role="tabpanel" aria-labelledby="background-select">
+						<p><?php lang()->p( 'Select one from uploaded background images.' ); ?></p>
+						<?php echo $backgrounds->select_images( $background ); ?>
+					</div>
+
+					<div id="background-upload" class="tab-pane tab-pane-image-upload" role="tabpanel" aria-labelledby="background-upload">
+
+						<p><?php lang()->p( 'Drag & drop images or click to browse. Allowed file types: .gif, .png, .ico' ); ?></p>
+
+						<div class="dropzone" id="background-upload"></div>
+
+						<div id="background-upload-notice" style="display: none;">
+							<p><?php lang()->p( '<strong>Note:</strong> this page needs to be refreshed before new images can be managed or selected as a background image.' ); ?></p>
+							<p><button class="button button-small btn btn-sm btn-primary" onClick="location.reload();"><?php lang()->p( 'Refresh' ); ?></button></p>
+						</div>
+					</div>
+
+					<div id="background-album" class="tab-pane tab-pane-image-upload" role="tabpanel" aria-labelledby="background-album">
+						<p><?php lang()->p( 'Manage uploaded background images.' ); ?></p>
+						<div id="background-album-wrap"><?php echo $backgrounds->manage_images( $background ); ?></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="form-field form-group row">
+			<label class="form-label col-sm-2 col-form-label" for="body_img_repeat"><?php lang()->p( 'Image Repeat' ); ?></label>
+			<div class="col-sm-10">
+				<div class="radio-buttons-wrap">
+
+					<label class="check-label-wrap" for="bg_repeat"><input type="radio" name="body_img_repeat" id="bg_repeat" value="repeat" <?php echo ( 'repeat' == plugin()->body_img_repeat() ? 'checked' : '' ); ?>> <?php lang()->p( 'Repeat' ); ?></label>
+
+					<label class="check-label-wrap" for="bg_no_repeat"><input type="radio" name="body_img_repeat" id="bg_no_repeat" value="no-repeat" <?php echo ( 'no-repeat' == plugin()->body_img_repeat() ? 'checked' : '' ); ?>> <?php lang()->p( 'No Repeat' ); ?></label>
+				</div>
+			</div>
+		</div>
+
+		<div class="form-field form-group row">
+			<label class="form-label col-sm-2 col-form-label" for="body_img_x"><?php lang()->p( 'Position X' ); ?></label>
+			<div class="col-sm-10">
+				<div class="radio-buttons-wrap">
+
+					<label class="check-label-wrap" for="bg_x_left"><input type="radio" name="body_img_x" id="bg_x_left" value="left" <?php echo ( 'left' == plugin()->body_img_x() ? 'checked' : '' ); ?>> <?php lang()->p( 'Left' ); ?></label>
+
+					<label class="check-label-wrap" for="bg_x_center"><input type="radio" name="body_img_x" id="bg_x_center" value="center" <?php echo ( 'center' == plugin()->body_img_x() ? 'checked' : '' ); ?>> <?php lang()->p( 'Center' ); ?></label>
+
+					<label class="check-label-wrap" for="bg_x_right"><input type="radio" name="body_img_x" id="bg_x_right" value="right" <?php echo ( 'right' == plugin()->body_img_x() ? 'checked' : '' ); ?>> <?php lang()->p( 'Right' ); ?></label>
+
+					<label class="check-label-wrap" for="bg_x_custom"><input type="radio" name="body_img_x" id="bg_x_custom" value="custom" <?php echo ( 'custom' == plugin()->body_img_x() ? 'checked' : '' ); ?>> <?php lang()->p( 'Custom' ); ?></label>
+				</div>
+				<div id="body_img_x_custom_wrap" style="display: <?php echo ( 'custom' == plugin()->body_img_x() ? 'block' : 'none' ); ?>; margin-top: 0.5em;">
+					<input type="text" id="body_img_x_custom" name="body_img_x_custom" value="<?php echo plugin()->body_img_x_custom() ?>" placeholder="<?php lang()->p( 'Enter valid CSS' ); ?>" />
+				</div>
+			</div>
+		</div>
+
+		<div class="form-field form-group row">
+			<label class="form-label col-sm-2 col-form-label" for="body_img_y"><?php lang()->p( 'Position Y' ); ?></label>
+			<div class="col-sm-10">
+				<div class="radio-buttons-wrap">
+
+					<label class="check-label-wrap" for="bg_y_top"><input type="radio" name="body_img_y" id="bg_y_top" value="top" <?php echo ( 'top' == plugin()->body_img_y() ? 'checked' : '' ); ?>> <?php lang()->p( 'Top' ); ?></label>
+
+					<label class="check-label-wrap" for="bg_y_center"><input type="radio" name="body_img_y" id="bg_y_center" value="center" <?php echo ( 'center' == plugin()->body_img_y() ? 'checked' : '' ); ?>> <?php lang()->p( 'Center' ); ?></label>
+
+					<label class="check-label-wrap" for="bg_y_bottom"><input type="radio" name="body_img_y" id="bg_y_bottom" value="bottom" <?php echo ( 'bottom' == plugin()->body_img_y() ? 'checked' : '' ); ?>> <?php lang()->p( 'Bottom' ); ?></label>
+
+					<label class="check-label-wrap" for="bg_y_custom"><input type="radio" name="body_img_y" id="bg_y_custom" value="custom" <?php echo ( 'custom' == plugin()->body_img_y() ? 'checked' : '' ); ?>> <?php lang()->p( 'Custom' ); ?></label>
+				</div>
+				<div id="body_img_y_custom_wrap" style="display: <?php echo ( 'custom' == plugin()->body_img_y() ? 'block' : 'none' ); ?>; margin-top: 0.5em;">
+					<input type="text" id="body_img_y_custom" name="body_img_y_custom" value="<?php echo plugin()->body_img_y_custom() ?>" placeholder="<?php lang()->p( 'Enter valid CSS' ); ?>" />
+				</div>
+			</div>
+		</div>
+
+		<div class="form-field form-group row">
+			<label class="form-label col-sm-2 col-form-label" for="body_img_size"><?php lang()->p( 'Image Size' ); ?></label>
+			<div class="col-sm-10">
+				<div class="radio-buttons-wrap">
+
+					<label class="check-label-wrap" for="bg_size_auto"><input type="radio" name="body_img_size" id="bg_size_auto" value="auto" <?php echo ( 'auto' == plugin()->body_img_size() ? 'checked' : '' ); ?>> <?php lang()->p( 'Auto' ); ?></label>
+
+					<label class="check-label-wrap" for="bg_size_background"><input type="radio" name="body_img_size" id="bg_size_background" value="background" <?php echo ( 'background' == plugin()->body_img_size() ? 'checked' : '' ); ?>> <?php lang()->p( 'Cover' ); ?></label>
+
+					<label class="check-label-wrap" for="bg_size_contain"><input type="radio" name="body_img_size" id="bg_size_contain" value="contain" <?php echo ( 'contain' == plugin()->body_img_size() ? 'checked' : '' ); ?>> <?php lang()->p( 'Contain' ); ?></label>
+
+					<label class="check-label-wrap" for="bg_size_custom"><input type="radio" name="body_img_size" id="bg_size_custom" value="custom" <?php echo ( 'custom' == plugin()->body_img_size() ? 'checked' : '' ); ?>> <?php lang()->p( 'Custom' ); ?></label>
+				</div>
+				<div id="body_img_size_custom_wrap" style="display: <?php echo ( 'custom' == plugin()->body_img_size() ? 'block' : 'none' ); ?>; margin-top: 0.5em;">
+					<input type="text" id="body_img_size_custom" name="body_img_size_custom" value="<?php echo plugin()->body_img_size_custom() ?>" placeholder="<?php lang()->p( 'Enter valid CSS' ); ?>" />
+				</div>
+			</div>
+		</div>
+
+		<div class="form-field form-group row">
+			<label class="form-label col-sm-2 col-form-label" for="body_img_attach"><?php lang()->p( 'Image Attachment' ); ?></label>
+			<div class="col-sm-10">
+				<div class="radio-buttons-wrap">
+
+					<label class="check-label-wrap" for="bg_attach_scroll"><input type="radio" name="body_img_attach" id="bg_attach_scroll" value="scroll" <?php echo ( 'scroll' == plugin()->body_img_attach() ? 'checked' : '' ); ?>> <?php lang()->p( 'Scroll' ); ?></label>
+
+					<label class="check-label-wrap" for="bg_attach_fixed"><input type="radio" name="body_img_attach" id="bg_attach_fixed" value="fixed" <?php echo ( 'fixed' == plugin()->body_img_attach() ? 'checked' : '' ); ?>> <?php lang()->p( 'Fixed' ); ?></label>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</fieldset>
+
+<h3 class="form-heading"><?php lang()->p( 'Color Schemes' ); ?></h3>
+
+<fieldset>
+
+	<legend class="screen-reader-text"><?php lang()->p( 'Manage Color Scheme' ); ?></legend>
 
 	<div class="form-field form-group row">
 		<label class="form-label col-sm-2 col-form-label" for="color_scheme"><?php lang()->p( 'Color Scheme' ); ?></label>
@@ -642,6 +785,41 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 </fieldset>
 
 <script>
+$( function() {
+	$( '.delete-background' ).bind( 'click', function() {
+		if ( ! confirm( '<?php lang()->p( 'Are you sure you want to delete this image?' ); ?>' ) ) { return; }
+		deleteBackground(this);
+		$( "#background-images-count" ).load( window.location.href + " #background-images-count > span" );
+	});
+});
+
+function deleteBackground(el) {
+	$.post( background.config.ajaxUrl, {
+		tokenCSRF : $( '#jstokenCSRF' ).val(),
+		action    : 'deleteImage',
+		album     : $(el).data( 'album' ),
+		file      : $(el).data( 'file' )
+	},
+	function() {
+		let manage = '#background-image-' + $(el).data( 'number' );
+		let select = '#background-select-item-' + $(el).data( 'number' );
+		let input  = '#background-select-item-' + $(el).data( 'number' ) + ' input';
+		$( manage ).fadeOut( 450, function() {
+			$(this).remove();
+		} );
+		$( select ).hide();
+		$( input ).removeAttr( 'checked' );
+
+	}).fail( function() {
+		$.alert({
+			title   : background.L.error,
+			content : background.L.deleteImageError
+		});
+	});
+}
+</script>
+
+<script>
 jQuery(document).ready( function($) {
 
 	$( '#color_scheme' ).on( 'change', function() {
@@ -701,9 +879,9 @@ jQuery(document).ready( function($) {
 			$( '#loader_text_color_dark' ).val( '<?php echo $option['dark']['text']; ?>' );
 
 			if ( 'default' != scheme ) {
-				$( '#cover_blend' ).val( '<?php echo ( isset( $option['media'] ) ? $option['media'] : $option['light']['three'] ); ?>' );
+				$( '#background_blend' ).val( '<?php echo ( isset( $option['media'] ) ? $option['media'] : $option['light']['three'] ); ?>' );
 			} else {
-				$( '#cover_blend' ).val( '<?php echo $this->dbFields['cover_blend']; ?>' );
+				$( '#background_blend' ).val( '<?php echo $this->dbFields['background_blend']; ?>' );
 			}
 
 		} else {

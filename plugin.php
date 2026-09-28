@@ -35,6 +35,7 @@ use function CFE_Plugin\{
 	css,
 	default_theme,
 	define_layout,
+	define_background,
 	error_cats_display,
 	error_search_display,
 	error_static_display,
@@ -188,6 +189,8 @@ class configureight extends Plugin {
 			'CFE_Classes\Image_Upload'         => $path . 'class-image-upload.php',
 			'CFE_Classes\Bookmark_Images'      => $path . 'class-bookmark-images.php',
 			'CFE_Classes\Bookmark_Album'       => $path . 'class-bookmark-album.php',
+			'CFE_Classes\Background_Images'      => $path . 'class-background-images.php',
+			'CFE_Classes\Background_Album'       => $path . 'class-background-album.php',
 			'CFE_Classes\Logo_Standard_Images' => $path . 'class-logo-standard-images.php',
 			'CFE_Classes\Logo_Standard_Album'  => $path . 'class-logo-standard-album.php',
 			'CFE_Classes\Logo_Cover_Images'    => $path . 'class-logo-cover-images.php',
@@ -373,6 +376,16 @@ class configureight extends Plugin {
 			'content_width'          => '1280',
 			'horz_spacing'           => '2',
 			'vert_spacing'           => '2',
+			'body_img_use'           => false,
+			'body_img_url'           => [],
+			'body_img_repeat'        => 'repeat',
+			'body_img_x'             => 'center',
+			'body_img_x_custom'      => '',
+			'body_img_y'             => 'center',
+			'body_img_y_custom'      => '',
+			'body_img_size'          => 'auto',
+			'body_img_size_custom'   => '',
+			'body_img_attach'        => 'scroll',
 			'color_scheme'           => 'default',
 			'use_dark_scheme'        => false,
 			'custom_scheme_from'     => 'default',
@@ -435,6 +448,7 @@ class configureight extends Plugin {
 		// Array of custom hooks.
 		$this->customHooks = [
 			'layout_props',
+			'background_props',
 			'font_scheme_props',
 			'color_scheme_props',
 			'comment_form',
@@ -998,6 +1012,7 @@ class configureight extends Plugin {
 			ob_end_clean();
 
 			$bookmark   = 'bookmark';
+			$background = 'background';
 			$logo_std   = 'logo_std';
 			$logo_cover = 'logo_cover';
 			$cover      = 'cover';
@@ -1005,10 +1020,12 @@ class configureight extends Plugin {
 
 			// Get helper objects.
 			require_once( 'includes/classes/class-bookmark-images-helper.php' );
+			require_once( 'includes/classes/class-background-images-helper.php' );
 			require_once( 'includes/classes/class-logo-standard-images-helper.php' );
 			require_once( 'includes/classes/class-logo-cover-images-helper.php' );
 			require_once( 'includes/classes/class-cover-images-helper.php' );
 			$bookmark_helper   = new \CFE_Classes\Bookmark_Images_Helper();
+			$background_helper = new \CFE_Classes\Background_Images_Helper();
 			$logo_std_helper   = new \CFE_Classes\Logo_Standard_Images_Helper();
 			$logo_cover_helper = new \CFE_Classes\Logo_Cover_Images_Helper();
 			$cover_helper      = new \CFE_Classes\Cover_Images_Helper();
@@ -1016,12 +1033,16 @@ class configureight extends Plugin {
 			// Load required JS.
 			$html .= '<script type="text/javascript" src="' . $this->domainPath() . "assets/js/jquery-confirm{$suffix}.js?version=" . $this->getMetadata( 'version' ) . '"></script>' . PHP_EOL;
 			$html .= $bookmark_helper->adminJSData( $domain );
+			$html .= $background_helper->adminJSData( $domain );
 			$html .= $logo_std_helper->adminJSData( $domain );
 			$html .= $logo_cover_helper->adminJSData( $domain );
 			$html .= $cover_helper->adminJSData( $domain );
 
 			if ( $bookmark ) {
 				$html .= $bookmark_helper->dropzoneJSData( $bookmark );
+			}
+			if ( $background ) {
+				$html .= $background_helper->dropzoneJSData( $background );
 			}
 			if ( $logo_std ) {
 				$html .= $logo_std_helper->dropzoneJSData( $logo_std );
@@ -1042,6 +1063,7 @@ class configureight extends Plugin {
 		}
 
 		$bookmark   = 'bookmark';
+		$background = 'background';
 		$logo_std   = 'logo_std';
 		$logo_cover = 'logo_cover';
 		$cover      = 'cover';
@@ -1049,10 +1071,12 @@ class configureight extends Plugin {
 
 		// Get helper objects.
 		require_once( 'includes/classes/class-bookmark-images-helper.php' );
+		require_once( 'includes/classes/class-background-images-helper.php' );
 		require_once( 'includes/classes/class-logo-standard-images-helper.php' );
 		require_once( 'includes/classes/class-logo-cover-images-helper.php' );
 		require_once( 'includes/classes/class-cover-images-helper.php' );
 		$bookmark_helper   = new \CFE_Classes\Bookmark_Images_Helper();
+		$background_helper = new \CFE_Classes\Background_Images_Helper();
 		$logo_std_helper   = new \CFE_Classes\Logo_Standard_Images_Helper();
 		$logo_cover_helper = new \CFE_Classes\Logo_Cover_Images_Helper();
 		$cover_helper      = new \CFE_Classes\Cover_Images_Helper();
@@ -1060,12 +1084,16 @@ class configureight extends Plugin {
 		// Load required JS
 		$html .= '<script type="text/javascript" src="' . $this->domainPath() . "assets/js/jquery-confirm{$suffix}.js?version=" . $this->getMetadata( 'version' ) . '"></script>' . PHP_EOL;
 		$html .= $bookmark_helper->adminJSData( $domain );
+		$html .= $background_helper->adminJSData( $domain );
 		$html .= $logo_std_helper->adminJSData( $domain );
 		$html .= $logo_cover_helper->adminJSData( $domain );
 		$html .= $cover_helper->adminJSData( $domain );
 
 		if ( $bookmark ) {
 			$html .= $bookmark_helper->dropzoneJSData( $bookmark );
+		}
+		if ( $background ) {
+			$html .= $background_helper->dropzoneJSData( $background );
 		}
 		if ( $logo_std ) {
 			$html .= $logo_std_helper->dropzoneJSData( $logo_std );
@@ -1091,11 +1119,13 @@ class configureight extends Plugin {
 	public function form() {
 
 		$bookmark   = 'bookmark';
+		$background = 'background';
 		$logo_std   = 'logo_std';
 		$logo_cover = 'logo_cover';
 		$cover      = 'cover';
 		$config['imagesSort'] = 'newest';
 		$bookmarks   = new CFE_Classes\Bookmark_Album( $config, true );
+		$backgrounds = new CFE_Classes\Background_Album( $config, true );
 		$logos_std   = new CFE_Classes\Logo_Standard_Album( $config, true );
 		$logos_cover = new CFE_Classes\Logo_Cover_Album( $config, true );
 		$covers      = new CFE_Classes\Cover_Album( $config, true );
@@ -1171,6 +1201,17 @@ class configureight extends Plugin {
 	 */
 	public function layout_props() {
 		echo define_layout();
+	}
+
+	/**
+	 * Background CSS properties hook
+	 *
+	 * @since  1.0.0
+	 * @access public
+	 * @return void
+	 */
+	public function background_props() {
+		echo define_background();
 	}
 
 	/**
@@ -2218,6 +2259,56 @@ class configureight extends Plugin {
 		return $this->getValue( 'vert_spacing' );
 	}
 
+	// @return boolean
+	public function body_img_use() {
+		return $this->getValue( 'body_img_use' );
+	}
+
+	// @return array
+	public function body_img_url() {
+		return $this->getValue( 'body_img_url' );
+	}
+
+	// @return array
+	public function body_img_repeat() {
+		return $this->getValue( 'body_img_repeat' );
+	}
+
+	// @return array
+	public function body_img_x() {
+		return $this->getValue( 'body_img_x' );
+	}
+
+	// @return string
+	public function body_img_x_custom() {
+		return $this->getValue( 'body_img_x_custom' );
+	}
+
+	// @return array
+	public function body_img_y() {
+		return $this->getValue( 'body_img_y' );
+	}
+
+	// @return string
+	public function body_img_y_custom() {
+		return $this->getValue( 'body_img_y_custom' );
+	}
+
+	// @return array
+	public function body_img_size() {
+		return $this->getValue( 'body_img_size' );
+	}
+
+	// @return string
+	public function body_img_size_custom() {
+		return $this->getValue( 'body_img_size_custom' );
+	}
+
+	// @return array
+	public function body_img_attach() {
+		return $this->getValue( 'body_img_attach' );
+	}
+
 	// @return string
 	public function color_scheme() {
 		return $this->getValue( 'color_scheme' );
@@ -2719,6 +2810,31 @@ class configureight extends Plugin {
 		// Use cover.jpg file in theme assets/images if found.
 		} elseif ( ! $cover && file_exists( PATH_THEMES . site()->theme() . '/assets/images/cover.jpg' ) ) {
 			return DOMAIN_THEME . 'assets/images/cover.jpg';
+		}
+		return false;
+	}
+
+	/**
+	 * Background image src
+	 *
+	 * @since  1.0.0
+	 * @access public
+	 * @return mixed Returns the URL or false.
+	 */
+	function background_src() {
+
+		// Get image field value & image URL.
+		$image   = $this->body_img_url();
+		if ( isset( $image[0] ) ) {
+			$image = $image[0];
+		} else {
+			$image = '';
+		}
+		$album  = PATH_CONTENT . $this->storage_root . DS . 'background' . DS . 'cache' . DS . 'background' . DS . $image;
+		$option = DOMAIN_CONTENT . $this->storage_root . '/background/cache/background/' . $image;
+
+		if ( $image && file_exists( $album ) ) {
+			return $option;
 		}
 		return false;
 	}

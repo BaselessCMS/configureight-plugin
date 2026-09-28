@@ -264,5 +264,9 @@ jQuery(document).ready( function($) {
 	$( '.cover-select-label' ).click( function() {
 		$(this).toggleClass( 'selected' );
 	});
+	$( '.background-select-label' ).click( function() {
+		$( '.background-select-label' ).removeClass( 'selected' );
+		$(this).addClass( 'selected' );
+	});
 });
 </script>

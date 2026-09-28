@@ -247,6 +247,59 @@ function define_layout() {
 }
 
 /**
+ * Define layout
+ *
+ * @since  1.0.0
+ * @return string
+ */
+function define_background() {
+
+	$use = plugin()->body_img_use();
+	$img = plugin()->body_img_url();
+	$src = plugin()->background_src();
+
+	$repeat = plugin()->body_img_repeat();
+	$pos_x  = plugin()->body_img_x();
+	$pos_y  = plugin()->body_img_y();
+	$size   = plugin()->body_img_size();
+	$attach = plugin()->body_img_attach();
+
+	$pos_x_custom = plugin()->body_img_x_custom();
+	$pos_y_custom = plugin()->body_img_y_custom();
+	$size_custom  = plugin()->body_img_size_custom();
+
+	if ( ! $use || ! isset( $img[0] ) ) {
+		return false;
+	}
+
+	if ( 'custom' == $pos_x && ! empty( $pos_x_custom ) && ! ctype_space( $pos_x_custom ) ) {
+		$pos_x = $pos_x_custom;
+	}
+	if ( 'custom' == $pos_y && ! empty( $pos_y_custom ) && ! ctype_space( $pos_y_custom ) ) {
+		$pos_y = $pos_y_custom;
+	}
+	if ( 'custom' == $size && ! empty( $size_custom ) && ! ctype_space( $size_custom ) ) {
+		$size = $size_custom;
+	}
+	$position = sprintf(
+		'%s %s',
+		$pos_x,
+		$pos_y
+	);
+
+	$styles = '<style id="background-props">:host, :root {';
+
+	$styles .= "--cfe-body--bg-image: url( '{$src}' );";
+	$styles .= "--cfe-body--bg-repeat: {$repeat};";
+	$styles .= "--cfe-body--bg-position: {$position};";
+	$styles .= "--cfe-body--bg-size: {$size};";
+	$styles .= "--cfe-body--bg-attachment: {$attach};";
+
+	$styles .= '}</style>';
+	return $styles;
+}
+
+/**
  * Get SVG files
  *
  * @since  1.0.0
