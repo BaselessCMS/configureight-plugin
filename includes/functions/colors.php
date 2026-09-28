@@ -56,6 +56,50 @@ function hex_to_rgb( $color, $opacity = false ) {
 }
 
 /**
+ * Convert rgb() or rgba() to #rrggbbaa for hex codes.
+ *
+ * @param  string $color The RGB(A) color
+ * @return string The color hex code
+ */
+function rgb_to_hex( string $color ): string {
+
+	$has_alpha = false;
+
+	if ( strpos( $color, 'rgba' ) === 0 ) {
+		$has_alpha = true;
+	}
+
+	$color = preg_replace( '/^rgba?\(/', '', $color );
+	$color = preg_replace( '/\)$/', '', $color );
+
+	if ( strpos( $color, ',' ) !== false ) {
+		$color = str_replace( ' ', '', $color );
+		$values = explode( ',', $color );
+	}
+	else {
+		$color = str_replace( '/', ' ', $color );
+		$color = preg_replace( '/\s{2,}/', ' ', $color );
+		$values = explode( ' ', $color );
+	}
+
+	if ( $has_alpha && count( $values ) === 4 ) {
+		$color = sprintf( '%02x%02x%02x', $values[0], $values[1], $values[2], $values[3] );
+	}
+	else if ( ! $has_alpha && count( $values ) === 3 ) {
+		$color = sprintf( '%02x%02x%02x', $values[0], $values[1], $values[2] );
+	}
+	else {
+		return $color;
+	}
+
+	if ( empty( $color ) ) {
+	    throw new \Exception( 'Color could not be transformed into hex.' );
+	}
+
+	return '#' . $color;
+}
+
+/**
  * Default color value
  *
  * @since  1.0.0
@@ -3116,6 +3160,16 @@ function define_color_scheme() {
 			plugin()->loader_text_color()
 		);
 	}
+
+	// Site header.
+	$colors[] = sprintf(
+		'--cfe-site-header--bg-color: %s;',
+		rgb_to_hex( plugin()->color_body() )
+	);
+	$colors[] = sprintf(
+		'--cfe-site-header--bg-color--dark: %s;',
+		rgb_to_hex( plugin()->color_body_dark() )
+	);
 
 	// Cover image desaturation.
 	$colors[] = sprintf(
