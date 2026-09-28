@@ -12,12 +12,18 @@ use function CFE_Plugin\{
 	site,
 	lang
 };
+use function CFE_Colors\{
+	current_color_scheme
+};
 
 // Default values.
 $logo_filename = '';
 if ( site()->logo() ) {
 	$logo_filename = str_replace( DOMAIN_UPLOADS, '', site()->logo() );
 }
+
+// Current color scheme.
+$current_scheme = current_color_scheme();
 
 ?>
 
@@ -57,6 +63,54 @@ if ( site()->logo() ) {
 				<option value="false" <?php echo ( plugin()->site_slogan() === false ? 'selected' : '' ); ?>><?php lang()->p( 'Hide' ); ?></option>
 			</select>
 			<small class="form-text"><?php lang()->p( 'Slogan will not be hidden from search engines and screen readers.' ); ?></small>
+		</div>
+	</div>
+
+	<div class="form-field form-group row">
+		<label class="form-label col-sm-2 col-form-label" for="header_bg_color"><?php lang()->p( 'Light Background' ); ?></label>
+		<div class="col-sm-10">
+			<div class="row color-picker-wrap">
+				<input class="color-picker scheme-color" id="header_bg_color" name="header_bg_color" value="<?php echo plugin()->header_bg_color(); ?>" />
+				<input id="header_bg_color_default" class="screen-reader-text" type="hidden" value="<?php echo $current_scheme['light']['body']; ?>" />
+				<span class="btn btn-secondary btn-md hide-if-no-js" id="header_bg_color_default_button"><?php lang()->p( 'Reset' ); ?></span>
+			</div>
+			<small class="form-text"><?php lang()->p( 'Header background color in light mode.' ); ?></small>
+		</div>
+	</div>
+
+	<div class="form-field form-group row">
+		<label class="form-label col-sm-2 col-form-label" for="header_bg_color_dark"><?php lang()->p( 'Dark Background' ); ?></label>
+		<div class="col-sm-10">
+			<div class="row color-picker-wrap">
+				<input class="color-picker scheme-color" id="header_bg_color_dark" name="header_bg_color_dark" value="<?php echo plugin()->header_bg_color_dark(); ?>" />
+				<input id="header_bg_color_dark_default" class="screen-reader-text" type="hidden" value="<?php echo $current_scheme['dark']['body']; ?>" />
+				<span class="btn btn-secondary btn-md hide-if-no-js" id="header_bg_color_dark_default_button"><?php lang()->p( 'Reset' ); ?></span>
+			</div>
+			<small class="form-text"><?php lang()->p( 'Header background color in dark mode.' ); ?></small>
+		</div>
+	</div>
+
+	<div class="form-field form-group row">
+		<label class="form-label col-sm-2 col-form-label" for="header_text_color"><?php lang()->p( 'Light Text' ); ?></label>
+		<div class="col-sm-10">
+			<div class="row color-picker-wrap">
+				<input class="color-picker scheme-color" id="header_text_color" name="header_text_color" value="<?php echo plugin()->header_text_color(); ?>" />
+				<input id="header_text_color_default" class="screen-reader-text" type="hidden" value="<?php echo $current_scheme['light']['text']; ?>" />
+				<span class="btn btn-secondary btn-md hide-if-no-js" id="header_text_color_default_button"><?php lang()->p( 'Reset' ); ?></span>
+			</div>
+			<small class="form-text"><?php lang()->p( 'Header text color in light mode. Only applies if a custom header background color is set.' ); ?></small>
+		</div>
+	</div>
+
+	<div class="form-field form-group row">
+		<label class="form-label col-sm-2 col-form-label" for="header_text_color_dark"><?php lang()->p( 'Dark Text' ); ?></label>
+		<div class="col-sm-10">
+			<div class="row color-picker-wrap">
+				<input class="color-picker scheme-color" id="header_text_color_dark" name="header_text_color_dark" value="<?php echo plugin()->header_text_color_dark(); ?>" />
+				<input id="header_text_color_dark_default" class="screen-reader-text" type="hidden" value="<?php echo $current_scheme['dark']['text']; ?>" />
+				<span class="btn btn-secondary btn-md hide-if-no-js" id="header_text_color_dark_default_button"><?php lang()->p( 'Reset' ); ?></span>
+			</div>
+			<small class="form-text"><?php lang()->p( 'Header text color in dark mode. Only applies if a custom header background color is set.' ); ?></small>
 		</div>
 	</div>
 

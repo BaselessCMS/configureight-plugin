@@ -3170,12 +3170,46 @@ function define_color_scheme() {
 	// Site header.
 	$colors[] = sprintf(
 		'--cfe-site-header--bg-color: %s;',
-		rgb_to_hex( plugin()->color_body() )
+		plugin()->header_bg_color()
 	);
 	$colors[] = sprintf(
 		'--cfe-site-header--bg-color--dark: %s;',
-		rgb_to_hex( plugin()->color_body_dark() )
+		plugin()->header_bg_color_dark()
 	);
+	$colors[] = sprintf(
+		'--cfe-site-header--text-color: %s;',
+		plugin()->header_text_color()
+	);
+	$colors[] = sprintf(
+		'--cfe-site-header--text-color--dark: %s;',
+		plugin()->header_text_color_dark()
+	);
+	if ( plugin()->header_bg_color() !== plugin()->color_body() ) {
+		$colors[] = sprintf(
+			'--cfe-site-title--text-color: %s;',
+			plugin()->header_text_color()
+		);
+		$colors[] = sprintf(
+			'--cfe-site-description--text-color: %s;',
+			plugin()->header_text_color()
+		);$colors[] = sprintf(
+			'--cfe-site-nav--list--link--text-color: %s;',
+			plugin()->header_text_color()
+		);
+	}
+	if ( plugin()->header_bg_color_dark() !== plugin()->color_body_dark() ) {
+		$colors[] = sprintf(
+			'--cfe-site-title--text-color--dark: %s;',
+			plugin()->header_text_color()
+		);
+		$colors[] = sprintf(
+			'--cfe-site-description--text-color--dark: %s;',
+			plugin()->header_text_color()
+		);$colors[] = sprintf(
+			'--cfe-site-nav--list--link--text-color--dark: %s;',
+			plugin()->header_text_color()
+		);
+	}
 
 	// Cover image desaturation.
 	$colors[] = sprintf(

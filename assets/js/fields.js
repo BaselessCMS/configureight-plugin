@@ -48,6 +48,20 @@ jQuery(document).ready( function($) {
 		$( '#loader_text_color_dark' ).spectrum( 'set', $( '#loader_text_default_dark' ).val() );
 	});
 
+	// Header colors.
+	$( '#header_bg_color_default_button' ).click( function() {
+		$( '#header_bg_color' ).spectrum( 'set', $( '#header_bg_color_default' ).val() );
+	});
+	$( '#header_bg_color_dark_default_button' ).click( function() {
+		$( '#header_bg_color_dark' ).spectrum( 'set', $( '#header_bg_color_dark_default' ).val() );
+	});
+	$( '#header_text_color_default_button' ).click( function() {
+		$( '#header_text_color' ).spectrum( 'set', $( '#header_text_color_default' ).val() );
+	});
+	$( '#header_text_color_dark_default_button' ).click( function() {
+		$( '#header_text_color_dark' ).spectrum( 'set', $( '#header_text_color_dark_default' ).val() );
+	});
+
 	// Posts navigation options.
 	$( '#loop_break' ).on( 'change', function() {
 		var show = $(this).val();

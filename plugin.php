@@ -254,6 +254,10 @@ class configureight extends Plugin {
 			'header_layout'          => 'horz',
 			'site_title'             => true,
 			'site_slogan'            => true,
+			'header_bg_color'        => '#ffffff',
+			'header_bg_color_dark'   => '#1e1e1e',
+			'header_text_color'      => '#333333',
+			'header_text_color_dark' => '#ffffff',
 			'standard_logo'          => [],
 			'cover_logo'             => [],
 			'cover_logo_dark_mode'   => true,
@@ -1551,6 +1555,26 @@ class configureight extends Plugin {
 	// @return boolean
 	public function site_slogan() {
 		return $this->getValue( 'site_slogan' );
+	}
+
+	// @return string
+	public function header_bg_color() {
+		return $this->getValue( 'header_bg_color' );
+	}
+
+	// @return string
+	public function header_bg_color_dark() {
+		return $this->getValue( 'header_bg_color_dark' );
+	}
+
+	// @return string
+	public function header_text_color() {
+		return $this->getValue( 'header_text_color' );
+	}
+
+	// @return string
+	public function header_text_color_dark() {
+		return $this->getValue( 'header_text_color_dark' );
 	}
 
 	// @return array
