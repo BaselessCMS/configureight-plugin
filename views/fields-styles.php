@@ -207,7 +207,7 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 
 					<label class="check-label-wrap" for="bg_size_auto"><input type="radio" name="body_img_size" id="bg_size_auto" value="auto" <?php echo ( 'auto' == plugin()->body_img_size() ? 'checked' : '' ); ?>> <?php lang()->p( 'Auto' ); ?></label>
 
-					<label class="check-label-wrap" for="bg_size_background"><input type="radio" name="body_img_size" id="bg_size_background" value="background" <?php echo ( 'background' == plugin()->body_img_size() ? 'checked' : '' ); ?>> <?php lang()->p( 'Cover' ); ?></label>
+					<label class="check-label-wrap" for="bg_size_cover"><input type="radio" name="body_img_size" id="bg_size_cover" value="cover" <?php echo ( 'cover' == plugin()->body_img_size() ? 'checked' : '' ); ?>> <?php lang()->p( 'Cover' ); ?></label>
 
 					<label class="check-label-wrap" for="bg_size_contain"><input type="radio" name="body_img_size" id="bg_size_contain" value="contain" <?php echo ( 'contain' == plugin()->body_img_size() ? 'checked' : '' ); ?>> <?php lang()->p( 'Contain' ); ?></label>
 
