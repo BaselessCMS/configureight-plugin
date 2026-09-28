@@ -13,7 +13,8 @@ use function CFE_Plugin\{
 	lang
 };
 use function CFE_Colors\{
-	current_color_scheme
+	current_color_scheme,
+	current_scheme_color
 };
 
 // Default values.
@@ -67,11 +68,26 @@ $current_scheme = current_color_scheme();
 	</div>
 
 	<div class="form-field form-group row">
+		<label class="form-label col-sm-2 col-form-label" for="header_sticky"><?php lang()->p( 'Sticky Header' ); ?></label>
+		<div class="col-sm-10">
+			<select class="form-select" id="header_sticky" name="header_sticky">
+				<option value="true" <?php echo ( plugin()->header_sticky() === true ? 'selected' : '' ); ?>><?php lang()->p( 'Enabled' ); ?></option>
+				<option value="false" <?php echo ( plugin()->header_sticky() === false ? 'selected' : '' ); ?>><?php lang()->p( 'Disabled' ); ?></option>
+			</select>
+			<small class="form-text"><?php lang()->p( 'Makes the branding and navigation stick to the top of the viewport. Not for mobile screens.' ); ?></small>
+		</div>
+	</div>
+
+	<h3 class="form-heading"><?php lang()->p( 'Header Colors' ); ?></h3>
+
+	<p><?php lang()->p( 'Colors of the active color scheme are used by default.' ); ?></p>
+
+	<div class="form-field form-group row">
 		<label class="form-label col-sm-2 col-form-label" for="header_bg_color"><?php lang()->p( 'Light Background' ); ?></label>
 		<div class="col-sm-10">
 			<div class="row color-picker-wrap">
 				<input class="color-picker scheme-color" id="header_bg_color" name="header_bg_color" value="<?php echo plugin()->header_bg_color(); ?>" />
-				<input id="header_bg_color_default" class="screen-reader-text" type="hidden" value="<?php echo $current_scheme['light']['body']; ?>" />
+				<input id="header_bg_color_default" class="screen-reader-text" type="hidden" value="<?php echo ( current_scheme_color( 'light', 'body' ) ? current_scheme_color( 'light', 'body' ) : plugin()->dbFields['header_bg_color'] ); ?>" />
 				<span class="btn btn-secondary btn-md hide-if-no-js" id="header_bg_color_default_button"><?php lang()->p( 'Reset' ); ?></span>
 			</div>
 			<small class="form-text"><?php lang()->p( 'Header background color in light mode.' ); ?></small>
@@ -113,6 +129,8 @@ $current_scheme = current_color_scheme();
 			<small class="form-text"><?php lang()->p( 'Header text color in dark mode. Only applies if a custom header background color is set.' ); ?></small>
 		</div>
 	</div>
+
+	<h3 class="form-heading"><?php lang()->p( 'Website Logos' ); ?></h3>
 
 	<div class="form-field form-group row">
 		<label class="form-label col-sm-2 col-form-label" for="logo-standard-select"><?php lang()->p( 'Standard Logo' ); ?></label>
@@ -284,17 +302,6 @@ $current_scheme = current_color_scheme();
 				</select>
 				<small class="form-text"><?php lang()->p( 'Where to place the logo in the header branding section.' ); ?></small>
 			</div>
-		</div>
-	</div>
-
-	<div class="form-field form-group row">
-		<label class="form-label col-sm-2 col-form-label" for="header_sticky"><?php lang()->p( 'Sticky Header' ); ?></label>
-		<div class="col-sm-10">
-			<select class="form-select" id="header_sticky" name="header_sticky">
-				<option value="true" <?php echo ( plugin()->header_sticky() === true ? 'selected' : '' ); ?>><?php lang()->p( 'Enabled' ); ?></option>
-				<option value="false" <?php echo ( plugin()->header_sticky() === false ? 'selected' : '' ); ?>><?php lang()->p( 'Disabled' ); ?></option>
-			</select>
-			<small class="form-text"><?php lang()->p( 'Makes the branding and navigation stick to the top of the viewport. Not for mobile screens.' ); ?></small>
 		</div>
 	</div>
 </fieldset>

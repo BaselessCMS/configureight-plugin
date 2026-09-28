@@ -250,7 +250,7 @@ use function CFE_Colors\{
 			<div class="col-sm-10">
 				<div class="row color-picker-wrap">
 					<input class="color-picker scheme-color" id="cover_blend" name="cover_blend" value="<?php echo plugin()->cover_blend(); ?>" />
-					<input id="cover_blend_default" class="screen-reader-text" type="hidden" value="<?php echo ( current_cover_color() ? current_cover_color() : $this-dbFields['cover_blend'] ); ?>" />
+					<input id="cover_blend_default" class="screen-reader-text" type="hidden" value="<?php echo ( current_cover_color() ? current_cover_color() : plugin()->dbFields['cover_blend'] ); ?>" />
 					<span class="btn btn-secondary btn-md hide-if-no-js" id="cover_blend_default_button"><?php lang()->p( 'Reset' ); ?></span>
 				</div>
 				<small class="form-text"><?php lang()->p( 'Save new color scheme setting to get colors from that scheme.' ); ?></small>
@@ -301,7 +301,7 @@ use function CFE_Colors\{
 	<div class="form-field form-group row">
 		<label class="form-label col-sm-2 col-form-label" for="cover_text_color"><?php lang()->p( 'Text Color' ); ?></label>
 		<div class="col-sm-10 row color-picker-wrap">
-			<input class="color-picker custom-color" id="cover_text_color" name="cover_text_color" value="<?php echo plugin()->cover_text_color(); ?>" />
+			<input class="color-picker scheme-color" id="cover_text_color" name="cover_text_color" value="<?php echo plugin()->cover_text_color(); ?>" />
 			<input id="cover_text_default" class="screen-reader-text" type="hidden" value="<?php echo plugin()->dbFields['cover_text_color']; ?>" />
 			<span class="btn btn-secondary btn-md hide-if-no-js" id="cover_text_color_default"><?php lang()->p( 'Default' ); ?></span>
 		</div>

@@ -865,6 +865,8 @@ jQuery(document).ready( function($) {
 			$( '#loader_bg_color' ).val( '<?php echo $option['light']['body']; ?>' );
 			$( '#loader_text_color' ).val( '<?php echo $option['light']['text']; ?>' );
 
+			$( '#header_bg_color' ).val( '<?php echo $option['light']['body']; ?>' );
+
 			// Custom scheme dark colors.
 			$( '#color_body_dark' ).val( '<?php echo $option['dark']['body']; ?>' );
 			$( '#color_text_dark' ).val( '<?php echo $option['dark']['text']; ?>' );
@@ -878,11 +880,11 @@ jQuery(document).ready( function($) {
 			$( '#loader_bg_color_dark' ).val( '<?php echo $option['dark']['body']; ?>' );
 			$( '#loader_text_color_dark' ).val( '<?php echo $option['dark']['text']; ?>' );
 
-			if ( 'default' != scheme ) {
-				$( '#background_blend' ).val( '<?php echo ( isset( $option['media'] ) ? $option['media'] : $option['light']['three'] ); ?>' );
-			} else {
-				$( '#background_blend' ).val( '<?php echo $this->dbFields['background_blend']; ?>' );
-			}
+			$( '#header_bg_color_dark' ).val( '<?php echo $option['dark']['body']; ?>' );
+
+			// Other.
+			$( '#cover_blend' ).val( '<?php echo ( isset( $option['media'] ) ? $option['media'] : $option['light']['three'] ); ?>' );
+			$( '#cover_text_color' ).val( '<?php echo plugin()->cover_text_default(); ?>' );
 
 		} else {
 

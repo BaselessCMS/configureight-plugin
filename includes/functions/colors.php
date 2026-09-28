@@ -2888,6 +2888,28 @@ function color_scheme_template() {
  * @since  1.0.0
  * @return mixed Returns a hex value or false.
  */
+function current_scheme_color( $mode = '', $key = '' ) {
+
+	// Color schemes.
+	$color   = false;
+	$colors  = color_schemes();
+	$current = current_color_scheme();
+	$custom_from = plugin()->custom_scheme_from();
+
+	if ( isset( $colors[$custom_from][$mode][$key] ) ) {
+		$color = $colors[$custom_from][$mode][$key];
+	} elseif ( isset( $current[$mode][$key] ) ) {
+		$color = $current[$mode][$key];
+	}
+	return $color;
+}
+
+/**
+ * Current scheme cover color
+ *
+ * @since  1.0.0
+ * @return mixed Returns a hex value or false.
+ */
 function current_cover_color() {
 
 	// Color schemes.
