@@ -52,7 +52,7 @@ switch ( $action ) {
 	case 'deleteImage':
 		$album = $_POST['album']; // @todo add some protection.
 		$file  = $_POST['file']; // @todo add some protection.
-		checkFileDirExists( $storage.DS . $album.DS . $file );
+		checkFileDirExists( $storage . DS . $album . DS . $file );
 		$success = deleteImage( $storage, $album, $file );
 		break;
 
