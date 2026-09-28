@@ -595,9 +595,9 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 			</div>
 			<small id="wght_text_desc" class="form-text">
 				<?php if ( ! $current_fonts['text']['var'] ) {
-					lang()->p( 'This scheme is using a system font stack. Weights may vary by the font deployed by the user device.' );
+					lang()->p( 'This font does not have variable weight.' );
 				} else {
-					echo '';
+					lang()->p( 'This font has variable weight.' );
 				} ?>
 			</small>
 
@@ -630,9 +630,9 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 			</div>
 			<small id="wght_display_desc" class="form-text">
 				<?php if ( ! $current_fonts['display']['var'] ) {
-					lang()->p( 'This scheme is using a system font stack. Weights may vary by the font deployed by the user device.' );
+					lang()->p( 'This font does not have variable weight.' );
 				} else {
-					echo '';
+					lang()->p( 'This font has variable weight.' );
 				} ?>
 			</small>
 
@@ -665,9 +665,9 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 			</div>
 			<small id="wght_primary_desc" class="form-text">
 				<?php if ( ! $current_fonts['primary']['var'] ) {
-					lang()->p( 'This scheme is using a system font stack. Weights may vary by the font deployed by the user device.' );
+					lang()->p( 'This font does not have variable weight.' );
 				} else {
-					echo '';
+					lang()->p( 'This font has variable weight.' );
 				} ?>
 			</small>
 
@@ -700,9 +700,9 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 			</div>
 			<small id="wght_secondary_desc" class="form-text">
 				<?php if ( ! $current_fonts['secondary']['var'] ) {
-					lang()->p( 'This scheme is using a system font stack. Weights may vary by the font deployed by the user device.' );
+					lang()->p( 'This font does not have variable weight.' );
 				} else {
-					echo '';
+					lang()->p( 'This font has variable weight.' );
 				} ?>
 			</small>
 
@@ -919,9 +919,9 @@ jQuery(document).ready( function($) {
 			$( '#wght_text' ).attr( 'step', '<?php echo $scheme['text']['step']; ?>' );
 			$( '#wght_text' ).val( '<?php echo $scheme['text']['weight']; ?>' );
 			if ( true == '<?php echo $scheme['text']['var']; ?>' ) {
-				$( '#wght_text_desc' ).html( '' );
+				$( '#wght_text_desc' ).html( '<?php lang()->p( 'This font has variable weight.' ); ?>' );
 			} else {
-				$( '#wght_text_desc' ).html( '<?php lang()->p( 'This scheme is using a system font stack. Weights may vary by the font deployed by the user device.' ); ?>' );
+				$( '#wght_text_desc' ).html( '<?php lang()->p( 'This font does not have variable weight.' ); ?>' );
 			}
 
 			// General text letter spacing.
@@ -937,9 +937,9 @@ jQuery(document).ready( function($) {
 			$( '#wght_primary' ).attr( 'step', '<?php echo $scheme['primary']['step']; ?>' );
 			$( '#wght_primary' ).val( '<?php echo $scheme['primary']['weight']; ?>' );
 			if ( true == '<?php echo $scheme['primary']['var']; ?>' ) {
-				$( '#wght_primary_desc' ).html( '' );
+				$( '#wght_primary_desc' ).html( '<?php lang()->p( 'This font has variable weight.' ); ?>' );
 			} else {
-				$( '#wght_primary_desc' ).html( '<?php lang()->p( 'This scheme is using a system font stack. Weights may vary by the font deployed by the user device.' ); ?>' );
+				$( '#wght_primary_desc' ).html( '<?php lang()->p( 'This font does not have variable weight.' ); ?>' );
 			}
 
 			// Primary headings letter spacing.
@@ -955,9 +955,9 @@ jQuery(document).ready( function($) {
 			$( '#wght_secondary' ).attr( 'step', '<?php echo $scheme['secondary']['step']; ?>' );
 			$( '#wght_secondary' ).val( '<?php echo $scheme['secondary']['weight']; ?>' );
 			if ( true == '<?php echo $scheme['secondary']['var']; ?>' ) {
-				$( '#wght_secondary_desc' ).html( '' );
+				$( '#wght_secondary_desc' ).html( '<?php lang()->p( 'This font has variable weight.' ); ?>' );
 			} else {
-				$( '#wght_secondary_desc' ).html( '<?php lang()->p( 'This scheme is using a system font stack. Weights may vary by the font deployed by the user device.' ); ?>' );
+				$( '#wght_secondary_desc' ).html( '<?php lang()->p( 'This font does not have variable weight.' ); ?>' );
 			}
 
 			// Secondary headings letter spacing.
@@ -973,9 +973,9 @@ jQuery(document).ready( function($) {
 			$( '#wght_display' ).attr( 'step', '<?php echo $scheme['display']['step']; ?>' );
 			$( '#wght_display' ).val( '<?php echo $scheme['display']['weight']; ?>' );
 			if ( true == '<?php echo $scheme['display']['var']; ?>' ) {
-				$( '#wght_display_desc' ).html( '' );
+				$( '#wght_display_desc' ).html( '<?php lang()->p( 'This font has variable weight.' ); ?>' );
 			} else {
-				$( '#wght_display_desc' ).html( '<?php lang()->p( 'This scheme is using a system font stack. Weights may vary by the font deployed by the user device.' ); ?>' );
+				$( '#wght_display_desc' ).html( '<?php lang()->p( 'This font does not have variable weight.' ); ?>' );
 			}
 
 			// Main navigation letter spacing.
