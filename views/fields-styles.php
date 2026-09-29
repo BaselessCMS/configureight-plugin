@@ -580,7 +580,7 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 
 	<div class="form-field form-group row">
 		<label class="form-label col-sm-2 col-form-label" for="wght_text"><?php lang()->p( 'General Text' ); ?></label>
-		<div class="col-sm-10 row">
+		<div class="col-sm-10">
 
 			<p class="text-above-field"><?php lang()->p( 'Font Weight' ); ?></p>
 			<div class="form-range-controls">
@@ -593,13 +593,6 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 
 				<span class="btn btn-secondary btn-md form-range-button hide-if-no-js" onClick="$('#wght_text_value').text($('#wght_text_default').val() );$('#wght_text').val($('#wght_text_default').val());$('.text-sample').css('font-weight', $('#wght_text_default').val());"><?php lang()->p( 'Default' ); ?></span>
 			</div>
-			<small id="wght_text_desc" class="form-text">
-				<?php if ( ! $current_fonts['text']['var'] ) {
-					lang()->p( 'This font does not have variable weight.' );
-				} else {
-					lang()->p( 'This font has variable weight.' );
-				} ?>
-			</small>
 
 			<p class="text-above-field"><?php lang()->p( 'Letter Spacing' ); ?></p>
 			<div class="form-range-controls">
@@ -616,7 +609,7 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 
 	<div class="form-field form-group row">
 		<label class="form-label col-sm-2 col-form-label" for="wght_display"><?php lang()->p( 'Display Text' ); ?></label>
-		<div class="col-sm-10 row">
+		<div class="col-sm-10">
 
 			<p class="text-above-field"><?php lang()->p( 'Font Weight' ); ?></p>
 			<div class="form-range-controls">
@@ -628,13 +621,6 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 
 				<span class="btn btn-secondary btn-md form-range-button hide-if-no-js" onClick="$('#wght_display_value').text($('#wght_display_default').val() );$('#wght_display').val($('#wght_display_default').val());$('.display-sample').css('font-weight', $('#wght_display_default').val());"><?php lang()->p( 'Default' ); ?></span>
 			</div>
-			<small id="wght_display_desc" class="form-text">
-				<?php if ( ! $current_fonts['display']['var'] ) {
-					lang()->p( 'This font does not have variable weight.' );
-				} else {
-					lang()->p( 'This font has variable weight.' );
-				} ?>
-			</small>
 
 			<p class="text-above-field"><?php lang()->p( 'Letter Spacing' ); ?></p>
 			<div class="form-range-controls">
@@ -651,7 +637,7 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 
 	<div class="form-field form-group row">
 		<label class="form-label col-sm-2 col-form-label" for="wght_primary"><?php lang()->p( 'Primary Headings' ); ?></label>
-		<div class="col-sm-10 row">
+		<div class="col-sm-10">
 
 			<p class="text-above-field"><?php lang()->p( 'Font Weight' ); ?></p>
 			<div class="form-range-controls">
@@ -663,13 +649,6 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 
 				<span class="btn btn-secondary btn-md form-range-button hide-if-no-js" onClick="$('#wght_primary_value').text($('#wght_primary_default').val() );$('#wght_primary').val($('#wght_primary_default').val());$('.primary-sample').css('font-weight', $('#wght_primary_default').val());"><?php lang()->p( 'Default' ); ?></span>
 			</div>
-			<small id="wght_primary_desc" class="form-text">
-				<?php if ( ! $current_fonts['primary']['var'] ) {
-					lang()->p( 'This font does not have variable weight.' );
-				} else {
-					lang()->p( 'This font has variable weight.' );
-				} ?>
-			</small>
 
 			<p class="text-above-field"><?php lang()->p( 'Letter Spacing' ); ?></p>
 			<div class="form-range-controls">
@@ -686,7 +665,7 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 
 	<div class="form-field form-group row">
 		<label class="form-label col-sm-2 col-form-label" for="wght_secondary"><?php lang()->p( 'Secondary Headings' ); ?></label>
-		<div class="col-sm-10 row">
+		<div class="col-sm-10">
 
 			<p class="text-above-field"><?php lang()->p( 'Font Weight' ); ?></p>
 			<div class="form-range-controls">
@@ -698,13 +677,6 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 
 				<span class="btn btn-secondary btn-md form-range-button hide-if-no-js" onClick="$('#wght_secondary_value').text($('#wght_secondary_default').val() );$('#wght_secondary').val($('#wght_secondary_default').val());$('.secondary-sample').css('font-weight', $('#wght_secondary_default').val());"><?php lang()->p( 'Default' ); ?></span>
 			</div>
-			<small id="wght_secondary_desc" class="form-text">
-				<?php if ( ! $current_fonts['secondary']['var'] ) {
-					lang()->p( 'This font does not have variable weight.' );
-				} else {
-					lang()->p( 'This font has variable weight.' );
-				} ?>
-			</small>
 
 			<p class="text-above-field"><?php lang()->p( 'Letter Spacing' ); ?></p>
 			<div class="form-range-controls">
@@ -918,11 +890,6 @@ jQuery(document).ready( function($) {
 			$( '#wght_text' ).attr( 'max', '<?php echo $scheme['text']['max']; ?>' );
 			$( '#wght_text' ).attr( 'step', '<?php echo $scheme['text']['step']; ?>' );
 			$( '#wght_text' ).val( '<?php echo $scheme['text']['weight']; ?>' );
-			if ( true == '<?php echo $scheme['text']['var']; ?>' ) {
-				$( '#wght_text_desc' ).html( '<?php lang()->p( 'This font has variable weight.' ); ?>' );
-			} else {
-				$( '#wght_text_desc' ).html( '<?php lang()->p( 'This font does not have variable weight.' ); ?>' );
-			}
 
 			// General text letter spacing.
 			$( '#space_text' ).val( '<?php echo $scheme['text']['space']; ?>' );
@@ -936,11 +903,6 @@ jQuery(document).ready( function($) {
 			$( '#wght_primary' ).attr( 'max', '<?php echo $scheme['primary']['max']; ?>' );
 			$( '#wght_primary' ).attr( 'step', '<?php echo $scheme['primary']['step']; ?>' );
 			$( '#wght_primary' ).val( '<?php echo $scheme['primary']['weight']; ?>' );
-			if ( true == '<?php echo $scheme['primary']['var']; ?>' ) {
-				$( '#wght_primary_desc' ).html( '<?php lang()->p( 'This font has variable weight.' ); ?>' );
-			} else {
-				$( '#wght_primary_desc' ).html( '<?php lang()->p( 'This font does not have variable weight.' ); ?>' );
-			}
 
 			// Primary headings letter spacing.
 			$( '#space_primary' ).val( '<?php echo $scheme['primary']['space']; ?>' );
@@ -954,11 +916,6 @@ jQuery(document).ready( function($) {
 			$( '#wght_secondary' ).attr( 'max', '<?php echo $scheme['secondary']['max']; ?>' );
 			$( '#wght_secondary' ).attr( 'step', '<?php echo $scheme['secondary']['step']; ?>' );
 			$( '#wght_secondary' ).val( '<?php echo $scheme['secondary']['weight']; ?>' );
-			if ( true == '<?php echo $scheme['secondary']['var']; ?>' ) {
-				$( '#wght_secondary_desc' ).html( '<?php lang()->p( 'This font has variable weight.' ); ?>' );
-			} else {
-				$( '#wght_secondary_desc' ).html( '<?php lang()->p( 'This font does not have variable weight.' ); ?>' );
-			}
 
 			// Secondary headings letter spacing.
 			$( '#space_secondary' ).val( '<?php echo $scheme['secondary']['space']; ?>' );
@@ -972,11 +929,6 @@ jQuery(document).ready( function($) {
 			$( '#wght_display' ).attr( 'max', '<?php echo $scheme['display']['max']; ?>' );
 			$( '#wght_display' ).attr( 'step', '<?php echo $scheme['display']['step']; ?>' );
 			$( '#wght_display' ).val( '<?php echo $scheme['display']['weight']; ?>' );
-			if ( true == '<?php echo $scheme['display']['var']; ?>' ) {
-				$( '#wght_display_desc' ).html( '<?php lang()->p( 'This font has variable weight.' ); ?>' );
-			} else {
-				$( '#wght_display_desc' ).html( '<?php lang()->p( 'This font does not have variable weight.' ); ?>' );
-			}
 
 			// Main navigation letter spacing.
 			$( '#space_display' ).val( '<?php echo $scheme['display']['space']; ?>' );
