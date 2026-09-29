@@ -863,3 +863,12 @@ form {
 		fill: currentColor;
 	}
 }
+
+// Editor modal.
+.toolbar-active {
+	.tox {
+		.tox-dialog-wrap {
+			top: var( --cfe-toolbar--height, 1rem );
+		}
+	}
+}

@@ -945,6 +945,19 @@ class configureight extends Plugin {
 			return;
 		}
 
+		// Toolbar body class.
+		if (
+			'enabled' == $this->user_toolbar() ||
+			'backend' == $this->user_toolbar() ) :
+		?>
+		<script>
+		$(document).ready( function($) {
+			$( 'body' ).addClass( 'toolbar-active' );
+		});
+		</script>
+		<?php
+		endif;
+
 		// Backend "to top" button.
 		if (
 			'enabled' == $this->to_top_button() ||

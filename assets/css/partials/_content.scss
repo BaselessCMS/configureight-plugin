@@ -597,9 +597,45 @@ table a {
 // Rich text editor.
 .tox.tox-tinymce {
 	min-height: 400px !important;
+	background-color: var( --cfe-body--bg-color );
+	border-color: var( --cfe-box--border-color );
+
+	@media ( prefers-color-scheme: dark ) {
+		background-color: var( --cfe-body--bg-color--dark );
+		border-color: var( --cfe-box--border-color--dark );
+	}
+}
+.tox .tox-edit-area__iframe,
+.tox .tox-toolbar,
+.tox .tox-toolbar-overlord,
+.tox .tox-toolbar__overflow,
+.tox .tox-toolbar__primary {
+	background: var( --cfe-body--bg-color ) !important;
+
+	@media ( prefers-color-scheme: dark ) {
+		background: var( --cfe-body--bg-color--dark );
+	}
+}
+.tox .tox-edit-area__iframe {
+	border-top: var( --cfe-box--border ) !important;
+}
+.dark-mode {
+	.tox.tox-tinymce {
+		background: var( --cfe-body--bg-color--dark );
+	}
+	.tox .tox-edit-area__iframe,
+	.tox .tox-toolbar,
+	.tox .tox-toolbar-overlord,
+	.tox .tox-toolbar__overflow,
+	.tox .tox-toolbar__primary {
+		background: var( --cfe-body--bg-color--dark );
+	}
+	.tox .tox-edit-area__iframe {
+		border-top: var( --cfe-box--border );
+	}
 }
 
-// New content screen.
+// New/edit content screen.
 #jseditorToolbar {
 	display: flex;
 	justify-content: space-between;
@@ -851,7 +887,7 @@ img.profilePicture {
 }
 
 ///
-/// User edt screen/tabs
+/// User edit screen/tabs
 ///
 
 // Logo image.
