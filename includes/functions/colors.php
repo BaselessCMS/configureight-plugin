@@ -2715,12 +2715,12 @@ function color_schemes() {
 		],
 		'muromachi-03' => [
 			'slug'     => 'muromachi-03',
-			'name'     => lang()->get( 'Match & Black Tea' ),
-			'about'    => lang()->get( 'From the Muromachi era. Matcha-iro is the yellow-green of Matcha powdered tea. Cha is the brown of black tea. Kinari is the natural color of undyed hemp and silk.' ),
+			'name'     => lang()->get( 'Matcha & Black Tea' ),
+			'about'    => lang()->get( 'From the Muromachi era. Matcha-iro is the yellow-green of Matcha powdered tea. Cha is the brown of black tea. Gofun, a chalk white made from ground oyster shell, is the traditional gesso of Japanese painting.' ),
 			'category' => 'sanzo-wada',
 			'media'    => '#a7b86b',
 			'light' => [
-				'body'  => '#f3ebda',
+				'body'  => '#f8f4e9',
 				'text'  => '#2b2418',
 				'one'   => '#6c5a3c',
 				'two'   => '#a7b86b',
@@ -2731,9 +2731,9 @@ function color_schemes() {
 			],
 			'dark' => [
 				'body'  => '#2b2418',
-				'text'  => '#f3ebda',
+				'text'  => '#f8f4e9',
 				'one'   => '#a7b86b',
-				'two'   => '#f3ebda',
+				'two'   => '#f8f4e9',
 				'three' => '#a7b86b',
 				'four'  => '#6c5a3c',
 				'five'  => '#6c5a3c',
