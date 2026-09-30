@@ -275,14 +275,14 @@
 			colorizeElementInitialColor = null,
 			colorizeElementInitialBackground = null;
 
-		//If there is a label for this element, when clicked on, show the colour picker
+		// If there is a label for this element, when clicked on, show the color picker (disabled by comment).
 		var thisId = boundElement.attr('id');
 		if(thisId !== undefined && thisId.length > 0) {
 			var label = $('label[for="'+thisId+'"]');
 			if(label.length) {
 				label.on('click', function(e){
 					e.preventDefault();
-					boundElement.spectrum('show');
+					// boundElement.spectrum('show');
 					return false;
 				});
 			}
