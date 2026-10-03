@@ -17,6 +17,7 @@ use function CFE_Colors\{
 	picker_colors_dark,
 	picker_colors_merged,
 	bootstrap_palette,
+	sanzo_wada_palette,
 	tailwind_palette,
 	grayscale_palette
 };
@@ -210,6 +211,29 @@ jQuery(document).ready( function($) {
 			<?php foreach ( bootstrap_palette() as $color ) {
 				echo "[ '" . implode( "', '", $color ) . "' ]," . "\r\t\t\t";
 			} ?>
+		],
+		showSelectionPalette : false,
+		show : function(e) {
+			$( '.sp-thumb-el' ).tooltipster({
+				distance : 15,
+				delay : 150,
+				animationDuration : 150,
+				theme : 'cfe-tooltips'
+			});
+		}
+	});
+
+	// Sanzo Wada color picker.
+	$( '.sanzo-wada-color' ).spectrum({
+		type            : 'component',
+		showInitial     : true,
+		allowEmpty      : false,
+		preferredFormat : 'hex',
+		showAlpha       : false,
+		showPalette     : true,
+		showPaletteOnly : true,
+		palette         : [
+			<?php echo "'" . implode( "', '", sanzo_wada_palette() ) . "'"; ?>
 		],
 		showSelectionPalette : false,
 		show : function(e) {

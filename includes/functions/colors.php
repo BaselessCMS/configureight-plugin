@@ -320,6 +320,78 @@ function bootstrap_palette() {
 }
 
 /**
+ * Custom Sanzo Wada color scheme
+ *
+ * Array to be passed into the primary
+ * array of color schemes.
+ *
+ * @since  1.0.0
+ * @return array
+ */
+function sanzo_wada_scheme() {
+
+	$scheme = [
+		'sanzo_wada' => [
+			'slug'     => 'sanzo_wada',
+			'name'     => lang()->get( 'Sanzo Wada Colors' ),
+			'about'    => lang()->get( "The complete selection of colors included in <a href='https://en.wikipedia.org/wiki/Sanzo_Wada' target='_blank' rel='noopener noreferrer'>Sanzo Wada's</a> reference book <em>A Dictionary of Color Combinations</em> with additional colors derived from his methods." ),
+			'category' => 'custom',
+			'media'    => plugin()->cover_blend(),
+			'light'    => [
+				'body'  => color( 'body' ),
+				'text'  => color( 'text' ),
+				'one'   => color( 'one' ),
+				'two'   => color( 'two' ),
+				'three' => color( 'three' ),
+				'four'  => color( 'four' ),
+				'five'  => color( 'five' ),
+				'six'   => color( 'six' )
+			],
+			'dark' => [
+				'body'  => color( 'body_dark' ),
+				'text'  => color( 'text_dark' ),
+				'one'   => color( 'one_dark' ),
+				'two'   => color( 'two_dark' ),
+				'three' => color( 'three_dark' ),
+				'four'  => color( 'four_dark' ),
+				'five'  => color( 'five_dark' ),
+				'six'   => color( 'six_dark' )
+			]
+		]
+	];
+	return $scheme;
+}
+
+/**
+ * Sanzo Wada palette
+ *
+ * Returns an array of each color.
+ * This is used in the jQuery color picker.
+ *
+ * @since  1.0.0
+ * @return array
+ */
+function sanzo_wada_palette() {
+
+	$json = '';
+	$file = plugin()->phpPath() . '/assets/json/colors/vendor/sanzo-wada-colors.json';
+	$palette = [];
+
+	if ( file_exists( $file ) ) {
+		$json = file_get_contents( $file );
+	}
+	$json = json_decode( $json, true );
+
+	if ( is_null( $json ) ) {
+		return $palette;
+	}
+	foreach ( $json as $key => $value ) {
+		$palette[] = $value;
+	}
+	return $palette;
+}
+
+/**
  * Custom Tailwind color scheme
  *
  * Array to be passed into the primary
@@ -456,6 +528,7 @@ function custom_scheme() {
 function custom_schemes() {
 	return [
 		'bootstrap',
+		'sanzo_wada',
 		'tailwind',
 		'custom'
 	];
@@ -2770,12 +2843,14 @@ function color_schemes() {
 	];
 
 	// Merge custom schemes.
-	$bootstrap = bootstrap_scheme();
-	$tailwind  = tailwind_scheme();
-	$custom    = custom_scheme();
-	$schemes   = array_merge( $schemes, $bootstrap );
-	$schemes   = array_merge( $schemes, $tailwind );
-	$schemes   = array_merge( $schemes, $custom );
+	$bootstrap  = bootstrap_scheme();
+	$sanzo_wada = sanzo_wada_scheme();
+	$tailwind   = tailwind_scheme();
+	$custom     = custom_scheme();
+	$schemes    = array_merge( $schemes, $bootstrap );
+	$schemes    = array_merge( $schemes, $sanzo_wada );
+	$schemes    = array_merge( $schemes, $tailwind );
+	$schemes    = array_merge( $schemes, $custom );
 	return $schemes;
 }
 

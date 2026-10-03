@@ -308,6 +308,11 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 					lang()->get( 'Bootstrap' )
 				);
 				printf(
+					'<option value="sanzo_wada" %s>%s</option>',
+					( plugin()->color_scheme() === 'sanzo_wada' ? 'selected' : '' ),
+					lang()->get( 'Sanzo Wada' )
+				);
+				printf(
 					'<option value="tailwind" %s>%s</option>',
 					( plugin()->color_scheme() === 'tailwind' ? 'selected' : '' ),
 					lang()->get( 'Tailwind' )
@@ -838,6 +843,7 @@ jQuery(document).ready( function($) {
 			$( '#loader_text_color' ).val( '<?php echo $option['light']['text']; ?>' );
 
 			$( '#header_bg_color' ).val( '<?php echo $option['light']['body']; ?>' );
+			$( '#header_text_color' ).val( '<?php echo $option['light']['text']; ?>' );
 
 			// Custom scheme dark colors.
 			$( '#color_body_dark' ).val( '<?php echo $option['dark']['body']; ?>' );
@@ -853,6 +859,7 @@ jQuery(document).ready( function($) {
 			$( '#loader_text_color_dark' ).val( '<?php echo $option['dark']['text']; ?>' );
 
 			$( '#header_bg_color_dark' ).val( '<?php echo $option['dark']['body']; ?>' );
+			$( '#header_text_color_dark' ).val( '<?php echo $option['dark']['text']; ?>' );
 
 			// Other.
 			$( '#cover_blend' ).val( '<?php echo ( isset( $option['media'] ) ? $option['media'] : $option['light']['three'] ); ?>' );
