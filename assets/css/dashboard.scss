@@ -12,7 +12,7 @@ body:not( .cfe-admin ) {
 	}
 }
 
-ul.dashboard-links-list {
+.tab-pane ul.dashboard-links-list {
 	list-style: none;
 	padding: 0;
 
@@ -29,7 +29,7 @@ ul.dashboard-links-list {
 	padding: var( --cfe-spacing--y, 2rem ) 0;
 
 	@media ( max-width: l.$break_max_sm ) {
-		display: block;;
+		display: block;
 	}
 }
 
@@ -39,13 +39,14 @@ ul.dashboard-links-list {
 	gap: 1rem;
 }
 
-ul.customize-links-list {
+.tab-pane ul.customize-links-list {
 	list-style: none;
+	padding: 0;
+
 	li {
 		margin: var( --cfe-element--margin, 0.125rem 0 0 0 );
 		a {
 			text-decoration: none;
-			font-weight: var( --cfe-display--font-weight, 600 );
 		}
 	}
 }

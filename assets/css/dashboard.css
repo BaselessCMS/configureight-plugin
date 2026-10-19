@@ -2,11 +2,11 @@ body:not(.cfe-admin) #dashboard .tab-pane {
   padding: var(--cfe-spacing--y, 2rem) 0;
 }
 
-ul.dashboard-links-list {
+.tab-pane ul.dashboard-links-list {
   list-style: none;
   padding: 0;
 }
-ul.dashboard-links-list a {
+.tab-pane ul.dashboard-links-list a {
   text-decoration: none;
 }
 
@@ -30,13 +30,13 @@ ul.dashboard-links-list a {
   gap: 1rem;
 }
 
-ul.customize-links-list {
+.tab-pane ul.customize-links-list {
   list-style: none;
+  padding: 0;
 }
-ul.customize-links-list li {
+.tab-pane ul.customize-links-list li {
   margin: var(--cfe-element--margin, 0.125rem 0 0 0);
 }
-ul.customize-links-list li a {
+.tab-pane ul.customize-links-list li a {
   text-decoration: none;
-  font-weight: var(--cfe-display--font-weight, 600);
 }
