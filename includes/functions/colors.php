@@ -584,8 +584,8 @@ function color_schemes() {
 				'green'  => '#00bb00',
 				'teal'   => '#00ddaa',
 				'cyan'   => '#00ccee',
-				'blue'   => '#0044cc',
-				'indigo' => '#7700ff',
+				'blue'   => '#0044ee',
+				'indigo' => '#7700ee',
 				'violet' => '#7711bb',
 				'purple' => '#cc00aa',
 				'pink'   => '#ff55dd'
@@ -626,8 +626,8 @@ function color_schemes() {
 				'green'  => '#00bb00',
 				'teal'   => '#00ddaa',
 				'cyan'   => '#00ccee',
-				'blue'   => '#0044cc',
-				'indigo' => '#7722ff',
+				'blue'   => '#0044ee',
+				'indigo' => '#7700ee',
 				'violet' => '#7711bb',
 				'purple' => '#cc00aa',
 				'pink'   => '#ff55dd'

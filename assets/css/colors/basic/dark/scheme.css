@@ -16,6 +16,19 @@
   --cfe-scheme-dark--four--dark: #0044cc;
   --cfe-scheme-dark--five--dark: #0044aa;
   --cfe-scheme-dark--six--dark: #0044ff;
+  --cfe-scheme-dark--red: #dd0000;
+  --cfe-scheme-dark--orange: #ee6600;
+  --cfe-scheme-dark--amber: #ffcc44;
+  --cfe-scheme-dark--yellow: #ffdd00;
+  --cfe-scheme-dark--lime: #00ee00;
+  --cfe-scheme-dark--green: #00bb00;
+  --cfe-scheme-dark--teal: #00ddaa;
+  --cfe-scheme-dark--cyan: #00ccee;
+  --cfe-scheme-dark--blue: #0044ee;
+  --cfe-scheme-dark--indigo: #7700ee;
+  --cfe-scheme-dark--violet: #7711bb;
+  --cfe-scheme-dark--purple: #cc00aa;
+  --cfe-scheme-dark--pink: #ff55dd;
 }
 
 .cfe-dark.dark-body {

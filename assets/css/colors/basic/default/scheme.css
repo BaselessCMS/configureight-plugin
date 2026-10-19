@@ -16,6 +16,19 @@
   --cfe-scheme-default--four--dark: #0044cc;
   --cfe-scheme-default--five--dark: #0044aa;
   --cfe-scheme-default--six--dark: #0044ff;
+  --cfe-scheme-default--red: #dd0000;
+  --cfe-scheme-default--orange: #ee6600;
+  --cfe-scheme-default--amber: #ffcc44;
+  --cfe-scheme-default--yellow: #ffdd00;
+  --cfe-scheme-default--lime: #00ee00;
+  --cfe-scheme-default--green: #00bb00;
+  --cfe-scheme-default--teal: #00ddaa;
+  --cfe-scheme-default--cyan: #00ccee;
+  --cfe-scheme-default--blue: #0044ee;
+  --cfe-scheme-default--indigo: #7700ee;
+  --cfe-scheme-default--violet: #7711bb;
+  --cfe-scheme-default--purple: #cc00aa;
+  --cfe-scheme-default--pink: #ff55dd;
 }
 
 .cfe-default.default-body {
