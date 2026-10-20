@@ -13,7 +13,8 @@ use function CFE_Plugin\{
 	lang
 };
 use function CFE_Colors\{
-	color_schemes
+	color_schemes,
+	picker_class
 };
 
 // User toolbar option.
@@ -232,7 +233,7 @@ $custom_from = plugin()->custom_scheme_from();
 
 				<p><?php lang()->p( 'Light Mode Background' ); ?></p>
 				<div class="row color-picker-wrap">
-					<input class="color-picker scheme-color" id="loader_bg_color" name="loader_bg_color" value="<?php echo plugin()->loader_bg_color(); ?>" />
+					<input class="color-picker <?php echo picker_class(); ?>" id="loader_bg_color" name="loader_bg_color" value="<?php echo plugin()->loader_bg_color(); ?>" />
 					<input id="loader_bg_default" class="screen-reader-text" type="hidden" value="<?php echo $colors[$custom_from]['light']['body']; ?>" />
 					<span class="btn btn-secondary btn-md hide-if-no-js" id="loader_bg_color_default"><?php lang()->p( 'Reset' ); ?></span>
 				</div>
@@ -240,7 +241,7 @@ $custom_from = plugin()->custom_scheme_from();
 
 				<p><?php lang()->p( 'Dark Mode Background' ); ?></p>
 				<div class="row color-picker-wrap">
-					<input class="color-picker scheme-color" id="loader_bg_color_dark" name="loader_bg_color_dark" value="<?php echo plugin()->loader_bg_color_dark(); ?>" />
+					<input class="color-picker <?php echo picker_class(); ?>" id="loader_bg_color_dark" name="loader_bg_color_dark" value="<?php echo plugin()->loader_bg_color_dark(); ?>" />
 					<input id="loader_bg_default_dark" class="screen-reader-text" type="hidden" value="<?php echo $colors[$custom_from]['dark']['body']; ?>" />
 					<span class="btn btn-secondary btn-md hide-if-no-js" id="loader_bg_color_default_dark"><?php lang()->p( 'Reset' ); ?></span>
 				</div>
@@ -254,7 +255,7 @@ $custom_from = plugin()->custom_scheme_from();
 
 				<p><?php lang()->p( 'Light Mode Text Color' ); ?></p>
 				<div class="row color-picker-wrap">
-					<input class="color-picker scheme-color" id="loader_text_color" name="loader_text_color" value="<?php echo plugin()->loader_text_color(); ?>" />
+					<input class="color-picker <?php echo picker_class(); ?>" id="loader_text_color" name="loader_text_color" value="<?php echo plugin()->loader_text_color(); ?>" />
 					<input id="loader_text_default" class="screen-reader-text" type="hidden" value="<?php echo $colors[$custom_from]['light']['text']; ?>" />
 					<span class="btn btn-secondary btn-md hide-if-no-js" id="loader_text_color_default"><?php lang()->p( 'Reset' ); ?></span>
 				</div>
@@ -262,7 +263,7 @@ $custom_from = plugin()->custom_scheme_from();
 
 				<p><?php lang()->p( 'Dark Mode Text Color' ); ?></p>
 				<div class="row color-picker-wrap">
-					<input class="color-picker scheme-color" id="loader_text_color_dark" name="loader_text_color_dark" value="<?php echo plugin()->loader_text_color_dark(); ?>" />
+					<input class="color-picker <?php echo picker_class(); ?>" id="loader_text_color_dark" name="loader_text_color_dark" value="<?php echo plugin()->loader_text_color_dark(); ?>" />
 					<input id="loader_text_default_dark" class="screen-reader-text" type="hidden" value="<?php echo $colors[$custom_from]['dark']['text']; ?>" />
 					<span class="btn btn-secondary btn-md hide-if-no-js" id="loader_text_color_default_dark"><?php lang()->p( 'Reset' ); ?></span>
 				</div>

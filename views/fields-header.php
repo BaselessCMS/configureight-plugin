@@ -10,11 +10,13 @@
 use function CFE_Plugin\{
 	plugin,
 	site,
-	lang
+	lang,
+	svg_icon
 };
 use function CFE_Colors\{
 	current_color_scheme,
-	current_scheme_color
+	current_scheme_color,
+	picker_class
 };
 
 // Default values.
@@ -86,7 +88,7 @@ $current_scheme = current_color_scheme();
 		<label class="form-label col-sm-2 col-form-label" for="header_bg_color"><?php lang()->p( 'Light Background' ); ?></label>
 		<div class="col-sm-10">
 			<div class="row color-picker-wrap">
-				<input class="color-picker scheme-color" id="header_bg_color" name="header_bg_color" value="<?php echo plugin()->header_bg_color(); ?>" />
+				<input class="color-picker <?php echo picker_class(); ?>" id="header_bg_color" name="header_bg_color" value="<?php echo plugin()->header_bg_color(); ?>" />
 				<input id="header_bg_color_default" class="screen-reader-text" type="hidden" value="<?php echo ( current_scheme_color( 'light', 'body' ) ? current_scheme_color( 'light', 'body' ) : plugin()->dbFields['header_bg_color'] ); ?>" />
 				<span class="btn btn-secondary btn-md hide-if-no-js" id="header_bg_color_default_button"><?php lang()->p( 'Reset' ); ?></span>
 			</div>
@@ -98,7 +100,7 @@ $current_scheme = current_color_scheme();
 		<label class="form-label col-sm-2 col-form-label" for="header_bg_color_dark"><?php lang()->p( 'Dark Background' ); ?></label>
 		<div class="col-sm-10">
 			<div class="row color-picker-wrap">
-				<input class="color-picker scheme-color" id="header_bg_color_dark" name="header_bg_color_dark" value="<?php echo plugin()->header_bg_color_dark(); ?>" />
+				<input class="color-picker <?php echo picker_class(); ?>" id="header_bg_color_dark" name="header_bg_color_dark" value="<?php echo plugin()->header_bg_color_dark(); ?>" />
 				<input id="header_bg_color_dark_default" class="screen-reader-text" type="hidden" value="<?php echo $current_scheme['dark']['body']; ?>" />
 				<span class="btn btn-secondary btn-md hide-if-no-js" id="header_bg_color_dark_default_button"><?php lang()->p( 'Reset' ); ?></span>
 			</div>
@@ -110,7 +112,7 @@ $current_scheme = current_color_scheme();
 		<label class="form-label col-sm-2 col-form-label" for="header_text_color"><?php lang()->p( 'Light Text' ); ?></label>
 		<div class="col-sm-10">
 			<div class="row color-picker-wrap">
-				<input class="color-picker scheme-color" id="header_text_color" name="header_text_color" value="<?php echo plugin()->header_text_color(); ?>" />
+				<input class="color-picker <?php echo picker_class(); ?>" id="header_text_color" name="header_text_color" value="<?php echo plugin()->header_text_color(); ?>" />
 				<input id="header_text_color_default" class="screen-reader-text" type="hidden" value="<?php echo $current_scheme['light']['text']; ?>" />
 				<span class="btn btn-secondary btn-md hide-if-no-js" id="header_text_color_default_button"><?php lang()->p( 'Reset' ); ?></span>
 			</div>
@@ -122,7 +124,7 @@ $current_scheme = current_color_scheme();
 		<label class="form-label col-sm-2 col-form-label" for="header_text_color_dark"><?php lang()->p( 'Dark Text' ); ?></label>
 		<div class="col-sm-10">
 			<div class="row color-picker-wrap">
-				<input class="color-picker scheme-color" id="header_text_color_dark" name="header_text_color_dark" value="<?php echo plugin()->header_text_color_dark(); ?>" />
+				<input class="color-picker <?php echo picker_class(); ?>" id="header_text_color_dark" name="header_text_color_dark" value="<?php echo plugin()->header_text_color_dark(); ?>" />
 				<input id="header_text_color_dark_default" class="screen-reader-text" type="hidden" value="<?php echo $current_scheme['dark']['text']; ?>" />
 				<span class="btn btn-secondary btn-md hide-if-no-js" id="header_text_color_dark_default_button"><?php lang()->p( 'Reset' ); ?></span>
 			</div>
@@ -178,7 +180,8 @@ $current_scheme = current_color_scheme();
 
 				<div id="logo-standard-code" role="tabpanel" aria-labelledby="logo-standard-code">
 					<p><?php lang()->p( 'Paste in SVG code to override any upload selection. Be sure that the SVG you enter is safe, that there is no malicious code.' ); ?></p>
-					<textarea class="code-field" name="logo_standard_svg" id="logo-standard-svg" cols="60" rows="6"><?php echo plugin()->logo_standard_svg(); ?></textarea>
+					<p class="textarea-toggle" style="display: <?php echo ( empty( plugin()->logo_standard_svg() ) ? 'none' : 'block' ) ?>"><button id="logo-standard-code-toggle" class="text-button" onclick="event.preventDefault()"><?php svg_icon( 'angle-down', true, 'svg-icon-inline' ); echo ' '; lang()->p( 'Show Code' ); ?></button></p>
+					<textarea id="logo_standard_svg" class="code-field" name="logo_standard_svg" cols="60" rows="6" style="display: <?php echo ( empty( plugin()->logo_standard_svg() ) ? 'block' : 'none' ) ?>"><?php echo plugin()->logo_standard_svg(); ?></textarea>
 				</div>
 			</div>
 		</div>
@@ -327,6 +330,11 @@ $( function() {
 		if ( ! confirm( '<?php lang()->p( 'Are you sure you want to delete this image?' ); ?>' ) ) { return; }
 		deleteCoverLogo(this);
 	});
+});
+
+$( '#logo-standard-code-toggle' ).click( function() {
+	$(this).text($(this).text() == '<?php lang()->p( 'Hide Code' ) ?>' ? '<?php lang()->p( 'Show Code' ) ?>' : '<?php lang()->p( 'Hide Code' ) ?>');
+	$( '#logo_standard_svg' ).toggle();
 });
 
 function deleteStandardLogo(el) {

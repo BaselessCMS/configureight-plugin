@@ -2922,6 +2922,39 @@ function current_color_scheme() {
 }
 
 /**
+ * Color picker class
+ *
+ * Used to get the color pickers for
+ * the current color scheme.
+ *
+ * @since  1.0.0
+ * @param  boolean $alpha Allow opacity channel or not.
+ * @return string
+ */
+function picker_class( $alpha = false ) {
+
+	// Current color scheme.
+	$current = current_color_scheme();
+
+	// Allow opacity channel or not.
+	$type = '-color';
+	if ( true == $alpha ) {
+		$type = '-rgba';
+	}
+
+	// Class for the current color scheme.
+	if ( 'bootstap' == $current ) {
+		return 'bootstrap' . $type;
+	} elseif ( 'sanzo-wada' == $current ) {
+		return 'sanzo-wada' . $type;
+	} elseif ( 'tailwind' == $current ) {
+		return 'tailwind' . $type;
+	} else {
+		return 'scheme' . $type;
+	}
+}
+
+/**
  * Color scheme template
  *
  * Gets the slug of the color scheme
