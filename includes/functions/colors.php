@@ -2934,7 +2934,7 @@ function current_color_scheme() {
 function picker_class( $alpha = false ) {
 
 	// Current color scheme.
-	$current = current_color_scheme();
+	$current = plugin()->color_scheme();
 
 	// Allow opacity channel or not.
 	$type = '-color';
@@ -2943,9 +2943,9 @@ function picker_class( $alpha = false ) {
 	}
 
 	// Class for the current color scheme.
-	if ( 'bootstap' == $current ) {
+	if ( 'bootstrap' == $current ) {
 		return 'bootstrap' . $type;
-	} elseif ( 'sanzo-wada' == $current ) {
+	} elseif ( 'sanzo_wada' == $current ) {
 		return 'sanzo-wada' . $type;
 	} elseif ( 'tailwind' == $current ) {
 		return 'tailwind' . $type;
