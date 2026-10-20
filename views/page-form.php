@@ -211,6 +211,9 @@ jQuery(document).ready( function($) {
 			<?php foreach ( bootstrap_palette() as $color ) {
 				echo "[ '" . implode( "', '", $color ) . "' ]," . "\r\t\t\t";
 			} ?>
+			<?php foreach ( grayscale_palette( true ) as $color ) {
+				echo "[ '" . implode( "', '", $color ) . "' ]," . "\r\t\t\t";
+			} ?>
 		],
 		showSelectionPalette : false,
 		show : function(e) {
@@ -232,8 +235,14 @@ jQuery(document).ready( function($) {
 		showAlpha       : false,
 		showPalette     : true,
 		showPaletteOnly : true,
+		paletteLabel    : true,
 		palette         : [
-			<?php echo "'" . implode( "', '", sanzo_wada_palette() ) . "'"; ?>
+			<?php foreach ( sanzo_wada_palette() as $color ) {
+				echo "[ '" . implode( "', '", $color ) . "' ]," . "\r\t\t\t";
+			} ?>
+			<?php foreach ( grayscale_palette( true ) as $color ) {
+				echo "[ '" . implode( "', '", $color ) . "' ]," . "\r\t\t\t";
+			} ?>
 		],
 		showSelectionPalette : false,
 		show : function(e) {
@@ -258,6 +267,9 @@ jQuery(document).ready( function($) {
 		paletteLabel    : true,
 		palette         : [
 			<?php foreach ( tailwind_palette() as $color ) {
+				echo "[ '" . implode( "', '", $color ) . "' ]," . "\r\t\t\t";
+			} ?>
+			<?php foreach ( grayscale_palette( true ) as $color ) {
 				echo "[ '" . implode( "', '", $color ) . "' ]," . "\r\t\t\t";
 			} ?>
 		],
