@@ -104,6 +104,7 @@
 		"1000": "#1c0f30"
 	},
 	"magenta": {
+		"label": "IBM Carbon Magenta",
 		"10": "#fff0f7",
 		"20": "#ffd6e8",
 		"30": "#ffafd2",
