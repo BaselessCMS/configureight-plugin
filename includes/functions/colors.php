@@ -210,6 +210,84 @@ function color_scheme_categories() {
 }
 
 /**
+ * Basic schemes
+ *
+ * @since  1.0.0
+ * @return array
+ */
+function basic_schemes() {
+	return [
+		'default',
+		'dark',
+		'plain'
+	];
+}
+
+/**
+ * Custom palette schemes
+ *
+ * Build your own schemes excluding `custom` scheme.
+ *
+ * @since  1.0.0
+ * @return array
+ */
+function palette_schemes() {
+	return [
+		'bootstrap',
+		'sanzo-wada',
+		'tailwind'
+	];
+}
+
+/**
+ * Custom build schemes
+ *
+ * Used mostly for excluding custom schemes
+ * from displaying various content.
+ *
+ * @since  1.0.0
+ * @return array
+ */
+function custom_schemes() {
+	$schemes = array_merge( palette_schemes(), [ 'custom' ] );
+	return $schemes;
+}
+
+/**
+ * Get palette
+ *
+ * @since  1.0.0
+ * @param  mixed $slug
+ * @return array
+ */
+function get_palette( $slug = false ) {
+
+	if ( ! $slug ) {
+		return [[]];
+	}
+	if ( ! in_array( $slug, palette_schemes() ) ) {
+		return [ picker_colors_merged( true ) ];
+	}
+
+	$json = '';
+	$file = plugin()->phpPath() . "/assets/json/colors/{$slug}-colors.json";
+	$palette = [];
+
+	if ( file_exists( $file ) ) {
+		$json = file_get_contents( $file );
+	}
+	$json = json_decode( $json, true );
+
+	if ( is_null( $json ) ) {
+		return $palette;
+	}
+	foreach ( $json as $key => $value ) {
+		$palette[] = $value;
+	}
+	return $palette;
+}
+
+/**
  * Grayscale palette
  *
  * Returns an array of purely neutral hex values,
@@ -291,35 +369,6 @@ function bootstrap_scheme() {
 }
 
 /**
- * Bootstrap palette
- *
- * Returns an array of each color with tints & shades.
- * This is used in the jQuery color picker.
- *
- * @since  1.0.0
- * @return array
- */
-function bootstrap_palette() {
-
-	$json = '';
-	$file = plugin()->phpPath() . '/assets/json/colors/vendor/bootstrap-colors.json';
-	$palette = [];
-
-	if ( file_exists( $file ) ) {
-		$json = file_get_contents( $file );
-	}
-	$json = json_decode( $json, true );
-
-	if ( is_null( $json ) ) {
-		return $palette;
-	}
-	foreach ( $json as $key => $value ) {
-		$palette[] = $value;
-	}
-	return $palette;
-}
-
-/**
  * Custom Sanzo Wada color scheme
  *
  * Array to be passed into the primary
@@ -331,8 +380,8 @@ function bootstrap_palette() {
 function sanzo_wada_scheme() {
 
 	$scheme = [
-		'sanzo_wada' => [
-			'slug'     => 'sanzo_wada',
+		'sanzo-wada' => [
+			'slug'     => 'sanzo-wada',
 			'name'     => lang()->get( 'Sanzo Wada Colors' ),
 			'about'    => lang()->get( "The complete selection of colors included in <a href='https://en.wikipedia.org/wiki/Sanzo_Wada' target='_blank' rel='noopener noreferrer'>Sanzo Wada's</a> reference book <em>A Dictionary of Color Combinations</em>, with additional colors derived from his methods." ),
 			'category' => 'custom',
@@ -360,35 +409,6 @@ function sanzo_wada_scheme() {
 		]
 	];
 	return $scheme;
-}
-
-/**
- * Sanzo Wada palette
- *
- * Returns an array of each color.
- * This is used in the jQuery color picker.
- *
- * @since  1.0.0
- * @return array
- */
-function sanzo_wada_palette() {
-
-	$json = '';
-	$file = plugin()->phpPath() . '/assets/json/colors/vendor/sanzo-wada-colors.json';
-	$palette = [];
-
-	if ( file_exists( $file ) ) {
-		$json = file_get_contents( $file );
-	}
-	$json = json_decode( $json, true );
-
-	if ( is_null( $json ) ) {
-		return $palette;
-	}
-	foreach ( $json as $key => $value ) {
-		$palette[] = $value;
-	}
-	return $palette;
 }
 
 /**
@@ -432,65 +452,6 @@ function tailwind_scheme() {
 		]
 	];
 	return $scheme;
-}
-
-/**
- * Tailwind palette
- *
- * Returns an array of each color with tints & shades.
- * This is used in the jQuery color picker.
- *
- * @since  1.0.0
- * @return array
- */
-function tailwind_palette() {
-
-	$json = '';
-	$file = plugin()->phpPath() . '/assets/json/colors/vendor/tailwind-colors.json';
-	$palette = [];
-
-	if ( file_exists( $file ) ) {
-		$json = file_get_contents( $file );
-	}
-	$json = json_decode( $json, true );
-
-	if ( is_null( $json ) ) {
-		return $palette;
-	}
-	foreach ( $json as $key => $value ) {
-		$palette[] = $value;
-	}
-	return $palette;
-}
-
-/**
- * Custom palette schemes
- *
- * Build your own schemes excluding `custom` scheme.
- *
- * @since  1.0.0
- * @return array
- */
-function palette_schemes() {
-	return [
-		'bootstrap',
-		'sanzo_wada',
-		'tailwind'
-	];
-}
-
-/**
- * Custom build schemes
- *
- * Used mostly for excluding custom schemes
- * from displaying various content.
- *
- * @since  1.0.0
- * @return array
- */
-function custom_schemes() {
-	$schemes = array_merge( palette_schemes(), [ 'custom' ] );
-	return $schemes;
 }
 
 /**
@@ -547,20 +508,6 @@ function custom_scheme() {
 }
 
 /**
- * Basic schemes
- *
- * @since  1.0.0
- * @return array
- */
-function basic_schemes() {
-	return [
-		'default',
-		'dark',
-		'plain'
-	];
-}
-
-/**
  * Custom scheme heading
  *
  * The form heading for each custom scheme,
@@ -575,7 +522,7 @@ function custom_schemes_heading() {
 
 	if ( 'bootstrap' == $current ) {
 		$heading = lang()->get( 'Bootstrap Colors' );
-	} elseif ( 'sanzo_wada' == $current ) {
+	} elseif ( 'sanzo-wada' == $current ) {
 		$heading = lang()->get( 'Sanzo Wada Colors' );
 	} elseif ( 'tailwind' == $current ) {
 		$heading = lang()->get( 'Tailwind Colors' );
@@ -3104,24 +3051,14 @@ function picker_class( $alpha = false ) {
 
 	// Current color scheme.
 	$current = plugin()->color_scheme();
+	$current = str_replace( '_', '-', $current );
 
 	// Allow opacity channel or not.
 	$type = '-color';
 	if ( true == $alpha ) {
 		$type = '-rgba';
 	}
-
-	// Class for the current color scheme.
-	if ( 'bootstrap' == $current ) {
-		$class = 'bootstrap' . $type;
-	} elseif ( 'sanzo_wada' == $current ) {
-		$class = 'sanzo-wada' . $type;
-	} elseif ( 'tailwind' == $current ) {
-		$class = 'tailwind' . $type;
-	} else {
-		$class = 'scheme' . $type;
-	}
-	return $class;
+	return $current . $type;
 }
 
 /**

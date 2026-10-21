@@ -826,7 +826,7 @@ jQuery(document).ready( function($) {
 		var scheme = $(this).val();
 		var custom = [
 			'bootstrap',
-			'sanzo_wada',
+			'sanzo-wada',
 			'tailwind',
 			'custom'
 		];

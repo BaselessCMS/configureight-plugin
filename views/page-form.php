@@ -13,14 +13,14 @@ use function CFE_Plugin\{
 	lang
 };
 use function CFE_Colors\{
-	picker_colors_light,
-	picker_colors_dark,
-	picker_colors_merged,
-	bootstrap_palette,
-	sanzo_wada_palette,
-	tailwind_palette,
+	palette_schemes,
+	get_palette,
 	grayscale_palette
 };
+
+// Current color scheme.
+$color_scheme = plugin()->color_scheme();
+$color_scheme = str_replace( '_', '-', $color_scheme );
 
 // Guide page URL.
 $guide_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className();
@@ -116,73 +116,18 @@ jQuery(document).ready( function($) {
 		theme : 'cfe-tooltips'
 	});
 
-	// Color scheme picker.
-	$( '.scheme-color' ).spectrum({
+	// Solid color picker.
+	$( <?php echo "'.{$color_scheme}-color'"; ?> ).spectrum({
 		type            : 'component',
 		showInitial     : true,
 		allowEmpty      : false,
 		preferredFormat : 'hex',
 		showAlpha       : false,
 		showPalette     : true,
+		showPaletteOnly : <?php echo ( in_array( plugin()->color_scheme(), palette_schemes() ) ? 'true' : 'false' ) ?>,
 		paletteLabel    : true,
 		palette         : [
-			[ '<?php echo implode( "', '", picker_colors_merged( true ) ); ?>' ],
-			<?php foreach ( grayscale_palette( true ) as $color ) {
-				echo "[ '" . implode( "', '", $color ) . "' ]," . "\r\t\t\t";
-			} ?>
-		],
-		showSelectionPalette : false,
-		show : function(e) {
-			$( '.sp-thumb-el' ).tooltipster({
-				distance : 15,
-				delay : 150,
-				animationDuration : 150,
-				theme : 'cfe-tooltips'
-			});
-		}
-	});
-
-	// Scheme alpha color picker.
-	$( '.scheme-rgba' ).spectrum({
-		type            : 'component',
-		showInitial     : true,
-		allowEmpty      : false,
-		showInitial     : true,
-		allowEmpty      : false,
-		preferredFormat : 'hex',
-		showAlpha       : true,
-		showPalette     : true,
-		showInput       : true,
-		paletteLabel    : true,
-		palette         : [
-			['<?php echo implode( "', '", picker_colors_merged( true ) ); ?>' ],
-			<?php foreach ( grayscale_palette( true ) as $color ) {
-				echo "[ '" . implode( "', '", $color ) . "' ]," . "\r\t\t\t";
-			} ?>
-		],
-		showSelectionPalette : false,
-		show : function(e) {
-			$( '.sp-thumb-el' ).tooltipster({
-				distance : 15,
-				delay : 150,
-				animationDuration : 150,
-				theme : 'cfe-tooltips'
-			});
-		}
-	});
-
-	// Bootstrap color picker.
-	$( '.bootstrap-color' ).spectrum({
-		type            : 'component',
-		showInitial     : true,
-		allowEmpty      : false,
-		preferredFormat : 'hex',
-		showAlpha       : false,
-		showPalette     : true,
-		showPaletteOnly : true,
-		paletteLabel    : true,
-		palette         : [
-			<?php foreach ( bootstrap_palette() as $color ) {
+			<?php foreach ( get_palette( $color_scheme ) as $color ) {
 				echo "[ '" . implode( "', '", $color ) . "' ]," . "\r\t\t\t";
 			} ?>
 			<?php foreach ( grayscale_palette( true ) as $color ) {
@@ -200,8 +145,8 @@ jQuery(document).ready( function($) {
 		}
 	});
 
-	// Bootstrap alpha color picker.
-	$( '.bootstrap-rgba' ).spectrum({
+	// Alpha color picker.
+	$( <?php echo "'.{$color_scheme}-rgba'"; ?> ).spectrum({
 		type            : 'component',
 		showInitial     : true,
 		allowEmpty      : false,
@@ -211,123 +156,7 @@ jQuery(document).ready( function($) {
 		showPaletteOnly : false,
 		paletteLabel    : true,
 		palette         : [
-			<?php foreach ( bootstrap_palette() as $color ) {
-				echo "[ '" . implode( "', '", $color ) . "' ]," . "\r\t\t\t";
-			} ?>
-			<?php foreach ( grayscale_palette( true ) as $color ) {
-				echo "[ '" . implode( "', '", $color ) . "' ]," . "\r\t\t\t";
-			} ?>
-		],
-		showSelectionPalette : false,
-		show : function(e) {
-			$( '.sp-thumb-el' ).tooltipster({
-				distance : 15,
-				delay : 150,
-				animationDuration : 150,
-				theme : 'cfe-tooltips'
-			});
-		}
-	});
-
-	// Sanzo Wada color picker.
-	$( '.sanzo-wada-color' ).spectrum({
-		type            : 'component',
-		showInitial     : true,
-		allowEmpty      : false,
-		preferredFormat : 'hex',
-		showAlpha       : false,
-		showPalette     : true,
-		showPaletteOnly : true,
-		paletteLabel    : true,
-		palette         : [
-			<?php foreach ( sanzo_wada_palette() as $color ) {
-				echo "[ '" . implode( "', '", $color ) . "' ]," . "\r\t\t\t";
-			} ?>
-			<?php foreach ( grayscale_palette( true ) as $color ) {
-				echo "[ '" . implode( "', '", $color ) . "' ]," . "\r\t\t\t";
-			} ?>
-		],
-		showSelectionPalette : false,
-		show : function(e) {
-			$( '.sp-thumb-el' ).tooltipster({
-				distance : 15,
-				delay : 150,
-				animationDuration : 150,
-				theme : 'cfe-tooltips'
-			});
-		}
-	});
-
-	// Sanzo Wada alpha color picker.
-	$( '.sanzo-wada-rgba' ).spectrum({
-		type            : 'component',
-		showInitial     : true,
-		allowEmpty      : false,
-		preferredFormat : 'hex',
-		showAlpha       : true,
-		showPalette     : true,
-		showPaletteOnly : false,
-		paletteLabel    : true,
-		palette         : [
-			<?php foreach ( sanzo_wada_palette() as $color ) {
-				echo "[ '" . implode( "', '", $color ) . "' ]," . "\r\t\t\t";
-			} ?>
-			<?php foreach ( grayscale_palette( true ) as $color ) {
-				echo "[ '" . implode( "', '", $color ) . "' ]," . "\r\t\t\t";
-			} ?>
-		],
-		showSelectionPalette : false,
-		show : function(e) {
-			$( '.sp-thumb-el' ).tooltipster({
-				distance : 15,
-				delay : 150,
-				animationDuration : 150,
-				theme : 'cfe-tooltips'
-			});
-		}
-	});
-
-	// Tailwind color picker.
-	$( '.tailwind-color' ).spectrum({
-		type            : 'component',
-		showInitial     : true,
-		allowEmpty      : false,
-		preferredFormat : 'hex',
-		showAlpha       : false,
-		showPalette     : true,
-		showPaletteOnly : true,
-		paletteLabel    : true,
-		palette         : [
-			<?php foreach ( tailwind_palette() as $color ) {
-				echo "[ '" . implode( "', '", $color ) . "' ]," . "\r\t\t\t";
-			} ?>
-			<?php foreach ( grayscale_palette( true ) as $color ) {
-				echo "[ '" . implode( "', '", $color ) . "' ]," . "\r\t\t\t";
-			} ?>
-		],
-		showSelectionPalette : false,
-		show : function(e) {
-			$( '.sp-thumb-el' ).tooltipster({
-				distance : 15,
-				delay : 150,
-				animationDuration : 150,
-				theme : 'cfe-tooltips'
-			});
-		}
-	});
-
-	// Tailwind alpha color picker.
-	$( '.tailwind-rgba' ).spectrum({
-		type            : 'component',
-		showInitial     : true,
-		allowEmpty      : false,
-		preferredFormat : 'hex',
-		showAlpha       : true,
-		showPalette     : true,
-		showPaletteOnly : false,
-		paletteLabel    : true,
-		palette         : [
-			<?php foreach ( tailwind_palette() as $color ) {
+			<?php foreach ( get_palette( $color_scheme ) as $color ) {
 				echo "[ '" . implode( "', '", $color ) . "' ]," . "\r\t\t\t";
 			} ?>
 			<?php foreach ( grayscale_palette( true ) as $color ) {
