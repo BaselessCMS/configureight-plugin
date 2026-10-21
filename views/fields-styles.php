@@ -824,12 +824,7 @@ jQuery(document).ready( function($) {
 
 	$( '#color_scheme' ).on( 'change', function() {
 		var scheme = $(this).val();
-		var custom = [
-			'bootstrap',
-			'sanzo-wada',
-			'tailwind',
-			'custom'
-		];
+		var custom = [ '<?php echo implode( "', '", option_schemes() ); ?>' ];
 
 		<?php foreach ( $colors as $color => $option ) :
 
