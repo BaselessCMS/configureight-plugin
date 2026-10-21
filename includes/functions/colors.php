@@ -231,20 +231,65 @@ function basic_schemes() {
  */
 function option_schemes_data() {
 	$schemes = [
+		'ant-design' => [
+			'slug'  => 'ant-design',
+			'name'  => lang()->get( 'Ant Design Colors' ),
+			'about' => lang()->get( 'The colors included with the <a href="https://ant-design.antgroup.com/docs/spec/colors" target="_blank" rel="noopener noreferrer">Ant Design</a> UI system.' )
+		],
+		'atlassian' => [
+			'slug'  => 'atlassian',
+			'name'  => lang()->get( 'Atlassian Colors' ),
+			'about' => lang()->get( 'The colors included with the <a href="https://atlassian.design/foundations/color/color-palette" target="_blank" rel="noopener noreferrer">Atlassian</a> design system.' )
+		],
 		'bootstrap' => [
 			'slug'  => 'bootstrap',
-			'name'  => lang()->get( 'Bootstrap Colors' ),
-			'about' => lang()->get( 'The colors included with the <a href="https://getbootstrap.com/docs/5.0/utilities/colors/#variables" target="_blank" rel="noopener noreferrer">Bootstrap</a> framework for website UI and frontend theme building, expanded with tints & shades.' )
+			'name'  => lang()->get( 'Bootstrap UI Colors' ),
+			'about' => lang()->get( 'The complete selection of colors included with the <a href="https://getbootstrap.com/docs/5.0/utilities/colors/#variables" target="_blank" rel="noopener noreferrer">Bootstrap</a> framework for website UI and frontend theme building, expanded with tints & shades.' )
+		],
+		'carbon' => [
+			'slug'  => 'carbon',
+			'name'  => lang()->get( 'Carbon Colors' ),
+			'about' => lang()->get( 'The complete selection of colors included with the <a href="https://www.carbondesignsystem.com/building-blocks/foundations/color/overview" target="_blank" rel="noopener noreferrer">IBM Carbon</a> design system.' )
+		],
+		'material' => [
+			'slug'  => 'material',
+			'name'  => lang()->get( 'Material Design Colors' ),
+			'about' => lang()->get( 'The complete selection of colors included with the <a href="https://m2.material.io/design/color/the-color-system.html#tools-for-picking-colors" target="_blank" rel="noopener noreferrer">Material</a> design system.' )
+		],
+		'open-props' => [
+			'slug'  => 'open-props',
+			'name'  => lang()->get( 'Open Props Colors' ),
+			'about' => lang()->get( 'The complete selection of colors included with the <a href="https://open-props.style/" target="_blank" rel="noopener noreferrer">Open Props</a> design system.' )
+		],
+		'radix' => [
+			'slug'  => 'radix',
+			'name'  => lang()->get( 'Radix Colors' ),
+			'about' => lang()->get( 'The complete selection of colors included with the <a href="https://www.radix-ui.com/colors" target="_blank" rel="noopener noreferrer">Radix</a> UI color system.' )
 		],
 		'sanzo-wada' => [
 			'slug'  => 'sanzo-wada',
 			'name'  => lang()->get( 'Sanzo Wada Colors' ),
 			'about' => lang()->get( "The complete selection of colors included in <a href='https://en.wikipedia.org/wiki/Sanzo_Wada' target='_blank' rel='noopener noreferrer'>Sanzo Wada's</a> reference book <em>A Dictionary of Color Combinations</em>, with additional colors derived from his methods." )
 		],
+		'spectrum' => [
+			'slug'  => 'spectrum',
+			'name'  => lang()->get( 'Spectrum Colors' ),
+			'about' => lang()->get( 'The complete selection of colors included with the <a href="https://spectrum.adobe.com/page/color-palette/" target="_blank" rel="noopener noreferrer">Adobe Spectrum</a> color system.' )
+		],
 		'tailwind' => [
 			'slug'  => 'tailwind',
-			'name'  => lang()->get( 'Tailwind Colors' ),
+			'name'  => lang()->get( 'Tailwind CSS Colors' ),
 			'about' => lang()->get( 'The complete selection of colors included with the <a href="https://tailwindcss.com/docs/colors" target="_blank" rel="noopener noreferrer">Tailwind CSS</a> framework for website UI and frontend theme building.' )
+		],
+		'untitled' => [
+			'slug'  => 'untitled',
+			'name'  => lang()->get( 'Untitled Colors' ),
+			'about' => lang()->get( 'The complete selection of colors included with the <a href="https://untitled-theme.xyz/colors" target="_blank" rel="noopener noreferrer">Untitled UI</a> kit of colors and icons.' )
+		],
+		'web-awesome' => [
+			'slug'  => 'web-awesome',
+			'name'  => lang()->get( 'Web Awesome Colors' ),
+			'about' => lang()->get( 'The complete selection of colors included with the <a href="https://webawesome.com/docs/tokens/color/" target="_blank" rel="noopener noreferrer">Web Awesome</a> UI kit.' )
 		],
 		'custom' => [
 			'slug'  => 'custom',
