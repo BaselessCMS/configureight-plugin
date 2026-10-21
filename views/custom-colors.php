@@ -40,23 +40,19 @@ use function CFE_Colors\{
 	<?php
 	foreach ( $colors as $color => $option ) {
 
-		if ( plugin()->custom_scheme_from() === $option['slug'] ) {
-			$display = 'flex';
-		} else {
-			$display = 'none';
+		if ( plugin()->custom_scheme_from() != $color ) {
+			continue;
 		}
 
 		printf(
-			'<li id="light_scheme_label_%s" style="margin-top: 1em; display: %s;">%s %s</li>',
+			'<li id="light_scheme_label_%s" style="margin-top: 1em;">%s %s</li>',
 			$option['slug'],
-			$display,
 			$option['name'],
 			lang()->get( 'light mode colors:' )
 		);
 		printf(
-			'<ul id="light_scheme_thumbs_%s" style="display: %s;">',
-			$option['slug'],
-			$display
+			'<ul id="light_scheme_thumbs_%s">',
+			$option['slug']
 		);
 		$count = 0;
 		foreach ( $option['light'] as $thumb ) {
@@ -75,16 +71,14 @@ use function CFE_Colors\{
 		echo '</ul>';
 
 		printf(
-			'<li id="dark_scheme_label_%s" style="margin-top: 1em; display: %s;">%s %s</li>',
+			'<li id="dark_scheme_label_%s" style="margin-top: 1em;">%s %s</li>',
 			$option['slug'],
-			$display,
 			$option['name'],
 			lang()->get( 'dark mode colors:' )
 		);
 		printf(
-			'<ul id="dark_scheme_thumbs_%s" style="display: %s;">',
-			$option['slug'],
-			$display
+			'<ul id="dark_scheme_thumbs_%s">',
+			$option['slug']
 		);
 		$count = 0;
 		foreach ( $option['dark'] as $thumb ) {
@@ -106,16 +100,14 @@ use function CFE_Colors\{
 		if ( ! in_array( plugin()->color_scheme(), palette_schemes() ) && isset( $option['extra'] ) ) :
 
 		printf(
-			'<li id="extra_scheme_label_%s" style="margin-top: 1em; display: %s;">%s %s</li>',
+			'<li id="extra_scheme_label_%s" style="margin-top: 1em;">%s %s</li>',
 			$option['slug'],
-			$display,
 			$option['name'],
 			lang()->get( 'additional colors:' )
 		);
 		printf(
-			'<ul id="extra_scheme_thumbs_%s" style="display: %s;">',
-			$option['slug'],
-			$display
+			'<ul id="extra_scheme_thumbs_%s">',
+			$option['slug']
 		);
 		$count = 0;
 		foreach ( $option['extra'] as $thumb ) {
