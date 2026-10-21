@@ -273,7 +273,7 @@ function option_schemes_data() {
 		],
 		'untitled' => [
 			'slug'  => 'untitled',
-			'name'  => lang()->get( 'Untitled Colors' ),
+			'name'  => lang()->get( 'Untitled UI Colors' ),
 			'about' => lang()->get( 'The complete selection of colors included with the <a href="https://untitled-theme.xyz/colors" target="_blank" rel="noopener noreferrer">Untitled UI</a> kit of colors and icons.' )
 		],
 		'web-awesome' => [
