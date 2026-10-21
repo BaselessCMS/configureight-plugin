@@ -256,6 +256,9 @@ function custom_schemes() {
 /**
  * Get palette
  *
+ * This is used to fetch a palette JSON file for
+ * use in color pickers and color list displays.
+ *
  * @since  1.0.0
  * @param  mixed $slug
  * @return array
