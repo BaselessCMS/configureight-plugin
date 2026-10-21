@@ -224,42 +224,12 @@ function basic_schemes() {
 }
 
 /**
- * Custom palette schemes
- *
- * Build your own schemes excluding `custom` scheme.
- *
- * @since  1.0.0
- * @return array
- */
-function palette_schemes() {
-	return [
-		'bootstrap',
-		'sanzo-wada',
-		'tailwind'
-	];
-}
-
-/**
- * Options build schemes
- *
- * Used mostly for excluding custom schemes
- * from displaying various content.
- *
- * @since  1.0.0
- * @return array
- */
-function option_schemes() {
-	$schemes = array_merge( palette_schemes(), [ 'custom' ] );
-	return $schemes;
-}
-
-/**
  * Custom schemes data
  *
  * @since  1.0.0
  * @return array
  */
-function custom_schemes_data() {
+function option_schemes_data() {
 	$schemes = [
 		'bootstrap' => [
 			'slug'  => 'bootstrap',
@@ -283,6 +253,41 @@ function custom_schemes_data() {
 		]
 	];
 	return $schemes;
+}
+
+/**
+ * Custom palette schemes
+ *
+ * Build your own schemes excluding `custom` scheme.
+ *
+ * @since  1.0.0
+ * @return array
+ */
+function palette_schemes() {
+
+	$data = option_schemes_data();
+	$schemes = [];
+
+	foreach ( $data as $key => $scheme ) {
+		if ( 'custom' == $key ) {
+			continue;
+		}
+		$schemes[] = $key;
+	}
+	return $schemes;
+}
+
+/**
+ * Options build schemes
+ *
+ * Used mostly for excluding custom schemes
+ * from displaying various content.
+ *
+ * @since  1.0.0
+ * @return array
+ */
+function option_schemes() {
+	return array_merge( palette_schemes(), [ 'custom' ] );
 }
 
 /**
@@ -331,7 +336,7 @@ function get_palette( $slug = false ) {
 function custom_schemes() {
 
 	$schemes = [];
-	$data  = custom_schemes_data();
+	$data  = option_schemes_data();
 	$light = [
 		'body'  => color( 'body' ),
 		'text'  => color( 'text' ),
@@ -383,7 +388,7 @@ function custom_schemes() {
 function custom_schemes_heading() {
 
 	$current = plugin()->color_scheme();
-	$data    = custom_schemes_data();
+	$data    = option_schemes_data();
 	$heading = lang()->get( 'Custom Colors' );
 
 	foreach ( $data as $key => $scheme ) {
