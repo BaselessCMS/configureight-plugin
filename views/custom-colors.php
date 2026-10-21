@@ -29,7 +29,11 @@ use function CFE_Colors\{
 
 	<h3 class="form-heading"><?php echo custom_schemes_heading(); ?></h3>
 
+	<?php if ( in_array( plugin()->color_scheme(), palette_schemes() ) ) : ?>
+	<p><?php lang()->p( "The default/reset colors originate from the theme <strong>{$colors[$custom_from]['name']}</strong>" ); ?></p>
+	<?php else : ?>
 	<p><?php lang()->p( "The default/reset colors originate from the previously set theme: <strong>{$colors[$custom_from]['name']}</strong>" ); ?></p>
+	<?php endif; ?>
 
 	<ul id="form-color-thumbs-list">
 	<?php
