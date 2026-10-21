@@ -1,3 +1,10 @@
+/**
+ * Configure 8 color picker
+ *
+ * A modified version of the Spectrum color picker.
+ *
+ * @link https://github.com/bgrins/spectrum
+ */
 (function (factory) {
 	"use strict";
 
@@ -40,10 +47,11 @@
 		appendTo: "body",
 		maxSelectionSize: 8,
 		locale: "en",
-		cancelText: "cancel",
-		chooseText: "choose",
-		togglePaletteMoreText: "more",
-		togglePaletteLessText: "less",
+		alphaText: "Transparency",
+		cancelText: "Cancel",
+		chooseText: "Choose",
+		togglePaletteMoreText: "Show Custom",
+		togglePaletteLessText: "Hide Custom",
 		clearText: "Clear Color Selection",
 		noColorSelectedText: "No Color Selected",
 		preferredFormat: "name",
@@ -51,17 +59,11 @@
 		containerClassName: "",
 		replacerClassName: "",
 		showAlpha: true,
-		theme: "sp-light",
+		theme: "cfe-color-picker",
 		paletteLabel: false,
 		palette: [
-			["#000000","#444444","#5b5b5b","#999999","#bcbcbc","#eeeeee","#f3f6f4","#ffffff"],
-			["#f44336","#744700","#ce7e00","#8fce00","#2986cc","#16537e","#6a329f","#c90076"],
-			["#f4cccc","#fce5cd","#fff2cc","#d9ead3","#d0e0e3","#cfe2f3","#d9d2e9","#ead1dc"],
-			["#ea9999","#f9cb9c","#ffe599","#b6d7a8","#a2c4c9","#9fc5e8","#b4a7d6","#d5a6bd"],
-			["#e06666","#f6b26b","#ffd966","#93c47d","#76a5af","#6fa8dc","#8e7cc3","#c27ba0"],
-			["#cc0000","#e69138","#f1c232","#6aa84f","#45818e","#3d85c6","#674ea7","#a64d79"],
-			["#990000","#b45f06","#bf9000","#38761d","#134f5c","#0b5394","#351c75","#741b47"],
-			["#660000","#783f04","#7f6000","#274e13","#0c343d","#073763","#20124d","#4c1130"]
+			[ '#dd0000', '#ee6600', '#ffcc44', '#ffdd00', '#00ee00', '#00bb00', '#00ddaa', '#00ccee', '#0044ee', '#7700ee', '#7711bb', '#cc00aa', '#ff55dd' ],
+			[ '#ffffff', '#f4f4f4', '#e0e0e0', '#c6c6c6', '#a8a8a8', '#8d8d8d', '#6f6f6f', '#525252', '#393939', '#262626', '#161616', '#000000' ]
 		],
 		selectionPalette: [],
 		disabled: false,
@@ -100,6 +102,12 @@
 			"<div class='sp-container sp-hidden'>",
 				"<div class='sp-palette-container'>",
 					"<div class='sp-palette sp-thumb sp-cf'></div>",
+					"<div class='sp-alpha-heading'><label class='sp-alpha-label' for='sp-alpha'></label></div>",
+					"<div id='sp-alpha' class='sp-alpha'><div class='sp-alpha-inner'><div class='sp-alpha-handle' tabindex='0'></div></div></div>",
+					"<div class='sp-palette-buttons sp-cf'>",
+						"<button type='button' class='sp-choose'></button>",
+						"<button type='button' class='sp-cancel'></button>",
+					"</div>",
 					"<div class='sp-palette-button-container sp-cf'>",
 						"<button type='button' class='sp-palette-toggle'></button>",
 					"</div>",
@@ -122,15 +130,14 @@
 								gradientFix,
 							"</div>",
 						"</div>",
-						"<div class='sp-alpha'><div class='sp-alpha-inner'><div class='sp-alpha-handle' tabindex='0'></div></div></div>",
 					"</div>",
 					"<div class='sp-input-container sp-cf'>",
 						"<input class='sp-input' type='text' spellcheck='false'  />",
 					"</div>",
-					"<div class='sp-initial sp-thumb sp-cf'></div>",
+					"<div class='sp-initial sp-preview-thumb sp-thumb sp-cf'></div>",
 					"<div class='sp-button-container sp-cf'>",
-						"<button type='button' class='sp-cancel'></button>",
 						"<button type='button' class='sp-choose'></button>",
+						"<button type='button' class='sp-cancel'></button>",
 					"</div>",
 				"</div>",
 			"</div>"
@@ -252,6 +259,7 @@
 			textInput = container.find(".sp-input"),
 			paletteContainer = container.find(".sp-palette"),
 			initialColorContainer = container.find(".sp-initial"),
+			alphaLabel = container.find(".sp-alpha-label"),
 			cancelButton = container.find(".sp-cancel"),
 			clearButton = container.find(".sp-clear"),
 			chooseButton = container.find(".sp-choose"),
@@ -418,6 +426,8 @@
 					if (input == boundElement) hide();
 				} });
 			});
+
+			alphaLabel.text(opts.alphaText);
 
 			cancelButton.text(opts.cancelText);
 			cancelButton.on("click.spectrum", function (e) {

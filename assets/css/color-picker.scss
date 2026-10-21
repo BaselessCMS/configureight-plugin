@@ -116,11 +116,15 @@ input.spectrum.with-add-on {
 }
 
 .sp-alpha-enabled .sp-top {
-	margin-bottom: 28px !important;
+	margin-bottom: 0.5rem !important;
 }
 
 .sp-alpha-enabled .sp-alpha {
 	display: block;
+	max-width: 233px;
+}
+.sp-alpha-enabled.sp-palette-only .sp-alpha {
+	max-width: calc( 100% - 0.5rem );
 }
 
 .sp-alpha-handle {
@@ -143,13 +147,23 @@ input.spectrum.with-add-on {
 	}
 }
 
+.sp-alpha-heading {
+	display: none;
+}
+.sp-alpha-enabled .sp-alpha-heading {
+	display: block;
+	width: 100%;
+}
+
+.sp-alpha-label {
+	font-size: 0.8125rem;
+	font-weight: 500;
+}
+
 .sp-alpha {
 	display: none;
-	position: absolute;
-	bottom: -18px;
-	right: 0;
-	left: 0;
 	height: 10px;
+	margin: 0.25rem 0 0.5rem 0;
 }
 
 .sp-alpha-inner {
@@ -201,6 +215,9 @@ input.spectrum.with-add-on {
 }
 
 .sp-initial-disabled .sp-initial {
+	display: none;
+}
+.sp-container:not( .sp-palette-only ) .sp-palette-buttons {
 	display: none;
 }
 
@@ -320,6 +337,7 @@ Here are the basic themeable display options (colors, fonts, global widths)
 
 .sp-container {
 	display: inline-flex;
+	flex-direction: column;
 	border-radius: 0;
 	background-color: white;
 	padding: 0;
@@ -333,9 +351,7 @@ Here are the basic themeable display options (colors, fonts, global widths)
 	-ms-box-sizing: border-box;
 	box-sizing: border-box;
 }
-.sp-top {
-	margin-bottom: 10px;
-}
+.sp-top {}
 .sp-color, .sp-hue, .sp-clear, .sp-val, .sp-sat {
 	// border-radius: 3px;
 }
@@ -346,11 +362,9 @@ Here are the basic themeable display options (colors, fonts, global widths)
 .sp-input-container.sp-cf,
 .sp-initial.sp-thumb.sp-cf,
 .sp-button-container.sp-cf {
-	height: 25px;
+	height: 1.5rem;
 }
-.sp-picker-container .sp-cf {
-	margin-bottom: 10px;
-}
+.sp-picker-container .sp-cf {}
 
 .sp-palette-row-initial > span:first-child {
 	cursor: pointer;
@@ -380,18 +394,19 @@ Here are the basic themeable display options (colors, fonts, global widths)
 	border: 1px solid red;
 	background: #fdd;
 }
-.sp-picker-container , .sp-palette-container {
+.sp-palette-container {
 	position: relative;
-	padding: 10px;
+	padding: 0.75rem;
 }
 .sp-picker-container {
-	width: 200px;
-	padding-bottom: 0;
+	width: 240px;
+	position: relative;
+	padding: 0 0.75rem 0.75rem 0.75rem;
 }
 
 /* Palettes */
 .sp-palette-container {
-	max-width: 400px;
+	max-width: 420px;
 	border-right: solid 1px #ccc;
 }
 
@@ -442,14 +457,15 @@ Here are the basic themeable display options (colors, fonts, global widths)
 /* Initial */
 .sp-initial {
 	float: left;
+	border: solid 1px var( --cfe-button--border-color, #6c757d );
 }
 .sp-initial span {
-	width: 30px;
-	height: 25px;
-	border:none;
-	display:block;
-	float:left;
-	margin:0;
+	width: 3rem;
+	height: 1.5rem;
+	border: none;
+	display: block;
+	float: left;
+	margin: 0;
 
 }
 .sp-initial .spe-thumb-el.sp-thumb-active {
@@ -467,8 +483,15 @@ Here are the basic themeable display options (colors, fonts, global widths)
 .sp-button-container {
 	float: right;
 }
+
+.sp-palette-buttons {
+	margin-top: 1rem;
+}
+.sp-alpha-enabled:not( .sp-palette-only ) .sp-palette-buttons {
+	display: none;
+}
 .sp-palette-button-container {
-	margin-top: 10px;
+	margin-top: 0.75rem;
 }
 
 /* Replacer (the little preview div that shows up instead of the <input>) */
@@ -541,10 +564,9 @@ Here are the basic themeable display options (colors, fonts, global widths)
 	letter-spacing: var( --cfe-button--letter-spacing, normal );
 	word-spacing: var( --cfe-button--word-spacing, normal );
 	text-decoration: var( --cfe-button--text-decoration, none );
-	text-transform: capitalize;
 	background-color: var( --cfe-button--bg-color, var( --cfe-body--bg-color, #6c757d ) );
 	border: solid 1px var( --cfe-button--border-color, #6c757d );
-	border-radius: var( --cfe-button--border-radius, 4px );
+	border-radius: var( --cfe-button--border-radius, 0px );
 	color: var( --cfe-button--text-color, var( --cfe-text-color, #ffffff ) ) !important;
 	transition: var( --cfe-button--transition, all 0.15s ease-in-out );
 	cursor: var( --cfe-button--cursor, pointer );;
@@ -561,7 +583,6 @@ Here are the basic themeable display options (colors, fonts, global widths)
 	}
 
 	&.sp-choose {
-		margin-left: 5px;
 		background-color: var( --cfe-button--primary--bg-color, var( --cfe-link--text-color, #0078d4 ) );
 		border-color: var( --cfe-button--primary--border-color, var( --cfe-link--text-color, #0078d4 ) );
 		color: var( --cfe-button--primary--text-color, #ffffff ) !important;
@@ -573,13 +594,12 @@ Here are the basic themeable display options (colors, fonts, global widths)
 			color: var( --cfe-button--primary--action--text-color, #ffffff ) !important;
 		}
 	}
+	&.sp-cancel {
+		margin-left: 5px;
+	}
 }
 
-.sp-container button.sp-palette-toggle {
-	width: 100%;
-	background-color: #f3f3f3;
-	margin: 0;
-}
+.sp-container button.sp-palette-toggle {}
 
 
 .sp-palette span:hover, .sp-palette span.sp-thumb-active {

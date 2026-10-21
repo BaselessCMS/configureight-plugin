@@ -142,6 +142,14 @@ jQuery(document).ready( function($) {
 				animationDuration : 150,
 				theme : 'cfe-tooltips'
 			});
+		},
+		move : function(e) {
+			$( '.sp-thumb-el' ).tooltipster({
+				distance : 15,
+				delay : 150,
+				animationDuration : 150,
+				theme : 'cfe-tooltips'
+			});
 		}
 	});
 
@@ -153,7 +161,7 @@ jQuery(document).ready( function($) {
 		preferredFormat : 'hex',
 		showAlpha       : true,
 		showPalette     : true,
-		showPaletteOnly : false,
+		showPaletteOnly : <?php echo ( in_array( plugin()->color_scheme(), palette_schemes() ) ? 'true' : 'false' ) ?>,
 		paletteLabel    : true,
 		palette         : [
 			<?php foreach ( get_palette( $color_scheme ) as $color ) {
@@ -165,6 +173,14 @@ jQuery(document).ready( function($) {
 		],
 		showSelectionPalette : false,
 		show : function(e) {
+			$( '.sp-thumb-el' ).tooltipster({
+				distance : 15,
+				delay : 150,
+				animationDuration : 150,
+				theme : 'cfe-tooltips'
+			});
+		},
+		move : function(e) {
 			$( '.sp-thumb-el' ).tooltipster({
 				distance : 15,
 				delay : 150,
