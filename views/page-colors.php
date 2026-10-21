@@ -16,7 +16,6 @@ use function CFE_Plugin\{
 };
 use function CFE_Colors\{
 	color_schemes,
-	custom_schemes,
 	get_color_scheme,
 	default_color_scheme,
 	current_color_scheme,
