@@ -31,6 +31,7 @@ use function CFE_Colors\{
 
 	<?php if ( in_array( plugin()->color_scheme(), palette_schemes() ) ) : ?>
 	<p><?php lang()->p( "The default/reset colors originate from the theme <strong>{$colors[$custom_from]['name']}</strong>" ); ?></p>
+	<p><?php lang()->p( 'Note that custom values for the color fields may be typed or pasted, using the hex or rgba format. It is not necessary to choose a color from the selected palette.' ); ?></p>
 	<?php else : ?>
 	<p><?php lang()->p( "The default/reset colors originate from the previously set theme: <strong>{$colors[$custom_from]['name']}</strong>" ); ?></p>
 	<?php endif; ?>
