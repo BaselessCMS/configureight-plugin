@@ -253,6 +253,32 @@ function custom_schemes() {
 	return $schemes;
 }
 
+function custom_schemes_data() {
+	$schemes = [
+		'bootstrap' => [
+			'slug'  => 'bootstrap',
+			'name'  => lang()->get( 'Bootstrap Colors' ),
+			'about' => lang()->get( 'The colors included with the <a href="https://getbootstrap.com/docs/5.0/utilities/colors/#variables" target="_blank" rel="noopener noreferrer">Bootstrap</a> framework for website UI and frontend theme building, expanded with tints & shades.' )
+		],
+		'sanzo-wada' => [
+			'slug'  => 'sanzo-wada',
+			'name'  => lang()->get( 'Sanzo Wada Colors' ),
+			'about' => lang()->get( "The complete selection of colors included in <a href='https://en.wikipedia.org/wiki/Sanzo_Wada' target='_blank' rel='noopener noreferrer'>Sanzo Wada's</a> reference book <em>A Dictionary of Color Combinations</em>, with additional colors derived from his methods." )
+		],
+		'tailwind' => [
+			'slug'  => 'tailwind',
+			'name'  => lang()->get( 'Tailwind Colors' ),
+			'about' => lang()->get( 'The complete selection of colors included with the <a href="https://tailwindcss.com/docs/colors" target="_blank" rel="noopener noreferrer">Tailwind CSS</a> framework for website UI and frontend theme building.' )
+		],
+		'custom' => [
+			'slug'  => 'custom',
+			'name'  => lang()->get( 'Custom' ),
+			'about' => lang()->get( 'Custom scheme colors begin with the previously set scheme. To change the starting colors, first save a different scheme then select custom.' )
+		]
+	];
+	return $schemes;
+}
+
 /**
  * Get palette
  *
@@ -290,186 +316,43 @@ function get_palette( $slug = false ) {
 	return $palette;
 }
 
-/**
- * Custom Bootstrap color scheme
- *
- * Array to be passed into the primary
- * array of color schemes.
- *
- * @since  1.0.0
- * @return array
- */
-function bootstrap_scheme() {
+function option_schemes() {
 
-	$scheme = [
-		'bootstrap' => [
-			'slug'     => 'bootstrap',
-			'name'     => lang()->get( 'Bootstrap Colors' ),
-			'about'    => lang()->get( 'The colors included with the <a href="https://getbootstrap.com/docs/5.0/utilities/colors/#variables" target="_blank" rel="noopener noreferrer">Bootstrap</a> framework for website UI and frontend theme building, expanded with tints & shades.' ),
+	$schemes = [];
+	$data  = custom_schemes_data();
+	$light = [
+		'body'  => color( 'body' ),
+		'text'  => color( 'text' ),
+		'one'   => color( 'one' ),
+		'two'   => color( 'two' ),
+		'three' => color( 'three' ),
+		'four'  => color( 'four' ),
+		'five'  => color( 'five' ),
+		'six'   => color( 'six' )
+	];
+	$dark = [
+		'body'  => color( 'body_dark' ),
+		'text'  => color( 'text_dark' ),
+		'one'   => color( 'one_dark' ),
+		'two'   => color( 'two_dark' ),
+		'three' => color( 'three_dark' ),
+		'four'  => color( 'four_dark' ),
+		'five'  => color( 'five_dark' ),
+		'six'   => color( 'six_dark' )
+	];
+
+	foreach ( $data as $custom => $scheme ) {
+		$schemes[$custom] = [
+			'slug'     => $scheme['slug'],
+			'name'     => $scheme['name'],
+			'about'    => $scheme['about'],
 			'category' => 'custom',
 			'media'    => plugin()->cover_blend(),
-			'light'    => [
-				'body'  => color( 'body' ),
-				'text'  => color( 'text' ),
-				'one'   => color( 'one' ),
-				'two'   => color( 'two' ),
-				'three' => color( 'three' ),
-				'four'  => color( 'four' ),
-				'five'  => color( 'five' ),
-				'six'   => color( 'six' )
-			],
-			'dark' => [
-				'body'  => color( 'body_dark' ),
-				'text'  => color( 'text_dark' ),
-				'one'   => color( 'one_dark' ),
-				'two'   => color( 'two_dark' ),
-				'three' => color( 'three_dark' ),
-				'four'  => color( 'four_dark' ),
-				'five'  => color( 'five_dark' ),
-				'six'   => color( 'six_dark' )
-			]
-		]
-	];
-	return $scheme;
-}
-
-/**
- * Custom Sanzo Wada color scheme
- *
- * Array to be passed into the primary
- * array of color schemes.
- *
- * @since  1.0.0
- * @return array
- */
-function sanzo_wada_scheme() {
-
-	$scheme = [
-		'sanzo-wada' => [
-			'slug'     => 'sanzo-wada',
-			'name'     => lang()->get( 'Sanzo Wada Colors' ),
-			'about'    => lang()->get( "The complete selection of colors included in <a href='https://en.wikipedia.org/wiki/Sanzo_Wada' target='_blank' rel='noopener noreferrer'>Sanzo Wada's</a> reference book <em>A Dictionary of Color Combinations</em>, with additional colors derived from his methods." ),
-			'category' => 'custom',
-			'media'    => plugin()->cover_blend(),
-			'light'    => [
-				'body'  => color( 'body' ),
-				'text'  => color( 'text' ),
-				'one'   => color( 'one' ),
-				'two'   => color( 'two' ),
-				'three' => color( 'three' ),
-				'four'  => color( 'four' ),
-				'five'  => color( 'five' ),
-				'six'   => color( 'six' )
-			],
-			'dark' => [
-				'body'  => color( 'body_dark' ),
-				'text'  => color( 'text_dark' ),
-				'one'   => color( 'one_dark' ),
-				'two'   => color( 'two_dark' ),
-				'three' => color( 'three_dark' ),
-				'four'  => color( 'four_dark' ),
-				'five'  => color( 'five_dark' ),
-				'six'   => color( 'six_dark' )
-			]
-		]
-	];
-	return $scheme;
-}
-
-/**
- * Custom Tailwind color scheme
- *
- * Array to be passed into the primary
- * array of color schemes.
- *
- * @since  1.0.0
- * @return array
- */
-function tailwind_scheme() {
-
-	$scheme = [
-		'tailwind' => [
-			'slug'     => 'tailwind',
-			'name'     => lang()->get( 'Tailwind Colors' ),
-			'about'    => lang()->get( 'The complete selection of colors included with the <a href="https://tailwindcss.com/docs/colors" target="_blank" rel="noopener noreferrer">Tailwind CSS</a> framework for website UI and frontend theme building.' ),
-			'category' => 'custom',
-			'media'    => plugin()->cover_blend(),
-			'light'    => [
-				'body'  => color( 'body' ),
-				'text'  => color( 'text' ),
-				'one'   => color( 'one' ),
-				'two'   => color( 'two' ),
-				'three' => color( 'three' ),
-				'four'  => color( 'four' ),
-				'five'  => color( 'five' ),
-				'six'   => color( 'six' )
-			],
-			'dark' => [
-				'body'  => color( 'body_dark' ),
-				'text'  => color( 'text_dark' ),
-				'one'   => color( 'one_dark' ),
-				'two'   => color( 'two_dark' ),
-				'three' => color( 'three_dark' ),
-				'four'  => color( 'four_dark' ),
-				'five'  => color( 'five_dark' ),
-				'six'   => color( 'six_dark' )
-			]
-		]
-	];
-	return $scheme;
-}
-
-/**
- * Custom color scheme from previous.
- *
- * Array to be passed into the primary
- * array of color schemes.
- *
- * @since  1.0.0
- * @return array
- */
-function custom_scheme() {
-
-	$custom = custom_schemes();
-	$from   = plugin()->custom_scheme_from();
-
-	// Conditional description.
-	if ( in_array( $from, $custom ) ) {
-		$about = lang()->get( 'Custom scheme colors begin with the default scheme colors.' );
-	} else {
-		$about = lang()->get( 'Custom scheme colors begin with the previously set scheme. To change the starting colors, first save a different scheme then select custom.' );
+			'light'    => $light,
+			'dark'     => $dark
+		];
 	}
-
-	$scheme = [
-		'custom' => [
-			'slug'     => 'custom',
-			'name'     => lang()->get( 'Custom' ),
-			'about'    => $about,
-			'category' => 'custom',
-			'media'    => plugin()->cover_blend(),
-			'light'    => [
-				'body'  => color( 'body' ),
-				'text'  => color( 'text' ),
-				'one'   => color( 'one' ),
-				'two'   => color( 'two' ),
-				'three' => color( 'three' ),
-				'four'  => color( 'four' ),
-				'five'  => color( 'five' ),
-				'six'   => color( 'six' )
-			],
-			'dark' => [
-				'body'  => color( 'body_dark' ),
-				'text'  => color( 'text_dark' ),
-				'one'   => color( 'one_dark' ),
-				'two'   => color( 'two_dark' ),
-				'three' => color( 'three_dark' ),
-				'four'  => color( 'four_dark' ),
-				'five'  => color( 'five_dark' ),
-				'six'   => color( 'six_dark' )
-			]
-		]
-	];
-	return $scheme;
+	return $schemes;
 }
 
 /**
@@ -2924,14 +2807,8 @@ function color_schemes() {
 	];
 
 	// Merge custom schemes.
-	$bootstrap  = bootstrap_scheme();
-	$sanzo_wada = sanzo_wada_scheme();
-	$tailwind   = tailwind_scheme();
-	$custom     = custom_scheme();
-	$schemes    = array_merge( $schemes, $bootstrap );
-	$schemes    = array_merge( $schemes, $sanzo_wada );
-	$schemes    = array_merge( $schemes, $tailwind );
-	$schemes    = array_merge( $schemes, $custom );
+	$schemes = array_merge( $schemes, option_schemes() );
+
 	return $schemes;
 }
 
