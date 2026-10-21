@@ -194,6 +194,12 @@ function define_layout() {
 		plugin()->vert_spacing()
 	);
 
+	// Header content width.
+	$styles .= sprintf(
+		'--cfe-site-header-wrap--max-width: %spx;',
+		plugin()->content_width()
+	);
+
 	// Header logo width.
 	$styles .= sprintf(
 		'--cfe-site-logo--max-width: %spx;',

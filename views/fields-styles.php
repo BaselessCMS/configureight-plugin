@@ -16,8 +16,11 @@ use function CFE_Plugin\{
 };
 use function CFE_Colors\{
 	color_schemes,
+	basic_schemes,
 	custom_schemes,
-	hex_to_rgb
+	get_color_scheme,
+	hex_to_rgb,
+	grayscale_palette
 };
 use function CFE_Fonts\{
 	font_schemes,
@@ -255,18 +258,24 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 				// Category used for option groups.
 				$category = '';
 
-				// Exclude some schemes from loop.custom_schemes()
-				$exclude = array_merge( [ 'default', 'dark' ], custom_schemes() );
-
 				// Basic schemes.
 				printf(
-					'<optgroup label="%s"><option value="default" %s>%s</option><option value="dark" %s>%s</option></optgroup>',
-					lang()->get( 'Basic' ),
-					( plugin()->color_scheme() === 'default' ? 'selected' : '' ),
-					lang()->get( 'Default' ),
-					( plugin()->color_scheme() === 'dark' ? 'selected' : '' ),
-					lang()->get( 'Dark' )
+					'<optgroup label="%s">',
+					lang()->get( 'Basic' )
 				);
+				foreach ( basic_schemes() as $key ) {
+					$scheme = get_color_scheme( $key );
+					printf(
+						'<option value="%s" %s>%s</option>',
+						$scheme['slug'],
+						( plugin()->color_scheme() === $scheme['slug'] ? 'selected' : '' ),
+						$scheme['name']
+					);
+				}
+				echo '</optgroup>';
+
+				// Exclude some schemes from loop.custom_schemes()
+				$exclude = array_merge( basic_schemes(), custom_schemes() );
 
 				foreach ( $colors as $color => $option ) {
 
@@ -298,30 +307,21 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 					echo '</optgroup>';
 				}
 
+				// Custom schemes.
+
 				printf(
 					'<optgroup label="%s">',
 					lang()->get( 'Build Your Own' )
 				);
-				printf(
-					'<option value="bootstrap" %s>%s</option>',
-					( plugin()->color_scheme() === 'bootstrap' ? 'selected' : '' ),
-					lang()->get( 'Bootstrap' )
-				);
-				printf(
-					'<option value="sanzo_wada" %s>%s</option>',
-					( plugin()->color_scheme() === 'sanzo_wada' ? 'selected' : '' ),
-					lang()->get( 'Sanzo Wada' )
-				);
-				printf(
-					'<option value="tailwind" %s>%s</option>',
-					( plugin()->color_scheme() === 'tailwind' ? 'selected' : '' ),
-					lang()->get( 'Tailwind' )
-				);
-				printf(
-					'<option value="custom" %s>%s</option>',
-					( plugin()->color_scheme() === 'custom' ? 'selected' : '' ),
-					lang()->get( 'Custom' )
-				);
+				foreach ( custom_schemes() as $key ) {
+					$scheme = get_color_scheme( $key );
+					printf(
+						'<option value="%s" %s>%s</option>',
+						$scheme['slug'],
+						( plugin()->color_scheme() === $scheme['slug'] ? 'selected' : '' ),
+						$scheme['name']
+					);
+				}
 				echo '</optgroup>';
 				?>
 			</select>
@@ -398,14 +398,14 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 				}
 				echo '</ul>';
 
-				if ( isset( $option['extra'] ) ) :
-
 				printf(
 					'<li id="extra_scheme_label_%s" style="margin-top: 1em; display: %s;">%s</li>',
 					$option['slug'],
 					$display,
 					lang()->get( 'Color picker options:' )
 				);
+
+				if ( isset( $option['extra'] ) ) :
 				printf(
 					'<ul id="extra_scheme_thumbs_%s" style="display: %s;">',
 					$option['slug'],
@@ -427,6 +427,29 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 				}
 				echo '</ul>';
 				endif;
+
+				printf(
+					'<ul id="grayscale_palette_%s" style="display: %s">',
+					$option['slug'],
+					$display
+				);
+
+				$count = 0;
+				foreach ( grayscale_palette() as $palette ) {
+					if ( ! empty( $palette ) ) {
+						foreach ( $palette as $thumb => $value ) {
+							$count++;
+							printf(
+								'<li id="grayscale_thumb_%s" class="form-tooltip" style="background-color: %s" title="%s"><span class="screen-reader-text">%s</span></li>',
+								$count,
+								$value,
+								$value,
+								$value
+							);
+						}
+					}
+				}
+				echo '</ul>';
 			} ?>
 			</ul>
 		</div>
@@ -447,7 +470,7 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 	// Redefine `$colors` variable after sorting.
 	$colors = color_schemes();
 
-	include( plugin()->phpPath() . '/views/partials/custom-colors.php' );
+	include( plugin()->phpPath() . '/views/custom-colors.php' );
 
 	?>
 	<h3 class="form-heading"><?php lang()->p( 'Typography' ); ?></h3>
@@ -803,6 +826,7 @@ jQuery(document).ready( function($) {
 		var scheme = $(this).val();
 		var custom = [
 			'bootstrap',
+			'sanzo_wada',
 			'tailwind',
 			'custom'
 		];
@@ -812,10 +836,6 @@ jQuery(document).ready( function($) {
 			$slug = $option['slug'];
 		?>
 		if ( scheme == '<?php echo $slug; ?>' ) {
-
-			if ( 'custom' != scheme ) {
-				$( '#custom_scheme_from' ).val( '<?php echo $slug; ?>' );
-			}
 
 			$( '#scheme_desc_<?php echo $slug; ?>' ).css( 'display', 'block' );
 
@@ -827,6 +847,10 @@ jQuery(document).ready( function($) {
 				$( '#light_scheme_thumbs_<?php echo $slug; ?>' ).css( 'display', 'flex' );
 				$( '#dark_scheme_thumbs_<?php echo $slug; ?>' ).css( 'display', 'flex' );
 				$( '#extra_scheme_thumbs_<?php echo $slug; ?>' ).css( 'display', 'flex' );
+				$( '#custom_scheme_from' ).val( '<?php echo $slug; ?>' );
+				$( '#grayscale_palette_<?php echo $slug; ?>' ).css( 'display', 'flex' );
+			} else {
+				$( '#custom_scheme_from' ).val( '<?php echo $custom_from; ?>' );
 			}
 
 			// Custom scheme light colors.
@@ -875,6 +899,7 @@ jQuery(document).ready( function($) {
 			$( '#light_scheme_thumbs_<?php echo $slug; ?>' ).css( 'display', 'none' );
 			$( '#dark_scheme_thumbs_<?php echo $slug; ?>' ).css( 'display', 'none' );
 			$( '#extra_scheme_thumbs_<?php echo $slug; ?>' ).css( 'display', 'none' );
+			$( '#grayscale_palette_<?php echo $slug; ?>' ).css( 'display', 'none' );
 		}
 		<?php endforeach; ?>
 	});

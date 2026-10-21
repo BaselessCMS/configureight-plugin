@@ -11,6 +11,7 @@
 
 :host,
 :root {
+	--cfe-cover-blend--bg-color: #{c.$media};
 	@each $name, $color in c.$light {
 		--cfe-scheme-color--#{$name}: #{$color};
 	}

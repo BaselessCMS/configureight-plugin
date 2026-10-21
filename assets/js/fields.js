@@ -398,16 +398,6 @@ jQuery(document).ready( function($) {
 		}
 	});
 
-	// Custom colors.
-	$( '#color_scheme' ).on( 'change', function() {
-		var show = $(this).val();
-		if ( show == 'custom' ) {
-			$( "#custom_color_scheme_fields" ).fadeIn( 250 );
-		} else if ( show != 'custom' ) {
-			$( "#custom_color_scheme_fields" ).fadeOut( 250 );
-		}
-	});
-
 	/**
 	 * Custom scheme thumbnails
 	 *

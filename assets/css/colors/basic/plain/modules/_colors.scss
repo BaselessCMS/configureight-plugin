@@ -1,0 +1,29 @@
+///
+/// SCSS variables
+///
+
+// Modules in the primary colors directory.
+@use '../../../../modules/functions' as f;
+
+$palette: 'plain';
+$media: #8d8d8d;
+$light: (
+	'body'  : #ffffff,
+	'text'  : #262626,
+	'one'   : #393939,
+	'two'   : #6f6f6f,
+	'three' : #6f6f6f,
+	'four'  : #393939,
+	'five'  : #525252,
+	'six'   : #8d8d8d
+);
+$dark: (
+	'body'  : #1e1e1e,
+	'text'  : #ffffff,
+	'one'   : #a8a8a8,
+	'two'   : #8d8d8d,
+	'three' : #6f6f6f,
+	'four'  : #525252,
+	'five'  : #525252,
+	'six'   : #8d8d8d
+);

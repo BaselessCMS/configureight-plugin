@@ -88,7 +88,7 @@ $current_scheme = current_color_scheme();
 		<label class="form-label col-sm-2 col-form-label" for="header_bg_color"><?php lang()->p( 'Light Background' ); ?></label>
 		<div class="col-sm-10">
 			<div class="row color-picker-wrap">
-				<input class="color-picker <?php echo picker_class(); ?>" id="header_bg_color" name="header_bg_color" value="<?php echo plugin()->header_bg_color(); ?>" />
+				<input class="color-picker <?php echo picker_class( true ); ?>" id="header_bg_color" name="header_bg_color" value="<?php echo plugin()->header_bg_color(); ?>" />
 				<input id="header_bg_color_default" class="screen-reader-text" type="hidden" value="<?php echo ( current_scheme_color( 'light', 'body' ) ? current_scheme_color( 'light', 'body' ) : plugin()->dbFields['header_bg_color'] ); ?>" />
 				<span class="btn btn-secondary btn-md hide-if-no-js" id="header_bg_color_default_button"><?php lang()->p( 'Reset' ); ?></span>
 			</div>
@@ -100,7 +100,7 @@ $current_scheme = current_color_scheme();
 		<label class="form-label col-sm-2 col-form-label" for="header_bg_color_dark"><?php lang()->p( 'Dark Background' ); ?></label>
 		<div class="col-sm-10">
 			<div class="row color-picker-wrap">
-				<input class="color-picker <?php echo picker_class(); ?>" id="header_bg_color_dark" name="header_bg_color_dark" value="<?php echo plugin()->header_bg_color_dark(); ?>" />
+				<input class="color-picker <?php echo picker_class( true ); ?>" id="header_bg_color_dark" name="header_bg_color_dark" value="<?php echo plugin()->header_bg_color_dark(); ?>" />
 				<input id="header_bg_color_dark_default" class="screen-reader-text" type="hidden" value="<?php echo $current_scheme['dark']['body']; ?>" />
 				<span class="btn btn-secondary btn-md hide-if-no-js" id="header_bg_color_dark_default_button"><?php lang()->p( 'Reset' ); ?></span>
 			</div>

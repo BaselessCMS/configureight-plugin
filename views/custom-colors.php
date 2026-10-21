@@ -17,17 +17,19 @@ use function CFE_Plugin\{
 use function CFE_Colors\{
 	color_schemes,
 	custom_schemes,
-	hex_to_rgb
+	palette_schemes,
+	custom_schemes_heading,
+	hex_to_rgb,
+	picker_class,
+	grayscale_palette
 };
 
 ?>
-<div id="custom_color_scheme_fields" style="display: <?php echo ( plugin()->color_scheme() === 'custom' ? 'block' : 'none' ); ?>;">
+<div id="custom_color_scheme_fields" style="display: <?php echo ( in_array( plugin()->color_scheme(), custom_schemes() ) ? 'block' : 'none' ); ?>;">
 
-	<h3 class="form-heading"><?php lang()->p( 'Custom Colors' ); ?></h3>
+	<h3 class="form-heading"><?php echo custom_schemes_heading(); ?></h3>
 
-	<p><?php lang()->p( 'Custom colors will override colors for basic elements in the default light and dark color schemes. If you wish to use these colors for further customization then a CSS property is provided for each color. Simply add your CSS rules with these variables to the custom code fields below.' ); ?></p>
-
-	<p><?php lang()->p( "Current custom colors originate from the previously set theme: <strong>{$colors[$custom_from]['name']}</strong>" ); ?></p>
+	<p><?php lang()->p( "The default/reset colors originate from the previously set theme: <strong>{$colors[$custom_from]['name']}</strong>" ); ?></p>
 
 	<ul id="form-color-thumbs-list">
 	<?php
@@ -95,7 +97,8 @@ use function CFE_Colors\{
 		}
 		echo '</ul>';
 
-		if ( isset( $option['extra'] ) ) :
+		// Exclude the extra colors if one of the palette schemes.
+		if ( ! in_array( plugin()->color_scheme(), palette_schemes() ) && isset( $option['extra'] ) ) :
 
 		printf(
 			'<li id="extra_scheme_label_%s" style="margin-top: 1em; display: %s;">%s %s</li>',
@@ -126,6 +129,28 @@ use function CFE_Colors\{
 		echo '</ul>';
 		endif;
 	} ?>
+		<?php printf(
+			'<li id="grayscale_label" style="margin-top: 1em;">%s</li>',
+			lang()->get( 'Grayscale palette:' )
+		); ?>
+		<ul id="grayscale-palette-custom">
+		<?php
+		$count = 0;
+		foreach ( grayscale_palette() as $palette ) {
+			if ( ! empty( $palette ) ) {
+				foreach ( $palette as $thumb => $value ) {
+					$count++;
+					printf(
+						'<li id="grayscale_custom_thumb_%s" class="form-tooltip" style="background-color: %s" title="%s"><span class="screen-reader-text">%s</span></li>',
+						$count,
+						$value,
+						$value,
+						$value
+					);
+				}
+			}
+		} ?>
+		</ul>
 	</ul>
 
 	<div class="tab-content hide-if-no-js" data-toggle="tabslet" data-deeplinking="false" data-animation="true">
@@ -147,7 +172,7 @@ use function CFE_Colors\{
 				<label class="form-label col-sm-2 col-form-label" for="color_body"><?php lang()->p( 'Body Color' ); ?></label>
 				<div class="col-sm-10">
 					<div class="row color-picker-wrap">
-						<input class="color-picker scheme-rgba" id="color_body" name="color_body" value="<?php echo plugin()->color_body(); ?>" />
+						<input class="color-picker <?php echo picker_class( true ); ?>" id="color_body" name="color_body" value="<?php echo plugin()->color_body(); ?>" />
 						<input id="color_body_default" class="screen-reader-text" type="hidden" value="<?php echo $colors[$custom_from]['light']['body']; ?>" />
 						<span class="btn btn-secondary btn-md hide-if-no-js" id="color_body_default_button"><?php lang()->p( 'Reset' ); ?></span>
 					</div>
@@ -159,7 +184,7 @@ use function CFE_Colors\{
 				<label class="form-label col-sm-2 col-form-label" for="color_text"><?php lang()->p( 'Text Color' ); ?></label>
 				<div class="col-sm-10">
 					<div class="row color-picker-wrap">
-						<input class="color-picker scheme-color" id="color_text" name="color_text" value="<?php echo plugin()->color_text(); ?>" />
+						<input class="color-picker <?php echo picker_class(); ?>" id="color_text" name="color_text" value="<?php echo plugin()->color_text(); ?>" />
 						<input id="color_text_default" class="screen-reader-text" type="hidden" value="<?php echo $colors[$custom_from]['light']['text']; ?>" />
 						<span class="btn btn-secondary btn-md hide-if-no-js" id="color_text_default_button"><?php lang()->p( 'Reset' ); ?></span>
 					</div>
@@ -171,7 +196,7 @@ use function CFE_Colors\{
 				<label class="form-label col-sm-2 col-form-label" for="color_one"><?php lang()->p( 'Color One' ); ?></label>
 				<div class="col-sm-10">
 					<div class="row color-picker-wrap">
-						<input class="color-picker scheme-color" id="color_one" name="color_one" value="<?php echo plugin()->color_one(); ?>" />
+						<input class="color-picker <?php echo picker_class(); ?>" id="color_one" name="color_one" value="<?php echo plugin()->color_one(); ?>" />
 						<input id="color_one_default" class="screen-reader-text" type="hidden" value="<?php echo $colors[$custom_from]['light']['one']; ?>" />
 						<span class="btn btn-secondary btn-md hide-if-no-js" id="color_one_default_button"><?php lang()->p( 'Reset' ); ?></span>
 					</div>
@@ -183,7 +208,7 @@ use function CFE_Colors\{
 				<label class="form-label col-sm-2 col-form-label" for="color_two"><?php lang()->p( 'Color Two' ); ?></label>
 				<div class="col-sm-10">
 					<div class="row color-picker-wrap">
-						<input class="color-picker scheme-color" id="color_two" name="color_two" value="<?php echo plugin()->color_two(); ?>" />
+						<input class="color-picker <?php echo picker_class(); ?>" id="color_two" name="color_two" value="<?php echo plugin()->color_two(); ?>" />
 						<input id="color_two_default" class="screen-reader-text" type="hidden" value="<?php echo $colors[$custom_from]['light']['two']; ?>" />
 						<span class="btn btn-secondary btn-md hide-if-no-js" id="color_two_default_button"><?php lang()->p( 'Reset' ); ?></span>
 					</div>
@@ -195,7 +220,7 @@ use function CFE_Colors\{
 				<label class="form-label col-sm-2 col-form-label" for="color_three"><?php lang()->p( 'Color Three' ); ?></label>
 				<div class="col-sm-10">
 					<div class="row color-picker-wrap">
-						<input class="color-picker scheme-color" id="color_three" name="color_three" value="<?php echo plugin()->color_three(); ?>" />
+						<input class="color-picker <?php echo picker_class(); ?>" id="color_three" name="color_three" value="<?php echo plugin()->color_three(); ?>" />
 						<input id="color_three_default" class="screen-reader-text" type="hidden" value="<?php echo $colors[$custom_from]['light']['three']; ?>" />
 						<span class="btn btn-secondary btn-md hide-if-no-js" id="color_three_default_button"><?php lang()->p( 'Reset' ); ?></span>
 					</div>
@@ -207,7 +232,7 @@ use function CFE_Colors\{
 				<label class="form-label col-sm-2 col-form-label" for="color_four"><?php lang()->p( 'Color Four' ); ?></label>
 				<div class="col-sm-10">
 					<div class="row color-picker-wrap">
-						<input class="color-picker scheme-color" id="color_four" name="color_four" value="<?php echo plugin()->color_four(); ?>" />
+						<input class="color-picker <?php echo picker_class(); ?>" id="color_four" name="color_four" value="<?php echo plugin()->color_four(); ?>" />
 						<input id="color_four_default" class="screen-reader-text" type="hidden" value="<?php echo $colors[$custom_from]['light']['four']; ?>" />
 						<span class="btn btn-secondary btn-md hide-if-no-js" id="color_four_default_button"><?php lang()->p( 'Reset' ); ?></span>
 					</div>
@@ -219,7 +244,7 @@ use function CFE_Colors\{
 				<label class="form-label col-sm-2 col-form-label" for="color_five"><?php lang()->p( 'Color Five' ); ?></label>
 				<div class="col-sm-10">
 					<div class="row color-picker-wrap">
-						<input class="color-picker scheme-color" id="color_five" name="color_five" value="<?php echo plugin()->color_five(); ?>" />
+						<input class="color-picker <?php echo picker_class(); ?>" id="color_five" name="color_five" value="<?php echo plugin()->color_five(); ?>" />
 						<input id="color_five_default" class="screen-reader-text" type="hidden" value="<?php echo $colors[$custom_from]['light']['five']; ?>" />
 						<span class="btn btn-secondary btn-md hide-if-no-js" id="color_five_default_button"><?php lang()->p( 'Reset' ); ?></span>
 					</div>
@@ -231,7 +256,7 @@ use function CFE_Colors\{
 				<label class="form-label col-sm-2 col-form-label" for="color_six"><?php lang()->p( 'Color Six' ); ?></label>
 				<div class="col-sm-10">
 					<div class="row color-picker-wrap">
-						<input class="color-picker scheme-color" id="color_six" name="color_six" value="<?php echo plugin()->color_six(); ?>" />
+						<input class="color-picker <?php echo picker_class(); ?>" id="color_six" name="color_six" value="<?php echo plugin()->color_six(); ?>" />
 						<input id="color_six_default" class="screen-reader-text" type="hidden" value="<?php echo $colors[$custom_from]['light']['six']; ?>" />
 						<span class="btn btn-secondary btn-md hide-if-no-js" id="color_six_default_button"><?php lang()->p( 'Reset' ); ?></span>
 					</div>
@@ -248,7 +273,7 @@ use function CFE_Colors\{
 				<label class="form-label col-sm-2 col-form-label" for="color_body_dark"><?php lang()->p( 'Dark Body Color' ); ?></label>
 				<div class="col-sm-10">
 					<div class="row color-picker-wrap">
-						<input class="color-picker scheme-rgba" id="color_body_dark" name="color_body_dark" value="<?php echo plugin()->color_body_dark(); ?>" />
+						<input class="color-picker <?php echo picker_class( true ); ?>" id="color_body_dark" name="color_body_dark" value="<?php echo plugin()->color_body_dark(); ?>" />
 						<input id="color_body_dark_default" class="screen-reader-text" type="hidden" value="<?php echo $colors[$custom_from]['dark']['body']; ?>" />
 						<span class="btn btn-secondary btn-md hide-if-no-js" id="color_body_dark_default_button"><?php lang()->p( 'Reset' ); ?></span>
 					</div>
@@ -260,7 +285,7 @@ use function CFE_Colors\{
 				<label class="form-label col-sm-2 col-form-label" for="color_text_dark"><?php lang()->p( 'Dark Text Color' ); ?></label>
 				<div class="col-sm-10">
 					<div class="row color-picker-wrap">
-						<input class="color-picker scheme-color" id="color_text_dark" name="color_text_dark" value="<?php echo plugin()->color_text_dark(); ?>" />
+						<input class="color-picker <?php echo picker_class(); ?>" id="color_text_dark" name="color_text_dark" value="<?php echo plugin()->color_text_dark(); ?>" />
 						<input id="color_text_dark_default" class="screen-reader-text" type="hidden" value="<?php echo $colors[$custom_from]['dark']['text']; ?>" />
 						<span class="btn btn-secondary btn-md hide-if-no-js" id="color_text_dark_default_button"><?php lang()->p( 'Reset' ); ?></span>
 					</div>
@@ -272,7 +297,7 @@ use function CFE_Colors\{
 				<label class="form-label col-sm-2 col-form-label" for="color_one_dark"><?php lang()->p( 'Dark Color One' ); ?></label>
 				<div class="col-sm-10">
 					<div class="row color-picker-wrap">
-						<input class="color-picker scheme-color" id="color_one_dark" name="color_one_dark" value="<?php echo plugin()->color_one_dark(); ?>" />
+						<input class="color-picker <?php echo picker_class(); ?>" id="color_one_dark" name="color_one_dark" value="<?php echo plugin()->color_one_dark(); ?>" />
 						<input id="color_one_dark_default" class="screen-reader-text" type="hidden" value="<?php echo $colors[$custom_from]['dark']['one']; ?>" />
 						<span class="btn btn-secondary btn-md hide-if-no-js" id="color_one_dark_default_button"><?php lang()->p( 'Reset' ); ?></span>
 					</div>
@@ -284,7 +309,7 @@ use function CFE_Colors\{
 				<label class="form-label col-sm-2 col-form-label" for="color_two_dark"><?php lang()->p( 'Dark Color Two' ); ?></label>
 				<div class="col-sm-10">
 					<div class="row color-picker-wrap">
-						<input class="color-picker scheme-color" id="color_two_dark" name="color_two_dark" value="<?php echo plugin()->color_two_dark(); ?>" />
+						<input class="color-picker <?php echo picker_class(); ?>" id="color_two_dark" name="color_two_dark" value="<?php echo plugin()->color_two_dark(); ?>" />
 						<input id="color_two_dark_default" class="screen-reader-text" type="hidden" value="<?php echo $colors[$custom_from]['dark']['two']; ?>" />
 						<span class="btn btn-secondary btn-md hide-if-no-js" id="color_two_dark_default_button"><?php lang()->p( 'Reset' ); ?></span>
 					</div>
@@ -296,7 +321,7 @@ use function CFE_Colors\{
 				<label class="form-label col-sm-2 col-form-label" for="color_three_dark"><?php lang()->p( 'Dark Color Three' ); ?></label>
 				<div class="col-sm-10">
 					<div class="row color-picker-wrap">
-						<input class="color-picker scheme-color" id="color_three_dark" name="color_three_dark" value="<?php echo plugin()->color_three_dark(); ?>" />
+						<input class="color-picker <?php echo picker_class(); ?>" id="color_three_dark" name="color_three_dark" value="<?php echo plugin()->color_three_dark(); ?>" />
 						<input id="color_three_dark_default" class="screen-reader-text" type="hidden" value="<?php echo $colors[$custom_from]['dark']['three']; ?>" />
 						<span class="btn btn-secondary btn-md hide-if-no-js" id="color_three_dark_default_button"><?php lang()->p( 'Reset' ); ?></span>
 					</div>
@@ -308,7 +333,7 @@ use function CFE_Colors\{
 				<label class="form-label col-sm-2 col-form-label" for="color_four_dark"><?php lang()->p( 'Dark Color Four' ); ?></label>
 				<div class="col-sm-10">
 					<div class="row color-picker-wrap">
-						<input class="color-picker scheme-color" id="color_four_dark" name="color_four_dark" value="<?php echo plugin()->color_four_dark(); ?>" />
+						<input class="color-picker <?php echo picker_class(); ?>" id="color_four_dark" name="color_four_dark" value="<?php echo plugin()->color_four_dark(); ?>" />
 						<input id="color_four_dark_default" class="screen-reader-text" type="hidden" value="<?php echo $colors[$custom_from]['dark']['four']; ?>" />
 						<span class="btn btn-secondary btn-md hide-if-no-js" id="color_four_dark_default_button"><?php lang()->p( 'Reset' ); ?></span>
 					</div>
@@ -320,7 +345,7 @@ use function CFE_Colors\{
 				<label class="form-label col-sm-2 col-form-label" for="color_five_dark"><?php lang()->p( 'Dark Color Five' ); ?></label>
 				<div class="col-sm-10">
 					<div class="row color-picker-wrap">
-						<input class="color-picker scheme-color" id="color_five_dark" name="color_five_dark" value="<?php echo plugin()->color_five_dark(); ?>" />
+						<input class="color-picker <?php echo picker_class(); ?>" id="color_five_dark" name="color_five_dark" value="<?php echo plugin()->color_five_dark(); ?>" />
 						<input id="color_five_dark_default" class="screen-reader-text" type="hidden" value="<?php echo $colors[$custom_from]['dark']['five']; ?>" />
 						<span class="btn btn-secondary btn-md hide-if-no-js" id="color_five_dark_default_button"><?php lang()->p( 'Reset' ); ?></span>
 					</div>
@@ -332,7 +357,7 @@ use function CFE_Colors\{
 				<label class="form-label col-sm-2 col-form-label" for="color_six_dark"><?php lang()->p( 'Dark Color Six' ); ?></label>
 				<div class="col-sm-10">
 					<div class="row color-picker-wrap">
-						<input class="color-picker scheme-color" id="color_six_dark" name="color_six_dark" value="<?php echo plugin()->color_six_dark(); ?>" />
+						<input class="color-picker <?php echo picker_class(); ?>" id="color_six_dark" name="color_six_dark" value="<?php echo plugin()->color_six_dark(); ?>" />
 						<input id="color_six_dark_default" class="screen-reader-text" type="hidden" value="<?php echo $colors[$custom_from]['dark']['six']; ?>" />
 						<span class="btn btn-secondary btn-md hide-if-no-js" id="color_six_dark_default_button"><?php lang()->p( 'Reset' ); ?></span>
 					</div>

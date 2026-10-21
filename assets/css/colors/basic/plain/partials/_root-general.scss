@@ -1,0 +1,21 @@
+///
+/// CSS properties
+///
+/// General properties for color scheme option.
+///
+
+@use 'sass:map';
+@use '../../../../modules/functions' as f;
+@use '../../../../modules/colors' as general;
+@use '../modules/colors' as c;
+
+:host,
+:root {
+	--cfe-cover-blend--bg-color: #{c.$media};
+	@each $name, $color in c.$light {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$dark {
+		--cfe-scheme-color--#{$name}--dark: #{$color};
+	}
+}

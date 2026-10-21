@@ -1,5 +1,6 @@
 :host,
 :root {
+  --cfe-cover-blend--bg-color: #0044aa;
   --cfe-scheme-color--body: #1e1e1e;
   --cfe-scheme-color--text: #ffffff;
   --cfe-scheme-color--one: #0044ff;

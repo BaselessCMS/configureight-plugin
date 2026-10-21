@@ -334,7 +334,7 @@ function sanzo_wada_scheme() {
 		'sanzo_wada' => [
 			'slug'     => 'sanzo_wada',
 			'name'     => lang()->get( 'Sanzo Wada Colors' ),
-			'about'    => lang()->get( "The complete selection of colors included in <a href='https://en.wikipedia.org/wiki/Sanzo_Wada' target='_blank' rel='noopener noreferrer'>Sanzo Wada's</a> reference book <em>A Dictionary of Color Combinations</em> with additional colors derived from his methods." ),
+			'about'    => lang()->get( "The complete selection of colors included in <a href='https://en.wikipedia.org/wiki/Sanzo_Wada' target='_blank' rel='noopener noreferrer'>Sanzo Wada's</a> reference book <em>A Dictionary of Color Combinations</em>, with additional colors derived from his methods." ),
 			'category' => 'custom',
 			'media'    => plugin()->cover_blend(),
 			'light'    => [
@@ -464,6 +464,36 @@ function tailwind_palette() {
 }
 
 /**
+ * Custom palette schemes
+ *
+ * Build your own schemes excluding `custom` scheme.
+ *
+ * @since  1.0.0
+ * @return array
+ */
+function palette_schemes() {
+	return [
+		'bootstrap',
+		'sanzo_wada',
+		'tailwind'
+	];
+}
+
+/**
+ * Custom build schemes
+ *
+ * Used mostly for excluding custom schemes
+ * from displaying various content.
+ *
+ * @since  1.0.0
+ * @return array
+ */
+function custom_schemes() {
+	$schemes = array_merge( palette_schemes(), [ 'custom' ] );
+	return $schemes;
+}
+
+/**
  * Custom color scheme from previous.
  *
  * Array to be passed into the primary
@@ -481,7 +511,7 @@ function custom_scheme() {
 	if ( in_array( $from, $custom ) ) {
 		$about = lang()->get( 'Custom scheme colors begin with the default scheme colors.' );
 	} else {
-		$about = lang()->get( 'Custom scheme colors begin with the previously set scheme. To change the starting colors, first save a different scheme then select custom. If another Build Your Own scheme was previous then the default scheme is the origin.' );
+		$about = lang()->get( 'Custom scheme colors begin with the previously set scheme. To change the starting colors, first save a different scheme then select custom.' );
 	}
 
 	$scheme = [
@@ -517,21 +547,42 @@ function custom_scheme() {
 }
 
 /**
- * Custom build schemes
- *
- * Used mostly for excluding custom schemes
- * from displaying various content.
+ * Basic schemes
  *
  * @since  1.0.0
  * @return array
  */
-function custom_schemes() {
+function basic_schemes() {
 	return [
-		'bootstrap',
-		'sanzo_wada',
-		'tailwind',
-		'custom'
+		'default',
+		'dark',
+		'plain'
 	];
+}
+
+/**
+ * Custom scheme heading
+ *
+ * The form heading for each custom scheme,
+ * printed above the custom color pickers.
+ *
+ * @since  1.0.0
+ * @return string
+ */
+function custom_schemes_heading() {
+
+	$current = plugin()->color_scheme();
+
+	if ( 'bootstrap' == $current ) {
+		$heading = lang()->get( 'Bootstrap Colors' );
+	} elseif ( 'sanzo_wada' == $current ) {
+		$heading = lang()->get( 'Sanzo Wada Colors' );
+	} elseif ( 'tailwind' == $current ) {
+		$heading = lang()->get( 'Tailwind Colors' );
+	} else {
+		$heading = lang()->get( 'Custom Colors' );
+	}
+	return $heading;
 }
 
 /**
@@ -633,6 +684,33 @@ function color_schemes() {
 				'pink'   => '#ff55dd'
 			]
 		],
+		'plain' => [
+			'slug'     => 'plain',
+			'name'     => lang()->get( 'Plain' ),
+			'about'    => lang()->get( 'A colorless scheme to save before using one of the "Build Your Own" schemes. This sets the default/reset colors in the grayscale.' ),
+			'category' => 'basic',
+			'media'    => '#8d8d8d',
+			'light' => [
+				'body'  => '#ffffff',
+				'text'  => '#262626',
+				'one'   => '#393939',
+				'two'   => '#6f6f6f',
+				'three' => '#6f6f6f',
+				'four'  => '#393939',
+				'five'  => '#525252',
+				'six'   => '#8d8d8d'
+			],
+			'dark' => [
+				'body'  => '#1e1e1e',
+				'text'  => '#ffffff',
+				'one'   => '#a8a8a8',
+				'two'   => '#8d8d8d',
+				'three' => '#6f6f6f',
+				'four'  => '#525252',
+				'five'  => '#525252',
+				'six'   => '#8d8d8d'
+			]
+		],
 
 		// Bootstrap — specific colors, not full-spectrum.
 		'bs-red' => [
@@ -662,7 +740,6 @@ function color_schemes() {
 				'six'   => '#dc3545'
 			],
 			'extra' => [
-				'white' => '#ffffff',
 				'100'   => '#fcebec',
 				'200'   => '#f8d7da',
 				'300'   => '#f1aeb5',
@@ -673,8 +750,7 @@ function color_schemes() {
 				'800'   => '#842029',
 				'900'   => '#58151c',
 				'1000'  => '#2c0b0e',
-				'1100'  => '#160507',
-				'black' => '#000000'
+				'1100'  => '#160507'
 			]
 		],
 		'bs-orange' => [
@@ -704,7 +780,6 @@ function color_schemes() {
 				'six'   => '#fd7e14'
 			],
 			'extra' => [
-				'white' => '#ffffff',
 				'100'   => '#fff2e8',
 				'200'   => '#ffe5d0',
 				'300'   => '#fecba1',
@@ -715,8 +790,7 @@ function color_schemes() {
 				'800'   => '#984c0c',
 				'900'   => '#653208',
 				'1000'  => '#331904',
-				'1100'  => '#190d02',
-				'black' => '#000000'
+				'1100'  => '#190d02'
 			]
 		],
 		'bs-yellow' => [
@@ -746,7 +820,6 @@ function color_schemes() {
 				'six'   => '#ffc107'
 			],
 			'extra' => [
-				'white' => '#ffffff',
 				'100'   => '#fff9e6',
 				'200'   => '#fff3cd',
 				'300'   => '#ffe69c',
@@ -757,8 +830,7 @@ function color_schemes() {
 				'800'   => '#997404',
 				'900'   => '#664d03',
 				'1000'  => '#332701',
-				'1100'  => '#1a1301',
-				'black' => '#000000'
+				'1100'  => '#1a1301'
 			]
 		],
 		'bs-green' => [
@@ -788,7 +860,6 @@ function color_schemes() {
 				'six'   => '#479f76'
 			],
 			'extra' => [
-				'white' => '#ffffff',
 				'100'   => '#e8f3ee',
 				'200'   => '#d1e7dd',
 				'300'   => '#a3cfbb',
@@ -799,8 +870,7 @@ function color_schemes() {
 				'800'   => '#0f5132',
 				'900'   => '#0a3622',
 				'1000'  => '#051b11',
-				'1100'  => '#030e08',
-				'black' => '#000000'
+				'1100'  => '#030e08'
 			]
 		],
 		'bs-teal' => [
@@ -830,7 +900,6 @@ function color_schemes() {
 				'six'   => '#20c997'
 			],
 			'extra' => [
-				'white' => '#ffffff',
 				'100'   => '#e9faf5',
 				'200'   => '#d2f4ea',
 				'300'   => '#a6e9d5',
@@ -841,8 +910,7 @@ function color_schemes() {
 				'800'   => '#13795b',
 				'900'   => '#0d503c',
 				'1000'  => '#06281e',
-				'1100'  => '#03140f',
-				'black' => '#000000'
+				'1100'  => '#03140f'
 			]
 		],
 		'bs-cyan' => [
@@ -872,7 +940,6 @@ function color_schemes() {
 				'six'   => '#0dcaf0'
 			],
 			'extra' => [
-				'white' => '#ffffff',
 				'100'   => '#e7fafe',
 				'200'   => '#cff4fc',
 				'300'   => '#9eeaf9',
@@ -883,8 +950,7 @@ function color_schemes() {
 				'800'   => '#087990',
 				'900'   => '#055160',
 				'1000'  => '#032830',
-				'1100'  => '#011418',
-				'black' => '#000000'
+				'1100'  => '#011418'
 			]
 		],
 		'bs-blue' => [
@@ -914,7 +980,6 @@ function color_schemes() {
 				'six'   => '#0d6efd'
 			],
 			'extra' => [
-				'white' => '#ffffff',
 				'100'   => '#e7f1ff',
 				'200'   => '#cfe2ff',
 				'300'   => '#9ec5fe',
@@ -925,8 +990,7 @@ function color_schemes() {
 				'800'   => '#084298',
 				'900'   => '#052c65',
 				'1000'  => '#031633',
-				'1100'  => '#010b19',
-				'black' => '#000000'
+				'1100'  => '#010b19'
 			]
 		],
 		'bs-indigo' => [
@@ -956,7 +1020,6 @@ function color_schemes() {
 				'six'   => '#6610f2'
 			],
 			'extra' => [
-				'white' => '#ffffff',
 				'100'   => '#f0e7fe',
 				'200'   => '#e0cffc',
 				'300'   => '#c29ffa',
@@ -967,8 +1030,7 @@ function color_schemes() {
 				'800'   => '#3d0a91',
 				'900'   => '#290661',
 				'1000'  => '#140330',
-				'1100'  => '#0a0218',
-				'black' => '#000000'
+				'1100'  => '#0a0218'
 			]
 		],
 		'bs-purple' => [
@@ -998,7 +1060,6 @@ function color_schemes() {
 				'six'   => '#8c68cd'
 			],
 			'extra' => [
-				'white' => '#ffffff',
 				'100'   => '#f1ecf9',
 				'200'   => '#e2d9f3',
 				'300'   => '#c5b3e6',
@@ -1009,8 +1070,7 @@ function color_schemes() {
 				'800'   => '#432874',
 				'900'   => '#2c1a4d',
 				'1000'  => '#160d27',
-				'1100'  => '#0b0713',
-				'black' => '#000000'
+				'1100'  => '#0b0713'
 			]
 		],
 		'bs-pink' => [
@@ -1040,7 +1100,6 @@ function color_schemes() {
 				'six'   => '#d63384'
 			],
 			'extra' => [
-				'white' => '#ffffff',
 				'100'   => '#fbebf3',
 				'200'   => '#f7d6e6',
 				'300'   => '#efadce',
@@ -1051,8 +1110,7 @@ function color_schemes() {
 				'800'   => '#801f4f',
 				'900'   => '#561435',
 				'1000'  => '#2b0a1a',
-				'1100'  => '#15050d',
-				'black' => '#000000'
+				'1100'  => '#15050d'
 			]
 		],
 		'bs-gray' => [
@@ -1082,7 +1140,6 @@ function color_schemes() {
 				'six'   => '#adb5bd'
 			],
 			'extra' => [
-				'white' => '#ffffff',
 				'100'   => '#f7f8f8',
 				'200'   => '#f8f9fa',
 				'300'   => '#e9ecef',
@@ -1093,8 +1150,7 @@ function color_schemes() {
 				'800'   => '#495057',
 				'900'   => '#343a40',
 				'1000'  => '#212529',
-				'1100'  => '#111213',
-				'black' => '#000000'
+				'1100'  => '#111213'
 			]
 		],
 
@@ -1124,6 +1180,19 @@ function color_schemes() {
 				'four'  => '#c10007',
 				'five'  => '#c10007',
 				'six'   => '#fb2c36'
+			],
+			'extra' => [
+				'100'   => '#fef2f2',
+				'200'   => '#fee2e2',
+				'300'   => '#ffc9c9',
+				'400'   => '#ffa2a2',
+				'500'   => '#ff6467',
+				'600'   => '#fb2c36',
+				'700'   => '#e7000b',
+				'800'   => '#c10007',
+				'900'   => '#9f0712',
+				'1000'  => '#82181a',
+				'1100'  => '#460809'
 			]
 		],
 		'tw-orange' => [
@@ -1151,6 +1220,10 @@ function color_schemes() {
 				'four'  => '#ca3500',
 				'five'  => '#ca3500',
 				'six'   => '#ff6900'
+			],
+			'extra' => [
+				'white' => '#ffffff',
+				'black' => '#000000'
 			]
 		],
 		'tw-amber' => [
@@ -1178,6 +1251,10 @@ function color_schemes() {
 				'four'  => '#e17100',
 				'five'  => '#e17100',
 				'six'   => '#fe9a00'
+			],
+			'extra' => [
+				'white' => '#ffffff',
+				'black' => '#000000'
 			]
 		],
 		'tw-yellow' => [
@@ -1205,6 +1282,10 @@ function color_schemes() {
 				'four'  => '#f0b100',
 				'five'  => '#f0b100',
 				'six'   => '#fdc700'
+			],
+			'extra' => [
+				'white' => '#ffffff',
+				'black' => '#000000'
 			]
 		],
 		'tw-lime' => [
@@ -1232,6 +1313,10 @@ function color_schemes() {
 				'four'  => '#5ea500',
 				'five'  => '#5ea500',
 				'six'   => '#7ccf00'
+			],
+			'extra' => [
+				'white' => '#ffffff',
+				'black' => '#000000'
 			]
 		],
 		'tw-green' => [
@@ -1259,6 +1344,10 @@ function color_schemes() {
 				'four'  => '#00a63e',
 				'five'  => '#00a63e',
 				'six'   => '#00c950'
+			],
+			'extra' => [
+				'white' => '#ffffff',
+				'black' => '#000000'
 			]
 		],
 		'tw-emerald' => [
@@ -1286,6 +1375,10 @@ function color_schemes() {
 				'four'  => '#009966',
 				'five'  => '#009966',
 				'six'   => '#00bc7d'
+			],
+			'extra' => [
+				'white' => '#ffffff',
+				'black' => '#000000'
 			]
 		],
 		'tw-teal' => [
@@ -1313,6 +1406,10 @@ function color_schemes() {
 				'four'  => '#009689',
 				'five'  => '#009689',
 				'six'   => '#00bba7'
+			],
+			'extra' => [
+				'white' => '#ffffff',
+				'black' => '#000000'
 			]
 		],
 		'tw-cyan' => [
@@ -1340,6 +1437,10 @@ function color_schemes() {
 				'four'  => '#0092b8',
 				'five'  => '#0092b8',
 				'six'   => '#00b8db'
+			],
+			'extra' => [
+				'white' => '#ffffff',
+				'black' => '#000000'
 			]
 		],
 		'tw-sky' => [
@@ -1367,6 +1468,10 @@ function color_schemes() {
 				'four'  => '#0084d1',
 				'five'  => '#0084d1',
 				'six'   => '#00a6f4'
+			],
+			'extra' => [
+				'white' => '#ffffff',
+				'black' => '#000000'
 			]
 		],
 		'tw-blue' => [
@@ -1394,6 +1499,10 @@ function color_schemes() {
 				'four'  => '#155dfc',
 				'five'  => '#155dfc',
 				'six'   => '#2b7fff'
+			],
+			'extra' => [
+				'white' => '#ffffff',
+				'black' => '#000000'
 			]
 		],
 		'tw-indigo' => [
@@ -1421,6 +1530,10 @@ function color_schemes() {
 				'four'  => '#4f39f6',
 				'five'  => '#4f39f6',
 				'six'   => '#615fff'
+			],
+			'extra' => [
+				'white' => '#ffffff',
+				'black' => '#000000'
 			]
 		],
 		'tw-violet' => [
@@ -1448,6 +1561,10 @@ function color_schemes() {
 				'four'  => '#7008e7',
 				'five'  => '#7008e7',
 				'six'   => '#8e51ff'
+			],
+			'extra' => [
+				'white' => '#ffffff',
+				'black' => '#000000'
 			]
 		],
 		'tw-purple' => [
@@ -1475,6 +1592,10 @@ function color_schemes() {
 				'four'  => '#9810fa',
 				'five'  => '#9810fa',
 				'six'   => '#c27aff'
+			],
+			'extra' => [
+				'white' => '#ffffff',
+				'black' => '#000000'
 			]
 		],
 		'tw-fuchsia' => [
@@ -1502,6 +1623,10 @@ function color_schemes() {
 				'four'  => '#c800de',
 				'five'  => '#c800de',
 				'six'   => '#e12afb'
+			],
+			'extra' => [
+				'white' => '#ffffff',
+				'black' => '#000000'
 			]
 		],
 		'tw-pink' => [
@@ -1529,6 +1654,10 @@ function color_schemes() {
 				'four'  => '#e60076',
 				'five'  => '#e60076',
 				'six'   => '#f6339a'
+			],
+			'extra' => [
+				'white' => '#ffffff',
+				'black' => '#000000'
 			]
 		],
 		'tw-rose' => [
@@ -1556,6 +1685,10 @@ function color_schemes() {
 				'four'  => '#ec003f',
 				'five'  => '#ec003f',
 				'six'   => '#ff637e'
+			],
+			'extra' => [
+				'white' => '#ffffff',
+				'black' => '#000000'
 			]
 		],
 		'tw-stone' => [
@@ -1583,6 +1716,10 @@ function color_schemes() {
 				'four'  => '#79716b',
 				'five'  => '#79716b',
 				'six'   => '#a6a09b'
+			],
+			'extra' => [
+				'white' => '#ffffff',
+				'black' => '#000000'
 			]
 		],
 		'tw-neutral' => [
@@ -1610,6 +1747,10 @@ function color_schemes() {
 				'four'  => '#737373',
 				'five'  => '#737373',
 				'six'   => '#a1a1a1'
+			],
+			'extra' => [
+				'white' => '#ffffff',
+				'black' => '#000000'
 			]
 		],
 		'tw-zinc' => [
@@ -1637,6 +1778,10 @@ function color_schemes() {
 				'four'  => '#71717b',
 				'five'  => '#71717b',
 				'six'   => '#9f9fa9'
+			],
+			'extra' => [
+				'white' => '#ffffff',
+				'black' => '#000000'
 			]
 		],
 		'tw-gray' => [
@@ -1664,6 +1809,10 @@ function color_schemes() {
 				'four'  => '#6a7282',
 				'five'  => '#6a7282',
 				'six'   => '#99a1af'
+			],
+			'extra' => [
+				'white' => '#ffffff',
+				'black' => '#000000'
 			]
 		],
 		'tw-slate' => [
@@ -1691,6 +1840,10 @@ function color_schemes() {
 				'four'  => '#62748e',
 				'five'  => '#62748e',
 				'six'   => '#90a1b9'
+			],
+			'extra' => [
+				'white' => '#ffffff',
+				'black' => '#000000'
 			]
 		],
 		'tw-mauve' => [
@@ -1718,6 +1871,10 @@ function color_schemes() {
 				'four'  => '#79697b',
 				'five'  => '#79697b',
 				'six'   => '#a89ea9'
+			],
+			'extra' => [
+				'white' => '#ffffff',
+				'black' => '#000000'
 			]
 		],
 		'tw-olive' => [
@@ -1745,6 +1902,10 @@ function color_schemes() {
 				'four'  => '#7c7c67',
 				'five'  => '#7c7c67',
 				'six'   => '#abab9c'
+			],
+			'extra' => [
+				'white' => '#ffffff',
+				'black' => '#000000'
 			]
 		],
 		'tw-mist' => [
@@ -1772,6 +1933,10 @@ function color_schemes() {
 				'four'  => '#67787c',
 				'five'  => '#67787c',
 				'six'   => '#9ca8ab'
+			],
+			'extra' => [
+				'white' => '#ffffff',
+				'black' => '#000000'
 			]
 		],
 		'tw-taupe' => [
@@ -1799,6 +1964,10 @@ function color_schemes() {
 				'four'  => '#7c6d67',
 				'five'  => '#7c6d67',
 				'six'   => '#aba09c'
+			],
+			'extra' => [
+				'white' => '#ffffff',
+				'black' => '#000000'
 			]
 		],
 
@@ -2944,14 +3113,15 @@ function picker_class( $alpha = false ) {
 
 	// Class for the current color scheme.
 	if ( 'bootstrap' == $current ) {
-		return 'bootstrap' . $type;
+		$class = 'bootstrap' . $type;
 	} elseif ( 'sanzo_wada' == $current ) {
-		return 'sanzo-wada' . $type;
+		$class = 'sanzo-wada' . $type;
 	} elseif ( 'tailwind' == $current ) {
-		return 'tailwind' . $type;
+		$class = 'tailwind' . $type;
 	} else {
-		return 'scheme' . $type;
+		$class = 'scheme' . $type;
 	}
+	return $class;
 }
 
 /**
@@ -3221,7 +3391,9 @@ function picker_colors_merged( $label = false ) {
 
 	// Maybe add a label.
 	if ( true == $label ) {
-		$text = lang()->get( 'Scheme' );
+		$from    = plugin()->custom_scheme_from();
+		$scheme  = get_color_scheme( $from );
+		$text    = $scheme['name'];
 		$palette = array_merge( [ $text ], $palette );
 	}
 	return $palette;
