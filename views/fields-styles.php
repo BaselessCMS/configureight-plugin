@@ -340,7 +340,7 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 					printf(
 						'<li id="scheme_desc_%s" style="display: %s;"><p>%s</p></li>',
 						$option['slug'],
-						$display,
+						( plugin()->color_scheme() === $option['slug'] ? 'block' : 'none' ),
 						$option['about']
 					);
 				}
