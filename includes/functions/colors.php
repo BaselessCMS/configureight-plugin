@@ -240,7 +240,7 @@ function palette_schemes() {
 }
 
 /**
- * Custom build schemes
+ * Options build schemes
  *
  * Used mostly for excluding custom schemes
  * from displaying various content.
@@ -248,11 +248,17 @@ function palette_schemes() {
  * @since  1.0.0
  * @return array
  */
-function custom_schemes() {
+function option_schemes() {
 	$schemes = array_merge( palette_schemes(), [ 'custom' ] );
 	return $schemes;
 }
 
+/**
+ * Custom schemes data
+ *
+ * @since  1.0.0
+ * @return array
+ */
 function custom_schemes_data() {
 	$schemes = [
 		'bootstrap' => [
@@ -272,7 +278,7 @@ function custom_schemes_data() {
 		],
 		'custom' => [
 			'slug'  => 'custom',
-			'name'  => lang()->get( 'Custom' ),
+			'name'  => lang()->get( 'Custom Colors' ),
 			'about' => lang()->get( 'Custom scheme colors begin with the previously set scheme. To change the starting colors, first save a different scheme then select custom.' )
 		]
 	];
@@ -316,7 +322,13 @@ function get_palette( $slug = false ) {
 	return $palette;
 }
 
-function option_schemes() {
+/**
+ * Build custom options schemes
+ *
+ * @since  1.0.0
+ * @return array
+ */
+function custom_schemes() {
 
 	$schemes = [];
 	$data  = custom_schemes_data();
@@ -342,10 +354,14 @@ function option_schemes() {
 	];
 
 	foreach ( $data as $custom => $scheme ) {
+
+		if ( ! isset( $scheme['slug'] ) ) {
+			continue;
+		}
 		$schemes[$custom] = [
 			'slug'     => $scheme['slug'],
-			'name'     => $scheme['name'],
-			'about'    => $scheme['about'],
+			'name'     => isset( $scheme['name'] ) ? $scheme['name'] : lang()->get( 'Unknown Scheme' ),
+			'about'    => isset( $scheme['about'] ) ? $scheme['about'] : '',
 			'category' => 'custom',
 			'media'    => plugin()->cover_blend(),
 			'light'    => $light,
@@ -367,15 +383,16 @@ function option_schemes() {
 function custom_schemes_heading() {
 
 	$current = plugin()->color_scheme();
+	$data    = custom_schemes_data();
+	$heading = lang()->get( 'Custom Colors' );
 
-	if ( 'bootstrap' == $current ) {
-		$heading = lang()->get( 'Bootstrap Colors' );
-	} elseif ( 'sanzo-wada' == $current ) {
-		$heading = lang()->get( 'Sanzo Wada Colors' );
-	} elseif ( 'tailwind' == $current ) {
-		$heading = lang()->get( 'Tailwind Colors' );
-	} else {
-		$heading = lang()->get( 'Custom Colors' );
+	foreach ( $data as $key => $scheme ) {
+		if ( $key != $current ) {
+			continue;
+		}
+		if ( isset( $scheme['name'] ) ) {
+			$heading = $scheme['name'];
+		}
 	}
 	return $heading;
 }
@@ -2807,7 +2824,7 @@ function color_schemes() {
 	];
 
 	// Merge custom schemes.
-	$schemes = array_merge( $schemes, option_schemes() );
+	$schemes = array_merge( $schemes, custom_schemes() );
 
 	return $schemes;
 }
@@ -2924,7 +2941,7 @@ function color_scheme_template() {
 	$scheme = false;
 
 	// Exclude custom schemes.
-	if ( in_array( plugin()->color_scheme(), custom_schemes() ) ) {
+	if ( in_array( plugin()->color_scheme(), option_schemes() ) ) {
 		return $scheme;
 	}
 

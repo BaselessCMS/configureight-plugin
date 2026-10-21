@@ -54,7 +54,7 @@ use function CFE_Plugin\{
 	url
 };
 use function CFE_Colors\{
-	custom_schemes,
+	option_schemes,
 	default_color_scheme,
 	define_color_scheme,
 	current_color_scheme
@@ -1409,7 +1409,7 @@ class configureight extends Plugin {
 
 		// Color scheme stylesheet.
 		if ( 'colors' === $type ) {
-			if ( ! in_array( $option_colors, custom_schemes() ) ) {
+			if ( ! in_array( $option_colors, option_schemes() ) ) {
 				$html = css( "assets/css/colors/{$current_color['category']}/{$option_colors}/{$filename}{$suffix}.css" );
 			}
 		}
@@ -2359,7 +2359,7 @@ class configureight extends Plugin {
 	// @return string
 	public function custom_scheme_from() {
 
-		if ( in_array( $this->getValue( 'custom_scheme_from' ), custom_schemes() ) ) {
+		if ( in_array( $this->getValue( 'custom_scheme_from' ), option_schemes() ) ) {
 			return 'default';
 		}
 		return $this->getValue( 'custom_scheme_from' );

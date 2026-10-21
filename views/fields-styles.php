@@ -17,7 +17,7 @@ use function CFE_Plugin\{
 use function CFE_Colors\{
 	color_schemes,
 	basic_schemes,
-	custom_schemes,
+	option_schemes,
 	get_color_scheme,
 	get_palette,
 	hex_to_rgb
@@ -274,8 +274,8 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 				}
 				echo '</optgroup>';
 
-				// Exclude some schemes from loop.custom_schemes()
-				$exclude = array_merge( basic_schemes(), custom_schemes() );
+				// Exclude some schemes from loop.option_schemes()
+				$exclude = array_merge( basic_schemes(), option_schemes() );
 
 				foreach ( $colors as $color => $option ) {
 
@@ -313,7 +313,7 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 					'<optgroup label="%s">',
 					lang()->get( 'Build Your Own' )
 				);
-				foreach ( custom_schemes() as $key ) {
+				foreach ( option_schemes() as $key ) {
 					$scheme = get_color_scheme( $key );
 					printf(
 						'<option value="%s" %s>%s</option>',
@@ -330,7 +330,7 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 			<ul id="form-color-thumbs-list">
 			<?php foreach ( $colors as $color => $option ) {
 
-				if ( ! in_array( plugin()->color_scheme(), custom_schemes() ) && plugin()->color_scheme() === $option['slug'] ) {
+				if ( ! in_array( plugin()->color_scheme(), option_schemes() ) && plugin()->color_scheme() === $option['slug'] ) {
 					$display = 'flex';
 				} else {
 					$display = 'none';

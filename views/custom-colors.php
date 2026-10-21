@@ -16,7 +16,7 @@ use function CFE_Plugin\{
 };
 use function CFE_Colors\{
 	color_schemes,
-	custom_schemes,
+	option_schemes,
 	palette_schemes,
 	get_palette,
 	custom_schemes_heading,
@@ -25,7 +25,7 @@ use function CFE_Colors\{
 };
 
 ?>
-<div id="custom_color_scheme_fields" style="display: <?php echo ( in_array( plugin()->color_scheme(), custom_schemes() ) ? 'block' : 'none' ); ?>;">
+<div id="custom_color_scheme_fields" style="display: <?php echo ( in_array( plugin()->color_scheme(), option_schemes() ) ? 'block' : 'none' ); ?>;">
 
 	<h3 class="form-heading"><?php echo custom_schemes_heading(); ?></h3>
 
