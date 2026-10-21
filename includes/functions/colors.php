@@ -345,7 +345,7 @@ function get_palette( $slug = false ) {
 	}
 
 	$json = '';
-	$file = plugin()->phpPath() . "/assets/json/colors/{$slug}-colors.json";
+	$file = plugin()->phpPath() . "/assets/json/palettes/{$slug}-colors.json";
 	$palette = [];
 
 	if ( file_exists( $file ) ) {
