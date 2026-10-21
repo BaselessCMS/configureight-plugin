@@ -265,7 +265,7 @@ function get_palette( $slug = false ) {
 	if ( ! $slug ) {
 		return [[]];
 	}
-	if ( ! in_array( $slug, palette_schemes() ) ) {
+	if ( 'grayscale' !== $slug && ! in_array( $slug, palette_schemes() ) ) {
 		return [ picker_colors_merged( true ) ];
 	}
 
@@ -275,44 +275,6 @@ function get_palette( $slug = false ) {
 
 	if ( file_exists( $file ) ) {
 		$json = file_get_contents( $file );
-	}
-	$json = json_decode( $json, true );
-
-	if ( is_null( $json ) ) {
-		return $palette;
-	}
-	foreach ( $json as $key => $value ) {
-		$palette[] = $value;
-	}
-	return $palette;
-}
-
-/**
- * Grayscale palette
- *
- * Returns an array of purely neutral hex values,
- * from white to black.
- *
- * The values, except the addition of white and black,
- * are from the IBM Carbon color palette.
- *
- * @since  1.0.0
- * @param  boolean $label True for the JSON file with a label as
- *                        array[0], false for the other without.
- * @return array
- */
-function grayscale_palette( $label = false ) {
-
-	$json = '';
-	$file = 'grayscale-colors';
-	if ( true == $label ) {
-		$file = 'grayscale-colors-label';
-	}
-	$path = plugin()->phpPath() . "/assets/json/colors/{$file}.json";
-	$palette = [];
-
-	if ( file_exists( $path ) ) {
-		$json = file_get_contents( $path );
 	}
 	$json = json_decode( $json, true );
 

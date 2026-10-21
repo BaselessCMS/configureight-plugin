@@ -1,5 +1,6 @@
 {
 	"scale" : {
+		"label": "Grayscale",
 		"white" : "#ffffff",
 		"100"   : "#f4f4f4",
 		"200"   : "#e0e0e0",

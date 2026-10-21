@@ -19,8 +19,8 @@ use function CFE_Colors\{
 	basic_schemes,
 	custom_schemes,
 	get_color_scheme,
-	hex_to_rgb,
-	grayscale_palette
+	get_palette,
+	hex_to_rgb
 };
 use function CFE_Fonts\{
 	font_schemes,
@@ -429,13 +429,13 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 				endif;
 
 				printf(
-					'<ul id="grayscale_palette_%s" style="display: %s">',
+					'<ul id="grayscale-palette-%s" style="display: %s">',
 					$option['slug'],
 					$display
 				);
 
 				$count = 0;
-				foreach ( grayscale_palette() as $palette ) {
+				foreach ( get_palette( 'grayscale' ) as $palette ) {
 					if ( ! empty( $palette ) ) {
 						foreach ( $palette as $thumb => $value ) {
 							$count++;
@@ -848,7 +848,7 @@ jQuery(document).ready( function($) {
 				$( '#dark_scheme_thumbs_<?php echo $slug; ?>' ).css( 'display', 'flex' );
 				$( '#extra_scheme_thumbs_<?php echo $slug; ?>' ).css( 'display', 'flex' );
 				$( '#custom_scheme_from' ).val( '<?php echo $slug; ?>' );
-				$( '#grayscale_palette_<?php echo $slug; ?>' ).css( 'display', 'flex' );
+				$( '#grayscale-palette-<?php echo $slug; ?>' ).css( 'display', 'flex' );
 			} else {
 				$( '#custom_scheme_from' ).val( '<?php echo $custom_from; ?>' );
 			}
@@ -899,7 +899,7 @@ jQuery(document).ready( function($) {
 			$( '#light_scheme_thumbs_<?php echo $slug; ?>' ).css( 'display', 'none' );
 			$( '#dark_scheme_thumbs_<?php echo $slug; ?>' ).css( 'display', 'none' );
 			$( '#extra_scheme_thumbs_<?php echo $slug; ?>' ).css( 'display', 'none' );
-			$( '#grayscale_palette_<?php echo $slug; ?>' ).css( 'display', 'none' );
+			$( '#grayscale-palette-<?php echo $slug; ?>' ).css( 'display', 'none' );
 		}
 		<?php endforeach; ?>
 	});

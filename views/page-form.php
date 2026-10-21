@@ -14,8 +14,7 @@ use function CFE_Plugin\{
 };
 use function CFE_Colors\{
 	palette_schemes,
-	get_palette,
-	grayscale_palette
+	get_palette
 };
 
 // Current color scheme.
@@ -130,7 +129,7 @@ jQuery(document).ready( function($) {
 			<?php foreach ( get_palette( $color_scheme ) as $color ) {
 				echo "[ '" . implode( "', '", $color ) . "' ]," . "\r\t\t\t";
 			} ?>
-			<?php foreach ( grayscale_palette( true ) as $color ) {
+			<?php foreach ( get_palette( 'grayscale' ) as $color ) {
 				echo "[ '" . implode( "', '", $color ) . "' ]," . "\r\t\t\t";
 			} ?>
 		],
@@ -167,7 +166,7 @@ jQuery(document).ready( function($) {
 			<?php foreach ( get_palette( $color_scheme ) as $color ) {
 				echo "[ '" . implode( "', '", $color ) . "' ]," . "\r\t\t\t";
 			} ?>
-			<?php foreach ( grayscale_palette( true ) as $color ) {
+			<?php foreach ( get_palette( 'grayscale' ) as $color ) {
 				echo "[ '" . implode( "', '", $color ) . "' ]," . "\r\t\t\t";
 			} ?>
 		],

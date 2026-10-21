@@ -18,10 +18,10 @@ use function CFE_Colors\{
 	color_schemes,
 	custom_schemes,
 	palette_schemes,
+	get_palette,
 	custom_schemes_heading,
 	hex_to_rgb,
-	picker_class,
-	grayscale_palette
+	picker_class
 };
 
 ?>
@@ -136,7 +136,7 @@ use function CFE_Colors\{
 		<ul id="grayscale-palette-custom">
 		<?php
 		$count = 0;
-		foreach ( grayscale_palette() as $palette ) {
+		foreach ( get_palette( 'grayscale' ) as $palette ) {
 			if ( ! empty( $palette ) ) {
 				foreach ( $palette as $thumb => $value ) {
 					$count++;
