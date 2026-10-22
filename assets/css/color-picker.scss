@@ -658,7 +658,7 @@ Here are the basic themeable display options (colors, fonts, global widths)
 	font-family: $code_stack;
 	font-size: 1rem;
 	line-height: 1.5;
-	background-color: var( --cfe-scheme-color--body );
+	background-color: transparent;
 	color: var( --cfe-body--text-color );
 	background-clip: padding-box;
 	border: var( --cfe-form-element--border );
@@ -666,13 +666,13 @@ Here are the basic themeable display options (colors, fonts, global widths)
 	transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 
 	@media ( prefers-color-scheme: dark ) {
-		background-color: var( --cfe-scheme-color--body--dark );
+		background-color: transparent;
 		color: var( --cfe-body--text-color--dark );
 	}
 }
 
 .dark-mode .color-picker {
-	background-color: var( --cfe-scheme-color--body--dark );
+	background-color: transparent;
 	color: var( --cfe-body--text-color--dark );
 }
 
