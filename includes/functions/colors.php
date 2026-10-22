@@ -246,6 +246,11 @@ function option_schemes_data() {
 			'name'  => lang()->get( 'Material Design Colors' ),
 			'about' => lang()->get( 'The complete selection of colors included with the <a href="https://m2.material.io/design/color/the-color-system.html#tools-for-picking-colors" target="_blank" rel="noopener noreferrer">Material</a> design system.' )
 		],
+		'open-color' => [
+			'slug'  => 'open-color',
+			'name'  => lang()->get( 'Open Color Colors' ),
+			'about' => lang()->get( 'The complete selection of colors included with the <a href="https://yeun.github.io/open-color/" target="_blank" rel="noopener noreferrer">Open Color</a> palette.' )
+		],
 		'open-props' => [
 			'slug'  => 'open-props',
 			'name'  => lang()->get( 'Open Props Colors' ),
