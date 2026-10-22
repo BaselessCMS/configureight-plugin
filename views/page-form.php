@@ -20,6 +20,8 @@ use function CFE_Colors\{
 // Current color scheme.
 $color_scheme  = plugin()->color_scheme();
 $color_scheme  = str_replace( '_', '-', $color_scheme );
+
+// Picker format. Variable added with CSS Named Colors palette.
 $picker_format = 'hex';
 if ( 'names' == $color_scheme ) {
 	$picker_format = 'name';
