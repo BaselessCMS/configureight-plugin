@@ -281,6 +281,11 @@ function option_schemes_data() {
 			'name'  => lang()->get( 'Web Awesome Colors' ),
 			'about' => lang()->get( 'The complete selection of colors included with the <a href="https://webawesome.com/docs/tokens/color/" target="_blank" rel="noopener noreferrer">Web Awesome</a> UI kit.' )
 		],
+		'names' => [
+			'slug'  => 'names',
+			'name'  => lang()->get( 'CSS Named Colors' ),
+			'about' => lang()->get( 'The complete selection of colors <a href="https://drafts.csswg.org/css-color-4/#named-colors" target="_blank" rel="noopener noreferrer">officially named</a> by the World Wide Web Consortium (W3C).' )
+		],
 		'custom' => [
 			'slug'  => 'custom',
 			'name'  => lang()->get( 'Custom Colors' ),

@@ -18,8 +18,12 @@ use function CFE_Colors\{
 };
 
 // Current color scheme.
-$color_scheme = plugin()->color_scheme();
-$color_scheme = str_replace( '_', '-', $color_scheme );
+$color_scheme  = plugin()->color_scheme();
+$color_scheme  = str_replace( '_', '-', $color_scheme );
+$picker_format = 'hex';
+if ( 'names' == $color_scheme ) {
+	$picker_format = 'name';
+}
 
 // Guide page URL.
 $guide_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className();
@@ -120,7 +124,7 @@ jQuery(document).ready( function($) {
 		type            : 'component',
 		showInitial     : true,
 		allowEmpty      : false,
-		preferredFormat : 'hex',
+		preferredFormat : '<?php echo $picker_format; ?>',
 		showAlpha       : false,
 		showPalette     : true,
 		showPaletteOnly : <?php echo ( in_array( plugin()->color_scheme(), palette_schemes() ) ? 'true' : 'false' ) ?>,
@@ -157,7 +161,7 @@ jQuery(document).ready( function($) {
 		type            : 'component',
 		showInitial     : true,
 		allowEmpty      : false,
-		preferredFormat : 'hex',
+		preferredFormat : '<?php echo $picker_format; ?>',
 		showAlpha       : true,
 		showPalette     : true,
 		showPaletteOnly : <?php echo ( in_array( plugin()->color_scheme(), palette_schemes() ) ? 'true' : 'false' ) ?>,
