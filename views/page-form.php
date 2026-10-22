@@ -126,21 +126,21 @@ jQuery(document).ready( function($) {
 		type            : 'component',
 		showInitial     : true,
 		allowEmpty      : false,
-		preferredFormat : '<?php echo $picker_format; ?>',
+		preferredFormat : <?php echo "'{$picker_format}'"; ?>,
 		showAlpha       : false,
 		showPalette     : true,
 		showPaletteOnly : <?php echo ( in_array( plugin()->color_scheme(), palette_schemes() ) ? 'true' : 'false' ) ?>,
 		paletteLabel    : true,
 		palette         : [
 			<?php foreach ( get_palette( $color_scheme ) as $color ) {
-				echo "[ '" . implode( "', '", $color ) . "' ]," . "\r\t\t\t";
+				echo "[ '" . implode( "', '", $color ) . "' ],";
 			} ?>
 			<?php foreach ( get_palette( 'grayscale' ) as $color ) {
-				echo "[ '" . implode( "', '", $color ) . "' ]," . "\r\t\t\t";
+				echo "[ '" . implode( "', '", $color ) . "' ],";
 			} ?>
 		],
 		showSelectionPalette : false,
-		show : function(e) {
+		show : function() {
 			$( '.sp-thumb-el' ).tooltipster({
 				distance : 15,
 				delay : 150,
@@ -148,7 +148,7 @@ jQuery(document).ready( function($) {
 				theme : 'cfe-tooltips'
 			});
 		},
-		move : function(e) {
+		move : function() {
 			$( '.sp-thumb-el' ).tooltipster({
 				distance : 15,
 				delay : 150,
@@ -163,21 +163,21 @@ jQuery(document).ready( function($) {
 		type            : 'component',
 		showInitial     : true,
 		allowEmpty      : false,
-		preferredFormat : '<?php echo $picker_format; ?>',
+		preferredFormat : <?php echo "'{$picker_format}'"; ?>,
 		showAlpha       : true,
 		showPalette     : true,
 		showPaletteOnly : <?php echo ( in_array( plugin()->color_scheme(), palette_schemes() ) ? 'true' : 'false' ) ?>,
 		paletteLabel    : true,
 		palette         : [
 			<?php foreach ( get_palette( $color_scheme ) as $color ) {
-				echo "[ '" . implode( "', '", $color ) . "' ]," . "\r\t\t\t";
+				echo "[ '" . implode( "', '", $color ) . "' ],";
 			} ?>
 			<?php foreach ( get_palette( 'grayscale' ) as $color ) {
-				echo "[ '" . implode( "', '", $color ) . "' ]," . "\r\t\t\t";
+				echo "[ '" . implode( "', '", $color ) . "' ],";
 			} ?>
 		],
 		showSelectionPalette : false,
-		show : function(e) {
+		show : function() {
 			$( '.sp-thumb-el' ).tooltipster({
 				distance : 15,
 				delay : 150,
@@ -185,7 +185,7 @@ jQuery(document).ready( function($) {
 				theme : 'cfe-tooltips'
 			});
 		},
-		move : function(e) {
+		move : function() {
 			$( '.sp-thumb-el' ).tooltipster({
 				distance : 15,
 				delay : 150,
