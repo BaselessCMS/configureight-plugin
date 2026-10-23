@@ -279,7 +279,7 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 						);
 						echo '<div class="multi-check-wrap" style="margin: 0">';
 					}
-					echo '<label for="load_schemes" class="check-label-wrap form-html-tooltip" data-tooltip-content="#tooltip-about-' . $scheme['slug'] . '">';
+					echo '<label for="load_schemes" class="check-label-wrap html-tooltip" data-tooltip-content="#tooltip-about-' . $scheme['slug'] . '">';
 					printf(
 						'<input class="load-schemes" type="checkbox" name="load_schemes[]" id="load_schemes" value="%s" %s> %s',
 						$scheme['slug'],
@@ -310,7 +310,7 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 					}
 					$scheme = get_color_scheme( $key['slug'] );
 
-					echo '<label for="load_schemes" class="check-label-wrap form-html-tooltip" data-tooltip-content="#tooltip-about-' . $scheme['slug'] . '">';
+					echo '<label for="load_schemes" class="check-label-wrap html-tooltip" data-tooltip-content="#tooltip-about-' . $scheme['slug'] . '">';
 					printf(
 						'<input class="load-schemes" type="checkbox" name="load_schemes[]" id="load_schemes" value="%s" %s> %s',
 						$scheme['slug'],

@@ -117,7 +117,7 @@ jQuery(document).ready( function($) {
 		animationDuration : 150,
 		theme : 'cfe-tooltips'
 	});
-	$( '.form-html-tooltip' ).tooltipster({
+	$( '.html-tooltip' ).tooltipster({
 		distance : 5,
 		delay : 150,
 		animationDuration : 150,
