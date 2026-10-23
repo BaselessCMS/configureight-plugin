@@ -241,6 +241,11 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 
 <h3 class="form-heading"><?php lang()->p( 'Color Schemes' ); ?></h3>
 
+<?php printf(
+	lang()->get( '<p>Find details on the <a href="%s" target="_blank" rel="noopener noreferrer">color reference page</a>.</p>' ),
+	$colors_page
+); ?>
+
 <fieldset>
 
 	<legend class="screen-reader-text"><?php lang()->p( 'Manage Color Scheme' ); ?></legend>
@@ -551,7 +556,18 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 	include( plugin()->phpPath() . '/views/custom-colors.php' );
 
 	?>
-	<h3 class="form-heading"><?php lang()->p( 'Typography' ); ?></h3>
+</fieldset>
+
+<h3 class="form-heading"><?php lang()->p( 'Typography' ); ?></h3>
+
+<?php printf(
+	lang()->get( '<p>Find details on the <a href="%s" target="_blank" rel="noopener noreferrer">fonts reference page</a>.</p>' ),
+	$fonts_page
+); ?>
+
+<fieldset>
+
+	<legend class="screen-reader-text"><?php lang()->p( 'Manage Typography Scheme' ); ?></legend>
 
 	<div class="form-field form-group row">
 
@@ -796,8 +812,13 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 			</div>
 		</div>
 	</div>
+</fieldset>
 
-	<h3 class="form-heading"><?php lang()->p( 'Backend Interface' ); ?></h3>
+<h3 class="form-heading"><?php lang()->p( 'Backend Interface' ); ?></h3>
+
+<fieldset>
+
+	<legend class="screen-reader-text"><?php lang()->p( 'Admin Theme Options' ); ?></legend>
 
 	<div class="form-field form-group row">
 
@@ -841,7 +862,7 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 
 <fieldset>
 
-	<legend class="screen-reader-text"><?php lang()->p( 'Custom' ); ?></legend>
+	<legend class="screen-reader-text"><?php lang()->p( 'Custom CSS Code' ); ?></legend>
 
 	<div class="form-field form-group row">
 		<label class="form-label col-sm-2 col-form-label" for="custom_css"><?php lang()->p( 'Frontend Style Block' ); ?></label>
