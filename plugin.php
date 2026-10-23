@@ -390,7 +390,7 @@ class configureight extends Plugin {
 			'body_img_size'          => 'auto',
 			'body_img_size_custom'   => '',
 			'body_img_attach'        => 'scroll',
-			'load_schemes'           => [ 'default', 'plain' ],
+			'load_schemes'           => [ 'default', 'plain', 'custom' ],
 			'color_scheme'           => 'default',
 			'use_dark_scheme'        => false,
 			'custom_scheme_from'     => 'default',
