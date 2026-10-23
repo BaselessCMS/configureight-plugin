@@ -36,30 +36,7 @@ $settings_page = DOMAIN_ADMIN . 'configure-plugin/' . plugin()->className();
 
 <style>
 .color-heading {
-	margin: 1rem 0 0 0 !important;
-	font-size: var( --cfe-admin--color-heading--font-size, 1.625rem );
-}
-.color-list-heading {
-	margin: 1rem 0 0 0 !important;
-	font-size: var( --cfe-admin--color-list-heading--font-size, 1.25rem );
-}
-.color-list {
-	list-style: var( --cfe-admin--color-list--list-style, none );
-	margin: 1rem 0 0 0 !important;
-	padding: 0 !important;
-}
-.color-list li {
-	line-height: var( --cfe-admin--color-list--item--line-height, 1.3 );
-}
-.color-list-label {
-	font-weight: var( --cfe-admin--color-list-value--font-weight, 600 );
-}
-.color-list-preview {
-	display: inline-block;
-	vertical-align: middle;
-	width: 6rem;
-	height: 1em;
-	border: var( --cfe-form-element--border );
+	font-size: 1.5rem;
 }
 pre {
 	user-select: all;
@@ -124,9 +101,29 @@ code.select {
 jQuery(document).ready( function($) {
 	$( '.form-tooltip' ).tooltipster({
 		distance : 5,
-		delay : 150,
+		delay : 0,
 		animationDuration : 150,
 		theme : 'cfe-tooltips'
+	});
+	$( '.color-tooltip' ).tooltipster({
+		distance : 10,
+		delay : 150,
+		delayTouch: 0,
+		animationDuration : 150,
+		theme : 'cfe-tooltips',
+		interactive : true,
+		trigger : 'custom',
+		triggerOpen: {
+			hover : false,
+			mouseenter : false,
+			click : true,
+			touchstart : true
+		},
+		triggerClose: {
+			mouseleave : true,
+			scroll : true,
+			touchleave : false
+		}
 	});
 });
 </script>

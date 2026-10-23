@@ -31,6 +31,11 @@ $current = current_color_scheme();
 
 <?php
 printf(
+	'<p>%s</p>',
+	lang()->get( 'Click or tap any color swatch to its hex and rgb codes.' )
+);
+
+printf(
 	'<h2 class="color-heading">%s %s</h2>',
 	lang()->get( 'Current Scheme:' ),
 	$current['name']
@@ -71,74 +76,66 @@ if ( 'custom' == $current['slug'] ) {
 		);
 	}
 }
-printf(
-	'<p>%s</p>',
-	lang()->get( 'The following color information comes from the database, as set in the individual custom color pickers.' )
-);
 
 // Current light color options.
 printf(
-	'<h3 class="color-list-heading">%s</h3>',
+	'<h3 class="form-heading">%s</h3>',
 	lang()->get( 'Light Mode Colors' )
 );
 
-echo '<ul class="color-list color-list-light">';
+echo '<div id="form-color-thumbs-list"><ul>';
 foreach ( $current['light'] as $name => $color ) {
 
 	if ( $color ) :
-		echo '<li><ul class="color-list color-list-light">';
 		printf(
-			'<li><span class="color-list-label">%s hex:</span> <code class="select">%s</code></li>',
-			ucwords( $name ),
+			'<li style="background-color: %s;" class="color-tooltip" data-tooltip-content="#tooltip-%s-light-%s"><span class="screen-reader-text">%s</span></li>',
+			$color,
+			$current['slug'],
+			$name,
 			$color
 		);
 		printf(
-			'<li><span class="color-list-label">%s rgb:</span> <code class="select">%s</code></li>',
-			ucwords( $name ),
+			'<div style="display: none"><div id="tooltip-%s-light-%s">%s %s <br />Hex: %s <br />RGB: %s</div></div>',
+			$current['slug'],
+			$name,
+			lang()->get( 'Color:' ),
+			$name,
+			$color,
 			hex_to_rgb( $color )
 		);
-		printf(
-			'<li><span class="color-list-label">%s</span> <span class="color-list-preview" style="background-color: %s;"><span class="screen-reader-text">%s</span></span></li>',
-			lang()->get( 'Preview:' ),
-			$color,
-			$color
-		);
-		echo '</ul></li>';
 	endif;
 }
-echo '</ul>';
+echo '</ul></div>';
 
 // Current dark color options.
 printf(
-	'<h3 class="color-list-heading">%s</h3>',
+	'<h3 class="form-heading">%s</h3>',
 	lang()->get( 'Dark Mode Colors' )
 );
 
-echo '<ul class="color-list color-list-dark">';
+echo '<div id="form-color-thumbs-list"><ul>';
 foreach ( $current['dark'] as $name => $color ) {
 
 	if ( $color ) :
-		echo '<li><ul class="color-list color-list-dark">';
 		printf(
-			'<li><span class="color-list-label">%s hex:</span> <code class="select">%s</code></li>',
-			ucwords( $name ),
+			'<li style="background-color: %s;" class="color-tooltip" data-tooltip-content="#tooltip-%s-dark-%s"><span class="screen-reader-text">%s</span></li>',
+			$color,
+			$current['slug'],
+			$name,
 			$color
 		);
 		printf(
-			'<li><span class="color-list-label">%s rgb:</span> <code class="select">%s</code></li>',
-			ucwords( $name ),
+			'<div style="display: none"><div id="tooltip-%s-dark-%s">%s %s <br />Hex: %s <br />RGB: %s</div></div>',
+			$current['slug'],
+			$name,
+			lang()->get( 'Color:' ),
+			$name,
+			$color,
 			hex_to_rgb( $color )
 		);
-		printf(
-			'<li><span class="color-list-label">%s</span> <span class="color-list-preview" style="background-color: %s;"><span class="screen-reader-text">%s</span></span></li>',
-			lang()->get( 'Preview:' ),
-			$color,
-			$color
-		);
-		echo '</ul></li>';
 	endif;
 }
-echo '</ul>';
+echo '</ul></div>';
 ?>
 
 <?php
@@ -215,67 +212,63 @@ foreach ( $schemes as $scheme => $option ) {
 
 	// Scheme light mode colors.
 	printf(
-		'<h3 class="color-list-heading">%s</h3>',
+		'<h3 class="form-heading">%s</h3>',
 		lang()->get( 'Light Mode Colors' )
 	);
 
-	echo '<ul class="color-list color-list-light">';
-	foreach ( $option['light'] as $color => $value ) {
+	echo '<div id="form-color-thumbs-list"><ul>';
+	foreach ( $option['light'] as $name => $color ) {
 
-		if ( $value ) :
-			echo '<li><ul class="color-list color-list-light">';
+		if ( $color ) :
 			printf(
-				'<li><span class="color-list-label">%s hex:</span> <code class="select">%s</code></li>',
-				ucwords( $color ),
-				$value
+				'<li style="background-color: %s;" class="color-tooltip" data-tooltip-content="#tooltip-%s-light-%s"><span class="screen-reader-text">%s</span></li>',
+				$color,
+				$option['slug'],
+				$name,
+				$color
 			);
 			printf(
-				'<li><span class="color-list-label">%s rgb:</span> <code class="select">%s</code></li>',
-				ucwords( $color ),
-				hex_to_rgb( $value )
+				'<div style="display: none"><div id="tooltip-%s-light-%s">%s %s <br />Hex: %s <br />RGB: %s</div></div>',
+				$option['slug'],
+				$name,
+				lang()->get( 'Color:' ),
+				$name,
+				$color,
+				hex_to_rgb( $color )
 			);
-			printf(
-				'<li><span class="color-list-label">%s</span> <span class="color-list-preview" style="background-color: %s;"><span class="screen-reader-text">%s</span></span></li>',
-				lang()->get( 'Preview:' ),
-				$value,
-				$value
-			);
-			echo '</ul></li>';
 		endif;
 	}
-	echo '</ul>';
+	echo '</ul></div>';
 
 	// Scheme dark mode colors.
 	printf(
-		'<h3 class="color-list-heading">%s</h3>',
+		'<h3 class="form-heading">%s</h3>',
 		lang()->get( 'Dark Mode Colors' )
 	);
 
-	echo '<ul class="color-list color-list-dark">';
-	foreach ( $option['dark'] as $color => $value ) {
+	echo '<div id="form-color-thumbs-list"><ul>';
+	foreach ( $option['dark'] as $name => $color ) {
 
-		if ( $value ) :
-			echo '<li><ul class="color-list color-list-dark">';
+		if ( $color ) :
 			printf(
-				'<li><span class="color-list-label">%s hex:</span> <code class="select">%s</code></li>',
-				ucwords( $color ),
-				$value
+				'<li style="background-color: %s;" class="color-tooltip" data-tooltip-content="#tooltip-%s-dark-%s"><span class="screen-reader-text">%s</span></li>',
+				$color,
+				$option['slug'],
+				$name,
+				$color
 			);
 			printf(
-				'<li><span class="color-list-label">%s rgb:</span> <code class="select">%s</code></li>',
-				ucwords( $color ),
-				hex_to_rgb( $value )
+				'<div style="display: none"><div id="tooltip-%s-dark-%s">%s %s <br />Hex: %s <br />RGB: %s</div></div>',
+				$option['slug'],
+				$name,
+				lang()->get( 'Color:' ),
+				$name,
+				$color,
+				hex_to_rgb( $color )
 			);
-			printf(
-				'<li><span class="color-list-label">%s</span> <span class="color-list-preview" style="background-color: %s;"><span class="screen-reader-text">%s</span></span></li>',
-				lang()->get( 'Preview:' ),
-				$value,
-				$value
-			);
-			echo '</ul></li>';
 		endif;
 	}
-	echo '</ul>';
+	echo '</ul></div>';
 } ?>
 
 </div>
