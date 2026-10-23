@@ -57,25 +57,25 @@
 
 	&.btn-primary,
 	&.button-primary {
-		background-color: var( --cfe-button--primary--bg-color, var( --cfe-link--text-color ) );
-		border-color: var( --cfe-button--primary--border-color, var( --cfe-link--text-color ) );
+		background-color: var( --cfe-button--primary--bg-color, var( --cfe-scheme-color--four ) );
+		border-color: var( --cfe-button--primary--border-color, var( --cfe-scheme-color--four ) );
 		color: var( --cfe-button--primary--text-color, #ffffff ) !important;
 
 		@media ( prefers-color-scheme: dark ) {
-			background-color: var( --cfe-button--primary--bg-color--dark, var( --cfe-link--text-color--dark ) );
-			border-color: var( --cfe-button--primary--border-color, var( --cfe-link--text-color--dark ) );
+			background-color: var( --cfe-button--primary--bg-color--dark, var( --cfe-scheme-color--four--dark ) );
+			border-color: var( --cfe-button--primary--border-color, var( --cfe-scheme-color--four--dark ) );
 			color: var( --cfe-button--primary--text-color--dark, #ffffff ) !important;
 		}
 
 		&:hover,
 		&:focus {
-			background-color: var( --cfe-button--primary--action--bg-color, var( --cfe-link--action--text-color ) );
-			border-color: var( --cfe-button--primary--action--border-color, var( --cfe-link--action--text-color ) );
+			background-color: var( --cfe-button--primary--action--bg-color, var( --cfe-scheme-color--three ) );
+			border-color: var( --cfe-button--primary--action--border-color, var( --cfe-scheme-color--three ) );
 			color: var( --cfe-button--primary--action--text-color, #ffffff ) !important;
 
 			@media ( prefers-color-scheme: dark ) {
-				background-color: var( --cfe-button--primary--action--bg-color--dark, var( --cfe-link--action--text-color--dark ) );
-				border-color: var( --cfe-button--primary--action--border-color--dark, var( --cfe-link--action--text-color--dark ) );
+				background-color: var( --cfe-button--primary--action--bg-color--dark, var( --cfe-scheme-color--three--dark ) );
+				border-color: var( --cfe-button--primary--action--border-color--dark, var( --cfe-scheme-color--three--dark ) );
 				color: var( --cfe-button--primary--action--text-color--dark, #ffffff ) !important;
 			}
 		}
@@ -107,14 +107,14 @@
 	.button {
 		&.btn-primary,
 		&.button-primary {
-			background-color: var( --cfe-button--primary--bg-color--dark, var( --cfe-link--text-color--dark ) );
+			background-color: var( --cfe-button--primary--bg-color--dark, var( --cfe-scheme-color--four--dark ) );
 			border-color: var( --cfe-button--primary--border-color, var( --cfe-link--text-color--dark ) );
 			color: var( --cfe-button--primary--text-color--dark, #ffffff ) !important;
 
 			&:hover,
 			&:focus {
-				background-color: var( --cfe-button--primary--action--bg-color--dark, var( --cfe-link--action--text-color--dark ) );
-				border-color: var( --cfe-button--primary--action--border-color--dark, var( --cfe-link--action--text-color--dark ) );
+				background-color: var( --cfe-button--primary--action--bg-color--dark, var( --cfe-scheme-color--three--dark ) );
+				border-color: var( --cfe-button--primary--action--border-color--dark, var( --cfe-scheme-color--three--dark ) );
 				color: var( --cfe-button--primary--action--text-color--dark, #ffffff ) !important;
 			}
 		}
