@@ -30,11 +30,16 @@ use function CFE_Colors\{
 	<h3 class="form-heading"><?php echo custom_schemes_heading(); ?></h3>
 
 	<?php if ( in_array( plugin()->color_scheme(), palette_schemes() ) ) : ?>
-	<p><?php lang()->p( "The default/reset colors originate from the theme <strong>{$colors[$custom_from]['name']}</strong>" ); ?></p>
-	<p><?php lang()->p( 'Note that custom values for the color fields may be typed or pasted, using the hex or rgba format. It is not necessary to choose a color from the selected palette.' ); ?></p>
+
+	<p><?php lang()->p( "The default/reset colors originate from the {$colors[$custom_from]['name']} palette." ); ?></p>
+
 	<?php else : ?>
-	<p><?php lang()->p( "The default/reset colors originate from the previously set theme: <strong>{$colors[$custom_from]['name']}</strong>" ); ?></p>
+
+	<p><?php lang()->p( "The default/reset colors originate from the previously set theme: <strong>{$colors[$custom_from]['name']}</strong>." ); ?></p>
+
 	<?php endif; ?>
+
+	<p><?php lang()->p( 'Note that custom values for the color fields may be typed or pasted, using the hex or rgba format. It is not necessary to choose a color from the selected palette.' ); ?></p>
 
 	<div class="tab-content hide-if-no-js" data-toggle="tabslet" data-deeplinking="false" data-animation="true">
 

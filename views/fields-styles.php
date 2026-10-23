@@ -418,7 +418,7 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 				echo '</optgroup>';
 				?>
 			</select>
-			<input type="hidden" id="custom_scheme_from" name="custom_scheme_from" value="<?php echo plugin()->custom_scheme_from(); ?>" />
+			<input type="hidden" id="custom_scheme_from" name="custom_scheme_from" value="<?php echo $custom_from; ?>" />
 
 			<ul id="form-color-thumbs-list">
 			<?php foreach ( $colors as $color => $option ) {
@@ -959,10 +959,7 @@ jQuery(document).ready( function($) {
 				$( '#light_scheme_thumbs_<?php echo $slug; ?>' ).css( 'display', 'flex' );
 				$( '#dark_scheme_thumbs_<?php echo $slug; ?>' ).css( 'display', 'flex' );
 				$( '#extra_scheme_thumbs_<?php echo $slug; ?>' ).css( 'display', 'flex' );
-				$( '#custom_scheme_from' ).val( '<?php echo $slug; ?>' );
 				$( '#grayscale-palette-<?php echo $slug; ?>' ).css( 'display', 'flex' );
-			} else {
-				$( '#custom_scheme_from' ).val( '<?php echo $custom_from; ?>' );
 			}
 
 			// Custom scheme light colors.
@@ -998,6 +995,11 @@ jQuery(document).ready( function($) {
 			$( '#header_text_color_dark' ).val( '<?php echo $option['dark']['text']; ?>' );
 
 			// Other.
+			if ( 'custom' == scheme ) {
+				$( '#custom_scheme_from' ).val( '<?php echo $custom_from; ?>' );
+			} else {
+				$( '#custom_scheme_from' ).val( '<?php echo $slug; ?>' );
+			}
 			$( '#cover_blend' ).val( '<?php echo ( isset( $option['media'] ) ? $option['media'] : $option['light']['three'] ); ?>' );
 			$( '#cover_text_color' ).val( '<?php echo plugin()->cover_text_default(); ?>' );
 
