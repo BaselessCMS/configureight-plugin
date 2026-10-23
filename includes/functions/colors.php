@@ -210,11 +210,6 @@ function color_scheme_categories() {
 			'name'  => lang()->get( 'Nature' ),
 			'about' => lang()->get( 'Inspired by scenes and settings in nature, as well as individual, natural elements.' )
 		],
-		'palettes' => [
-			'slug'  => 'palettes',
-			'name'  => lang()->get( 'Palettes' ),
-			'about' => lang()->get( 'Schemes based on color palette types.' )
-		],
 		'sanzo-wada' => [
 			'slug'  => 'sanzo-wada',
 			'name'  => lang()->get( 'Sanzo Wada' ),
@@ -1231,116 +1226,6 @@ function color_schemes() {
 				'four'  => '#21aed3',
 				'five'  => '#f93c5a',
 				'six'   => '#ff7575'
-			]
-		],
-
-		// Color palettes.
-		'highlighter' => [
-			'slug'     => 'highlighter',
-			'name'     => lang()->get( 'Highlighter' ),
-			'about'    => lang()->get( 'The bright, florescent colors of highlighter pens.' ),
-			'category' => 'palettes',
-			'media'    => '#1bfc06',
-			'light' => [
-				'body'  => '#ffffff',
-				'text'  => '#333333',
-				'one'   => '#1bfc06',
-				'two'   => '#ff1ac9',
-				'three' => '#3aafdc',
-				'four'  => '#ff8c00',
-				'five'  => '#b41fff',
-				'six'   => '#faff46'
-			],
-			'dark' => [
-				'body'  => '#111111',
-				'text'  => '#eeeeee',
-				'one'   => '#1bfc06',
-				'two'   => '#ff1ac9',
-				'three' => '#3aafdc',
-				'four'  => '#ff8c00',
-				'five'  => '#b41fff',
-				'six'   => '#faff46'
-			]
-		],
-		'pastel' => [
-			'slug'     => 'pastel',
-			'name'     => lang()->get( 'Pastel' ),
-			'about'    => lang()->get( 'Soft, muted yet colorful tones.' ),
-			'category' => 'palettes',
-			'media'    => '#f18ebf',
-			'light' => [
-				'body'  => '#ffffff',
-				'text'  => '#333333',
-				'one'   => '#ab7bf9',
-				'two'   => '#f18ebf',
-				'three' => '#44d2a8',
-				'four'  => '#63dded',
-				'five'  => '#feb486',
-				'six'   => '#ffe47a'
-			],
-			'dark' => [
-				'body'  => '#111111',
-				'text'  => '#eeeeee',
-				'one'   => '#ab7bf9',
-				'two'   => '#f18ebf',
-				'three' => '#44d2a8',
-				'four'  => '#63dded',
-				'five'  => '#feb486',
-				'six'   => '#ffe47a'
-			]
-		],
-		'primary' => [
-			'slug'     => 'primary',
-			'name'     => lang()->get( 'Color Wheel' ),
-			'about'    => lang()->get( 'A palette of the vibrant primary & secondary colors.' ),
-			'category' => 'palettes',
-			'media'    => '#0000cc',
-			'light' => [
-				'body'  => '#ffffff',
-				'text'  => '#333333',
-				'one'   => '#0000cc',
-				'two'   => '#ff9922',
-				'three' => '#0cc800',
-				'four'  => '#ee0000',
-				'five'  => '#8800aa',
-				'six'   => '#ffdd00'
-			],
-			'dark' => [
-				'body'  => '#1e1e1e',
-				'text'  => '#eeeeee',
-				'one'   => '#ff9922',
-				'two'   => '#0000cc',
-				'three' => '#0cc800',
-				'four'  => '#ee0000',
-				'five'  => '#ffdd00',
-				'six'   => '#8800aa'
-			]
-		],
-		'skittles' => [
-			'slug'     => 'skittles',
-			'name'     => lang()->get( 'Skittles' ),
-			'about'    => lang()->get( 'Taste the rainbow.' ),
-			'category' => 'palettes',
-			'media'    => '#5d2b7d',
-			'light' => [
-				'body'  => '#ffffff',
-				'text'  => '#222222',
-				'one'   => '#e41e26',
-				'two'   => '#8fc33e',
-				'three' => '#1474bb',
-				'four'  => '#a72d89',
-				'five'  => '#5d2b7d',
-				'six'   => '#feee22'
-			],
-			'dark' => [
-				'body'  => '#1e1e1e',
-				'text'  => '#eeeeee',
-				'one'   => '#feee22',
-				'two'   => '#e41e26',
-				'three' => '#1474bb',
-				'four'  => '#8fc33e',
-				'five'  => '#5d2b7d',
-				'six'   => '#a72d89'
 			]
 		],
 
