@@ -365,6 +365,32 @@ function option_schemes_data() {
 				'six'   => '#0f62fe'
 			]
 		],
+		'colar' => [
+			'slug'  => 'colar',
+			'name'  => lang()->get( 'Colar Colors' ),
+			'about' => lang()->get( 'The complete selection of colors included with the <a href="https://github.com/fchristant/colar" target="_blank" rel="noopener noreferrer">Colar</a> color system.' ),
+			'media' => '#0043ce',
+			'light' => [
+				'body'  => '#ffffff',
+				'text'  => '#393939',
+				'one'   => '#0f62fe',
+				'two'   => '#0043ce',
+				'three' => '#0043ce',
+				'four'  => '#0f62fe',
+				'five'  => '#002d9c',
+				'six'   => '#0f62fe'
+			],
+			'dark' => [
+				'body'  => '#161616',
+				'text'  => '#f4f4f4',
+				'one'   => '#4589ff',
+				'two'   => '#78a9ff',
+				'three' => '#0f62fe',
+				'four'  => '#78a9ff',
+				'five'  => '#002d9c',
+				'six'   => '#0f62fe'
+			]
+		],
 		'primer' => [
 			'slug'  => 'primer',
 			'name'  => lang()->get( 'GitHub Primer Colors' ),
@@ -738,7 +764,7 @@ function palette_schemes() {
  * @since  1.0.0
  * @return array
  */
-function option_schemes() {
+function custom_schemes() {
 	return array_merge( palette_schemes(), [ 'custom' ] );
 }
 
@@ -785,7 +811,7 @@ function get_palette( $slug = false ) {
  * @since  1.0.0
  * @return array
  */
-function custom_schemes() {
+function build_custom_schemes() {
 
 	$schemes = [];
 	$data  = option_schemes_data();
@@ -1912,7 +1938,7 @@ function color_schemes() {
 	];
 
 	// Merge custom schemes.
-	$schemes = array_merge( $schemes, custom_schemes() );
+	$schemes = array_merge( $schemes, build_custom_schemes() );
 
 	return $schemes;
 }
