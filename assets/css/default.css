@@ -389,7 +389,7 @@ form .col-sm-1, form .col-sm-2, form .col-sm-3, form .col-sm-4, form .col-sm-5, 
   width: 1.5rem;
   height: 1.5rem;
   border: solid 1px #ced4da;
-  border-radius: 50%;
+  border-radius: 3px;
 }
 
 #dashboard .list-group.list-group-striped {
