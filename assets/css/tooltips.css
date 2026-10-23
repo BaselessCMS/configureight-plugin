@@ -318,6 +318,10 @@ corresponds to the arrow we want to display */
   font-size: calc(var(--cfe-body--font-size) * 0.875);
   font-weight: 400;
 }
+.tooltipster-sidetip.cfe-tooltips .tooltipster-content a,
+.tooltipster-follower.cfe-tooltips .tooltipster-content a {
+  color: var(--cfe-scheme-color--one--dark, var(--cfe-tooltip--text-color, var(--cfe-body--text-color--dark, #ffffff)));
+}
 
 .tooltipster-sidetip .tooltipster-arrow-background {
   border: 12px solid transparent;

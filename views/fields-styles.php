@@ -17,7 +17,7 @@ use function CFE_Plugin\{
 use function CFE_Colors\{
 	color_schemes,
 	basic_schemes,
-	option_schemes,
+	custom_schemes,
 	option_schemes_data,
 	get_color_scheme,
 	get_palette,
@@ -253,7 +253,7 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 	<div class="form-field form-group row">
 		<label class="form-label col-sm-2 col-form-label" for="load_schemes"><?php lang()->p( 'Load Color Schemes' ); ?></label>
 		<div class="col-sm-10">
-			<small class="form-text"><?php lang()->p( 'Reduce page load time by selecting only color schemes that you use.' ); ?></small>
+			<small class="form-text"><?php lang()->p( 'Reduce page load time by selecting only color schemes that you use. The &#39;Default&#39; and &#39;Custom Colors&#39; schemes are always loaded.' ); ?></small>
 
 				<?php
 				usort( $colors, function( $one_thing, $another ) {
@@ -279,7 +279,7 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 						);
 						echo '<div class="multi-check-wrap" style="margin: 0">';
 					}
-					echo '<label class="check-label-wrap" for="load_schemes">';
+					echo '<label for="load_schemes" class="check-label-wrap form-html-tooltip" data-tooltip-content="#tooltip-about-' . $scheme['slug'] . '">';
 					printf(
 						'<input class="load-schemes" type="checkbox" name="load_schemes[]" id="load_schemes" value="%s" %s> %s',
 						$scheme['slug'],
@@ -287,6 +287,11 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 						$scheme['name']
 					);
 					echo '</label>';
+					printf(
+						'<span style="display: none"><span id="tooltip-about-%s">%s</span></span>',
+						$scheme['slug'],
+						$scheme['about']
+					);
 
 					$category = $scheme['category'];
 				}
@@ -305,7 +310,7 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 					}
 					$scheme = get_color_scheme( $key['slug'] );
 
-					echo '<label class="check-label-wrap" for="load_schemes">';
+					echo '<label for="load_schemes" class="check-label-wrap form-html-tooltip" data-tooltip-content="#tooltip-about-' . $scheme['slug'] . '">';
 					printf(
 						'<input class="load-schemes" type="checkbox" name="load_schemes[]" id="load_schemes" value="%s" %s> %s',
 						$scheme['slug'],
@@ -313,6 +318,11 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 						$scheme['name']
 					);
 					echo '</label>';
+					printf(
+						'<span style="display: none"><span id="tooltip-about-%s">%s</span></span>',
+						$scheme['slug'],
+						$scheme['about']
+					);
 				}
 				echo '</div>';
 				?>
@@ -357,8 +367,8 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 				}
 				echo '</optgroup>';
 
-				// Exclude some schemes from loop.option_schemes()
-				$exclude = array_merge( basic_schemes(), option_schemes() );
+				// Exclude some schemes from loop.custom_schemes()
+				$exclude = array_merge( basic_schemes(), custom_schemes() );
 
 				foreach ( $colors as $color => $option ) {
 
@@ -923,7 +933,7 @@ jQuery(document).ready( function($) {
 
 	$( '#color_scheme' ).on( 'change', function() {
 		var scheme = $(this).val();
-		var custom = [ '<?php echo implode( "', '", option_schemes() ); ?>' ];
+		var custom = [ '<?php echo implode( "', '", custom_schemes() ); ?>' ];
 
 		<?php
 		$data = option_schemes_data();
