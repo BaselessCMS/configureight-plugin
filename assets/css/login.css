@@ -2204,12 +2204,12 @@ p + .multi-check-wrap {
   gap: 0.5rem 0.25rem;
 }
 
-#form-color-thumbs-list {
+.form-color-thumbs-list {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-#form-color-thumbs-list ul {
+.form-color-thumbs-list ul {
   list-style: none;
   margin: 0.5em 0 0 0;
   padding: 0;
@@ -2217,7 +2217,7 @@ p + .multi-check-wrap {
   flex-wrap: nowrap;
   gap: 0.25rem;
 }
-#form-color-thumbs-list ul li {
+.form-color-thumbs-list ul li {
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -2227,12 +2227,12 @@ p + .multi-check-wrap {
   border-radius: 50%;
 }
 @media (prefers-color-scheme: dark) {
-  #form-color-thumbs-list ul li {
+  .form-color-thumbs-list ul li {
     border: var(--cfe-form-element--border--dark);
   }
 }
 
-.dark-mode #form-color-thumbs-list ul li {
+.dark-mode .form-color-thumbs-list ul li {
   border: var(--cfe-form-element--border--dark);
 }
 

@@ -1363,7 +1363,7 @@ p + .multi-check-wrap {
 }
 
 // Color fields.
-#form-color-thumbs-list {
+.form-color-thumbs-list {
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -1392,7 +1392,7 @@ p + .multi-check-wrap {
 	}
 }
 .dark-mode {
-	#form-color-thumbs-list ul li {
+	.form-color-thumbs-list ul li {
 		border: var( --cfe-form-element--border--dark );
 	}
 }

@@ -83,7 +83,7 @@ printf(
 	lang()->get( 'Light Mode Colors' )
 );
 
-echo '<div id="form-color-thumbs-list"><ul>';
+echo '<div class="form-color-thumbs-list"><ul>';
 foreach ( $current['light'] as $name => $color ) {
 
 	if ( $color ) :
@@ -113,7 +113,7 @@ printf(
 	lang()->get( 'Dark Mode Colors' )
 );
 
-echo '<div id="form-color-thumbs-list"><ul>';
+echo '<div class="form-color-thumbs-list"><ul>';
 foreach ( $current['dark'] as $name => $color ) {
 
 	if ( $color ) :
@@ -216,7 +216,7 @@ foreach ( $schemes as $scheme => $option ) {
 		lang()->get( 'Light Mode Colors' )
 	);
 
-	echo '<div id="form-color-thumbs-list"><ul>';
+	echo '<div class="form-color-thumbs-list"><ul>';
 	foreach ( $option['light'] as $name => $color ) {
 
 		if ( $color ) :
@@ -246,7 +246,7 @@ foreach ( $schemes as $scheme => $option ) {
 		lang()->get( 'Dark Mode Colors' )
 	);
 
-	echo '<div id="form-color-thumbs-list"><ul>';
+	echo '<div class="form-color-thumbs-list"><ul>';
 	foreach ( $option['dark'] as $name => $color ) {
 
 		if ( $color ) :

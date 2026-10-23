@@ -420,7 +420,7 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 			</select>
 			<input type="hidden" id="custom_scheme_from" name="custom_scheme_from" value="<?php echo $custom_from; ?>" />
 
-			<ul id="form-color-thumbs-list">
+			<ul class="form-color-thumbs-list">
 			<?php foreach ( $colors as $color => $option ) {
 
 				if ( ! array_key_exists( plugin()->color_scheme(), option_schemes_data() ) && plugin()->color_scheme() === $option['slug'] ) {

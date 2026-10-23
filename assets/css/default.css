@@ -369,12 +369,12 @@ form .col-sm-1, form .col-sm-2, form .col-sm-3, form .col-sm-4, form .col-sm-5, 
   margin: 0 !important;
 }
 
-#form-color-thumbs-list {
+.form-color-thumbs-list {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-#form-color-thumbs-list ul {
+.form-color-thumbs-list ul {
   list-style: none;
   margin: 0.5em 0 0 0;
   padding: 0;
@@ -382,7 +382,7 @@ form .col-sm-1, form .col-sm-2, form .col-sm-3, form .col-sm-4, form .col-sm-5, 
   flex-wrap: nowrap;
   gap: 0.25rem;
 }
-#form-color-thumbs-list ul li {
+.form-color-thumbs-list ul li {
   display: block;
   margin: 0;
   padding: 0;
