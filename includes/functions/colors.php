@@ -365,6 +365,32 @@ function option_schemes_data() {
 				'six'   => '#0f62fe'
 			]
 		],
+		'primer' => [
+			'slug'  => 'primer',
+			'name'  => lang()->get( 'GitHub Primer Colors' ),
+			'about' => lang()->get( 'The complete selection of colors included with the <a href="https://primer.style/brand/primitives/color/" target="_blank" rel="noopener noreferrer">GitHub Primer</a> design system.' ),
+			'media' => '#0043ce',
+			'light' => [
+				'body'  => '#ffffff',
+				'text'  => '#393939',
+				'one'   => '#0f62fe',
+				'two'   => '#0043ce',
+				'three' => '#0043ce',
+				'four'  => '#0f62fe',
+				'five'  => '#002d9c',
+				'six'   => '#0f62fe'
+			],
+			'dark' => [
+				'body'  => '#161616',
+				'text'  => '#f4f4f4',
+				'one'   => '#4589ff',
+				'two'   => '#78a9ff',
+				'three' => '#0f62fe',
+				'four'  => '#78a9ff',
+				'five'  => '#002d9c',
+				'six'   => '#0f62fe'
+			]
+		],
 		'material' => [
 			'slug'  => 'material',
 			'name'  => lang()->get( 'Material Design Colors' ),
