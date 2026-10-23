@@ -100,6 +100,46 @@ function rgb_to_hex( string $color ): string {
 }
 
 /**
+ * All color settings
+ *
+ * Puts all the current color settings from the
+ * database into an array.
+ */
+function all_color_settings() {
+	$settings = [
+		'color_body'  => plugin()->color_body(),
+		'color_text'  => plugin()->color_text(),
+		'color_one'   => plugin()->color_one(),
+		'color_two'   => plugin()->color_two(),
+		'color_three' => plugin()->color_three(),
+		'color_four'  => plugin()->color_four(),
+		'color_five'  => plugin()->color_five(),
+		'color_six'   => plugin()->color_six(),
+		'color_body_dark'  => plugin()->color_body_dark(),
+		'color_text_dark'  => plugin()->color_text_dark(),
+		'color_one_dark'   => plugin()->color_one_dark(),
+		'color_two_dark'   => plugin()->color_two_dark(),
+		'color_three_dark' => plugin()->color_three_dark(),
+		'color_four_dark'  => plugin()->color_four_dark(),
+		'color_five_dark'  => plugin()->color_five_dark(),
+		'color_six_dark'   => plugin()->color_six_dark(),
+		'loader_bg_color'        => plugin()->loader_bg_color(),
+		'loader_bg_color_dark'   => plugin()->loader_bg_color_dark(),
+		'loader_text_color'      => plugin()->loader_text_color(),
+		'loader_text_color_dark' => plugin()->loader_text_color_dark(),
+		'header_bg_color'        => plugin()->header_bg_color(),
+		'header_bg_color_dark'   => plugin()->header_bg_color_dark(),
+		'header_text_color'      => plugin()->header_text_color(),
+		'header_text_color_dark' => plugin()->header_text_color_dark(),
+		'modal_bg_color'   => plugin()->modal_bg_color(),
+		'cover_blend'      => plugin()->cover_blend(),
+		'cover_overlay'    => plugin()->cover_overlay(),
+		'cover_text_color' => plugin()->cover_text_color()
+	];
+	return $settings;
+}
+
+/**
  * Default color value
  *
  * @since  1.0.0
@@ -216,6 +256,11 @@ function basic_schemes() {
 /**
  * Custom schemes data
  *
+ * Light and dark colors are only used when
+ * initially saving the scheme as the option.
+ * Thereafter, scheme colors use the database
+ * color, if changed from the initial color.
+ *
  * @since  1.0.0
  * @return array
  */
@@ -224,80 +269,421 @@ function option_schemes_data() {
 		'ant-design' => [
 			'slug'  => 'ant-design',
 			'name'  => lang()->get( 'Ant Design Colors' ),
-			'about' => lang()->get( 'The colors included with the <a href="https://ant-design.antgroup.com/docs/spec/colors" target="_blank" rel="noopener noreferrer">Ant Design</a> UI system.' )
+			'about' => lang()->get( 'The colors included with the <a href="https://ant-design.antgroup.com/docs/spec/colors" target="_blank" rel="noopener noreferrer">Ant Design</a> UI system.' ),
+			'media' => '#0958d9',
+			'light' => [
+				'body'  => '#ffffff',
+				'text'  => '#434343',
+				'one'   => '#1677ff',
+				'two'   => '#4096ff',
+				'three' => '#0958d9',
+				'four'  => '#1677ff',
+				'five'  => '#1d39c4',
+				'six'   => '#1677ff'
+			],
+			'dark' => [
+				'body'  => '#111213',
+				'text'  => '#f7f8f8',
+				'one'   => '#4096ff',
+				'two'   => '#69b1ff',
+				'three' => '#2f54eb',
+				'four'  => '#1677ff',
+				'five'  => '#1d39c4',
+				'six'   => '#1677ff'
+			]
 		],
 		'atlassian' => [
 			'slug'  => 'atlassian',
 			'name'  => lang()->get( 'Atlassian Colors' ),
-			'about' => lang()->get( 'The colors included with the <a href="https://atlassian.design/foundations/color/color-palette" target="_blank" rel="noopener noreferrer">Atlassian</a> design system.' )
+			'about' => lang()->get( 'The colors included with the <a href="https://atlassian.design/foundations/color/color-palette" target="_blank" rel="noopener noreferrer">Atlassian</a> design system.' ),
+			'media' => '#1868db',
+			'light' => [
+				'body'  => '#ffffff',
+				'text'  => '#3b3d42',
+				'one'   => '#357de8',
+				'two'   => '#669df1',
+				'three' => '#1868db',
+				'four'  => '#4688ec',
+				'five'  => '#1558bc',
+				'six'   => '#4688ec'
+			],
+			'dark' => [
+				'body'  => '#161616',
+				'text'  => '#f8f8f8',
+				'one'   => '#ffffff',
+				'two'   => '#f0f1f2',
+				'three' => '#2f54eb',
+				'four'  => '#1677ff',
+				'five'  => '#1d39c4',
+				'six'   => '#1677ff'
+			]
 		],
 		'bootstrap' => [
 			'slug'  => 'bootstrap',
 			'name'  => lang()->get( 'Bootstrap UI Colors' ),
-			'about' => lang()->get( 'The complete selection of colors included with the <a href="https://getbootstrap.com/docs/5.0/utilities/colors/#variables" target="_blank" rel="noopener noreferrer">Bootstrap</a> framework for website UI and frontend theme building, expanded with tints & shades.' )
+			'about' => lang()->get( 'The complete selection of colors included with the <a href="https://getbootstrap.com/docs/5.0/utilities/colors/#variables" target="_blank" rel="noopener noreferrer">Bootstrap</a> framework for website UI and frontend theme building, expanded with tints & shades.' ),
+			'media' => '#0a58ca',
+			'light' => [
+				'body'  => '#ffffff',
+				'text'  => '#343a40',
+				'one'   => '#0a58ca',
+				'two'   => '#3d8bfd',
+				'three' => '#0a58ca',
+				'four'  => '#0d6efd',
+				'five'  => '#084298',
+				'six'   => '#0d6efd'
+			],
+			'dark' => [
+				'body'  => '#111213',
+				'text'  => '#f7f8f8',
+				'one'   => '#3d8bfd',
+				'two'   => '#6ea8fe',
+				'three' => '#0d6efd',
+				'four'  => '#6ea8fe',
+				'five'  => '#0a58ca',
+				'six'   => '#3d8bfd'
+			]
 		],
 		'carbon' => [
 			'slug'  => 'carbon',
 			'name'  => lang()->get( 'Carbon Colors' ),
-			'about' => lang()->get( 'The complete selection of colors included with the <a href="https://www.carbondesignsystem.com/building-blocks/foundations/color/overview" target="_blank" rel="noopener noreferrer">IBM Carbon</a> design system.' )
+			'about' => lang()->get( 'The complete selection of colors included with the <a href="https://www.carbondesignsystem.com/building-blocks/foundations/color/overview" target="_blank" rel="noopener noreferrer">IBM Carbon</a> design system.' ),
+			'media' => '#0043ce',
+			'light' => [
+				'body'  => '#ffffff',
+				'text'  => '#393939',
+				'one'   => '#0f62fe',
+				'two'   => '#0043ce',
+				'three' => '#0043ce',
+				'four'  => '#0f62fe',
+				'five'  => '#002d9c',
+				'six'   => '#0f62fe'
+			],
+			'dark' => [
+				'body'  => '#161616',
+				'text'  => '#f4f4f4',
+				'one'   => '#4589ff',
+				'two'   => '#78a9ff',
+				'three' => '#0f62fe',
+				'four'  => '#78a9ff',
+				'five'  => '#002d9c',
+				'six'   => '#0f62fe'
+			]
 		],
 		'material' => [
 			'slug'  => 'material',
 			'name'  => lang()->get( 'Material Design Colors' ),
-			'about' => lang()->get( 'The complete selection of colors included with the <a href="https://m2.material.io/design/color/the-color-system.html#tools-for-picking-colors" target="_blank" rel="noopener noreferrer">Material</a> design system.' )
+			'about' => lang()->get( 'The complete selection of colors included with the <a href="https://m2.material.io/design/color/the-color-system.html#tools-for-picking-colors" target="_blank" rel="noopener noreferrer">Material</a> design system.' ),
+			'media' => '#2196f3',
+			'light' => [
+				'body'  => '#ffffff',
+				'text'  => '#37474f',
+				'one'   => '#1976d2',
+				'two'   => '#2196f3',
+				'three' => '#1976d2',
+				'four'  => '#2196f3',
+				'five'  => '#1565c0',
+				'six'   => '#2196f3'
+			],
+			'dark' => [
+				'body'  => '#212121',
+				'text'  => '#fafafa',
+				'one'   => '#2196f3',
+				'two'   => '#64b5f6',
+				'three' => '#1e88e5',
+				'four'  => '#42a5f5',
+				'five'  => '#1565c0',
+				'six'   => '#2196f3'
+			]
 		],
 		'open-color' => [
 			'slug'  => 'open-color',
 			'name'  => lang()->get( 'Open Color Colors' ),
-			'about' => lang()->get( 'The complete selection of colors included with the <a href="https://yeun.github.io/open-color/" target="_blank" rel="noopener noreferrer">Open Color</a> palette.' )
+			'about' => lang()->get( 'The complete selection of colors included with the <a href="https://yeun.github.io/open-color/" target="_blank" rel="noopener noreferrer">Open Color</a> palette.' ),
+			'media' => '#1c7ed6',
+			'light' => [
+				'body'  => '#ffffff',
+				'text'  => '#343a40',
+				'one'   => '#1c7ed6',
+				'two'   => '#339af0',
+				'three' => '#1c7ed6',
+				'four'  => '#339af0',
+				'five'  => '#1971c2',
+				'six'   => '#339af0'
+			],
+			'dark' => [
+				'body'  => '#212529',
+				'text'  => '#f8f9fa',
+				'one'   => '#228be6',
+				'two'   => '#4dabf7',
+				'three' => '#4dabf7',
+				'four'  => '#339af0',
+				'five'  => '#1971c2',
+				'six'   => '#339af0'
+			]
 		],
 		'open-props' => [
 			'slug'  => 'open-props',
 			'name'  => lang()->get( 'Open Props Colors' ),
-			'about' => lang()->get( 'The complete selection of colors included with the <a href="https://open-props.style/" target="_blank" rel="noopener noreferrer">Open Props</a> design system.' )
+			'about' => lang()->get( 'The complete selection of colors included with the <a href="https://open-props.style/" target="_blank" rel="noopener noreferrer">Open Props</a> design system.' ),
+			'light' => [
+				'body'  => '#ffffff',
+				'text'  => '#343a40',
+				'one'   => '#0a58ca',
+				'two'   => '#3d8bfd',
+				'three' => '#0a58ca',
+				'four'  => '#0d6efd',
+				'five'  => '#084298',
+				'six'   => '#0d6efd'
+			],
+			'dark' => [
+				'body'  => '#111213',
+				'text'  => '#f7f8f8',
+				'one'   => '#3d8bfd',
+				'two'   => '#6ea8fe',
+				'three' => '#0d6efd',
+				'four'  => '#6ea8fe',
+				'five'  => '#0a58ca',
+				'six'   => '#3d8bfd'
+			]
+		],
+		'pantone-picks' => [
+			'slug'  => 'pantone-picks',
+			'name'  => lang()->get( 'Pantone Colors of the Year' ),
+			'about' => lang()->get( 'Every Pantone "Color of the Year" since beginning in 2000. The middle (5th) color of each spectrum is the original, named color. The years 2016 and 2021 had two co-winning colors.' ),
+			'light' => [
+				'body'  => '#ffffff',
+				'text'  => '#343a40',
+				'one'   => '#0a58ca',
+				'two'   => '#3d8bfd',
+				'three' => '#0a58ca',
+				'four'  => '#0d6efd',
+				'five'  => '#084298',
+				'six'   => '#0d6efd'
+			],
+			'dark' => [
+				'body'  => '#111213',
+				'text'  => '#f7f8f8',
+				'one'   => '#3d8bfd',
+				'two'   => '#6ea8fe',
+				'three' => '#0d6efd',
+				'four'  => '#6ea8fe',
+				'five'  => '#0a58ca',
+				'six'   => '#3d8bfd'
+			]
 		],
 		'radix' => [
 			'slug'  => 'radix',
 			'name'  => lang()->get( 'Radix Colors' ),
-			'about' => lang()->get( 'The complete selection of colors included with the <a href="https://www.radix-ui.com/colors" target="_blank" rel="noopener noreferrer">Radix</a> UI color system.' )
+			'about' => lang()->get( 'The complete selection of colors included with the <a href="https://www.radix-ui.com/colors" target="_blank" rel="noopener noreferrer">Radix</a> UI color system.' ),
+			'light' => [
+				'body'  => '#ffffff',
+				'text'  => '#343a40',
+				'one'   => '#0a58ca',
+				'two'   => '#3d8bfd',
+				'three' => '#0a58ca',
+				'four'  => '#0d6efd',
+				'five'  => '#084298',
+				'six'   => '#0d6efd'
+			],
+			'dark' => [
+				'body'  => '#111213',
+				'text'  => '#f7f8f8',
+				'one'   => '#3d8bfd',
+				'two'   => '#6ea8fe',
+				'three' => '#0d6efd',
+				'four'  => '#6ea8fe',
+				'five'  => '#0a58ca',
+				'six'   => '#3d8bfd'
+			]
 		],
 		'sanzo-wada' => [
 			'slug'  => 'sanzo-wada',
 			'name'  => lang()->get( 'Sanzo Wada Colors' ),
-			'about' => lang()->get( "The complete selection of colors included in <a href='https://en.wikipedia.org/wiki/Sanzo_Wada' target='_blank' rel='noopener noreferrer'>Sanzo Wada's</a> reference book <em>A Dictionary of Color Combinations</em>, with additional colors derived from his methods." )
+			'about' => lang()->get( "The complete selection of colors included in <a href='https://en.wikipedia.org/wiki/Sanzo_Wada' target='_blank' rel='noopener noreferrer'>Sanzo Wada's</a> reference book <em>A Dictionary of Color Combinations</em>, with additional colors derived from his methods." ),
+			'light' => [
+				'body'  => '#ffffff',
+				'text'  => '#343a40',
+				'one'   => '#0a58ca',
+				'two'   => '#3d8bfd',
+				'three' => '#0a58ca',
+				'four'  => '#0d6efd',
+				'five'  => '#084298',
+				'six'   => '#0d6efd'
+			],
+			'dark' => [
+				'body'  => '#111213',
+				'text'  => '#f7f8f8',
+				'one'   => '#3d8bfd',
+				'two'   => '#6ea8fe',
+				'three' => '#0d6efd',
+				'four'  => '#6ea8fe',
+				'five'  => '#0a58ca',
+				'six'   => '#3d8bfd'
+			]
 		],
 		'spectrum' => [
 			'slug'  => 'spectrum',
 			'name'  => lang()->get( 'Spectrum Colors' ),
-			'about' => lang()->get( 'The complete selection of colors included with the <a href="https://spectrum.adobe.com/page/color-palette/" target="_blank" rel="noopener noreferrer">Adobe Spectrum</a> color system.' )
+			'about' => lang()->get( 'The complete selection of colors included with the <a href="https://spectrum.adobe.com/page/color-palette/" target="_blank" rel="noopener noreferrer">Adobe Spectrum</a> color system.' ),
+			'light' => [
+				'body'  => '#ffffff',
+				'text'  => '#343a40',
+				'one'   => '#0a58ca',
+				'two'   => '#3d8bfd',
+				'three' => '#0a58ca',
+				'four'  => '#0d6efd',
+				'five'  => '#084298',
+				'six'   => '#0d6efd'
+			],
+			'dark' => [
+				'body'  => '#111213',
+				'text'  => '#f7f8f8',
+				'one'   => '#3d8bfd',
+				'two'   => '#6ea8fe',
+				'three' => '#0d6efd',
+				'four'  => '#6ea8fe',
+				'five'  => '#0a58ca',
+				'six'   => '#3d8bfd'
+			]
 		],
 		'tailwind' => [
 			'slug'  => 'tailwind',
 			'name'  => lang()->get( 'Tailwind CSS Colors' ),
-			'about' => lang()->get( 'The complete selection of colors included with the <a href="https://tailwindcss.com/docs/colors" target="_blank" rel="noopener noreferrer">Tailwind CSS</a> framework for website UI and frontend theme building.' )
+			'about' => lang()->get( 'The complete selection of colors included with the <a href="https://tailwindcss.com/docs/colors" target="_blank" rel="noopener noreferrer">Tailwind CSS</a> framework for website UI and frontend theme building.' ),
+			'light' => [
+				'body'  => '#ffffff',
+				'text'  => '#343a40',
+				'one'   => '#0a58ca',
+				'two'   => '#3d8bfd',
+				'three' => '#0a58ca',
+				'four'  => '#0d6efd',
+				'five'  => '#084298',
+				'six'   => '#0d6efd'
+			],
+			'dark' => [
+				'body'  => '#111213',
+				'text'  => '#f7f8f8',
+				'one'   => '#3d8bfd',
+				'two'   => '#6ea8fe',
+				'three' => '#0d6efd',
+				'four'  => '#6ea8fe',
+				'five'  => '#0a58ca',
+				'six'   => '#3d8bfd'
+			]
 		],
 		'untitled' => [
 			'slug'  => 'untitled',
 			'name'  => lang()->get( 'Untitled UI Colors' ),
-			'about' => lang()->get( 'The complete selection of colors included with the <a href="https://untitled-theme.xyz/colors" target="_blank" rel="noopener noreferrer">Untitled UI</a> kit of colors and icons.' )
+			'about' => lang()->get( 'The complete selection of colors included with the <a href="https://untitled-theme.xyz/colors" target="_blank" rel="noopener noreferrer">Untitled UI</a> kit of colors and icons.' ),
+			'light' => [
+				'body'  => '#ffffff',
+				'text'  => '#343a40',
+				'one'   => '#0a58ca',
+				'two'   => '#3d8bfd',
+				'three' => '#0a58ca',
+				'four'  => '#0d6efd',
+				'five'  => '#084298',
+				'six'   => '#0d6efd'
+			],
+			'dark' => [
+				'body'  => '#111213',
+				'text'  => '#f7f8f8',
+				'one'   => '#3d8bfd',
+				'two'   => '#6ea8fe',
+				'three' => '#0d6efd',
+				'four'  => '#6ea8fe',
+				'five'  => '#0a58ca',
+				'six'   => '#3d8bfd'
+			]
 		],
 		'web-awesome' => [
 			'slug'  => 'web-awesome',
 			'name'  => lang()->get( 'Web Awesome Colors' ),
-			'about' => lang()->get( 'The complete selection of colors included with the <a href="https://webawesome.com/docs/tokens/color/" target="_blank" rel="noopener noreferrer">Web Awesome</a> UI kit.' )
+			'about' => lang()->get( 'The complete selection of colors included with the <a href="https://webawesome.com/docs/tokens/color/" target="_blank" rel="noopener noreferrer">Web Awesome</a> UI kit.' ),
+			'light' => [
+				'body'  => '#ffffff',
+				'text'  => '#343a40',
+				'one'   => '#0a58ca',
+				'two'   => '#3d8bfd',
+				'three' => '#0a58ca',
+				'four'  => '#0d6efd',
+				'five'  => '#084298',
+				'six'   => '#0d6efd'
+			],
+			'dark' => [
+				'body'  => '#111213',
+				'text'  => '#f7f8f8',
+				'one'   => '#3d8bfd',
+				'two'   => '#6ea8fe',
+				'three' => '#0d6efd',
+				'four'  => '#6ea8fe',
+				'five'  => '#0a58ca',
+				'six'   => '#3d8bfd'
+			]
 		],
 		'names' => [
 			'slug'  => 'names',
 			'name'  => lang()->get( 'CSS Named Colors' ),
-			'about' => lang()->get( 'The complete selection of colors <a href="https://drafts.csswg.org/css-color-4/#named-colors" target="_blank" rel="noopener noreferrer">officially named</a> by the World Wide Web Consortium (W3C).' )
+			'about' => lang()->get( 'The complete selection of colors <a href="https://drafts.csswg.org/css-color-4/#named-colors" target="_blank" rel="noopener noreferrer">officially named</a> by the World Wide Web Consortium (W3C).' ),
+			'light' => [
+				'body'  => '#ffffff',
+				'text'  => '#343a40',
+				'one'   => '#0a58ca',
+				'two'   => '#3d8bfd',
+				'three' => '#0a58ca',
+				'four'  => '#0d6efd',
+				'five'  => '#084298',
+				'six'   => '#0d6efd'
+			],
+			'dark' => [
+				'body'  => '#111213',
+				'text'  => '#f7f8f8',
+				'one'   => '#3d8bfd',
+				'two'   => '#6ea8fe',
+				'three' => '#0d6efd',
+				'four'  => '#6ea8fe',
+				'five'  => '#0a58ca',
+				'six'   => '#3d8bfd'
+			]
 		],
 		'custom' => [
 			'slug'  => 'custom',
 			'name'  => lang()->get( 'Custom Colors' ),
-			'about' => lang()->get( 'Custom scheme colors begin with the previously set scheme. To change the starting colors, first save a different scheme then select custom.' )
+			'about' => lang()->get( 'Custom scheme colors begin with the previously set scheme. To change the starting colors, first save a different scheme then select custom.' ),
+			'light' => [
+				'body'  => color( 'body' ),
+				'text'  => color( 'text' ),
+				'one'   => color( 'one' ),
+				'two'   => color( 'two' ),
+				'three' => color( 'three' ),
+				'four'  => color( 'four' ),
+				'five'  => color( 'five' ),
+				'six'   => color( 'six' )
+			],
+			'dark' => [
+				'body'  => color( 'body_dark' ),
+				'text'  => color( 'text_dark' ),
+				'one'   => color( 'one_dark' ),
+				'two'   => color( 'two_dark' ),
+				'three' => color( 'three_dark' ),
+				'four'  => color( 'four_dark' ),
+				'five'  => color( 'five_dark' ),
+				'six'   => color( 'six_dark' )
+			]
 		]
 	];
 	return $schemes;
+}
+
+function option_scheme_initial( $key ) {
+
+	$data = option_schemes_data();
+	if ( array_key_exists( $key, $data ) ) {
+		return $data[$key];
+	} else {
+		return get_color_scheme( 'plain' );
+	}
 }
 
 /**
@@ -1732,7 +2118,7 @@ function color_scheme_template() {
 	$scheme = false;
 
 	// Exclude custom schemes.
-	if ( in_array( plugin()->color_scheme(), option_schemes() ) ) {
+	if ( array_key_exists( plugin()->color_scheme(), option_schemes_data() ) ) {
 		return $scheme;
 	}
 

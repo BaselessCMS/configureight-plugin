@@ -15,7 +15,7 @@ use function CFE_Plugin\{
 };
 use function CFE_Colors\{
 	color_schemes,
-	option_schemes,
+	option_schemes_data,
 	get_color_scheme,
 	default_color_scheme,
 	current_color_scheme,
@@ -40,7 +40,7 @@ printf(
 if (
 	isset( $current['category'] ) &&
 	! empty( $current['category'] ) &&
-	! in_array( $current['slug'], option_schemes() )
+	! array_key_exists( $current['slug'], option_schemes_data() )
 ) :
 $scheme_cat = color_scheme_category( $current['category'] );
 printf(
@@ -186,7 +186,7 @@ foreach ( $schemes as $scheme => $option ) {
 	}
 
 	// Skip custom schemes.
-	if ( in_array( $option['slug'], option_schemes() ) ) {
+	if ( array_key_exists( $option['slug'], option_schemes_data() ) ) {
 		continue;
 	}
 

@@ -54,7 +54,7 @@ use function CFE_Plugin\{
 	url
 };
 use function CFE_Colors\{
-	option_schemes,
+	option_schemes_data,
 	default_color_scheme,
 	define_color_scheme,
 	current_color_scheme
@@ -390,6 +390,7 @@ class configureight extends Plugin {
 			'body_img_size'          => 'auto',
 			'body_img_size_custom'   => '',
 			'body_img_attach'        => 'scroll',
+			'load_schemes'           => [ 'default', 'plain' ],
 			'color_scheme'           => 'default',
 			'use_dark_scheme'        => false,
 			'custom_scheme_from'     => 'default',
@@ -1409,7 +1410,7 @@ class configureight extends Plugin {
 
 		// Color scheme stylesheet.
 		if ( 'colors' === $type ) {
-			if ( ! in_array( $option_colors, option_schemes() ) ) {
+			if ( ! array_key_exists( $option_colors, option_schemes_data() ) ) {
 				$html = css( "assets/css/colors/{$current_color['category']}/{$option_colors}/{$filename}{$suffix}.css" );
 			}
 		}
@@ -2346,6 +2347,11 @@ class configureight extends Plugin {
 		return $this->getValue( 'body_img_attach' );
 	}
 
+	// @return array
+	public function load_schemes() {
+		return $this->getValue( 'load_schemes' );
+	}
+
 	// @return string
 	public function color_scheme() {
 		return $this->getValue( 'color_scheme' );
@@ -2359,7 +2365,7 @@ class configureight extends Plugin {
 	// @return string
 	public function custom_scheme_from() {
 
-		if ( in_array( $this->getValue( 'custom_scheme_from' ), option_schemes() ) ) {
+		if ( array_key_exists( $this->getValue( 'custom_scheme_from' ), option_schemes_data() ) ) {
 			return 'plain';
 		}
 		return $this->getValue( 'custom_scheme_from' );

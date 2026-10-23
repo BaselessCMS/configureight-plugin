@@ -18,8 +18,10 @@ use function CFE_Colors\{
 	color_schemes,
 	basic_schemes,
 	option_schemes,
+	option_schemes_data,
 	get_color_scheme,
 	get_palette,
+	option_scheme_initial,
 	hex_to_rgb
 };
 use function CFE_Fonts\{
@@ -244,6 +246,82 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 	<legend class="screen-reader-text"><?php lang()->p( 'Manage Color Scheme' ); ?></legend>
 
 	<div class="form-field form-group row">
+		<label class="form-label col-sm-2 col-form-label" for="load_schemes"><?php lang()->p( 'Load Color Schemes' ); ?></label>
+		<div class="col-sm-10">
+			<small class="form-text"><?php lang()->p( 'Reduce page load time by selecting only color schemes that you use.' ); ?></small>
+
+				<?php
+				usort( $colors, function( $one_thing, $another ) {
+					return strcmp( $one_thing['category'], $another['category'] );
+				} );
+
+				// Category used for option groups.
+				$category = '';
+
+				foreach ( $colors as $color => $scheme ) {
+
+					if ( 'default' == $scheme['slug'] || 'custom' == $scheme['category'] ) {
+						continue;
+					}
+
+					if ( $category != $scheme['category'] ) {
+						if ( $category != '' ) {
+							echo '</div>';
+						}
+						printf(
+							'<p style="margin-top: 0.5em"><strong>%s</strong></p>',
+							ucwords( str_replace( '-', ' ', $scheme['category'] ) )
+						);
+						echo '<div class="multi-check-wrap" style="margin: 0">';
+					}
+					echo '<label class="check-label-wrap" for="load_schemes">';
+					printf(
+						'<input class="load-schemes" type="checkbox" name="load_schemes[]" id="load_schemes" value="%s" %s> %s',
+						$scheme['slug'],
+						( is_array( plugin()->load_schemes() ) && in_array( $scheme['slug'], plugin()->load_schemes() ) ? 'checked' : '' ),
+						$scheme['name']
+					);
+					echo '</label>';
+
+					$category = $scheme['category'];
+				}
+				if ( $category != '' ) {
+					echo '</div>';
+				}
+				printf(
+					'<p style="margin-top: 0.5em"><strong>%s</strong></p>',
+					lang()->get( 'Build Your Own' )
+				);
+				echo '<div class="multi-check-wrap" style="margin: 0">';
+				foreach ( option_schemes_data() as $data => $key ) {
+
+					if ( 'custom' == $key['slug'] ) {
+						continue;
+					}
+					$scheme = get_color_scheme( $key['slug'] );
+
+					echo '<label class="check-label-wrap" for="load_schemes">';
+					printf(
+						'<input class="load-schemes" type="checkbox" name="load_schemes[]" id="load_schemes" value="%s" %s> %s',
+						$scheme['slug'],
+						( is_array( plugin()->load_schemes() ) && in_array( $scheme['slug'], plugin()->load_schemes() ) ? 'checked' : '' ),
+						$scheme['name']
+					);
+					echo '</label>';
+				}
+				echo '</div>';
+				?>
+				<?php
+				// Never empty array.
+				printf(
+					'<label class="check-label-wrap" for="load_foobar" style="display: none !important;"><input type="checkbox" name="load_schemes[]" id="load_foobar" value="foobar" checked /> %s</label>',
+					lang()->get( 'Ignore This' )
+				);
+				?>
+		</div>
+	</div>
+
+	<div class="form-field form-group row">
 		<label class="form-label col-sm-2 col-form-label" for="color_scheme"><?php lang()->p( 'Color Scheme' ); ?></label>
 		<div class="col-sm-10">
 			<select class="form-select" id="color_scheme" name="color_scheme">
@@ -313,8 +391,8 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 					'<optgroup label="%s">',
 					lang()->get( 'Build Your Own' )
 				);
-				foreach ( option_schemes() as $key ) {
-					$scheme = get_color_scheme( $key );
+				foreach ( option_schemes_data() as $data => $key ) {
+					$scheme = get_color_scheme( $key['slug'] );
 					printf(
 						'<option value="%s" %s>%s</option>',
 						$scheme['slug'],
@@ -330,7 +408,7 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 			<ul id="form-color-thumbs-list">
 			<?php foreach ( $colors as $color => $option ) {
 
-				if ( ! in_array( plugin()->color_scheme(), option_schemes() ) && plugin()->color_scheme() === $option['slug'] ) {
+				if ( ! array_key_exists( plugin()->color_scheme(), option_schemes_data() ) && plugin()->color_scheme() === $option['slug'] ) {
 					$display = 'flex';
 				} else {
 					$display = 'none';
@@ -826,7 +904,15 @@ jQuery(document).ready( function($) {
 		var scheme = $(this).val();
 		var custom = [ '<?php echo implode( "', '", option_schemes() ); ?>' ];
 
-		<?php foreach ( $colors as $color => $option ) :
+		<?php
+		$data = option_schemes_data();
+		foreach ( $colors as $color => $option ) :
+
+			if ( array_key_exists( $option['slug'], $data ) ) {
+				$option = option_scheme_initial( $option['slug'] );
+			} else {
+				$option = $option;
+			}
 
 			$slug = $option['slug'];
 		?>

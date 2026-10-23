@@ -15,7 +15,7 @@ use function CFE_Plugin\{
 };
 use function CFE_Colors\{
 	color_schemes,
-	option_schemes,
+	option_schemes_data,
 	color_scheme_category
 };
 
@@ -47,7 +47,7 @@ $slug_cat = '';
 foreach ( $schemes as $scheme => $option ) {
 
 	// Skip custom schemes.
-	if ( in_array( $option['slug'], option_schemes() ) ) {
+	if ( array_key_exists( $option['slug'], option_schemes_data() ) ) {
 		continue;
 	}
 
