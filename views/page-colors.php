@@ -106,7 +106,7 @@ jQuery(document).ready( function($) {
 		theme : 'cfe-tooltips'
 	});
 	$( '.color-tooltip' ).tooltipster({
-		distance : 10,
+		distance : 5,
 		delay : 150,
 		delayTouch: 0,
 		animationDuration : 150,

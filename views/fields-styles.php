@@ -528,7 +528,7 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 				);
 
 				$count = 0;
-				foreach ( get_palette( 'grayscale' ) as $palette ) {
+				foreach ( get_palette( 'grayscale-no-label' ) as $palette ) {
 					if ( ! empty( $palette ) ) {
 						foreach ( $palette as $thumb => $value ) {
 							$count++;

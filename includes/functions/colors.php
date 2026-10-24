@@ -783,7 +783,7 @@ function get_palette( $slug = false ) {
 	if ( ! $slug ) {
 		return [[]];
 	}
-	if ( 'grayscale' !== $slug && ! in_array( $slug, palette_schemes() ) ) {
+	if ( 'grayscale' !== $slug && 'grayscale-no-label' !== $slug && ! in_array( $slug, palette_schemes() ) ) {
 		return [ picker_colors_merged( true ) ];
 	}
 
