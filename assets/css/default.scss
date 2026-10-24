@@ -342,13 +342,9 @@ code.select {
 }
 
 .tab-pane h2 {
-	margin: 1.5rem  0 0.5rem 0;
-	padding: 0 0 0.5rem 0;
-	font-size: 1rem;
-	font-weight: 500;
+	margin: 1em  0 0 0;
+	padding: 0;
 	line-height: 1.2;
-	text-transform: uppercase;
-	border-bottom: 1px solid #dee2e6;
 }
 
 form {
@@ -460,8 +456,8 @@ form {
 
 	ul {
 		list-style: none;
-		margin: 0.25em 0 0 0;
-		padding: 0;
+		margin: 0.25em 0 0 0 !important;
+		padding: 0 !important;
 		display: flex;
 		flex-wrap: nowrap;
 		gap: 0.25rem;

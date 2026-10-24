@@ -270,13 +270,9 @@ code.select {
 }
 
 .tab-pane h2 {
-  margin: 1.5rem 0 0.5rem 0;
-  padding: 0 0 0.5rem 0;
-  font-size: 1rem;
-  font-weight: 500;
+  margin: 1em 0 0 0;
+  padding: 0;
   line-height: 1.2;
-  text-transform: uppercase;
-  border-bottom: 1px solid #dee2e6;
 }
 
 form .col-sm-1, form .col-sm-2, form .col-sm-3, form .col-sm-4, form .col-sm-5, form .col-sm-6, form .col-sm-7, form .col-sm-8, form .col-sm-9, form .col-sm-10, form .col-sm-11, form .col-sm-12 {
@@ -376,8 +372,8 @@ form .col-sm-1, form .col-sm-2, form .col-sm-3, form .col-sm-4, form .col-sm-5, 
 }
 .form-color-thumbs-list ul {
   list-style: none;
-  margin: 0.25em 0 0 0;
-  padding: 0;
+  margin: 0.25em 0 0 0 !important;
+  padding: 0 !important;
   display: flex;
   flex-wrap: nowrap;
   gap: 0.25rem;
