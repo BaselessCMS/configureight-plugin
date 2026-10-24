@@ -697,7 +697,7 @@ function option_schemes_data() {
 		'custom' => [
 			'slug'  => 'custom',
 			'name'  => lang()->get( 'Custom Colors' ),
-			'about' => lang()->get( 'Custom scheme colors begin with the previously set scheme. To change the starting colors, first save a different scheme then select custom.' ),
+			'about' => lang()->get( 'Custom scheme colors begin with the previously set scheme. To change the starting colors, first save a different scheme then select Custom Colors.' ),
 			'light' => [
 				'body'  => color( 'body' ),
 				'text'  => color( 'text' ),
