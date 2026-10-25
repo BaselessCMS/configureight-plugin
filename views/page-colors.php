@@ -38,6 +38,18 @@ $settings_page = DOMAIN_ADMIN . 'configure-plugin/' . plugin()->className();
 .color-heading {
 	font-size: 1.5rem;
 }
+h4.form-heading {
+	margin-bottom: 0;
+}
+.form-rule {
+	margin-top: 2rem;
+}
+.scheme-details {
+	margin-top: 1.5rem;
+}
+.scheme-detail {
+	margin: 0;
+}
 pre {
 	user-select: all;
 	cursor: pointer;
@@ -58,40 +70,33 @@ code.select {
 
 	<ul class="nav nav-tabs" id="nav-tabs" role="tablist">
 		<li class="nav-item">
+			<a class="nav-link" role="tab" aria-controls="intro" aria-selected="false" href="#intro"><?php lang()->p( 'Intro' ); ?></a>
+		</li>
+		<li class="nav-item">
 			<a class="nav-link" role="tab" aria-controls="schemes" aria-selected="false" href="#schemes"><?php lang()->p( 'Schemes' ); ?></a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link" role="tab" aria-controls="properties" aria-selected="false" href="#properties"><?php lang()->p( 'Properties' ); ?></a>
+			<a class="nav-link" role="tab" aria-controls="palettes" aria-selected="false" href="#palettes"><?php lang()->p( 'Palettes' ); ?></a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link" role="tab" aria-controls="classes" aria-selected="false" href="#classes"><?php lang()->p( 'Classes' ); ?></a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link" role="tab" aria-controls="slugs" aria-selected="false" href="#slugs"><?php lang()->p( 'Slugs' ); ?></a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link" role="tab" aria-controls="details" aria-selected="false" href="#details"><?php lang()->p( 'Details' ); ?></a>
+			<a class="nav-link" role="tab" aria-controls="styles" aria-selected="false" href="#styles"><?php lang()->p( 'CSS' ); ?></a>
 		</li>
 	</ul>
+
+	<div id="intro" class="tab-pane" role="tabpanel" aria-labelledby="intro">
+		<?php include( plugin()->phpPath() . '/views/colors-intro.php' ); ?>
+	</div>
 
 	<div id="schemes" class="tab-pane" role="tabpanel" aria-labelledby="schemes">
 		<?php include( plugin()->phpPath() . '/views/colors-schemes.php' ); ?>
 	</div>
 
-	<div id="properties" class="tab-pane" role="tabpanel" aria-labelledby="properties">
-		<?php include( plugin()->phpPath() . '/views/colors-properties.php' ); ?>
+	<div id="palettes" class="tab-pane" role="tabpanel" aria-labelledby="palettes">
+		<?php include( plugin()->phpPath() . '/views/colors-palettes.php' ); ?>
 	</div>
 
-	<div id="classes" class="tab-pane" role="tabpanel" aria-labelledby="classes">
-		<?php include( plugin()->phpPath() . '/views/colors-classes.php' ); ?>
-	</div>
-
-	<div id="slugs" class="tab-pane" role="tabpanel" aria-labelledby="slugs">
-		<?php include( plugin()->phpPath() . '/views/colors-slugs.php' ); ?>
-	</div>
-
-	<div id="details" class="tab-pane" role="tabpanel" aria-labelledby="details">
-		<?php include( plugin()->phpPath() . '/views/colors-details.php' ); ?>
+	<div id="styles" class="tab-pane" role="tabpanel" aria-labelledby="styles">
+		<?php include( plugin()->phpPath() . '/views/colors-styles.php' ); ?>
 	</div>
 </div>
 
