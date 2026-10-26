@@ -11,16 +11,11 @@
 // Access namespaced functions.
 use function CFE_Plugin\{
 	plugin,
-	site,
 	lang
 };
 use function CFE_Colors\{
 	color_schemes,
-	get_color_scheme,
-	default_color_scheme,
-	current_color_scheme,
-	color_scheme_category,
-	hex_to_rgb
+	current_color_scheme
 };
 
 $schemes = color_schemes();

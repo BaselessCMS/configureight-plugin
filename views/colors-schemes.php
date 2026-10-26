@@ -17,12 +17,15 @@ use function CFE_Colors\{
 	color_schemes,
 	option_schemes_data,
 	get_color_scheme,
-	default_color_scheme,
 	current_color_scheme,
 	color_scheme_category,
 	custom_schemes,
+	get_palette,
 	hex_to_rgb
 };
+
+$schemes = color_schemes();
+$current = current_color_scheme();
 
 ?>
 <hr class="hide-if-js" role="presentation" />
@@ -45,7 +48,7 @@ use function CFE_Colors\{
 
 <h3 class="form-heading"><?php lang()->p( 'Color Options' ); ?></h3>
 
-<p><?php lang()->p( 'When a scheme option is saved, various color options for both light and dark modes are saved from the corresponding scheme. The scheme colors then become available in various color picker inputs in the Website Configuration form.' ); ?></p>
+<p><?php lang()->p( 'When a scheme option is saved, various color options for both light and dark modes are saved from the corresponding scheme. The scheme colors then become available, plus a standard grayscale, in various color picker inputs in the Website Configuration form.' ); ?></p>
 
 <h4 class="form-heading"><?php lang()->p( 'Light Mode Options' ); ?></h4>
 
@@ -82,6 +85,39 @@ use function CFE_Colors\{
 	<li><?php lang()->p( '<code>header_text_color_dark</code>: header text color' ); ?></li>
 	<li><?php lang()->p( '<code>cover_blend</code>: cover image blend mode color' ); ?></li>
 </ul>
+
+<?php
+foreach ( get_palette( 'grayscale' ) as $palette ) {
+
+	printf(
+		'<h4 class="form-heading">%s</h4>',
+		lang()->get( 'Standard Grayscale' )
+	);
+
+	echo '<div class="form-color-thumbs-list"><ul>';
+	$count = 1;
+	foreach ( $palette as $color => $swatch ) {
+
+		if ( 'label' == $color ) {
+			continue;
+		}
+		printf(
+			'<li style="background-color: %s;" class="color-tooltip" data-tooltip-content="#tooltip-grayscale-%s"><span class="screen-reader-text">%s</span></li>',
+			$swatch,
+			$count,
+			$swatch
+		);
+		printf(
+			'<div style="display: none"><div id="tooltip-grayscale-%s">Hex: %s <br />RGB: %s</div></div>',
+			$count,
+			$swatch,
+			hex_to_rgb( $swatch )
+		);
+		$count++;
+	}
+	echo '</ul></div>';
+}
+?>
 
 <hr />
 

@@ -12,11 +12,9 @@
 
 // Access namespaced functions.
 use function CFE_Plugin\{
-	plugin,
 	lang
 };
 use function CFE_Colors\{
-	color_schemes,
 	default_color_scheme
 };
 

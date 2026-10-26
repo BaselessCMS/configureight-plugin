@@ -10,13 +10,10 @@
 
 // Access namespaced functions.
 use function CFE_Plugin\{
-	plugin,
 	lang
 };
 use function CFE_Colors\{
-	color_schemes,
 	option_schemes_data,
-	palette_schemes,
 	get_palette,
 	hex_to_rgb
 };
@@ -31,6 +28,40 @@ use function CFE_Colors\{
 <p><?php lang()->p( 'The color scheme option includes many color palettes from which to choose, under the Build You Own category. These color palettes are from various UI kits and design systems which offer their color palettes for free. The majority of the color palettes are quite similar to one another. They are offered for those who may have a favorite palette.' ); ?></p>
 <p><?php lang()->p( 'Two of the palettes, Bootstrap UI and Pantone Colors of the Year, have been expanded from single colors to include tints and shades. The Sanzo Wada and CSS Names palettes do not include tints and shades.' ); ?></p>
 <p><?php lang()->p( 'When a palette is selected in the color scheme option, only colors from that palette, plus a standard grayscale, are available in the various color picker fields. But the color fields will accept a different color pasted from this reference, so colors from various palettes may be mixed in that manner.' ); ?></p>
+
+<?php
+foreach ( get_palette( 'grayscale' ) as $palette ) {
+
+	printf(
+		'<h4 class="form-heading">%s</h4>',
+		lang()->get( 'Standard Grayscale' )
+	);
+
+	echo '<div class="form-color-thumbs-list"><ul>';
+	$count = 1;
+	foreach ( $palette as $color => $swatch ) {
+
+		if ( 'label' == $color ) {
+			continue;
+		}
+		printf(
+			'<li style="background-color: %s;" class="color-tooltip" data-tooltip-content="#tooltip-grayscale-%s"><span class="screen-reader-text">%s</span></li>',
+			$swatch,
+			$count,
+			$swatch
+		);
+		printf(
+			'<div style="display: none"><div id="tooltip-grayscale-%s">Hex: %s <br />RGB: %s</div></div>',
+			$count,
+			$swatch,
+			hex_to_rgb( $swatch )
+		);
+		$count++;
+	}
+	echo '</ul></div>';
+}
+?>
+
 <p><?php lang()->p( 'Each palette option begins with blue colors from the palette, in keeping with the default color scheme. Those initial colors are included with each palette in the reference list below.' ); ?></p>
 <p><?php lang()->p( 'Click or tap any color swatch to get its hex and rgb codes.' ); ?></p>
 
