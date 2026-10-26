@@ -315,7 +315,7 @@ function option_schemes_data() {
 		],
 		'bootstrap' => [
 			'slug'  => 'bootstrap',
-			'name'  => lang()->get( 'Bootstrap UI Colors' ),
+			'name'  => lang()->get( 'Bootstrap Colors' ),
 			'about' => lang()->get( 'The complete selection of colors included with the <a href="https://getbootstrap.com/docs/5.0/utilities/colors/#variables" target="_blank" rel="noopener noreferrer">Bootstrap</a> UI kit, expanded with tints & shades. The middle (6th) color of each spectrum is the original, named color.' ),
 			'media' => '#0a58ca',
 			'light' => [
@@ -496,7 +496,7 @@ function option_schemes_data() {
 		],
 		'pantone' => [
 			'slug'  => 'pantone',
-			'name'  => lang()->get( 'Pantone Colors of the Year' ),
+			'name'  => lang()->get( 'Pantone Colors' ),
 			'about' => lang()->get( 'Every Pantone "Color of the Year" since beginning in 2000, expanded with tints & shades. The middle (5th) color of each spectrum is the original, named color. The years 2016 and 2021 had two co-winning colors.' ),
 			'light' => [
 				'body'  => '#ffffff',
@@ -596,7 +596,7 @@ function option_schemes_data() {
 		],
 		'tailwind' => [
 			'slug'  => 'tailwind',
-			'name'  => lang()->get( 'Tailwind CSS Colors' ),
+			'name'  => lang()->get( 'Tailwind Colors' ),
 			'about' => lang()->get( 'The complete selection of colors included with the <a href="https://tailwindcss.com/docs/colors" target="_blank" rel="noopener noreferrer">Tailwind CSS</a> framework for website UI and frontend theme building.' ),
 			'light' => [
 				'body'  => '#ffffff',
@@ -621,7 +621,7 @@ function option_schemes_data() {
 		],
 		'untitled' => [
 			'slug'  => 'untitled',
-			'name'  => lang()->get( 'Untitled UI Colors' ),
+			'name'  => lang()->get( 'Untitled Colors' ),
 			'about' => lang()->get( 'The complete selection of colors included with the <a href="https://untitled-theme.xyz/colors" target="_blank" rel="noopener noreferrer">Untitled UI</a> kit of colors and icons.' ),
 			'light' => [
 				'body'  => '#ffffff',

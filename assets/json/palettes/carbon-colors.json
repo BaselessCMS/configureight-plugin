@@ -1,6 +1,6 @@
 {
 	"red": {
-		"label": "IBM Carbon Red",
+		"label": "Carbon Red",
 		"100": "#fff1f1",
 		"200": "#ffd7d9",
 		"300": "#ffb3b8",
@@ -13,7 +13,7 @@
 		"1000": "#2d0709"
 	},
 	"orange": {
-		"label": "IBM Carbon Orange",
+		"label": "Carbon Orange",
 		"100": "#fff2e8",
 		"200": "#ffd9be",
 		"300": "#ffb784",
@@ -26,7 +26,7 @@
 		"1000": "#231000"
 	},
 	"yellow": {
-		"label": "IBM Carbon Yellow",
+		"label": "Carbon Yellow",
 		"100": "#fcf4d6",
 		"200": "#fddc69",
 		"300": "#f1c21b",
@@ -39,7 +39,7 @@
 		"1000": "#1c1500"
 	},
 	"green": {
-		"label": "IBM Carbon Green",
+		"label": "Carbon Green",
 		"100": "#defbe6",
 		"200": "#a7f0ba",
 		"300": "#6fdc8c",
@@ -52,7 +52,7 @@
 		"1000": "#071908"
 	},
 	"teal": {
-		"label": "IBM Carbon Teal",
+		"label": "Carbon Teal",
 		"100": "#d9fbfb",
 		"200": "#9ef0f0",
 		"300": "#3ddbd9",
@@ -65,7 +65,7 @@
 		"1000": "#081a1c"
 	},
 	"cyan": {
-		"label": "IBM Carbon Cyan",
+		"label": "Carbon Cyan",
 		"100": "#e5f6ff",
 		"200": "#bae6ff",
 		"300": "#82cfff",
@@ -78,7 +78,7 @@
 		"1000": "#061727"
 	},
 	"blue": {
-		"label": "IBM Carbon Blue",
+		"label": "Carbon Blue",
 		"100": "#edf5ff",
 		"200": "#d0e2ff",
 		"300": "#a6c8ff",
@@ -91,7 +91,7 @@
 		"1000": "#001141"
 	},
 	"purple": {
-		"label": "IBM Carbon Purple",
+		"label": "Carbon Purple",
 		"100": "#f6f2ff",
 		"200": "#e8daff",
 		"300": "#d4bbff",
@@ -104,7 +104,7 @@
 		"1000": "#1c0f30"
 	},
 	"magenta": {
-		"label": "IBM Carbon Magenta",
+		"label": "Carbon Magenta",
 		"10": "#fff0f7",
 		"20": "#ffd6e8",
 		"30": "#ffafd2",
@@ -117,7 +117,7 @@
 		"100": "#2a0a18"
 	},
 	"cool-gray": {
-		"label": "IBM Carbon Cool Gray",
+		"label": "Carbon Cool Gray",
 		"100": "#f2f4f8",
 		"200": "#dde1e6",
 		"300": "#c1c7cd",
@@ -130,7 +130,7 @@
 		"1000": "#121619"
 	},
 	"gray": {
-		"label": "IBM Carbon Gray",
+		"label": "Carbon Gray",
 		"0": "#ffffff",
 		"100": "#f4f4f4",
 		"200": "#e0e0e0",
@@ -145,7 +145,7 @@
 		"1100": "#000000"
 	},
 	"warm-gray": {
-		"label": "IBM Carbon Warm Gray",
+		"label": "Carbon Warm Gray",
 		"100": "#f7f3f2",
 		"200": "#e5e0df",
 		"300": "#cac5c4",
