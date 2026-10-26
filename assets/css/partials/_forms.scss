@@ -1373,7 +1373,7 @@ p + .multi-check-wrap {
 		margin: 0.25em 0 0 0 !important;
 		padding: 0 !important;
 		display: flex;
-		flex-wrap: nowrap;
+		flex-wrap: wrap;
 		gap: 0.25rem;
 
 		li {

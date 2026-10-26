@@ -375,7 +375,7 @@ form .col-sm-1, form .col-sm-2, form .col-sm-3, form .col-sm-4, form .col-sm-5, 
   margin: 0.25em 0 0 0 !important;
   padding: 0 !important;
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   gap: 0.25rem;
 }
 .form-color-thumbs-list ul li {
