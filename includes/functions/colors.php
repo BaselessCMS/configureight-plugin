@@ -316,7 +316,7 @@ function option_schemes_data() {
 		'bootstrap' => [
 			'slug'  => 'bootstrap',
 			'name'  => lang()->get( 'Bootstrap UI Colors' ),
-			'about' => lang()->get( 'The complete selection of colors included with the <a href="https://getbootstrap.com/docs/5.0/utilities/colors/#variables" target="_blank" rel="noopener noreferrer">Bootstrap</a> framework for website UI and frontend theme building, expanded with tints & shades.' ),
+			'about' => lang()->get( 'The complete selection of colors included with the <a href="https://getbootstrap.com/docs/5.0/utilities/colors/#variables" target="_blank" rel="noopener noreferrer">Bootstrap</a> UI kit, expanded with tints & shades. The middle (6th) color of each spectrum is the original, named color.' ),
 			'media' => '#0a58ca',
 			'light' => [
 				'body'  => '#ffffff',
@@ -497,7 +497,7 @@ function option_schemes_data() {
 		'pantone-picks' => [
 			'slug'  => 'pantone-picks',
 			'name'  => lang()->get( 'Pantone Colors of the Year' ),
-			'about' => lang()->get( 'Every Pantone "Color of the Year" since beginning in 2000. The middle (5th) color of each spectrum is the original, named color. The years 2016 and 2021 had two co-winning colors.' ),
+			'about' => lang()->get( 'Every Pantone "Color of the Year" since beginning in 2000, expanded with tints & shades. The middle (5th) color of each spectrum is the original, named color. The years 2016 and 2021 had two co-winning colors.' ),
 			'light' => [
 				'body'  => '#ffffff',
 				'text'  => '#343a40',
@@ -2068,6 +2068,10 @@ function color_scheme_template() {
 		}
 	}
 	return $scheme;
+}
+
+function custom_scheme_from() {
+
 }
 
 /**
