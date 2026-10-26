@@ -494,8 +494,8 @@ function option_schemes_data() {
 				'six'   => '#3d8bfd'
 			]
 		],
-		'pantone-picks' => [
-			'slug'  => 'pantone-picks',
+		'pantone' => [
+			'slug'  => 'pantone',
 			'name'  => lang()->get( 'Pantone Colors of the Year' ),
 			'about' => lang()->get( 'Every Pantone "Color of the Year" since beginning in 2000, expanded with tints & shades. The middle (5th) color of each spectrum is the original, named color. The years 2016 and 2021 had two co-winning colors.' ),
 			'light' => [
