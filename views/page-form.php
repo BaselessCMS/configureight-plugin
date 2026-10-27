@@ -14,10 +14,7 @@ use function CFE_Plugin\{
 };
 use function CFE_Colors\{
 	palette_schemes,
-	get_palette,
-	get_color_scheme,
-	option_scheme_initial,
-	option_schemes_data
+	get_palette
 };
 
 // Current color scheme.
