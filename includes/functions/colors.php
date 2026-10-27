@@ -693,31 +693,6 @@ function option_schemes_data() {
 				'five'  => '#0a58ca',
 				'six'   => '#3d8bfd'
 			]
-		],
-		'custom' => [
-			'slug'  => 'custom',
-			'name'  => lang()->get( 'Custom Colors' ),
-			'about' => lang()->get( 'Custom scheme colors begin with the previously set scheme. To change the starting colors, first save a different scheme then select Custom Colors.' ),
-			'light' => [
-				'body'  => color( 'body' ),
-				'text'  => color( 'text' ),
-				'one'   => color( 'one' ),
-				'two'   => color( 'two' ),
-				'three' => color( 'three' ),
-				'four'  => color( 'four' ),
-				'five'  => color( 'five' ),
-				'six'   => color( 'six' )
-			],
-			'dark' => [
-				'body'  => color( 'body_dark' ),
-				'text'  => color( 'text_dark' ),
-				'one'   => color( 'one_dark' ),
-				'two'   => color( 'two_dark' ),
-				'three' => color( 'three_dark' ),
-				'four'  => color( 'four_dark' ),
-				'five'  => color( 'five_dark' ),
-				'six'   => color( 'six_dark' )
-			]
 		]
 	];
 	return $schemes;
@@ -747,25 +722,9 @@ function palette_schemes() {
 	$schemes = [];
 
 	foreach ( $data as $key => $scheme ) {
-		if ( 'custom' == $key ) {
-			continue;
-		}
 		$schemes[] = $key;
 	}
 	return $schemes;
-}
-
-/**
- * Options build schemes
- *
- * Used mostly for excluding custom schemes
- * from displaying various content.
- *
- * @since  1.0.0
- * @return array
- */
-function custom_schemes() {
-	return array_merge( palette_schemes(), [ 'custom' ] );
 }
 
 /**
@@ -841,6 +800,11 @@ function build_custom_schemes() {
 		if ( ! isset( $scheme['slug'] ) ) {
 			continue;
 		}
+		if ( isset( $scheme['extra'] ) ) {
+			$extra = $scheme['extra'];
+		} else {
+			$extra = [];
+		}
 		$schemes[$custom] = [
 			'slug'     => $scheme['slug'],
 			'name'     => isset( $scheme['name'] ) ? $scheme['name'] : lang()->get( 'Unknown Scheme' ),
@@ -848,7 +812,8 @@ function build_custom_schemes() {
 			'category' => 'custom',
 			'media'    => plugin()->cover_blend(),
 			'light'    => $light,
-			'dark'     => $dark
+			'dark'     => $dark,
+			'extra'    => $extra
 		];
 	}
 	return $schemes;
@@ -891,7 +856,7 @@ function custom_schemes_heading() {
  * @since  1.0.0
  * @return array Returns array of color schemes data.
  */
-function color_schemes() {
+function color_schemes_data() {
 
 	// Basic color schemes.
 	$schemes = [
@@ -1397,7 +1362,7 @@ function color_schemes() {
 			'name'     => lang()->get( 'Beach' ),
 			'about'    => lang()->get( 'Cool water and warm sand.' ),
 			'category' => 'nature',
-			'media'    => '#254d88',
+			'media'    => '#467ac7',
 			'light' => [
 				'body'  => '#ffffff',
 				'text'  => '#101e36',
@@ -1936,10 +1901,68 @@ function color_schemes() {
 			]
 		]
 	];
+	return $schemes;
+}
 
-	// Merge custom schemes.
-	$schemes = array_merge( $schemes, build_custom_schemes() );
+/**
+ * Build color schemes
+ *
+ * @since  1.0.0
+ * @return array
+ */
+function build_color_schemes() {
 
+	$schemes = [];
+	$data  = color_schemes_data();
+	$light = [
+		'body'  => color( 'body' ),
+		'text'  => color( 'text' ),
+		'one'   => color( 'one' ),
+		'two'   => color( 'two' ),
+		'three' => color( 'three' ),
+		'four'  => color( 'four' ),
+		'five'  => color( 'five' ),
+		'six'   => color( 'six' )
+	];
+	$dark = [
+		'body'  => color( 'body_dark' ),
+		'text'  => color( 'text_dark' ),
+		'one'   => color( 'one_dark' ),
+		'two'   => color( 'two_dark' ),
+		'three' => color( 'three_dark' ),
+		'four'  => color( 'four_dark' ),
+		'five'  => color( 'five_dark' ),
+		'six'   => color( 'six_dark' )
+	];
+
+	foreach ( $data as $custom => $scheme ) {
+
+		if ( ! isset( $scheme['slug'] ) ) {
+			continue;
+		}
+		if ( isset( $scheme['extra'] ) ) {
+			$extra = $scheme['extra'];
+		} else {
+			$extra = [];
+		}
+		$schemes[$custom] = [
+			'slug'     => $scheme['slug'],
+			'name'     => isset( $scheme['name'] ) ? $scheme['name'] : lang()->get( 'Unknown Scheme' ),
+			'about'    => isset( $scheme['about'] ) ? $scheme['about'] : '',
+			'category' => isset( $scheme['category'] ) ? $scheme['category'] : 'basic',
+			'media'    => $scheme['media'],
+			'light'    => $light,
+			'dark'     => $dark,
+			'extra'    => $extra
+		];
+	}
+	return $schemes;
+}
+
+function color_schemes() {
+	$schemes = [];
+	$schemes = array_merge( build_color_schemes(), $schemes );
+	$schemes = array_merge( build_custom_schemes(), $schemes );
 	return $schemes;
 }
 
@@ -2075,7 +2098,7 @@ function custom_scheme_from() {
 }
 
 /**
- * Current scheme cover color
+ * Current scheme color
  *
  * @since  1.0.0
  * @return mixed Returns a hex value or false.
@@ -2269,10 +2292,6 @@ function picker_colors_extra() {
 	$current = current_color_scheme();
 	$custom_from = plugin()->custom_scheme_from();
 	$extra = [];
-
-	if ( 'custom' == $current['slug'] ) {
-		$current = get_color_scheme( $custom_from );
-	}
 
 	if ( ! isset( $current['extra'] ) ) {
 		return $extra;

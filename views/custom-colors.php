@@ -25,7 +25,7 @@ use function CFE_Colors\{
 };
 
 ?>
-<div id="custom_color_scheme_fields" style="display: <?php echo ( array_key_exists( plugin()->color_scheme(), option_schemes_data() ) ? 'block' : 'none' ); ?>;">
+<div id="custom_color_scheme_fields">
 
 	<h3 class="form-heading"><?php echo custom_schemes_heading(); ?></h3>
 

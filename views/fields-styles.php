@@ -17,7 +17,7 @@ use function CFE_Plugin\{
 use function CFE_Colors\{
 	color_schemes,
 	basic_schemes,
-	custom_schemes,
+	palette_schemes,
 	option_schemes_data,
 	get_color_scheme,
 	get_palette,
@@ -281,8 +281,8 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 				}
 				echo '</optgroup>';
 
-				// Exclude some schemes from loop.custom_schemes()
-				$exclude = array_merge( basic_schemes(), custom_schemes() );
+				// Exclude some schemes from loop.palette_schemes()
+				$exclude = array_merge( basic_schemes(), palette_schemes() );
 
 				foreach ( $colors as $color => $option ) {
 
@@ -847,7 +847,7 @@ jQuery(document).ready( function($) {
 
 	$( '#color_scheme' ).on( 'change', function() {
 		var scheme = $(this).val();
-		var custom = [ '<?php echo implode( "', '", custom_schemes() ); ?>' ];
+		var custom = [ '<?php echo implode( "', '", palette_schemes() ); ?>' ];
 
 		<?php
 		$data = option_schemes_data();

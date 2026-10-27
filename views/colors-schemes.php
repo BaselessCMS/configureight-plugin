@@ -19,7 +19,7 @@ use function CFE_Colors\{
 	get_color_scheme,
 	current_color_scheme,
 	color_scheme_category,
-	custom_schemes,
+	palette_schemes,
 	get_palette,
 	hex_to_rgb
 };
@@ -239,8 +239,8 @@ foreach ( $current['dark'] as $name => $color ) {
 }
 echo '</ul></div>';
 
-// Copy custom colors as text.
-if ( in_array( $current['slug'], custom_schemes() ) ) :
+// Copy colors as text.
+if ( in_array( $current['slug'], palette_schemes() ) ) :
 
 printf(
 	'<h3 class="form-heading" style="text-transform: none;">%s</h3>',
