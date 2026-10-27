@@ -80,7 +80,7 @@ foreach ( $default['dark'] as $name => $color ) {
 
 <p><?php lang()->p( 'The scheme properties are optionally loaded in a scheme-specific stylesheet. The properties are not used in the Configure 8 theme or admin theme but can be used to change colors where desired.' ); ?></p>
 
-<p><?php lang()->p( 'This does not apply to the Build Your Own color palette schemes or the Custom Colors option.' ); ?></p>
+<p><?php lang()->p( 'This does not apply to the Build Your Own color palette schemes.' ); ?></p>
 
 <hr />
 
@@ -88,7 +88,7 @@ foreach ( $default['dark'] as $name => $color ) {
 
 <p><?php lang()->p( 'Scheme-specific CSS classes are optionally loaded in a scheme-specific stylesheet. The classes are not used in the Configure 8 theme or admin theme but can be used in your custom plugin, or in modified versions of the Configure 8 themes.' ); ?></p>
 
-<p><?php lang()->p( 'This does not apply to the Build Your Own color palette schemes or the Custom Colors option.' ); ?></p>
+<p><?php lang()->p( 'This does not apply to the Build Your Own color palette schemes.' ); ?></p>
 
 <p><?php lang()->p( 'Each color in a scheme, light & dark modes, has its own set of classes for that color. The scheme is specified by a class using the scheme slug prefixed with <code>cfe-</code>.' ); ?></p>
 

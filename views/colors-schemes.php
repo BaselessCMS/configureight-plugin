@@ -35,7 +35,7 @@ $current = current_color_scheme();
 
 <p><a href="#schemes-list"><?php lang()->p( 'Jump to schemes list &darr;' ); ?></a></p>
 
-<p><?php lang()->p( 'The Configure 8 theme has many color schemes included with the companion plugin, arranged by category. These prescribed schemes may be modified by first saving that scheme in the scheme option. Then change the scheme option to Custom Colors to transfer the scheme color values to custom color pickers.' ); ?></p>
+<p><?php lang()->p( 'The Configure 8 theme has many color schemes included with the companion plugin, arranged by category. These prescribed schemes may be modified in the custom color pickers.' ); ?></p>
 
 <p><?php lang()->p( 'The color schemes set colors of various theme features in both light and dark modes:' ); ?></p>
 <ul>
@@ -166,18 +166,6 @@ if ( isset( $current['about'] ) && ! empty( $current['about'] ) ) {
 		'<p>%s</p>',
 		$current['about']
 	);
-}
-
-// Previously set scheme if Custom is the current scheme.
-if ( 'custom' == $current['slug'] ) {
-	$previous = plugin()->custom_scheme_from();
-	$previous = get_color_scheme( $previous );
-	if ( is_array( $previous ) ) {
-		printf(
-			lang()->get( '<p>Previous scheme: %s</p>' ),
-			$previous['name']
-		);
-	}
 }
 
 // Current light color options.

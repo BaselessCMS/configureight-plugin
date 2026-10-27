@@ -68,9 +68,7 @@ foreach ( get_palette( 'grayscale' ) as $palette ) {
 <div id="palettes-list">
 <?php
 foreach ( option_schemes_data() as $data => $palette ) {
-	if ( 'custom' == $palette['slug'] ) {
-		continue;
-	}
+
 	echo '<div style="margin-top: 1em">';
 	echo '<hr />';
 	printf(
