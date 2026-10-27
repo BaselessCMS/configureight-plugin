@@ -20,14 +20,22 @@ use function CFE_Colors\{
 	option_schemes_data,
 	palette_schemes,
 	get_palette,
+	color_scheme_initial,
+	option_scheme_initial,
 	custom_scheme_heading,
 	hex_to_rgb,
 	picker_class
 };
 
-$colors = color_schemes_data();
+$custom_from = plugin()->custom_scheme_from();
+if ( in_array( $custom_from, palette_schemes() ) ) {
+	$colors = option_scheme_initial( $custom_from );
+} else {
+	$colors = color_scheme_initial( $custom_from );
+}
 
 ?>
+
 <div id="custom_color_scheme_fields">
 
 	<h3 class="form-heading"><?php echo custom_scheme_heading(); ?></h3>
@@ -64,7 +72,7 @@ $colors = color_schemes_data();
 				<div class="col-sm-10">
 					<div class="row color-picker-wrap">
 						<input class="color-picker <?php echo picker_class( true ); ?>" id="color_body" name="color_body" value="<?php echo plugin()->color_body(); ?>" />
-						<input id="color_body_default" class="screen-reader-text" type="hidden" value="<?php echo $colors[$custom_from]['light']['body']; ?>" />
+						<input id="color_body_default" class="screen-reader-text" type="hidden" value="<?php echo $colors['light']['body']; ?>" />
 						<span class="btn btn-secondary btn-md hide-if-no-js" id="color_body_default_button"><?php lang()->p( 'Reset' ); ?></span>
 					</div>
 					<small class="form-text"><?php lang()->p( 'CSS property: <code class="select">--cfe-scheme-color--body</code>' ); ?></small>
@@ -76,7 +84,7 @@ $colors = color_schemes_data();
 				<div class="col-sm-10">
 					<div class="row color-picker-wrap">
 						<input class="color-picker <?php echo picker_class(); ?>" id="color_text" name="color_text" value="<?php echo plugin()->color_text(); ?>" />
-						<input id="color_text_default" class="screen-reader-text" type="hidden" value="<?php echo $colors[$custom_from]['light']['text']; ?>" />
+						<input id="color_text_default" class="screen-reader-text" type="hidden" value="<?php echo $colors['light']['text']; ?>" />
 						<span class="btn btn-secondary btn-md hide-if-no-js" id="color_text_default_button"><?php lang()->p( 'Reset' ); ?></span>
 					</div>
 					<small class="form-text"><?php lang()->p( 'CSS property: <code class="select">--cfe-scheme-color--text</code>' ); ?></small>
@@ -88,7 +96,7 @@ $colors = color_schemes_data();
 				<div class="col-sm-10">
 					<div class="row color-picker-wrap">
 						<input class="color-picker <?php echo picker_class(); ?>" id="color_one" name="color_one" value="<?php echo plugin()->color_one(); ?>" />
-						<input id="color_one_default" class="screen-reader-text" type="hidden" value="<?php echo $colors[$custom_from]['light']['one']; ?>" />
+						<input id="color_one_default" class="screen-reader-text" type="hidden" value="<?php echo $colors['light']['one']; ?>" />
 						<span class="btn btn-secondary btn-md hide-if-no-js" id="color_one_default_button"><?php lang()->p( 'Reset' ); ?></span>
 					</div>
 					<small class="form-text"><?php lang()->p( 'CSS property: <code class="select">--cfe-scheme-color--one</code>' ); ?></small>
@@ -100,7 +108,7 @@ $colors = color_schemes_data();
 				<div class="col-sm-10">
 					<div class="row color-picker-wrap">
 						<input class="color-picker <?php echo picker_class(); ?>" id="color_two" name="color_two" value="<?php echo plugin()->color_two(); ?>" />
-						<input id="color_two_default" class="screen-reader-text" type="hidden" value="<?php echo $colors[$custom_from]['light']['two']; ?>" />
+						<input id="color_two_default" class="screen-reader-text" type="hidden" value="<?php echo $colors['light']['two']; ?>" />
 						<span class="btn btn-secondary btn-md hide-if-no-js" id="color_two_default_button"><?php lang()->p( 'Reset' ); ?></span>
 					</div>
 					<small class="form-text"><?php lang()->p( 'CSS property: <code class="select">--cfe-scheme-color--two</code>' ); ?></small>
@@ -112,7 +120,7 @@ $colors = color_schemes_data();
 				<div class="col-sm-10">
 					<div class="row color-picker-wrap">
 						<input class="color-picker <?php echo picker_class(); ?>" id="color_three" name="color_three" value="<?php echo plugin()->color_three(); ?>" />
-						<input id="color_three_default" class="screen-reader-text" type="hidden" value="<?php echo $colors[$custom_from]['light']['three']; ?>" />
+						<input id="color_three_default" class="screen-reader-text" type="hidden" value="<?php echo $colors['light']['three']; ?>" />
 						<span class="btn btn-secondary btn-md hide-if-no-js" id="color_three_default_button"><?php lang()->p( 'Reset' ); ?></span>
 					</div>
 					<small class="form-text"><?php lang()->p( 'CSS property: <code class="select">--cfe-scheme-color--three</code>' ); ?></small>
@@ -124,7 +132,7 @@ $colors = color_schemes_data();
 				<div class="col-sm-10">
 					<div class="row color-picker-wrap">
 						<input class="color-picker <?php echo picker_class(); ?>" id="color_four" name="color_four" value="<?php echo plugin()->color_four(); ?>" />
-						<input id="color_four_default" class="screen-reader-text" type="hidden" value="<?php echo $colors[$custom_from]['light']['four']; ?>" />
+						<input id="color_four_default" class="screen-reader-text" type="hidden" value="<?php echo $colors['light']['four']; ?>" />
 						<span class="btn btn-secondary btn-md hide-if-no-js" id="color_four_default_button"><?php lang()->p( 'Reset' ); ?></span>
 					</div>
 					<small class="form-text"><?php lang()->p( 'CSS property: <code class="select">--cfe-scheme-color--four</code>' ); ?></small>
@@ -136,7 +144,7 @@ $colors = color_schemes_data();
 				<div class="col-sm-10">
 					<div class="row color-picker-wrap">
 						<input class="color-picker <?php echo picker_class(); ?>" id="color_five" name="color_five" value="<?php echo plugin()->color_five(); ?>" />
-						<input id="color_five_default" class="screen-reader-text" type="hidden" value="<?php echo $colors[$custom_from]['light']['five']; ?>" />
+						<input id="color_five_default" class="screen-reader-text" type="hidden" value="<?php echo $colors['light']['five']; ?>" />
 						<span class="btn btn-secondary btn-md hide-if-no-js" id="color_five_default_button"><?php lang()->p( 'Reset' ); ?></span>
 					</div>
 					<small class="form-text"><?php lang()->p( 'CSS property: <code class="select">--cfe-scheme-color--five</code>' ); ?></small>
@@ -148,7 +156,7 @@ $colors = color_schemes_data();
 				<div class="col-sm-10">
 					<div class="row color-picker-wrap">
 						<input class="color-picker <?php echo picker_class(); ?>" id="color_six" name="color_six" value="<?php echo plugin()->color_six(); ?>" />
-						<input id="color_six_default" class="screen-reader-text" type="hidden" value="<?php echo $colors[$custom_from]['light']['six']; ?>" />
+						<input id="color_six_default" class="screen-reader-text" type="hidden" value="<?php echo $colors['light']['six']; ?>" />
 						<span class="btn btn-secondary btn-md hide-if-no-js" id="color_six_default_button"><?php lang()->p( 'Reset' ); ?></span>
 					</div>
 					<small class="form-text"><?php lang()->p( 'CSS property: <code class="select">--cfe-scheme-color--six</code>' ); ?></small>
@@ -165,7 +173,7 @@ $colors = color_schemes_data();
 				<div class="col-sm-10">
 					<div class="row color-picker-wrap">
 						<input class="color-picker <?php echo picker_class( true ); ?>" id="color_body_dark" name="color_body_dark" value="<?php echo plugin()->color_body_dark(); ?>" />
-						<input id="color_body_dark_default" class="screen-reader-text" type="hidden" value="<?php echo $colors[$custom_from]['dark']['body']; ?>" />
+						<input id="color_body_dark_default" class="screen-reader-text" type="hidden" value="<?php echo $colors['dark']['body']; ?>" />
 						<span class="btn btn-secondary btn-md hide-if-no-js" id="color_body_dark_default_button"><?php lang()->p( 'Reset' ); ?></span>
 					</div>
 					<small class="form-text"><?php lang()->p( 'CSS property: <code class="select">--cfe-scheme-color--body--dark</code>' ); ?></small>
@@ -177,7 +185,7 @@ $colors = color_schemes_data();
 				<div class="col-sm-10">
 					<div class="row color-picker-wrap">
 						<input class="color-picker <?php echo picker_class(); ?>" id="color_text_dark" name="color_text_dark" value="<?php echo plugin()->color_text_dark(); ?>" />
-						<input id="color_text_dark_default" class="screen-reader-text" type="hidden" value="<?php echo $colors[$custom_from]['dark']['text']; ?>" />
+						<input id="color_text_dark_default" class="screen-reader-text" type="hidden" value="<?php echo $colors['dark']['text']; ?>" />
 						<span class="btn btn-secondary btn-md hide-if-no-js" id="color_text_dark_default_button"><?php lang()->p( 'Reset' ); ?></span>
 					</div>
 					<small class="form-text"><?php lang()->p( 'CSS property: <code class="select">--cfe-scheme-color--text--dark</code>' ); ?></small>
@@ -189,7 +197,7 @@ $colors = color_schemes_data();
 				<div class="col-sm-10">
 					<div class="row color-picker-wrap">
 						<input class="color-picker <?php echo picker_class(); ?>" id="color_one_dark" name="color_one_dark" value="<?php echo plugin()->color_one_dark(); ?>" />
-						<input id="color_one_dark_default" class="screen-reader-text" type="hidden" value="<?php echo $colors[$custom_from]['dark']['one']; ?>" />
+						<input id="color_one_dark_default" class="screen-reader-text" type="hidden" value="<?php echo $colors['dark']['one']; ?>" />
 						<span class="btn btn-secondary btn-md hide-if-no-js" id="color_one_dark_default_button"><?php lang()->p( 'Reset' ); ?></span>
 					</div>
 					<small class="form-text"><?php lang()->p( 'CSS property: <code class="select">--cfe-scheme-color--one--dark</code>' ); ?></small>
@@ -201,7 +209,7 @@ $colors = color_schemes_data();
 				<div class="col-sm-10">
 					<div class="row color-picker-wrap">
 						<input class="color-picker <?php echo picker_class(); ?>" id="color_two_dark" name="color_two_dark" value="<?php echo plugin()->color_two_dark(); ?>" />
-						<input id="color_two_dark_default" class="screen-reader-text" type="hidden" value="<?php echo $colors[$custom_from]['dark']['two']; ?>" />
+						<input id="color_two_dark_default" class="screen-reader-text" type="hidden" value="<?php echo $colors['dark']['two']; ?>" />
 						<span class="btn btn-secondary btn-md hide-if-no-js" id="color_two_dark_default_button"><?php lang()->p( 'Reset' ); ?></span>
 					</div>
 					<small class="form-text"><?php lang()->p( 'CSS property: <code class="select">--cfe-scheme-color--two--dark</code>' ); ?></small>
@@ -213,7 +221,7 @@ $colors = color_schemes_data();
 				<div class="col-sm-10">
 					<div class="row color-picker-wrap">
 						<input class="color-picker <?php echo picker_class(); ?>" id="color_three_dark" name="color_three_dark" value="<?php echo plugin()->color_three_dark(); ?>" />
-						<input id="color_three_dark_default" class="screen-reader-text" type="hidden" value="<?php echo $colors[$custom_from]['dark']['three']; ?>" />
+						<input id="color_three_dark_default" class="screen-reader-text" type="hidden" value="<?php echo $colors['dark']['three']; ?>" />
 						<span class="btn btn-secondary btn-md hide-if-no-js" id="color_three_dark_default_button"><?php lang()->p( 'Reset' ); ?></span>
 					</div>
 					<small class="form-text"><?php lang()->p( 'CSS property: <code class="select">--cfe-scheme-color--three--dark</code>' ); ?></small>
@@ -225,7 +233,7 @@ $colors = color_schemes_data();
 				<div class="col-sm-10">
 					<div class="row color-picker-wrap">
 						<input class="color-picker <?php echo picker_class(); ?>" id="color_four_dark" name="color_four_dark" value="<?php echo plugin()->color_four_dark(); ?>" />
-						<input id="color_four_dark_default" class="screen-reader-text" type="hidden" value="<?php echo $colors[$custom_from]['dark']['four']; ?>" />
+						<input id="color_four_dark_default" class="screen-reader-text" type="hidden" value="<?php echo $colors['dark']['four']; ?>" />
 						<span class="btn btn-secondary btn-md hide-if-no-js" id="color_four_dark_default_button"><?php lang()->p( 'Reset' ); ?></span>
 					</div>
 					<small class="form-text"><?php lang()->p( 'CSS property: <code class="select">--cfe-scheme-color--four--dark</code>' ); ?></small>
@@ -237,7 +245,7 @@ $colors = color_schemes_data();
 				<div class="col-sm-10">
 					<div class="row color-picker-wrap">
 						<input class="color-picker <?php echo picker_class(); ?>" id="color_five_dark" name="color_five_dark" value="<?php echo plugin()->color_five_dark(); ?>" />
-						<input id="color_five_dark_default" class="screen-reader-text" type="hidden" value="<?php echo $colors[$custom_from]['dark']['five']; ?>" />
+						<input id="color_five_dark_default" class="screen-reader-text" type="hidden" value="<?php echo $colors['dark']['five']; ?>" />
 						<span class="btn btn-secondary btn-md hide-if-no-js" id="color_five_dark_default_button"><?php lang()->p( 'Reset' ); ?></span>
 					</div>
 					<small class="form-text"><?php lang()->p( 'CSS property: <code class="select">--cfe-scheme-color--five--dark</code>' ); ?></small>
@@ -249,7 +257,7 @@ $colors = color_schemes_data();
 				<div class="col-sm-10">
 					<div class="row color-picker-wrap">
 						<input class="color-picker <?php echo picker_class(); ?>" id="color_six_dark" name="color_six_dark" value="<?php echo plugin()->color_six_dark(); ?>" />
-						<input id="color_six_dark_default" class="screen-reader-text" type="hidden" value="<?php echo $colors[$custom_from]['dark']['six']; ?>" />
+						<input id="color_six_dark_default" class="screen-reader-text" type="hidden" value="<?php echo $colors['dark']['six']; ?>" />
 						<span class="btn btn-secondary btn-md hide-if-no-js" id="color_six_dark_default_button"><?php lang()->p( 'Reset' ); ?></span>
 					</div>
 					<small class="form-text"><?php lang()->p( 'CSS property: <code class="select">--cfe-scheme-color--six--dark</code>' ); ?></small>

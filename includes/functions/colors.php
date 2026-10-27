@@ -1983,8 +1983,8 @@ function build_color_schemes() {
  */
 function color_schemes() {
 	$schemes = [];
-	$schemes = array_merge( build_color_schemes(), $schemes );
 	$schemes = array_merge( build_custom_schemes(), $schemes );
+	$schemes = array_merge( build_color_schemes(), $schemes );
 	return $schemes;
 }
 
@@ -2273,6 +2273,7 @@ function all_current_colors( $repeat = true ) {
 function picker_colors_light() {
 
 	$current = current_color_scheme();
+	$current = color_scheme_initial( $current['slug'] );
 	$light   = [];
 	$cover   = current_cover_color();
 
@@ -2303,6 +2304,7 @@ function picker_colors_light() {
 function picker_colors_dark() {
 
 	$current = current_color_scheme();
+	$current = color_scheme_initial( $current['slug'] );
 	$dark    = [];
 
 	foreach ( $current['dark'] as $name => $color ) {
@@ -2329,8 +2331,8 @@ function picker_colors_dark() {
 function picker_colors_extra() {
 
 	$current = current_color_scheme();
-	$custom_from = plugin()->custom_scheme_from();
-	$extra = [];
+	$current = option_scheme_initial( $current['slug'] );
+	$extra   = [];
 
 	if ( ! isset( $current['extra'] ) ) {
 		return $extra;

@@ -51,7 +51,6 @@ $colors_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=colors'
 $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 
 ?>
-
 <h3 class="form-heading"><?php lang()->p( 'Layout Options' ); ?></h3>
 
 <fieldset>
@@ -853,14 +852,14 @@ jQuery(document).ready( function($) {
 		var custom = [ '<?php echo implode( "', '", palette_schemes() ); ?>' ];
 
 		<?php
+		$colors = color_schemes();
 		foreach ( $colors as $color => $option ) :
 
 			$initial = color_scheme_initial( $option['slug'] );
+			$option_schemes = option_schemes_data();
 
-			if ( array_key_exists( $option['slug'], option_schemes_data() ) ) {
-				$option = option_scheme_initial( $option['slug'] );
-			} else {
-				$option = color_scheme_initial( $option['slug'] );
+			if ( array_key_exists( $option['slug'], $option_schemes ) ) {
+				$initial = option_scheme_initial( $option['slug'] );
 			}
 
 			$slug = $option['slug'];
@@ -881,40 +880,40 @@ jQuery(document).ready( function($) {
 			}
 
 			// Custom scheme light colors.
-			$( '#color_body' ).val( '<?php echo $option['light']['body']; ?>' );
-			$( '#color_text' ).val( '<?php echo $option['light']['text']; ?>' );
-			$( '#color_one' ).val( '<?php echo $option['light']['one']; ?>' );
-			$( '#color_two' ).val( '<?php echo $option['light']['two']; ?>' );
-			$( '#color_three' ).val( '<?php echo $option['light']['three']; ?>' );
-			$( '#color_four' ).val( '<?php echo $option['light']['four']; ?>' );
-			$( '#color_five' ).val( '<?php echo $option['light']['five']; ?>' );
-			$( '#color_six' ).val( '<?php echo $option['light']['six']; ?>' );
+			$( '#color_body' ).val( '<?php echo $initial['light']['body']; ?>' );
+			$( '#color_text' ).val( '<?php echo $initial['light']['text']; ?>' );
+			$( '#color_one' ).val( '<?php echo $initial['light']['one']; ?>' );
+			$( '#color_two' ).val( '<?php echo $initial['light']['two']; ?>' );
+			$( '#color_three' ).val( '<?php echo $initial['light']['three']; ?>' );
+			$( '#color_four' ).val( '<?php echo $initial['light']['four']; ?>' );
+			$( '#color_five' ).val( '<?php echo $initial['light']['five']; ?>' );
+			$( '#color_six' ).val( '<?php echo $initial['light']['six']; ?>' );
 
-			$( '#loader_bg_color' ).val( '<?php echo $option['light']['body']; ?>' );
-			$( '#loader_text_color' ).val( '<?php echo $option['light']['text']; ?>' );
+			$( '#loader_bg_color' ).val( '<?php echo $initial['light']['body']; ?>' );
+			$( '#loader_text_color' ).val( '<?php echo $initial['light']['text']; ?>' );
 
-			$( '#header_bg_color' ).val( '<?php echo $option['light']['body']; ?>' );
-			$( '#header_text_color' ).val( '<?php echo $option['light']['text']; ?>' );
+			$( '#header_bg_color' ).val( '<?php echo $initial['light']['body']; ?>' );
+			$( '#header_text_color' ).val( '<?php echo $initial['light']['text']; ?>' );
 
 			// Custom scheme dark colors.
-			$( '#color_body_dark' ).val( '<?php echo $option['dark']['body']; ?>' );
-			$( '#color_text_dark' ).val( '<?php echo $option['dark']['text']; ?>' );
-			$( '#color_one_dark' ).val( '<?php echo $option['dark']['one']; ?>' );
-			$( '#color_two_dark' ).val( '<?php echo $option['dark']['two']; ?>' );
-			$( '#color_three_dark' ).val( '<?php echo $option['dark']['three']; ?>' );
-			$( '#color_four_dark' ).val( '<?php echo $option['dark']['four']; ?>' );
-			$( '#color_five_dark' ).val( '<?php echo $option['dark']['five']; ?>' );
-			$( '#color_six_dark' ).val( '<?php echo $option['dark']['six']; ?>' );
+			$( '#color_body_dark' ).val( '<?php echo $initial['dark']['body']; ?>' );
+			$( '#color_text_dark' ).val( '<?php echo $initial['dark']['text']; ?>' );
+			$( '#color_one_dark' ).val( '<?php echo $initial['dark']['one']; ?>' );
+			$( '#color_two_dark' ).val( '<?php echo $initial['dark']['two']; ?>' );
+			$( '#color_three_dark' ).val( '<?php echo $initial['dark']['three']; ?>' );
+			$( '#color_four_dark' ).val( '<?php echo $initial['dark']['four']; ?>' );
+			$( '#color_five_dark' ).val( '<?php echo $initial['dark']['five']; ?>' );
+			$( '#color_six_dark' ).val( '<?php echo $initial['dark']['six']; ?>' );
 
-			$( '#loader_bg_color_dark' ).val( '<?php echo $option['dark']['body']; ?>' );
-			$( '#loader_text_color_dark' ).val( '<?php echo $option['dark']['text']; ?>' );
+			$( '#loader_bg_color_dark' ).val( '<?php echo $initial['dark']['body']; ?>' );
+			$( '#loader_text_color_dark' ).val( '<?php echo $initial['dark']['text']; ?>' );
 
-			$( '#header_bg_color_dark' ).val( '<?php echo $option['dark']['body']; ?>' );
-			$( '#header_text_color_dark' ).val( '<?php echo $option['dark']['text']; ?>' );
+			$( '#header_bg_color_dark' ).val( '<?php echo $initial['dark']['body']; ?>' );
+			$( '#header_text_color_dark' ).val( '<?php echo $initial['dark']['text']; ?>' );
 
 			// Other.
-			$( '#custom_scheme_from' ).val( scheme );
-			$( '#cover_blend' ).val( '<?php echo ( isset( $option['media'] ) ? $option['media'] : $option['light']['three'] ); ?>' );
+			$( '#custom_scheme_from' ).val( '<?php echo $slug; ?>' );
+			$( '#cover_blend' ).val( '<?php echo ( isset( $initial['media'] ) ? $initial['media'] : $initial['light']['three'] ); ?>' );
 			$( '#cover_text_color' ).val( '<?php echo plugin()->cover_text_default(); ?>' );
 
 		} else {
