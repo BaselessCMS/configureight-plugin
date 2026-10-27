@@ -251,92 +251,6 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 	<legend class="screen-reader-text"><?php lang()->p( 'Manage Color Scheme' ); ?></legend>
 
 	<div class="form-field form-group row">
-		<label class="form-label col-sm-2 col-form-label" for="load_schemes"><?php lang()->p( 'Load Color Schemes' ); ?></label>
-		<div class="col-sm-10">
-			<small class="form-text"><?php lang()->p( 'Reduce page load time by selecting only color schemes that you use. The &#39;Default&#39; and &#39;Custom Colors&#39; schemes are always loaded.' ); ?></small>
-
-				<?php
-				usort( $colors, function( $one_thing, $another ) {
-					return strcmp( $one_thing['category'], $another['category'] );
-				} );
-
-				// Category used for option groups.
-				$category = '';
-
-				foreach ( $colors as $color => $scheme ) {
-
-					if ( 'default' == $scheme['slug'] || 'custom' == $scheme['category'] ) {
-						continue;
-					}
-
-					if ( $category != $scheme['category'] ) {
-						if ( $category != '' ) {
-							echo '</div>';
-						}
-						printf(
-							'<p style="margin-top: 0.5em"><strong>%s</strong></p>',
-							ucwords( str_replace( '-', ' ', $scheme['category'] ) )
-						);
-						echo '<div class="multi-check-wrap" style="margin: 0">';
-					}
-					echo '<label for="load_schemes" class="check-label-wrap html-tooltip" data-tooltip-content="#tooltip-about-' . $scheme['slug'] . '">';
-					printf(
-						'<input class="load-schemes" type="checkbox" name="load_schemes[]" id="load_schemes" value="%s" %s> %s',
-						$scheme['slug'],
-						( is_array( plugin()->load_schemes() ) && in_array( $scheme['slug'], plugin()->load_schemes() ) ? 'checked' : '' ),
-						$scheme['name']
-					);
-					echo '</label>';
-					printf(
-						'<span style="display: none"><span id="tooltip-about-%s">%s</span></span>',
-						$scheme['slug'],
-						$scheme['about']
-					);
-
-					$category = $scheme['category'];
-				}
-				if ( $category != '' ) {
-					echo '</div>';
-				}
-				printf(
-					'<p style="margin-top: 0.5em"><strong>%s</strong></p>',
-					lang()->get( 'Build Your Own' )
-				);
-				echo '<div class="multi-check-wrap" style="margin: 0">';
-				foreach ( option_schemes_data() as $data => $key ) {
-
-					if ( 'custom' == $key['slug'] ) {
-						continue;
-					}
-					$scheme = get_color_scheme( $key['slug'] );
-
-					echo '<label for="load_schemes" class="check-label-wrap html-tooltip" data-tooltip-content="#tooltip-about-' . $scheme['slug'] . '">';
-					printf(
-						'<input class="load-schemes" type="checkbox" name="load_schemes[]" id="load_schemes" value="%s" %s> %s',
-						$scheme['slug'],
-						( is_array( plugin()->load_schemes() ) && in_array( $scheme['slug'], plugin()->load_schemes() ) ? 'checked' : '' ),
-						$scheme['name']
-					);
-					echo '</label>';
-					printf(
-						'<span style="display: none"><span id="tooltip-about-%s">%s</span></span>',
-						$scheme['slug'],
-						$scheme['about']
-					);
-				}
-				echo '</div>';
-				?>
-				<?php
-				// Never empty array.
-				printf(
-					'<label class="check-label-wrap" for="load_foobar" style="display: none !important;"><input type="checkbox" name="load_schemes[]" id="load_foobar" value="foobar" checked /> %s</label>',
-					lang()->get( 'Ignore This' )
-				);
-				?>
-		</div>
-	</div>
-
-	<div class="form-field form-group row">
 		<label class="form-label col-sm-2 col-form-label" for="color_scheme"><?php lang()->p( 'Color Scheme' ); ?></label>
 		<div class="col-sm-10">
 			<select class="form-select" id="color_scheme" name="color_scheme">
@@ -995,11 +909,7 @@ jQuery(document).ready( function($) {
 			$( '#header_text_color_dark' ).val( '<?php echo $option['dark']['text']; ?>' );
 
 			// Other.
-			if ( 'custom' == scheme ) {
-				$( '#custom_scheme_from' ).val( '<?php echo $custom_from; ?>' );
-			} else {
-				$( '#custom_scheme_from' ).val( '<?php echo $slug; ?>' );
-			}
+			$( '#custom_scheme_from' ).val( scheme );
 			$( '#cover_blend' ).val( '<?php echo ( isset( $option['media'] ) ? $option['media'] : $option['light']['three'] ); ?>' );
 			$( '#cover_text_color' ).val( '<?php echo plugin()->cover_text_default(); ?>' );
 

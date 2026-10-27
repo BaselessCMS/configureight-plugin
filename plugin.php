@@ -390,7 +390,6 @@ class configureight extends Plugin {
 			'body_img_size'          => 'auto',
 			'body_img_size_custom'   => '',
 			'body_img_attach'        => 'scroll',
-			'load_schemes'           => [ 'default', 'plain', 'custom' ],
 			'color_scheme'           => 'default',
 			'use_dark_scheme'        => false,
 			'custom_scheme_from'     => 'default',
@@ -2345,11 +2344,6 @@ class configureight extends Plugin {
 	// @return array
 	public function body_img_attach() {
 		return $this->getValue( 'body_img_attach' );
-	}
-
-	// @return array
-	public function load_schemes() {
-		return $this->getValue( 'load_schemes' );
 	}
 
 	// @return string
