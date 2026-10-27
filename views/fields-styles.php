@@ -21,6 +21,7 @@ use function CFE_Colors\{
 	option_schemes_data,
 	get_color_scheme,
 	get_palette,
+	get_color_scheme_category,
 	color_scheme_initial,
 	option_scheme_initial,
 	hex_to_rgb
@@ -279,7 +280,9 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 						$scheme['name']
 					);
 				}
-				echo '</optgroup>';
+				if ( $category != '' ) {
+					echo '</optgroup>';
+				}
 
 				// Exclude some schemes from loop.palette_schemes()
 				$exclude = array_merge( basic_schemes(), palette_schemes() );
@@ -295,9 +298,10 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 						if ( $category != '' ) {
 							echo '</optgroup>';
 						}
+						$get_cat = get_color_scheme_category( $option['category'] );
 						printf(
 							'<optgroup label="%s">',
-							ucwords( str_replace( '-', ' ', $option['category'] ) )
+							$get_cat['name']
 						);
 					}
 					if ( ! in_array( $option['slug'], $exclude ) ) {

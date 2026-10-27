@@ -217,7 +217,7 @@ function color_scheme_categories() {
 		],
 		'scope' => [
 			'slug'  => 'scope',
-			'name'  => lang()->get( 'Scope' ),
+			'name'  => lang()->get( 'Website Scope' ),
 			'about' => lang()->get( 'Color schemes for the scope of the webite\'s primary content.' )
 		]
 	];
@@ -232,6 +232,23 @@ function color_scheme_categories() {
 	];
 	$cats = array_merge( $cats, $custom );
 	return $cats;
+}
+
+/**
+ * Get color scheme category
+ *
+ * @since  1.0.0
+ * @param  string $key
+ * @return mixed
+ */
+function get_color_scheme_category( $key = '' ) {
+
+	$categories = color_scheme_categories();
+
+	if ( array_key_exists( $key, $categories ) ) {
+		return $categories[$key];
+	}
+	return false;
 }
 
 /**
@@ -1513,7 +1530,7 @@ function color_schemes_data() {
 		'edo-01' => [
 			'slug'     => 'edo-01',
 			'name'     => lang()->get( 'Bitter Orange & Navy' ),
-			'about'    => lang()->get( 'From the Edo era. Daidai is the bitter orange used in New Year decoration. Kon is the darkest grade of indigo, Hanada is a mid-tone indigo. Gofun, a chalk white made from ground oyster shell, is the traditional gesso of Japanese painting.' ),
+			'about'    => lang()->get( 'Daidai is the bitter orange used in New Year decoration. Kon is the darkest grade of indigo, Hanada is a mid-tone indigo. Gofun, a chalk white made from ground oyster shell, is the traditional gesso of Japanese painting.' ),
 			'category' => 'rising-sun',
 			'media'    => '#f28c28',
 			'light' => [
@@ -1540,7 +1557,7 @@ function color_schemes_data() {
 		'edo-02' => [
 			'slug'     => 'edo-02',
 			'name'     => lang()->get( 'Kerria Gold & Chestnut' ),
-			'about'    => lang()->get( 'From the Edo era. Yamabuki is the saturated gold of the Kerria rose in bloom. Kuri-iro is the rich brown of roasted chestnuts. Kinari is the natural color of undyed hemp and silk.' ),
+			'about'    => lang()->get( 'Yamabuki is the saturated gold of the Kerria rose in bloom. Kuri-iro is the rich brown of roasted chestnuts. Kinari is the natural color of undyed hemp and silk.' ),
 			'category' => 'rising-sun',
 			'media'    => '#f5b71c',
 			'light' => [
@@ -1567,7 +1584,7 @@ function color_schemes_data() {
 		'edo-03' => [
 			'slug'     => 'edo-03',
 			'name'     => lang()->get( 'Pale Cherry & Tea' ),
-			'about'    => lang()->get( 'From the Edo era. Usubeni is the pink of lightly faded cherry petals. Cha-iro is the brown of roasted tea leaves. Kinari is the natural color of undyed hemp and silk.' ),
+			'about'    => lang()->get( 'Usubeni is the pink of lightly faded cherry petals. Cha-iro is the brown of roasted tea leaves. Kinari is the natural color of undyed hemp and silk.' ),
 			'category' => 'rising-sun',
 			'media'    => '#d19494',
 			'light' => [
@@ -1594,7 +1611,7 @@ function color_schemes_data() {
 		'heian-01' => [
 			'slug'     => 'heian-01',
 			'name'     => lang()->get( 'Crimson Safflower & Navy' ),
-			'about'    => lang()->get( 'From the Heian era. Kurenai, the crimson drawn from safflower petals, was a luxury dye reserved for the robes of high-ranking courtiers. Set against Kon, the darkest grade of indigo, the pair became a signature of formal attire from the Heian court through to Edo merchant households. Gofun is the matte white of temple painting; it reads as devotional, timeless, and unmistakably sacred.' ),
+			'about'    => lang()->get( 'Kurenai, the crimson drawn from safflower petals, was a luxury dye reserved for the robes of high-ranking courtiers. Set against Kon, the darkest grade of indigo, the pair became a signature of formal attire from the Heian court through to Edo merchant households. Gofun is the matte white of temple painting; it reads as devotional, timeless, and unmistakably sacred.' ),
 			'category' => 'rising-sun',
 			'overall'  => lang()->get( 'Sanzo Wada (1883 - 1967) was a Japanese artist & costume designer who published <em>A Dictionary of Color Combinations</em> in two volumes (1933 - 1934) in order to document Japanese color tastes.' ),
 			'media'    => '#9a2a2a',
@@ -1622,7 +1639,7 @@ function color_schemes_data() {
 		'heian-02' => [
 			'slug'     => 'heian-02',
 			'name'     => lang()->get( 'Dianthus & Water' ),
-			'about'    => lang()->get( 'From the Heian era. Nadeshiko, the fringed pink Dianthus flower, was the standard metaphor for Japanese feminine ideals in classical poetry. Mizu-iro, water color, is the blue of a cold spring seen through ferns. Kinari is the natural color of undyed hemp and silk.' ),
+			'about'    => lang()->get( 'Nadeshiko, the fringed pink Dianthus flower, was the standard metaphor for Japanese feminine ideals in classical poetry. Mizu-iro, water color, is the blue of a cold spring seen through ferns. Kinari is the natural color of undyed hemp and silk.' ),
 			'category' => 'rising-sun',
 			'media'    => '#f69bae',
 			'light' => [
@@ -1649,7 +1666,7 @@ function color_schemes_data() {
 		'heian-03' => [
 			'slug'     => 'heian-03',
 			'name'     => lang()->get( 'Wisteria & Indigo' ),
-			'about'    => lang()->get( 'From the Heian era. Fuji-iro, wisteria purple, is a light, cool lavender drawn from the pendulous flowers of the Fuji vine. Ai, true indigo, grounds it with depth. The pair is a signature of early summer gardens. The pair is a signature of early summer gardens. Gofun is the matte white of temple painting; it reads as devotional, timeless, and unmistakably sacred.' ),
+			'about'    => lang()->get( 'Fuji-iro, wisteria purple, is a light, cool lavender drawn from the pendulous flowers of the Fuji vine. Ai, true indigo, grounds it with depth. The pair is a signature of early summer gardens. The pair is a signature of early summer gardens. Gofun is the matte white of temple painting; it reads as devotional, timeless, and unmistakably sacred.' ),
 			'category' => 'rising-sun',
 			'media'    => '#b398d7',
 			'light' => [
@@ -1676,7 +1693,7 @@ function color_schemes_data() {
 		'heian-04' => [
 			'slug'     => 'heian-04',
 			'name'     => lang()->get( 'Teal Green & Ink' ),
-			'about'    => lang()->get( 'From the Heian era. Ao ranged from blue to green in classical Japanese, what we call teal. Shiro is pure white. Sumi is the black of stick ink ground on a slate inkstone.' ),
+			'about'    => lang()->get( 'Ao ranged from blue to green in classical Japanese, what we call teal. Shiro is pure white. Sumi is the black of stick ink ground on a slate inkstone.' ),
 			'category' => 'rising-sun',
 			'media'    => '#3a7d7b',
 			'light' => [
@@ -1703,7 +1720,7 @@ function color_schemes_data() {
 		'heian-05' => [
 			'slug'     => 'heian-05',
 			'name'     => lang()->get( 'Valerian Petals & Sky' ),
-			'about'    => lang()->get( 'From the Heian era. Ominaeshi, one of the seven autumn plants, has tiny pale-yellow flowers that cluster in late summer fields. Asagi is the pale green-blue of young leek shoots, used here as the summer sky. Kinari is the natural color of undyed hemp and silk.' ),
+			'about'    => lang()->get( 'Ominaeshi, one of the seven autumn plants, has tiny pale-yellow flowers that cluster in late summer fields. Asagi is the pale green-blue of young leek shoots, used here as the summer sky. Kinari is the natural color of undyed hemp and silk.' ),
 			'category' => 'rising-sun',
 			'media'    => '#88b9c4',
 			'light' => [
@@ -1730,7 +1747,7 @@ function color_schemes_data() {
 		'kamakura-01' => [
 			'slug'     => 'kamakura-01',
 			'name'     => lang()->get( 'Lapis Lazuli & Gold' ),
-			'about'    => lang()->get( 'From the Kamakura era. Gunjō is ground lapis lazuli, the blue of Buddhist statuary hair and illuminated sutras. Kogane is the color of gold leaf. Gofun, a chalk white made from ground oyster shell, is the traditional gesso of Japanese painting.' ),
+			'about'    => lang()->get( 'Gunjō is ground lapis lazuli, the blue of Buddhist statuary hair and illuminated sutras. Kogane is the color of gold leaf. Gofun, a chalk white made from ground oyster shell, is the traditional gesso of Japanese painting.' ),
 			'category' => 'rising-sun',
 			'media'    => '#264a6b',
 			'light' => [
@@ -1757,7 +1774,7 @@ function color_schemes_data() {
 		'kamakura-02' => [
 			'slug'     => 'kamakura-02',
 			'name'     => lang()->get( 'Spring Green & Ink' ),
-			'about'    => lang()->get( 'From the Kamakura era. Moegi is the yellow-green of new shoots pushing through earth in early spring. Sumi is the black of stick ink ground on a slate inkstone. Kinari is the natural color of undyed hemp and silk.' ),
+			'about'    => lang()->get( 'Moegi is the yellow-green of new shoots pushing through earth in early spring. Sumi is the black of stick ink ground on a slate inkstone. Kinari is the natural color of undyed hemp and silk.' ),
 			'category' => 'rising-sun',
 			'media'    => '#a7c957',
 			'light' => [
@@ -1784,7 +1801,7 @@ function color_schemes_data() {
 		'kamakura-03' => [
 			'slug'     => 'kamakura-03',
 			'name'     => lang()->get( 'Cinnabar & Gold' ),
-			'about'    => lang()->get( 'From the Kamakura era. This is the imperial and Buddhist ceremonial combination, found on lacquer boxes, shrine architecture, and festival floats. Shu, the bright orange-red of cinnabar, is for protection. Kuro, similar to India ink, is for ground. Kin, the color of gold, is for transcendence.' ),
+			'about'    => lang()->get( 'This is the imperial and Buddhist ceremonial combination, found on lacquer boxes, shrine architecture, and festival floats. Shu, the bright orange-red of cinnabar, is for protection. Kuro, similar to India ink, is for ground. Kin, the color of gold, is for transcendence.' ),
 			'category' => 'rising-sun',
 			'media'    => '#c8352b',
 			'light' => [
@@ -1811,7 +1828,7 @@ function color_schemes_data() {
 		'muromachi-01' => [
 			'slug'     => 'muromachi-01',
 			'name'     => lang()->get( 'Dry Grass & Olive' ),
-			'about'    => lang()->get( 'From the Muromachi era. Kariyasu, an earthy yellow, represents wild mountain grass. Rikyū-nezumi, an olive-tinted grey, is named for a 16th-century tea master. Neri-iro is silk white.' ),
+			'about'    => lang()->get( 'Kariyasu, an earthy yellow, represents wild mountain grass. Rikyū-nezumi, an olive-tinted grey, is named for a 16th-century tea master. Neri-iro is silk white.' ),
 			'category' => 'rising-sun',
 			'media'    => '#dccb7a',
 			'light' => [
@@ -1838,7 +1855,7 @@ function color_schemes_data() {
 		'muromachi-02' => [
 			'slug'     => 'muromachi-02',
 			'name'     => lang()->get( 'Celadon & Pine' ),
-			'about'    => lang()->get( 'From the Muromachi era. Seiji is the blue-green glaze of Longquan and Arita celadons. Matsuba is the dark green of pine needles. Kinari is the natural color of undyed hemp and silk.' ),
+			'about'    => lang()->get( 'Seiji is the blue-green glaze of Longquan and Arita celadons. Matsuba is the dark green of pine needles. Kinari is the natural color of undyed hemp and silk.' ),
 			'category' => 'rising-sun',
 			'media'    => '#8db6a5',
 			'light' => [
@@ -1865,7 +1882,7 @@ function color_schemes_data() {
 		'muromachi-03' => [
 			'slug'     => 'muromachi-03',
 			'name'     => lang()->get( 'Matcha & Black Tea' ),
-			'about'    => lang()->get( 'From the Muromachi era. Matcha-iro is the yellow-green of Matcha powdered tea. Cha is the brown of black tea. Gofun, a chalk white made from ground oyster shell, is the traditional gesso of Japanese painting.' ),
+			'about'    => lang()->get( 'Matcha-iro is the yellow-green of Matcha powdered tea. Cha is the brown of black tea. Gofun, a chalk white made from ground oyster shell, is the traditional gesso of Japanese painting.' ),
 			'category' => 'rising-sun',
 			'media'    => '#a7b86b',
 			'light' => [
@@ -1892,7 +1909,7 @@ function color_schemes_data() {
 		'muromachi-04' => [
 			'slug'     => 'muromachi-04',
 			'name'     => lang()->get( 'Traditional Farmhouse' ),
-			'about'    => lang()->get( 'From the Muromachi era. Kogecha is the near-black brown of cedar scorched for weatherproofing (yakisugi). Kakishibu is named Persimmon-tanned. Kinari is the natural color of undyed hemp and silk. Together they compose the traditional Japanese farmhouse: dark timber posts, pale paper walls.' ),
+			'about'    => lang()->get( 'Kogecha is the near-black brown of cedar scorched for weatherproofing (yakisugi). Kakishibu is named Persimmon-tanned. Kinari is the natural color of undyed hemp and silk. Together they compose the traditional Japanese farmhouse: dark timber posts, pale paper walls.' ),
 			'category' => 'rising-sun',
 			'media'    => '#8a6a47',
 			'light' => [
