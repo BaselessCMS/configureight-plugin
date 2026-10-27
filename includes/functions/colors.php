@@ -2331,7 +2331,7 @@ function picker_colors_dark() {
 function picker_colors_extra() {
 
 	$current = current_color_scheme();
-	$current = option_scheme_initial( $current['slug'] );
+	$current = color_scheme_initial( $current['slug'] );
 	$extra   = [];
 
 	if ( ! isset( $current['extra'] ) ) {
