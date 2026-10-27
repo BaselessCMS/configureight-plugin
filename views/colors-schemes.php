@@ -15,6 +15,7 @@ use function CFE_Plugin\{
 };
 use function CFE_Colors\{
 	color_schemes,
+	color_schemes_data,
 	option_schemes_data,
 	get_color_scheme,
 	current_color_scheme,
@@ -24,7 +25,7 @@ use function CFE_Colors\{
 	hex_to_rgb
 };
 
-$schemes = color_schemes();
+$schemes = color_schemes_data();
 $current = current_color_scheme();
 
 ?>
