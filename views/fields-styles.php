@@ -21,6 +21,7 @@ use function CFE_Colors\{
 	option_schemes_data,
 	get_color_scheme,
 	get_palette,
+	color_scheme_initial,
 	option_scheme_initial,
 	hex_to_rgb
 };
@@ -337,6 +338,8 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 			<ul class="form-color-thumbs-list">
 			<?php foreach ( $colors as $color => $option ) {
 
+				$initial = color_scheme_initial( $option['slug'] );
+
 				if ( ! array_key_exists( plugin()->color_scheme(), option_schemes_data() ) && plugin()->color_scheme() === $option['slug'] ) {
 					$display = 'flex';
 				} else {
@@ -363,7 +366,7 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 					$display
 				);
 				$count = 0;
-				foreach ( $option['light'] as $thumb ) {
+				foreach ( $initial['light'] as $thumb ) {
 					$count++;
 					if ( ! empty( $thumb ) ) {
 						printf(
@@ -390,7 +393,7 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 					$display
 				);
 				$count = 0;
-				foreach ( $option['dark'] as $thumb ) {
+				foreach ( $initial['dark'] as $thumb ) {
 					$count++;
 					if ( ! empty( $thumb ) ) {
 						printf(
@@ -850,13 +853,14 @@ jQuery(document).ready( function($) {
 		var custom = [ '<?php echo implode( "', '", palette_schemes() ); ?>' ];
 
 		<?php
-		$data = option_schemes_data();
 		foreach ( $colors as $color => $option ) :
 
-			if ( array_key_exists( $option['slug'], $data ) ) {
+			$initial = color_scheme_initial( $option['slug'] );
+
+			if ( array_key_exists( $option['slug'], option_schemes_data() ) ) {
 				$option = option_scheme_initial( $option['slug'] );
 			} else {
-				$option = $option;
+				$option = color_scheme_initial( $option['slug'] );
 			}
 
 			$slug = $option['slug'];

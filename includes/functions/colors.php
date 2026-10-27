@@ -698,6 +698,13 @@ function option_schemes_data() {
 	return $schemes;
 }
 
+/**
+ * Option scheme initial colors
+ *
+ * @since  1.0.0
+ * @param  string $key
+ * @return array Returns an array of colors.
+ */
 function option_scheme_initial( $key ) {
 
 	$data = option_schemes_data();
@@ -828,10 +835,10 @@ function build_custom_schemes() {
  * @since  1.0.0
  * @return string
  */
-function custom_schemes_heading() {
+function custom_scheme_heading() {
 
 	$current = plugin()->color_scheme();
-	$data    = option_schemes_data();
+	$data    = color_schemes();
 	$heading = lang()->get( 'Custom Colors' );
 
 	foreach ( $data as $key => $scheme ) {
@@ -839,7 +846,16 @@ function custom_schemes_heading() {
 			continue;
 		}
 		if ( isset( $scheme['name'] ) ) {
-			$heading = $scheme['name'];
+			if ( in_array( $scheme['slug'], palette_schemes() ) ) {
+				$heading = $scheme['name'];
+			} else {
+				$heading = sprintf(
+					'%s %s %s',
+					lang()->get( 'Custom' ),
+					$scheme['name'],
+					lang()->get( 'Colors' )
+				);
+			}
 		}
 	}
 	return $heading;
@@ -1959,11 +1975,34 @@ function build_color_schemes() {
 	return $schemes;
 }
 
+/**
+ * Color schemes
+ *
+ * @since  1.0.0
+ * @return array
+ */
 function color_schemes() {
 	$schemes = [];
 	$schemes = array_merge( build_color_schemes(), $schemes );
 	$schemes = array_merge( build_custom_schemes(), $schemes );
 	return $schemes;
+}
+
+/**
+ * Color scheme initial colors
+ *
+ * @since  1.0.0
+ * @param  string $key
+ * @return array Returns an array of colors.
+ */
+function color_scheme_initial( $key ) {
+
+	$data = color_schemes_data();
+	if ( array_key_exists( $key, $data ) ) {
+		return $data[$key];
+	} else {
+		return get_color_scheme( 'plain' );
+	}
 }
 
 /**

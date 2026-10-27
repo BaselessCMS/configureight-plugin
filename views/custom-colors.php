@@ -16,26 +16,29 @@ use function CFE_Plugin\{
 };
 use function CFE_Colors\{
 	color_schemes,
+	color_schemes_data,
 	option_schemes_data,
 	palette_schemes,
 	get_palette,
-	custom_schemes_heading,
+	custom_scheme_heading,
 	hex_to_rgb,
 	picker_class
 };
 
+$colors = color_schemes_data();
+
 ?>
 <div id="custom_color_scheme_fields">
 
-	<h3 class="form-heading"><?php echo custom_schemes_heading(); ?></h3>
+	<h3 class="form-heading"><?php echo custom_scheme_heading(); ?></h3>
 
 	<?php if ( in_array( plugin()->color_scheme(), palette_schemes() ) ) : ?>
 
-	<p><?php lang()->p( "The default/reset colors originate from the {$colors[$custom_from]['name']} palette." ); ?></p>
+	<p><?php lang()->p( 'Set color options using the current color palette.' ); ?></p>
 
 	<?php else : ?>
 
-	<p><?php lang()->p( "The default/reset colors originate from the previously set theme: <strong>{$colors[$custom_from]['name']}</strong>." ); ?></p>
+	<p><?php lang()->p( 'Customize the current color scheme.' ); ?></p>
 
 	<?php endif; ?>
 
