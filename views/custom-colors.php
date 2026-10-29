@@ -71,7 +71,7 @@ if ( in_array( $custom_from, palette_schemes() ) ) {
 				<label class="form-label col-sm-2 col-form-label" for="color_body"><?php lang()->p( 'Body Color' ); ?></label>
 				<div class="col-sm-10">
 					<div class="row color-picker-wrap">
-						<input class="color-picker <?php echo picker_class( true ); ?>" id="color_body" name="color_body" value="<?php echo plugin()->color_body(); ?>" />
+						<input class="color-picker <?php echo picker_class(); ?>" id="color_body" name="color_body" value="<?php echo plugin()->color_body(); ?>" />
 						<input id="color_body_default" class="screen-reader-text" type="hidden" value="<?php echo $colors['light']['body']; ?>" />
 						<span class="btn btn-secondary btn-md hide-if-no-js" id="color_body_default_button"><?php lang()->p( 'Reset' ); ?></span>
 					</div>
@@ -172,7 +172,7 @@ if ( in_array( $custom_from, palette_schemes() ) ) {
 				<label class="form-label col-sm-2 col-form-label" for="color_body_dark"><?php lang()->p( 'Dark Body Color' ); ?></label>
 				<div class="col-sm-10">
 					<div class="row color-picker-wrap">
-						<input class="color-picker <?php echo picker_class( true ); ?>" id="color_body_dark" name="color_body_dark" value="<?php echo plugin()->color_body_dark(); ?>" />
+						<input class="color-picker <?php echo picker_class(); ?>" id="color_body_dark" name="color_body_dark" value="<?php echo plugin()->color_body_dark(); ?>" />
 						<input id="color_body_dark_default" class="screen-reader-text" type="hidden" value="<?php echo $colors['dark']['body']; ?>" />
 						<span class="btn btn-secondary btn-md hide-if-no-js" id="color_body_dark_default_button"><?php lang()->p( 'Reset' ); ?></span>
 					</div>
