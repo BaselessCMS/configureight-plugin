@@ -148,6 +148,7 @@
 	"neutral" : {
 		"label": "Sanzo Wada Light",
 		"rice": "#fefdfb",
+		"bleached-natural": "#fbf8f2",
 		"unbleached-natural": "#f8f4e9",
 		"chalk-white": "#f4eee0",
 		"silk-white": "#f3ebda",

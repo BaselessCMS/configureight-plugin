@@ -1886,7 +1886,7 @@ function color_schemes_data() {
 			'category' => 'rising-sun',
 			'media'    => '#a7b86b',
 			'light' => [
-				'body'  => '#f8f4e9',
+				'body'  => '#fbf8f2',
 				'text'  => '#2b2418',
 				'one'   => '#6c5a3c',
 				'two'   => '#a7b86b',
@@ -1897,7 +1897,7 @@ function color_schemes_data() {
 			],
 			'dark' => [
 				'body'  => '#2b2418',
-				'text'  => '#f8f4e9',
+				'text'  => '#fbf8f2',
 				'one'   => '#a7b86b',
 				'two'   => '#f8f4e9',
 				'three' => '#a7b86b',
