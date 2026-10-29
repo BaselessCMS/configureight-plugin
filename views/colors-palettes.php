@@ -25,8 +25,10 @@ use function CFE_Colors\{
 
 <p><a href="#palettes-list"><?php lang()->p( 'Jump to palettes list &darr;' ); ?></a></p>
 
-<p><?php lang()->p( 'The color scheme option includes many color palettes from which to choose, under the Build You Own category. These color palettes are from various UI kits and design systems which offer their color palettes for free. The majority of the color palettes are quite similar to one another. They are offered for those who may have a favorite palette.' ); ?></p>
-<p><?php lang()->p( 'Two of the palettes, Bootstrap UI and Pantone Colors of the Year, have been expanded from single colors to include tints and shades. The Sanzo Wada and CSS Names palettes do not include tints and shades.' ); ?></p>
+<p><?php lang()->p( 'The color scheme option includes many color palettes from which to choose, under the Build You Own category. These color palettes are from various UI kits and design systems which offer their color palettes for free, plus one developed for the Configure 8 theme. The majority of the color palettes are quite similar to one another. They are offered for those who may have a favorite palette.' ); ?></p>
+
+<p><?php lang()->p( 'Most palettes include tints and shades from the source. Two of the palettes, Bootstrap UI and Pantone Colors of the Year, have been expanded from single colors to include tints and shades. The Sanzo Wada and CSS Names palettes do not include tints and shades.' ); ?></p>
+
 <p><?php lang()->p( 'When a palette is selected in the color scheme option, only colors from that palette, plus a standard grayscale, are available in the various color picker fields. But the color fields will accept a different color pasted from this reference, so colors from various palettes may be mixed in that manner.' ); ?></p>
 
 <?php

@@ -260,8 +260,7 @@ function get_color_scheme_category( $key = '' ) {
 function basic_schemes() {
 	return [
 		'default',
-		'dark',
-		'plain'
+		'dark'
 	];
 }
 
@@ -278,6 +277,32 @@ function basic_schemes() {
  */
 function option_schemes_data() {
 	$schemes = [
+		'theme' => [
+			'slug'  => 'theme',
+			'name'  => lang()->get( 'Configure 8 Colors' ),
+			'about' => lang()->get( 'A color palette developed for the Configure 8 theme. Tints and shades are derived from the 7th color in the spectrum, colors with identical RGB pairs in the hex code (e.g. #0044dd).' ),
+			'media' => '#0044dd',
+			'light' => [
+				'body'  => '#ffffff',
+				'text'  => '#262626',
+				'one'   => '#0044dd',
+				'two'   => '#4073e6',
+				'three' => '#0044dd',
+				'four'  => '#4073e6',
+				'five'  => '#0044dd',
+				'six'   => '#4073e6'
+			],
+			'dark' => [
+				'body'  => '#161616',
+				'text'  => '#ffffff',
+				'one'   => '#4073e6',
+				'two'   => '#0044dd',
+				'three' => '#4073e6',
+				'four'  => '#0044dd',
+				'five'  => '#0044dd',
+				'six'   => '#4073e6'
+			]
+		],
 		'ant-design' => [
 			'slug'  => 'ant-design',
 			'name'  => lang()->get( 'Ant Design Colors' ),
@@ -728,7 +753,7 @@ function option_scheme_initial( $key ) {
 	if ( array_key_exists( $key, $data ) ) {
 		return $data[$key];
 	} else {
-		return get_color_scheme( 'plain' );
+		return get_color_scheme( 'default' );
 	}
 }
 
@@ -898,26 +923,26 @@ function color_schemes_data() {
 			'name'     => lang()->get( 'Default' ),
 			'about'    => lang()->get( 'The theme\'s default color scheme that is active when the theme & plugin are first activated. It is also used if the theme plugin is not installed. Additional colors are available for customization in the color pickers.' ),
 			'category' => 'basic',
-			'media'    => '#0044aa',
+			'media'    => '#0044dd',
 			'light' => [
 				'body'  => '#ffffff',
-				'text'  => '#333333',
-				'one'   => '#0044ff',
-				'two'   => '#0044aa',
-				'three' => '#0044aa',
-				'four'  => '#0044ff',
-				'five'  => '#0044aa',
-				'six'   => '#0044ff'
+				'text'  => '#262626',
+				'one'   => '#0044dd',
+				'two'   => '#4073e6',
+				'three' => '#0044dd',
+				'four'  => '#4073e6',
+				'five'  => '#0044dd',
+				'six'   => '#4073e6'
 			],
 			'dark' => [
-				'body'  => '#1e1e1e',
+				'body'  => '#161616',
 				'text'  => '#ffffff',
-				'one'   => '#0044ff',
-				'two'   => '#0044cc',
-				'three' => '#0044ff',
-				'four'  => '#0044cc',
-				'five'  => '#0044aa',
-				'six'   => '#0044ff'
+				'one'   => '#4073e6',
+				'two'   => '#0044dd',
+				'three' => '#4073e6',
+				'four'  => '#0044dd',
+				'five'  => '#0044dd',
+				'six'   => '#4073e6'
 			],
 			'extra' => [
 				'red'    => '#dd0000',
@@ -928,11 +953,15 @@ function color_schemes_data() {
 				'green'  => '#00bb00',
 				'teal'   => '#00ddaa',
 				'cyan'   => '#00ccee',
-				'blue'   => '#0044ee',
+				'blue'   => '#0044dd',
 				'indigo' => '#7700ee',
 				'violet' => '#7711bb',
 				'purple' => '#cc00aa',
-				'pink'   => '#ff55dd'
+				'pink'   => '#ff55dd',
+				'camel'  => '#cc9966',
+				'brown'  => '#996600',
+				'olive'  => '#999966',
+				'khaki'  => '#cccc99'
 			]
 		],
 		'dark' => [
@@ -942,24 +971,24 @@ function color_schemes_data() {
 			'category' => 'basic',
 			'media'    => '#0044aa',
 			'light' => [
-				'body'  => '#1e1e1e',
+				'body'  => '#161616',
 				'text'  => '#ffffff',
-				'one'   => '#0044ff',
-				'two'   => '#0044cc',
-				'three' => '#0044ff',
-				'four'  => '#0044cc',
-				'five'  => '#0044aa',
-				'six'   => '#0044ff'
+				'one'   => '#4073e6',
+				'two'   => '#0044dd',
+				'three' => '#4073e6',
+				'four'  => '#0044dd',
+				'five'  => '#0044dd',
+				'six'   => '#4073e6'
 			],
 			'dark' => [
-				'body'  => '#1e1e1e',
+				'body'  => '#161616',
 				'text'  => '#ffffff',
-				'one'   => '#0044ff',
-				'two'   => '#0044cc',
-				'three' => '#0044ff',
-				'four'  => '#0044cc',
-				'five'  => '#0044aa',
-				'six'   => '#0044ff'
+				'one'   => '#4073e6',
+				'two'   => '#0044dd',
+				'three' => '#4073e6',
+				'four'  => '#0044dd',
+				'five'  => '#0044dd',
+				'six'   => '#4073e6'
 			],
 			'extra' => [
 				'red'    => '#dd0000',
@@ -970,38 +999,11 @@ function color_schemes_data() {
 				'green'  => '#00bb00',
 				'teal'   => '#00ddaa',
 				'cyan'   => '#00ccee',
-				'blue'   => '#0044ee',
+				'blue'   => '#0044dd',
 				'indigo' => '#7700ee',
 				'violet' => '#7711bb',
 				'purple' => '#cc00aa',
 				'pink'   => '#ff55dd'
-			]
-		],
-		'plain' => [
-			'slug'     => 'plain',
-			'name'     => lang()->get( 'Plain' ),
-			'about'    => lang()->get( 'A colorless scheme to save before using one of the "Build Your Own" schemes. This sets the default/reset colors in the grayscale.' ),
-			'category' => 'basic',
-			'media'    => '#8d8d8d',
-			'light' => [
-				'body'  => '#ffffff',
-				'text'  => '#262626',
-				'one'   => '#393939',
-				'two'   => '#6f6f6f',
-				'three' => '#6f6f6f',
-				'four'  => '#393939',
-				'five'  => '#525252',
-				'six'   => '#8d8d8d'
-			],
-			'dark' => [
-				'body'  => '#1e1e1e',
-				'text'  => '#ffffff',
-				'one'   => '#a8a8a8',
-				'two'   => '#8d8d8d',
-				'three' => '#6f6f6f',
-				'four'  => '#525252',
-				'five'  => '#525252',
-				'six'   => '#8d8d8d'
 			]
 		],
 
@@ -2018,7 +2020,7 @@ function color_scheme_initial( $key ) {
 	if ( array_key_exists( $key, $data ) ) {
 		return $data[$key];
 	} else {
-		return get_color_scheme( 'plain' );
+		return get_color_scheme( 'default' );
 	}
 }
 

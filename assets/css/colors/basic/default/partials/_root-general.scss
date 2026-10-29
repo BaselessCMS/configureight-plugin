@@ -18,4 +18,55 @@
 	@each $name, $color in c.$dark {
 		--cfe-scheme-color--#{$name}--dark: #{$color};
 	}
+	@each $name, $color in c.$red_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$orange_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$amber_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$yellow_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$lime_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$green_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$teal_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$cyan_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$blue_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$indigo_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$violet_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$purple_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$pink_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$camel_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$brown_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$olive_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$khaki_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
 }
