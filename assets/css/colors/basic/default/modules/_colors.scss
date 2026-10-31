@@ -38,8 +38,6 @@ $olive:     #999966 !default;
 $sage:      #99bb99 !default;
 $slate:     #aaaabb !default;
 $mauve:     #ccaabb !default;
-$vanilla:   #ffffcc !default;
-$chocolate: #663300 !default;
 
 $media: $blue;
 
@@ -965,60 +963,4 @@ $mauve_map: (
 	'mauve-1000' : $mauve-1000,
 	'mauve-1100' : $mauve-1100,
 	'mauve-1200' : $mauve-1200
-) !default;
-
-$vanilla-100:  f.lighten( $vanilla, 95% ) !default;
-$vanilla-200:  f.lighten( $vanilla, 90% ) !default;
-$vanilla-300:  f.lighten( $vanilla, 85% ) !default;
-$vanilla-400:  f.lighten( $vanilla, 80% ) !default;
-$vanilla-500:  f.lighten( $vanilla, 70% ) !default;
-$vanilla-600:  f.lighten( $vanilla, 60% ) !default;
-$vanilla-700:  f.lighten( $vanilla, 50% ) !default;
-$vanilla-800:  f.lighten( $vanilla, 40% ) !default;
-$vanilla-900:  f.lighten( $vanilla, 30% ) !default;
-$vanilla-1000:  f.lighten( $vanilla, 20% ) !default;
-$vanilla-1100:  f.lighten( $vanilla, 10% ) !default;
-$vanilla-1200:  $vanilla !default;
-
-$vanilla_map: (
-	'vanilla-100'  : $vanilla-100,
-	'vanilla-200'  : $vanilla-200,
-	'vanilla-300'  : $vanilla-300,
-	'vanilla-400'  : $vanilla-400,
-	'vanilla-500'  : $vanilla-500,
-	'vanilla-600'  : $vanilla-600,
-	'vanilla-700'  : $vanilla-700,
-	'vanilla-800'  : $vanilla-800,
-	'vanilla-900'  : $vanilla-900,
-	'vanilla-1000' : $vanilla-1000,
-	'vanilla-1100' : $vanilla-1100,
-	'vanilla-1200' : $vanilla-1200
-) !default;
-
-$chocolate-100:  f.lighten( $chocolate, 55% ) !default;
-$chocolate-200:  f.lighten( $chocolate, 45% ) !default;
-$chocolate-300:  f.lighten( $chocolate, 40% ) !default;
-$chocolate-400:  f.lighten( $chocolate, 30% ) !default;
-$chocolate-500:  f.lighten( $chocolate, 20% ) !default;
-$chocolate-600:  f.lighten( $chocolate, 10% ) !default;
-$chocolate-700:  f.lighten( $chocolate, 5% ) !default;
-$chocolate-800:  $chocolate !default;
-$chocolate-900:  f.darken( $chocolate, 15% ) !default;
-$chocolate-1000:  f.darken( $chocolate, 30% ) !default;
-$chocolate-1100: f.darken( $chocolate, 45% ) !default;
-$chocolate-1200: f.darken( $chocolate, 60% ) !default;
-
-$chocolate_map: (
-	'chocolate-100'  : $chocolate-100,
-	'chocolate-200'  : $chocolate-200,
-	'chocolate-300'  : $chocolate-300,
-	'chocolate-400'  : $chocolate-400,
-	'chocolate-500'  : $chocolate-500,
-	'chocolate-600'  : $chocolate-600,
-	'chocolate-700'  : $chocolate-700,
-	'chocolate-800'  : $chocolate-800,
-	'chocolate-900'  : $chocolate-900,
-	'chocolate-1000' : $chocolate-1000,
-	'chocolate-1100' : $chocolate-1100,
-	'chocolate-1200' : $chocolate-1200
 ) !default;
