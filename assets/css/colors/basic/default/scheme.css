@@ -1,6 +1,6 @@
 :host,
 :root {
-  --cfe-cover-blend--bg-color: #0044aa;
+  --cfe-cover-blend--bg-color: #0044dd;
   --cfe-scheme-default--body: #ffffff;
   --cfe-scheme-default--text: #333333;
   --cfe-scheme-default--one: #0044ff;
@@ -17,19 +17,37 @@
   --cfe-scheme-default--four--dark: #0044cc;
   --cfe-scheme-default--five--dark: #0044aa;
   --cfe-scheme-default--six--dark: #0044ff;
-  --cfe-scheme-default--red: #dd0000;
+  --cfe-scheme-default--red: #ee0000;
   --cfe-scheme-default--orange: #ee6600;
   --cfe-scheme-default--amber: #ffcc44;
-  --cfe-scheme-default--yellow: #ffdd00;
+  --cfe-scheme-default--yellow: #ffee00;
   --cfe-scheme-default--lime: #00ee00;
   --cfe-scheme-default--green: #00bb00;
   --cfe-scheme-default--teal: #00ddaa;
   --cfe-scheme-default--cyan: #00ccee;
-  --cfe-scheme-default--blue: #0044ee;
-  --cfe-scheme-default--indigo: #7700ee;
+  --cfe-scheme-default--blue: #0044dd;
+  --cfe-scheme-default--indigo: #7800ee;
   --cfe-scheme-default--violet: #7711bb;
   --cfe-scheme-default--purple: #cc00aa;
   --cfe-scheme-default--pink: #ff55dd;
+  --cfe-scheme-default--coral: #ff6666;
+  --cfe-scheme-default--salmon: #ff9966;
+  --cfe-scheme-default--peach: #ffcc99;
+  --cfe-scheme-default--lemon: #ffff99;
+  --cfe-scheme-default--mint: #aaffaa;
+  --cfe-scheme-default--aqua: #88ffee;
+  --cfe-scheme-default--sky: #99ccff;
+  --cfe-scheme-default--lavender: #ccbbff;
+  --cfe-scheme-default--rose: #ffaacc;
+  --cfe-scheme-default--brick: #cc6666;
+  --cfe-scheme-default--camel: #cc9966;
+  --cfe-scheme-default--brown: #996600;
+  --cfe-scheme-default--tan: #ccbb66;
+  --cfe-scheme-default--khaki: #cccc99;
+  --cfe-scheme-default--olive: #999966;
+  --cfe-scheme-default--sage: #99bb99;
+  --cfe-scheme-default--slate: #aaaabb;
+  --cfe-scheme-default--mauve: #ccaabb;
 }
 
 .cfe-default.default-body {

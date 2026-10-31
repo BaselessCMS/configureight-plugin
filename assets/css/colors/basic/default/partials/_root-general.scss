@@ -57,16 +57,64 @@
 	@each $name, $color in c.$pink_map {
 		--cfe-scheme-color--#{$name}: #{$color};
 	}
+	@each $name, $color in c.$coral_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$salmon_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$peach_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$lemon_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$mint_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$aqua_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$sky_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$lavender_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$rose_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$brick_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
 	@each $name, $color in c.$camel_map {
 		--cfe-scheme-color--#{$name}: #{$color};
 	}
 	@each $name, $color in c.$brown_map {
 		--cfe-scheme-color--#{$name}: #{$color};
 	}
-	@each $name, $color in c.$olive_map {
+	@each $name, $color in c.$tan_map {
 		--cfe-scheme-color--#{$name}: #{$color};
 	}
 	@each $name, $color in c.$khaki_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$olive_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$sage_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$slate_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$mauve_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$vanilla_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$chocolate_map {
 		--cfe-scheme-color--#{$name}: #{$color};
 	}
 }
