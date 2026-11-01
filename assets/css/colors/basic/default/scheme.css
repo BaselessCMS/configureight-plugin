@@ -35,9 +35,12 @@
   --cfe-scheme-default--peach: #ffcc99;
   --cfe-scheme-default--lemon: #ffff99;
   --cfe-scheme-default--mint: #aaffaa;
-  --cfe-scheme-default--aqua: #88ffee;
-  --cfe-scheme-default--sky: #99ccff;
+  --cfe-scheme-default--seafoam: #88ffdd;
+  --cfe-scheme-default--turqoise: #88ffee;
+  --cfe-scheme-default--sky: #99eeff;
+  --cfe-scheme-default--periwinkle: #bbccff;
   --cfe-scheme-default--lavender: #ccbbff;
+  --cfe-scheme-default--orchid: #ee99ee;
   --cfe-scheme-default--rose: #ffaacc;
   --cfe-scheme-default--brick: #cc6666;
   --cfe-scheme-default--camel: #cc9966;
@@ -46,6 +49,7 @@
   --cfe-scheme-default--khaki: #cccc99;
   --cfe-scheme-default--olive: #999966;
   --cfe-scheme-default--sage: #99bb99;
+  --cfe-scheme-default--denim: #6699bb;
   --cfe-scheme-default--slate: #aaaabb;
   --cfe-scheme-default--mauve: #ccaabb;
 }
