@@ -684,6 +684,9 @@ Here are the basic themeable display options (colors, fonts, global widths)
 }
 
 .sp-palette {
+	max-height: 240px;
+	overflow-y: scroll;
+
 	.sp-thumb-inner {
 		border: var( --cfe-form-element--border );
 	}
