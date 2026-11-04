@@ -7,80 +7,82 @@
 
 $palette: 'default';
 
-$red:       #ee0000 !default;
-$orange:    #ee6600 !default;
-$amber:     #ffcc44 !default;
-$yellow:    #ffee00 !default;
-$lime:      #00ee00 !default;
-$green:     #00bb00 !default;
-$teal:      #00ddaa !default;
-$cyan:      #00ccee !default;
-$blue:      #0044dd !default;
-$indigo:    #7800ee !default;
-$violet:    #7711bb !default;
-$purple:    #cc00aa !default;
-$pink:      #ff55dd !default;
-$coral:     #ff6666 !default;
-$salmon:    #ff9966 !default;
-$peach:     #ffcc99 !default;
-$lemon:     #ffff99 !default;
-$mint:      #aaffaa !default;
-$seafoam:   #88ffdd !default;
-$turqoise:  #88ffee !default;
-$sky:       #99eeff !default;
+$red:        #ee0000 !default;
+$orange:     #ee6600 !default;
+$amber:      #ffcc44 !default;
+$yellow:     #ffee00 !default;
+$lime:       #00ee00 !default;
+$green:      #00bb00 !default;
+$teal:       #00ddaa !default;
+$cyan:       #00ccee !default;
+$blue:       #0044dd !default;
+$indigo:     #7800ee !default;
+$violet:     #7711bb !default;
+$purple:     #cc00aa !default;
+$pink:       #ff55dd !default;
+$coral:      #ff6666 !default;
+$salmon:     #ff9966 !default;
+$peach:      #ffcc99 !default;
+$lemon:      #ffff99 !default;
+$mint:       #aaffaa !default;
+$seafoam:    #88ffdd !default;
+$turquoise:  #88ffee !default;
+$sky:        #99eeff !default;
 $periwinkle: #bbccff !default;
-$lavender:  #ccbbff !default;
-$orchid:    #ee99ee !default;
-$rose:      #ffaacc !default;
-$brick:     #cc6666 !default;
-$camel:     #cc9966 !default;
-$brown:     #996600 !default;
-$tan:       #ccbb66 !default;
-$khaki:     #cccc99 !default;
-$olive:     #999966 !default;
-$sage:      #99bb99 !default;
-$denim:     #6699bb !default;
-$slate:     #aaaabb !default;
-$mauve:     #ccaabb !default;
+$lavender:   #ccbbff !default;
+$orchid:     #ee99ee !default;
+$rose:       #ffaacc !default;
+$brick:      #cc6666 !default;
+$camel:      #cc9966 !default;
+$saddle:     #996633 !default;
+$sand:       #ccbb88 !default;
+$khaki:      #cccc99 !default;
+$olive:      #999966 !default;
+$sage:       #99bb99 !default;
+$denim:      #6699bb !default;
+$mauve:      #ccaabb !default;
+$antique:    #ddaaaa !default;
+$slate:      #aaaabb !default;
 
 $media: $blue;
 
 $color_map: (
-	'red'      : $red,
-	'orange'   : $orange,
-	'amber'    : $amber,
-	'yellow'   : $yellow,
-	'lime'     : $lime,
-	'green'    : $green,
-	'teal'     : $teal,
-	'cyan'     : $cyan,
-	'blue'     : $blue,
-	'indigo'   : $indigo,
-	'violet'   : $violet,
-	'purple'   : $purple,
-	'pink'     : $pink,
-	'coral'    : $coral,
-	'salmon'   : $salmon,
-	'peach'    : $peach,
-	'lemon'    : $lemon,
-	'mint'     : $mint,
-	'seafoam'  : $seafoam,
-	'turqoise' : $turqoise,
-	'sky'      : $sky,
+	'red'        : $red,
+	'orange'     : $orange,
+	'amber'      : $amber,
+	'yellow'     : $yellow,
+	'lime'       : $lime,
+	'green'      : $green,
+	'teal'       : $teal,
+	'cyan'       : $cyan,
+	'blue'       : $blue,
+	'indigo'     : $indigo,
+	'violet'     : $violet,
+	'purple'     : $purple,
+	'pink'       : $pink,
+	'coral'      : $coral,
+	'salmon'     : $salmon,
+	'peach'      : $peach,
+	'lemon'      : $lemon,
+	'mint'       : $mint,
+	'seafoam'    : $seafoam,
+	'turquoise'  : $turquoise,
+	'sky'        : $sky,
 	'periwinkle' : $periwinkle,
-	'lavender' : $lavender,
-	'orchid'   : $orchid,
-	'rose'     : $rose,
-	'brick'    : $brick,
-	'camel'    : $camel,
-	'brown'    : $brown,
-	'tan'      : $tan,
-	'khaki'    : $khaki,
-	'olive'    : $olive,
-	'sage'     : $sage,
-	'denim'    : $denim,
-	'slate'    : $slate,
-	'mauve'    : $mauve
+	'lavender'   : $lavender,
+	'orchid'     : $orchid,
+	'rose'       : $rose,
+	'brick'      : $brick,
+	'camel'      : $camel,
+	'saddle'     : $saddle,
+	'sand'       : $sand,
+	'khaki'      : $khaki,
+	'olive'      : $olive,
+	'sage'       : $sage,
+	'denim'      : $denim,
+	'mauve'      : $mauve,
+	'antique'    : $antique,
+	'slate'      : $slate
 ) !default;
 
 $light: (
@@ -637,32 +639,32 @@ $seafoam_map: (
 	'seafoam-1200' : $seafoam-1200
 ) !default;
 
-$turqoise-100:  f.lighten( $turqoise, 95% ) !default;
-$turqoise-200:  f.lighten( $turqoise, 90% ) !default;
-$turqoise-300:  f.lighten( $turqoise, 80% ) !default;
-$turqoise-400:  f.lighten( $turqoise, 60% ) !default;
-$turqoise-500:  f.lighten( $turqoise, 40% ) !default;
-$turqoise-600:  f.lighten( $turqoise, 20% ) !default;
-$turqoise-700:  $turqoise !default;
-$turqoise-800:  f.darken( $turqoise, 15% ) !default;
-$turqoise-900:  f.darken( $turqoise, 30% ) !default;
-$turqoise-1000: f.darken( $turqoise, 45% ) !default;
-$turqoise-1100: f.darken( $turqoise, 60% ) !default;
-$turqoise-1200: f.darken( $turqoise, 75% ) !default;
+$turquoise-100:  f.lighten( $turquoise, 95% ) !default;
+$turquoise-200:  f.lighten( $turquoise, 90% ) !default;
+$turquoise-300:  f.lighten( $turquoise, 80% ) !default;
+$turquoise-400:  f.lighten( $turquoise, 60% ) !default;
+$turquoise-500:  f.lighten( $turquoise, 40% ) !default;
+$turquoise-600:  f.lighten( $turquoise, 20% ) !default;
+$turquoise-700:  $turquoise !default;
+$turquoise-800:  f.darken( $turquoise, 15% ) !default;
+$turquoise-900:  f.darken( $turquoise, 30% ) !default;
+$turquoise-1000: f.darken( $turquoise, 45% ) !default;
+$turquoise-1100: f.darken( $turquoise, 60% ) !default;
+$turquoise-1200: f.darken( $turquoise, 75% ) !default;
 
-$turqoise_map: (
-	'turqoise-100'  : $turqoise-100,
-	'turqoise-200'  : $turqoise-200,
-	'turqoise-300'  : $turqoise-300,
-	'turqoise-400'  : $turqoise-400,
-	'turqoise-500'  : $turqoise-500,
-	'turqoise-600'  : $turqoise-600,
-	'turqoise-700'  : $turqoise-700,
-	'turqoise-800'  : $turqoise-800,
-	'turqoise-900'  : $turqoise-900,
-	'turqoise-1000' : $turqoise-1000,
-	'turqoise-1100' : $turqoise-1100,
-	'turqoise-1200' : $turqoise-1200
+$turquoise_map: (
+	'turquoise-100'  : $turquoise-100,
+	'turquoise-200'  : $turquoise-200,
+	'turquoise-300'  : $turquoise-300,
+	'turquoise-400'  : $turquoise-400,
+	'turquoise-500'  : $turquoise-500,
+	'turquoise-600'  : $turquoise-600,
+	'turquoise-700'  : $turquoise-700,
+	'turquoise-800'  : $turquoise-800,
+	'turquoise-900'  : $turquoise-900,
+	'turquoise-1000' : $turquoise-1000,
+	'turquoise-1100' : $turquoise-1100,
+	'turquoise-1200' : $turquoise-1200
 ) !default;
 
 $sky-100:  f.lighten( $sky, 95% ) !default;
@@ -861,60 +863,60 @@ $camel_map: (
 	'camel-1200' : $camel-1200
 ) !default;
 
-$brown-100:  f.lighten( $brown, 95% ) !default;
-$brown-200:  f.lighten( $brown, 90% ) !default;
-$brown-300:  f.lighten( $brown, 80% ) !default;
-$brown-400:  f.lighten( $brown, 60% ) !default;
-$brown-500:  f.lighten( $brown, 40% ) !default;
-$brown-600:  f.lighten( $brown, 20% ) !default;
-$brown-700:  $brown !default;
-$brown-800:  f.darken( $brown, 15% ) !default;
-$brown-900:  f.darken( $brown, 30% ) !default;
-$brown-1000: f.darken( $brown, 45% ) !default;
-$brown-1100: f.darken( $brown, 60% ) !default;
-$brown-1200: f.darken( $brown, 75% ) !default;
+$saddle-100:  f.lighten( $saddle, 95% ) !default;
+$saddle-200:  f.lighten( $saddle, 90% ) !default;
+$saddle-300:  f.lighten( $saddle, 80% ) !default;
+$saddle-400:  f.lighten( $saddle, 60% ) !default;
+$saddle-500:  f.lighten( $saddle, 40% ) !default;
+$saddle-600:  f.lighten( $saddle, 20% ) !default;
+$saddle-700:  $saddle !default;
+$saddle-800:  f.darken( $saddle, 15% ) !default;
+$saddle-900:  f.darken( $saddle, 30% ) !default;
+$saddle-1000: f.darken( $saddle, 45% ) !default;
+$saddle-1100: f.darken( $saddle, 60% ) !default;
+$saddle-1200: f.darken( $saddle, 75% ) !default;
 
-$brown_map: (
-	'brown-100'  : $brown-100,
-	'brown-200'  : $brown-200,
-	'brown-300'  : $brown-300,
-	'brown-400'  : $brown-400,
-	'brown-500'  : $brown-500,
-	'brown-600'  : $brown-600,
-	'brown-700'  : $brown-700,
-	'brown-800'  : $brown-800,
-	'brown-900'  : $brown-900,
-	'brown-1000' : $brown-1000,
-	'brown-1100' : $brown-1100,
-	'brown-1200' : $brown-1200
+$saddle_map: (
+	'saddle-100'  : $saddle-100,
+	'saddle-200'  : $saddle-200,
+	'saddle-300'  : $saddle-300,
+	'saddle-400'  : $saddle-400,
+	'saddle-500'  : $saddle-500,
+	'saddle-600'  : $saddle-600,
+	'saddle-700'  : $saddle-700,
+	'saddle-800'  : $saddle-800,
+	'saddle-900'  : $saddle-900,
+	'saddle-1000' : $saddle-1000,
+	'saddle-1100' : $saddle-1100,
+	'saddle-1200' : $saddle-1200
 ) !default;
 
-$tan-100:  f.lighten( $tan, 95% ) !default;
-$tan-200:  f.lighten( $tan, 90% ) !default;
-$tan-300:  f.lighten( $tan, 80% ) !default;
-$tan-400:  f.lighten( $tan, 60% ) !default;
-$tan-500:  f.lighten( $tan, 40% ) !default;
-$tan-600:  f.lighten( $tan, 20% ) !default;
-$tan-700:  $tan !default;
-$tan-800:  f.darken( $tan, 15% ) !default;
-$tan-900:  f.darken( $tan, 30% ) !default;
-$tan-1000: f.darken( $tan, 45% ) !default;
-$tan-1100: f.darken( $tan, 60% ) !default;
-$tan-1200: f.darken( $tan, 75% ) !default;
+$sand-100:  f.lighten( $sand, 95% ) !default;
+$sand-200:  f.lighten( $sand, 90% ) !default;
+$sand-300:  f.lighten( $sand, 80% ) !default;
+$sand-400:  f.lighten( $sand, 60% ) !default;
+$sand-500:  f.lighten( $sand, 40% ) !default;
+$sand-600:  f.lighten( $sand, 20% ) !default;
+$sand-700:  $sand !default;
+$sand-800:  f.darken( $sand, 15% ) !default;
+$sand-900:  f.darken( $sand, 30% ) !default;
+$sand-1000: f.darken( $sand, 45% ) !default;
+$sand-1100: f.darken( $sand, 60% ) !default;
+$sand-1200: f.darken( $sand, 75% ) !default;
 
-$tan_map: (
-	'tan-100'  : $tan-100,
-	'tan-200'  : $tan-200,
-	'tan-300'  : $tan-300,
-	'tan-400'  : $tan-400,
-	'tan-500'  : $tan-500,
-	'tan-600'  : $tan-600,
-	'tan-700'  : $tan-700,
-	'tan-800'  : $tan-800,
-	'tan-900'  : $tan-900,
-	'tan-1000' : $tan-1000,
-	'tan-1100' : $tan-1100,
-	'tan-1200' : $tan-1200
+$sand_map: (
+	'sand-100'  : $sand-100,
+	'sand-200'  : $sand-200,
+	'sand-300'  : $sand-300,
+	'sand-400'  : $sand-400,
+	'sand-500'  : $sand-500,
+	'sand-600'  : $sand-600,
+	'sand-700'  : $sand-700,
+	'sand-800'  : $sand-800,
+	'sand-900'  : $sand-900,
+	'sand-1000' : $sand-1000,
+	'sand-1100' : $sand-1100,
+	'sand-1200' : $sand-1200
 ) !default;
 
 $khaki-100:  f.lighten( $khaki, 95% ) !default;
@@ -1029,34 +1031,6 @@ $denim_map: (
 	'denim-1200' : $denim-1200
 ) !default;
 
-$slate-100:  f.lighten( $slate, 95% ) !default;
-$slate-200:  f.lighten( $slate, 90% ) !default;
-$slate-300:  f.lighten( $slate, 80% ) !default;
-$slate-400:  f.lighten( $slate, 60% ) !default;
-$slate-500:  f.lighten( $slate, 40% ) !default;
-$slate-600:  f.lighten( $slate, 20% ) !default;
-$slate-700:  $slate !default;
-$slate-800:  f.darken( $slate, 15% ) !default;
-$slate-900:  f.darken( $slate, 30% ) !default;
-$slate-1000: f.darken( $slate, 45% ) !default;
-$slate-1100: f.darken( $slate, 60% ) !default;
-$slate-1200: f.darken( $slate, 75% ) !default;
-
-$slate_map: (
-	'slate-100'  : $slate-100,
-	'slate-200'  : $slate-200,
-	'slate-300'  : $slate-300,
-	'slate-400'  : $slate-400,
-	'slate-500'  : $slate-500,
-	'slate-600'  : $slate-600,
-	'slate-700'  : $slate-700,
-	'slate-800'  : $slate-800,
-	'slate-900'  : $slate-900,
-	'slate-1000' : $slate-1000,
-	'slate-1100' : $slate-1100,
-	'slate-1200' : $slate-1200
-) !default;
-
 $mauve-100:  f.lighten( $mauve, 95% ) !default;
 $mauve-200:  f.lighten( $mauve, 90% ) !default;
 $mauve-300:  f.lighten( $mauve, 80% ) !default;
@@ -1083,4 +1057,60 @@ $mauve_map: (
 	'mauve-1000' : $mauve-1000,
 	'mauve-1100' : $mauve-1100,
 	'mauve-1200' : $mauve-1200
+) !default;
+
+$antique-100:  f.lighten( $antique, 95% ) !default;
+$antique-200:  f.lighten( $antique, 90% ) !default;
+$antique-300:  f.lighten( $antique, 80% ) !default;
+$antique-400:  f.lighten( $antique, 60% ) !default;
+$antique-500:  f.lighten( $antique, 40% ) !default;
+$antique-600:  f.lighten( $antique, 20% ) !default;
+$antique-700:  $antique !default;
+$antique-800:  f.darken( $antique, 15% ) !default;
+$antique-900:  f.darken( $antique, 30% ) !default;
+$antique-1000: f.darken( $antique, 45% ) !default;
+$antique-1100: f.darken( $antique, 60% ) !default;
+$antique-1200: f.darken( $antique, 75% ) !default;
+
+$antique_map: (
+	'antique-100'  : $antique-100,
+	'antique-200'  : $antique-200,
+	'antique-300'  : $antique-300,
+	'antique-400'  : $antique-400,
+	'antique-500'  : $antique-500,
+	'antique-600'  : $antique-600,
+	'antique-700'  : $antique-700,
+	'antique-800'  : $antique-800,
+	'antique-900'  : $antique-900,
+	'antique-1000' : $antique-1000,
+	'antique-1100' : $antique-1100,
+	'antique-1200' : $antique-1200
+) !default;
+
+$slate-100:  f.lighten( $slate, 95% ) !default;
+$slate-200:  f.lighten( $slate, 90% ) !default;
+$slate-300:  f.lighten( $slate, 80% ) !default;
+$slate-400:  f.lighten( $slate, 60% ) !default;
+$slate-500:  f.lighten( $slate, 40% ) !default;
+$slate-600:  f.lighten( $slate, 20% ) !default;
+$slate-700:  $slate !default;
+$slate-800:  f.darken( $slate, 15% ) !default;
+$slate-900:  f.darken( $slate, 30% ) !default;
+$slate-1000: f.darken( $slate, 45% ) !default;
+$slate-1100: f.darken( $slate, 60% ) !default;
+$slate-1200: f.darken( $slate, 75% ) !default;
+
+$slate_map: (
+	'slate-100'  : $slate-100,
+	'slate-200'  : $slate-200,
+	'slate-300'  : $slate-300,
+	'slate-400'  : $slate-400,
+	'slate-500'  : $slate-500,
+	'slate-600'  : $slate-600,
+	'slate-700'  : $slate-700,
+	'slate-800'  : $slate-800,
+	'slate-900'  : $slate-900,
+	'slate-1000' : $slate-1000,
+	'slate-1100' : $slate-1100,
+	'slate-1200' : $slate-1200
 ) !default;

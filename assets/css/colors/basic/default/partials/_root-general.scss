@@ -75,7 +75,7 @@
 	@each $name, $color in c.$seafoam_map {
 		--cfe-scheme-color--#{$name}: #{$color};
 	}
-	@each $name, $color in c.$turqoise_map {
+	@each $name, $color in c.$turquoise_map {
 		--cfe-scheme-color--#{$name}: #{$color};
 	}
 	@each $name, $color in c.$sky_map {
@@ -99,10 +99,10 @@
 	@each $name, $color in c.$camel_map {
 		--cfe-scheme-color--#{$name}: #{$color};
 	}
-	@each $name, $color in c.$brown_map {
+	@each $name, $color in c.$saddle_map {
 		--cfe-scheme-color--#{$name}: #{$color};
 	}
-	@each $name, $color in c.$tan_map {
+	@each $name, $color in c.$sand_map {
 		--cfe-scheme-color--#{$name}: #{$color};
 	}
 	@each $name, $color in c.$khaki_map {
@@ -117,10 +117,13 @@
 	@each $name, $color in c.$denim_map {
 		--cfe-scheme-color--#{$name}: #{$color};
 	}
-	@each $name, $color in c.$slate_map {
+	@each $name, $color in c.$mauve_map {
 		--cfe-scheme-color--#{$name}: #{$color};
 	}
-	@each $name, $color in c.$mauve_map {
+	@each $name, $color in c.$antique_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$slate_map {
 		--cfe-scheme-color--#{$name}: #{$color};
 	}
 }
