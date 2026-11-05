@@ -1,0 +1,64 @@
+{
+	"light" : {
+		"body"  : "#ffffff",
+		"text"  : "#262626",
+		"one"   : "#0044dd",
+		"two"   : "#4073e6",
+		"three" : "#0044dd",
+		"four"  : "#4073e6",
+		"five"  : "#0044dd",
+		"six"   : "#4073e6"
+	},
+	"dark" : {
+		"body"  : "#161616",
+		"text"  : "#ffffff",
+		"one"   : "#4073e6",
+		"two"   : "#0044dd",
+		"three" : "#4073e6",
+		"four"  : "#0044dd",
+		"five"  : "#0044dd",
+		"six"   : "#4073e6"
+	},
+	"standard" : {
+		"red"    : "#ee0000",
+		"orange" : "#ee6600",
+		"amber"  : "#ffcc44",
+		"yellow" : "#ffee00",
+		"lime"   : "#00ee00",
+		"green"  : "#00bb00",
+		"teal"   : "#00ddaa",
+		"cyan"   : "#00ccee",
+		"blue"   : "#0044dd",
+		"indigo" : "#7700ee",
+		"violet" : "#7711bb",
+		"purple" : "#cc00aa",
+		"pink"   : "#ff55dd"
+	},
+	"pastel" : {
+		"coral"      : "#ff6666",
+		"salmon"     : "#ff9966",
+		"peach"      : "#ffcc99",
+		"lemon"      : "#ffff99",
+		"mint"       : "#aaffaa",
+		"seafoam"    : "#88ffdd",
+		"turquoise"  : "#88ffee",
+		"sky"        : "#99eeff",
+		"periwinkle" : "#bbccff",
+		"lavender"   : "#ccbbff",
+		"orchid"     : "#ee99ee",
+		"rose"       : "#ffaacc"
+	},
+	"desaturated" : {
+		"brick"   : "#cc6666",
+		"camel"   : "#cc9966",
+		"saddle"  : "#996633",
+		"sand"    : "#ccbb88",
+		"khaki"   : "#cccc99",
+		"olive"   : "#999966",
+		"sage"    : "#99bb99",
+		"denim"   : "#6699bb",
+		"mauve"   : "#ccaabb",
+		"antique" : "#ddaaaa",
+		"slate"   : "#aaaabb"
+	}
+}
