@@ -2428,7 +2428,11 @@ function picker_colors_merged( $label = false ) {
 	if ( true == $label ) {
 		$from    = plugin()->custom_scheme_from();
 		$scheme  = get_color_scheme( $from );
-		$text    = $scheme['name'];
+		$text    = sprintf(
+			'%s %s',
+			$scheme['name'],
+			lang()->get( 'Colors' )
+		);
 		$palette = array_merge( [ $text ], $palette );
 	}
 	return $palette;
