@@ -31,6 +31,8 @@ use function CFE_Colors\{
 
 <p><?php lang()->p( 'When a palette is selected in the color scheme option, only colors from that palette, plus a standard grayscale, are available in the various color picker fields. But the color fields will accept a different color pasted from this reference, so colors from various palettes may be mixed in that manner.' ); ?></p>
 
+<p><?php lang()->p( 'When the palette selection exceeds the maximum height of the picker view then scroll vertically to see all available colors.' ); ?></p>
+
 <?php
 foreach ( get_palette( 'grayscale' ) as $palette ) {
 
