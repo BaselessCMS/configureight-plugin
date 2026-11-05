@@ -13,7 +13,10 @@
 	"theme_slug"   : "configureight",
 	"theme_name"   : "Configure 8",
 	"theme_desc"   : "Bludit CMS plugin that provides options for the Configure 8 frontend theme and the Configure 8 admin theme.",
+	"theme_url"    : "https://github.com/BaselessCMS/configureight",
 	"theme_compat" : [ "configureight" ],
 	"admin_name"   : "Configure 8",
-	"admin_url"    : "https://github.com/BaselessCMS/configureight-admin"
+	"admin_desc"   : "Bludit admin theme that is a companion to the Configure 8 theme.",
+	"admin_url"    : "https://github.com/BaselessCMS/configureight-admin",
+	"admin_compat" : [ "configureight" ]
 }
