@@ -128,6 +128,16 @@ jQuery(document).ready( function($) {
 		theme : 'cfe-tooltips'
 	});
 
+	// Color picker tooltips.
+	var picker_tooltips = function() {
+		$( '.sp-thumb-el' ).tooltipster({
+			distance : 15,
+			delay : 150,
+			animationDuration : 150,
+			theme : 'cfe-tooltips'
+		});
+	};
+
 	// Solid color picker.
 	$( <?php echo "'.{$color_scheme}-color'"; ?> ).spectrum({
 		type            : 'component',
@@ -147,22 +157,8 @@ jQuery(document).ready( function($) {
 			} ?>
 		],
 		showSelectionPalette : false,
-		show : function() {
-			$( '.sp-thumb-el' ).tooltipster({
-				distance : 15,
-				delay : 150,
-				animationDuration : 150,
-				theme : 'cfe-tooltips'
-			});
-		},
-		move : function() {
-			$( '.sp-thumb-el' ).tooltipster({
-				distance : 15,
-				delay : 150,
-				animationDuration : 150,
-				theme : 'cfe-tooltips'
-			});
-		}
+		show : picker_tooltips,
+		move : picker_tooltips
 	});
 
 	// Alpha color picker.
@@ -184,22 +180,8 @@ jQuery(document).ready( function($) {
 			} ?>
 		],
 		showSelectionPalette : false,
-		show : function() {
-			$( '.sp-thumb-el' ).tooltipster({
-				distance : 15,
-				delay : 150,
-				animationDuration : 150,
-				theme : 'cfe-tooltips'
-			});
-		},
-		move : function() {
-			$( '.sp-thumb-el' ).tooltipster({
-				distance : 15,
-				delay : 150,
-				animationDuration : 150,
-				theme : 'cfe-tooltips'
-			});
-		}
+		show : picker_tooltips,
+		move : picker_tooltips
 	});
 
 	// Selected class for image uploads.
