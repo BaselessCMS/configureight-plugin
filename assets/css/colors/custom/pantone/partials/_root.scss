@@ -11,20 +11,92 @@
 // CSS properties.
 :host,
 :root {
-
-	@each $name, $color in c.$color_map {
-		--cfe--#{c.$palette}--#{$name}:     #{$color};
-		--cfe--#{c.$palette}--#{$name}-100: #{f.lighten( $color, 90% )};
-		--cfe--#{c.$palette}--#{$name}-200: #{f.lighten( $color, 80% )};
-		--cfe--#{c.$palette}--#{$name}-300: #{f.lighten( $color, 60% )};
-		--cfe--#{c.$palette}--#{$name}-400: #{f.lighten( $color, 40% )};
-		--cfe--#{c.$palette}--#{$name}-500: #{f.lighten( $color, 20% )};
-		--cfe--#{c.$palette}--#{$name}-600: #{$color};
-		--cfe--#{c.$palette}--#{$name}-700: #{f.darken( $color, 20% )};
-		--cfe--#{c.$palette}--#{$name}-800: #{f.darken( $color, 40% )};
-		--cfe--#{c.$palette}--#{$name}-900: #{f.darken( $color, 60% )};
-		--cfe--#{c.$palette}--#{$name}-1000: #{f.darken( $color, 80% )};
-		--cfe--#{c.$palette}--#{$name}-1100: #{f.darken( $color, 90% )};
+	@each $name, $color in c.$cerulean_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$fuchsia-rose_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$true-red_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$aqua-sky_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$tigerlily_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$blue-turquoise_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$sand-dollar_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$chili-pepper_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$blue-iris_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$mimosa_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$turquoise_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$honeysuckle_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$tangerine-tango_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$emerald_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$radiant-orchid_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$marsala_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$serenity_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$rose-quartz_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$greenery_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$ultra-violet_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$living-coral_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$classic-blue_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$ultimate-gray_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$illuminating_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$very-peri_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$viva-magenta_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$peach-fuzz_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$mocha-mousse_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$cloud-dancer_map {
+		--cfe-scheme-color--#{$name}: #{$color};
 	}
 }
 
