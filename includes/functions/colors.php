@@ -227,7 +227,7 @@ function color_scheme_categories() {
 		'custom' => [
 			'slug'  => 'custom',
 			'name'  => lang()->get( 'Build Your Own' ),
-			'about' => lang()->get( 'Custom color schemes with a color picker for each light and dark option.' )
+			'about' => lang()->get( 'Create color schemes from prescribed color palettes.' )
 		]
 	];
 	$cats = array_merge( $cats, $custom );
