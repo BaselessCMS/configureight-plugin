@@ -760,7 +760,7 @@ function option_scheme_initial( $key ) {
 /**
  * Custom palette schemes
  *
- * Build your own schemes excluding `custom` scheme.
+ * Build your own schemes.
  *
  * @since  1.0.0
  * @return array
@@ -2177,7 +2177,7 @@ function color_scheme_template() {
 	$colors = color_schemes();
 	$scheme = false;
 
-	// Exclude custom schemes.
+	// Exclude palette schemes.
 	if ( array_key_exists( plugin()->color_scheme(), option_schemes_data() ) ) {
 		return $scheme;
 	}

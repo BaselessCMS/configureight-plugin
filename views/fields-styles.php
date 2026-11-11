@@ -289,7 +289,7 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 
 				foreach ( $colors as $color => $option ) {
 
-					// Skip custom scheme, added after.
+					// Skip palette schemes, added after.
 					if ( 'custom' == $option['category'] ) {
 						continue;
 					}
