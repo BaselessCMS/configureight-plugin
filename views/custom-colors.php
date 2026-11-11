@@ -75,7 +75,6 @@ if ( in_array( $custom_from, palette_schemes() ) ) {
 						<input id="color_body_default" class="screen-reader-text" type="hidden" value="<?php echo $colors['light']['body']; ?>" />
 						<span class="btn btn-secondary btn-md hide-if-no-js" id="color_body_default_button"><?php lang()->p( 'Reset' ); ?></span>
 					</div>
-					<small class="form-text"><?php lang()->p( 'CSS property: <code class="select">--cfe-scheme-color--body</code>' ); ?></small>
 				</div>
 			</div>
 
@@ -87,7 +86,6 @@ if ( in_array( $custom_from, palette_schemes() ) ) {
 						<input id="color_text_default" class="screen-reader-text" type="hidden" value="<?php echo $colors['light']['text']; ?>" />
 						<span class="btn btn-secondary btn-md hide-if-no-js" id="color_text_default_button"><?php lang()->p( 'Reset' ); ?></span>
 					</div>
-					<small class="form-text"><?php lang()->p( 'CSS property: <code class="select">--cfe-scheme-color--text</code>' ); ?></small>
 				</div>
 			</div>
 
@@ -99,7 +97,6 @@ if ( in_array( $custom_from, palette_schemes() ) ) {
 						<input id="color_one_default" class="screen-reader-text" type="hidden" value="<?php echo $colors['light']['one']; ?>" />
 						<span class="btn btn-secondary btn-md hide-if-no-js" id="color_one_default_button"><?php lang()->p( 'Reset' ); ?></span>
 					</div>
-					<small class="form-text"><?php lang()->p( 'CSS property: <code class="select">--cfe-scheme-color--one</code>' ); ?></small>
 				</div>
 			</div>
 
@@ -111,7 +108,6 @@ if ( in_array( $custom_from, palette_schemes() ) ) {
 						<input id="color_two_default" class="screen-reader-text" type="hidden" value="<?php echo $colors['light']['two']; ?>" />
 						<span class="btn btn-secondary btn-md hide-if-no-js" id="color_two_default_button"><?php lang()->p( 'Reset' ); ?></span>
 					</div>
-					<small class="form-text"><?php lang()->p( 'CSS property: <code class="select">--cfe-scheme-color--two</code>' ); ?></small>
 				</div>
 			</div>
 
@@ -123,7 +119,6 @@ if ( in_array( $custom_from, palette_schemes() ) ) {
 						<input id="color_three_default" class="screen-reader-text" type="hidden" value="<?php echo $colors['light']['three']; ?>" />
 						<span class="btn btn-secondary btn-md hide-if-no-js" id="color_three_default_button"><?php lang()->p( 'Reset' ); ?></span>
 					</div>
-					<small class="form-text"><?php lang()->p( 'CSS property: <code class="select">--cfe-scheme-color--three</code>' ); ?></small>
 				</div>
 			</div>
 
@@ -135,7 +130,6 @@ if ( in_array( $custom_from, palette_schemes() ) ) {
 						<input id="color_four_default" class="screen-reader-text" type="hidden" value="<?php echo $colors['light']['four']; ?>" />
 						<span class="btn btn-secondary btn-md hide-if-no-js" id="color_four_default_button"><?php lang()->p( 'Reset' ); ?></span>
 					</div>
-					<small class="form-text"><?php lang()->p( 'CSS property: <code class="select">--cfe-scheme-color--four</code>' ); ?></small>
 				</div>
 			</div>
 
@@ -147,7 +141,6 @@ if ( in_array( $custom_from, palette_schemes() ) ) {
 						<input id="color_five_default" class="screen-reader-text" type="hidden" value="<?php echo $colors['light']['five']; ?>" />
 						<span class="btn btn-secondary btn-md hide-if-no-js" id="color_five_default_button"><?php lang()->p( 'Reset' ); ?></span>
 					</div>
-					<small class="form-text"><?php lang()->p( 'CSS property: <code class="select">--cfe-scheme-color--five</code>' ); ?></small>
 				</div>
 			</div>
 
@@ -159,7 +152,6 @@ if ( in_array( $custom_from, palette_schemes() ) ) {
 						<input id="color_six_default" class="screen-reader-text" type="hidden" value="<?php echo $colors['light']['six']; ?>" />
 						<span class="btn btn-secondary btn-md hide-if-no-js" id="color_six_default_button"><?php lang()->p( 'Reset' ); ?></span>
 					</div>
-					<small class="form-text"><?php lang()->p( 'CSS property: <code class="select">--cfe-scheme-color--six</code>' ); ?></small>
 				</div>
 			</div>
 		</div>
@@ -176,7 +168,6 @@ if ( in_array( $custom_from, palette_schemes() ) ) {
 						<input id="color_body_dark_default" class="screen-reader-text" type="hidden" value="<?php echo $colors['dark']['body']; ?>" />
 						<span class="btn btn-secondary btn-md hide-if-no-js" id="color_body_dark_default_button"><?php lang()->p( 'Reset' ); ?></span>
 					</div>
-					<small class="form-text"><?php lang()->p( 'CSS property: <code class="select">--cfe-scheme-color--body--dark</code>' ); ?></small>
 				</div>
 			</div>
 
@@ -188,7 +179,6 @@ if ( in_array( $custom_from, palette_schemes() ) ) {
 						<input id="color_text_dark_default" class="screen-reader-text" type="hidden" value="<?php echo $colors['dark']['text']; ?>" />
 						<span class="btn btn-secondary btn-md hide-if-no-js" id="color_text_dark_default_button"><?php lang()->p( 'Reset' ); ?></span>
 					</div>
-					<small class="form-text"><?php lang()->p( 'CSS property: <code class="select">--cfe-scheme-color--text--dark</code>' ); ?></small>
 				</div>
 			</div>
 
@@ -200,7 +190,6 @@ if ( in_array( $custom_from, palette_schemes() ) ) {
 						<input id="color_one_dark_default" class="screen-reader-text" type="hidden" value="<?php echo $colors['dark']['one']; ?>" />
 						<span class="btn btn-secondary btn-md hide-if-no-js" id="color_one_dark_default_button"><?php lang()->p( 'Reset' ); ?></span>
 					</div>
-					<small class="form-text"><?php lang()->p( 'CSS property: <code class="select">--cfe-scheme-color--one--dark</code>' ); ?></small>
 				</div>
 			</div>
 
@@ -212,7 +201,6 @@ if ( in_array( $custom_from, palette_schemes() ) ) {
 						<input id="color_two_dark_default" class="screen-reader-text" type="hidden" value="<?php echo $colors['dark']['two']; ?>" />
 						<span class="btn btn-secondary btn-md hide-if-no-js" id="color_two_dark_default_button"><?php lang()->p( 'Reset' ); ?></span>
 					</div>
-					<small class="form-text"><?php lang()->p( 'CSS property: <code class="select">--cfe-scheme-color--two--dark</code>' ); ?></small>
 				</div>
 			</div>
 
@@ -224,7 +212,6 @@ if ( in_array( $custom_from, palette_schemes() ) ) {
 						<input id="color_three_dark_default" class="screen-reader-text" type="hidden" value="<?php echo $colors['dark']['three']; ?>" />
 						<span class="btn btn-secondary btn-md hide-if-no-js" id="color_three_dark_default_button"><?php lang()->p( 'Reset' ); ?></span>
 					</div>
-					<small class="form-text"><?php lang()->p( 'CSS property: <code class="select">--cfe-scheme-color--three--dark</code>' ); ?></small>
 				</div>
 			</div>
 
@@ -236,7 +223,6 @@ if ( in_array( $custom_from, palette_schemes() ) ) {
 						<input id="color_four_dark_default" class="screen-reader-text" type="hidden" value="<?php echo $colors['dark']['four']; ?>" />
 						<span class="btn btn-secondary btn-md hide-if-no-js" id="color_four_dark_default_button"><?php lang()->p( 'Reset' ); ?></span>
 					</div>
-					<small class="form-text"><?php lang()->p( 'CSS property: <code class="select">--cfe-scheme-color--four--dark</code>' ); ?></small>
 				</div>
 			</div>
 
@@ -248,7 +234,6 @@ if ( in_array( $custom_from, palette_schemes() ) ) {
 						<input id="color_five_dark_default" class="screen-reader-text" type="hidden" value="<?php echo $colors['dark']['five']; ?>" />
 						<span class="btn btn-secondary btn-md hide-if-no-js" id="color_five_dark_default_button"><?php lang()->p( 'Reset' ); ?></span>
 					</div>
-					<small class="form-text"><?php lang()->p( 'CSS property: <code class="select">--cfe-scheme-color--five--dark</code>' ); ?></small>
 				</div>
 			</div>
 
@@ -260,7 +245,6 @@ if ( in_array( $custom_from, palette_schemes() ) ) {
 						<input id="color_six_dark_default" class="screen-reader-text" type="hidden" value="<?php echo $colors['dark']['six']; ?>" />
 						<span class="btn btn-secondary btn-md hide-if-no-js" id="color_six_dark_default_button"><?php lang()->p( 'Reset' ); ?></span>
 					</div>
-					<small class="form-text"><?php lang()->p( 'CSS property: <code class="select">--cfe-scheme-color--six--dark</code>' ); ?></small>
 				</div>
 			</div>
 		</div>
