@@ -146,7 +146,7 @@ printf(
 	$current['name']
 );
 
-// Scheme category if not one of the custom schemes.
+// Scheme category if not one of the palette schemes.
 if (
 	isset( $current['category'] ) &&
 	! empty( $current['category'] ) &&
@@ -269,7 +269,7 @@ $slug_cat = '';
 $count    = 0;
 foreach ( $schemes as $scheme => $option ) {
 
-	// Skip custom schemes.
+	// Skip palette schemes.
 	if ( array_key_exists( $option['slug'], option_schemes_data() ) ) {
 		continue;
 	}
