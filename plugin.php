@@ -1409,9 +1409,7 @@ class configureight extends Plugin {
 
 		// Color scheme stylesheet.
 		if ( 'colors' === $type ) {
-			if ( ! array_key_exists( $option_colors, option_schemes_data() ) ) {
-				$html = css( "assets/css/colors/{$current_color['category']}/{$option_colors}/{$filename}{$suffix}.css" );
-			}
+			$html = css( "assets/css/colors/{$current_color['category']}/{$option_colors}/{$filename}{$suffix}.css" );
 		}
 
 		// Typography scheme stylesheet.
