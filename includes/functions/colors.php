@@ -223,14 +223,14 @@ function color_scheme_categories() {
 	];
 	asort( $cats );
 
-	$custom = [
-		'custom' => [
-			'slug'  => 'custom',
+	$palettes = [
+		'palettes' => [
+			'slug'  => 'palettes',
 			'name'  => lang()->get( 'Build Your Own' ),
 			'about' => lang()->get( 'Create color schemes from prescribed color palettes.' )
 		]
 	];
-	$cats = array_merge( $cats, $custom );
+	$cats = array_merge( $cats, $palettes );
 	return $cats;
 }
 
@@ -858,7 +858,7 @@ function build_custom_schemes() {
 			'slug'     => $scheme['slug'],
 			'name'     => isset( $scheme['name'] ) ? $scheme['name'] : lang()->get( 'Unknown Scheme' ),
 			'about'    => isset( $scheme['about'] ) ? $scheme['about'] : '',
-			'category' => 'custom',
+			'category' => 'palettes',
 			'media'    => plugin()->cover_blend(),
 			'light'    => $light,
 			'dark'     => $dark,
