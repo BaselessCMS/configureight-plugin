@@ -365,6 +365,13 @@ form .col-sm-1, form .col-sm-2, form .col-sm-3, form .col-sm-4, form .col-sm-5, 
   margin: 0 !important;
 }
 
+.scheme-color-pickers .form-group {
+  margin: 0.5rem 0;
+}
+.scheme-color-pickers .form-group:first-of-type {
+  margin-top: 1rem;
+}
+
 .form-color-thumbs-list {
   list-style: none;
   margin: 0;
