@@ -63,9 +63,9 @@ if ( in_array( $custom_from, palette_schemes() ) ) {
 			</li>
 		</ul>
 
-		<div id="light-colors">
+		<div class="scheme-color-pickers" id="light-colors">
 
-			<p><?php lang()->p( 'These colors are used with default browser/device settings and when the user/device prefers a light color scheme.' ); ?></p>
+			<p><?php lang()->p( 'These colors are used when the user/device prefers a light color scheme unless the Dark Version option is set to `Use Always`.' ); ?></p>
 
 			<div class="form-field form-group row">
 				<label class="form-label col-sm-2 col-form-label" for="color_body"><?php lang()->p( 'Body Color' ); ?></label>
@@ -156,12 +156,12 @@ if ( in_array( $custom_from, palette_schemes() ) ) {
 			</div>
 		</div>
 
-		<div id="dark-colors">
+		<div class="scheme-color-pickers" id="dark-colors">
 
-			<p><?php lang()->p( 'These colors are used when the user/device prefers a dark color scheme.' ); ?></p>
+			<p><?php lang()->p( 'These colors are used when the user/device prefers a dark color scheme or when the Dark Version option is set to `Use Always`.' ); ?></p>
 
 			<div class="form-field form-group row">
-				<label class="form-label col-sm-2 col-form-label" for="color_body_dark"><?php lang()->p( 'Dark Body Color' ); ?></label>
+				<label class="form-label col-sm-2 col-form-label" for="color_body_dark"><?php lang()->p( 'Body Color' ); ?></label>
 				<div class="col-sm-10">
 					<div class="row color-picker-wrap">
 						<input class="color-picker <?php echo picker_class(); ?>" id="color_body_dark" name="color_body_dark" value="<?php echo plugin()->color_body_dark(); ?>" />
@@ -172,7 +172,7 @@ if ( in_array( $custom_from, palette_schemes() ) ) {
 			</div>
 
 			<div class="form-field form-group row">
-				<label class="form-label col-sm-2 col-form-label" for="color_text_dark"><?php lang()->p( 'Dark Text Color' ); ?></label>
+				<label class="form-label col-sm-2 col-form-label" for="color_text_dark"><?php lang()->p( 'Text Color' ); ?></label>
 				<div class="col-sm-10">
 					<div class="row color-picker-wrap">
 						<input class="color-picker <?php echo picker_class(); ?>" id="color_text_dark" name="color_text_dark" value="<?php echo plugin()->color_text_dark(); ?>" />
@@ -183,7 +183,7 @@ if ( in_array( $custom_from, palette_schemes() ) ) {
 			</div>
 
 			<div class="form-field form-group row">
-				<label class="form-label col-sm-2 col-form-label" for="color_one_dark"><?php lang()->p( 'Dark Color One' ); ?></label>
+				<label class="form-label col-sm-2 col-form-label" for="color_one_dark"><?php lang()->p( 'Color One' ); ?></label>
 				<div class="col-sm-10">
 					<div class="row color-picker-wrap">
 						<input class="color-picker <?php echo picker_class(); ?>" id="color_one_dark" name="color_one_dark" value="<?php echo plugin()->color_one_dark(); ?>" />
@@ -194,7 +194,7 @@ if ( in_array( $custom_from, palette_schemes() ) ) {
 			</div>
 
 			<div class="form-field form-group row">
-				<label class="form-label col-sm-2 col-form-label" for="color_two_dark"><?php lang()->p( 'Dark Color Two' ); ?></label>
+				<label class="form-label col-sm-2 col-form-label" for="color_two_dark"><?php lang()->p( 'Color Two' ); ?></label>
 				<div class="col-sm-10">
 					<div class="row color-picker-wrap">
 						<input class="color-picker <?php echo picker_class(); ?>" id="color_two_dark" name="color_two_dark" value="<?php echo plugin()->color_two_dark(); ?>" />
@@ -205,7 +205,7 @@ if ( in_array( $custom_from, palette_schemes() ) ) {
 			</div>
 
 			<div class="form-field form-group row">
-				<label class="form-label col-sm-2 col-form-label" for="color_three_dark"><?php lang()->p( 'Dark Color Three' ); ?></label>
+				<label class="form-label col-sm-2 col-form-label" for="color_three_dark"><?php lang()->p( 'Color Three' ); ?></label>
 				<div class="col-sm-10">
 					<div class="row color-picker-wrap">
 						<input class="color-picker <?php echo picker_class(); ?>" id="color_three_dark" name="color_three_dark" value="<?php echo plugin()->color_three_dark(); ?>" />
@@ -216,7 +216,7 @@ if ( in_array( $custom_from, palette_schemes() ) ) {
 			</div>
 
 			<div class="form-field form-group row">
-				<label class="form-label col-sm-2 col-form-label" for="color_four_dark"><?php lang()->p( 'Dark Color Four' ); ?></label>
+				<label class="form-label col-sm-2 col-form-label" for="color_four_dark"><?php lang()->p( 'Color Four' ); ?></label>
 				<div class="col-sm-10">
 					<div class="row color-picker-wrap">
 						<input class="color-picker <?php echo picker_class(); ?>" id="color_four_dark" name="color_four_dark" value="<?php echo plugin()->color_four_dark(); ?>" />
@@ -227,7 +227,7 @@ if ( in_array( $custom_from, palette_schemes() ) ) {
 			</div>
 
 			<div class="form-field form-group row">
-				<label class="form-label col-sm-2 col-form-label" for="color_five_dark"><?php lang()->p( 'Dark Color Five' ); ?></label>
+				<label class="form-label col-sm-2 col-form-label" for="color_five_dark"><?php lang()->p( 'Color Five' ); ?></label>
 				<div class="col-sm-10">
 					<div class="row color-picker-wrap">
 						<input class="color-picker <?php echo picker_class(); ?>" id="color_five_dark" name="color_five_dark" value="<?php echo plugin()->color_five_dark(); ?>" />
@@ -238,7 +238,7 @@ if ( in_array( $custom_from, palette_schemes() ) ) {
 			</div>
 
 			<div class="form-field form-group row">
-				<label class="form-label col-sm-2 col-form-label" for="color_six_dark"><?php lang()->p( 'Dark Color Six' ); ?></label>
+				<label class="form-label col-sm-2 col-form-label" for="color_six_dark"><?php lang()->p( 'Color Six' ); ?></label>
 				<div class="col-sm-10">
 					<div class="row color-picker-wrap">
 						<input class="color-picker <?php echo picker_class(); ?>" id="color_six_dark" name="color_six_dark" value="<?php echo plugin()->color_six_dark(); ?>" />
