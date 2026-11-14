@@ -290,7 +290,7 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 				foreach ( $colors as $color => $option ) {
 
 					// Skip palette schemes, added after.
-					if ( 'custom' == $option['category'] ) {
+					if ( 'palettes' == $option['category'] ) {
 						continue;
 					}
 
@@ -760,7 +760,6 @@ jQuery(document).ready( function($) {
 
 	$( '#color_scheme' ).on( 'change', function() {
 		const select = $(this).val();
-		var palettes = [ '<?php echo implode( "', '", palette_schemes() ); ?>' ];
 
 		// Custom scheme light colors.
 		$( '#color_body' ).val( schemes[select]['light']['body'] );
