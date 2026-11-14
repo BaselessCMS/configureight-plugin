@@ -800,12 +800,12 @@ function get_palette( $slug = false ) {
 	if ( ! $slug ) {
 		return [[]];
 	}
-	if ( 'grayscale' !== $slug && 'grayscale-no-label' !== $slug && ! in_array( $slug, palette_schemes() ) ) {
+	if ( 'grayscale' !== $slug && 'grayscale_no_label' !== $slug && ! in_array( $slug, palette_schemes() ) ) {
 		return [ picker_colors_merged( true ) ];
 	}
 
 	$json = '';
-	$file = plugin()->phpPath() . "/assets/json/palettes/{$slug}-colors.json";
+	$file = plugin()->phpPath() . "/assets/json/palettes/{$slug}_colors.json";
 	$palette = [];
 
 	if ( file_exists( $file ) ) {
