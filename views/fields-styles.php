@@ -243,7 +243,7 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 <h3 class="form-heading"><?php lang()->p( 'Color Schemes' ); ?></h3>
 
 <?php printf(
-	lang()->get( '<p>Find details on the <a href="%s" target="_blank" rel="noopener noreferrer">color reference page</a>.</p>' ),
+	lang()->get( '<p>Find details about color schemes and color palettes on the <a href="%s" target="_blank" rel="noopener noreferrer">color reference page</a>.</p>' ),
 	$colors_page
 ); ?>
 
@@ -337,134 +337,6 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 				?>
 			</select>
 			<input type="hidden" id="custom_scheme_from" name="custom_scheme_from" value="<?php echo $custom_from; ?>" />
-
-			<ul class="form-color-thumbs-list">
-			<?php foreach ( $colors as $color => $option ) {
-
-				$initial = color_scheme_initial( $option['slug'] );
-
-				if ( ! array_key_exists( plugin()->color_scheme(), option_schemes_data() ) && plugin()->color_scheme() === $option['slug'] ) {
-					$display = 'flex';
-				} else {
-					$display = 'none';
-				}
-
-				if ( isset( $option['about'] ) && ! empty( $option['about'] ) ) {
-					printf(
-						'<li class="scheme-data" id="scheme_desc_%s" style="display: %s;"><p>%s</p></li>',
-						$option['slug'],
-						( plugin()->color_scheme() === $option['slug'] ? 'block' : 'none' ),
-						$option['about']
-					);
-				}
-				printf(
-					'<li class="scheme-data" id="light_scheme_label_%s" style="margin-top: 1em; display: %s;">%s</li>',
-					$option['slug'],
-					$display,
-					lang()->get( 'Light mode colors:' )
-				);
-				printf(
-					'<ul class="scheme-data" id="light_scheme_thumbs_%s" style="display: %s;">',
-					$option['slug'],
-					$display
-				);
-				$count = 0;
-				foreach ( $initial['light'] as $thumb ) {
-					$count++;
-					if ( ! empty( $thumb ) ) {
-						printf(
-							'<li id="%s_thumb_%s" class="form-tooltip" style="background-color: %s" title="%s"><span class="screen-reader-text">%s</span></li>',
-							$option['slug'],
-							$count,
-							$thumb,
-							$thumb,
-							$thumb
-						);
-					}
-				}
-				echo '</ul>';
-
-				printf(
-					'<li class="scheme-data" id="dark_scheme_label_%s" style="margin-top: 1em; display: %s;">%s</li>',
-					$option['slug'],
-					$display,
-					lang()->get( 'Dark mode colors:' )
-				);
-				printf(
-					'<ul class="scheme-data" id="dark_scheme_thumbs_%s" style="display: %s;">',
-					$option['slug'],
-					$display
-				);
-				$count = 0;
-				foreach ( $initial['dark'] as $thumb ) {
-					$count++;
-					if ( ! empty( $thumb ) ) {
-						printf(
-							'<li id="%s_thumb_%s_dark" class="form-tooltip" style="background-color: %s" title="%s"><span class="screen-reader-text">%s</span></li>',
-							$option['slug'],
-							$count,
-							$thumb,
-							$thumb,
-							$thumb
-						);
-					}
-				}
-				echo '</ul>';
-
-				printf(
-					'<li class="scheme-data" id="extra_scheme_label_%s" style="margin-top: 1em; display: %s;">%s</li>',
-					$option['slug'],
-					$display,
-					lang()->get( 'Color picker options:' )
-				);
-
-				if ( isset( $option['extra'] ) ) :
-				printf(
-					'<ul class="scheme-data" id="extra_scheme_thumbs_%s" style="display: %s;">',
-					$option['slug'],
-					$display
-				);
-				$count = 0;
-				foreach ( $option['extra'] as $thumb ) {
-					$count++;
-					if ( ! empty( $thumb ) ) {
-						printf(
-							'<li id="%s_thumb_%s_extra" class="form-tooltip" style="background-color: %s" title="%s"><span class="screen-reader-text">%s</span></li>',
-							$option['slug'],
-							$count,
-							$thumb,
-							$thumb,
-							$thumb
-						);
-					}
-				}
-				echo '</ul>';
-				endif;
-
-				printf(
-					'<ul class="scheme-data" id="grayscale-palette-%s" style="display: %s">',
-					$option['slug'],
-					$display
-				);
-
-				$count = 0;
-				foreach ( get_palette( 'grayscale-no-label' ) as $palette ) {
-					if ( ! empty( $palette ) ) {
-						foreach ( $palette as $thumb => $value ) {
-							$count++;
-							printf(
-								'<li id="grayscale_thumb_%s" class="form-tooltip" style="background-color: %s" title="%s"><span class="screen-reader-text">%s</span></li>',
-								$count,
-								$value,
-								$value,
-								$value
-							);
-						}
-					}
-				}
-				echo '</ul>';
-			} ?>
-			</ul>
 		</div>
 	</div>
 
@@ -922,19 +794,6 @@ jQuery(document).ready( function($) {
 		$( '#custom_scheme_from' ).val( select );
 		$( '#cover_blend' ).val( schemes[select]['media'] );
 		$( '#cover_text_color' ).val( '<?php echo plugin()->cover_text_default(); ?>' );
-
-		// Scheme data display.
-		$( '.scheme-data' ).css( 'display', 'none' );
-		$( '#scheme_desc_' + select ).css( 'display', 'block' );
-		if ( $.inArray( select, palettes ) == -1 ) {
-			$( '#light_scheme_label_' + select ).css( 'display', 'block' );
-			$( '#dark_scheme_label_' + select ).css( 'display', 'block' );
-			$( '#extra_scheme_label_' + select ).css( 'display', 'block' );
-			$( '#light_scheme_thumbs_' + select ).css( 'display', 'flex' );
-			$( '#dark_scheme_thumbs_' + select ).css( 'display', 'flex' );
-			$( '#extra_scheme_thumbs_' + select ).css( 'display', 'flex' );
-			$( '#grayscale-palette-' + select ).css( 'display', 'flex' );
-		}
 	});
 });
 </script>
