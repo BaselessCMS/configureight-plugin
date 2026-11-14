@@ -1,6 +1,6 @@
 {
 	"plugin-data" : {
-		"name"        : "Website Configuration",
-		"description" : "Options interface for the Configure 8 Bludit theme suite."
+		"name"        : "Theme Options",
+		"description" : "Settings for the Configure 8 Bludit theme."
 	}
 }
