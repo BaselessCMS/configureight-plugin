@@ -888,7 +888,7 @@ jQuery(document).ready( function($) {
 
 	$( '#color_scheme' ).on( 'change', function() {
 		const select = $(this).val();
-		var custom = [ '<?php echo implode( "', '", palette_schemes() ); ?>' ];
+		var palettes = [ '<?php echo implode( "', '", palette_schemes() ); ?>' ];
 
 		// Custom scheme light colors.
 		$( '#color_body' ).val( schemes[select]['light']['body'] );
@@ -926,7 +926,7 @@ jQuery(document).ready( function($) {
 		// Scheme data display.
 		$( '.scheme-data' ).css( 'display', 'none' );
 		$( '#scheme_desc_' + select ).css( 'display', 'block' );
-		if ( $.inArray( select, custom ) == -1 ) {
+		if ( $.inArray( select, palettes ) == -1 ) {
 			$( '#light_scheme_label_' + select ).css( 'display', 'block' );
 			$( '#dark_scheme_label_' + select ).css( 'display', 'block' );
 			$( '#extra_scheme_label_' + select ).css( 'display', 'block' );
