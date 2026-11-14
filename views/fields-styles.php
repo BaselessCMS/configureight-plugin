@@ -351,20 +351,20 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 
 				if ( isset( $option['about'] ) && ! empty( $option['about'] ) ) {
 					printf(
-						'<li id="scheme_desc_%s" style="display: %s;"><p>%s</p></li>',
+						'<li class="scheme-data" id="scheme_desc_%s" style="display: %s;"><p>%s</p></li>',
 						$option['slug'],
 						( plugin()->color_scheme() === $option['slug'] ? 'block' : 'none' ),
 						$option['about']
 					);
 				}
 				printf(
-					'<li id="light_scheme_label_%s" style="margin-top: 1em; display: %s;">%s</li>',
+					'<li class="scheme-data" id="light_scheme_label_%s" style="margin-top: 1em; display: %s;">%s</li>',
 					$option['slug'],
 					$display,
 					lang()->get( 'Light mode colors:' )
 				);
 				printf(
-					'<ul id="light_scheme_thumbs_%s" style="display: %s;">',
+					'<ul class="scheme-data" id="light_scheme_thumbs_%s" style="display: %s;">',
 					$option['slug'],
 					$display
 				);
@@ -385,13 +385,13 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 				echo '</ul>';
 
 				printf(
-					'<li id="dark_scheme_label_%s" style="margin-top: 1em; display: %s;">%s</li>',
+					'<li class="scheme-data" id="dark_scheme_label_%s" style="margin-top: 1em; display: %s;">%s</li>',
 					$option['slug'],
 					$display,
 					lang()->get( 'Dark mode colors:' )
 				);
 				printf(
-					'<ul id="dark_scheme_thumbs_%s" style="display: %s;">',
+					'<ul class="scheme-data" id="dark_scheme_thumbs_%s" style="display: %s;">',
 					$option['slug'],
 					$display
 				);
@@ -412,7 +412,7 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 				echo '</ul>';
 
 				printf(
-					'<li id="extra_scheme_label_%s" style="margin-top: 1em; display: %s;">%s</li>',
+					'<li class="scheme-data" id="extra_scheme_label_%s" style="margin-top: 1em; display: %s;">%s</li>',
 					$option['slug'],
 					$display,
 					lang()->get( 'Color picker options:' )
@@ -420,7 +420,7 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 
 				if ( isset( $option['extra'] ) ) :
 				printf(
-					'<ul id="extra_scheme_thumbs_%s" style="display: %s;">',
+					'<ul class="scheme-data" id="extra_scheme_thumbs_%s" style="display: %s;">',
 					$option['slug'],
 					$display
 				);
@@ -442,7 +442,7 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 				endif;
 
 				printf(
-					'<ul id="grayscale-palette-%s" style="display: %s">',
+					'<ul class="scheme-data" id="grayscale-palette-%s" style="display: %s">',
 					$option['slug'],
 					$display
 				);
@@ -851,88 +851,90 @@ function deleteBackground(el) {
 <script>
 jQuery(document).ready( function($) {
 
+	const schemes = { <?php
+
+	$colors = color_schemes();
+	foreach ( $colors as $color => $option ) {
+
+		$initial = color_scheme_initial( $option['slug'] );
+		$option_schemes = option_schemes_data();
+
+		if ( array_key_exists( $option['slug'], $option_schemes ) ) {
+			$initial = option_scheme_initial( $option['slug'] );
+		}
+
+		echo "{$option['slug']} : { 'light' : { ";
+		foreach ( $initial['light'] as $name => $value ) {
+			echo "'{$name}' : " . "'{$value}'";
+			if ( $name != array_key_last( $initial['light'] ) ) {
+				echo ',';
+			}
+		}
+		echo " }, 'dark' : { ";
+		foreach ( $initial['dark'] as $name => $value ) {
+			echo "'{$name}' : " . "'{$value}'";
+			if ( $name != array_key_last( $initial['dark'] ) ) {
+				echo ',';
+			}
+		}
+		echo '},';
+		echo "'media' : '{$initial['media']}'";
+		if ( $color != array_key_last( $colors ) ) {
+			echo '}, ';
+		} else {
+			echo '} ';
+		}
+	} ?> };
+
 	$( '#color_scheme' ).on( 'change', function() {
-		var scheme = $(this).val();
+		const select = $(this).val();
 		var custom = [ '<?php echo implode( "', '", palette_schemes() ); ?>' ];
 
-		<?php
-		$colors = color_schemes();
-		foreach ( $colors as $color => $option ) :
+		// Custom scheme light colors.
+		$( '#color_body' ).val( schemes[select]['light']['body'] );
+		$( '#color_text' ).val( schemes[select]['light']['text'] );
+		$( '#color_one' ).val( schemes[select]['light']['one'] );
+		$( '#color_two' ).val( schemes[select]['light']['two'] );
+		$( '#color_three' ).val( schemes[select]['light']['three'] );
+		$( '#color_four' ).val( schemes[select]['light']['four'] );
+		$( '#color_five' ).val( schemes[select]['light']['five'] );
+		$( '#color_six' ).val( schemes[select]['light']['six'] );
+		$( '#loader_bg_color' ).val( schemes[select]['light']['body'] );
+		$( '#loader_text_color' ).val( schemes[select]['light']['text'] );
+		$( '#header_bg_color' ).val( schemes[select]['light']['body'] );
+		$( '#header_text_color' ).val( schemes[select]['light']['text'] );
 
-			$initial = color_scheme_initial( $option['slug'] );
-			$option_schemes = option_schemes_data();
+		// Custom scheme dark colors.
+		$( '#color_body_dark' ).val( schemes[select]['dark']['body'] );
+		$( '#color_text_dark' ).val( schemes[select]['dark']['text'] );
+		$( '#color_one_dark' ).val( schemes[select]['dark']['one'] );
+		$( '#color_two_dark' ).val( schemes[select]['dark']['two'] );
+		$( '#color_three_dark' ).val( schemes[select]['dark']['three'] );
+		$( '#color_four_dark' ).val( schemes[select]['dark']['four'] );
+		$( '#color_five_dark' ).val( schemes[select]['dark']['five'] );
+		$( '#color_six_dark' ).val( schemes[select]['dark']['six'] );
+		$( '#loader_bg_color_dark' ).val( schemes[select]['dark']['body'] );
+		$( '#loader_text_color_dark' ).val( schemes[select]['dark']['text'] );
+		$( '#header_bg_color_dark' ).val( schemes[select]['dark']['body'] );
+		$( '#header_text_color_dark' ).val( schemes[select]['dark']['text'] );
 
-			if ( array_key_exists( $option['slug'], $option_schemes ) ) {
-				$initial = option_scheme_initial( $option['slug'] );
-			}
+		// Other.
+		$( '#custom_scheme_from' ).val( select );
+		$( '#cover_blend' ).val( schemes[select]['media'] );
+		$( '#cover_text_color' ).val( '<?php echo plugin()->cover_text_default(); ?>' );
 
-			$slug = $option['slug'];
-		?>
-		if ( scheme == '<?php echo $slug; ?>' ) {
-
-			$( '#scheme_desc_<?php echo $slug; ?>' ).css( 'display', 'block' );
-
-			// Show scheme thumbnails if not one of the custom schemes.
-			if ( $.inArray( scheme, custom ) == -1 ) {
-				$( '#light_scheme_label_<?php echo $slug; ?>' ).css( 'display', 'block' );
-				$( '#dark_scheme_label_<?php echo $slug; ?>' ).css( 'display', 'block' );
-				$( '#extra_scheme_label_<?php echo $slug; ?>' ).css( 'display', 'block' );
-				$( '#light_scheme_thumbs_<?php echo $slug; ?>' ).css( 'display', 'flex' );
-				$( '#dark_scheme_thumbs_<?php echo $slug; ?>' ).css( 'display', 'flex' );
-				$( '#extra_scheme_thumbs_<?php echo $slug; ?>' ).css( 'display', 'flex' );
-				$( '#grayscale-palette-<?php echo $slug; ?>' ).css( 'display', 'flex' );
-			}
-
-			// Custom scheme light colors.
-			$( '#color_body' ).val( '<?php echo $initial['light']['body']; ?>' );
-			$( '#color_text' ).val( '<?php echo $initial['light']['text']; ?>' );
-			$( '#color_one' ).val( '<?php echo $initial['light']['one']; ?>' );
-			$( '#color_two' ).val( '<?php echo $initial['light']['two']; ?>' );
-			$( '#color_three' ).val( '<?php echo $initial['light']['three']; ?>' );
-			$( '#color_four' ).val( '<?php echo $initial['light']['four']; ?>' );
-			$( '#color_five' ).val( '<?php echo $initial['light']['five']; ?>' );
-			$( '#color_six' ).val( '<?php echo $initial['light']['six']; ?>' );
-
-			$( '#loader_bg_color' ).val( '<?php echo $initial['light']['body']; ?>' );
-			$( '#loader_text_color' ).val( '<?php echo $initial['light']['text']; ?>' );
-
-			$( '#header_bg_color' ).val( '<?php echo $initial['light']['body']; ?>' );
-			$( '#header_text_color' ).val( '<?php echo $initial['light']['text']; ?>' );
-
-			// Custom scheme dark colors.
-			$( '#color_body_dark' ).val( '<?php echo $initial['dark']['body']; ?>' );
-			$( '#color_text_dark' ).val( '<?php echo $initial['dark']['text']; ?>' );
-			$( '#color_one_dark' ).val( '<?php echo $initial['dark']['one']; ?>' );
-			$( '#color_two_dark' ).val( '<?php echo $initial['dark']['two']; ?>' );
-			$( '#color_three_dark' ).val( '<?php echo $initial['dark']['three']; ?>' );
-			$( '#color_four_dark' ).val( '<?php echo $initial['dark']['four']; ?>' );
-			$( '#color_five_dark' ).val( '<?php echo $initial['dark']['five']; ?>' );
-			$( '#color_six_dark' ).val( '<?php echo $initial['dark']['six']; ?>' );
-
-			$( '#loader_bg_color_dark' ).val( '<?php echo $initial['dark']['body']; ?>' );
-			$( '#loader_text_color_dark' ).val( '<?php echo $initial['dark']['text']; ?>' );
-
-			$( '#header_bg_color_dark' ).val( '<?php echo $initial['dark']['body']; ?>' );
-			$( '#header_text_color_dark' ).val( '<?php echo $initial['dark']['text']; ?>' );
-
-			// Other.
-			$( '#custom_scheme_from' ).val( '<?php echo $slug; ?>' );
-			$( '#cover_blend' ).val( '<?php echo ( isset( $initial['media'] ) ? $initial['media'] : $initial['light']['three'] ); ?>' );
-			$( '#cover_text_color' ).val( '<?php echo plugin()->cover_text_default(); ?>' );
-
-		} else {
-
-			// Scheme descriptions, labels, and color thumbnails.
-			$( '#scheme_desc_<?php echo $slug; ?>' ).css( 'display', 'none' );
-			$( '#light_scheme_label_<?php echo $slug; ?>' ).css( 'display', 'none' );
-			$( '#dark_scheme_label_<?php echo $slug; ?>' ).css( 'display', 'none' );
-			$( '#extra_scheme_label_<?php echo $slug; ?>' ).css( 'display', 'none' );
-			$( '#light_scheme_thumbs_<?php echo $slug; ?>' ).css( 'display', 'none' );
-			$( '#dark_scheme_thumbs_<?php echo $slug; ?>' ).css( 'display', 'none' );
-			$( '#extra_scheme_thumbs_<?php echo $slug; ?>' ).css( 'display', 'none' );
-			$( '#grayscale-palette-<?php echo $slug; ?>' ).css( 'display', 'none' );
+		// Scheme data display.
+		$( '.scheme-data' ).css( 'display', 'none' );
+		$( '#scheme_desc_' + select ).css( 'display', 'block' );
+		if ( $.inArray( select, custom ) == -1 ) {
+			$( '#light_scheme_label_' + select ).css( 'display', 'block' );
+			$( '#dark_scheme_label_' + select ).css( 'display', 'block' );
+			$( '#extra_scheme_label_' + select ).css( 'display', 'block' );
+			$( '#light_scheme_thumbs_' + select ).css( 'display', 'flex' );
+			$( '#dark_scheme_thumbs_' + select ).css( 'display', 'flex' );
+			$( '#extra_scheme_thumbs_' + select ).css( 'display', 'flex' );
+			$( '#grayscale-palette-' + select ).css( 'display', 'flex' );
 		}
-		<?php endforeach; ?>
 	});
 });
 </script>
