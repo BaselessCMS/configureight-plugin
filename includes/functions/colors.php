@@ -287,9 +287,9 @@ function option_schemes_data() {
 				'text'  => '#262626',
 				'one'   => '#0044dd',
 				'two'   => '#4073e6',
-				'three' => '#0044dd',
-				'four'  => '#4073e6',
-				'five'  => '#0044dd',
+				'three' => '#003abc',
+				'four'  => '#0044dd',
+				'five'  => '#003abc',
 				'six'   => '#4073e6'
 			],
 			'dark' => [
@@ -297,10 +297,10 @@ function option_schemes_data() {
 				'text'  => '#ffffff',
 				'one'   => '#4073e6',
 				'two'   => '#0044dd',
-				'three' => '#4073e6',
+				'three' => '#668feb',
 				'four'  => '#0044dd',
 				'five'  => '#0044dd',
-				'six'   => '#4073e6'
+				'six'   => '#668feb'
 			]
 		],
 		'ant-design' => [
@@ -929,9 +929,9 @@ function color_schemes_data() {
 				'text'  => '#262626',
 				'one'   => '#0044dd',
 				'two'   => '#4073e6',
-				'three' => '#0044dd',
-				'four'  => '#4073e6',
-				'five'  => '#0044dd',
+				'three' => '#003abc',
+				'four'  => '#0044dd',
+				'five'  => '#003abc',
 				'six'   => '#4073e6'
 			],
 			'dark' => [
@@ -939,10 +939,10 @@ function color_schemes_data() {
 				'text'  => '#ffffff',
 				'one'   => '#4073e6',
 				'two'   => '#0044dd',
-				'three' => '#4073e6',
+				'three' => '#668feb',
 				'four'  => '#0044dd',
 				'five'  => '#0044dd',
-				'six'   => '#4073e6'
+				'six'   => '#668feb'
 			],
 			'extra' => [
 				'red'        => '#ee0000',
@@ -994,20 +994,20 @@ function color_schemes_data() {
 				'text'  => '#ffffff',
 				'one'   => '#4073e6',
 				'two'   => '#0044dd',
-				'three' => '#4073e6',
+				'three' => '#668feb',
 				'four'  => '#0044dd',
 				'five'  => '#0044dd',
-				'six'   => '#4073e6'
+				'six'   => '#668feb'
 			],
 			'dark' => [
 				'body'  => '#161616',
 				'text'  => '#ffffff',
 				'one'   => '#4073e6',
 				'two'   => '#0044dd',
-				'three' => '#4073e6',
+				'three' => '#668feb',
 				'four'  => '#0044dd',
 				'five'  => '#0044dd',
-				'six'   => '#4073e6'
+				'six'   => '#668feb'
 			],
 			'extra' => [
 				'red'        => '#ee0000',
