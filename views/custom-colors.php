@@ -34,23 +34,22 @@ if ( in_array( $custom_from, palette_schemes() ) ) {
 	$colors = color_scheme_initial( $custom_from );
 }
 
-?>
+if ( in_array( plugin()->color_scheme(), palette_schemes() ) ) {
+	$message = lang()->get( 'Set color options using the current color palette.' );
+} else {
+	$message = lang()->get( 'Customize the current color scheme.' );
+}
 
+?>
 <div id="custom_color_scheme_fields">
 
 	<h3 class="form-heading"><?php echo custom_scheme_heading(); ?></h3>
 
-	<?php if ( in_array( plugin()->color_scheme(), palette_schemes() ) ) : ?>
-
-	<p><?php lang()->p( 'Set color options using the current color palette.' ); ?></p>
-
-	<?php else : ?>
-
-	<p><?php lang()->p( 'Customize the current color scheme.' ); ?></p>
-
-	<?php endif; ?>
-
-	<p><?php lang()->p( 'Note that custom values for the color fields may be typed or pasted, using the hex or rgba format. It is not necessary to choose a color from the selected palette.' ); ?></p>
+	<?php printf(
+		'<p>%s %s</p>',
+		$message,
+		lang()->get( 'Note that custom values for the color fields may be typed or pasted, using the hex or rgba format. It is not necessary to choose a color from the selected palette.' )
+	); ?>
 
 	<div class="tab-content hide-if-no-js" data-toggle="tabslet" data-deeplinking="false" data-animation="true">
 
