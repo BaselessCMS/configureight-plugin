@@ -519,14 +519,14 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 				if ( array_key_exists( 'about', $scheme ) ) {
 					if ( ! empty( $scheme['about'] ) ) {
 						printf(
-							'<p id="font-scheme-about-%s" style="display: %s;">%s</p>',
+							'<p class="scheme-data" id="font-scheme-about-%s" style="display: %s;">%s</p>',
 							$slug,
 							( plugin()->font_scheme() === $slug ? 'block' : 'none' ),
 							$scheme['about']
 						);
 					} else {
 						printf(
-						'<p id="font-scheme-about-%s" style="display: %s;">%s</p>',
+						'<p class="scheme-data" id="font-scheme-about-%s" style="display: %s;">%s</p>',
 						$slug,
 						( plugin()->font_scheme() === $slug ? 'block' : 'none' ),
 						lang()->get( 'See preview below.' )
@@ -534,7 +534,7 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 					}
 				} else {
 					printf(
-						'<p id="font-scheme-about-%s" style="display: %s;">%s</p>',
+						'<p class="scheme-data" id="font-scheme-about-%s" style="display: %s;">%s</p>',
 						$slug,
 						( plugin()->font_scheme() === $slug ? 'block' : 'none' ),
 						lang()->get( 'See preview below.' )
@@ -574,7 +574,7 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 					ucwords( $scheme['name'] )
 				);
 				printf(
-					'<li id="font-scheme-preview-%1s" style="display: %2s; ">%3s %4s %5s %6s</li>' . "\r",
+					'<li class="scheme-data" id="font-scheme-preview-%1s" style="display: %2s; ">%3s %4s %5s %6s</li>' . "\r",
 					$slug,
 					( plugin()->font_scheme() === $slug ? 'block' : 'none' ),
 
@@ -864,16 +864,16 @@ jQuery(document).ready( function($) {
 		}
 
 		echo "{$option['slug']} : { 'light' : { ";
-		foreach ( $initial['light'] as $name => $value ) {
-			echo "'{$name}' : " . "'{$value}'";
-			if ( $name != array_key_last( $initial['light'] ) ) {
+		foreach ( $initial['light'] as $key => $value ) {
+			echo "'{$key}' : " . "'{$value}'";
+			if ( $key != array_key_last( $initial['light'] ) ) {
 				echo ',';
 			}
 		}
 		echo " }, 'dark' : { ";
-		foreach ( $initial['dark'] as $name => $value ) {
-			echo "'{$name}' : " . "'{$value}'";
-			if ( $name != array_key_last( $initial['dark'] ) ) {
+		foreach ( $initial['dark'] as $key => $value ) {
+			echo "'{$key}' : " . "'{$value}'";
+			if ( $key != array_key_last( $initial['dark'] ) ) {
 				echo ',';
 			}
 		}
@@ -942,74 +942,120 @@ jQuery(document).ready( function($) {
 <script>
 jQuery(document).ready( function($) {
 
-	$( '#font_scheme' ).on( 'change', function() {
-		var scheme = $(this).val();
+	const schemes = { <?php foreach ( $fonts as $font => $option ) {
 
-		<?php foreach ( $fonts as $font => $scheme ) : ?>
-		if ( scheme == '<?php echo $scheme['slug']; ?>' ) {
-
-			// General text weight.
-			$( '#wght_text_default' ).val( '<?php echo $scheme['text']['weight']; ?>' );
-			$( '#wght_text_value' ).html( '<?php echo $scheme['text']['weight']; ?>' );
-			$( '#wght_text' ).attr( 'min', '<?php echo $scheme['text']['min']; ?>' );
-			$( '#wght_text' ).attr( 'max', '<?php echo $scheme['text']['max']; ?>' );
-			$( '#wght_text' ).attr( 'step', '<?php echo $scheme['text']['step']; ?>' );
-			$( '#wght_text' ).val( '<?php echo $scheme['text']['weight']; ?>' );
-
-			// General text letter spacing.
-			$( '#space_text' ).val( '<?php echo $scheme['text']['space']; ?>' );
-			$( '#space_text_default' ).val( '<?php echo $scheme['text']['space']; ?>' );
-			$( '#space_text_value' ).html( '<?php echo $scheme['text']['space']; ?>' );
-
-			// Primary headings weight.
-			$( '#wght_primary_default' ).val( '<?php echo $scheme['primary']['weight']; ?>' );
-			$( '#wght_primary_value' ).html( '<?php echo $scheme['primary']['weight']; ?>' );
-			$( '#wght_primary' ).attr( 'min', '<?php echo $scheme['primary']['min']; ?>' );
-			$( '#wght_primary' ).attr( 'max', '<?php echo $scheme['primary']['max']; ?>' );
-			$( '#wght_primary' ).attr( 'step', '<?php echo $scheme['primary']['step']; ?>' );
-			$( '#wght_primary' ).val( '<?php echo $scheme['primary']['weight']; ?>' );
-
-			// Primary headings letter spacing.
-			$( '#space_primary' ).val( '<?php echo $scheme['primary']['space']; ?>' );
-			$( '#space_primary_default' ).val( '<?php echo $scheme['primary']['space']; ?>' );
-			$( '#space_primary_value' ).html( '<?php echo $scheme['primary']['space']; ?>' );
-
-			// Secondary headings weight.
-			$( '#wght_secondary_default' ).val( '<?php echo $scheme['secondary']['weight']; ?>' );
-			$( '#wght_secondary_value' ).html( '<?php echo $scheme['secondary']['weight']; ?>' );
-			$( '#wght_secondary' ).attr( 'min', '<?php echo $scheme['secondary']['min']; ?>' );
-			$( '#wght_secondary' ).attr( 'max', '<?php echo $scheme['secondary']['max']; ?>' );
-			$( '#wght_secondary' ).attr( 'step', '<?php echo $scheme['secondary']['step']; ?>' );
-			$( '#wght_secondary' ).val( '<?php echo $scheme['secondary']['weight']; ?>' );
-
-			// Secondary headings letter spacing.
-			$( '#space_secondary' ).val( '<?php echo $scheme['secondary']['space']; ?>' );
-			$( '#space_secondary_default' ).val( '<?php echo $scheme['secondary']['space']; ?>' );
-			$( '#space_secondary_value' ).html( '<?php echo $scheme['secondary']['space']; ?>' );
-
-			// Main navigation weight.
-			$( '#wght_display_default' ).val( '<?php echo $scheme['display']['weight']; ?>' );
-			$( '#wght_display_value' ).html( '<?php echo $scheme['display']['weight']; ?>' );
-			$( '#wght_display' ).attr( 'min', '<?php echo $scheme['display']['min']; ?>' );
-			$( '#wght_display' ).attr( 'max', '<?php echo $scheme['display']['max']; ?>' );
-			$( '#wght_display' ).attr( 'step', '<?php echo $scheme['display']['step']; ?>' );
-			$( '#wght_display' ).val( '<?php echo $scheme['display']['weight']; ?>' );
-
-			// Main navigation letter spacing.
-			$( '#space_display' ).val( '<?php echo $scheme['display']['space']; ?>' );
-			$( '#space_display_default' ).val( '<?php echo $scheme['display']['space']; ?>' );
-			$( '#space_display_value' ).html( '<?php echo $scheme['display']['space']; ?>' );
+		echo "{$option['slug']} : { ";
+		echo "'text' : { ";
+		foreach ( $option['text'] as $key => $value ) {
+			if ( 'family' == $key || 'stack' == $key || 'var' == $key || 'variant' == $key ) {
+				continue;
+			}
+			echo "'{$key}' : " . "'{$value}'";
+			if ( $key != array_key_last( $option['text'] ) ) {
+				echo ', ';
+			}
 		}
+		echo '}, ';
+		echo "'primary' : { ";
+		foreach ( $option['primary'] as $key => $value ) {
+			if ( 'family' == $key || 'stack' == $key || 'var' == $key || 'variant' == $key ) {
+				continue;
+			}
+			echo "'{$key}' : " . "'{$value}'";
+			if ( $key != array_key_last( $option['primary'] ) ) {
+				echo ', ';
+			}
+		}
+		echo '}, ';
+		echo "'secondary' : { ";
+		foreach ( $option['secondary'] as $key => $value ) {
+			if ( 'family' == $key || 'stack' == $key || 'var' == $key || 'variant' == $key ) {
+				continue;
+			}
+			echo "'{$key}' : " . "'{$value}'";
+			if ( $key != array_key_last( $option['secondary'] ) ) {
+				echo ', ';
+			}
+		}
+		echo '}, ';
+		echo "'display' : { ";
+		foreach ( $option['display'] as $key => $value ) {
+			if ( 'family' == $key || 'stack' == $key || 'var' == $key || 'variant' == $key ) {
+				continue;
+			}
+			echo "'{$key}' : " . "'{$value}'";
+			if ( $key != array_key_last( $option['display'] ) ) {
+				echo ', ';
+			}
+		}
+		echo '} ';
 
-		// Scheme preview.
-		if ( scheme == '<?php echo $scheme['slug']; ?>' ) {
-			$( '#font-scheme-preview-<?php echo $scheme['slug']; ?>' ).css( 'display', 'block' );
-			$( '#font-scheme-about-<?php echo $scheme['slug']; ?>' ).css( 'display', 'block' );
+		if ( $font != array_key_last( $fonts ) ) {
+			echo '}, ';
 		} else {
-			$( '#font-scheme-preview-<?php echo $scheme['slug']; ?>' ).css( 'display', 'none' );
-			$( '#font-scheme-about-<?php echo $scheme['slug']; ?>' ).css( 'display', 'none' );
+			echo '} ';
 		}
-		<?php endforeach; ?>
+	} ?> };
+
+	$( '#font_scheme' ).on( 'change', function() {
+		const select = $(this).val();
+
+		// General text weight.
+		$( '#wght_text_default' ).val( schemes[select]['text']['weight'] );
+		$( '#wght_text_value' ).html( schemes[select]['text']['weight'] );
+		$( '#wght_text' ).attr( 'min', schemes[select]['text']['min'] );
+		$( '#wght_text' ).attr( 'max', schemes[select]['text']['max'] );
+		$( '#wght_text' ).attr( 'step', schemes[select]['text']['step'] );
+		$( '#wght_text' ).val( schemes[select]['text']['weight'] );
+
+		// General text letter spacing.
+		$( '#space_text' ).val( schemes[select]['text']['space'] );
+		$( '#space_text_default' ).val( schemes[select]['text']['space'] );
+		$( '#space_text_value' ).html( schemes[select]['text']['space'] );
+
+		// Primary headings weight.
+		$( '#wght_primary_default' ).val( schemes[select]['primary']['weight'] );
+		$( '#wght_primary_value' ).html( schemes[select]['primary']['weight'] );
+		$( '#wght_primary' ).attr( 'min', schemes[select]['primary']['min'] );
+		$( '#wght_primary' ).attr( 'max', schemes[select]['primary']['max'] );
+		$( '#wght_primary' ).attr( 'step', schemes[select]['primary']['step'] );
+		$( '#wght_primary' ).val( schemes[select]['primary']['weight'] );
+
+		// Primary headings letter spacing.
+		$( '#space_primary' ).val( schemes[select]['primary']['space'] );
+		$( '#space_primary_default' ).val( schemes[select]['primary']['space'] );
+		$( '#space_primary_value' ).html( schemes[select]['primary']['space'] );
+
+		// Secondary headings weight.
+		$( '#wght_secondary_default' ).val( schemes[select]['secondary']['weight'] );
+		$( '#wght_secondary_value' ).html( schemes[select]['secondary']['weight'] );
+		$( '#wght_secondary' ).attr( 'min', schemes[select]['secondary']['min'] );
+		$( '#wght_secondary' ).attr( 'max', schemes[select]['secondary']['max'] );
+		$( '#wght_secondary' ).attr( 'step', schemes[select]['secondary']['step'] );
+		$( '#wght_secondary' ).val( schemes[select]['secondary']['weight'] );
+
+		// Secondary headings letter spacing.
+		$( '#space_secondary' ).val( schemes[select]['secondary']['space'] );
+		$( '#space_secondary_default' ).val( schemes[select]['secondary']['space'] );
+		$( '#space_secondary_value' ).html( schemes[select]['secondary']['space'] );
+
+		// Main navigation weight.
+		$( '#wght_display_default' ).val( schemes[select]['display']['weight'] );
+		$( '#wght_display_value' ).html( schemes[select]['display']['weight'] );
+		$( '#wght_display' ).attr( 'min', schemes[select]['display']['min'] );
+		$( '#wght_display' ).attr( 'max', schemes[select]['display']['max'] );
+		$( '#wght_display' ).attr( 'step', schemes[select]['display']['step'] );
+		$( '#wght_display' ).val( schemes[select]['display']['weight'] );
+
+		// Main navigation letter spacing.
+		$( '#space_display' ).val( schemes[select]['display']['space'] );
+		$( '#space_display_default' ).val( schemes[select]['display']['space'] );
+		$( '#space_display_value' ).html( schemes[select]['display']['space'] );
+
+		// Scheme data display.
+		$( '.scheme-data' ).css( 'display', 'none' );
+		$( '#font-scheme-preview-' + select ).css( 'display', 'block' );
+		$( '#font-scheme-about-' + select ).css( 'display', 'block' );
 	});
 	$( '.display-sample' ).click( function(e) {
 		e.preventDefault();
