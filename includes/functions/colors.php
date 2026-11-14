@@ -303,8 +303,8 @@ function option_schemes_data() {
 				'six'   => '#668feb'
 			]
 		],
-		'ant-design' => [
-			'slug'  => 'ant-design',
+		'ant_design' => [
+			'slug'  => 'ant_design',
 			'name'  => lang()->get( 'Ant Design Colors' ),
 			'about' => lang()->get( 'The colors included with the <a href="https://ant-design.antgroup.com/docs/spec/colors" target="_blank" rel="noopener noreferrer">Ant Design</a> UI system.' ),
 			'media' => '#0958d9',
@@ -485,8 +485,8 @@ function option_schemes_data() {
 				'six'   => '#2196f3'
 			]
 		],
-		'open-color' => [
-			'slug'  => 'open-color',
+		'open_color' => [
+			'slug'  => 'open_color',
 			'name'  => lang()->get( 'Open Color Colors' ),
 			'about' => lang()->get( 'The complete selection of colors included with the <a href="https://yeun.github.io/open-color/" target="_blank" rel="noopener noreferrer">Open Color</a> palette.' ),
 			'media' => '#1c7ed6',
@@ -511,10 +511,11 @@ function option_schemes_data() {
 				'six'   => '#339af0'
 			]
 		],
-		'open-props' => [
-			'slug'  => 'open-props',
+		'open_props' => [
+			'slug'  => 'open_props',
 			'name'  => lang()->get( 'Open Props Colors' ),
 			'about' => lang()->get( 'The complete selection of colors included with the <a href="https://open-props.style/" target="_blank" rel="noopener noreferrer">Open Props</a> design system.' ),
+			'media' => '#0a58ca',
 			'light' => [
 				'body'  => '#ffffff',
 				'text'  => '#343a40',
@@ -540,6 +541,7 @@ function option_schemes_data() {
 			'slug'  => 'pantone',
 			'name'  => lang()->get( 'Pantone Colors' ),
 			'about' => lang()->get( 'Every Pantone "Color of the Year" since beginning in 2000, expanded with tints & shades. The 7th color of each spectrum is the original, named color. The years 2016 and 2021 had two co-winning colors.' ),
+			'media' => '#0a58ca',
 			'light' => [
 				'body'  => '#ffffff',
 				'text'  => '#343a40',
@@ -565,6 +567,7 @@ function option_schemes_data() {
 			'slug'  => 'radix',
 			'name'  => lang()->get( 'Radix Colors' ),
 			'about' => lang()->get( 'The complete selection of colors included with the <a href="https://www.radix-ui.com/colors" target="_blank" rel="noopener noreferrer">Radix</a> UI color system.' ),
+			'media' => '#0a58ca',
 			'light' => [
 				'body'  => '#ffffff',
 				'text'  => '#343a40',
@@ -586,10 +589,11 @@ function option_schemes_data() {
 				'six'   => '#3d8bfd'
 			]
 		],
-		'sanzo-wada' => [
-			'slug'  => 'sanzo-wada',
+		'sanzo_wada' => [
+			'slug'  => 'sanzo_wada',
 			'name'  => lang()->get( 'Sanzo Wada Colors' ),
 			'about' => lang()->get( "The complete selection of colors included in <a href='https://en.wikipedia.org/wiki/Sanzo_Wada' target='_blank' rel='noopener noreferrer'>Sanzo Wada's</a> reference book <em>A Dictionary of Color Combinations</em>, with additional colors derived from his methods." ),
+			'media' => '#0a58ca',
 			'light' => [
 				'body'  => '#ffffff',
 				'text'  => '#343a40',
@@ -615,6 +619,7 @@ function option_schemes_data() {
 			'slug'  => 'spectrum',
 			'name'  => lang()->get( 'Spectrum Colors' ),
 			'about' => lang()->get( 'The complete selection of colors included with the <a href="https://spectrum.adobe.com/page/color-palette/" target="_blank" rel="noopener noreferrer">Adobe Spectrum</a> color system.' ),
+			'media' => '#0a58ca',
 			'light' => [
 				'body'  => '#ffffff',
 				'text'  => '#343a40',
@@ -640,6 +645,7 @@ function option_schemes_data() {
 			'slug'  => 'tailwind',
 			'name'  => lang()->get( 'Tailwind Colors' ),
 			'about' => lang()->get( 'The complete selection of colors included with the <a href="https://tailwindcss.com/docs/colors" target="_blank" rel="noopener noreferrer">Tailwind CSS</a> framework for website UI and frontend theme building.' ),
+			'media' => '#0a58ca',
 			'light' => [
 				'body'  => '#ffffff',
 				'text'  => '#343a40',
@@ -665,6 +671,7 @@ function option_schemes_data() {
 			'slug'  => 'untitled',
 			'name'  => lang()->get( 'Untitled Colors' ),
 			'about' => lang()->get( 'The complete selection of colors included with the <a href="https://untitled-theme.xyz/colors" target="_blank" rel="noopener noreferrer">Untitled UI</a> kit of colors and icons.' ),
+			'media' => '#0a58ca',
 			'light' => [
 				'body'  => '#ffffff',
 				'text'  => '#343a40',
@@ -686,10 +693,11 @@ function option_schemes_data() {
 				'six'   => '#3d8bfd'
 			]
 		],
-		'web-awesome' => [
-			'slug'  => 'web-awesome',
+		'web_awesome' => [
+			'slug'  => 'web_awesome',
 			'name'  => lang()->get( 'Web Awesome Colors' ),
 			'about' => lang()->get( 'The complete selection of colors included with the <a href="https://webawesome.com/docs/tokens/color/" target="_blank" rel="noopener noreferrer">Web Awesome</a> UI kit.' ),
+			'media' => '#0a58ca',
 			'light' => [
 				'body'  => '#ffffff',
 				'text'  => '#343a40',
@@ -715,6 +723,7 @@ function option_schemes_data() {
 			'slug'  => 'names',
 			'name'  => lang()->get( 'CSS Named Colors' ),
 			'about' => lang()->get( 'The complete selection of colors <a href="https://drafts.csswg.org/css-color-4/#named-colors" target="_blank" rel="noopener noreferrer">officially named</a> by the World Wide Web Consortium (W3C).' ),
+			'media' => '#0a58ca',
 			'light' => [
 				'body'  => '#ffffff',
 				'text'  => '#343a40',
@@ -1488,8 +1497,8 @@ function color_schemes_data() {
 				'six'   => '#f5a313'
 			]
 		],
-		'harvest-moon' => [
-			'slug'     => 'harvest-moon',
+		'moonrise' => [
+			'slug'     => 'moonrise',
 			'name'     => lang()->get( 'Harvest Moon' ),
 			'about'    => lang()->get( 'The big, beautiful Autumn moon in the night sky. <br />This is a dark-only scheme.' ),
 			'category' => 'nature',
@@ -1570,7 +1579,7 @@ function color_schemes_data() {
 			]
 		],
 
-		// Sanzo Wada
+		/* Sanzo Wada
 		'edo-01' => [
 			'slug'     => 'edo-01',
 			'name'     => lang()->get( 'Bitter Orange & Navy' ),
@@ -1976,7 +1985,7 @@ function color_schemes_data() {
 				'five'  => '#3e2a1e',
 				'six'   => '#8a6a47'
 			]
-		]
+		]*/
 	];
 	return $schemes;
 }
