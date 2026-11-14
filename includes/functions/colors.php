@@ -723,26 +723,26 @@ function option_schemes_data() {
 			'slug'  => 'names',
 			'name'  => lang()->get( 'CSS Named Colors' ),
 			'about' => lang()->get( 'The complete selection of colors <a href="https://drafts.csswg.org/css-color-4/#named-colors" target="_blank" rel="noopener noreferrer">officially named</a> by the World Wide Web Consortium (W3C).' ),
-			'media' => '#0a58ca',
+			'media' => '#0000cd',
 			'light' => [
 				'body'  => '#ffffff',
-				'text'  => '#343a40',
-				'one'   => '#0a58ca',
-				'two'   => '#3d8bfd',
-				'three' => '#0a58ca',
-				'four'  => '#0d6efd',
-				'five'  => '#084298',
-				'six'   => '#0d6efd'
+				'text'  => '#2f4f4f',
+				'one'   => '#0000cd',
+				'two'   => '#0000ff',
+				'three' => '#0000cd',
+				'four'  => '#0000ff',
+				'five'  => '#00008b',
+				'six'   => '#0000ff'
 			],
 			'dark' => [
-				'body'  => '#111213',
-				'text'  => '#f7f8f8',
-				'one'   => '#3d8bfd',
-				'two'   => '#6ea8fe',
-				'three' => '#0d6efd',
-				'four'  => '#6ea8fe',
-				'five'  => '#0a58ca',
-				'six'   => '#3d8bfd'
+				'body'  => '#000000',
+				'text'  => '#f8f8ff',
+				'one'   => '#0000ff',
+				'two'   => '#0000cd',
+				'three' => '#0000cd',
+				'four'  => '#0000ff',
+				'five'  => '#00008b',
+				'six'   => '#0000ff'
 			]
 		]
 	];
@@ -2512,10 +2512,17 @@ function define_color_scheme() {
 	}
 
 	// Admin body.
-	$colors[] = sprintf(
-		'--cfe-admin--body--bg-color: %s;',
-		plugin()->color_body()
-	);
+	if ( plugin()->use_dark_scheme() ) {
+		$colors[] = sprintf(
+			'--cfe-admin--body--bg-color: %s;',
+			plugin()->color_body_dark()
+		);
+	} else {
+		$colors[] = sprintf(
+			'--cfe-admin--body--bg-color: %s;',
+			plugin()->color_body()
+		);
+	}
 
 	// Site header.
 	$colors[] = sprintf(
