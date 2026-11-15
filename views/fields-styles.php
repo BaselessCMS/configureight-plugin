@@ -750,6 +750,7 @@ jQuery(document).ready( function($) {
 			}
 		}
 		echo '},';
+		echo "'name' : '{$option['name']}',";
 		echo "'media' : '{$initial['media']}'";
 		if ( $color != array_key_last( $colors ) ) {
 			echo '}, ';
@@ -762,37 +763,39 @@ jQuery(document).ready( function($) {
 		const select = $(this).val();
 
 		// Custom scheme light colors.
-		$( '#color_body' ).val( schemes[select]['light']['body'] );
-		$( '#color_text' ).val( schemes[select]['light']['text'] );
-		$( '#color_one' ).val( schemes[select]['light']['one'] );
-		$( '#color_two' ).val( schemes[select]['light']['two'] );
-		$( '#color_three' ).val( schemes[select]['light']['three'] );
-		$( '#color_four' ).val( schemes[select]['light']['four'] );
-		$( '#color_five' ).val( schemes[select]['light']['five'] );
-		$( '#color_six' ).val( schemes[select]['light']['six'] );
-		$( '#loader_bg_color' ).val( schemes[select]['light']['body'] );
-		$( '#loader_text_color' ).val( schemes[select]['light']['text'] );
-		$( '#header_bg_color' ).val( schemes[select]['light']['body'] );
-		$( '#header_text_color' ).val( schemes[select]['light']['text'] );
+		$( '#color_body' ).spectrum( 'set', schemes[select]['light']['body'] );
+		$( '#color_text' ).spectrum( 'set', schemes[select]['light']['text'] );
+		$( '#color_one' ).spectrum( 'set', schemes[select]['light']['one'] );
+		$( '#color_two' ).spectrum( 'set', schemes[select]['light']['two'] );
+		$( '#color_three' ).spectrum( 'set', schemes[select]['light']['three'] );
+		$( '#color_four' ).spectrum( 'set', schemes[select]['light']['four'] );
+		$( '#color_five' ).spectrum( 'set', schemes[select]['light']['five'] );
+		$( '#color_six' ).spectrum( 'set', schemes[select]['light']['six'] );
+		$( '#loader_bg_color' ).spectrum( 'set', schemes[select]['light']['body'] );
+		$( '#loader_text_color' ).spectrum( 'set', schemes[select]['light']['text'] );
+		$( '#header_bg_color' ).spectrum( 'set', schemes[select]['light']['body'] );
+		$( '#header_text_color' ).spectrum( 'set', schemes[select]['light']['text'] );
 
 		// Custom scheme dark colors.
-		$( '#color_body_dark' ).val( schemes[select]['dark']['body'] );
-		$( '#color_text_dark' ).val( schemes[select]['dark']['text'] );
-		$( '#color_one_dark' ).val( schemes[select]['dark']['one'] );
-		$( '#color_two_dark' ).val( schemes[select]['dark']['two'] );
-		$( '#color_three_dark' ).val( schemes[select]['dark']['three'] );
-		$( '#color_four_dark' ).val( schemes[select]['dark']['four'] );
-		$( '#color_five_dark' ).val( schemes[select]['dark']['five'] );
-		$( '#color_six_dark' ).val( schemes[select]['dark']['six'] );
-		$( '#loader_bg_color_dark' ).val( schemes[select]['dark']['body'] );
-		$( '#loader_text_color_dark' ).val( schemes[select]['dark']['text'] );
-		$( '#header_bg_color_dark' ).val( schemes[select]['dark']['body'] );
-		$( '#header_text_color_dark' ).val( schemes[select]['dark']['text'] );
+		$( '#color_body_dark' ).spectrum( 'set', schemes[select]['dark']['body'] );
+		$( '#color_text_dark' ).spectrum( 'set', schemes[select]['dark']['text'] );
+		$( '#color_one_dark' ).spectrum( 'set', schemes[select]['dark']['one'] );
+		$( '#color_two_dark' ).spectrum( 'set', schemes[select]['dark']['two'] );
+		$( '#color_three_dark' ).spectrum( 'set', schemes[select]['dark']['three'] );
+		$( '#color_four_dark' ).spectrum( 'set', schemes[select]['dark']['four'] );
+		$( '#color_five_dark' ).spectrum( 'set', schemes[select]['dark']['five'] );
+		$( '#color_six_dark' ).spectrum( 'set', schemes[select]['dark']['six'] );
+		$( '#loader_bg_color_dark' ).spectrum( 'set', schemes[select]['dark']['body'] );
+		$( '#loader_text_color_dark' ).spectrum( 'set', schemes[select]['dark']['text'] );
+		$( '#header_bg_color_dark' ).spectrum( 'set', schemes[select]['dark']['body'] );
+		$( '#header_text_color_dark' ).spectrum( 'set', schemes[select]['dark']['text'] );
 
 		// Other.
 		$( '#custom_scheme_from' ).val( select );
-		$( '#cover_blend' ).val( schemes[select]['media'] );
+		$( '#cover_blend' ).spectrum( 'set', schemes[select]['media'] );
 		$( '#cover_text_color' ).val( '<?php echo plugin()->cover_text_default(); ?>' );
+		$( '#custom-scheme-heading' ).html( schemes[select]['name'] );
+		$( '#save-scheme-notice' ).css( 'display', 'block' );
 	});
 });
 </script>

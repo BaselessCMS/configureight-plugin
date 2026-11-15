@@ -22,7 +22,6 @@ use function CFE_Colors\{
 	get_palette,
 	color_scheme_initial,
 	option_scheme_initial,
-	custom_scheme_heading,
 	hex_to_rgb,
 	picker_class
 };
@@ -43,12 +42,23 @@ if ( in_array( plugin()->color_scheme(), palette_schemes() ) ) {
 ?>
 <div id="custom_color_scheme_fields">
 
-	<h3 class="form-heading"><?php echo custom_scheme_heading(); ?></h3>
+	<?php printf(
+		'<h3 class="form-heading">%s <span id="custom-scheme-heading">%s</span> %s</h3>',
+		lang()->get( 'Custom' ),
+		$colors['name'],
+		lang()->get( 'Colors' ),
+	); ?>
+
+	<?php printf(
+		'<p id="save-scheme-notice" style="display: none"><strong>%s</strong> %s</p>',
+		lang()->get( 'Note:' ),
+		lang()->get( 'You have changed the color scheme option. Save the form to access colors of the new scheme or palette.' )
+	); ?>
 
 	<?php printf(
 		'<p>%s %s</p>',
 		$message,
-		lang()->get( 'Note that custom values for the color fields may be typed or pasted, using the hex or rgba format. It is not necessary to choose a color from the selected palette.' )
+		lang()->get( 'Custom values for the color fields may be typed or pasted, using the hex or rgba format. It is not necessary to choose a color from the selected palette.' )
 	); ?>
 
 	<div class="tab-content hide-if-no-js" data-toggle="tabslet" data-deeplinking="false" data-animation="true">

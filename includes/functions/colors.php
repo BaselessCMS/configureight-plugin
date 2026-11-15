@@ -878,41 +878,6 @@ function build_custom_schemes() {
 }
 
 /**
- * Custom scheme heading
- *
- * The form heading for each custom scheme,
- * printed above the custom color pickers.
- *
- * @since  1.0.0
- * @return string
- */
-function custom_scheme_heading() {
-
-	$current = plugin()->color_scheme();
-	$data    = color_schemes();
-	$heading = lang()->get( 'Custom Colors' );
-
-	foreach ( $data as $key => $scheme ) {
-		if ( $key != $current ) {
-			continue;
-		}
-		if ( isset( $scheme['name'] ) ) {
-			if ( in_array( $scheme['slug'], palette_schemes() ) ) {
-				$heading = $scheme['name'];
-			} else {
-				$heading = sprintf(
-					'%s %s %s',
-					lang()->get( 'Custom' ),
-					$scheme['name'],
-					lang()->get( 'Colors' )
-				);
-			}
-		}
-	}
-	return $heading;
-}
-
-/**
  * Color schemes
  *
  * Color scheme SCSS files contain color variables for
