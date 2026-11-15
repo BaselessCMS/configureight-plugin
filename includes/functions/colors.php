@@ -858,11 +858,6 @@ function build_custom_schemes() {
 		if ( ! isset( $scheme['slug'] ) ) {
 			continue;
 		}
-		if ( isset( $scheme['extra'] ) ) {
-			$extra = $scheme['extra'];
-		} else {
-			$extra = [];
-		}
 		$schemes[$custom] = [
 			'slug'     => $scheme['slug'],
 			'name'     => isset( $scheme['name'] ) ? $scheme['name'] : lang()->get( 'Unknown Scheme' ),
@@ -870,8 +865,7 @@ function build_custom_schemes() {
 			'category' => 'palettes',
 			'media'    => plugin()->cover_blend(),
 			'light'    => $light,
-			'dark'     => $dark,
-			'extra'    => $extra
+			'dark'     => $dark
 		];
 	}
 	return $schemes;
