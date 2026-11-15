@@ -724,6 +724,10 @@ function deleteBackground(el) {
 <script>
 jQuery(document).ready( function($) {
 
+	/**
+	 * Build an array of scheme & palette default colors
+	 * to set color options on scheme setting change.
+	 */
 	const schemes = { <?php
 
 	$colors = color_schemes();
@@ -763,7 +767,7 @@ jQuery(document).ready( function($) {
 	$( '#color_scheme' ).on( 'change', function() {
 		const select = $(this).val();
 
-		// Custom scheme light colors.
+		// Set scheme light colors.
 		$( '#color_body' ).spectrum( 'set', schemes[select]['light']['body'] );
 		$( '#color_text' ).spectrum( 'set', schemes[select]['light']['text'] );
 		$( '#color_one' ).spectrum( 'set', schemes[select]['light']['one'] );
@@ -777,7 +781,7 @@ jQuery(document).ready( function($) {
 		$( '#header_bg_color' ).spectrum( 'set', schemes[select]['light']['body'] );
 		$( '#header_text_color' ).spectrum( 'set', schemes[select]['light']['text'] );
 
-		// Custom scheme dark colors.
+		// Set scheme dark colors.
 		$( '#color_body_dark' ).spectrum( 'set', schemes[select]['dark']['body'] );
 		$( '#color_text_dark' ).spectrum( 'set', schemes[select]['dark']['text'] );
 		$( '#color_one_dark' ).spectrum( 'set', schemes[select]['dark']['one'] );
@@ -791,7 +795,7 @@ jQuery(document).ready( function($) {
 		$( '#header_bg_color_dark' ).spectrum( 'set', schemes[select]['dark']['body'] );
 		$( '#header_text_color_dark' ).spectrum( 'set', schemes[select]['dark']['text'] );
 
-		// Other.
+		// Other scheme-related fields and UI.
 		$( '#custom_scheme_from' ).val( select );
 		$( '#cover_blend' ).spectrum( 'set', schemes[select]['media'] );
 		$( '#cover_text_color' ).val( '<?php echo plugin()->cover_text_default(); ?>' );
@@ -804,9 +808,13 @@ jQuery(document).ready( function($) {
 <script>
 jQuery(document).ready( function($) {
 
+	/**
+	 * Build an array of font scheme defaults
+	 * to set options on scheme setting change.
+	 */
 	const schemes = { <?php foreach ( $fonts as $font => $option ) {
 
-		echo "{$option['slug']} : { ";
+	echo "{$option['slug']} : { ";
 		echo "'text' : { ";
 		foreach ( $option['text'] as $key => $value ) {
 			if ( 'family' == $key || 'stack' == $key || 'var' == $key || 'variant' == $key ) {
