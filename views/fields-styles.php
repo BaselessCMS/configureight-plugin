@@ -336,6 +336,7 @@ $fonts_page = DOMAIN_ADMIN . 'plugin/' . plugin()->className() . '?page=fonts';
 				echo '</optgroup>';
 				?>
 			</select>
+			<small class="form-text"><?php lang()->p( 'Preview colors below. Save the form to modify them.' ); ?></small>
 			<input type="hidden" id="custom_scheme_from" name="custom_scheme_from" value="<?php echo $custom_from; ?>" />
 		</div>
 	</div>
