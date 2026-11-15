@@ -1,0 +1,24 @@
+{
+	"light" : {
+		"label" : "Light Colors",
+		"body"  : "#f3ebda",
+		"text"  : "#292923",
+		"one"   : "#7a7c68",
+		"two"   : "#dccb7a",
+		"three" : "#dccb7a",
+		"four"  : "#878a74",
+		"five"  : "#878a74",
+		"six"   : "#dccb7a"
+	},
+	"dark" : {
+		"label" : "Dark Colors",
+		"body"  : "#292923",
+		"text"  : "#f3ebda",
+		"one"   : "#dccb7a",
+		"two"   : "#f3ebda",
+		"three" : "#dccb7a",
+		"four"  : "#878a74",
+		"five"  : "#878a74",
+		"six"   : "#dccb7a"
+	}
+}

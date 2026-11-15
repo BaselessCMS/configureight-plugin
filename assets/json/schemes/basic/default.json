@@ -1,5 +1,6 @@
 {
 	"light" : {
+		"label" : "Light Colors",
 		"body"  : "#ffffff",
 		"text"  : "#262626",
 		"one"   : "#0044dd",
@@ -10,6 +11,7 @@
 		"six"   : "#4073e6"
 	},
 	"dark" : {
+		"label" : "Dark Colors",
 		"body"  : "#161616",
 		"text"  : "#ffffff",
 		"one"   : "#4073e6",
@@ -20,6 +22,7 @@
 		"six"   : "#4073e6"
 	},
 	"standard" : {
+		"label"  : "Standard Colors",
 		"red"    : "#ee0000",
 		"orange" : "#ee6600",
 		"amber"  : "#ffcc44",
@@ -35,6 +38,7 @@
 		"pink"   : "#ff55dd"
 	},
 	"pastel" : {
+		"label"      : "Pastel Colors",
 		"coral"      : "#ff6666",
 		"salmon"     : "#ff9966",
 		"peach"      : "#ffcc99",
@@ -49,6 +53,7 @@
 		"rose"       : "#ffaacc"
 	},
 	"desaturated" : {
+		"label"   : "Desaturated Colors",
 		"brick"   : "#cc6666",
 		"camel"   : "#cc9966",
 		"saddle"  : "#996633",
