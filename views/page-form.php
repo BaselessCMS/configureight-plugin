@@ -149,7 +149,7 @@ jQuery(document).ready( function($) {
 		showPaletteOnly : <?php echo ( in_array( plugin()->color_scheme(), palette_schemes() ) ? 'true' : 'false' ) ?>,
 		paletteLabel    : true,
 		palette         : [
-			<?php foreach ( get_palette( $color_scheme ) as $color ) {
+			<?php foreach ( get_palette( str_replace( '-', '_', $color_scheme ) ) as $color ) {
 				echo "[ '" . implode( "', '", $color ) . "' ],";
 			} ?>
 			<?php foreach ( get_palette( 'grayscale' ) as $color ) {
@@ -172,7 +172,7 @@ jQuery(document).ready( function($) {
 		showPaletteOnly : <?php echo ( in_array( plugin()->color_scheme(), palette_schemes() ) ? 'true' : 'false' ) ?>,
 		paletteLabel    : true,
 		palette         : [
-			<?php foreach ( get_palette( $color_scheme ) as $color ) {
+			<?php foreach ( get_palette( str_replace( '-', '_', $color_scheme ) ) as $color ) {
 				echo "[ '" . implode( "', '", $color ) . "' ],";
 			} ?>
 			<?php foreach ( get_palette( 'grayscale' ) as $color ) {
