@@ -42,7 +42,8 @@ $sage:       #99bb99 !default;
 $denim:      #6699bb !default;
 $mauve:      #ccaabb !default;
 $antique:    #ddaaaa !default;
-$slate:      #aaaabb !default;
+$taupe:      #bfb4ae !default;
+$slate:      #a1aebc !default;
 
 $media: $blue;
 
@@ -82,6 +83,7 @@ $color_map: (
 	'denim'      : $denim,
 	'mauve'      : $mauve,
 	'antique'    : $antique,
+	'taupe'      : $taupe,
 	'slate'      : $slate
 ) !default;
 
@@ -1085,6 +1087,34 @@ $antique_map: (
 	'antique-1000' : $antique-1000,
 	'antique-1100' : $antique-1100,
 	'antique-1200' : $antique-1200
+) !default;
+
+$taupe-100:  f.lighten( $taupe, 95% ) !default;
+$taupe-200:  f.lighten( $taupe, 90% ) !default;
+$taupe-300:  f.lighten( $taupe, 80% ) !default;
+$taupe-400:  f.lighten( $taupe, 60% ) !default;
+$taupe-500:  f.lighten( $taupe, 40% ) !default;
+$taupe-600:  f.lighten( $taupe, 20% ) !default;
+$taupe-700:  $taupe !default;
+$taupe-800:  f.darken( $taupe, 15% ) !default;
+$taupe-900:  f.darken( $taupe, 30% ) !default;
+$taupe-1000: f.darken( $taupe, 45% ) !default;
+$taupe-1100: f.darken( $taupe, 60% ) !default;
+$taupe-1200: f.darken( $taupe, 75% ) !default;
+
+$taupe_map: (
+	'taupe-100'  : $taupe-100,
+	'taupe-200'  : $taupe-200,
+	'taupe-300'  : $taupe-300,
+	'taupe-400'  : $taupe-400,
+	'taupe-500'  : $taupe-500,
+	'taupe-600'  : $taupe-600,
+	'taupe-700'  : $taupe-700,
+	'taupe-800'  : $taupe-800,
+	'taupe-900'  : $taupe-900,
+	'taupe-1000' : $taupe-1000,
+	'taupe-1100' : $taupe-1100,
+	'taupe-1200' : $taupe-1200
 ) !default;
 
 $slate-100:  f.lighten( $slate, 95% ) !default;
