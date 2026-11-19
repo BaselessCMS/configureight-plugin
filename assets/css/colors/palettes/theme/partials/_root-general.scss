@@ -57,6 +57,27 @@
 	@each $name, $color in c.$pink_map {
 		--cfe-scheme-color--#{$name}: #{$color};
 	}
+	@each $name, $color in c.$lipstick_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$construction_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$highlight_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$ectoplasm_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$electric_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$experienced_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$bubblegum_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
 	@each $name, $color in c.$coral_map {
 		--cfe-scheme-color--#{$name}: #{$color};
 	}
