@@ -1,0 +1,16 @@
+///
+/// CSS properties
+///
+/// General properties for color scheme option.
+///
+
+@use 'sass:map';
+@use '../modules/colors' as c;
+
+// CSS properties.
+:host,
+:root {
+	@each $name, $color in c.$blue_map {
+		--cfe-scheme-color--#{$name}: #{$color};
+	}
+}

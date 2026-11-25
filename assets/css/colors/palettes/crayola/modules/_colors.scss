@@ -1,0 +1,36 @@
+///
+/// SCSS variables
+///
+
+// Modules in the primary colors directory.
+@use '../../../../modules/functions' as f;
+
+$palette: 'crayola';
+
+$blue: #0066ff !default;
+
+$blue-100:  f.lighten( $blue, 95% ) !default;
+$blue-200:  f.lighten( $blue, 90% ) !default;
+$blue-300:  f.lighten( $blue, 80% ) !default;
+$blue-400:  f.lighten( $blue, 60% ) !default;
+$blue-500:  f.lighten( $blue, 40% ) !default;
+$blue-600:  f.lighten( $blue, 20% ) !default;
+$blue-700:  $blue !default;
+$blue-800:  f.darken( $blue, 15% ) !default;
+$blue-900:  f.darken( $blue, 30% ) !default;
+$blue-1000: f.darken( $blue, 45% ) !default;
+$blue-1100: f.darken( $blue, 60% ) !default;
+
+$blue_map: (
+  'blue-100'  : $blue-100,
+  'blue-200'  : $blue-200,
+  'blue-300'  : $blue-300,
+  'blue-400'  : $blue-400,
+  'blue-500'  : $blue-500,
+  'blue-600'  : $blue-600,
+  'blue-700'  : $blue-700,
+  'blue-800'  : $blue-800,
+  'blue-900'  : $blue-900,
+  'blue-1000' : $blue-1000,
+  'blue-1100' : $blue-1100
+) !default;

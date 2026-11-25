@@ -1,0 +1,14 @@
+:host,
+:root {
+  --cfe-scheme-color--blue-100: #f2f7ff;
+  --cfe-scheme-color--blue-200: #e6f0ff;
+  --cfe-scheme-color--blue-300: #cce0ff;
+  --cfe-scheme-color--blue-400: #99c2ff;
+  --cfe-scheme-color--blue-500: #66a3ff;
+  --cfe-scheme-color--blue-600: #3385ff;
+  --cfe-scheme-color--blue-700: #0066ff;
+  --cfe-scheme-color--blue-800: #0057d9;
+  --cfe-scheme-color--blue-900: #0047b3;
+  --cfe-scheme-color--blue-1000: #00388c;
+  --cfe-scheme-color--blue-1100: #002966;
+}

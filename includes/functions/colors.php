@@ -280,7 +280,7 @@ function option_schemes_data() {
 		'theme' => [
 			'slug'  => 'theme',
 			'name'  => lang()->get( 'Configure 8 Colors' ),
-			'about' => lang()->get( 'A color palette developed for the Configure 8 theme. Tints and shades are derived from the 7th color in the spectrum, colors with identical RGB pairs in the hex code (e.g. #0044dd).' ),
+			'about' => lang()->get( 'A color palette developed for the Configure 8 theme. Tints and shades are derived from the 7th color in the scale, colors with identical RGB pairs in the hex code (e.g. #0044dd).' ),
 			'media' => '#0044dd',
 			'light' => [
 				'body'  => '#ffffff',
@@ -358,7 +358,7 @@ function option_schemes_data() {
 		'bootstrap' => [
 			'slug'  => 'bootstrap',
 			'name'  => lang()->get( 'Bootstrap Colors' ),
-			'about' => lang()->get( 'The complete selection of colors included with the <a href="https://getbootstrap.com/docs/5.0/utilities/colors/#variables" target="_blank" rel="noopener noreferrer">Bootstrap</a> UI kit, expanded with tints & shades. The middle (6th) color of each spectrum is the original, named color.' ),
+			'about' => lang()->get( 'The complete selection of colors included with the <a href="https://getbootstrap.com/docs/5.0/utilities/colors/#variables" target="_blank" rel="noopener noreferrer">Bootstrap</a> UI kit, expanded with tints & shades. The middle (6th) color of each scale is the original, named color.' ),
 			'media' => '#0a58ca',
 			'light' => [
 				'body'  => '#ffffff',
@@ -431,6 +431,58 @@ function option_schemes_data() {
 				'four'  => '#4dabf7',
 				'five'  => '#145591',
 				'six'   => '#228be6'
+			]
+		],
+		'crayola' => [
+			'slug'  => 'crayola',
+			'name'  => lang()->get( 'Crayola Colors' ),
+			'about' => lang()->get( 'Classic colors listed as being included in the 64 count box of Crayola crayons. The selection varied over the years. This palette\'s colors were introduced 1903-1958 and used to the time of building the palette, 2026.' ),
+			'media' => '#006633',
+			'light' => [
+				'body'  => '#ffffff',
+				'text'  => '#003366',
+				'one'   => '#006633',
+				'two'   => '#0066ff',
+				'three' => '#0066ff',
+				'four'  => '#006633',
+				'five'  => '#006633',
+				'six'   => '#0066ff'
+			],
+			'dark' => [
+				'body'  => '#003366',
+				'text'  => '#f8fafb',
+				'one'   => '#006633',
+				'two'   => '#0066ff',
+				'three' => '#0066ff',
+				'four'  => '#006633',
+				'five'  => '#006633',
+				'six'   => '#0066ff'
+			]
+		],
+		'flat' => [
+			'slug'  => 'flat',
+			'name'  => lang()->get( 'Flat UI Colors' ),
+			'about' => lang()->get( 'The complete selection of colors included with the old <a href="https://designmodo.github.io/Flat-UI/" target="_blank" rel="noopener noreferrer">Flat UI</a> kit, expanded to create a scale for each color.' ),
+			'media' => '#2c81ba',
+			'light' => [
+				'body'  => '#ffffff',
+				'text'  => '#333838',
+				'one'   => '#2c81ba',
+				'two'   => '#3498db',
+				'three' => '#2c81ba',
+				'four'  => '#3498db',
+				'five'  => '#246a99',
+				'six'   => '#3498db'
+			],
+			'dark' => [
+				'body'  => '#121920',
+				'text'  => '#ffffff',
+				'one'   => '#85c1e9',
+				'two'   => '#aed6f1',
+				'three' => '#3498db',
+				'four'  => '#85c1e9',
+				'five'  => '#246a99',
+				'six'   => '#3498db'
 			]
 		],
 		'primer' => [
@@ -540,7 +592,7 @@ function option_schemes_data() {
 		'pantone' => [
 			'slug'  => 'pantone',
 			'name'  => lang()->get( 'Pantone Colors' ),
-			'about' => lang()->get( 'Every Pantone "Color of the Year" since beginning in 2000, expanded with tints & shades. The 7th color of each spectrum is the original, named color. The years 2016 and 2021 had two co-winning colors.' ),
+			'about' => lang()->get( 'Every Pantone "Color of the Year" since beginning in 2000, expanded with tints & shades. The 7th color of each scale is the original, named color. The years 2016 and 2021 had two co-winning colors.' ),
 			'media' => '#6f94b3',
 			'light' => [
 				'body'  => '#ffffff',

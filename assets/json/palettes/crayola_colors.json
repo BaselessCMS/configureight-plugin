@@ -1,0 +1,163 @@
+{
+	"red" : {
+		"label" : "Crayola Red"
+	},
+	"scarlet" : {
+		"label" : "Crayola Scarlet"
+	},
+	"brick-red" : {
+		"label" : "Crayola Brick Red"
+	},
+	"mahogany" : {
+		"label" : "Crayola Mahogany"
+	},
+	"chestnut" : {
+		"label" : "Crayola Chestnut"
+	},
+	"red-orange" : {
+		"label" : "Crayola Red-Orange"
+	},
+	"bittersweet" : {
+		"label" : "Crayola Bittersweet"
+	},
+	"burnt-orange" : {
+		"label" : "Crayola Burnt Orange"
+	},
+	"orange" : {
+		"label" : "Crayola Orange"
+	},
+	"yellow-orange" : {
+		"label" : "Crayola Yellow-Orange"
+	},
+	"goldenrod" : {
+		"label" : "Crayola Goldenrod"
+	},
+	"yellow" : {
+		"label" : "Crayola Yellow"
+	},
+	"green-yellow" : {
+		"label" : "Crayola Green-Yellow"
+	},
+	"olive-green" : {
+		"label" : "Crayola Olive Green"
+	},
+	"spring-green" : {
+		"label" : "Crayola Spring Green"
+	},
+	"yellow-green" : {
+		"label" : "Crayola Yellow-Green"
+	},
+	"green" : {
+		"label" : "Crayola Green"
+	},
+	"forest-green" : {
+		"label" : "Crayola Forest Green"
+	},
+	"sea-green" : {
+		"label" : "Crayola Sea Green"
+	},
+	"turquoise-blue" : {
+		"label" : "Crayola Turquoise Blue"
+	},
+	"sky-blue" : {
+		"label" : "Crayola Sky Blue"
+	},
+	"blue-green" : {
+		"label" : "Crayola Blue-Green"
+	},
+	"cornflower" : {
+		"label" : "Crayola Cornflower"
+	},
+	"midnight-blue" : {
+		"label" : "Crayola Midnight Blue"
+	},
+	"navy-blue" : {
+		"label" : "Crayola Navy Blue"
+	},
+	"blue" : {
+		"label" : "Crayola Blue",
+		"100": "#f2f7ff",
+		"200": "#e6f0ff",
+		"300": "#cce0ff",
+		"400": "#99c2ff",
+		"500": "#66a3ff",
+		"600": "#3385ff",
+		"700": "#0066ff",
+		"800": "#0057d9",
+		"900": "#0047b3",
+		"1000": "#00388c",
+		"1100": "#002966"
+	},
+	"cadet blue" : {
+		"label" : "Crayola Cadet Blue"
+	},
+	"periwinkle" : {
+		"label" : "Crayola Periwinkle"
+	},
+	"blue-violet" : {
+		"label" : "Crayola Blue-Violet"
+	},
+	"violet" : {
+		"label" : "Crayola Violet"
+	},
+	"orchid" : {
+		"label" : "Crayola Orchid"
+	},
+	"plum" : {
+		"label" : "Crayola Plum"
+	},
+	"red-violet" : {
+		"label" : "Crayola Red-Violet"
+	},
+	"magenta" : {
+		"label" : "Crayola Magenta"
+	},
+	"carnation-pink" : {
+		"label" : "Crayola Carnation Pink"
+	},
+	"violet-red" : {
+		"label" : "Crayola Violet-Red"
+	},
+	"salmon" : {
+		"label" : "Crayola Salmon"
+	},
+	"melon" : {
+		"label" : "Crayola Melon"
+	},
+	"burnt-sienna" : {
+		"label" : "Crayola Burnt Sienna"
+	},
+	"brown" : {
+		"label" : "Crayola Brown"
+	},
+	"sepia" : {
+		"label" : "Crayola Sepia"
+	},
+	"raw-sienna" : {
+		"label" : "Crayola Raw Sienna"
+	},
+	"tan" : {
+		"label" : "Crayola Tan"
+	},
+	"peach" : {
+		"label" : "Crayola Peach"
+	},
+	"apricot" : {
+		"label" : "Crayola Apricot"
+	},
+	"gold" : {
+		"label" : "Crayola Gold"
+	},
+	"silver" : {
+		"label" : "Crayola Silver"
+	},
+	"black" : {
+		"label" : "Crayola Black"
+	},
+	"gray" : {
+		"label" : "Crayola Gray"
+	},
+	"white" : {
+		"label" : "Crayola White"
+	}
+}
