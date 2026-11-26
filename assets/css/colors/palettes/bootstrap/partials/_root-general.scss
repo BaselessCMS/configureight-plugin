@@ -1,0 +1,48 @@
+///
+/// CSS properties
+///
+/// General properties for color scheme option.
+///
+
+@use 'sass:map';
+@use '../../../../modules/functions' as f;
+@use '../../../../modules/colors' as general;
+@use '../modules/colors' as c;
+
+:host,
+:root {
+	--cfe-cover-blend--bg-color: #{c.$media};
+	@each $name, $color in c.$red_map {
+		--cfe--#{c.$palette}--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$orange_map {
+		--cfe--#{c.$palette}--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$yellow_map {
+		--cfe--#{c.$palette}--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$green_map {
+		--cfe--#{c.$palette}--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$teal_map {
+		--cfe--#{c.$palette}--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$cyan_map {
+		--cfe--#{c.$palette}--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$blue_map {
+		--cfe--#{c.$palette}--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$indigo_map {
+		--cfe--#{c.$palette}--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$purple_map {
+		--cfe--#{c.$palette}--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$pink_map {
+		--cfe--#{c.$palette}--#{$name}: #{$color};
+	}
+	@each $name, $color in c.$gray_map {
+		--cfe--#{c.$palette}--#{$name}: #{$color};
+	}
+}

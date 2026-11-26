@@ -358,27 +358,27 @@ function option_schemes_data() {
 		'bootstrap' => [
 			'slug'  => 'bootstrap',
 			'name'  => lang()->get( 'Bootstrap Colors' ),
-			'about' => lang()->get( 'The complete selection of colors included with the <a href="https://getbootstrap.com/docs/5.0/utilities/colors/#variables" target="_blank" rel="noopener noreferrer">Bootstrap</a> UI kit, expanded with tints & shades. The middle (6th) color of each scale is the original, named color.' ),
-			'media' => '#0a58ca',
+			'about' => lang()->get( 'The complete selection of colors included with the <a href="https://getbootstrap.com/docs/5.0/utilities/colors/#variables" target="_blank" rel="noopener noreferrer">Bootstrap</a> UI kit, expanded with tints & shades. The 7th color of each scale is the original, named color.' ),
+			'media' => '#0b5ed7',
 			'light' => [
 				'body'  => '#ffffff',
 				'text'  => '#343a40',
-				'one'   => '#0a58ca',
+				'one'   => '#0b5ed7',
 				'two'   => '#3d8bfd',
-				'three' => '#0a58ca',
+				'three' => '#094db1',
 				'four'  => '#0d6efd',
-				'five'  => '#084298',
+				'five'  => '#073d8b',
 				'six'   => '#0d6efd'
 			],
 			'dark' => [
 				'body'  => '#111213',
-				'text'  => '#f7f8f8',
+				'text'  => '#f3f8ff',
 				'one'   => '#3d8bfd',
-				'two'   => '#6ea8fe',
+				'two'   => '#9ec5fe',
 				'three' => '#0d6efd',
 				'four'  => '#6ea8fe',
-				'five'  => '#0a58ca',
-				'six'   => '#3d8bfd'
+				'five'  => '#073d8b',
+				'six'   => '#0d6efd'
 			]
 		],
 		'carbon' => [
@@ -462,7 +462,7 @@ function option_schemes_data() {
 		'flat' => [
 			'slug'  => 'flat',
 			'name'  => lang()->get( 'Flat UI Colors' ),
-			'about' => lang()->get( 'The complete selection of colors included with the old <a href="https://designmodo.github.io/Flat-UI/" target="_blank" rel="noopener noreferrer">Flat UI</a> kit, expanded to create a scale for each color.' ),
+			'about' => lang()->get( 'The complete selection of colors included with the old <a href="https://designmodo.github.io/Flat-UI/" target="_blank" rel="noopener noreferrer">Flat UI</a> kit, expanded with tints & shades. The 7th color of each scale is the original, named color.' ),
 			'media' => '#2c81ba',
 			'light' => [
 				'body'  => '#ffffff',
